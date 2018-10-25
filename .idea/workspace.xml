@@ -24,15 +24,15 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="8" />
-          <entry key="rst" value="123" />
-          <entry key="txt" value="58" />
+          <entry key="rst" value="124" />
+          <entry key="txt" value="70" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="58" />
+          <entry key="PLAIN_TEXT" value="70" />
           <entry key="Python" value="8" />
-          <entry key="ReST" value="123" />
+          <entry key="ReST" value="124" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -96,12 +96,13 @@
             <path>
               <item name="PythonCertDevel220" type="b2602c69:ProjectViewProjectNode" />
               <item name="PythonCertDevel220" type="462c0819:PsiDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="source" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PythonCertDevel220" type="b2602c69:ProjectViewProjectNode" />
               <item name="PythonCertDevel220" type="462c0819:PsiDirectoryNode" />
               <item name="source" type="462c0819:PsiDirectoryNode" />
+              <item name="exercises" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -143,14 +144,20 @@
       <option name="project" value="LOCAL" />
       <updated>1540491405328</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="initial version copied from 210. Seeded with basic content - minor fix">
+      <created>1540491514190</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1540491514190</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="836" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.79296345" visible="true" weight="0.15522175" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.79296345" visible="true" weight="0.15522175" />
       <window_info id="Structure" order="1" sideWeight="0.20703654" side_tool="true" weight="0.1509299" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -163,8 +170,8 @@
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Python Console" order="3" sideWeight="0.49737534" visible="true" weight="0.3197425" />
-      <window_info anchor="right" id="Terminal" order="4" sideWeight="0.48031497" weight="0.38268957" />
+      <window_info anchor="right" id="Python Console" order="3" sideWeight="0.49737534" weight="0.3197425" />
+      <window_info active="true" anchor="right" id="Terminal" order="4" sideWeight="0.48031497" visible="true" weight="0.38268957" />
       <window_info active="true" anchor="right" id="Jenkins" order="5" visible="true" weight="0.33404863" />
       <window_info anchor="right" id="SciView" order="6" weight="0.3366762" />
       <window_info anchor="right" id="Docker" order="7" weight="0.32808024" />
@@ -183,7 +190,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial version copied from 210. Seeded with basic content" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial version copied from 210. Seeded with basic content" />
+    <MESSAGE value="initial version copied from 210. Seeded with basic content - minor fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial version copied from 210. Seeded with basic content - minor fix" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.gitignore">
