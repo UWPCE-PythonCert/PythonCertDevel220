@@ -11,6 +11,8 @@ These materials are available in html rendered version here:
 https://uwpce-pythoncert.github.io/PythonCertDevel220/
 
 This repo is WIP and very incomplete. Please do not submit a PR or issue yet.
+-----------------------------------------------------------------------------
+
 We will update in due course.
 
 Building These Documents
