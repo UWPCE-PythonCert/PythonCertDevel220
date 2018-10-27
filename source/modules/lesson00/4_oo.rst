@@ -1,0 +1,63 @@
+Object Oriented Concepts
+========================
+
+What is OO?
+-----------
+Object orientation is a popular programming model that focuses on
+development of classes. Classes contain the logic and data of the
+application, which are the used in development by creating, or
+instantiating, objects from those classes.
+
+
+Object Orientation
+==================
+
+How do I get started?
+---------------------
+
+1. Recap
+
+   1. Benefits of OO?
+   1. Any disadvantages?
+
+1. Python syntax for OO is straightforward.
+   1. Someone describe...
+   1. a Quick guide to Python OO: https://python.swaroopch.com/oop.html
+
+1. But how do I know which classes I need?
+The answer to that is less straightforward. It can be difficult. We'll try to make it as simple as possible.
+First, some terminology:
+   1. Problem domain = the subject area for which we are developing a solution. Could be human resources, sales, accounting,...
+   1. Model - a simplification of reality. Always wrong, hopefully useful.
+   1. Diagram - part of a model.
+1. Discovering classes (the most simple way possible).
+   1. Think about your problem domain. Find some related documentation (ideally from the person who is requesting the development). Failing that, talk to the person who made the request. Note down what they are asking you.
+
+   1. When you have the notes and/or documentation, use a highlighter so mark all of the nouns. So, in a human resources example, you might highlight employee, job, department, and company. Think of some others...
+
+   1. Get a large piece of paper and small yellow stickies. Alternatively, use a modeling tool. For example:
+
+   1. Modeling tool: https://www.genmymodel.com/
+   1. Now, either write each noun on a separate sticky, or start to build a model. We'll show the modeling tool. It will quickly become be obvious how to do this with stickies.
+
+   1. So now, watch this demo...
+
+   1. The model demo image file is now in this repo, along with the code it generated (remember this was hastily generated and is used to illustrate the ocnepts only. In fact, a much better model is easy to generate).
+
+1. Some comments:
+   1. Keep problem domain code separate from technical code. Why?
+   1. Don't spend too long modeling. Start coding and demoing as soon as you can. Why?
+   1. Focus on what your classes do, not what they need to know. Why?
+   1. Define all classes in docstrings. Why?
+   1. Decomposition and business boundaries. Why?
+   1. State transitions.
+   1. GenMyModel is not free; use draw.io (but you lose code generation).
+
+1. Resources:
+   1. GenMyModel: https://www.genmymodel.com
+   1. DDD book: https://www.infoq.com/minibooks/domain-driven-design-quickly
+   1. OO in Python: https://realpython.com/python3-object-oriented-programming/
+   1. More Python OO: https://jeffknupp.com/blog/2014/06/18/improve-your-python-python-classes-and-object-oriented-programming/
+   1. OO thought process: https://www.amazon.com/Object-Oriented-Thought-Process-Developers-Library/dp/0321861272
+   1. Conway's law: https://en.wikipedia.org/wiki/Conway%27s_law
+   1. Class models: http://www.agilemodeling.com/artifacts/classDiagram.htm

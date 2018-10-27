@@ -2,31 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="25d5bf0a-3b69-4cb0-be63-907ebd3f206b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/markdown-navigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/markdown-navigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/modules/lesson00/0_office_hours.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/modules/lesson00/1_principles.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/modules/lesson00/2_expectations.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/modules/lesson00/4_oo.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/modules/lesson01/office_hours1_recaps.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/modules/lesson01/office_hours2_all.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/modules/lesson02/office_hours1_recaps.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/modules/lesson02/office_hours2_all.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/modules/lesson03/office_hours1_recaps.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/modules/lesson03/office_hours2_all.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/modules/lesson04/office_hours1_recaps.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/modules/lesson04/office_hours2_all.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/modules/lesson05/office_hours1_recaps.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/modules/lesson05/office_hours2_all.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/modules/lesson06/office_hours1_recaps.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/modules/lesson06/office_hours2_all.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/modules/lesson07/office_hours1_recaps.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/modules/lesson07/office_hours2_all.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/modules/lesson08/office_hours1_recaps.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/modules/lesson08/office_hours2_all.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/modules/lesson09/office_hours1_recaps.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/modules/lesson09/office_hours2_all.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/modules/lesson10/office_hours1_recaps.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/modules/lesson10/office_hours2_all.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/src/lesson00/oo_class.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/src/lesson00/oo_inherit.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/PythonCertDevel220.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PythonCertDevel220.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/modules/Filename_here.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/modules/case_study.rst" beforeDir="false" afterPath="$PROJECT_DIR$/source/modules/lesson00/0x_case_study.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/modules/lesson-01-dot-01-lambda.rst" beforeDir="false" afterPath="$PROJECT_DIR$/source/modules/lesson04/02_01_lesson-01-dot-01-lambda.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/modules/lesson-01-dot-02-iterators-and-iterables.rst" beforeDir="false" afterPath="$PROJECT_DIR$/source/modules/lesson04/02_02_lesson-01-dot-02-iterators-and-iterables.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/modules/lesson-01-dot-03-generators.rst" beforeDir="false" afterPath="$PROJECT_DIR$/source/modules/lesson04/02_03_lesson-01-dot-03-generators.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/modules/lesson-01-introduction.rst" beforeDir="false" afterPath="$PROJECT_DIR$/source/modules/lesson04/01_lesson-01-introduction.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/modules/lesson-01-starting-with-expression-flow-control-and-comprehensions.rst" beforeDir="false" afterPath="$PROJECT_DIR$/source/modules/lesson04/02_00_lesson-01-starting-with-expression-flow-control-and-comprehensions.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/modules/lesson-02-dot-01-closures.rst" beforeDir="false" afterPath="$PROJECT_DIR$/source/modules/lesson08/lesson-02-dot-01-closures.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/modules/lesson-02-dot-02-currying.rst" beforeDir="false" afterPath="$PROJECT_DIR$/source/modules/lesson08/lesson-02-dot-02-currying.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/modules/lesson-02-dot-03-itertools.rst" beforeDir="false" afterPath="$PROJECT_DIR$/source/modules/lesson08/lesson-02-dot-03-itertools.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/modules/lesson-02-functional-programming-3.rst" beforeDir="false" afterPath="$PROJECT_DIR$/source/modules/lesson08/lesson-02-functional-programming-3.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/modules/lesson-03-dot-01-decorators.rst" beforeDir="false" afterPath="$PROJECT_DIR$/source/modules/lesson09/lesson-03-dot-01-decorators.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/modules/lesson-03-dot-02-context-managers.rst" beforeDir="false" afterPath="$PROJECT_DIR$/source/modules/lesson09/lesson-03-dot-02-context-managers.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/modules/lesson-03-dot-03-recursion.rst" beforeDir="false" afterPath="$PROJECT_DIR$/source/modules/lesson09/lesson-03-dot-03-recursion.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/modules/lesson-03-introduction.rst" beforeDir="false" afterPath="$PROJECT_DIR$/source/modules/lesson09/lesson-03-introduction.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/modules/lesson-04-content.rst" beforeDir="false" afterPath="$PROJECT_DIR$/source/modules/lesson10/lesson-04-content.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/modules/lesson-04-introduction.rst" beforeDir="false" afterPath="$PROJECT_DIR$/source/modules/lesson10/lesson-04-introduction.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/modules/lesson-05-content.rst" beforeDir="false" afterPath="$PROJECT_DIR$/source/modules/lesson02/lesson-05-content.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/modules/lesson-05-introduction.rst" beforeDir="false" afterPath="$PROJECT_DIR$/source/modules/lesson02/lesson-05-introduction.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/modules/lesson-06-content.rst" beforeDir="false" afterPath="$PROJECT_DIR$/source/modules/lesson01/02_lesson-06-content.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/modules/lesson-06-introduction.rst" beforeDir="false" afterPath="$PROJECT_DIR$/source/modules/lesson01/01_lesson-06-introduction.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/modules/lesson-07-content.rst" beforeDir="false" afterPath="$PROJECT_DIR$/source/modules/lesson03/lesson-07-content.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/modules/lesson-07-introduction.rst" beforeDir="false" afterPath="$PROJECT_DIR$/source/modules/lesson03/lesson-07-introduction.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/modules/lesson00/0x_case_study.rst" beforeDir="false" afterPath="$PROJECT_DIR$/source/modules/lesson00/3_case_study.rst" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,17 +66,17 @@
           <entry key="gitignore" value="7" />
           <entry key="md" value="14" />
           <entry key="py" value="5" />
-          <entry key="rst" value="292" />
-          <entry key="txt" value="86" />
+          <entry key="rst" value="1161" />
+          <entry key="txt" value="106" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Git file" value="7" />
           <entry key="Markdown" value="14" />
-          <entry key="PLAIN_TEXT" value="86" />
+          <entry key="PLAIN_TEXT" value="106" />
           <entry key="Python" value="13" />
-          <entry key="ReST" value="302" />
+          <entry key="ReST" value="1171" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -81,8 +85,8 @@
           <entry key="gitignore" value="2" />
           <entry key="html" value="1" />
           <entry key="md" value="2" />
-          <entry key="py" value="3" />
-          <entry key="rst" value="42" />
+          <entry key="py" value="5" />
+          <entry key="rst" value="69" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
@@ -92,14 +96,21 @@
           <entry key="HTML" value="1" />
           <entry key="Markdown" value="2" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="3" />
-          <entry key="ReST" value="43" />
+          <entry key="Python" value="5" />
+          <entry key="ReST" value="70" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -115,6 +126,17 @@
         <option value="$PROJECT_DIR$/source/exercises/Filename_here.rst" />
         <option value="$PROJECT_DIR$/source/exercises/del.rst" />
         <option value="$PROJECT_DIR$/source/modules/case_study.rst" />
+        <option value="$PROJECT_DIR$/source/src/lesson00/oo_class.py" />
+        <option value="$PROJECT_DIR$/source/src/lesson00/oo_inherit.py" />
+        <option value="$PROJECT_DIR$/source/modules/lesson00/0_oo.rst" />
+        <option value="$PROJECT_DIR$/source/modules/lesson00/1_principles.rst" />
+        <option value="$PROJECT_DIR$/source/modules/lesson00/4_oo.rst" />
+        <option value="$PROJECT_DIR$/source/modules/lesson01/office_hours1_recaps.rst" />
+        <option value="$PROJECT_DIR$/source/modules/lesson07/office_hours2_all.rst" />
+        <option value="$PROJECT_DIR$/source/modules/lesson01/office_hours2_all.rst" />
+        <option value="$PROJECT_DIR$/source/modules/lesson10/office_hours2_all.rst" />
+        <option value="$PROJECT_DIR$/source/modules/lesson04/office_hours2_all.rst" />
+        <option value="$PROJECT_DIR$/source/modules/lesson00/0_office_hours.rst" />
       </list>
     </option>
   </component>
@@ -162,28 +184,7 @@
               <item name="PythonCertDevel220" type="b2602c69:ProjectViewProjectNode" />
               <item name="PythonCertDevel220" type="462c0819:PsiDirectoryNode" />
               <item name="source" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PythonCertDevel220" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PythonCertDevel220" type="462c0819:PsiDirectoryNode" />
-              <item name="source" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="lesson00" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PythonCertDevel220" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PythonCertDevel220" type="462c0819:PsiDirectoryNode" />
-              <item name="source" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="lesson01" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PythonCertDevel220" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PythonCertDevel220" type="462c0819:PsiDirectoryNode" />
-              <item name="source" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="lesson04" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -199,12 +200,19 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/source/modules/lesson03" />
-      <recent name="$PROJECT_DIR$/source/modules" />
-      <recent name="$PROJECT_DIR$/source/modules/lesson02" />
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/source/modules/lesson10" />
       <recent name="$PROJECT_DIR$/source/modules/lesson09" />
+      <recent name="$PROJECT_DIR$/source/modules/lesson08" />
+      <recent name="$PROJECT_DIR$/source/modules/lesson07" />
+      <recent name="$PROJECT_DIR$/source/modules/lesson06" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/source/modules/lesson06" />
+      <recent name="$PROJECT_DIR$/source/modules/lesson07" />
+      <recent name="$PROJECT_DIR$/source/modules/lesson05" />
+      <recent name="$PROJECT_DIR$/source/modules/lesson03" />
+      <recent name="$PROJECT_DIR$/source/modules" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -288,7 +296,14 @@
       <option name="project" value="LOCAL" />
       <updated>1540667783833</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="moved to new folders">
+      <created>1540669522049</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1540669522049</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -298,7 +313,7 @@
       <window_info id="Structure" order="1" sideWeight="0.20703654" side_tool="true" weight="0.1509299" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.4610215" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.49865592" />
       <window_info anchor="bottom" id="Debug" order="2" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
@@ -329,7 +344,8 @@
     <MESSAGE value="initial version copied from 210. Seeded with basic content" />
     <MESSAGE value="initial version copied from 210. Seeded with basic content - minor fix" />
     <MESSAGE value="added case study" />
-    <option name="LAST_COMMIT_MESSAGE" value="added case study" />
+    <MESSAGE value="moved to new folders" />
+    <option name="LAST_COMMIT_MESSAGE" value="moved to new folders" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.gitignore">
@@ -393,7 +409,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/modules/lesson00/0x_case_study.rst">
+    <entry file="file://$PROJECT_DIR$/source/modules/lesson00/3_case_study.rst">
       <provider selected="true" editor-type-id="restructured-text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/source/modules/Filename_here.rst">
@@ -427,6 +443,77 @@
       <provider selected="true" editor-type-id="restructured-text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/source/modules/lesson01/02_lesson-06-content.rst">
+      <provider selected="true" editor-type-id="restructured-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/modules/README.rst">
+      <provider selected="true" editor-type-id="restructured-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/src/lesson00/oo_inherit.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/src/lesson00/oo_class.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/modules/python-220-advanced-programming-in-python.rst">
+      <provider selected="true" editor-type-id="restructured-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/modules/lesson00/4_oo.rst">
+      <provider selected="true" editor-type-id="restructured-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/modules/lesson00/1_principles.rst">
+      <provider selected="true" editor-type-id="restructured-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/modules/lesson01/office_hours1_recaps.rst">
+      <provider selected="true" editor-type-id="restructured-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/modules/lesson09/office_hours1_recaps.rst">
+      <provider selected="true" editor-type-id="restructured-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/modules/lesson10/office_hours1_recaps.rst">
+      <provider selected="true" editor-type-id="restructured-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/modules/lesson01/office_hours2_all.rst">
+      <provider selected="true" editor-type-id="restructured-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/modules/lesson07/office_hours1_recaps.rst">
+      <provider selected="true" editor-type-id="restructured-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/modules/lesson06/office_hours1_recaps.rst">
+      <provider selected="true" editor-type-id="restructured-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/modules/lesson08/office_hours1_recaps.rst">
+      <provider selected="true" editor-type-id="restructured-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/modules/lesson05/office_hours1_recaps.rst">
+      <provider selected="true" editor-type-id="restructured-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/modules/lesson07/office_hours2_all.rst">
+      <provider selected="true" editor-type-id="restructured-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/modules/lesson04/office_hours1_recaps.rst">
+      <provider selected="true" editor-type-id="restructured-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/modules/lesson03/office_hours1_recaps.rst">
+      <provider selected="true" editor-type-id="restructured-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/modules/lesson10/office_hours2_all.rst">
+      <provider selected="true" editor-type-id="restructured-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/modules/lesson02/office_hours1_recaps.rst">
+      <provider selected="true" editor-type-id="restructured-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/modules/lesson04/office_hours2_all.rst">
+      <provider selected="true" editor-type-id="restructured-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/modules/lesson00/0_office_hours.rst">
       <provider selected="true" editor-type-id="restructured-text-editor" />
     </entry>
   </component>
