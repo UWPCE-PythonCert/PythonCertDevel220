@@ -50,37 +50,28 @@ Print Statement Debugging
 Let's start off by writing a simple Python script with an obvious
 problem. Begin by creating simple.py:
 
-.. raw:: html
+    .. code:: python
 
-   <div
-   style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+        # simple.py
+        def my_fun(n):
+            for i in range(0, n):
+                i / (50 - i)
 
-::
-
-    # simple.py
-    def my_fun(n):
-        for i in range(0, n):
-            i / (50 - i)
-
-    if __name__ == "__main__":
-        my_fun(100)
-
-.. raw:: html
-
-   </div>
+        if __name__ == "__main__":
+            my_fun(100)
 
 You can probably already see the problem that we'll encounter when we
 run simple.py. Let's run it in python:
 
-::
+    .. code:: python
 
-    $ python simple.py
-    Traceback (most recent call last):
-      File "simple.py", line 7, in <module>
-        my_fun(100)
-      File "simple.py", line 4, in my_fun
-        i / (50 - i)
-    ZeroDivisionError: division by zero
+        $ python simple.py
+        Traceback (most recent call last):
+          File "simple.py", line 7, in <module>
+            my_fun(100)
+          File "simple.py", line 4, in my_fun
+            i / (50 - i)
+        ZeroDivisionError: division by zero
 
 As you might have expected, we get a ZeroDivisionError! At some point,
 for some value of \ *i*, the instruction \ *100 / (50 - i)* causes our
@@ -93,38 +84,30 @@ problem by adding print statements to the loop. You could print out the
 value of *i* just before the problem-fraught division statement. Make
 the following modification to simple.py:
 
-.. raw:: html
+    .. code:: python
 
-   <div
-   style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+        for i in range(0, n):
+            print(i)           # <-- Add this line
+            100 / (50 - i)
 
-::
-
-    for i in range(0, n):
-        print(i)           # <-- Add this line
-        100 / (50 - i)
-
-.. raw:: html
-
-   </div>
 
 Now running simple.py will give us some clue about for the faulting
 value of \ *i*:
 
-::
+   .. code:: python
 
-    $ python simple.py
-    0
-    1
-    2
-    ...
-    48
-    49
-    50
-    Traceback (most recent call last):
-     File "simple.py", line 2, in <module>
-     100 / (50 - i)
-    ZeroDivisionError: division by zero
+        $ python simple.py
+        0
+        1
+        2
+        ...
+        48
+        49
+        50
+        Traceback (most recent call last):
+         File "simple.py", line 2, in <module>
+         100 / (50 - i)
+        ZeroDivisionError: division by zero
 
 If we didn't know it already, then we know it now! The value of
 *i *\ just before the ZeroDivisionError is 50. This is the faulting
@@ -170,27 +153,19 @@ The Print Statement You Can Hide
 
 Let's make a couple of changes to our code:
 
-.. raw:: html
+   .. code:: python
 
-   <div
-   style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+        import logging
 
-::
+        logging.basicConfig(level=logging.DEBUG)
+        def my_fun(n):
+            for i in range(0, n):
+                logging.debug(i)
+                i / (50 - i)
 
-    import logging
+        if __name__ == "__main__":
+            my_fun(100)
 
-    logging.basicConfig(level=logging.DEBUG)
-    def my_fun(n):
-        for i in range(0, n):
-            logging.debug(i)
-            i / (50 - i)
-
-    if __name__ == "__main__":
-        my_fun(100)
-
-.. raw:: html
-
-   </div>
 
 We've imported the logging library, set some kind of logging
 configuration, and then replaced our print statement with

@@ -2,35 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="25d5bf0a-3b69-4cb0-be63-907ebd3f206b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/source/modules/lesson00/0_office_hours.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/modules/lesson00/1_principles.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/modules/lesson00/2_expectations.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/modules/lesson00/4_oo.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/modules/lesson01/office_hours1_recaps.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/modules/lesson01/office_hours2_all.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/modules/lesson02/office_hours1_recaps.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/modules/lesson02/office_hours2_all.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/modules/lesson03/office_hours1_recaps.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/modules/lesson03/office_hours2_all.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/modules/lesson04/office_hours1_recaps.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/modules/lesson04/office_hours2_all.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/modules/lesson05/office_hours1_recaps.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/modules/lesson05/office_hours2_all.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/modules/lesson06/office_hours1_recaps.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/modules/lesson06/office_hours2_all.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/modules/lesson07/office_hours1_recaps.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/modules/lesson07/office_hours2_all.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/modules/lesson08/office_hours1_recaps.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/modules/lesson08/office_hours2_all.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/modules/lesson09/office_hours1_recaps.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/modules/lesson09/office_hours2_all.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/modules/lesson10/office_hours1_recaps.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/modules/lesson10/office_hours2_all.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/src/lesson00/oo_class.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/src/lesson00/oo_inherit.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/PythonCertDevel220.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PythonCertDevel220.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/modules/lesson00/0x_case_study.rst" beforeDir="false" afterPath="$PROJECT_DIR$/source/modules/lesson00/3_case_study.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/modules/lesson00/4_oo.rst" beforeDir="false" afterPath="$PROJECT_DIR$/source/modules/lesson00/4_oo.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/modules/lesson02/lesson-05-content.rst" beforeDir="false" afterPath="$PROJECT_DIR$/source/modules/lesson02/lesson-05-content.rst" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,8 +20,8 @@
     <session id="929523868">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="20" />
-          <entry key="project.open.time.1" value="8" />
+          <entry key="project.closed" value="22" />
+          <entry key="project.open.time.1" value="10" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.2" value="1" />
@@ -56,27 +30,27 @@
           <entry key="project.open.time.6" value="4" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="3" />
-          <entry key="project.opened" value="21" />
+          <entry key="project.opened" value="23" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="Python Console" value="8" />
+          <entry key="Python Console" value="20" />
           <entry key="delme" value="10" />
           <entry key="gitignore" value="7" />
           <entry key="md" value="14" />
           <entry key="py" value="5" />
-          <entry key="rst" value="1161" />
-          <entry key="txt" value="106" />
+          <entry key="rst" value="1211" />
+          <entry key="txt" value="154" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Git file" value="7" />
           <entry key="Markdown" value="14" />
-          <entry key="PLAIN_TEXT" value="106" />
-          <entry key="Python" value="13" />
-          <entry key="ReST" value="1171" />
+          <entry key="PLAIN_TEXT" value="154" />
+          <entry key="Python" value="25" />
+          <entry key="ReST" value="1221" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -86,7 +60,7 @@
           <entry key="html" value="1" />
           <entry key="md" value="2" />
           <entry key="py" value="5" />
-          <entry key="rst" value="69" />
+          <entry key="rst" value="71" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
@@ -97,13 +71,29 @@
           <entry key="Markdown" value="2" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Python" value="5" />
-          <entry key="ReST" value="70" />
+          <entry key="ReST" value="72" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/modules/lesson01/01_lesson-06-introduction.rst">
+          <provider selected="true" editor-type-id="restructured-text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/modules/lesson00/4_oo.rst">
+          <provider selected="true" editor-type-id="restructured-text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/source/modules/lesson02/lesson-05-content.rst">
+          <provider selected="true" editor-type-id="restructured-text-editor" />
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -130,13 +120,14 @@
         <option value="$PROJECT_DIR$/source/src/lesson00/oo_inherit.py" />
         <option value="$PROJECT_DIR$/source/modules/lesson00/0_oo.rst" />
         <option value="$PROJECT_DIR$/source/modules/lesson00/1_principles.rst" />
-        <option value="$PROJECT_DIR$/source/modules/lesson00/4_oo.rst" />
         <option value="$PROJECT_DIR$/source/modules/lesson01/office_hours1_recaps.rst" />
         <option value="$PROJECT_DIR$/source/modules/lesson07/office_hours2_all.rst" />
         <option value="$PROJECT_DIR$/source/modules/lesson01/office_hours2_all.rst" />
         <option value="$PROJECT_DIR$/source/modules/lesson10/office_hours2_all.rst" />
         <option value="$PROJECT_DIR$/source/modules/lesson04/office_hours2_all.rst" />
         <option value="$PROJECT_DIR$/source/modules/lesson00/0_office_hours.rst" />
+        <option value="$PROJECT_DIR$/source/modules/lesson00/4_oo.rst" />
+        <option value="$PROJECT_DIR$/source/modules/lesson02/lesson-05-content.rst" />
       </list>
     </option>
   </component>
@@ -156,7 +147,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -178,7 +168,49 @@
             <path>
               <item name="PythonCertDevel220" type="b2602c69:ProjectViewProjectNode" />
               <item name="PythonCertDevel220" type="462c0819:PsiDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="html" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PythonCertDevel220" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PythonCertDevel220" type="462c0819:PsiDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="html" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="lesson02" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PythonCertDevel220" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PythonCertDevel220" type="462c0819:PsiDirectoryNode" />
               <item name="source" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PythonCertDevel220" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PythonCertDevel220" type="462c0819:PsiDirectoryNode" />
+              <item name="source" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PythonCertDevel220" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PythonCertDevel220" type="462c0819:PsiDirectoryNode" />
+              <item name="source" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="lesson00" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PythonCertDevel220" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PythonCertDevel220" type="462c0819:PsiDirectoryNode" />
+              <item name="source" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="lesson01" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PythonCertDevel220" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PythonCertDevel220" type="462c0819:PsiDirectoryNode" />
+              <item name="source" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="lesson02" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PythonCertDevel220" type="b2602c69:ProjectViewProjectNode" />
@@ -190,6 +222,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -197,7 +230,7 @@
     <property name="add_unversioned_files" value="$PROJECT_DIR$/venv/bin/rst2html.py&#10;true&#10;/Users/andy/projects/uw/PythonCertDevel220/build/html/modules/case_study.html" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -303,13 +336,21 @@
       <option name="project" value="LOCAL" />
       <updated>1540669522049</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="various draft materials added for rework / reorg">
+      <created>1540673347653</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1540673347653</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="836" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.79296345" visible="true" weight="0.3118741" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.79296345" visible="true" weight="0.1502146" />
       <window_info id="Structure" order="1" sideWeight="0.20703654" side_tool="true" weight="0.1509299" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -323,7 +364,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Python Console" order="3" sideWeight="0.49737534" weight="0.3197425" />
-      <window_info anchor="right" id="Terminal" order="4" sideWeight="0.48031497" visible="true" weight="0.24320458" />
+      <window_info active="true" anchor="right" id="Terminal" order="4" sideWeight="0.48031497" visible="true" weight="0.15808298" />
       <window_info active="true" anchor="right" id="Jenkins" order="5" visible="true" weight="0.33404863" />
       <window_info anchor="right" id="SciView" order="6" weight="0.3366762" />
       <window_info anchor="right" id="Docker" order="7" weight="0.32808024" />
@@ -345,7 +386,8 @@
     <MESSAGE value="initial version copied from 210. Seeded with basic content - minor fix" />
     <MESSAGE value="added case study" />
     <MESSAGE value="moved to new folders" />
-    <option name="LAST_COMMIT_MESSAGE" value="moved to new folders" />
+    <MESSAGE value="various draft materials added for rework / reorg" />
+    <option name="LAST_COMMIT_MESSAGE" value="various draft materials added for rework / reorg" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.gitignore">
@@ -412,9 +454,7 @@
     <entry file="file://$PROJECT_DIR$/source/modules/lesson00/3_case_study.rst">
       <provider selected="true" editor-type-id="restructured-text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/modules/Filename_here.rst">
-      <provider selected="true" editor-type-id="restructured-text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/source/modules/Filename_here.rst" />
     <entry file="file://$PROJECT_DIR$/source/modules/lesson04/02_00_lesson-01-starting-with-expression-flow-control-and-comprehensions.rst">
       <provider selected="true" editor-type-id="restructured-text-editor" />
     </entry>
@@ -439,15 +479,10 @@
     <entry file="file://$PROJECT_DIR$/source/modules/lesson04/01_lesson-01-introduction.rst">
       <provider selected="true" editor-type-id="restructured-text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/modules/lesson01/01_lesson-06-introduction.rst">
-      <provider selected="true" editor-type-id="restructured-text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/source/modules/lesson01/02_lesson-06-content.rst">
       <provider selected="true" editor-type-id="restructured-text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/modules/README.rst">
-      <provider selected="true" editor-type-id="restructured-text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/source/modules/README.rst" />
     <entry file="file://$PROJECT_DIR$/source/src/lesson00/oo_inherit.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="585">
@@ -463,9 +498,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/source/modules/python-220-advanced-programming-in-python.rst">
-      <provider selected="true" editor-type-id="restructured-text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/modules/lesson00/4_oo.rst">
       <provider selected="true" editor-type-id="restructured-text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/source/modules/lesson00/1_principles.rst">
@@ -514,6 +546,15 @@
       <provider selected="true" editor-type-id="restructured-text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/source/modules/lesson00/0_office_hours.rst">
+      <provider selected="true" editor-type-id="restructured-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/modules/lesson01/01_lesson-06-introduction.rst">
+      <provider selected="true" editor-type-id="restructured-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/modules/lesson00/4_oo.rst">
+      <provider selected="true" editor-type-id="restructured-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/modules/lesson02/lesson-05-content.rst">
       <provider selected="true" editor-type-id="restructured-text-editor" />
     </entry>
   </component>

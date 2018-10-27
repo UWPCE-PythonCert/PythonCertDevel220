@@ -15,9 +15,9 @@ Object Orientation
 How do I get started?
 ---------------------
 
-1. Recap
+#. Recap
 
-   1. Benefits of OO?
+3. Benefits of OO?
    1. Any disadvantages?
 
 1. Python syntax for OO is straightforward.
