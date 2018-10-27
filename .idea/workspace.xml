@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="25d5bf0a-3b69-4cb0-be63-907ebd3f206b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/modules/lesson00/4_oo.rst" beforeDir="false" afterPath="$PROJECT_DIR$/source/modules/lesson00/4_oo.rst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/modules/lesson02/lesson-05-content.rst" beforeDir="false" afterPath="$PROJECT_DIR$/source/modules/lesson02/lesson-05-content.rst" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,17 +38,17 @@
           <entry key="gitignore" value="7" />
           <entry key="md" value="14" />
           <entry key="py" value="5" />
-          <entry key="rst" value="1211" />
-          <entry key="txt" value="154" />
+          <entry key="rst" value="1238" />
+          <entry key="txt" value="181" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Git file" value="7" />
           <entry key="Markdown" value="14" />
-          <entry key="PLAIN_TEXT" value="154" />
+          <entry key="PLAIN_TEXT" value="181" />
           <entry key="Python" value="25" />
-          <entry key="ReST" value="1221" />
+          <entry key="ReST" value="1248" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -343,7 +341,14 @@
       <option name="project" value="LOCAL" />
       <updated>1540673347653</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="lesson0 (preclass) drafted">
+      <created>1540680910055</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1540680910055</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -387,7 +392,8 @@
     <MESSAGE value="added case study" />
     <MESSAGE value="moved to new folders" />
     <MESSAGE value="various draft materials added for rework / reorg" />
-    <option name="LAST_COMMIT_MESSAGE" value="various draft materials added for rework / reorg" />
+    <MESSAGE value="lesson0 (preclass) drafted" />
+    <option name="LAST_COMMIT_MESSAGE" value="lesson0 (preclass) drafted" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.gitignore">

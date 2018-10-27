@@ -173,59 +173,51 @@ a \ *logging.debug* statement.
 
 Now running simple.py produces the following output:
 
-::
 
-    $ python simple.py
-    DEBUG:root:0
-    DEBUG:root:1
-    DEBUG:root:2
-    ...
-    DEBUG:root:48
-    DEBUG:root:49
-    DEBUG:root:50
-    Traceback (most recent call last):
-      File "simple.py", line 10, in <module>
-        my_fun(100)
-      File "simple.py", line 7, in my_fun
-        i / (50 - i)
-    ZeroDivisionError: division by zero
+    .. code:: python
+        $ python simple.py
+        DEBUG:root:0
+        DEBUG:root:1
+        DEBUG:root:2
+        ...
+        DEBUG:root:48
+        DEBUG:root:49
+        DEBUG:root:50
+        Traceback (most recent call last):
+          File "simple.py", line 10, in <module>
+            my_fun(100)
+          File "simple.py", line 7, in my_fun
+            i / (50 - i)
+        ZeroDivisionError: division by zero
 
 So far, this doesn't look very different from the print statement that
 we were using before. But let's change one line of the script:
 
-.. raw:: html
+   .. code:: python
 
-   <div
-   style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+        import logging
 
-::
+        logging.basicConfig(level=logging.WARNING)  # Change the level to logging.WARNING
+        def my_fun(n):
+            for i in range(0, n):
+                logging.debug(i)
+                i / (50 - i)
 
-    import logging
+        if __name__ == "__main__":
+            my_fun(100)
 
-    logging.basicConfig(level=logging.WARNING)  # Change the level to logging.WARNING
-    def my_fun(n):
-        for i in range(0, n):
-            logging.debug(i)
-            i / (50 - i)
-
-    if __name__ == "__main__":
-        my_fun(100)
-
-.. raw:: html
-
-   </div>
 
 Now try running the script again:
 
-::
+   .. code:: python
 
-    $ python simple.py
-    Traceback (most recent call last):
-      File "simple.py", line 10, in <module>
-        my_fun(100)
-      File "simple.py", line 7, in my_fun
-        i / (50 - i)
-    ZeroDivisionError: division by zero
+        $ python simple.py
+        Traceback (most recent call last):
+          File "simple.py", line 10, in <module>
+            my_fun(100)
+          File "simple.py", line 7, in my_fun
+            i / (50 - i)
+        ZeroDivisionError: division by zero
 
 What happened?
 
@@ -236,22 +228,13 @@ with, then you might put a logging statement into that function to help
 you understand when it was being called, and with what arguments. For
 example:
 
-.. raw:: html
+   .. code:: python
 
-   <div
-   style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+        def my_fun(n):
+            logging.info("Function my_fun called with value {}".format(n))
+            do_something(n)
+            ...
 
-::
-
-    ...
-    def my_fun(n):
-        logging.info("Function my_fun called with value {}".format(n))
-        do_something(n)
-    ...
-
-.. raw:: html
-
-   </div>
 
 This logging statement is just giving us some information about how the
 function is being used, so we've used the \ *logging.info* method.
@@ -263,62 +246,46 @@ the value 50 causes our code to crash, we could put in
 a \ *logging.warning* statement that will warn us of dangerous
 conditions:
 
-.. raw:: html
+   .. code:: python
 
-   <div
-   style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+        import logging
 
-::
+        logging.basicConfig(level=logging.WARNING)
+        def my_fun(n):
+            for i in range(0, n):
+                logging.debug(i)
+                if i == 50:                                   # Add this line
+                    logging.warning("The value of i is 50.")  # Add this line
+                i / (50 - i)
 
-    import logging
+        if __name__ == "__main__":
+            my_fun(100)
 
-    logging.basicConfig(level=logging.WARNING)
-    def my_fun(n):
-        for i in range(0, n):
-            logging.debug(i)
-            if i == 50:                                   # Add this line
-                logging.warning("The value of i is 50.")  # Add this line
-            i / (50 - i)
-
-    if __name__ == "__main__":
-        my_fun(100)
-
-.. raw:: html
-
-   </div>
 
 If we wanted to handle the division by zero error gracefully, then we
 could modify the code to attempt the \ *100 / (50 - i)* operation inside
 of a try, except block. Then we would log an *error* if our script did
 attempt to divide by 0:
 
-.. raw:: html
+   .. code:: python
 
-   <div
-   style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+        import logging
 
-::
+        logging.basicConfig(level=logging.WARNING)
 
-    import logging
+        def my_fun(n):
+            for i in range(0, n):
+                logging.debug(i)
+                if i == 50:
+                    logging.warning("The value of i is 50.")
+                try:
+                    i / (50 - i)
+                except ZeroDivisionError:
+                    logging.error("Tried to divide by zero. Var i was {}. Recovered gracefully.".format(i))
 
-    logging.basicConfig(level=logging.WARNING)
+        if __name__ == "__main__":
+            my_fun(100)
 
-    def my_fun(n):
-        for i in range(0, n):
-            logging.debug(i)
-            if i == 50:
-                logging.warning("The value of i is 50.")
-            try:
-                i / (50 - i)
-            except ZeroDivisionError:
-                logging.error("Tried to divide by zero. Var i was {}. Recovered gracefully.".format(i))
-
-    if __name__ == "__main__":
-        my_fun(100)
-
-.. raw:: html
-
-   </div>
 
 You can see all of the logging levels in the `logging
 documentation <https://docs.python.org/3/library/logging.html#levels>`__.
@@ -327,11 +294,11 @@ like \ *logging.error*, \ *logging.warning*, etc.
 
 Now what do we get when we run our code?
 
-::
+   .. code:: python
 
-    $ python simple.py
-    WARNING:root:The value of i is 50.
-    ERROR:root:Tried to divide by zero, i was 50. Recovered gracefully.
+        $ python simple.py
+        WARNING:root:The value of i is 50.
+        ERROR:root:Tried to divide by zero, i was 50. Recovered gracefully.
 
 Why is it not showing the \ *logging.debug* statements?
 
@@ -357,25 +324,17 @@ will you see *all* log messages, or is there some default level that the
 logging library will choose for you? To answer that, try running the
 following script:
 
-.. raw:: html
+   .. code:: python
 
-   <div
-   style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+        # loggingtest.py
+        import logging
 
-::
+        logging.critical("This is a critical error!")
+        logging.error("I'm an error.")
+        logging.warning("Hello! I'm a warning!")
+        logging.info("This is some information.")
+        logging.debug("Perhaps this information will help you find your problem?")
 
-    # loggingtest.py
-    import logging
-
-    logging.critical("This is a critical error!")
-    logging.error("I'm an error.")
-    logging.warning("Hello! I'm a warning!")
-    logging.info("This is some information.")
-    logging.debug("Perhaps this information will help you find your problem?")
-
-.. raw:: html
-
-   </div>
 
 Although I used the *logging.basicConfig* method to set the logging
 level in these examples, there are other ways to set this value. We'll
@@ -409,50 +368,34 @@ stamp!
 
 Let's try it out! Make the following changes to your code:
 
-.. raw:: html
+   .. code:: python
 
-   <div
-   style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+        import logging
 
-::
+        format = "%(asctime)s %(filename)s:%(lineno)-4d %(levelname)s %(message)s"  # Add/modify these
+        logging.basicConfig(level=logging.WARNING, format=format)                   # two lines
 
-    import logging
+        def my_fun(n):
+            for i in range(0, n):
+                logging.debug(i)
+                if i == 50:
+                    logging.warning("The value of i is 50.")
+                try:
+                    i / (50 - i)
+                except ZeroDivisionError:
+                    logging.error("Tried to divide by zero. Var i was {}. Recovered gracefully.".format(i))
 
-    format = "%(asctime)s %(filename)s:%(lineno)-4d %(levelname)s %(message)s"  # Add/modify these
-    logging.basicConfig(level=logging.WARNING, format=format)                   # two lines
+        if __name__ == "__main__":
+            my_fun(100)
 
-    def my_fun(n):
-        for i in range(0, n):
-            logging.debug(i)
-            if i == 50:
-                logging.warning("The value of i is 50.")
-            try:
-                i / (50 - i)
-            except ZeroDivisionError:
-                logging.error("Tried to divide by zero. Var i was {}. Recovered gracefully.".format(i))
-
-    if __name__ == "__main__":
-        my_fun(100)
-
-.. raw:: html
-
-   </div>
 
 Let's look at these two lines:
 
-.. raw:: html
+   .. code:: python
 
-   <div
-   style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+        format = "%(asctime)s %(filename)s:%(lineno)-4d %(levelname)s %(message)s"
+        logging.basicConfig(level=logging.WARNING, format=format)
 
-::
-
-    format = "%(asctime)s %(filename)s:%(lineno)-4d %(levelname)s %(message)s"
-    logging.basicConfig(level=logging.WARNING, format=format)
-
-.. raw:: html
-
-   </div>
 
 We begin by defining a \ *format* for our log messages. All of the
 characters inside of the parentheses specify a different piece of
@@ -473,11 +416,11 @@ spaces.
 Now, what do you imagine running simple.py will produce? Here is the
 output:
 
-::
+    .. code:: python
 
-    $ python simple.py
-    2018-03-12 17:39:17,567 simple.py:10   WARNING The value of i is 50.
-    2018-03-12 17:39:17,567 simple.py:14   ERROR Tried to divide by zero. Var i was 50. Recovered gracefully.
+        $ python simple.py
+        2018-03-12 17:39:17,567 simple.py:10   WARNING The value of i is 50.
+        2018-03-12 17:39:17,567 simple.py:14   ERROR Tried to divide by zero. Var i was 50. Recovered gracefully.
 
 As expected, we see the time that the log message was produced, the file
 name and line number that the message was produced on, and the log
@@ -498,26 +441,18 @@ console, but what if it could be sent somewhere else?
 The simplest place that you can send log messages to is a file. Edit
 the \ *logging.basicConfig* statement in your \ *simple.py*.
 
-.. raw:: html
+   .. code:: python
 
-   <div
-   style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+        logging.basicConfig(level=logging.WARNING, format=format, filename='mylog.log')
 
-::
-
-    logging.basicConfig(level=logging.WARNING, format=format, filename='mylog.log')
-
-.. raw:: html
-
-   </div>
 
 Now run simple.py:
 
-::
+   .. code:: python
 
-    $ python simple.py
+        $ python simple.py
 
-    $
+        $
 
 There should now be no output sent to the console. Instead, the logging
 messages have been sent to a new file: mylog.log. Open this newly
@@ -536,43 +471,35 @@ Logging is even more powerful than that. We're about to learn how to
 send our logging messages to multiple places. In preparation for that, I
 want you to make the following changes to your code:
 
-.. raw:: html
+   .. code:: python
 
-   <div
-   style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+        import logging
 
-::
+        format = "%(asctime)s %(filename)s:%(lineno)-3d %(levelname)s %(message)s"
 
-    import logging
+        # BEGIN NEW STUFF
+        formatter = logging.Formatter(format)
 
-    format = "%(asctime)s %(filename)s:%(lineno)-3d %(levelname)s %(message)s"
+        file_handler = logging.FileHandler('mylog.log')
+        file_handler.setFormatter(formatter)
 
-    # BEGIN NEW STUFF
-    formatter = logging.Formatter(format)
+        logger = logging.getLogger()
+        logger.addHandler(file_handler)
+        # END NEW STUFF
 
-    file_handler = logging.FileHandler('mylog.log')
-    file_handler.setFormatter(formatter)
+        def my_fun(n):
+            for i in range(0, n):
+                logging.debug(i)
+                if i == 50:
+                    logging.warning("The value of i is 50.")
+                try:
+                    i / (50 - i)
+                except ZeroDivisionError:
+                    logging.error("Tried to divide by zero. Var i was {}. Recovered gracefully.".format(i))
 
-    logger = logging.getLogger()
-    logger.addHandler(file_handler)
-    # END NEW STUFF
+        if __name__ == "__main__":
+            my_fun(100)
 
-    def my_fun(n):
-        for i in range(0, n):
-            logging.debug(i)
-            if i == 50:
-                logging.warning("The value of i is 50.")
-            try:
-                i / (50 - i)
-            except ZeroDivisionError:
-                logging.error("Tried to divide by zero. Var i was {}. Recovered gracefully.".format(i))
-
-    if __name__ == "__main__":
-        my_fun(100)
-
-.. raw:: html
-
-   </div>
 
 Python, and the logging library, are so easy to read that you can
 probably guess at the meaning of all of these new lines. The first thing
@@ -582,29 +509,21 @@ We're manually building a logging configuration, consisting of a
 
 Let me add a bit of explaination to each new line in following comments:
 
-.. raw:: html
+   .. code:: python
 
-   <div
-   style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+        # Create a "formatter" using our format string
+        formatter = logging.Formatter(format)
 
-::
+        # Create a log message handler that sends output to the file 'mylog.log'
+        file_handler = logging.FileHandler('mylog.log')
+        # Set the formatter for this log message handler to the formatter we created above.
+        file_handler.setFormatter(formatter)
 
-    # Create a "formatter" using our format string
-    formatter = logging.Formatter(format)
+        # Get the "root" logger. More on that below.
+        logger = logging.getLogger()
+        # Add our file_handler to the "root" logger's handlers.
+        logger.addHandler(file_handler)
 
-    # Create a log message handler that sends output to the file 'mylog.log'
-    file_handler = logging.FileHandler('mylog.log') 
-    # Set the formatter for this log message handler to the formatter we created above.
-    file_handler.setFormatter(formatter)
-
-    # Get the "root" logger. More on that below.
-    logger = logging.getLogger()
-    # Add our file_handler to the "root" logger's handlers.
-    logger.addHandler(file_handler)
-
-.. raw:: html
-
-   </div>
 
 What does this new configuration do? Well, it does exactly what our code
 did before: it sends warning messages and above to a file named
@@ -654,48 +573,40 @@ logging messages at the console while you were running your program, but
 only log the most important messages (WARNING and above) to your log
 file. You could accomplish that with this code:
 
-.. raw:: html
+   .. code:: python
 
-   <div
-   style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+        import logging
 
-::
+        format = "%(asctime)s %(filename)s:%(lineno)-3d %(levelname)s %(message)s"
 
-    import logging
+        formatter = logging.Formatter(format)
 
-    format = "%(asctime)s %(filename)s:%(lineno)-3d %(levelname)s %(message)s"
+        file_handler = logging.FileHandler('mylog.log')
+        file_handler.setLevel(logging.WARNING)           # Add this line
+        file_handler.setFormatter(formatter)
 
-    formatter = logging.Formatter(format)
+        console_handler = logging.StreamHandler()        # Add this line
+        console_handler.setLevel(logging.DEBUG)          # Add this line
+        console_handler.setFormatter(formatter)          # Add this line
 
-    file_handler = logging.FileHandler('mylog.log')
-    file_handler.setLevel(logging.WARNING)           # Add this line
-    file_handler.setFormatter(formatter)
+        logger = logging.getLogger()
+        logger.setLevel(logging.DEBUG)                   # Add this line
+        logger.addHandler(file_handler)
+        logger.addHandler(console_handler)               # Add this line
 
-    console_handler = logging.StreamHandler()        # Add this line
-    console_handler.setLevel(logging.DEBUG)          # Add this line
-    console_handler.setFormatter(formatter)          # Add this line
+        def my_fun(n):
+            for i in range(0, n):
+                logging.debug(i)
+                if i == 50:
+                    logging.warning("The value of i is 50.")
+                try:
+                    i / (50 - i)
+                except ZeroDivisionError:
+                    logging.error("Tried to divide by zero. Var i was {}. Recovered gracefully.".format(i))
 
-    logger = logging.getLogger()
-    logger.setLevel(logging.DEBUG)                   # Add this line
-    logger.addHandler(file_handler)
-    logger.addHandler(console_handler)               # Add this line
+        if __name__ == "__main__":
+            my_fun(100)
 
-    def my_fun(n):
-        for i in range(0, n):
-            logging.debug(i)
-            if i == 50:
-                logging.warning("The value of i is 50.")
-            try:
-                i / (50 - i)
-            except ZeroDivisionError:
-                logging.error("Tried to divide by zero. Var i was {}. Recovered gracefully.".format(i))
-
-    if __name__ == "__main__":
-        my_fun(100)
-
-.. raw:: html
-
-   </div>
 
 You might have a few questions about this code:
 
@@ -763,12 +674,7 @@ Let's begin by understanding the basic commands of the interactive
 debugger. We'll begin by debugging the file simple.py in the debugging
 exercises code repository:
 
-.. raw:: html
-
-   <div
-   style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
-
-::
+   .. code:: python
 
     # simple.py
     def my_fun():
@@ -778,9 +684,6 @@ exercises code repository:
     if __name__ == '__main__':
         my_fun()
 
-.. raw:: html
-
-   </div>
 
 Try running the script. You probably expected to receive a
 ZeroDivisionError. Let's use this code to begin exploring the Python
