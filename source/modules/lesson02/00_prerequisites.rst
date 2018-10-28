@@ -1,18 +1,17 @@
 Python 220 Advanced Python Programming
 ======================================
 
-Lesson 1 : Prerequisites
+Lesson 2 : Prerequisites
 ------------------------
 
 To be successful in this lesson you will need to be very familiar with the
 following concepts, covered earlier in the class:
 
-#. Understand modules and absolute / relative imports
-#. Understand the concepts of  unit and functional tests
+#. String formatting
+#. Creating functions
 
-Review the earlier class materials, and you may wish to consult the
+Review the earlier class materials, and you may wish to ocnulst the
 following articles that are generally available:
 
 .. todo::
-    Add pre-reading external links for modules, imports and unit /
-    functional tests
+    Add pre-reading external links for string formatting and creating functions
