@@ -45,3 +45,11 @@ Readers are encouraged to report omissions, typos, or make suggestions for impro
 .. * :ref:`genindex`
 
 .. * :ref:`search`
+
+
+To Dos
+======
+
+Remaining work for this class
+
+.. todolist::
