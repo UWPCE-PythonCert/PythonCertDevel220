@@ -3,7 +3,10 @@
 Exercise notes
 ##############
 
-SAMPLE
+.. todo::
+
+    Update all the index documents
+
 
 Arranged in order of the lessons:
 
