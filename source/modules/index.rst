@@ -7,6 +7,9 @@ Lesson content
     #. Convert all code to rst tags
     #. Add a lesson index doc fro every lesson?
     #. Need extra content for office hours?
+    #. Deal with video here tags
+    #. Deal with how videos fit
+    #. Bes sure all dependencies are OK given class resequence
 
 
 Arranged in order of the lessons:

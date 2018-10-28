@@ -2,6 +2,9 @@
 Lesson 08 Content
 =================
 
+.. todo::
+    update based on video script
+
 .. raw:: html
 
    <div id="menuheading">
