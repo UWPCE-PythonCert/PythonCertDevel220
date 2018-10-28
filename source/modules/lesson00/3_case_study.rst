@@ -45,7 +45,8 @@ On return to the office, copy 3 is returned to the service desk. If the rental i
 
 Flow Chart
 ----------
-TBD
+.. todo::
+    Add flow chart for case study
 
 Your Role
 =========

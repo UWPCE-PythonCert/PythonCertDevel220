@@ -1,11 +1,12 @@
-
 ##############
-Exercise notes
+Lesson content
 ##############
 
 .. todo::
-
-    Update all the index documents
+    #. Update all the index documents
+    #. Convert all code to rst tags
+    #. Add a lesson index doc fro every lesson?
+    #. Need extra content for office hours?
 
 
 Arranged in order of the lessons:

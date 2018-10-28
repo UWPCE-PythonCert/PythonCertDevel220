@@ -7,8 +7,8 @@ help to build expressive programs that are easy to understand.
 
 
 .. todo::
-More needed on lesson 9 assignment
-Need example for rework to recursion
+    More needed on lesson 9 assignment
+    Need example for rework to recursion
 
 Here is what you need to do:
 ----------------------------

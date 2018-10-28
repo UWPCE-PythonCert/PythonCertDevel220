@@ -14,8 +14,8 @@ Here is what you need to do:
    customer databases, and reading 100 records from these databases.
 
 .. todo::
-#. Create badly performing module
-#. Needs work
+    #. Create badly performing module
+    #. Needs work
 
 Tips
 ----

@@ -14,8 +14,8 @@ Here is what you need to do:
 #. Log all database data changes (adds, amends, deletes).
 
 .. todo::
-Create a customer csv file to be used for loading data with at east 1000
-records.
+    Create a customer csv file to be used for loading data with at least
+    1000 records.
 
 Tips
 ----

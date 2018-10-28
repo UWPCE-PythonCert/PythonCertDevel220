@@ -1,5 +1,7 @@
 Open House 1: Advanced Python Programming
 =========================================
+.. todo::
+    Rework class principles for lesson 0
 
 Class groundrules and principles
 --------------------------------

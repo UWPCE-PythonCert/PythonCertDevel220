@@ -46,10 +46,16 @@ Readers are encouraged to report omissions, typos, or make suggestions for impro
 
 .. * :ref:`search`
 
+.. todo::
 
-To Dos
-======
+    #. Need to link all of this site together.
+    #. Ensure all filenames are correct in folders
 
-Remaining work for this class
+
+
+All To Dos
+==========
+
+Remaining work for this class.
 
 .. todolist::

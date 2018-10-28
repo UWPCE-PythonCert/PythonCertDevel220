@@ -17,7 +17,7 @@ Here is what you need to do:
 #. Provide an example with test that passes.
 
 .. todo::
-More needed on this assignment
+    More needed on this assignment
 
 Tips
 ----

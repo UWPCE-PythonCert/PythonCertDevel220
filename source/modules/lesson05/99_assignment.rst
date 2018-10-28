@@ -18,7 +18,7 @@ You should address the following requirements:
    and type of the product that they rented.
 
 .. todo::
-Create product CSV file
+    Create product CSV file
 
 
 Here is what you need to do:

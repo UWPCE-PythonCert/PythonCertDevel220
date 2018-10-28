@@ -1,6 +1,10 @@
 Object Oriented Concepts
 ========================
 
+.. todo::
+    Rework OO principles for lesson 0
+    Should this go in office hours?
+
 What is OO?
 -----------
 Object orientation is a popular programming model that focuses on
