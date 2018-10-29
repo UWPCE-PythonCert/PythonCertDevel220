@@ -781,7 +781,7 @@ module's behavior to be correct:
 
 #. An \ **operator**\  is a class instance which provides a method
    named \ *calc*. The \ *calc*\  method shall accept two arguments and
-   operate on its arguments in the "typical" order:
+   operate on its arguments in the usual order:
    *Adder().calc(a, b) = a + b
    Subtracter().calc(a, b) = a - b
    *\ etc...
@@ -808,7 +808,7 @@ module's behavior to be correct:
 
    #. *calculator.enter\_number(2)*
    #. *calculator.enter\_number(3)*
-   #. *calculator.add()                      # Returns 5, and now 5 is
+   #. *calculator.add()                      # Returns 5, and 5 is
       now 'in the calculator' *
    #. *calculator.enter\_number(1)*
    #. *calculator.subtract()               # Returns 4 because 5 - 1 =
@@ -822,7 +822,7 @@ module's behavior to be correct:
 Based on this definition, we can see that the final result of our
 calculation in the video should have been 9!
 
-There are some situations that our definition above don't explicitly
+There are some situations that our definition above doesn't explicitly
 cover:
 
 -  What should a \ *calculator* do if two numbers have already been
@@ -834,7 +834,7 @@ cover:
 -  Etc..
 
 For the purposes of this exercise, we'll leave the behavior in these
-circumstance \ *undefined*. Any person who wants to program
+circumstances \ *undefined*. Any person who wants to program
 a \ *calculator* could choose to write their code such that:
 
 -  a\ * calculator* throws an error when a third number gets entered
@@ -861,18 +861,20 @@ If we can define the correct behavior of a single class and test it in
 isolation from any other code, then if our unit test fails we know it's
 because of a failure in that specific class: if we've written a test
 that only uses Adder and not Subtracter, then we know that if that test
-fails it is because of a problem in the Adder class.
+fails it is because of a problem in the Adder class, something that is not
+related with its interaction with other classes (interaction between
+classes is covered by integration testing).
 
 {{VIDEO HERE}}
 
 Unit testing Calculator
 =======================
 
-Unit testing was easy for the Adder and Subtracter: Adder and Subtracter
-don't make use of any other classes. But just *creating* a Calculator
+Unit testing is a good solution for the Adder and Subtracter classes: Adder and Subtracter
+don't make use of any other classes. But just *creating* a Calculator instance
 requires creating an Adder, a Subtracter, a Multiplier, and a Divider:
 how can we possible devise unit tests for Calculator that don't involve
-those other classes at all?
+those other classes at all, so that the class can be kept isolated for testing purposes?
 
 To answer this question, we introduce a new tool library: \ *mock*.
 
@@ -881,11 +883,39 @@ To answer this question, we introduce a new tool library: \ *mock*.
 Testing Calculator in isolation from all of the other classes is
 difficult, but we achieve it by strictly defining the responsibilities
 of Calculator, separate from the responsibilities of the other classes,
-and testing those responsibilities in isolation using dummy Adder,
-Subtracter, Multiplier, and Divider methods.
+and testing those responsibilities in isolation using dummy versions of Adder,
+Subtracter, Multiplier, and Divider methods. The Mock library will also come
+in handy in situations in which you need input from a networked location or a
+physical sensor (for example, a temperature reading).
 
 Integration Testing
 ===================
+
+After all this unit testing, it's very tempting to assume that good unit tests
+provide everything you need to ensure your code will work properly. That's a
+very risky assumption. Even if all the individual elements in your project, there's
+always a chance that additional issues will be uncovered when you test the project
+as a whole. Let's think a simple example.
+
+How you measure temperature is sometimes a contentious issue. Imagine you have two
+developers, working together on a project to read the temperature from a sensor
+and use that to control a temperature alarm (a very noisy alarm) that will sound if the
+temperature detected is too high. One developer
+is American, he works on the code for the thermal sensor class. The other
+developer is from England, he is in charge of alarm control class. 
+
+Both developers are very capable and diligent, creating comprehensive unit
+tests for their respective classes. In the case of the alarm control class, the
+developer used the Mock library to simulate the input coming from the thermal sensor
+class. They're both very satisfied that their respective unit tests are passing
+and decide to do a live test, that is, with their software connected to both the
+thermal sensor and the alarm. The alarm starts sounding right away and the building
+has to be evacuated. Oops. What happened?
+
+The American developer coded the sensor class use the Fahrenheit scale, while the
+English developer has his alarm control class using Celsius. A typical room 
+temperature measurement of 75F would be seen as life-threatening by the alarm
+control class, since it thinks the sensor is reporting 75C (167F)
 
 For our integration tests, we want to know if all of our code works
 together, as a whole. To accomplish this, we create a calculation
