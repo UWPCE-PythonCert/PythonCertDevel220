@@ -1,4 +1,4 @@
-=================
+z=================
 Lesson 05 Content
 =================
 
@@ -37,8 +37,8 @@ Logging
 
 We'll be talking about both logging and debugging in this lesson. In the
 introduction, I said that logging and debugging are a great step up from
-the print statements that beginning programs often like to use to debug
-their code.
+the print statements that beginning programers often like to use to
+debug their code.
 
 Your assignment for this week will be the culmination of the logging
 exercises that we complete in this lesson. I encourage you to actually
@@ -55,7 +55,7 @@ problem. Begin by creating simple.py:
         # simple.py
         def my_fun(n):
             for i in range(0, n):
-                i / (50 - i)
+                100 / (50 - i)
 
         if __name__ == "__main__":
             my_fun(100)
@@ -70,18 +70,18 @@ run simple.py. Let's run it in python:
           File "simple.py", line 7, in <module>
             my_fun(100)
           File "simple.py", line 4, in my_fun
-            i / (50 - i)
+           100 / (50 - i)
         ZeroDivisionError: division by zero
 
 As you might have expected, we get a ZeroDivisionError! At some point,
-for some value of \ *i*, the instruction \ *100 / (50 - i)* causes our
+for some value of \ *i*, the instruction 100\ * / (50 - i)* causes our
 program to attempt to divide by zero.
 
-I'm sure that you can see what value of \ *i* would cause this problem,
+I'm sure that you can see what value of \ *i* would cause this problem,
 but let's pretend that we didn't know, and we were trying to figure it
 out. If you had no better tools, you might try to investigate this
 problem by adding print statements to the loop. You could print out the
-value of *i* just before the problem-fraught division statement. Make
+value of \ *i* just before the problem-fraught division statement. Make
 the following modification to simple.py:
 
     .. code:: python
@@ -109,8 +109,8 @@ value of \ *i*:
          100 / (50 - i)
         ZeroDivisionError: division by zero
 
-If we didn't know it already, then we know it now! The value of
-*i *\ just before the ZeroDivisionError is 50. This is the faulting
+If we didn't know it already, then we know it now! The value
+of \ *i *\ just before the ZeroDivisionError is 50. This is the faulting
 value of \ *i*.
 
 This "print statement debugging" is how a lot of new programmers begin
@@ -161,7 +161,7 @@ Let's make a couple of changes to our code:
         def my_fun(n):
             for i in range(0, n):
                 logging.debug(i)
-                i / (50 - i)
+                100 / (50 - i)
 
         if __name__ == "__main__":
             my_fun(100)
@@ -169,12 +169,13 @@ Let's make a couple of changes to our code:
 
 We've imported the logging library, set some kind of logging
 configuration, and then replaced our print statement with
-a \ *logging.debug* statement.
+a \ *logging.debug* statement.
 
 Now running simple.py produces the following output:
 
 
     .. code:: python
+    
         $ python simple.py
         DEBUG:root:0
         DEBUG:root:1
@@ -187,7 +188,7 @@ Now running simple.py produces the following output:
           File "simple.py", line 10, in <module>
             my_fun(100)
           File "simple.py", line 7, in my_fun
-            i / (50 - i)
+            100 / (50 - i)
         ZeroDivisionError: division by zero
 
 So far, this doesn't look very different from the print statement that
@@ -201,7 +202,7 @@ we were using before. But let's change one line of the script:
         def my_fun(n):
             for i in range(0, n):
                 logging.debug(i)
-                i / (50 - i)
+                100 / (50 - i)
 
         if __name__ == "__main__":
             my_fun(100)
@@ -216,12 +217,12 @@ Now try running the script again:
           File "simple.py", line 10, in <module>
             my_fun(100)
           File "simple.py", line 7, in my_fun
-            i / (50 - i)
+            100 / (50 - i)
         ZeroDivisionError: division by zero
 
 What happened?
 
-The logging library includes the idea of various \ *levels* of logging
+The logging library includes the idea of various \ *levels* of logging
 messages: some messages are more important than others. For example, if
 you were curious to know the values that a function was being called
 with, then you might put a logging statement into that function to help
@@ -237,13 +238,13 @@ example:
 
 
 This logging statement is just giving us some information about how the
-function is being used, so we've used the \ *logging.info* method.
+function is being used, so we've used the *logging.info* method.
 
 In our example script, when we were trying to figure out what value
-of \ *i* was causing our script to crash, we were debugging our code.
+of \ *i* was causing our script to crash, we were debugging our code.
 That's why we used a \ *logging.debug* statement. Now that we know that
 the value 50 causes our code to crash, we could put in
-a \ *logging.warning* statement that will warn us of dangerous
+a \ *logging.warning* statement that will warn us of dangerous
 conditions:
 
    .. code:: python
@@ -256,15 +257,15 @@ conditions:
                 logging.debug(i)
                 if i == 50:                                   # Add this line
                     logging.warning("The value of i is 50.")  # Add this line
-                i / (50 - i)
+                100 / (50 - i)
 
         if __name__ == "__main__":
             my_fun(100)
 
 
 If we wanted to handle the division by zero error gracefully, then we
-could modify the code to attempt the \ *100 / (50 - i)* operation inside
-of a try, except block. Then we would log an *error* if our script did
+could modify the code to attempt the \ *100 / (50 - i)* operation inside
+of a try, except block. Then we would log an \ *error* if our script did
 attempt to divide by 0:
 
    .. code:: python
@@ -279,7 +280,7 @@ attempt to divide by 0:
                 if i == 50:
                     logging.warning("The value of i is 50.")
                 try:
-                    i / (50 - i)
+                    100 / (50 - i)
                 except ZeroDivisionError:
                     logging.error("Tried to divide by zero. Var i was {}. Recovered gracefully.".format(i))
 
@@ -300,15 +301,15 @@ Now what do we get when we run our code?
         WARNING:root:The value of i is 50.
         ERROR:root:Tried to divide by zero, i was 50. Recovered gracefully.
 
-Why is it not showing the \ *logging.debug* statements?
+Why is it not showing the \ *logging.debug* statements?
 
 The statement \ *logging.basicConfig(level=logging.WARNING) *\ tells the
-logger to \ *only* display log messages with level WARNING and above.
-Look back to the logging levels documenation. You'll see that the DEBUG
-level is below the WARNING level: it won't be displayed. When we were
+logger to \ *only* display log messages with level WARNING and above.
+Look back to the logging levels documentation. You'll see that the DEBUG
+level is below the WARNING level, so it won't be displayed. When we were
 debugging this code, the debug statements were helping us understand why
 our code was failing, but now it would be overwhelming to see them every
-time we run our code. We've \ *hidden* the statements by making a single
+time we run our code. We've \ *hidden* the statements by making a single
 configuration change.
 
 The idea is that you might be working on a project with a lot of Python
@@ -320,8 +321,8 @@ logging statement: you can just turn off the unimportant ones by setting
 the log level in your main script.
 
 What is the default log level? If you don't specify a log level, then
-will you see *all* log messages, or is there some default level that the
-logging library will choose for you? To answer that, try running the
+will you see \ *all* log messages, or is there some default level that
+the logging library will choose for you? To answer that, try running the
 following script:
 
    .. code:: python
@@ -336,7 +337,7 @@ following script:
         logging.debug("Perhaps this information will help you find your problem?")
 
 
-Although I used the *logging.basicConfig* method to set the logging
+Although I used the \ *logging.basicConfig* method to set the logging
 level in these examples, there are other ways to set this value. We'll
 learn about this later in the lesson.
 
@@ -345,11 +346,11 @@ The Print Statement You Can Add More Information To
 
 Sometimes, it's not enough just to see the error, warning, or
 information message that you would put into a print statement to debug
-your code. Other information can be useful:
+your code. Other information can be useful, such as:
 
--  When the log message was generated.
--  What Python file the log message was generated in.
--  What line number the log message was generated on.
+-  when the log message was generated;
+-  what Python file the log message was generated in;
+-  what line number the log message was generated on; or
 -  The name of the function that the log message was generated in.
 
 It's easy to see how knowing the file name, line number, and function
@@ -357,14 +358,14 @@ name that the log message was generated on can be useful: you might
 create a lot of messages and it can be easy to lose track of where all
 of your log statements are.
 
-Why would you possibly want to know \ *when* a log message was
+Why would you possibly want to know \ *when* a log message was
 generated? One reason is that you might want to time how long it takes
 your code to get to a particular log message. But the real usefulness of
-knowing \ *when* a log message was generated will come in the next
+knowing \ *when* a log message was generated will come in the next
 session: we'll be saving log messages to files instead of printing them
 at the console. When you open up a saved log file, you might not even
-know \ *what day* the message was generated on unless you include a time
-stamp!
+know \ *what day* the message was generated on unless you include a
+timestamp!
 
 Let's try it out! Make the following changes to your code:
 
@@ -372,8 +373,8 @@ Let's try it out! Make the following changes to your code:
 
         import logging
 
-        format = "%(asctime)s %(filename)s:%(lineno)-4d %(levelname)s %(message)s"  # Add/modify these
-        logging.basicConfig(level=logging.WARNING, format=format)                   # two lines
+        log_format = "%(asctime)s %(filename)s:%(lineno)-4d %(levelname)s %(message)s"  # Add/modify these
+        logging.basicConfig(level=logging.WARNING, format=log_format)                   # two lines
 
         def my_fun(n):
             for i in range(0, n):
@@ -381,7 +382,7 @@ Let's try it out! Make the following changes to your code:
                 if i == 50:
                     logging.warning("The value of i is 50.")
                 try:
-                    i / (50 - i)
+                    100 / (50 - i)
                 except ZeroDivisionError:
                     logging.error("Tried to divide by zero. Var i was {}. Recovered gracefully.".format(i))
 
@@ -393,25 +394,25 @@ Let's look at these two lines:
 
    .. code:: python
 
-        format = "%(asctime)s %(filename)s:%(lineno)-4d %(levelname)s %(message)s"
-        logging.basicConfig(level=logging.WARNING, format=format)
+        log_format = "%(asctime)s %(filename)s:%(lineno)-4d %(levelname)s %(message)s"
+        logging.basicConfig(level=logging.WARNING, format=log_format)
 
 
-We begin by defining a \ *format* for our log messages. All of the
+We begin by defining a *log_format* for our log messages. All of the
 characters inside of the parentheses specify a different piece of
 information that we want to include inside of our messages. Please see
-the \ `full list of these LogRecord
+the `full list of these LogRecord
 attributes <https://docs.python.org/3/library/logging.html#logrecord-attributes>`__,
 and look for each of the attributes we included above, to get a guess
 for what information this formatter will include. For
-example, \ *asctime* produces a human-readable time string.
+example, \ *asctime* produces a human-readable time string.
 
 The formatting characters to the left and right of the parentheses are
-borrowed from \ *printf* formatting. For example, \ *%(asctime)s* means
-to include the time string in the log message as a string. The \ *-4d*
-in \ *%(lineno)-4d* means to include the line number of the log
-statement as a 4 character integer, padding the output on the right with
-spaces.
+borrowed from \ *printf* formatting. For example, \ *%(asctime)s* means
+to include the time string in the log message as a string.
+The \ *-4d* in *%(lineno)-4d* means to include the line number of the
+log statement as a 4 character integer, padding the output on the right
+with spaces.
 
 Now, what do you imagine running simple.py will produce? Here is the
 output:
@@ -439,11 +440,11 @@ Every print statement you include in your code writes its message to the
 console, but what if it could be sent somewhere else?
 
 The simplest place that you can send log messages to is a file. Edit
-the \ *logging.basicConfig* statement in your \ *simple.py*.
+the \ *logging.basicConfig*\ statement in your \ *simple.py*.
 
    .. code:: python
 
-        logging.basicConfig(level=logging.WARNING, format=format, filename='mylog.log')
+        logging.basicConfig(level=logging.WARNING, format=log_format, filename='mylog.log')
 
 
 Now run simple.py:
@@ -475,10 +476,10 @@ want you to make the following changes to your code:
 
         import logging
 
-        format = "%(asctime)s %(filename)s:%(lineno)-3d %(levelname)s %(message)s"
+        log_format = "%(asctime)s %(filename)s:%(lineno)-3d %(levelname)s %(message)s"
 
         # BEGIN NEW STUFF
-        formatter = logging.Formatter(format)
+        formatter = logging.Formatter(log_format)
 
         file_handler = logging.FileHandler('mylog.log')
         file_handler.setFormatter(formatter)
@@ -503,16 +504,16 @@ want you to make the following changes to your code:
 
 Python, and the logging library, are so easy to read that you can
 probably guess at the meaning of all of these new lines. The first thing
-to notice is that we've eliminated that \ *logging.basicConfig* line!
-We're manually building a logging configuration, consisting of a
-*formatter* and a *handler*.
+to notice is that we've eliminated that \ *logging.basicConfig* line!
+We're manually building a logging configuration, consisting of
+a \ *formatter* and a \ *handler*.
 
 Let me add a bit of explaination to each new line in following comments:
 
    .. code:: python
 
         # Create a "formatter" using our format string
-        formatter = logging.Formatter(format)
+        formatter = logging.Formatter(log_format)
 
         # Create a log message handler that sends output to the file 'mylog.log'
         file_handler = logging.FileHandler('mylog.log')
@@ -530,13 +531,13 @@ did before: it sends warning messages and above to a file named
 'mylog.log'.
 
 Log message handlers answer the question, "What should the system do
-with log messages?" Here are a few possibile things that we can do with
+with log messages?" Here are a few possible things that we can do with
 log messages:
 
 -  We could print them to the console.
 -  We could send them to a file.
 -  We could send them to a remote server.
--  We could send them in an e-mail.
+-  We could send them in an email.
 -  We could just ignore them.
 
 Take a brief look at each of the `handler classes available in the
@@ -547,9 +548,9 @@ by a handler class in the logging library.
 
 In the newest iteration of our code, we create a logging.FileHandler log
 message handler to send our log messages to a file. Unlike
-the \ *logging.basicConfig* command, we can't provide the log message
-format to our file handler as a string: we have to create an instance of
-the logging.Formatter class and use \ *file\_handler.setFormatter* to
+the \ *logging.basicConfig* command, we can't provide the log message
+format to our file handler as a string. We have to create an instance of
+the logging.Formatter class and use \ *file_handler.setFormatter* to
 instruct our handler to use this formatter.
 
 Next, we have to tell the logger to use this handler that we've created.
@@ -559,11 +560,11 @@ loggers running in a system, although we're not going to explore that in
 this lesson. Instead, we're going to use a single logger and add
 multiple log message handlers to that logger. But if you're curious, you
 can look at the documentation
-for \ `*logging.getLogger()* <https://docs.python.org/3/library/logging.html#logging.getLogger>`__.
+for \ `logging.getLogger() <https://docs.python.org/3/library/logging.html#logging.getLogger>`__
 
 Now that we have a reference to the "root" or global logger, we can add
 our message handler to it using \ *logger.addHandler*. Now, our root
-logger will send all of its messages to the file\_handler log message
+logger will send all of its messages to the file_handler log message
 handler, and these messages get written to the file 'mylog.log'.
 
 Run the script and confirm!
@@ -577,9 +578,9 @@ file. You could accomplish that with this code:
 
         import logging
 
-        format = "%(asctime)s %(filename)s:%(lineno)-3d %(levelname)s %(message)s"
+        log_format = "%(asctime)s %(filename)s:%(lineno)-3d %(levelname)s %(message)s"
 
-        formatter = logging.Formatter(format)
+        formatter = logging.Formatter(log_format)
 
         file_handler = logging.FileHandler('mylog.log')
         file_handler.setLevel(logging.WARNING)           # Add this line
@@ -612,28 +613,27 @@ You might have a few questions about this code:
 
 -  What is a StreamHandler?
 -  Why do we set the log level on both of the log message
-   handlers \ **and also** set the log level on the root logger?
+   handlers \ **and also** set the log level on the root logger?
 
-A rigorous definition of a s\ *tream* is outside the scope of this
-assignment, but in rough terms a stream is a very general concept in
+A rigorous definition of a s\ *tream* is outside the scope of this
+assignment; but in rough terms, a stream is a very general concept in
 computer science of a store or source of information. The StreamHandler
-constructor will accept a stream as its first argument, but if we don't
-provide an argument then it will use its default: the sys.stderr stream.
-That's one of two system streams that get printed directly to the
-console. So by default, the StreamHandler will send log messages to the
-console.
+constructor will accept a stream as its first argument; but if we don't
+provide an argument, then it will use its default: the sys.stderr
+stream. That's one of two system streams that get printed directly to
+the console. So by default, the StreamHandler will send log messages to
+the console.
 
 As for the second question, loggers and handlers maintain separate
 settings for their minimum log level. By default, a logger will not pass
 any messages lower than WARNING on to its handlers. Because we want the
-console\_logger to handle DEBUG messages, we have to set the level of
-the root logger to DEBUG in order for these messages to be sent on to
-its handlers at all. Because we also set the level of the
-console\_handler to DEBUG, the console\_handler will print out these
-low-level messages. The root logger will also send DEBUG messages and
-above to the file\_handler, but because we have set the log level of the
-file\_handler to WARNING it will only log WARNING messages and above to
-its log file.
+console_logger to handle DEBUG messages, we have to set the level of the
+root logger to DEBUG in order for these messages to be sent on to its
+handlers at all. Because we also set the level of the console_handler to
+DEBUG, the console_handler will print out these low-level messages. The
+root logger will also send DEBUG messages and above to the file_handler,
+but because we have set the log level of the file_handler to WARNING it
+will only log WARNING messages and above to its log file.
 
 Run the script, and confirm that it now runs as expected!
 
@@ -641,7 +641,7 @@ Lesson Assignment
 -----------------
 
 The lesson assignment makes use of the materials in this lesson on
-logging: refer back to this section when you're ready to complete the
+logging. Refer back to this section when you're ready to complete the
 assignment.
 
 Debugging
@@ -656,14 +656,14 @@ that can be hidden, or have extra information attached to it, or can be
 sent to somewhere other than the console.
 
 Debugging your code with an interactive debugger is another thing
-entirely: although both practices help you answer the same question of
+entirely; although both practices help you answer the same question of
 what's going in in your code, interactive debugging is not at all like
 inserting print statements.
 
-Interactive debugging allows you to run the Python interpretter
+Interactive debugging allows you to run the Python interpreter
 line-by-line through your code, pausing to print out the values of
 particular variables, or to evaluate other statements inside of the
-interpretter. And it includes tools that can help you "zoom through" the
+interpreter. And it includes tools that can help you "zoom through" the
 execution of many statements to get right to trouble-raising conditions
 in your code.
 
