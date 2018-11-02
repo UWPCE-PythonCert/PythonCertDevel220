@@ -7,13 +7,16 @@ On Windows, unlike Linux and Mac, sqlite is not installed with Python. As always
 Open a command prompt (press the Windows key, type cmd and press enter).
 
 At the command prompt enter the following command:
-.. cdoe::
+
+.. code:: bash
     pip install pysqlite3
 
 Now, type the following command:
-.. cdoe::
+
+.. code:: bash
     sqlite3
 
 And you should see the sqlite prompt. Type the quit command to return to the command prompt:
-.. cdoe::
+
+.. code:: bash
     .quit

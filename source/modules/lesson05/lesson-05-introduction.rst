@@ -1,5 +1,5 @@
 ======================
-Lesson 08 Introduction
+Lesson 05 Introduction
 ======================
 
 .. raw:: html
@@ -35,46 +35,68 @@ Talk <%24CANVAS_OBJECT_REFERENCE%24/discussion_topics/ie7fce6e6c072d03b675b6796a
 Introduction
 ============
 
-Having studied relational databases in the last lesson, we are now going
-to move on to look at other types of databases. 
+{{video 1}}
 
-The range of products we can study here is enormous, so we will pick
-three of the most popular, each of which has its own strengths and
-applicability. We will discuss and build some simple programs to get you
-started. Much further study will be needed to really grasp the concepts
-and use these databases effectively, so we will point you to some
-additional resources.
+.. code-block:: python
+   class BaseModel(Model):
+       class Meta:
+           database = database
+
+   class Person(BaseModel):
+       """
+         This class defines Person, which maintains details of someone
+         for whom we want to research career to date.
+       """
+
+       person_name = CharField(primary_key = True, max_length = 30)
+       lives_in_town = CharField(max_length = 40)
+       nickname = CharField(max_length = 20, null = True)
+
+   class Job(BaseModel):
+       """
+         This class defines Job, which maintains details of past Jobs
+         held by a Person.
+       """
+       job_name = CharField(primary_key = True, max_length = 30)
+       start_date = DateField(formats = 'YYYY-MM-DD')
+       end_date = DateField(formats = 'YYYY-MM-DD')
+       salary = DecimalField(max_digits = 7, decimal_places = 2)
+       person_employed = ForeignKeyField(Person, related_name='was_filled_by', null = False)
+   new_person = Person.create(
+      person_name = 'Fred',
+      lives_in_town = 'Seattle',
+      nickname = 'Fearless')
+       new_person.save()
+
+   aperson = Person.get(Person.person_name == 'Fred')
+
+.. todo::
+  Add git links for rdbms code
 
 Learning Objectives
 ===================
 
 Upon successful completion of this lesson, you will be able to:
 
--  Compare and contrast some different types of modern database
-   products.
--  Select a database product based on a solid understanding of where
-   that database is best used.
--  Write Python programs that illustrate the way in which these
-   databases can be used.
--  Find additional information that will help you to build data centric
-   Python applications.
+-  Augment the Python modules you develop by consuming APIs.
+-  Discover the details of APIs and how to apply them in Python
+-  Use the API of a NoSQL database to store and retrieve data
+-  Identify when to use a NoSQL database instead of a relaional database
 
 New Words, Concepts, and Tools
 ==============================
 
--  We are going to learn about graph databases, data structure servers
-   and document centric databases. We will also cover some simple but
-   effective data storage techniques that are available in Python. 
+-  APIs, NoSQL, MongoDB.
+-  Using document databases.
+-  Using third party documentation
 
 Required Reading
 ================
+.. todo::
+   Verify all required and optional reading links for lesson 5 mongo API
 
 -  `Background <https://www.fullstackpython.com/no-sql-datastore.html>`__
    on databases
--  Using `Neo4j <https://neo4j.com/developer/python/>`__. Using the
-   `bolt <https://neo4j.com/docs/api/python-driver/current/>`__ driver
-   for Neo4j
--  `Redis <https://docs.objectrocket.com/redis_python_examples.html>`__
 -  `Mongodb <https://realpython.com/blog/python/introduction-to-mongodb-and-python/>`__
 -  http://wiki.python.org/moin/PersistenceTools 
 
