@@ -1,4 +1,4 @@
-Lesson 0 : Functional Programming 3
+Lesson 8 : Functional Programming 3
 ===================================
 
 .. toctree::

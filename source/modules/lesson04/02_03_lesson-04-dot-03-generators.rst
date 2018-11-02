@@ -1,5 +1,5 @@
 =======================
-Lesson 01.03 Generators
+Lesson 04.03 Generators
 =======================
 
 {{VIDEO HERE}}
@@ -22,7 +22,7 @@ yield
             some_stuff
             yield something
 
-| 
+|
 | Generator functions "yield" a value, rather than returning a value. 
   It \*does\* 'return' a value, but rather than ending execution of the
   function it preserves function state so that it can pick up where it
@@ -35,7 +35,7 @@ yield
         gen_a = a_generator()
         gen_b = a_generator()
 
-| 
+|
 | Each instance keeps its own state.
 | To master yield, you must understand that when you call the function,
   the code you have written in the function body does not run.  The
@@ -52,7 +52,7 @@ yield
                 yield i
                 i += step
 
-| 
+|
 | Generator Comprehensions: yet another way to make a generator:
 
 ::

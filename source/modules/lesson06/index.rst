@@ -1,4 +1,4 @@
-Lesson 0 : Profiling and performance
+Lesson 6 : Profiling and performance
 ====================================
 
 .. toctree::

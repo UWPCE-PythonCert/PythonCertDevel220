@@ -1,5 +1,5 @@
 ======================
-Lesson 01 Introduction
+Lesson 04 Introduction
 ======================
 
 .. raw:: html
@@ -36,7 +36,7 @@ Introduction
 {{VIDEO HERE}}
 
 | In this second lesson on functional programming, the first having been
-  the last class of the last quarter, we look at the lambda special
+  completed in the last class, we look at the lambda special
   form, which can be used in conjunction with map() and filter() and
   also in comprehensions.  We will consider the debates as to lambda's
   effectiveness by looking at its history and the comments of Python's
@@ -91,6 +91,7 @@ Required Reading
 -  Small functions and the lambda expression
    https://docs.python.org/dev/howto/functional.html?highlight=lambda#small-functions-and-the-lambda-expression
 -  Iterators
+   https://www.codementor.io/milesak60/round-and-round-on-iterables-vs-iterators-lgq2xg62f
    https://docs.python.org/3/glossary.html#term-iterator
    \ https://docs.python.org/3/library/stdtypes.html#iterator-types
    https://docs.python.org/dev/howto/functional.html#iterators

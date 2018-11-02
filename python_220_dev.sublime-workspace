@@ -1,0 +1,569 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"d",
+				"django\tmodule"
+			],
+			[
+				"redis",
+				"redis_pw"
+			],
+			[
+				"o",
+				"order_by"
+			],
+			[
+				"add",
+				"addjob"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/Users/andy/Dropbox/Notes/Andy's Class Development Notes.note",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "Python 3.7.0 (v3.7.0:1bf9cc5093, Jun 26 2018, 23:26:24) \n[Clang 6.0 (clang-600.0.57)] on darwin\nType \"help\", \"copyright\", \"credits\" or \"license\" for more information.\n>>> ",
+			"settings":
+			{
+				"buffer_size": 171,
+				"line_ending": "Unix",
+				"name": "*REPL* [python]",
+				"scratch": true
+			}
+		}
+	],
+	"build_system": "Anaconda Python Builder",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Anaconda Python Builder",
+					""
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					""
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					"Clean"
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Anaconda Python Builder",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Anaconda Python Builder",
+					""
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					""
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					"Clean"
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				],
+				[
+					"Packages/Python 3/Python3.sublime-build",
+					""
+				]
+			],
+			[
+				"Anaconda Python Builder",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Makefile/Make.sublime-build",
+					""
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					"Clean"
+				],
+				[
+					"Packages/ShellScript/ShellScript.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/ShellScript/ShellScript.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				"Syntax Check"
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"virt",
+				"Virtualenv: Add directory"
+			],
+			[
+				"vir",
+				"Virtualenv: Activate"
+			],
+			[
+				"",
+				"Build With: Python + Virtualenv"
+			],
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
+			[
+				"Package Control: gi",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control:",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: git",
+				"Package Control: Upgrade/Overwrite All Packages"
+			]
+		],
+		"width": 412.0
+	},
+	"console":
+	{
+		"height": 150.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/andy/projects/uw/PythonCertDevel220/py220_rewrite.sublime-project",
+		"/Users/andy/Dropbox/Notes/Andy's Class DevelopmentNotes.note",
+		"/Users/andy/projects/uw/PythonCertDevel220/source/conf.py",
+		"/Users/andy/projects/uw/PythonCertDevel220/source/modules/python-220-advanced-programming-in-python.rst",
+		"/Users/andy/projects/uw/PythonCertDevel220/build/html/index.html",
+		"/Users/andy/Library/Application Support/Sublime Text 3/Packages/Anaconda/anaconda_lib/linting/pyflakes/checker.py",
+		"/Users/andy/projects/uw/PythonCertDevel220/build_gh_pages.sh",
+		"/Users/andy/projects/uw/PythonCertDevel220/source/src/lesson00/oo_class.py",
+		"/Users/andy/Library/Application Support/Sublime Merge/Packages/User/Preferences.sublime-settings",
+		"/Users/andy/Library/Application Support/Sublime Text 3/Packages/IPython Notebook/README.md",
+		"/Users/andy/projects/uw/PythonCertDevel220/source/index.rst",
+		"/Users/andy/.bash_profile",
+		"/Users/andy/projects/uw/PythonCertDevel220/source/modules/lesson01/00_prerequisites.rst",
+		"/Users/andy/projects/uw/PythonCertDevel220/source/modules/lesson00/index.rst",
+		"/Users/andy/projects/uw/PythonCertDevel220/source/modules/lesson00/01_oo.rst",
+		"/Users/andy/projects/dev/nosql/src/learnnosql.py",
+		"/Users/andy/projects/presentations/iiba/PITCHME.md",
+		"/Users/andy/Library/Application Support/Sublime Text 3/Packages/User/Python.sublime-settings",
+		"/Users/andy/projects/uw/meta_prog/.gitignore",
+		"/Users/andy/projects/uw/meta_prog/src/meta_class.py",
+		"/Users/andy/Library/Application Support/Sublime Text 3/Packages/RestructuredText Improved/README.rst",
+		"/Users/andy/Library/Application Support/Sublime Text 3/Packages/RestructuredText Improved/demo.rst",
+		"/Users/andy/projects/dev/hpnorton/hpnorton/hpnorton.py",
+		"/Users/andy/Library/Application Support/Sublime Text 3/Packages/Anaconda/Anaconda.sublime-settings",
+		"/Users/andy/projects/dev/hpnorton/hpnorton.sublime-project",
+		"/Users/andy/Library/Application Support/Sublime Text 3/Packages/User/deviot.sublime-settings",
+		"/Users/andy/Library/Application Support/Sublime Text 3/Packages/Deviot (Arduino IDE)/deviot.sublime-settings",
+		"/Users/andy/Library/Application Support/Sublime Text 3/Packages/User/GitGutter.sublime-settings",
+		"/Users/andy/Library/Application Support/Sublime Text 3/Packages/GitGutter/GitGutter.sublime-settings",
+		"/Users/andy/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/andy/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/andy/Library/Application Support/Sublime Text 3/Packages/Kite/Kite.sublime-settings",
+		"/Users/andy/projects/dev/oddsandsods/src/one.py",
+		"/Users/andy/projects/dev/oddsandsods/src/trykite.py",
+		"/Users/andy/Library/Group Containers/3L68KQB4HG.group.com.readdle.smartemail/databases/messagesData/1/2492/iterip.py",
+		"/Users/andy/projects/nosql/src/neo4j_script.py",
+		"/Users/andy/projects/oddsandsods/src/structures.py",
+		"/Users/andy/projects/oddsandsods/src/tips.txt",
+		"/Users/andy/projects/oddsandsods/src/with-2.sql",
+		"/Users/andy/projects/oddsandsods/src/with-1.sql",
+		"/Users/andy/projects/nosql/src/learnnosql.py",
+		"/Users/andy/projects/oddsandsods/src/async.py",
+		"/Users/andy/projects/oddsandsods/src/process.py",
+		"/Users/andy/projects/oddsandsods/src/threads.py",
+		"/Users/andy/Library/Application Support/Sublime Text 3/Packages/User/Anaconda.sublime-settings",
+		"/Users/andy/projects/oddsandsods/src/step01.py",
+		"/Users/andy/projects/nosql/.config/config.ini-copy",
+		"/Users/andy/projects/oddsandsods/src/alanflask.py",
+		"/Users/andy/projects/nosql/src/simple_script.py",
+		"/Users/andy/projects/rdbms/src/v4_p1_populate_db.py",
+		"/Users/andy/projects/nosql/src/redis_script.py",
+		"/Users/andy/projects/nosql/src/mongodb_script.py",
+		"/Users/andy/projects/nosql/logs/mongodb_script.log",
+		"/Users/andy/projects/nosql/src/utilities.py",
+		"/Users/andy/projects/nosql/.config/config.ini",
+		"/Users/andy/projects/nosql/src/login_database.py",
+		"/Users/andy/projects/nosql/src/learn_data.py",
+		"/Users/andy/projects/nosql/src/__init__.py",
+		"/Users/andy/projects/rdbms/src/v00_personjob_model.py",
+		"/Users/andy/projects/workbooks/analyze.py",
+		"/Users/andy/projects/basics/src/three.py",
+		"/Users/andy/projects/basics/src/meta.py",
+		"/Users/andy/projects/basics/src/one.py",
+		"/Users/andy/projects/intro/ss01.py",
+		"/Users/andy/Library/Group Containers/3L68KQB4HG.group.com.readdle.smartemail/cache/messagesData/1/11083/getting-started-sql.md",
+		"/Users/andy/projects/basics/src/emps.csv",
+		"/Users/andy/projects/basics/src/demo.py",
+		"/Users/andy/projects/basics/demo.py",
+		"/Users/andy/projects/dbs-redis/src/exdb.py",
+		"/Users/andy/Library/Group Containers/3L68KQB4HG.group.com.readdle.smartemail/cache/messagesData/1/8330/w02-oh.md",
+		"/Users/andy/Downloads/iterator_1.py",
+		"/Users/andy/projects/py220-2018/adv-py/w01-class.md",
+		"/Users/andy/projects/py220-2018/adv-py/w01-ohnotes.md",
+		"/Users/andy/projects/dbs-mongodb/src/exdb.py",
+		"/Users/andy/projects/py220-2018/adv-py/w01-oh",
+		"/Users/andy/projects/rdbms-example/personjob_learning_v5_p1.py",
+		"/Users/andy/projects/rdbms-example/people.csv",
+		"/Users/andy/projects/rdbms-example/personjob_learning_v3_p1.py",
+		"/Users/andy/projects/rdbms-example/personjob_learning_v1_p1.py",
+		"/Users/andy/projects/dbs-neo4j/src/neo4japp.py",
+		"/Users/andy/projects/dbs-neo4j/src/exdb.py",
+		"/Users/andy/projects/nosql/venv/lib/python3.6/site-packages/six.py",
+		"/Users/andy/projects/nosql/venv/lib/python3.6/site-packages/pytest.py",
+		"/Users/andy/Library/Application Support/Sublime Text 3/Packages/Anaconda/README.md",
+		"/Users/andy/Library/Application Support/Sublime Text 3/Packages/PackageResourceViewer/PackageResourceViewer.sublime-settings",
+		"/Users/andy/projects/dbs-redis/src/redis-init-example.py",
+		"/Users/andy/projects/dbs-mongodb/.config/config",
+		"/Users/andy/projects/dbs-mongodb/tests/test_dbs_mongodb.py",
+		"/Users/andy/projects/dbs-mongodb/tox.ini",
+		"/Users/andy/projects/hpnorton/tox.ini",
+		"/Users/andy/projects/dbs-mongodb/src/utilities.py",
+		"/Users/andy/projects/hpnorton/setup.py",
+		"/Users/andy/projects/dbs-mongodb/.gitignore",
+		"/Users/andy/projects/videoing-march/people.csv",
+		"/Users/andy/projects/videoing-march/personjob_model.py",
+		"/Users/andy/projects/videoing-march/create_personjob.py",
+		"/Users/andy/projects/videoing-march/personjob_learning_v1_p1.py",
+		"/Users/andy/projects/videoing-march/personjob_learning_v5_p7.py",
+		"/Users/andy/projects/videoing-march/personjob_learning_v5_p6.py",
+		"/Users/andy/projects/videoing-march/personjob_learning_v5_p5.py",
+		"/Users/andy/projects/videoing-march/personjob_learning_v5_p4.py",
+		"/Users/andy/projects/videoing-march/personjob_learning_v5_p3.py",
+		"/Users/andy/projects/videoing-march/personjob_learning_v5_p2.py",
+		"/Users/andy/projects/videoing-march/personjob_learning_v5_p1.py",
+		"/Users/andy/projects/videoing-march/personjob_learning_v3_p3.py",
+		"/Users/andy/projects/videoing-march/personjob_learning_v3_p2.py",
+		"/Users/andy/projects/videoing-march/personjob_learning_v3_p1.py",
+		"/Users/andy/Library/Group Containers/3L68KQB4HG.group.com.readdle.smartemail/cache/messagesData/1/4020/create_personjob.py",
+		"/Users/andy/projects/dbs-redis/.config/config",
+		"/Users/andy/projects/dbs-redis/setup.py",
+		"/Users/andy/projects/dbs-redis/requirements.txt",
+		"/Users/andy/projects/dbs-neo4j/requirements.txt",
+		"/Users/andy/projects/dbs-redis/runtime.txt",
+		"/Users/andy/projects/dbs-neo4j/setup.py",
+		"/Users/andy/projects/dbs-redis/.gitignore",
+		"/Users/andy/Library/Application Support/Sublime Text 3/Packages/Pylinter/README.rst",
+		"/Users/andy/Library/Application Support/Sublime Text 3/Packages/Pylinter/Default (OSX).sublime-keymap",
+		"/Users/andy/Library/Application Support/Sublime Text 3/Packages/Pylinter/Pylinter.sublime-settings",
+		"/Users/andy/projects/dbs-neo4j/.config/config",
+		"/Users/andy/projects/dbs-neo4j/.gitignore",
+		"/Users/andy/projects/hpnorton/hpnorton/hpnorton.py",
+		"/Users/andy/Library/Application Support/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings",
+		"/Users/andy/projects/rdbms-example/rdms-class/deleteme",
+		"/Users/andy/projects/rdbms-example/rdms-class/personjob_learning_v1_p1.py",
+		"/Users/andy/projects/rdbms-example/rdms-class/personjob_modeli.py",
+		"/Users/andy/projects/rdbms-example/rdms-class/personjob_model.py",
+		"/Users/andy/projects/rdbms-example/rdms-class/personjob_learning_v5_p7.py",
+		"/Users/andy/projects/rdbms-example/rdms-class/personjob_learning_v5_p6.py"
+	],
+	"find":
+	{
+		"height": 37.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/Users/andy/Dropbox/Notes/Andy's Class Development Notes.note",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": false,
+							"is_note": true,
+							"syntax": "Packages/PlainNotes/Note.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 171,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								171,
+								171
+							]
+						],
+						"settings":
+						{
+							"auto_complete": true,
+							"auto_indent": false,
+							"detect_indentation": false,
+							"git_gutter_is_enabled": false,
+							"gutter": false,
+							"history_arrows": true,
+							"indent_subsequent_lines": false,
+							"line_numbers": false,
+							"repl": true,
+							"repl_external_id": "python",
+							"repl_id": "cfb16aa06edb4918924392621a97f113",
+							"repl_restart_args":
+							{
+								"cmd":
+								[
+									"python",
+									"-i",
+									"-u"
+								],
+								"cwd": "$file_path",
+								"encoding": "utf8",
+								"extend_env":
+								{
+									"PYTHONIOENCODING": "utf-8"
+								},
+								"external_id": "python",
+								"syntax": "Packages/Python/Python.tmLanguage",
+								"type": "subprocess"
+							},
+							"repl_sublime2": false,
+							"smart_indent": false,
+							"spell_check": false,
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.SublimeLinter":
+	{
+		"height": 0.0
+	},
+	"output.SublimeLinter Messages":
+	{
+		"height": 120.0
+	},
+	"output.deviot":
+	{
+		"height": 120.0
+	},
+	"output.exec":
+	{
+		"height": 190.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/Virtualenv/Python + Virtualenv.sublime-build",
+	"project": "py220_rewrite.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 264.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

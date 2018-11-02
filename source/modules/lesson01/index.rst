@@ -1,3 +1,6 @@
-Lesson 0 : Preclass
+Lesson 1 : Automated Testing
 ===================
 
+
+.. toctree::
+    :maxdepth: 1

@@ -1,5 +1,5 @@
-Lesson 10 : Preclass
-====================
+Lesson 2 : Logging & Debuging
+=============================
 
 .. toctree::
     :maxdepth: 1
