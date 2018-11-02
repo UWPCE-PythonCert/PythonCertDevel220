@@ -77,7 +77,10 @@ Objects get created from classes. So what is the class of a class?
 
 The class of a Class is a metaclass.
 
- 
 
 {{VIDEO HERE}}
 ==============
+
+.. todo::
+    Add metaprogramming example code
+

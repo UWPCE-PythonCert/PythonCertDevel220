@@ -1,48 +1,31 @@
-Open House 1: Advanced Python Programming
-=========================================
-.. todo::
-    Rework class principles for lesson 0
+=======================================
+Advanced Python Programming: Principles
+=======================================
 
-Class groundrules and principles
---------------------------------
-1. What does success on this class look like?
+Class guide
+===========
 
-   1. Participation
+We want to make sure that every student understands how to get the most
+from the Advanced Python Programming class.
 
-   1. Getting everything right?
+This is a challenging class, in that we ocver a lot of concepts, some
+of which can we hard to grasp. Please never be afraid to contact your
+instructor with questions.
 
-1. What do I need to do?
+In a classroom setting we will give plenty of opportunity for interacting
+with your follow students and for working on activities and assignments.
+You will also be able to ask lots of questions, and there will be instructor
+lead presentations to reinforce concepts.
 
-   1. Try things out
+Studets are encouraged to resent and discuss any of the code they are working
+on, particularlry for the optional assignments.
 
-   1. Ask
+For online group classes we will have office hopurs sessions every week,
+which will have a similar agenda and content to classroom, but will be online
+via Zoom
 
-   1. Tell us what you need
-
-   1. Tell us what can be made better
-
-   1. As soon as possible!
-
-   1. You don't have to master everything to pass.
-
-   1. But you will fail if you don't try.
-
-1. WE ARE HERE TO HELP!
-
-   1. Use us / contact us
-
-1. Questions?
+For self paced online classes you can always chat with your instructor, and
+use the various online resources linked from the class web site.
 
 
-
-
-1. Like this? Want to make it better?
-   1. Clone and branch / amend / push and send a PR.
-   1. File an issue
-
-1. STOP PRESS (AND ADDED LINKS ON PROGRAMMING PARADIGMS)
-   1. Iterators: https://anandology.com/python-practice-book/iterators.html
-   1. Basics: https://www.programiz.com/python-programming/iterator
-   1. https://en.wikipedia.org/wiki/Comparison_of_programming_paradigms
-   1. https://dev.to/ericnormand/programming-paradigms-and-the-procedural-paradox
 
