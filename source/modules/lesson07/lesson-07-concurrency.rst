@@ -8,7 +8,7 @@ Concurrent Programming
 What does it mean to do something "Concurrently" ? It means multiple tasks are being done at the same time. Is Concurrency the same thing as "parallelism"? Not exactly:
 
  - Parallelism is about processing multiple things at the same time -- true parallelism requires multiple processors (or cores).
- - Concurrency is about handling multiple things at the same time -- things that may or may not be actually running in the processor at the same time (such as network requests for instance).
+ - Concurrency is about handling multiple things at the same time -- things that may or may not actually be running in the processor at the same time (such as network requests).
  
 So, parallelism needs concurrency, but concurrency needs not be in parallel.
 
@@ -16,7 +16,7 @@ So, parallelism needs concurrency, but concurrency needs not be in parallel.
 
 Despite Rob Pike using an example about burning books, I recommend listening to at least the first half of his talk.
 
-In that talk Rob Pike makes a key point: Breaking down tasks into concurrent subtasks only allows parallelism, it’s the scheduling of these subtasks that creates it.
+In that talk, Rob makes a key point: Breaking down tasks into concurrent subtasks only allows parallelism, it’s the scheduling of these subtasks that creates it.
 
 Once you have a set of subtasks, they can be scheduled in a truly parallel fashion, or managed asynchronously in a single thread (concurrent, but not parallel).
 
@@ -63,19 +63,19 @@ Which one should you use?
 Motivations for parallel execution
 ----------------------------------
 
-Why would you want your code to use parallel execution?
+Why would you want your code to use excute in parallel?
 
 -  Performance
    -  Limited by "Amdahl's Law": http://en.wikipedia.org/wiki/Amdahl%27s_law
 
-   -  CPUs aren't getting much faster
+   -  CPUs aren't getting much faster.
 
 -  Event handling
-   - If a system handles asynchronous events, a separate thread of execution could handle those events and let other threads do other work
+   - If a system handles asynchronous events, a separate thread of execution could handle those events and let other threads do other work.
 
    - Examples:
-      -  Network applications
-      -  User interfaces
+      -  Network applications.
+      -  User interfaces.
 
 Parallel programming can be hard!
 
@@ -85,10 +85,12 @@ benefits before going parallel.
 
 Parallelization Strategy for Performance
 ----------------------------------------
+Once you have determined that you want to execute your code in parallel, there are certain steps you need to complete to take
+advantage of parallel execution:
 
-| 1. Break problem down into chunks
-| 2. Execute chunks in parallel
-| 3. Reassemble output of chunks into result
+| 1. Break the problem down into chunks.
+| 2. Execute chunks in parallel.
+| 3. Reassemble output of chunks into a result.
 
 .. image:: /_static/OPP.0108.gif
       :align: right
@@ -99,18 +101,18 @@ Parallelization Strategy for Performance
 |
 |
 
--  Not every problem is parallelizable
+-  Not every problem is parallelizable.
 -  There is an optimal number of threads for each problem in each
-   environment, so make it tunable
--  Working concurrently opens up synchronization issues
+   environment, so make it tunable.
+-  Working concurrently opens up synchronization issues.
 -  Methods for synchronizing threads:
 
-   -  locks
-   -  queues
-   -  signaling/messaging mechanisms
+   -  locks.
+   -  queues.
+   -  signaling/messaging mechanisms.
 
-Other options
--------------
+Other alternatives
+------------------
 
 Traditionally, concurency has been achieved through multiple process
 communication and in-process threads, as we've seen.
@@ -140,10 +142,10 @@ Therefore, a component of a process.
 This allows multiple threads access to data in the same scope.
 
 Threads can not gain the performance advantage of multiple processors
-due to the Global Interpreter Lock (GIL)
+due to the Global Interpreter Lock (GIL).
 
 But the GIL is released during IO, allowing IO bound processes to
-benefit from threading
+benefit from threading.
 
 Processes
 ---------
@@ -151,7 +153,7 @@ Processes
 A process contains all the instructions and data required to execute
 independently, so processes do not share data!
 
-Mulitple processes best to speed up CPU bound operations.
+Mulitple processes are best to speed up CPU bound operations.
 
 The Python interpreter isn't lightweight!
 
@@ -163,7 +165,7 @@ Communication between processes can be achieved via:
 
 and regular IPC (inter-process communication)
 
-Data moved between processes must be pickleable
+Data moved between processes must be pickleable (it can be serialized).
 
 
 Advantages / Disadvantages of Threads
@@ -219,20 +221,20 @@ done in parallel, others have to be done by time slicing.
 
 Note that potentially blocking or long-running operations, such as I/O, image processing, and NumPy number crunching, happen outside the GIL. Therefore it is only in multithreaded programs that spend a lot of time inside the GIL, interpreting CPython bytecode, that the GIL becomes a bottleneck. But: it can still cause performance degradation.
 
-Not only will threads not help cpu-bound problems, but it can actually make things *worse*, especially on multi-core machines!
+Not only will threads not help cpu-bound problems, they can actually make things *worse*, especially on multi-core machines!
 
 Python threads do not work well for computationally intensive work.
 
 Python threads work well if the threads are spending time waiting for something:
 
- - Database Access
- - Network Access
- - File I/O
+ - Database Access.
+ - Network Access.
+ - File I/O.
 
 Some alternative Python implementations such as Jython and IronPython
-have no GIL
+have no GIL.
 
-cPython and PyPy have one
+cPython and PyPy have one.
 
 More about the gil
 
@@ -252,13 +254,11 @@ http://pyvideo.org/pycon-us-2010/pycon-2010--understanding-the-python-gil---82.h
 -  http://hg.python.org/cpython/file/05e8dde3229c/Python/pystate.c#l761
 
 
-**NOTE:** The GIL *seems* like such an obvious limitation that you've got to wonder why it's there. And there have been multiple efforts to remove it. But it turns out that Python's design makes that very hard (impossible?) without severely reducing performance on single threaded programs.
+**NOTE:** The GIL *seems* like such an obvious limitation that you have to wonder why it's there. Indeed, there have been multiple efforts to remove it. But it turns out that Python's design makes that very hard (maybe even impossible) without severely reducing performance on single threaded programs.
 
 The current "Best" effort is Larry Hastings' `gilectomy <https://speakerdeck.com/pycon2017/larry-hastings-the-gilectomy-hows-it-going>`_
 
 But that may be stalled out at this point, too. No one should count on it going away in cPython.
-
-But: **Personal Opinion:** Python is not really (directly) suited to the kind of computationally intensive work that the GIL really hampers. And extension modules (i.e. numpy) can release the GIL!
 
 
 Posted without comment
@@ -270,7 +270,7 @@ Posted without comment
 Advantages / Disadvantages of Processes
 ---------------------------------------
 
-Processes are heavier weight -- each process makes a copy of the entire interpreter (Mostly...) -- uses more resources.
+Processes are heavier weight -- each process makes a copy of the entire interpreter (mostly...) -- uses more resources.
 
 You need to copy the data you need back and forth between processes.
 
@@ -290,22 +290,22 @@ Note that there are ways to share memory between processes, if you have a lot of
 
 Synchronization options:
 
- - Locks (Mutex: mutual exclusion, Rlock: reentrant lock)
- - Semaphore
- - BoundedSemaphore
- - Event
- - Condition
- - Queues
+ - Locks (Mutex: mutual exclusion, Rlock: reentrant lock).
+ - Semaphore.
+ - BoundedSemaphore.
+ - Event.
+ - Condition.
+ - Queues.
 
 
 Mutex locks (``threading.Lock``)
 --------------------------------
 
- - Probably most common
- - Only one thread can modify shared data at any given time
- - Thread determines when unlocked
- - Must put lock/unlock around critical code in ALL threads
- - Difficult to manage
+ - Probably most common.
+ - Only one thread can modify shared data at any given time.
+ - Thread determines when unlocked.
+ - Must put lock/unlock around critical code in ALL threads.
+ - Difficult to manage.
 
 Easiest with context manager:
 
@@ -319,9 +319,9 @@ Easiest with context manager:
         # statements using x
 
 
-Only one lock per thread! (or risk mysterious deadlocks)
+Only one lock per thread! (or risk mysterious deadlocks).
 
-Or use RLock for code-based locking (locking function/method execution rather than data access)
+Or use RLock for code-based locking (locking function/method execution rather than data access).
 
 
 Subprocesses (``subprocess``)
@@ -353,8 +353,8 @@ Lots of options there!
 Pipes and ``pickle`` and ``subprocess``
 .......................................
 
- - Very low level, for the brave of heart
- - Can send just about any Python object
+ - Very low level, for the brave of heart.
+ - Can send just about any Python object.
 
 For this to work, you need to send messages, as each process runs its own independent Python interpreter.
 

@@ -36,15 +36,14 @@ Introduction
 ============
 
 This lesson introduces the concepts of concurrent and asynchronous
-programming and the python tools available to accomplish these
-approaches. Concurrency is doing multiple things at the same time -- in
-Python, this can be accomplished with multiple approaches:
+programming and the python tools available for their implementation. Concurrency is doing multiple things at the same time -- in
+Python, this can be accomplished through several approaches:
 multi-threading, multi-processing and asynchronous programming.
 
-Threading and multi processing support true parallelism, and
-asynchronous techniques allow tasks for accomplished in unknown order.
-Python recently added features to support async, and this lesson will
-focus on this new way of accomplishing async.
+Threading and multi-processing support true parallelism, while
+asynchronous techniques allow tasks to be completed in unknown order.
+Python recently added features to support async, this lesson will
+explain how to use it.
 
 These techniques can be applied to allow interfaces to be responsive
 while work is being done, and/or to boost performance with
@@ -57,25 +56,25 @@ Learning Objectives
 
 Upon successful completion of this lesson, you will be able to: 
 
--  Identify when to apply each of core techniques:
+-  Identify when to apply each of the core techniques:
 
-   -  multi threading
-   -  multi processing
-   -  async
+   -  multi-threading.
+   -  multi-processing.
+   -  async.
 
--  Create a simple multi-threaded program with a message queue
--  Create a simple multi-processing program with a message queue
--  Create a web-api client with the asyncio package
+-  Create a simple multi-threaded program with a message queue.
+-  Create a simple multi-processing program with a message queue.
+-  Create a web-api client with the asyncio package.
 
 New Words, Concepts, and Tools
 ==============================
 
--  Concurrency
--  Threading
--  Multiprocessing
--  Message Queues
--  Coroutines
--  Async 
+-  Concurrency.
+-  Threading.
+-  Multi-processing.
+-  Message Queues.
+-  Coroutines.
+-  Async.
 
 Required Reading
 ================
