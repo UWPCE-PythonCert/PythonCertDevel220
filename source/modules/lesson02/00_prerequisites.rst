@@ -10,8 +10,5 @@ following concepts, covered earlier in the class:
 #. String formatting
 #. Creating functions
 
-Review the earlier class materials, and you may wish to ocnulst the
-following articles that are generally available:
-
-.. todo::
-    Add pre-reading external links for string formatting and creating functions
+Review the relevant materials from class 1, and complete the required
+reading in this class.

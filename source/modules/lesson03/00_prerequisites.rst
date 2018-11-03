@@ -10,9 +10,6 @@ following concepts, covered earlier in the class:
 #. Familiar with classes, objects and inheritance.
 #. Able to code simple OO program using these concepts
 
-
-Review the earlier class materials, and you may wish to consult the
-following articles that are generally available:
-
-.. todo::
-    Add pre-reading external links for classes, objects and inheritiance
+Review the relevant materials from class 1 and lesson 0 of this class, and
+complete the required
+reading in this class.
