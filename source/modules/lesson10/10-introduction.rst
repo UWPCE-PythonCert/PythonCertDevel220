@@ -40,8 +40,9 @@ metaprogram is a program that writes (or modifies) programs.  As a
 dynamic language, Python is very well suited to metaprogramming, as it
 allows objects to be modified at runtime. 
 
-In this lesson, we will learn about the tools python provides for
+In this lesson, we will learn about the tools Python provides for
 metaprogramming, and the structure of objects that can be manipulated.
+We will also answer the question "why would I want to do this"!
 
 Learning Objectives
 ===================
@@ -73,13 +74,16 @@ Required Reading
 
 -  `Metaprogramming
    Notes <https://uwpce-pythoncert.github.io/PythonCertDevel/modules/MetaProgramming.html>`__
+-  https://realpython.com/python-metaclasses/
 
- 
 
 Optional Reading
 ================
 
 *Fluent Python*\ : Chapters 19 – 21
+
+- ` Concept overview https://www.geeksforgeeks
+         .org/metaprogramming-metaclasses-python/`__
 
 -  `About
    metaclasses <http://blog.thedigitalcatonline.com/blog/2014/09/01/python-3-oop-part-5-metaclasses>`__

@@ -106,3 +106,5 @@ venv.bak/
 .mypy_cache/
 
 .idea/
+/PythonCertDevel220.sublime-project
+/PythonCertDevel220.sublime-workspace
