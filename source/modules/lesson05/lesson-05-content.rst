@@ -112,9 +112,10 @@ Mongodb vs. RDBMS terminology
 
 MongoDB Technical information
 -----------------------------
-.. todo::
-  Add JSON and BSON info
 
+Here's some links for you to consult and read to understand JSON and BSON:
+- https://www.json.org/
+- http://bsonspec.org/
 
 Python code
 -----------

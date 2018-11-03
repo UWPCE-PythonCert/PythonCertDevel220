@@ -11,7 +11,7 @@ Here is what you need to do:
 ----------------------------
 
 .. todo::
-    Need specific details of assignment
+    Need specific details of lesson 2 assignment, with sample code
 
 #.
 
