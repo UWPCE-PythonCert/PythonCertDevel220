@@ -8,7 +8,7 @@ help to build expressive programs that are easy to understand.
 
 .. todo::
     More needed on lesson 9 assignment
-    Need example for rework to recursion
+    Need example for rework to recursion in lesson 9 assignment
 
 Here is what you need to do:
 ----------------------------
@@ -19,7 +19,6 @@ Here is what you need to do:
 #. Write a context manager to be used to access mongodb.
 #. Using an instructor provided module, rewrite that module to solve the
    problem using recursion.
-
 
 
 Tips

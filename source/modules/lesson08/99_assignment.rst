@@ -10,14 +10,10 @@ show how these techniques can help.
 Here is what you need to do:
 ----------------------------
 
-#. Write functions to add and update customer and products in parallel.
-#. Compare and contrast parallel vs. linear performance.
-#. Provide an example where the program fails due to contention and explain
-   why.
-#. Provide an example with test that passes.
+#.
 
 .. todo::
-    More needed on this assignment
+    Develop lesson 8 assignment
 
 Tips
 ----

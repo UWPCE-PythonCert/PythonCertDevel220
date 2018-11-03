@@ -23,6 +23,6 @@ Tips
 - Log at different levels of severity based on your envisioned needs.
 - Add details of your approach to logging to the module docstring to assist
   anyone who maintains the module.
-- Be sure to doucment details of your fix from the debugging activity in
+- Be sure to document details of your fix from the debugging activity in
   your pull request.
 

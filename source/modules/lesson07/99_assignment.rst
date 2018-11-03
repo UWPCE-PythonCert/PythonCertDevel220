@@ -7,16 +7,15 @@ vertical scaling (upgrading servers) to help maximize application performance.
 Here is what you need to do:
 ----------------------------
 
-#. Take an instructor provided module and identify the bottlenecks.
-#. Rewrite the module to improve performance. Provide evidence to demonstrate
-   the improvement.
-#. Asses and compare the performance of adding 100 records to the product and
-   customer databases, and reading 100 records from these databases.
+#. Write functions to add and update customer and products in parallel.
+#. Compare and contrast parallel vs. linear performance.
+#. Provide an example where the program fails due to contention and explain
+   why.
+#. Provide an example with test that passes.
 
 .. todo::
-    #. Create badly performing module
-    #. Needs work
+    More needed on assignment 07
 
 Tips
 ----
-- Amend some of the previoudly provided data to create the 100 records/
+- Amend some of the previously provided data to create the 100 records/

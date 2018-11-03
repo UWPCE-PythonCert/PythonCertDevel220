@@ -3,13 +3,12 @@ Lesson content
 ##############
 
 .. todo::
-    #. Update all the index documents
     #. Convert all code to rst tags
-    #. Add a lesson index doc fro every lesson?
-    #. Need extra content for office hours?
+    #. Need extra content for office hours? Or do we allow it to be
+       generated during class so its targetted to the cohort?
     #. Deal with video here tags
     #. Deal with how videos fit
-    #. Bes sure all dependencies are OK given class resequence
+    #. Be sure all dependencies are OK given class resequence
 
 
 Arranged in order of the lessons:
