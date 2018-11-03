@@ -1,6 +1,9 @@
-================================
-Assignment: Lesson 06 Assignment
-================================
+==============================
+Assignment: Lesson 01 Activity
+==============================
+
+.. todo::
+    Lesson 1 activity needs rework
 
 .. raw:: html
 
@@ -32,38 +35,28 @@ Talk <%24CANVAS_OBJECT_REFERENCE%24/discussion_topics/i197968e655e43b6b4981d673c
 
    </div>
 
-Instructions
-============
-
-Your assignment is to program, test, lint, and flake a "water
-regulation" module. Begin by finding the water-regulation directory in
-the course repository. The README in that directory may be helpful.
+Your assignment is to complete testing and linting on the calculator
+from the lesson content. As a first step, review the videos and writing
+on that page. Then find the calculator project directory in the course
+repository.
 
 Your goals:
------------
+===========
 
-Note that all of the command examples below should be run from the
-project root which contains the directories waterregulation, sensor, and
-pump.
+Note that all of the command examples below should be run from inside
+the project root which contains the *unit-test.py*
+and \ *integration-test.py* files.
 
-#. Complete the \ *TODO*\ s
-   in \ *waterregulation/controller.py*\  and \ *waterregulation/decider.py*.
-#. Complete the \ *TODO*\ s
-   in \ *waterregulation/test.py*\  and \ *waterregulation/integrationtest.py*.
-   A single integration test may be sufficient. However, your unit tests
-   in \ *test.py*\  should include at least one test for each specified
-   behavior.
-#. *python -m unittest waterregulation/test.py*\  and \ *python -m
-   unittest waterregulation/integrationtest.py* should have no failures.
-#. Running \ *coverage run
-   --source=waterregulation/controller.py,waterregulation/decider.py -m
-   unittest waterregulation/test.py; coverage report*\ * *\ shows 90%+
-   coverage..
-#. Satisfy the linter such that \ *pylint waterregulation* gives no
-   errors and and \ *flake8 waterregulation* gives no errors. You may
-   have to add docstrings to your test files.
-
- 
+#. Provide a *MultiplierTests* and \ *DividerTests* test classes in
+   the \ *unit-test.py* file.
+#. *python -m unittest unit-test.py*\  and *python -m unittest
+   integration-test.py* should have no failures.
+#. Running \ *coverage run --source=calculator -m unittest unit-test.py;
+   coverage report*\ * *\ shows 90%+ coverage..
+#. Satisfy the linter such that \ *pylint calculator* gives no errors
+   and *flake8 calculator* gives no errors. You can achieve this by some
+   combination of editing your code and editing the \ *.pylintrc* file
+   to ignore certain violations
 
 Submitting Your Work 
 =====================

@@ -1,5 +1,5 @@
 ==============================
-Assignment: Lesson 05 Activity
+Assignment: Lesson 02 Activity
 ==============================
 
 .. raw:: html

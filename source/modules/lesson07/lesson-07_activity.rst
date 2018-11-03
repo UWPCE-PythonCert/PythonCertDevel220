@@ -1,6 +1,6 @@
-================================
-Assignment: Lesson 09 Assignment
-================================
+==============================
+Assignment: Lesson 07 Activity
+==============================
 
 .. raw:: html
 
@@ -32,18 +32,14 @@ Talk <%24CANVAS_OBJECT_REFERENCE%24/discussion_topics/i0bda76f8082acefb180b50430
 
    </div>
 
-Instructions
-============
+Once you've completed the activity from the lesson content, commit your
+changes and submit:
 
-In this lesson, we looked at an asyncio based web data scraper.
+-  a link to your repository on GitHub
+-  the relevant .py file(s)
 
-In that case, there were about 100 simultaneous requests. Async is very
-well suited to many requests, but for 100 or so, a multi-threaded
-approach could work well too. So your job is to make a multi-threaded
-version of the newsapi downloader:
-
-Complete description here: \ `A Threaded
-Downloader <https://uwpce-pythoncert.github.io/PythonCertDevel/exercises/threaded_downloader.html#exercise-downloader>`__
+We'll be grading this activity purely on the percentage of included
+tests that pass.
 
 Submitting Your Work 
 =====================

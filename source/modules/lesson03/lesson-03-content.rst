@@ -1,5 +1,5 @@
 =================
-Lesson 07 Content
+Lesson 03 Content
 =================
 
 .. raw:: html
@@ -43,7 +43,7 @@ and they are included here, below the video:
 
 |v1files.png|
 
- Note: If you are using Windows, you will need to install sqlite. Here's how:
+Note: If you are using Windows, you will need to install sqlite. Here's how:
 
 
 On Windows, unlike Linux and Mac, sqlite is not installed with Python. As
