@@ -43,7 +43,28 @@ and they are included here, below the video:
 
 |v1files.png|
 
- 
+ Note: If you are using Windows, you will need to install sqlite. Here's how:
+
+
+On Windows, unlike Linux and Mac, sqlite is not installed with Python. As
+always, there are many ways to install sqlite, but the easiest way is with pip.
+Open a command prompt (press the Windows key, type cmd and press enter).
+
+At the command prompt enter the following command:
+
+.. code:: bash
+    pip install pysqlite3
+
+Now, type the following command:
+
+.. code:: bash
+    sqlite3
+
+And you should see the sqlite prompt. Type the quit command to return to the command prompt:
+
+.. code:: bash
+    .quit
+
 
 {{VIDEO HERE}} 
 
@@ -100,7 +121,6 @@ We have covered the basis of data definition, and why it is important.
 We now know what a schema is and why it is important. Now we can start
 to write a Python program that uses a database.
 
- 
 
 Be sure you cloned the repository we mentioned prior to video 1
 from \ `GitHub <https://github.com/milesak60/RDBMS>`__\ . In this video
