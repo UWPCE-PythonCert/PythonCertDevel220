@@ -1,9 +1,9 @@
-=======================================
-Advanced Python Programming: Principles
-=======================================
+================
+Class Principles
+================
 
-Class guide
-===========
+Guide
+=====
 
 We want to make sure that every student understands how to get the most
 from the Advanced Python Programming class.

@@ -1,6 +1,6 @@
-=========================================
-Advanced Python Programming: Expectations
-=========================================
+============
+Expectations
+============
 
 What does success on this class look like?
 ==========================================

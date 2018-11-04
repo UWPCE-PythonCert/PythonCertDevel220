@@ -9,11 +9,16 @@ problem with that module.
 
 Here is what you need to do:
 ----------------------------
-
-.. todo::
-    Need specific details of lesson 2 assignment, with sample code
-
-#.
+#. Clone the PhyRe.py code and review it.
+#. First you need to get it to at least start to run. Update it as needed.
+#. Try as best you can to understand what the code is doing.
+#. Now, start to insert logging statements to track the code's execution
+#. Using the debugger, try to understad what is going on with the
+   expected command line parameters. See if from the code and through
+   watching variables and creating dummy parameters you can infer enough
+   to get the program to run.
+#. Add comments that describe your discoveries, additional things you need
+#. to know and any other comments.
 
 
 Tips

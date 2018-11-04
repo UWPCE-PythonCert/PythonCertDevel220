@@ -1,3 +1,4 @@
+===================
 Lesson 0 : Preclass
 ===================
 
@@ -5,7 +6,7 @@ Lesson 0 : Preclass
 .. toctree::
     :maxdepth: 1
 
-    0_office_hours2
+    0_office_hours
     1_principles
     2_expectations
     3_case_study

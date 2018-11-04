@@ -33,10 +33,8 @@ Talk <%24CANVAS_OBJECT_REFERENCE%24/discussion_topics/i72c5561508c841b38aa31c3d1
    </div>
 
  
-
 In the lesson content, we asked you to spend 5-10 minutes on your own
-debugging the recursion error exercise code. After doing so, please
-provide:
+debugging the recursion error exercise code. After doing so, do the following:
 
 #. In very general terms, use a couple of sentences to address the
    problem with our code. For example, give your best guess or insight
@@ -49,11 +47,11 @@ provide:
 
 #. A copy-and-paste of your terminal debugging activity.
 
-Submitting Your Work 
+Demstrating your work 
 =====================
 
-Provide your response in the text file and upload it below. Name the
-file YOURLASTNAMEDebugging.txt. For example, you might submit:
+Either gring your work to class or office hours, or show your instructor.
+ For example, you might produce:
 
 ::
 
