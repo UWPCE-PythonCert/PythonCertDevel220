@@ -13,7 +13,7 @@ Here is what you need to do:
 #.
 
 .. todo::
-    Develop lesson 8 assignment
+    Develop lesson 8 assignment (Luis)
 
 Tips
 ----
