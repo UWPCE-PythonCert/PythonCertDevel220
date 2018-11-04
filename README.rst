@@ -6,14 +6,15 @@ This repository contains the source materials for the University of Washington P
 
 `Certificate in Python Programming <https://www.pce.uw.edu/certificates/python-programming>`_
 
-These materials are available in html rendered version here:
+These materials will be available in html rendered version here:
 
 https://uwpce-pythoncert.github.io/PythonCertDevel220/
 
-This repo is WIP and very incomplete. Please do not submit a PR or issue yet.
------------------------------------------------------------------------------
 
-We will update in due course.
+This content is an incomplete first draft. Further work will comlete
+this by 12/31/2018. Please not there will be errors. For the time being
+comments are best aligned to overall structure, fit, and suitability.
+
 
 Building These Documents
 ------------------------
