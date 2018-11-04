@@ -12,8 +12,9 @@ https://uwpce-pythoncert.github.io/PythonCertDevel220/
 
 
 This content is an incomplete first draft. Further work will comlete
-this by 12/31/2018. Please not there will be errors. For the time being
-comments are best aligned to overall structure, fit, and suitability.
+this by 12/31/2018. Please note there will be errors, that we are working on fixing.
+There are lots of to dos too, inlined into the home page on the rendered version.
+For the time being comments are best aligned to overall structure, fit, and suitability.
 
 
 Building These Documents
