@@ -1,11 +1,11 @@
 ==================================
-Lesson 02 Functional Programming 3
+Lesson 08 Functional Programming 3
 ==================================
 
 Introduction
 ============
 
-| 
+|
 | In this third lesson on functional programming follow a string of
   related techniques. We first look at closures and compare them to
   classes and objects and thereby bridge the gap between functional
@@ -22,7 +22,7 @@ covered across all three lessons.
 Recommended Text
 ================
 
-| 
+|
 | For the functional programming modules, this lesson included, we
   recommend `Functional Python Programming by Steven
   Lott. <http://proquest.safaribooksonline.com/9781784396992?uicode=spl&cid=shareLink>`__
@@ -40,7 +40,7 @@ Each lesson's optional readings will draw from this text.
 Learning Objectives
 ===================
 
-| 
+|
 | Upon successful completion of this lesson, you will be able to:
 
 | \* define a closure as a factory for creating stand-alone methods.
@@ -53,7 +53,7 @@ Learning Objectives
 New Words or Concepts
 =====================
 
-| 
+|
 | \* Closure
 | \* Scope
 | \* Curry
@@ -65,7 +65,7 @@ New Words or Concepts
 Required Reading
 ================
 
-| 
+|
 | \* Functional Programming Modules
 
 https://docs.python.org/3/library/functional.html
@@ -88,7 +88,7 @@ https://docs.python.org/3/library/functional.html
 Optional Reading
 ================
 
-| 
+|
 | \* Lott, S. (2015) Chapter 14. The PyMonad Library. Functional
   composition and currying. In Functional Python Programming.
 

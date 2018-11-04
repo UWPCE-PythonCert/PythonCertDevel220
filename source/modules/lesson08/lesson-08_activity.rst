@@ -1,5 +1,5 @@
 ==============================
-Assignment: Lesson 03 Activity
+Assignment: Lesson 08 Activity
 ==============================
 
 .. raw:: html
@@ -128,7 +128,7 @@ This is how you might interact with your Locke class.
 
    </div>
 
-.. rubric:: 
+.. rubric::
    :name: section
    :class: caH2
 

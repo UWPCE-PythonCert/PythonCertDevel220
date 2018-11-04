@@ -1,5 +1,5 @@
 ===================
-Lesson 01.01 Lambda
+Lesson 04.01 Lambda
 ===================
 
 {{VIDEO HERE}}
@@ -85,7 +85,7 @@ function immediately by calling it with its required arguments:
   when defined inline --- and generally as an argument to a function or
   method which is expecting a function.
 
-| 
+|
 | What is so special about Lambda?  Here is the secret about Lambda:
   there is no secret to lambda.  There is nothing it can do that a
   standard named function cannot do.  It has no special powers aside
@@ -93,7 +93,7 @@ function immediately by calling it with its required arguments:
   you could instead choose to use a standard named function.
 | What use is Lambda?  According to Python's creator, not much.
 
-| 
+|
 | "About 12 years ago, Python aquired lambda, reduce(), filter() and
   map(), courtesy of (I believe) a Lisp hacker who missed them and
   submitted working patches. But, despite of the PR value, I think these
@@ -117,7 +117,7 @@ function immediately by calling it with its required arguments:
 |  -- Guido van Rossum
 | http://www.artima.com/weblogs/viewpost.jsp?thread=98196
 
-| 
+|
 | Why would we teach the Lambda special form if even if Python's creator
   has a low opinion of it?
 | You need to understand it, because you are going to see it in the

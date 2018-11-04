@@ -1,5 +1,5 @@
 ===================
-Lesson 10.03 Cython
+Lesson 06.03 Cython
 ===================
 
 {{VIDEO HERE}} {{VIDEO HERE}}

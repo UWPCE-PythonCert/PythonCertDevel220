@@ -8,8 +8,9 @@ Lesson content
        generated during class so its targetted to the cohort?
     #. Deal with video here tags
     #. Deal with how videos fit
-    #. Be sure all dependencies are OK given class resequence
+    #. Be sure all lesson inter-dependencies are OK given class resequence
     #. Add all code to github
+    #. Recommend Andy and Luis to walk through class web site on zoom for review
 
 
 Arranged in order of the lessons:

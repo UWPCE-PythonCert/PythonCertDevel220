@@ -2,9 +2,6 @@
 Assignment: Lesson 01 Activity
 ==============================
 
-.. todo::
-    Lesson 1 activity needs rework
-
 .. raw:: html
 
    <div id="menuheading">
@@ -58,3 +55,4 @@ and \ *integration-test.py* files.
    combination of editing your code and editing the \ *.pylintrc* file
    to ignore certain violations
 
+Prepare the results, and prepare to demo them!

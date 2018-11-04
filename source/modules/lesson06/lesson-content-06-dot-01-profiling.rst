@@ -1,5 +1,5 @@
 ==============================
-Lesson Content 10.01 Profiling
+Lesson Content 06.01 Profiling
 ==============================
 
 At some point, perhaps even during this curriculum, you may have heard

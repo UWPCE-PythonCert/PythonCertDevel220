@@ -1,5 +1,5 @@
 ======================
-Lesson 10 Introduction
+Lesson 06 Introduction
 ======================
 
 .. raw:: html

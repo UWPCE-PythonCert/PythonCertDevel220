@@ -13,7 +13,7 @@ for the class assignments and quizzes. See the grading rubric at ...
 for more details.
 
 .. todo::
-   Add link to grading rubric in principles.
+   Add link to grading rubric from Expectations (Andy).
 
 Also, there are usually ungraded activities for the lessons. This is work
 that you can do to help you really understand and apply the concepts. Although

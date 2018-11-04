@@ -257,6 +257,7 @@ Optional
    fro HP Norton. Again, feel free to bring along your results to dicuss or
    demonstrate at office hours, or with your instructor.
    And check out the example we provided in the class repo.
+
 .. todo::
   Add Redis and Neo4J examles to Lesson 5 repo
  

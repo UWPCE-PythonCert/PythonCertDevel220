@@ -76,9 +76,6 @@ relationships.
 
 For more detail see:
 
-.. todo::
-  add Neo4J links
-
 https://en.wikipedia.org/wiki/Graph_database
 https://medium.com/labcodes/graph-databases-talking-about-your-data-relationships-with-python-b438c689dc89
 https://neo4j.com/developer/python/ 

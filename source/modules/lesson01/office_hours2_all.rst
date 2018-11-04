@@ -1,5 +1,9 @@
 Office Hours : This weeks' content
 ==================================
+
+.. todo::
+    Office hours agenda lesson 1 : can we delete everything except agenda?
+
 Agenda
 ------
 #. Q+A This week's content

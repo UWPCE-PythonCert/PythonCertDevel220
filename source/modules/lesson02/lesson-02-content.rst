@@ -1,4 +1,4 @@
-z=================
+=================
 Lesson 02 Content
 =================
 
@@ -175,7 +175,7 @@ Now running simple.py produces the following output:
 
 
 .. code:: Python
-    
+
     $ python simple.py
     DEBUG:root:0
     DEBUG:root:1
@@ -637,10 +637,13 @@ will only log WARNING messages and above to its log file.
 
 Run the script, and confirm that it now runs as expected!
 
-Lesson Assignment
------------------
+Lesson Activity
+---------------
 
-The lesson assignment makes use of the materials in this lesson on
+.. todo::
+    Lesson 2 activty inlined to content: needed? A+L discuss
+
+The lesson activity makes use of the materials in this lesson on
 logging. Refer back to this section when you're ready to complete the
 assignment.
 

@@ -14,3 +14,8 @@ Lesson 4 : Functional Programming 2
     99_assignment
     office_hours1_recaps
     office_hours2_all
+
+.. todo::
+    We ended up with a merge conflict that resulted in 2 versions of iterators.
+    A+L resolve
+

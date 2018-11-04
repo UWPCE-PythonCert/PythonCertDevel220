@@ -1,5 +1,5 @@
 =================
-Lesson 10.02 PyPy
+Lesson 06.02 PyPy
 =================
 
 PyPy is an alternative Python interpreter focused on performance. It
