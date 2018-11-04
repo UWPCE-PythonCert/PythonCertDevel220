@@ -9,6 +9,7 @@ Lesson content
     #. Deal with video here tags
     #. Deal with how videos fit
     #. Be sure all dependencies are OK given class resequence
+    #. Add all code to github
 
 
 Arranged in order of the lessons:

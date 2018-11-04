@@ -15,13 +15,8 @@ class Pet:
     def swim(self):
         return "splash"
 
-
 mypet = Pet("Goldie") # i am an object: an instance of the class Pet
 
 print(mypet.name)
 print(mypet.speak())
 print(mypet.swim())
-import sys
-print(sys.version)
-import sphinx
-

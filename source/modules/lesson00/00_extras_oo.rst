@@ -90,7 +90,8 @@ If we start to observe concepts that are similar, but have different behaviors
 and / or data, it might be an indicator that we need to use inheritance.
 
 You can easily identify of inheritance is needed if you see concepts that relate
-to other concpets with the phrase 'is a'. A dog is a pet. So is a cat. A python
+to other concepts with the phrase 'is a'. A dog is a pet. So is a cat. A
+python
 might be too, but it is also a programming language! In this case lets assume
 it is a pet.
 
