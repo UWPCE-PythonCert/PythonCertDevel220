@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # simple script to build and push to gh-pages
 # designed to be run from master
@@ -46,4 +46,3 @@ popd
 
 echo "Now verify the render on github.io at the following link:"
 echo "https://uwpce-pythoncert.github.io/PythonCertDevel220/"
-
