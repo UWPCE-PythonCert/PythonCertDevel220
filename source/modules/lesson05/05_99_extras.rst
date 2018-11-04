@@ -57,7 +57,7 @@ down too, due to the time to initially populate, or seed the cache.
 For more details see:
 
 .. todo::
-  add Redis links
+  add Redis links (Andy)
 
 
 Neo4J

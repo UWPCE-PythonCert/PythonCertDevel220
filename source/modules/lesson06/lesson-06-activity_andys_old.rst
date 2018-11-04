@@ -2,10 +2,6 @@
 Assignment: Lesson 06 Activity
 ==============================
 
-.. todo::
-    Did we decide to eliminate submissions from activities?
-    Do we even want an activity section?
-
 .. raw:: html
 
    <div id="menuheading">

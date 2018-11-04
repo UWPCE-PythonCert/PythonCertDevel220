@@ -15,9 +15,9 @@ Here is what you need to do:
    customer databases, and reading 100 records from these databases.
 
 .. todo::
-    #. Create badly performing module for lesson 6
-    #. Provide a datafile for lesson 6
-    #. Need to resolve activity content and link for lesson 6
+    #. Create badly performing module for lesson 6 (A+L)
+    #. Provide a datafile for lesson 6 (Andy)
+    #. Need to resolve activity content and link for lesson 6 (A+L)
 
 Tips
 ----

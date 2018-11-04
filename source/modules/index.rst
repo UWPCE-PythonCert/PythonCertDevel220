@@ -3,14 +3,14 @@ Lesson content
 ##############
 
 .. todo::
-    #. Convert all code to rst tags
+    #. Convert all code to rst tags (Andy - low priority)
     #. Need extra content for office hours? Or do we allow it to be
-       generated during class so its targetted to the cohort?
-    #. Deal with video here tags
-    #. Deal with how videos fit
+       generated during class so its targetted to the cohort? (A+L discuss)
+    #. Deal with video here tags (TBD - see Debalina)
+    #. Deal with how videos fit (TBD - see Debalina)
     #. Be sure all lesson inter-dependencies are OK given class resequence
-    #. Add all code to github
-    #. Recommend Andy and Luis to walk through class web site on zoom for review
+    #. Add all code to github (A+L)
+    #. Recommend Andy and Luis to walk through class web site on zoom for review (A+L)
 
 
 Arranged in order of the lessons:

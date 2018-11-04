@@ -30,4 +30,4 @@ Understanding how the different constructs work, their performance and memory
 profiles, can make a large difference in the construction of your programs.
 
 .. todo::
-    Review Lesson 6 quiz questions
+    Review Lesson 6 quiz questions (Andy)

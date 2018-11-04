@@ -42,7 +42,7 @@ sqlite.
 Clone the repo at 
 
 .. todo::
-    Add repo to clone for lesson 3 activity rdbms
+    Add repo to clone for lesson 3 activity rdbms (Andy)
 
 although you should already have that from earlier in this lesson.
 

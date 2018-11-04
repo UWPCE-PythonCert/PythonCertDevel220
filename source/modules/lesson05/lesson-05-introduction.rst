@@ -71,7 +71,7 @@ Introduction
    aperson = Person.get(Person.person_name == 'Fred')
 
 .. todo::
-  Add git links for rdbms code
+  Add git links for rdbms code (Andy)
 
 Learning Objectives
 ===================
@@ -93,7 +93,7 @@ New Words, Concepts, and Tools
 Required Reading
 ================
 .. todo::
-   Verify all required and optional reading links for lesson 5 mongo API
+   Verify all required and optional reading links for lesson 5 mongo API (Andy)
 
 -  `Background <https://www.fullstackpython.com/no-sql-datastore.html>`__
    on databases

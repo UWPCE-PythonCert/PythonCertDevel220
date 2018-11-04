@@ -21,4 +21,4 @@ It's ok a long as you know they key.
 True
 
 .. todo::
-    Review and add some more API/mongo questions to quix
+    Review and add some more API/mongo questions to quiz (Andy)

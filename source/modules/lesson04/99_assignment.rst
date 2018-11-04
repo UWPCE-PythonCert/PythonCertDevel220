@@ -35,7 +35,7 @@ So here is our refactoring assignment:
 
 .. todo::
     Create a customer csv file to be used for loading data with at least
-    1000 records.
+    1000 records (Andy).
 
 Tips
 ----

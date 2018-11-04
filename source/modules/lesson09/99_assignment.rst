@@ -7,7 +7,7 @@ help to build expressive programs that are easy to understand.
 
 
 .. todo::
-    Need example for rework to recursion in lesson 9 assignment
+    Need example for rework to recursion in lesson 9 assignment (Andy)
 
 Here is what you need to do:
 ----------------------------
