@@ -1,5 +1,5 @@
 =========================
-Lesson 09.01: Concurrency
+Lesson 07.01: Concurrency
 =========================
 
 Video Tutorials: Concurrency

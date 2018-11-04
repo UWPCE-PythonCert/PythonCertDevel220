@@ -7,7 +7,7 @@ Lesson 2 : Logging & Debuging
     00_prerequisites
     lesson-02-introduction
     lesson-02-content
+    lesson-02_activity
     99_assignment
-    lesson-02_activity.rst
     office_hours1_recaps
     office_hours2_all
