@@ -1,0 +1,988 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Lesson 01 Content &mdash; PythonCert220 2.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Lesson 1 : Assignment" href="99_assignment.html" />
+    <link rel="prev" title="Lesson 01 Introduction" href="01_lesson-01-introduction.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PythonCert220
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Lesson content</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#py220-advanced-python-programming">Py220: Advanced Python Programming</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../lesson00/index.html">Lesson 0 : Preclass</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Lesson 1 : Automated Testing</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="00_prerequisites.html">Python 220 Advanced Python Programming</a></li>
+<li class="toctree-l4"><a class="reference internal" href="01_lesson-01-introduction.html">Lesson 01 Introduction</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Lesson 01 Content</a></li>
+<li class="toctree-l4"><a class="reference internal" href="99_assignment.html">Lesson 1 : Assignment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="office_hours1_recaps.html">Office Hours : Recaps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="office_hours2_all.html">Office Hours : This weeks’ content</a></li>
+<li class="toctree-l4"><a class="reference internal" href="office_hours2_all.html#subclass-superclass-super">Subclass / superclass/ super()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="office_hours2_all.html#mocking">Mocking</a></li>
+<li class="toctree-l4"><a class="reference internal" href="office_hours2_all.html#directories">Directories</a></li>
+<li class="toctree-l4"><a class="reference internal" href="office_hours2_all.html#stop-press">STOP PRESS</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson02/index.html">Lesson 2 : Logging &amp; Debuging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson03/index.html">Lesson 3 : Relational databases</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson04/index.html">Lesson 4 : Functional Programming 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson05/index.html">Lesson 5 : Consuming APIs with NoSQL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson06/index.html">Lesson 6 : Profiling and performance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson07/index.html">Lesson 7 : Currency and async</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson08/index.html">Lesson 8 : Functional Programming 3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson09/index.html">Lesson 9 : Advanced Python language constructs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson10/index.html">Lesson 10 : Metaprogramming</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">External links</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PythonCert220</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Lesson content</a> &raquo;</li>
+        
+          <li><a href="index.html">Lesson 1 : Automated Testing</a> &raquo;</li>
+        
+      <li>Lesson 01 Content</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/modules/lesson01/02_lesson-01-content.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="lesson-01-content">
+<h1>Lesson 01 Content<a class="headerlink" href="#lesson-01-content" title="Permalink to this headline">¶</a></h1>
+<div id="menuheading"><p class="cah2 rubric" id="advanced-testing">Advanced Testing</p>
+<div id="navbar" class="caNav grid-row around-md clearunderlinestyle"
+role="navigation"><p><a class="reference external" href="%24WIKI_REFERENCE%24/pages/lesson-06-introduction">Introduction</a> |
+<a class="reference external" href="%24WIKI_REFERENCE%24/pages/lesson-06-content">Content</a> |
+<a class="reference external" href="%24CANVAS_OBJECT_REFERENCE%24/assignments/i785a5d3880dcadcaa1cd6b716d4d39a6">Quiz</a>&nbsp;|
+<a class="reference external" href="%24CANVAS_OBJECT_REFERENCE%24/assignments/i7d2419227ff2f1b019facc3c9bee85ff">Activity</a>
+|
+<a class="reference external" href="%24CANVAS_OBJECT_REFERENCE%24/assignments/i935731b3c2d005ed6219d01b38544785">Assignment</a>
+| <a class="reference external" href="%24CANVAS_OBJECT_REFERENCE%24/discussion_topics/i197968e655e43b6b4981d673c25fbcf2">Code
+Talk</a></p>
+</div><div class="caNav grid-row around-md clearunderlinestyle"
+role="navigation"></div></div><p>As you write more lines of code for a programming project, or as the
+number of programmers working on a project increases, your code becomes
+more complex. Some projects become so complex that programmers have a
+difficult time anticipating how even the simplest change made on any
+given line of code will effect the rest of the program. This lesson&nbsp;will
+cover three possible, and complementary, answers to the challenge of managing complexity in your
+software:</p>
+<ul class="simple">
+<li>Testing: defining the expected behavior of your code, and expressing
+that behavior in a software script, consisting of automated tests, that can quickly tell you whether
+your code changes have broken existing code, or whether your changes
+have fixed code that wasn’t working.</li>
+<li>Coverage:&nbsp;measuring what percentage of your code is invoked by your
+automated tests. If only 10% of your code is invoked, then your tests will not detect if anything is broken
+in the other 90%.</li>
+<li>Linting: a “report card” on how well your code conforms to certain
+standards of style and syntax. The more closely your&nbsp;code conforms to
+standards of style, the more likely that another programmer will be
+able to read, understand, and maintain it. Linters also often analyze
+your code for complexity: less complex code is easier to read,
+to understand, and to maintain than code that is more complex.</li>
+</ul>
+<p>We’ll also address the following general concepts of software
+engineering:</p>
+<ul class="simple">
+<li>Writing testable code: not all styles of code writing lend themselves
+to automated testing. Fortunately, many strategies for making code
+more testable also make it easier to maintain. One such method is
+called&nbsp;<em>dependency injection</em>.</li>
+<li>Unit tests vs. integration tests: testing each piece of your software
+individually vs testing it as a whole. If you only test your software
+as a whole, then when you find unexpected/broken behavior it may become difficult to
+know exactly which piece of your software is responsible for the
+behavior. “Unit testing” is the practice of testing each piece
+individually so that you can know exactly which piece to attribute a
+failure to. That said, you still want to test your software as an integrated
+whole to make sure that the individual pieces are also working together correctly.</li>
+</ul>
+<div class="section" id="why-test">
+<h2>Why test?<a class="headerlink" href="#why-test" title="Permalink to this headline">¶</a></h2>
+<p>It’s likely you already have some familiarity with software testing in
+general, and writing tests in Python specifically. In this section,
+we’re going to revisit the basic question: why write software tests. Our
+discussion here will form the foundation of the rest of the lesson.</p>
+<p>It’s highly recommended for you to type along with these examples, creating the
+squarer.py file and the corresponding test files!</p>
+<div class="section" id="a-simple-example">
+<h3>A Simple Example<a class="headerlink" href="#a-simple-example" title="Permalink to this headline">¶</a></h3>
+<p>Suppose that you have written a simple class for squaring numbers:</p>
+<div
+style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># squarer.py</span>
+<span class="k">class</span> <span class="nc">Squarer</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">calc</span><span class="p">(</span><span class="n">operand</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">operand</span><span class="o">*</span><span class="n">operand</span>
+</pre></div>
+</div>
+</div><p>Squarer is&nbsp;a simple class, with a single static method: calc.&nbsp;The calc
+method calculates the square of its argument in the usual way, and
+returns it to the caller.</p>
+<p>Let’s use the Squarer class from the REPL (the Python shell):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python -i
+&gt;&gt;&gt; from squarer import Squarer
+&gt;&gt;&gt; Squarer.calc(3)
+    9
+&gt;&gt;&gt; Squarer.calc(100)
+    10000
+</pre></div>
+</div>
+<p>Squarer&nbsp;works well:&nbsp;squaring 3 yields 9. Squaring 100 yields 10,000. The
+Squarer class is working perfectly.</p>
+<p>Now imagine that another engineer working on this project
+has&nbsp;a&nbsp;“bright idea” about how to improve the Squarer class: squaring
+involves powers, therefore the Squarer class should be using the power
+operator. They make the following modification to your code:</p>
+<div
+style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># squarer.py</span>
+<span class="k">class</span> <span class="nc">Squarer</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">calc</span><span class="p">(</span><span class="n">operand</span><span class="p">):</span>
+        <span class="c1"># return operand*operand  # OLD</span>
+        <span class="k">return</span> <span class="n">operand</span><span class="o">**</span><span class="n">operand</span>
+</pre></div>
+</div>
+</div><p>Then at some point later you’re using the squarer class to square
+numbers:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python -i
+&gt;&gt;&gt; from squarer import Squarer
+&gt;&gt;&gt; Squarer.calc(3)
+    27
+&gt;&gt;&gt; Squarer.calc(100)
+    100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+</pre></div>
+</div>
+<p>The square of 3 is definitely not 27. And squaring 100 should give
+10,000, not
+100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000!
+Your code is definitely broken: an error has been introduced into the
+Squarer class.</p>
+</div>
+<div class="section" id="automated-test-script">
+<h3>Automated Test Script<a class="headerlink" href="#automated-test-script" title="Permalink to this headline">¶</a></h3>
+<p>If you were to sit down and think about this problem, here’s the
+solution that you would come up with:</p>
+<ul class="simple">
+<li>When I try squaring 3 I expect to get 9, but I got 27. When I try
+squaring 100 I expect to get 10,000, but I got a much larger number.</li>
+<li>It takes me a minute or two to try these examples at the REPL, and
+getting into the REPL and trying these examples is kind of a hassle.</li>
+<li>So I could write a Python script that tries using the Squarer class
+to square 3 and 100. Running the script will be easy and only take a
+few seconds, so when I make a change to Squarer it will only take me
+a few seconds to find out whether I’ve broken it or not.</li>
+<li>I could make a habit of running this test script every time I make a
+change to Squarer. If I have a colleague who is working on the
+Squarer class, then they should run the script whenever&nbsp;<em>they</em> make
+a change to Squarer. In this way, we’ll know right away if we’ve
+introduced an error into Squarer.</li>
+</ul>
+<p>Here’s a suitable test script:</p>
+<div
+style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># test.py</span>
+<span class="kn">from</span> <span class="nn">squarer</span> <span class="k">import</span> <span class="n">Squarer</span>
+
+<span class="k">class</span> <span class="nc">SquarerTest</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">test_positive_numbers</span><span class="p">():</span>
+
+        <span class="n">squares</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="mi">1</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="mi">2</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+            <span class="mi">3</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span>
+            <span class="mi">12</span><span class="p">:</span> <span class="mi">144</span><span class="p">,</span>
+            <span class="mi">100</span><span class="p">:</span> <span class="mi">10000</span><span class="p">,</span>
+        <span class="p">}</span>
+
+        <span class="k">for</span> <span class="n">num</span><span class="p">,</span> <span class="n">square</span> <span class="ow">in</span> <span class="n">squares</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="n">Squarer</span><span class="o">.</span><span class="n">calc</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">result</span> <span class="o">!=</span> <span class="n">square</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Squared </span><span class="si">{}</span><span class="s2"> and got </span><span class="si">{}</span><span class="s2"> but expected </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">result</span><span class="p">,</span> <span class="n">square</span><span class="p">))</span>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">test_negative_numbers</span><span class="p">():</span>
+
+        <span class="n">squares</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="o">-</span><span class="mi">1</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="o">-</span><span class="mi">2</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+            <span class="o">-</span><span class="mi">3</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span>
+            <span class="o">-</span><span class="mi">12</span><span class="p">:</span> <span class="mi">144</span><span class="p">,</span>
+            <span class="o">-</span><span class="mi">100</span><span class="p">:</span> <span class="mi">10000</span><span class="p">,</span>
+        <span class="p">}</span>
+
+        <span class="k">for</span> <span class="n">num</span><span class="p">,</span> <span class="n">square</span> <span class="ow">in</span> <span class="n">squares</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="n">Squarer</span><span class="o">.</span><span class="n">calc</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">result</span> <span class="o">!=</span> <span class="n">square</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Squared </span><span class="si">{}</span><span class="s2"> and got </span><span class="si">{}</span><span class="s2"> but expected </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">result</span><span class="p">,</span> <span class="n">square</span><span class="p">))</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">SquarerTest</span><span class="o">.</span><span class="n">test_positive_numbers</span><span class="p">()</span>
+    <span class="n">SquarerTest</span><span class="o">.</span><span class="n">test_negative_numbers</span><span class="p">()</span>
+</pre></div>
+</div>
+</div><p>The SquarerTest class has two static methods: test_positive_numbers
+and test_negative_numbers. I’ll explain the test_positive_numbers
+method, and the test_negative_numbers method is nearly identical.</p>
+<p>The goal of this script is to define the expected behavior of Squarer
+and test Squarer against that expected behavior. So we begin by creating
+a dictionary that defines that behavior:</p>
+<div
+style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">squares</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="mi">1</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="mi">2</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+    <span class="mi">3</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span>
+    <span class="mi">12</span><span class="p">:</span> <span class="mi">144</span><span class="p">,</span>
+    <span class="mi">100</span><span class="p">:</span> <span class="mi">10000</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div><p>Each&nbsp;<em>key</em> in this dictionary is a number. The corresponding&nbsp;<em>value</em>
+is the value that we expect Squarer to produce when we square the key.
+So one of the key/value pairs that we are testing is 12 and 144:
+squaring 12 should produce 144.</p>
+<p>Next we iterate through these number, square pairs:</p>
+<div
+style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">num</span><span class="p">,</span> <span class="n">square</span> <span class="ow">in</span> <span class="n">squares</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">Squarer</span><span class="o">.</span><span class="n">calc</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">result</span> <span class="o">!=</span> <span class="n">square</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Squared </span><span class="si">{}</span><span class="s2"> and got </span><span class="si">{}</span><span class="s2"> but expected </span><span class="si">{}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">result</span><span class="p">,</span> <span class="n">square</span><span class="p">))</span>
+</pre></div>
+</div>
+</div><p>We use Squarer to square the number, and capture the result in a
+variable named&nbsp;<em>result</em>. If&nbsp;<em>result</em> is not equal to the square that
+we defined in&nbsp;<em>squares</em>, then we print a message describing the error.</p>
+<p>Finally, we add a&nbsp;<em>__name__ == “__main__”</em> clause so that we
+can run this script from the command line:</p>
+<div
+style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">SquarerTest</span><span class="o">.</span><span class="n">test_positive_numbers</span><span class="p">()</span>
+    <span class="n">SquarerTest</span><span class="o">.</span><span class="n">test_negative_numbers</span><span class="p">()</span>
+</pre></div>
+</div>
+</div><p>Running&nbsp;<em>python test.py</em> will invoke the
+SquarerTest.test_positive_numbers method and also the
+SquarerTest.test_negative_numbers method. If our Squarer.calc method
+is working as we expect it to, if it conforms to the behavior we defined
+in&nbsp;the&nbsp;<em>squares</em> dictionary, then nothing will be printed to the
+console. On the other hand, if the SquarerTest finds discrepancies in the behavior of
+Squarer, then it will print those discrepancies to the console.</p>
+<p>Since&nbsp;<em>squarer.py</em> has an error that the other developer just introduced, here is
+the result of running&nbsp;<em>python test.py</em>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python test.py
+Squared 3 and got 27 but expected 9
+Squared 12 and got 8916100448256 but expected 144
+Squared 100 and got 100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 but expected 10000
+Squared -1 and got -1.0 but expected 1
+Squared -2 and got 0.25 but expected 4
+Squared -3 and got -0.037037037037037035 but expected 9
+Squared -12 and got 1.1215665478461509e-13 but expected 144
+Squared -100 and got 1e-200 but expected 10000
+
+$
+</pre></div>
+</div>
+<p>Let’s go back into squarer.py and fix our mistake:</p>
+<div
+style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># squarer.py</span>
+<span class="k">class</span> <span class="nc">Squarer</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">calc</span><span class="p">(</span><span class="n">operand</span><span class="p">):</span>
+        <span class="c1"># return operand*operand   # OLD</span>
+        <span class="c1"># return operand**operand  # WRONG</span>
+        <span class="k">return</span> <span class="n">operand</span><span class="o">*</span><span class="n">operand</span>
+</pre></div>
+</div>
+</div><p>Has this actually fixed our code? Let’s run our test script to find out:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python test.py
+
+$
+</pre></div>
+</div>
+<p>Running test.py produces no errors: test.py was not able to find any
+discrepancies between the expected behavior that we defined for
+Squarer’s calc method and the method’s actual behiavor.</p>
+<p>Suppose you wanted to revise squarer.py one more time. You want to try
+another implementation of the calc method that uses the power operator:</p>
+<div
+style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># squarer.py</span>
+<span class="k">class</span> <span class="nc">Squarer</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">calc</span><span class="p">(</span><span class="n">operand</span><span class="p">):</span>
+        <span class="c1"># return operand*operand   # OLD</span>
+        <span class="c1"># return operand**operand  # WRONG</span>
+        <span class="c1"># return operand*operand   # OLD</span>
+        <span class="k">return</span> <span class="n">operand</span><span class="o">**</span><span class="mi">2</span>
+</pre></div>
+</div>
+</div><p>By putting our test into a script file that we can run from the command
+line, we’ve made it so that it only takes a few seconds to test whether
+we’ve introduced an error into our code. We run our test script:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python test.py
+
+$
+</pre></div>
+</div>
+<p>The test script has not found any discrepancies between the&nbsp;<em>expected</em>
+and&nbsp;<em>actual</em> performance of Squarer.calc: it looks
+like&nbsp;<em>operand**2</em> is an acceptable way to implement squaring!</p>
+</div>
+</div>
+<div class="section" id="using-unittest">
+<h2>Using Unittest<a class="headerlink" href="#using-unittest" title="Permalink to this headline">¶</a></h2>
+<p>Our first example showed the system that you would have to come up with
+if you wanted an automated way to assure that the Squarer class was working
+correctly.</p>
+<p>Python also includes a built-in library for creating automated software tests:
+unittest. We can create tests in unittest that are very similar to the
+test_positive_numbers and test_negative_numbers tests that we
+created above, with unittest adding a few extra features. Let’s create a
+test2.py file:</p>
+<div
+style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># test2.py</span>
+<span class="kn">import</span> <span class="nn">unittest</span>
+
+<span class="kn">from</span> <span class="nn">squarer</span> <span class="k">import</span> <span class="n">Squarer</span>
+
+<span class="k">class</span> <span class="nc">SquarerTest</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">test_positive_numbers</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="n">squares</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="mi">1</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="mi">2</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+            <span class="mi">3</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span>
+            <span class="mi">12</span><span class="p">:</span> <span class="mi">144</span><span class="p">,</span>
+            <span class="mi">100</span><span class="p">:</span> <span class="mi">10000</span><span class="p">,</span>
+        <span class="p">}</span>
+
+        <span class="k">for</span> <span class="n">num</span><span class="p">,</span> <span class="n">square</span> <span class="ow">in</span> <span class="n">squares</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">square</span><span class="p">,</span> <span class="n">Squarer</span><span class="o">.</span><span class="n">calc</span><span class="p">(</span><span class="n">num</span><span class="p">),</span> <span class="s2">&quot;Squaring </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">num</span><span class="p">));</span>
+
+    <span class="k">def</span> <span class="nf">test_negative_numbers</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="n">squares</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="o">-</span><span class="mi">1</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="o">-</span><span class="mi">2</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+            <span class="o">-</span><span class="mi">3</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span>
+            <span class="o">-</span><span class="mi">12</span><span class="p">:</span> <span class="mi">144</span><span class="p">,</span>
+            <span class="o">-</span><span class="mi">100</span><span class="p">:</span> <span class="mi">10000</span><span class="p">,</span>
+        <span class="p">}</span>
+
+        <span class="k">for</span> <span class="n">num</span><span class="p">,</span> <span class="n">square</span> <span class="ow">in</span> <span class="n">squares</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">square</span><span class="p">,</span> <span class="n">Squarer</span><span class="o">.</span><span class="n">calc</span><span class="p">(</span><span class="n">num</span><span class="p">),</span> <span class="s2">&quot;Squaring </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">num</span><span class="p">));</span>
+</pre></div>
+</div>
+</div><p>These test methods are just a little different than the test script we
+created for ourselves above. Here are the key differences:</p>
+<div
+style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">unittest</span>                       <span class="c1"># &lt;---</span>
+
+<span class="kn">from</span> <span class="nn">squarer</span> <span class="k">import</span> <span class="n">Squarer</span>
+
+<span class="k">class</span> <span class="nc">SquarerTest</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span> <span class="c1"># &lt;---</span>
+    <span class="o">....</span>
+</pre></div>
+</div>
+</div><p>We import the unittest library, and our SquarerTest class inherits from
+unittest.TestCase. Next:</p>
+<div
+style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">SquarerTest</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+                                      <span class="c1"># &lt;---</span>
+    <span class="k">def</span> <span class="nf">test_positive_numbers</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># &lt;---</span>
+</pre></div>
+</div>
+</div><p>Our test class methods&nbsp;<em>are not static</em>: they do not include
+a&nbsp;<em>&#64;staticmethod</em> decorator, and they also accept&nbsp;<em>self</em> as their
+initial, implicit argument. Also, and this is very important, it is a <em>unittest requirement</em> that all
+of our test methods begin with the word “test”, as in
+<em>test</em>_positive_numbers.&nbsp;Next:</p>
+<div
+style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">num</span><span class="p">,</span> <span class="n">square</span> <span class="ow">in</span> <span class="n">squares</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">square</span><span class="p">,</span> <span class="n">Squarer</span><span class="o">.</span><span class="n">calc</span><span class="p">(</span><span class="n">num</span><span class="p">),</span> <span class="s2">&quot;Squaring </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">num</span><span class="p">));</span>  <span class="c1"># &lt;---</span>
+</pre></div>
+</div>
+</div><p>The TestCase class includes instance methods for making assertions about
+the behavior of our program. The&nbsp;<em>assertEqual</em> method is an instance
+method defined in the TestCase class: it helps us compare the expected
+behavior of a program with its actual behavior. The first argument we
+give it is the&nbsp;<em>expected</em> result of squaring our number&nbsp;<em>num</em>. Then
+we give it the&nbsp;<em>actual</em> square that’s produced by Squarer.calc. We can
+also can also specify an optional helpful message for the test library
+to print if this test fails: our helpful message will tell us what
+number we were trying to square when the test failed.</p>
+<p>Here’s another difference: note that I didn’t include an&nbsp;<em>if
+__name__==”__main__”</em> clause. We&nbsp;<em>wont</em> be running this script
+directly, instead we’ll invoke it indirectly through the unittest
+library. You’ll see that below.</p>
+<p>Finally, there’s one more difference between&nbsp;unittest and our original
+test script&nbsp;that you should be aware of: unittest will stop
+running a test method as soon as it finds a single assertion error. That
+is to say, if test_positive_numbers finds that Squarer does not
+produce 9 when squaring 3, then it&nbsp;<em>will</em> report that error but then
+it won’t try any more numbers: it&nbsp;<a href="#id1"><span class="problematic" id="id2">*</span></a>won’t&nbsp;<a href="#id3"><span class="problematic" id="id4">*</span></a>also try squaring 12 to
+see if it produces 144. The implication is that, for code that is more complex
+it is possible that fixing one error reported by unittest will uncover
+a new one.</p>
+<p>Here’s the current content of our squarer.py file:</p>
+<div
+style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># squarer.py</span>
+<span class="k">class</span> <span class="nc">Squarer</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">calc</span><span class="p">(</span><span class="n">operand</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">operand</span><span class="o">**</span><span class="mi">2</span>
+</pre></div>
+</div>
+</div><p>I expect that our Squarer.calc method should be working correctly! And
+here’s the output of running our test:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python -m unittest test2
+..
+----------------------------------------------------------------------
+Ran 2 tests in 0.000s
+
+OK
+$
+</pre></div>
+</div>
+<p>Excellent! Our Squarer.calc method is working correctly. We wrote two
+tests, test_positive_numbers and test_negative_numbers, and our
+unittest script found no discrepancies between the expected and actual
+behavior of Squarer.calc. Each test method that our code satisfies is
+represented by a ‘.’ at the top of the output. The “OK” also signifies
+that each test was passed by our code. Finally, if you’re a UNIX geek,
+you’ll be interested to know that this test run produced a zero return
+value.</p>
+<p>We can also choose which tests to run. Calling&nbsp;<em>python -m unittest
+test2</em> runs all of the tests in the test2.py file. If there were
+multiple test classes in the test2 file, we could choose to run only the
+SquarerTest tests:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python -m unittest test2.SquarerTest
+..
+----------------------------------------------------------------------
+Ran 2 tests in 0.001s
+
+OK
+</pre></div>
+</div>
+<p>We can also choose to run just a single test within the SquarerTest
+class:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python -m unittest test2.SquarerTest.test_positive_numbers
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+OK
+</pre></div>
+</div>
+<p>Running just a single test at a time can be helpful if all of your tests
+together take a long time to run, but you’re working on fixing a single
+bug that’s covered by a single test. It is also useful if multiple tests
+are failing and you are only working on one test.</p>
+<p>Let’s modify our squarer.py file to produce an error and see how
+unittest reports test failures. Modify squarer.py:</p>
+<div
+style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># squarer.py</span>
+<span class="k">class</span> <span class="nc">Squarer</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">calc</span><span class="p">(</span><span class="n">operand</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">operand</span><span class="o">**</span><span class="mi">2</span>  <span class="c1"># OLD</span>
+        <span class="k">return</span> <span class="n">operand</span><span class="o">**</span><span class="n">operand</span>
+</pre></div>
+</div>
+</div><p>Running our tests produces:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python -m unittest test2
+
+FF
+======================================================================
+FAIL: test_negative_numbers (test2.SquarerTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+ File &quot;C:\Users\jaschilz\tmp\test2.py&quot;, line 32, in test_negative_numbers
+ self.assertEqual(square, Squarer.calc(num), &quot;Squaring {}&quot;.format(num));
+AssertionError: 1 != -1.0 : Squaring -1
+
+======================================================================
+FAIL: test_positive_numbers (test2.SquarerTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+ File &quot;C:\Users\jaschilz\tmp\test2.py&quot;, line 19, in test_positive_numbers
+ self.assertEqual(square, Squarer.calc(num), &quot;Squaring {}&quot;.format(num));
+AssertionError: 9 != 27 : Squaring 3
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.001s
+
+FAILED (failures=2)
+</pre></div>
+</div>
+<p>Each test that failed is represented by an “F” at the top of the output.
+If were running multiple tests, with some passes and some failures, then
+we would see a mix of “.”s and “F”s at the top of the output. In this
+case, we ran two tests and both failed. If our code fails&nbsp;<em>any</em> tests,
+then we will also see the word “FAILED” at the bottom of the output,
+replacing “OK”. If you’re a UNIX geek, you might be interested to know
+that this test run has produced a non-zero return value.</p>
+<p>The unittest library also gives us detailed information about each test
+that failed. Let’s look at the output for test_positive_numbers:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">======================================================================</span>
+<span class="n">FAIL</span><span class="p">:</span> <span class="n">test_positive_numbers</span> <span class="p">(</span><span class="n">test2</span><span class="o">.</span><span class="n">SquarerTest</span><span class="p">)</span>
+<span class="o">----------------------------------------------------------------------</span>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+ <span class="n">File</span> <span class="s2">&quot;C:\Users\jaschilz</span><span class="se">\t</span><span class="s2">mp</span><span class="se">\t</span><span class="s2">est2.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">19</span><span class="p">,</span> <span class="ow">in</span> <span class="n">test_positive_numbers</span>
+ <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">square</span><span class="p">,</span> <span class="n">Squarer</span><span class="o">.</span><span class="n">calc</span><span class="p">(</span><span class="n">num</span><span class="p">),</span> <span class="s2">&quot;Squaring </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">num</span><span class="p">));</span>
+<span class="ne">AssertionError</span><span class="p">:</span> <span class="mi">9</span> <span class="o">!=</span> <span class="mi">27</span> <span class="p">:</span> <span class="n">Squaring</span> <span class="mi">3</span>
+
+<span class="o">----------------------------------------------------------------------</span>
+</pre></div>
+</div>
+<p>We can see that the code failed its assertion on line 19. The unittest
+library reports that the expected value, 9, was not equal to the
+actual value of 27 produced by our code. We also see the helpful output
+message that we created: “Squaring 3”. This tells us that the test
+failed while attempting our test scenario for squaring the number 3.</p>
+<p>Keep in mind that unittest will stop a test method as soon as it
+encounters its first assertion error! Our Squarer.calc would
+probably&nbsp;<em>also</em> fail to produce 144 when squaring 12, but our test
+method will not move on to that scenario until our code passes the
+scenario for squaring 3.</p>
+<p>Now that we know that our change to squarer.py has introduced an error,
+let’s revise our code to fix the error, run the tests again, and see
+that our code is working as expected once again.</p>
+<div
+style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># squarer.py</span>
+<span class="k">class</span> <span class="nc">Squarer</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">calc</span><span class="p">(</span><span class="n">operand</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">operand</span><span class="o">**</span><span class="mi">2</span>        <span class="c1"># OLD</span>
+        <span class="k">return</span> <span class="n">operand</span><span class="o">**</span><span class="n">operand</span>  <span class="c1"># BAD</span>
+        <span class="k">return</span> <span class="n">operand</span><span class="o">*</span><span class="n">operand</span>   <span class="c1"># This should work</span>
+</pre></div>
+</div>
+</div><p>Running our tests:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python -m unittest test2
+..
+----------------------------------------------------------------------
+Ran 2 tests in 0.001s
+
+OK
+</pre></div>
+</div>
+<p>Great! Our squarer works as expected again!</p>
+<p>In practice you’ll probably always use unittest or another similar
+library instead of your own, completely homegrown test scripts. This is
+because the unittest library offers several useful features, and doesn’t require
+much more typing than the homegrown test script example above. But the
+unittest test methods we’ve written are not much different in&nbsp;<em>intent</em>
+than the scripts you would come up with by yourself if you wanted to write
+a script to test whether your code was functioning as intended.</p>
+</div>
+<div class="section" id="a-more-complex-example">
+<h2>A more complex example<a class="headerlink" href="#a-more-complex-example" title="Permalink to this headline">¶</a></h2>
+<p>As you watch this video, bear in mind that part of your assignment is
+going to be to complete the calculator that’s presented here.&nbsp;Type along
+if you wish, but there will also be a code repository for you to clone.</p>
+<p>{{VIDEO HERE}}</p>
+<p>What could go wrong with addition and subtraction? Well, at the end of
+this example we found something that could go wrong! I was expecting
+that with 11 in the calculator, entering a 2 and then subtracting would
+produce 9, not -9.</p>
+<p>At this point, let’s&nbsp;<strong>define</strong>&nbsp;what it means for our
+module’s&nbsp;behavior to be correct:</p>
+<ol class="arabic">
+<li><p class="first">An&nbsp;<strong>operator</strong>&nbsp;is a&nbsp;class instance&nbsp;which provides a method
+named&nbsp;<em>calc</em>. The&nbsp;<em>calc</em>&nbsp;method shall accept two arguments and
+operate on its arguments in the usual order:
+<a href="#id5"><span class="problematic" id="id6">*</span></a>Adder().calc(a, b) = a + b
+Subtracter().calc(a, b) = a - b
+<a href="#id7"><span class="problematic" id="id8">*</span></a>etc…</p>
+</li>
+<li><p class="first">A&nbsp;<strong>calculator</strong>&nbsp;is a class instance which provides
+an&nbsp;<em>enter_number</em>&nbsp;method and&nbsp;<em>add, subtract,
+multiply,&nbsp;*and&nbsp;*divide</em>&nbsp;methods.</p>
+</li>
+<li><p class="first">The constructor of a&nbsp;<em>calculator</em>&nbsp;shall accept&nbsp;four&nbsp;<em>operators</em>:
+an&nbsp;<em>adder, subtracter, multiplier,&nbsp;*and&nbsp;*divider</em>. The
+calculator shall use these operators to perform its&nbsp;<em>add, subtract,
+multiply</em>, and&nbsp;<em>divide</em>&nbsp;methods.</p>
+</li>
+<li><p class="first"><em>enter_number(a)</em>,&nbsp;<em>enter_number</em>(<em>b), operator</em>&nbsp;should be
+the same as&nbsp;<em>a&nbsp;operator&nbsp;b</em>. In other words:
+<em>enter_number(a), enter_number(b), add() = a + b
+enter_number(a), enter_number(b), subtract() = a - b
+etc…</em></p>
+</li>
+<li><p class="first">The&nbsp;<em>add, subtract, multiply,&nbsp;*and&nbsp;*divide</em>&nbsp;methods shall
+both:</p>
+<ol class="arabic simple">
+<li>Return the result of the operation</li>
+<li>Enter the result of the operation&nbsp;back into the calculator</li>
+</ol>
+<p>This makes it possible to perform the following sequences of
+operations:</p>
+<ol class="arabic simple">
+<li><em>calculator.enter_number(2)</em></li>
+<li><em>calculator.enter_number(3)</em></li>
+<li><a href="#id9"><span class="problematic" id="id10">*</span></a>calculator.add() &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;# Returns 5, and 5 is
+now ‘in the calculator’&nbsp;*</li>
+<li><em>calculator.enter_number(1)</em></li>
+<li><a href="#id11"><span class="problematic" id="id12">*</span></a>calculator.subtract() &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; # Returns 4 because 5 - 1 =
+4&nbsp;*</li>
+</ol>
+</li>
+<li><p class="first">What should happen if a user enters only one number and then tries to
+perform an operation? Let’s decide&nbsp;that&nbsp;the calculator&nbsp;should throw
+an&nbsp;<strong>InsufficientOperands</strong>&nbsp;exception if there are fewer than two
+numbers in the stack.</p>
+</li>
+</ol>
+<p>Based on this definition, we can see that the final result of our
+calculation in the video should have been 9!</p>
+<p>There are some situations&nbsp;that our definition&nbsp;above doesn’t explicitly
+cover:</p>
+<ul class="simple">
+<li>What should a&nbsp;<em>calculator</em>&nbsp;do if two numbers have already been
+entered onto the stack and the user enters a third?</li>
+<li>What&nbsp;if there are more than two numbers “in the calculator”&nbsp;when the
+user performs an operation?</li>
+<li>When a user adds 2 and 3, that enters&nbsp;5 into the calculator. But are
+2 and 3 still in the calculator, or do they get removed?</li>
+<li>Etc..</li>
+</ul>
+<p>For the purposes of this exercise, we’ll leave the behavior in these
+circumstances&nbsp;<em>undefined</em>. Any person who wants to program
+a&nbsp;<em>calculator</em>&nbsp;could choose to write their code&nbsp;such that:</p>
+<ul class="simple">
+<li>a*&nbsp;calculator*&nbsp;throws an error when a third number gets entered
+into the calculator</li>
+<li>or&nbsp;it could just&nbsp;ignore any new numbers entered if it already has two
+numbers</li>
+<li>or it&nbsp;could replace&nbsp;one of the two numbers with the third</li>
+</ul>
+<p>Any of these choices would be OK in that they would not explicitly
+violate the six behavioral rules&nbsp;we defined above.</p>
+<p>Our next step is to add tests that can automatically tell us if our
+classes are conforming to&nbsp;those six behavioral rules.</p>
+</div>
+<div class="section" id="unit-testing-adder-and-subtracter">
+<h2>Unit testing Adder and Subtracter<a class="headerlink" href="#unit-testing-adder-and-subtracter" title="Permalink to this headline">¶</a></h2>
+<p>Let’s begin our tests with unit testing the Adder and Subtracter
+classes. Recall that unit testing involves testing a&nbsp;<em>single unit</em> of
+code. This usually means testing a single class all by itself: without
+involving any other class.</p>
+<p>If we can define the correct behavior of a single class and test it in
+isolation from any other code, then if our unit test fails we know it’s
+because of a failure in that specific class: if we’ve written a test
+that only uses Adder and not Subtracter, then we know that if that test
+fails it is because of a problem in the Adder class, something that is not
+related with its interaction with other classes (interaction between
+classes is covered by integration testing).</p>
+<p>{{VIDEO HERE}}</p>
+</div>
+<div class="section" id="unit-testing-calculator">
+<h2>Unit testing Calculator<a class="headerlink" href="#unit-testing-calculator" title="Permalink to this headline">¶</a></h2>
+<p>Unit testing is a good solution for the Adder and Subtracter classes: Adder and Subtracter
+don’t make use of any other classes. But just <em>creating</em> a Calculator instance
+requires creating an Adder, a Subtracter, a Multiplier, and a Divider:
+how can we possible devise unit tests for Calculator that don’t involve
+those other classes at all, so that the class can be kept isolated for testing purposes?</p>
+<p>To answer this question, we introduce a new tool library:&nbsp;<em>mock</em>.</p>
+<p>{{VIDEO HERE}}</p>
+<p>Testing Calculator in isolation from all of the other classes is
+difficult, but we achieve it by strictly defining the responsibilities
+of Calculator, separate from the responsibilities of the other classes,
+and testing those responsibilities in isolation using dummy versions of Adder,
+Subtracter, Multiplier, and Divider methods. The Mock library will also come
+in handy in situations in which you need input from a networked location or a
+physical sensor (for example, a temperature reading).</p>
+</div>
+<div class="section" id="integration-testing">
+<h2>Integration Testing<a class="headerlink" href="#integration-testing" title="Permalink to this headline">¶</a></h2>
+<p>After all this unit testing, it’s very tempting to assume that good unit tests
+provide everything you need to ensure your code will work properly. That’s a
+very risky assumption. Even if all the individual elements in your project, there’s
+always a chance that additional issues will be uncovered when you test the project
+as a whole. Let’s think a simple example.</p>
+<p>How you measure temperature is sometimes a contentious issue. Imagine you have two
+developers, working together on a project to read the temperature from a sensor
+and use that to control a temperature alarm (a very noisy alarm) that will sound if the
+temperature detected is too high. One developer
+is American, he works on the code for the thermal sensor class. The other
+developer is from England, he is in charge of alarm control class.</p>
+<p>Both developers are very capable and diligent, creating comprehensive unit
+tests for their respective classes. In the case of the alarm control class, the
+developer used the Mock library to simulate the input coming from the thermal sensor
+class. They’re both very satisfied that their respective unit tests are passing
+and decide to do a live test, that is, with their software connected to both the
+thermal sensor and the alarm. The alarm starts sounding right away and the building
+has to be evacuated. Oops. What happened?</p>
+<p>The American developer coded the sensor class use the Fahrenheit scale, while the
+English developer has his alarm control class using Celsius. A typical room
+temperature measurement of 75F would be seen as life-threatening by the alarm
+control class, since it thinks the sensor is reporting 75C (167F)</p>
+<p>For our integration tests, we want to know if all of our code works
+together, as a whole. To accomplish this, we create a calculation
+scenario where all of our classes are working together, and confirm that
+our calculator produces the correct result.</p>
+<p>{{VIDEO HERE}}</p>
+</div>
+<div class="section" id="linting">
+<h2>Linting<a class="headerlink" href="#linting" title="Permalink to this headline">¶</a></h2>
+<p>Using automated tests to confirm the functioning of your code is not the
+only way to manage the complexity of a large code base. There are also
+tools which can automatically report on how readable your code is and
+how well it follows the conventions of Python programming: flake and
+lint.</p>
+<p>These tools can help ensure that your code is readable and maintainable
+by other programmers.</p>
+<p>{{VIDEO HERE}}</p>
+</div>
+<div class="section" id="coverage">
+<h2>Coverage<a class="headerlink" href="#coverage" title="Permalink to this headline">¶</a></h2>
+<p>{{VIDEO HERE}}</p>
+</div>
+<div class="section" id="test-driven-development">
+<h2>Test Driven Development<a class="headerlink" href="#test-driven-development" title="Permalink to this headline">¶</a></h2>
+<p>No discussion of testing is complete without Test Driven Development
+(TDD).</p>
+<p>TDD&nbsp;is a practice that extends the idea of testing; instead of writing
+some cool code and then writing a test to make sure it never gets
+broken, first you conceive of what you want your software to accomplish,
+you write tests that will pass once you’ve written your software, and
+then you write the software, then you run the tests to make sure that
+you have satisfied their behavioral requirements.</p>
+<p>To begin with, go back to the&nbsp;<a class="reference external" href="https://www.youtube.com/watch?v=HhwElTL-mdI">TDD
+video</a>&nbsp;and watch a few
+more minutes of the talk. You’re welcome to watch the whole thing; the
+guy is a good presenter!</p>
+<p>Although proponents of TDD describe it as an essential practice, TDD is
+not currently “the standard” practice of test writing. For better or
+worse, most software engineers write their tests&nbsp;<em>after</em> they write
+their code, like we did in our videos above, not&nbsp;<em>before</em>. Even so,
+TDD is a valuable tool to explore: trying it in one of your own projects
+can be an enlightening experience and improve your coding of tests in
+general.</p>
+</div>
+<div class="section" id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<p>&nbsp;Brian Kernighan, computer science, and co-author of the famed <a class="reference external" href="https://en.wikipedia.org/wiki/The_C_Programming_Language">K&amp;R *C
+Programming
+Language*</a>
+wrote that, “Controlling complexity is the essence of computer
+programming.”</p>
+<p>Today, you might be focused on the&nbsp;<em>syntax</em> of computer programming:
+how to turn individual bits of logic into control statements in the
+Python language. And you might be focused on how to build those
+statements up into programs of a few hundred lines of code.</p>
+<p>With practice, you’ll soon become comfortable with the line-by-line and
+method-by-method of constructing Python programming. You’ll encounter
+the challenge of maintaining and contributing to large, old code bases.
+In this lesson, we introduced you to&nbsp;<em>some</em> of the tools that
+engineers use to manage the complexity of large software projects.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="99_assignment.html" class="btn btn-neutral float-right" title="Lesson 1 : Assignment" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="01_lesson-01-introduction.html" class="btn btn-neutral" title="Lesson 01 Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, University of Washington, Christopher Barker, Luis Diego Conejo, Andy Miles, Rick Riehle, Joseph Schilz. Creative Commons Attribution-ShareAlike 3.0 license
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

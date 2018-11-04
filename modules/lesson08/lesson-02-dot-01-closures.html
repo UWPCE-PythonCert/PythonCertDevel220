@@ -1,0 +1,271 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Lesson 02.01 Closures &mdash; PythonCert220 2.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PythonCert220
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Exercise notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/index.html">Exercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../supplemental/index.html">Supporting materials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">External links</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PythonCert220</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Lesson 02.01 Closures</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/modules/lesson08/lesson-02-dot-01-closures.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="lesson-02-01-closures">
+<h1>Lesson 02.01 Closures<a class="headerlink" href="#lesson-02-01-closures" title="Permalink to this headline">¶</a></h1>
+<p>{{VIDEO HERE}}</p>
+<div id="menuheading"><p class="cah2 rubric" id="closures">Closures</p>
+<div style="padding-left: 30px;" role="navigation"><p>The venerable master Qc Na was walking with his student, Anton. Hoping
+to prompt the master into a discussion, Anton said “Master, I have heard
+that objects (and classes) are a very good thing - is this true?” Qc Na
+looked pityingly at his student and replied, “Foolish pupil - objects
+are merely a poor man’s closures.”*
+Chastised, Anton took his leave from his master and returned to his
+cell, intent on studying closures. He carefully read the entire “Lambda:
+The Ultimate…” series of papers and its cousins, and implemented a
+small Scheme interpreter with a closure-based object system. He learned
+much, and looked forward to informing his master of his progress.*
+On his next walk with Qc Na, Anton attempted to impress his master by
+saying “Master, I have diligently studied the matter, and now understand
+that objects are truly a poor man’s closures.” Qc Na responded by
+hitting Anton with his stick, saying “When will you learn? Closures are
+a poor man’s object.” At that moment, Anton became enlightened.</p>
+</div><p>From: <a class="reference external" href="http://wiki.c2.com/?ClosuresAndObjectsAreEquivalent">http://wiki.c2.com/?ClosuresAndObjectsAreEquivalent</a></p>
+<p>What exactly are Closures, these mysterious things that offer
+programming enlightenment? Let’s continue to compare and contrast
+closures with objects.</p>
+<ul class="simple">
+<li>Objects have methods.</li>
+<li>Closures *are* methods — they are defined and behave like
+functions, but like object methods they carry internal state and take
+it into account when returning results.</li>
+<li>Objects can, and generally do, carry mutable state.</li>
+<li>Closures can, and often do, carry mutable state.</li>
+<li>Objects control access to their attributes — their internal state
+— through Properties and Python’s lexical scoping rules. By default
+however object attributes are externally accessible.</li>
+<li>Closures by nature tend to close around their internal state and
+thereby prevent external access, thus in terms of access to internal
+state, internal attributes, this is the opposite of the default
+behavior of an object. In accordance with Python’s Consenting Adults
+policy a closure’s internal state is still accessible via its
+__closure__() dunder, but this violates the spirit of a closure
+— so do so at your own risk.</li>
+</ul>
+<p>Thus, objects (or classes) and closures are similar, but different.</p>
+<p>This is the general form of a closure:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">closure</span><span class="p">(</span><span class="n">internal_state</span><span class="p">):</span>  <span class="c1"># line 1</span>
+    <span class="k">def</span> <span class="nf">return_function</span><span class="p">(</span><span class="n">arguments</span><span class="p">):</span>  <span class="c1"># line 2</span>
+        <span class="k">return</span> <span class="n">internal_state</span> <span class="n">combined</span> <span class="k">with</span> <span class="n">arguments</span>  <span class="c1"># line 3</span>
+    <span class="k">return</span> <span class="n">return_function</span>  <span class="c1"># line 4</span>
+</pre></div>
+</div>
+<p>Let’s unpack that line by line.</p>
+<ol class="arabic simple">
+<li>The closure is defined like any other function with a name and
+arguments. In this case the name of the function is closure and its
+arguments are internal_state.</li>
+<li>Inside the closure another function is defined. It too takes
+arguments. In this case its name is return_function, because <em>this
+internally defined function itself will be returned by the closure</em>.</li>
+<li>When calculating a return value the internal function,
+return_function, uses both the internal state passed into the
+closure on line 1 when the closure was first defined, and also the
+arguments that will be passed into it later when it is used as a
+stand-alone function.</li>
+<li>The closure uses the <em>internally defined</em> function, return_function,
+for its return value. &nbsp;Thus, just as a class is a template or factory
+for creating stateful objects, a closure is a template or factory for
+creating stateful functions, that is, stand-alone methods.</li>
+</ol>
+</div></div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, University of Washington, Christopher Barker, Luis Diego Conejo, Andy Miles, Rick Riehle, Joseph Schilz. Creative Commons Attribution-ShareAlike 3.0 license
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

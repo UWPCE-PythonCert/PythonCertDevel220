@@ -1,0 +1,317 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Lesson 03.03 Recursion &mdash; PythonCert220 2.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Lesson 9 : Assignment" href="99_assignment.html" />
+    <link rel="prev" title="Lesson 03.02 Context Managers" href="lesson-09-dot-02-context-managers.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PythonCert220
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Lesson content</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#py220-advanced-python-programming">Py220: Advanced Python Programming</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../lesson00/index.html">Lesson 0 : Preclass</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson01/index.html">Lesson 1 : Automated Testing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson02/index.html">Lesson 2 : Logging &amp; Debuging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson03/index.html">Lesson 3 : Relational databases</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson04/index.html">Lesson 4 : Functional Programming 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson05/index.html">Lesson 5 : Consuming APIs with NoSQL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson06/index.html">Lesson 6 : Profiling and performance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson07/index.html">Lesson 7 : Currency and async</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson08/index.html">Lesson 8 : Functional Programming 3</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Lesson 9 : Advanced Python language constructs</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="00_prerequisites.html">Python 220 Advanced Python Programming</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lesson-09-introduction.html">Lesson 03 Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lesson-09-dot-01-decorators.html">Lesson 03.01 Decorators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lesson-09-dot-02-context-managers.html">Lesson 03.02 Context Managers</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Lesson 03.03 Recursion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="99_assignment.html">Lesson 9 : Assignment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="office_hours1_recaps.html">Office Hours : Recaps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="office_hours2_all.html">Office Hours : This weeks’ content</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson10/index.html">Lesson 10 : Metaprogramming</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">External links</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PythonCert220</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Lesson content</a> &raquo;</li>
+        
+          <li><a href="index.html">Lesson 9 : Advanced Python language constructs</a> &raquo;</li>
+        
+      <li>Lesson 03.03 Recursion</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/modules/lesson09/lesson-09-dot-03-recursion.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="lesson-03-03-recursion">
+<h1>Lesson 03.03 Recursion<a class="headerlink" href="#lesson-03-03-recursion" title="Permalink to this headline">¶</a></h1>
+<p>{{VIDEO HERE}}</p>
+<p>Recursion is where a function or method calls itself, either directly or
+indirectly. When directly, the function simply calls itself from within
+itself. When indirectly, the more advanced scenario, it is called by
+some other function that it had already called; in other words, function
+a calls function b and then function b calls function a. In this
+tutorial we will look at the first case, direct recursive calls.</p>
+<p>Recursive algorithms naturally fit certain problems, particularly
+problems amenable to divide and conquer solutions. The general form is
+when a solution can be divided into an operation on the first member of
+a collection combined with the same operation on the remaining members
+of the collection.</p>
+<p>A key element to a recursive solution involves the specification of a
+termination condition. The algorithm needs to know when to end, when to
+stop calling itself. Typically this is when all of the members of the
+collection have been processed.</p>
+<div id="recursion-limitations" class="section"><p class="rubric" id="recursion-limitations">Recursion Limitations` &lt;#recursion-limitations&gt;`__</p>
+<p>Python is not ideally suited to recursive programming for a few key
+reasons.</p>
+<div id="mutable-data-structures" class="section"><p class="rubric" id="mutable-data-structures">Mutable Data Structures` &lt;#mutable-data-structures&gt;`__</p>
+<p>Python’s workhorse data structure is the list and recursive solutions on
+list-like sequences can be attractive. However, Python lists are mutable
+and when mutable data structures are passed as arguments to functions
+they can be changed, affecting their value both inside and outside of
+the called function. Clean and natural-looking recursive algorithms
+generally assume that values do not change between recursive calls and
+generally fail if they do. Attempts to avoid this problem, say by making
+copies of the mutable data structure to pass at each successive
+recursive call, can be expensive both computationally and in terms of
+memory consumption. Beware this scenario when designing and debugging
+recursive functions.</p>
+<p>An astute observer might point out that by storing information on the
+stack, in successive stack frames, we are storing state, and that this
+is counter to functional programming’s aversion to mutable state and its
+attraction to functional purity. Are we or are we not? The data stored
+on the stack during the execution of most recursive algorithms become
+the return values from and the arguments to successive function calls.
+This results in a natural composition of functions, but rather than the
+composition of different functions, for instance <code class="docutils literal notranslate"><span class="pre">g(f(x))</span></code> which is
+the way we normally think about functional composition, recursive
+algorithms represent the composition of a function with itself:
+<code class="docutils literal notranslate"><span class="pre">f(f(x))</span></code>. Provided we are using immutable data structures in our
+calls, or provided we are careful not to mutate values between
+successive recursive calls, recursion should work.</p>
+</div><div id="stackframe-limits" class="section"><p class="rubric" id="stackframe-limits">Stackframe Limits` &lt;#stackframe-limits&gt;`__</p>
+<p>The Python interpreter by default has its stackframe limit set to 1000.
+This value can be changed at runtime, but if you find you have large
+data sets to process you may need to consider a non-recursive strategy.
+To increase the number of stack frames use sys.setrecursionlimit as
+follows:</p>
+<div class="highlight-python3"><div class="highlight"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">setrecursionlimit</span><span class="p">(</span><span class="mi">5000</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></div></div><div id="lack-of-tail-call-optimization-or-elimination"
+class="section"><p class="rubric" id="lack-of-tail-call-optimization-or-elimination">Lack of Tail Call Optimization or
+Elimination` &lt;#lack-of-tail-call-optimization-or-elimination&gt;`__</p>
+<p>Where Python sets a hard limit on the number of recursive calls a
+function can make, the interpreters or run-time engines of some other
+languages perform a technique called tail call optimization or tail call
+elimination. Python’s strategy in this context is to keep stack frames
+intact and unadulterated, which facilitates debugging: recursive stack
+traces still look like normal Python stack traces.</p>
+</div></div><div id="summary" class="section"><p class="rubric" id="summary">Summary` &lt;#summary&gt;`__</p>
+<p>Recursion is generally considered a functional programming technique
+partly because it grew up in functional programming languages such as
+Lisp and Scheme, yet also because it tends to satisfy the functional
+objective of avoiding state and thus the mapping of one set of inputs to
+a single, determinate output. It is a natural way to express many core
+algorithms having to do with sequences and tree structures, both of
+which pervade programming. It has its limitations in Python, but is
+worth understanding and using nonetheless.</p>
+</div></div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="99_assignment.html" class="btn btn-neutral float-right" title="Lesson 9 : Assignment" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="lesson-09-dot-02-context-managers.html" class="btn btn-neutral" title="Lesson 03.02 Context Managers" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, University of Washington, Christopher Barker, Luis Diego Conejo, Andy Miles, Rick Riehle, Joseph Schilz. Creative Commons Attribution-ShareAlike 3.0 license
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

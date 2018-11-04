@@ -1,0 +1,911 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Lesson 08 Content &mdash; PythonCert220 2.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PythonCert220
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Exercise notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/index.html">Exercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../supplemental/index.html">Supporting materials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">External links</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PythonCert220</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Lesson 08 Content</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/modules/lesson05/lesson-08-content.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="lesson-08-content">
+<h1>Lesson 08 Content<a class="headerlink" href="#lesson-08-content" title="Permalink to this headline">¶</a></h1>
+<div id="menuheading"><p class="cah2 rubric" id="nosql-databases">NOSQL databases</p>
+<div id="navbar" class="caNav grid-row around-md clearunderlinestyle"
+role="navigation"><p><a class="reference external" href="%24WIKI_REFERENCE%24/pages/lesson-08-introduction">Introduction</a> |
+<a class="reference external" href="%24WIKI_REFERENCE%24/pages/lesson-08-content">Content</a> |
+<a class="reference external" href="%24CANVAS_OBJECT_REFERENCE%24/assignments/ibe91f0cc09bbecc290b2f8a417d1cf9d">Quiz</a>&nbsp;|
+<a class="reference external" href="%24CANVAS_OBJECT_REFERENCE%24/assignments/i85a67f5992214211e1422f618383b5da">Activity</a>
+|
+<a class="reference external" href="%24CANVAS_OBJECT_REFERENCE%24/assignments/i10247fb9255383751f912e986d6fd289">Assignment</a>
+| <a class="reference external" href="%24CANVAS_OBJECT_REFERENCE%24/discussion_topics/ie7fce6e6c072d03b675b6796a45e3c25">Code
+Talk</a></p>
+</div></div><div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>Relational databases remain the type of database you are most likely to
+encounter as a Python developer, at least for the time being. But over
+the last few years, in all applications, data volumes have increased to
+previously unheard of proportions. Distributed systems have become the
+norm. And the pace of business change has increased, causing the need
+for software development pace to continue to accelerate.</p>
+<p>In this lesson we are going to look at some alternatives to the RDBMS.
+We are going to learn how to use them with Python, and we are also going
+to consider where these alternatives are most suited. However, we are
+just scratching the surface here. There will be much left to learn when
+we are done.</p>
+<p>We’ll start by considering the characteristics of databases. And then
+we’ll move on to look at how the evolution of the use of hardware and
+software enables new techniques. Next, we examine database products that
+exploit these new techniques. And we’ll learn how to use them from
+Python. And along the way, we’ll also show how you can avoid a database
+all together for simple data management scenarios.</p>
+<p>So lets get started!</p>
+</div>
+<div class="section" id="nosql-why">
+<h2>Nosql - Why?<a class="headerlink" href="#nosql-why" title="Permalink to this headline">¶</a></h2>
+<p>One of the main weaknesses of the RDBMS is that it does not usually
+perform well when data is distributed across multiple locations.
+Oversimplifying a bit, the RDBMS is essentially a single server-based
+data storage device, and although it can cope with multiple locations
+things get awkward quickly.</p>
+<p>To address this, we need to look at scaling. Scaling refers to adapting
+technology to deal with reducing, or more usually, increasing processing
+volumes.</p>
+<p>Traditionally in technology projects we have scaled vertically; that is,
+by continually replacing servers with other increasingly powerful
+servers. However, that is expensive, wasteful and inflexible, as much
+financial and implementation planning is needed, and we usually have to
+over-specify to allow for growth. Nosql databases allow horizontal
+scaling, which means that when more capacity is needed, you just add
+another server. There can be many, cheaper servers that can support
+massive work volumes across widely dispersed geographic locations. And
+it is no coincidence that this model is the way that the cloud works.</p>
+<p>The RDBMS is less than ideal for horizontal scaling. Although, it must
+be said, before moving away from the RDBMS there should be at least one
+good reason to do so. For many or even most systems the RDBMS is still
+perfectly suitable.</p>
+<p>Nosql databases are much better at horizontal scaling. These types of
+database are called nosql databases because originally (and even now)
+they did not use SQL for data definition and management. However, it’s
+hard to define something by saying what it isn’t! So now nosql is
+starting to mean “Not Only SQL”. That is because some of the databases
+can use SQL, but have other means for data definition and management
+too.</p>
+<p>There are tradeoffs though, and while this gets complex and is beyond
+this class, you can read more at the links using the links identified
+later in this lesson</p>
+<p>Next we’ll look at an overview of some representative types of nosql
+database.</p>
+</div>
+<div class="section" id="nosql-databases-tradeoffs">
+<h2>NOSQL Databases: Tradeoffs<a class="headerlink" href="#nosql-databases-tradeoffs" title="Permalink to this headline">¶</a></h2>
+<p>{{VIDEO HERE}}</p>
+<div class="section" id="nosql-database-types">
+<h3>Nosql database types<a class="headerlink" href="#nosql-database-types" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Database</td>
+<td>Strengths</td>
+<td>Weaknesses</td>
+<td>Good uses</td>
+</tr>
+<tr class="row-even"><td><p class="first">Mongodb :</p>
+<p class="last">Document database.</p>
+</td>
+<td><p class="first">Easy to scale</p>
+<p>High availability</p>
+<p>Flexible data
+model, easy to
+program</p>
+<p>Excellent query
+capabilities</p>
+<p class="last">Performs
+exceptionally well
+with the right
+data (that is,
+where there are
+not lots of
+relationships)</p>
+</td>
+<td><p class="first">No built in
+transaction
+support: requires
+manual effort</p>
+<p class="last">Not good for
+modeling data with
+lots of
+relationships.</p>
+</td>
+<td><p class="first">Web applications,
+general business
+applications where
+query flexibility
+is important, and
+where data
+definition need to
+evolve.</p>
+<p class="last">Applications that
+may grow rapidly -
+horizontal scaling
+works very well.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first">Redis :</p>
+<p class="last">Data structure
+server, message
+queuing, caching</p>
+</td>
+<td><p class="first">Rapid access where
+data size can be
+predetermined (all
+data held in
+memory).</p>
+<p>Realtime
+applications -
+“instant” access
+to data by its
+key.</p>
+<p>Easily store sets
+and lists.</p>
+<p class="last">High availability</p>
+</td>
+<td><p class="first">Querying</p>
+<p>All data needs to
+fit in RAM</p>
+<p class="last">Security very
+basic</p>
+</td>
+<td><p class="first">Look up data
+(reference data).</p>
+<p>Caching.</p>
+<p class="last">Very fast access
+to data - real
+time apps</p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="first">Neo4j :</p>
+<p class="last">Graph database</p>
+</td>
+<td><p class="first">Powerful querying</p>
+<p>Very fast</p>
+<p>Flexible data
+structures,
+handles
+complexity.</p>
+<p class="last">Fully ACID
+compliant
+(protects data
+quality and
+integrity)</p>
+</td>
+<td><p class="first">Scaling can be a
+problem in certain
+situations (very
+high end).</p>
+<p class="last">Doesn’t offer an
+advantage if data
+structure and
+relationships are
+simple.</p>
+</td>
+<td><p class="first">Applications that
+emphasize
+maintaining and
+tracking complex
+relationships
+between data, such
+as master data
+management, and
+analyzing business
+events.</p>
+<p class="last">Investigative
+applications
+(stock trades).</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line">So, that’s a quick overview of these databases. Next, we are going to
+prepare to run Python code against these databases.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+<div class="section" id="preparation">
+<h2>Preparation<a class="headerlink" href="#preparation" title="Permalink to this headline">¶</a></h2>
+<p>In this part of the lesson we are going to walk through setting up
+security to ensure our databases are protected from unauthorized access.</p>
+</div>
+<div class="section" id="security-setup">
+<h2>Security Setup<a class="headerlink" href="#security-setup" title="Permalink to this headline">¶</a></h2>
+<p>{{VIDEO HERE}}</p>
+<p>Reminder: The databases we will be using require secure access; that is,
+entry of a user name and password. Storing these details for use in
+Python code can present security problems if we don’t keep at least our
+passwords safe from unwanted viewing.</p>
+<p>If we embed our password in our Python code, and we then push that code
+to Github, we will have compromised out security, since the password
+will be available for anyone to see.</p>
+<p>We will address this by storing the password in a file that we place in
+a directory which we will add to our .gitignore file. We will then read
+that file from within our Python program, get the password and use it to
+access the database. As long as the file is not checked in to Github,
+all is well and our database is safe.</p>
+<p><em>NOTE: this still puts your password in plain text on your computer! So
+not really secure for really critical use!</em></p>
+<p>Here’s how we do this:</p>
+<p>Create a new local project for each database. Then, follow these steps
+for each repository:</p>
+<p>First, edit your .gitignore file and add the following 2 lines at the
+end of the file, exactly as shown:</p>
+<div
+style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># secrets</span>
+<span class="o">.</span><span class="n">config</span><span class="o">/</span>
+</pre></div>
+</div>
+</div><div class="line-block">
+<div class="line">Now, in the parent directory of your local project, make a new
+directory called “.config”. Note the leading period, and don’t enter
+the quotes.</div>
+<div class="line"><br /></div>
+</div>
+<p>In the newly create .config directory create a new file called “config”.
+Note no leading period. Again, don’t enter the quotes.</p>
+<p>Edit the config file using your preferred editor, creating lines as
+follows:</p>
+<div
+style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">configuration</span><span class="p">]</span>
+<span class="n">user</span> <span class="o">=</span>
+<span class="n">pw</span> <span class="o">=</span>
+<span class="n">connect</span> <span class="o">=</span>
+</pre></div>
+</div>
+</div><div class="line-block">
+<div class="line">At the end of the line containing user = enter a space after the =,
+and then a user name (for now just enter any name. When you sign up
+for each database you will enter the correct name).</div>
+<div class="line"><br /></div>
+</div>
+<p>It will look something like this:</p>
+<div
+style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">user</span> <span class="o">=</span> <span class="n">andy</span>
+</pre></div>
+</div>
+</div><div class="line-block">
+<div class="line">Now, enter a password as above, remembering the correct one will be
+entered after database signup. Also, leave connect blank after the =.
+Save the file.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line">Your user name and password are now safely store where Python can
+access them. The .gitignore change will prevent the .config files from
+being pushed to github.</div>
+<div class="line"><br /></div>
+</div>
+<div class="section" id="signup">
+<h3>Signup<a class="headerlink" href="#signup" title="Permalink to this headline">¶</a></h3>
+<p>Our next step is to signup for the database services we are going to
+use. The PowerPoint file used in the video is included below so you can
+work along without the video&nbsp;after watching.</p>
+<p>{{VIDEO HERE}}</p>
+<p>Here is the
+<a class="reference external" href="%24IMS-CC-FILEBASE%24/signup.pptx?canvas_download=1&amp;canvas_qs_download_frd=1">PowerPoint</a>.
+It starts on the third slide.</p>
+<p>Now we are all setup, and can move on to Python development with the
+databases.</p>
+</div>
+<div class="section" id="nosql-examples-with-python">
+<h3>nosql examples with Python<a class="headerlink" href="#nosql-examples-with-python" title="Permalink to this headline">¶</a></h3>
+<p>We will get into more detail as we look at the activities in this class,
+and the assignments too. But for now let’s look at some simple
+illustrations how of how Python works with the databases we have setup.
+For now you can just follow along with the code below.</p>
+</div>
+<div class="section" id="mongodb">
+<h3>mongodb<a class="headerlink" href="#mongodb" title="Permalink to this headline">¶</a></h3>
+<p>For this application we are going to use the example of a furniture
+rental business. We will use mongodb to manage product data. Let’s take
+a look at part of this program, which fully annotated with log
+statements:</p>
+<div
+style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Mongodb #1</span>
+<span class="sd">    test and learn mongodb</span>
+<span class="sd">    for this to work in macos you must run from bash:</span>
+<span class="sd">        open &quot;/Applications/Python 3.6/Install Certificates.command&quot;</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="c1"># code intentionally omitted - see git for complete module</span>
+
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Setup the connection to mongodb&#39;</span><span class="p">)</span>
+    <span class="k">with</span> <span class="n">src</span><span class="o">.</span><span class="n">login_database</span><span class="o">.</span><span class="n">login_mongodb_cloud</span><span class="p">()</span> <span class="k">as</span> <span class="n">client</span><span class="p">:</span>
+
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;We are going to use a database called dev&#39;</span><span class="p">)</span>
+        <span class="n">db</span> <span class="o">=</span> <span class="n">client</span><span class="p">[</span><span class="s1">&#39;dev&#39;</span><span class="p">]</span>
+
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;And in that database create a collection called furniture&#39;</span><span class="p">)</span>
+
+        <span class="n">furniture</span> <span class="o">=</span> <span class="n">db</span><span class="p">[</span><span class="s1">&#39;furniture&#39;</span><span class="p">]</span>
+
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Now we add data from the dictionary&#39;</span><span class="p">)</span>
+        <span class="n">results</span> <span class="o">=</span> <span class="n">furniture</span><span class="o">.</span><span class="n">insert_many</span><span class="p">([</span>
+        <span class="p">{</span>
+            <span class="s1">&#39;product&#39;</span><span class="p">:</span> <span class="s1">&#39;Red couch&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;in_stock_quantity&#39;</span><span class="p">:</span> <span class="mi">10</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s1">&#39;product&#39;</span><span class="p">:</span> <span class="s1">&#39;Blue couch&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;in_stock_quantity&#39;</span><span class="p">:</span> <span class="mi">3</span>
+        <span class="p">}])</span>
+
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Find the products that are described as plastic&#39;</span><span class="p">)</span>
+        <span class="n">query</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;product&#39;</span><span class="p">:</span> <span class="s1">&#39;Red couch&#39;</span><span class="p">}</span>
+        <span class="n">results</span> <span class="o">=</span> <span class="n">furniture</span><span class="o">.</span><span class="n">find_one</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</div><p>Notice how we used a dictionary to represent the data in Python, and
+passed the dictionary to insert_many() to store the data in mongodb.</p>
+<p>What about the schema? In this case there isn’t really a concept of a
+database schema. This makes things much more straightforward for the
+programmer than when using SQL in a relational database. The data items
+are defined in Python, and while some (mainly RDBMS die-hards) may say
+this is a problem, it does mean that there is no need to repeat data
+definition in the program and database.</p>
+<p>You should also study the simple query above, where we use find_one()
+to retrieve an item of furniture based on a query. Notice how a
+dictionary defines this most simple of queries.</p>
+<p>We’ll now study how we connect to mongodb. Here is the function that
+gets us wired up, which we call in the code above:</p>
+<div
+style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">login_mongodb_cloud</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        connect to mongodb and login</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Here is where we use the connect to mongodb.&#39;</span><span class="p">)</span>
+    <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Note use of f string to embed the user &amp; password (from the tuple).&#39;</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">config</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">config_file</span><span class="p">)</span>
+        <span class="n">user</span> <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="s2">&quot;mongodb_cloud&quot;</span><span class="p">][</span><span class="s2">&quot;user&quot;</span><span class="p">]</span>
+        <span class="n">pw</span> <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="s2">&quot;mongodb_cloud&quot;</span><span class="p">][</span><span class="s2">&quot;pw&quot;</span><span class="p">]</span>
+
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;error: </span><span class="si">{e}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+    <span class="n">client</span> <span class="o">=</span> <span class="n">pymongo</span><span class="o">.</span><span class="n">MongoClient</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;mongodb://</span><span class="si">{user}</span><span class="s1">:</span><span class="si">{pw}</span><span class="s1">&#39;</span>
+                                 <span class="s1">&#39;@cluster0-shard-00-00-wphqo.mongodb.net:27017,&#39;</span>
+                                 <span class="s1">&#39;cluster0-shard-00-01-wphqo.mongodb.net:27017,&#39;</span>
+                                 <span class="s1">&#39;cluster0-shard-00-02-wphqo.mongodb.net:27017/test&#39;</span>
+                                 <span class="s1">&#39;?ssl=true&amp;replicaSet=Cluster0-shard-0&amp;authSource=admin&#39;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">client</span>
+</pre></div>
+</div>
+</div><p>&nbsp;Notice how we read the config file, and then use the information we
+obtained to login.</p>
+</div>
+<div class="section" id="more-about-mongodb">
+<h3>More about mongodb<a class="headerlink" href="#more-about-mongodb" title="Permalink to this headline">¶</a></h3>
+<p>Here’s some more information you can read to learn more before we start
+the mongodb activity.</p>
+<p><a class="reference external" href="https://www.mongodb.com/blog/post/getting-started-with-python-and-mongodb">https://www.mongodb.com/blog/post/getting-started-with-python-and-mongodb</a></p>
+</div>
+<div class="section" id="redis">
+<h3>Redis<a class="headerlink" href="#redis" title="Permalink to this headline">¶</a></h3>
+<p>We are now going to review&nbsp;a Python program that will create and read
+some data into our Redis database. We are going to cache some product
+data from the furniture rentals example so that we can obtain
+lightening&nbsp;performance! Let’s take a look at this program:</p>
+<div
+style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    demonstrate use of Redis</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="c1"># code intentionally omitted - see git for complete module</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Step 1: connect to Redis&#39;</span><span class="p">)</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">src</span><span class="o">.</span><span class="n">login_database</span><span class="o">.</span><span class="n">login_redis_cloud</span><span class="p">()</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Step 2: cache some data in Redis&#39;</span><span class="p">)</span>
+        <span class="n">r</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;andy&#39;</span><span class="p">,</span> <span class="s1">&#39;andy@somewhere.com&#39;</span><span class="p">)</span>
+
+        <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Step 2: now I can read it&#39;</span><span class="p">)</span>
+        <span class="n">email</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;andy&#39;</span><span class="p">)</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;But I must know the key&#39;</span><span class="p">)</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;The results of r.get: </span><span class="si">{email}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Redis error: </span><span class="si">{e}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div><p>This is a partial and trivial Redis program that shows how we can
+populate and then read from a Redis cache. Notice it is essential to
+write and read using a key.</p>
+<p>And here is how we connect to Redis:</p>
+<div
+style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">login_redis_cloud</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        connect to redis and login</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">config</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">config_file</span><span class="p">)</span>
+        <span class="n">host</span> <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="s2">&quot;redis_cloud&quot;</span><span class="p">][</span><span class="s2">&quot;host&quot;</span><span class="p">]</span>
+        <span class="n">port</span> <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="s2">&quot;redis_cloud&quot;</span><span class="p">][</span><span class="s2">&quot;port&quot;</span><span class="p">]</span>
+        <span class="n">pw</span> <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="s2">&quot;redis_cloud&quot;</span><span class="p">][</span><span class="s2">&quot;pw&quot;</span><span class="p">]</span>
+
+
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;error: </span><span class="si">{e}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+    <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Here is where we use the connect to redis.&#39;</span><span class="p">)</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">redis</span><span class="o">.</span><span class="n">StrictRedis</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="n">port</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="n">pw</span><span class="p">,</span> <span class="n">decode_responses</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;error: </span><span class="si">{e}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">r</span>
+</pre></div>
+</div>
+</div></div>
+<div class="section" id="more-about-redis">
+<h3>More about&nbsp;Redis<a class="headerlink" href="#more-about-redis" title="Permalink to this headline">¶</a></h3>
+<p>Here’s some more information you can read to learn more before we start
+the Redis&nbsp;activity.</p>
+</div>
+</div>
+<div class="section" id="neo4j">
+<h2>Neo4J<a class="headerlink" href="#neo4j" title="Permalink to this headline">¶</a></h2>
+<p>In computing, a graph database is a database that uses graph concepts
+and theory from math to&nbsp;represent and store data.</p>
+<p>This is in contrast to RDBMSs, where the data are stored in individual
+tables, with the&nbsp;relationships between the tables maintained via primary
+and foreign keys, and the actual relationships determined on the fly by
+searching multiple tables during “join” queries. RDBMSs are well
+optimized for these kinds of queries, but Graph Databases can be much
+more efficient for data retrieval when the records have complex
+relationships.</p>
+<p>For more detail see:</p>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Graph_database">https://en.wikipedia.org/wiki/Graph_database</a></p>
+<p>We are now going to review&nbsp;a Python program that will create and read
+some data into our Neo4J&nbsp;database. For this application we are going to
+continue to use the example of a furniture rental business. We will use
+Neo4J&nbsp;to manage product data and customer. Let’s take a look at this
+partial program, which fully annotated with log statements:</p>
+<div
+style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    neo4j example</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="c1"># code intentionally omitted - see git for complete module</span>
+
+
+    <span class="k">with</span> <span class="n">driver</span><span class="o">.</span><span class="n">session</span><span class="p">()</span> <span class="k">as</span> <span class="n">session</span><span class="p">:</span>
+
+        <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Adding a few Person nodes&#39;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">first</span><span class="p">,</span> <span class="n">last</span> <span class="ow">in</span> <span class="p">[(</span><span class="s1">&#39;Bob&#39;</span><span class="p">,</span> <span class="s1">&#39;Jones&#39;</span><span class="p">),</span>
+                            <span class="p">(</span><span class="s1">&#39;Nancy&#39;</span><span class="p">,</span> <span class="s1">&#39;Cooper&#39;</span><span class="p">),</span>
+                            <span class="p">(</span><span class="s1">&#39;Alice&#39;</span><span class="p">,</span> <span class="s1">&#39;Cooper&#39;</span><span class="p">),</span>
+                            <span class="p">(</span><span class="s1">&#39;Fred&#39;</span><span class="p">,</span> <span class="s1">&#39;Barnes&#39;</span><span class="p">),</span>
+                            <span class="p">(</span><span class="s1">&#39;Mary&#39;</span><span class="p">,</span> <span class="s1">&#39;Evans&#39;</span><span class="p">),</span>
+                            <span class="p">(</span><span class="s1">&#39;Marie&#39;</span><span class="p">,</span> <span class="s1">&#39;Curie&#39;</span><span class="p">),</span>
+                            <span class="p">]:</span>
+            <span class="n">cyph</span> <span class="o">=</span> <span class="s2">&quot;CREATE (n:Person {first_name:&#39;</span><span class="si">%s</span><span class="s2">&#39;, last_name: &#39;</span><span class="si">%s</span><span class="s2">&#39;})&quot;</span> <span class="o">%</span> <span class="p">(</span>
+                <span class="n">first</span><span class="p">,</span> <span class="n">last</span><span class="p">)</span>
+            <span class="n">session</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">cyph</span><span class="p">)</span>
+
+        <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Get all of people in the DB:&quot;</span><span class="p">)</span>
+        <span class="n">cyph</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;MATCH (p:Person)</span>
+<span class="s2">                  RETURN p.first_name as first_name, p.last_name as last_name</span>
+<span class="s2">                &quot;&quot;&quot;</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">cyph</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;People in database:&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">record</span> <span class="ow">in</span> <span class="n">result</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">record</span><span class="p">[</span><span class="s1">&#39;first_name&#39;</span><span class="p">],</span> <span class="n">record</span><span class="p">[</span><span class="s1">&#39;last_name&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div><p>` &lt;<a class="reference external" href="https://en.wikipedia.org/wiki/Graph_database">https://en.wikipedia.org/wiki/Graph_database</a>&gt;`__</p>
+<p>Here we add some data, and use the Neo4J&nbsp;cyph language to create and
+retrieve our Person records.</p>
+<p>And here is how we connect to Neo4J:</p>
+<div
+style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">login_neo4j_cloud</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        connect to neo4j and login</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Here is where we use the connect to neo4j.&#39;</span><span class="p">)</span>
+    <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+    <span class="n">config</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">config_file</span><span class="p">)</span>
+
+    <span class="n">graphenedb_user</span> <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="s2">&quot;neo4j_cloud&quot;</span><span class="p">][</span><span class="s2">&quot;user&quot;</span><span class="p">]</span>
+    <span class="n">graphenedb_pass</span> <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="s2">&quot;neo4j_cloud&quot;</span><span class="p">][</span><span class="s2">&quot;pw&quot;</span><span class="p">]</span>
+    <span class="n">graphenedb_url</span> <span class="o">=</span> <span class="s1">&#39;bolt://hobby-opmhmhgpkdehgbkejbochpal.dbs.graphenedb.com:24786&#39;</span>
+    <span class="n">driver</span> <span class="o">=</span> <span class="n">GraphDatabase</span><span class="o">.</span><span class="n">driver</span><span class="p">(</span><span class="n">graphenedb_url</span><span class="p">,</span>
+                                  <span class="n">auth</span><span class="o">=</span><span class="n">basic_auth</span><span class="p">(</span><span class="n">graphenedb_user</span><span class="p">,</span> <span class="n">graphenedb_pass</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="n">driver</span>
+</pre></div>
+</div>
+</div><div class="section" id="more-about-neo4j">
+<h3>More about&nbsp;Neo4J<a class="headerlink" href="#more-about-neo4j" title="Permalink to this headline">¶</a></h3>
+<p>Here’s some more information you can read to learn more before we start
+the Neo4J&nbsp;activity.</p>
+<p>For more details, here is a nice Python based tutorial about graph
+databases and neo4j (Talking About your Data Relationships):</p>
+<p><a class="reference external" href="https://medium.com/labcodes/graph-databases-talking-about-your-data-relationships-with-python-b438c689dc89">https://medium.com/labcodes/graph-databases-talking-about-your-data-relationships-with-python-b438c689dc89</a></p>
+<div class="line-block">
+<div class="line">And here is the documentation for the Python driver:</div>
+<div class="line"><br /></div>
+</div>
+<p><a class="reference external" href="https://neo4j.com/developer/python/">https://neo4j.com/developer/python/</a></p>
+<div class="line-block">
+<div class="line">There are a lot of other great docs and tutorial on the neo4j web site
+– well worth checking out if you want to really learn how to use it.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+<div class="section" id="persistence-and-serialization">
+<h2>Persistence and Serialization<a class="headerlink" href="#persistence-and-serialization" title="Permalink to this headline">¶</a></h2>
+<p>Beyond using databases there are various simple ways to store data in
+our Python programs. We refer to these as persistence and serialization,
+which are closely related.&nbsp;Serialization means taking a potentially
+complex data structure and converting it into a single string of
+bytes.&nbsp;Persistence is storing data simply in a way that it will persist
+beyond the run-time of your program.</p>
+<p>Serialization:
+<a class="reference external" href="https://en.wikipedia.org/wiki/Serializa_on%20">h</a><a class="reference external" href="https://en.wikipedia.org/wiki/Serializa_on%20">ttps://en.wikipedia.org/wiki/Serializa_on&nbsp;</a></p>
+<p>Persistance:&nbsp;<a class="reference external" href="https://en.wikipedia.org/wiki/Persistence_(computer_science">https://en.wikipedia.org/wiki/Persistence_(computer_science</a>)</p>
+<p>They are closely related, because most forms of persistent storage –
+simple text files, databases, etc, require that it be turned into a
+simple string of bytes first. After all, everything done with computers
+is ultimately a serial string of bytes. And&nbsp;serialization is also very
+useful for transmiting information between systems, such as
+over&nbsp;a&nbsp;network.</p>
+<div class="section" id="examples">
+<h3>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
+<p>We are going to illustrate persistence using Pickle, Shelve, CSV files
+and JSON.</p>
+<p>Pickle is a simple way to store and retrieve the&nbsp;contents of a&nbsp;Python
+object. Pickle serializes the data before writing it to disk, and
+deserializes it when reading from disk. Here is a good article that
+summarized Pickle:</p>
+<p><a class="reference external" href="https://pythontips.com/2013/08/02/what-is-pickle-in-python/">https://pythontips.com/2013/08/02/what-is-pickle-in-python/</a></p>
+<p>Shelve stores objects too, but the objects must be associated with a
+key. This kety is used to retrieve the shelved object. See:</p>
+<p><a class="reference external" href="https://pythontips.com/2013/08/02/what-is-pickle-in-python/">https://pythontips.com/2013/08/02/what-is-pickle-in-python/</a></p>
+<p>CSV, or comma separated files, are used for data interchange between a
+very wide range of software products, including most notably
+spreadsheets. There are many forms of CSV file, but all share the common
+property of using the comma to delimit field values, and end of line to
+separate records. See:</p>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Comma-separated_values">https://en.wikipedia.org/wiki/Comma-separated_values</a></p>
+<p>Finally, JSON files, which stands for javascript object notation, are
+used in many modern web applications. They are easier to read and write
+(both for humans and computers) than the interchange format they often
+replace, which is XML. See:</p>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/JSON">https://en.wikipedia.org/wiki/JSON</a></p>
+<p>Here is&nbsp;&nbsp;an example of a partial program that uses each of these:</p>
+<div
+style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">pickle etc</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="c1"># code intentionally omitted - see git for complete module</span>
+
+
+<span class="k">def</span> <span class="nf">run_example</span><span class="p">(</span><span class="n">furniture_items</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    various persistence and serialization scenarios</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">run_pickle</span><span class="p">():</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Write and read with pickle</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">====&quot;</span><span class="p">)</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Demonstrate persistence with pickle&#39;</span><span class="p">)</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Write a pickle file with the furniture data&#39;</span><span class="p">)</span>
+
+        <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">furniture_items</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;data/data.pkl&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">))</span>
+
+        <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Now read it back from the pickle file&#39;</span><span class="p">)</span>
+        <span class="n">read_data</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s1">&#39;data/data.pkl&#39;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">))</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Show that the write and read were successful&#39;</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">read_data</span> <span class="o">==</span> <span class="n">furniture_items</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;and print the data&quot;</span><span class="p">)</span>
+        <span class="n">pprint</span><span class="o">.</span><span class="n">pprint</span><span class="p">(</span><span class="n">read_data</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">run_shelve</span><span class="p">():</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        write and read with shelve</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">====&quot;</span><span class="p">)</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Demonstrate working with shelve&quot;</span><span class="p">)</span>
+        <span class="n">shelf_file</span> <span class="o">=</span> <span class="n">shelve</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;data/shelve.dat&#39;</span><span class="p">)</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;store data at key&quot;</span><span class="p">)</span>
+        <span class="n">shelf_file</span><span class="p">[</span><span class="s1">&#39;key&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">furniture_items</span>
+
+        <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Now retrieve a COPY of data at key&quot;</span><span class="p">)</span>
+        <span class="n">read_items</span> <span class="o">=</span> <span class="n">shelf_file</span><span class="p">[</span><span class="s1">&#39;key&#39;</span><span class="p">]</span>
+
+        <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Check it worked&quot;</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">read_items</span> <span class="o">==</span> <span class="n">furniture_items</span>
+
+        <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;And now print the copy&quot;</span><span class="p">)</span>
+        <span class="n">pprint</span><span class="o">.</span><span class="n">pprint</span><span class="p">(</span><span class="n">read_items</span><span class="p">)</span>
+
+        <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;delete data stored at key to cleanup and close&quot;</span><span class="p">)</span>
+        <span class="k">del</span> <span class="n">shelf_file</span><span class="p">[</span><span class="s1">&#39;key&#39;</span><span class="p">]</span>
+        <span class="n">shelf_file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">run_csv</span><span class="p">():</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        write and read a csv</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">====&quot;</span><span class="p">)</span>
+        <span class="n">peopledata</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="p">(</span><span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="s1">&#39;second guitar&#39;</span><span class="p">,</span> <span class="mf">117.45</span><span class="p">),</span>
+            <span class="p">(</span><span class="s1">&#39;Paul&#39;</span><span class="p">,</span> <span class="s1">&#39;bass&#39;</span><span class="p">,</span> <span class="mf">22.01</span><span class="p">),</span>
+            <span class="p">(</span><span class="s1">&#39;George&#39;</span><span class="p">,</span> <span class="s1">&#39;lead guitar&#39;</span><span class="p">,</span> <span class="mf">45.99</span><span class="p">),</span>
+            <span class="p">(</span><span class="s1">&#39;Ringo&#39;</span><span class="p">,</span> <span class="s1">&#39;drume&#39;</span><span class="p">,</span> <span class="mf">77.0</span><span class="p">),</span>
+            <span class="p">(</span><span class="s1">&#39;Roger&#39;</span><span class="p">,</span> <span class="s1">&#39;vocals&#39;</span><span class="p">,</span> <span class="mf">12.5</span><span class="p">),</span>
+            <span class="p">(</span><span class="s1">&#39;Keith&#39;</span><span class="p">,</span> <span class="s1">&#39;drums&#39;</span><span class="p">,</span> <span class="mf">6.25</span><span class="p">),</span>
+            <span class="p">(</span><span class="s1">&#39;Pete&#39;</span><span class="p">,</span> <span class="s1">&#39;guitar&#39;</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">),</span>
+            <span class="p">(</span><span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="s1">&#39;bass&#39;</span><span class="p">,</span> <span class="mf">89.71</span><span class="p">)</span>
+        <span class="p">]</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Write csv file&quot;</span><span class="p">)</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;data/rockstars.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">people</span><span class="p">:</span>
+            <span class="n">peoplewriter</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">people</span><span class="p">)</span>
+            <span class="n">peoplewriter</span><span class="o">.</span><span class="n">writerow</span><span class="p">(</span><span class="n">peopledata</span><span class="p">)</span>
+
+        <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Read csv file back&quot;</span><span class="p">)</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;data/rockstars.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">people</span><span class="p">:</span>
+            <span class="n">people_reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">people</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="n">quotechar</span><span class="o">=</span><span class="s1">&#39;&quot;&#39;</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">people_reader</span><span class="p">:</span>
+                <span class="n">pprint</span><span class="o">.</span><span class="n">pprint</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">run_json</span><span class="p">():</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">====&quot;</span><span class="p">)</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Look at working with json data&quot;</span><span class="p">)</span>
+        <span class="n">furniture</span> <span class="o">=</span> <span class="p">[{</span><span class="s1">&#39;product&#39;</span><span class="p">:</span> <span class="s1">&#39;Red couch&#39;</span><span class="p">,</span><span class="s1">&#39;description&#39;</span><span class="p">:</span> <span class="s1">&#39;Leather low back&#39;</span><span class="p">},</span>
+        <span class="p">{</span><span class="s1">&#39;product&#39;</span><span class="p">:</span> <span class="s1">&#39;Blue couch&#39;</span><span class="p">,</span><span class="s1">&#39;description&#39;</span><span class="p">:</span> <span class="s1">&#39;Cloth high back&#39;</span><span class="p">},</span>
+        <span class="p">{</span><span class="s1">&#39;product&#39;</span><span class="p">:</span> <span class="s1">&#39;Coffee table&#39;</span><span class="p">,</span><span class="s1">&#39;description&#39;</span><span class="p">:</span> <span class="s1">&#39;Plastic&#39;</span><span class="p">},</span>
+        <span class="p">{</span><span class="s1">&#39;product&#39;</span><span class="p">:</span> <span class="s1">&#39;Red couch&#39;</span><span class="p">,</span><span class="s1">&#39;description&#39;</span><span class="p">:</span> <span class="s1">&#39;Leather high back&#39;</span><span class="p">}]</span>
+
+        <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Return json string from an object&quot;</span><span class="p">)</span>
+        <span class="n">furniture_string</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">furniture</span><span class="p">)</span>
+
+        <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Print the json&quot;</span><span class="p">)</span>
+        <span class="n">pprint</span><span class="o">.</span><span class="n">pprint</span><span class="p">(</span><span class="n">furniture_string</span><span class="p">)</span>
+
+        <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Returns an object from a json string representation&quot;</span><span class="p">)</span>
+        <span class="n">furniture_object</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">furniture_string</span><span class="p">)</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;print the string&quot;</span><span class="p">)</span>
+        <span class="n">pprint</span><span class="o">.</span><span class="n">pprint</span><span class="p">(</span><span class="n">furniture_object</span><span class="p">)</span>
+
+    <span class="n">run_pickle</span><span class="p">()</span>
+    <span class="n">run_shelve</span><span class="p">()</span>
+    <span class="n">run_csv</span><span class="p">()</span>
+    <span class="n">run_json</span><span class="p">()</span>
+
+    <span class="k">return</span>
+</pre></div>
+</div>
+</div></div>
+<div class="section" id="conclusion">
+<h3>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h3>
+<p>{{VIDEO HERE}}</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, University of Washington, Christopher Barker, Luis Diego Conejo, Andy Miles, Rick Riehle, Joseph Schilz. Creative Commons Attribution-ShareAlike 3.0 license
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+Object Oriented Concepts
+========================
+
+What is OO?
+-----------
+Object orientation is a popular programming model that focuses on
+development of classes. Classes contain the logic and data of the
+application, which are the used in development by creating, or
+instantiating, objects from those classes.
+
+

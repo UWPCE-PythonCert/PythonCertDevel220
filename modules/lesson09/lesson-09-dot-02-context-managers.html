@@ -1,0 +1,483 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Lesson 03.02 Context Managers &mdash; PythonCert220 2.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Lesson 03.03 Recursion" href="lesson-09-dot-03-recursion.html" />
+    <link rel="prev" title="Lesson 03.01 Decorators" href="lesson-09-dot-01-decorators.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PythonCert220
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Lesson content</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#py220-advanced-python-programming">Py220: Advanced Python Programming</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../lesson00/index.html">Lesson 0 : Preclass</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson01/index.html">Lesson 1 : Automated Testing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson02/index.html">Lesson 2 : Logging &amp; Debuging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson03/index.html">Lesson 3 : Relational databases</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson04/index.html">Lesson 4 : Functional Programming 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson05/index.html">Lesson 5 : Consuming APIs with NoSQL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson06/index.html">Lesson 6 : Profiling and performance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson07/index.html">Lesson 7 : Currency and async</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson08/index.html">Lesson 8 : Functional Programming 3</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Lesson 9 : Advanced Python language constructs</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="00_prerequisites.html">Python 220 Advanced Python Programming</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lesson-09-introduction.html">Lesson 03 Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lesson-09-dot-01-decorators.html">Lesson 03.01 Decorators</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Lesson 03.02 Context Managers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lesson-09-dot-03-recursion.html">Lesson 03.03 Recursion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="99_assignment.html">Lesson 9 : Assignment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="office_hours1_recaps.html">Office Hours : Recaps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="office_hours2_all.html">Office Hours : This weeks’ content</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson10/index.html">Lesson 10 : Metaprogramming</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">External links</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PythonCert220</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Lesson content</a> &raquo;</li>
+        
+          <li><a href="index.html">Lesson 9 : Advanced Python language constructs</a> &raquo;</li>
+        
+      <li>Lesson 03.02 Context Managers</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/modules/lesson09/lesson-09-dot-02-context-managers.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="lesson-03-02-context-managers">
+<h1>Lesson 03.02 Context Managers<a class="headerlink" href="#lesson-03-02-context-managers" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="context-managers">
+<h2>Context Managers<a class="headerlink" href="#context-managers" title="Permalink to this headline">¶</a></h2>
+<p>You’ve seen the ‘with’ statement – probably when&nbsp;working with files.
+Now you’ll learn what that is all about. &nbsp;A large source of repetition
+in code deals with the handling of external&nbsp;resources. &nbsp;As an example,
+how many times do you think you might type something like the following
+code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">file_handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;filename.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">file_content</span> <span class="o">=</span> <span class="n">file_handle</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">file_handle</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="c1"># do some stuff with the contents</span>
+</pre></div>
+</div>
+<p>Not only is this a couple extra lines of code to write, it’s also prone
+to error. &nbsp;What happens if you forget to call close()? &nbsp;What happens if
+reading the file raises an exception? &nbsp;Perhaps you really should write
+it something more like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">file_handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+    <span class="n">file_content</span> <span class="o">=</span> <span class="n">file_handle</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="k">except</span> <span class="ne">IOError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The file couldn&#39;t be opened&quot;</span><span class="p">)</span>
+<span class="k">finally</span><span class="p">:</span>
+    <span class="n">file_handle</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>And that is getting ugly, and hard to get right.</p>
+<div class="section" id="handling-general-resources">
+<h3>Handling General Resources<a class="headerlink" href="#handling-general-resources" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">Leaving an open file handle laying around is bad enough. What if the
+resource&nbsp;is a network connection, or a database cursor? &nbsp;Starting in
+version 2.5, Python provides a structure for reducing the&nbsp;repetition
+needed to handle resources like this: context managers. &nbsp;Context
+managers&nbsp;encapsulate the setup, error handling, and teardown of
+resources in a&nbsp;few simple steps. &nbsp;The key is to use the ‘with’
+statement. &nbsp;Since the introduction of ‘with’ in Pep343 the above seven
+lines of defensive code have been replaced with this simple form:</div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;filename&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file_handle</span><span class="p">:</span>
+    <span class="n">file_content</span> <span class="o">=</span> <span class="n">file_handle</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="c1"># do something with file_content</span>
+</pre></div>
+</div>
+<p>The ‘open’ builtin is defined as a context manager. &nbsp;The resource it
+returns (file_handle) is automatically and reliably closed&nbsp;when the
+code block ends.</p>
+<p>At this point in Python history, many functions you might expect to
+behave this way do:</p>
+<div class="line-block">
+<div class="line">* open() works as a context manager.</div>
+<div class="line">* network connections via socket() do as well.</div>
+<div class="line">* most implementations of database wrappers can open connections or
+cursors as&nbsp;context managers.</div>
+</div>
+<p>But what if you are working with a library that doesn’t support
+this,&nbsp;urllib for instance? &nbsp;Close it automatically. &nbsp;There are a couple
+of ways you can go. &nbsp;If the resource in questions has a close() method,
+then you can simply use the closing context manager from contextlib to
+handle the issue:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">urllib</span> <span class="k">import</span> <span class="n">request</span>
+<span class="kn">from</span> <span class="nn">contextlib</span> <span class="k">import</span> <span class="n">closing</span>
+
+<span class="k">with</span> <span class="n">closing</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="s1">&#39;http://google.com&#39;</span><span class="p">))</span> <span class="k">as</span> <span class="n">web_connection</span><span class="p">:</span>
+    <span class="c1"># do something with the open resource</span>
+<span class="c1"># and by here, it will be closed automatically</span>
+</pre></div>
+</div>
+<p>But what if the thing doesn’t have a close() method, or you’re
+creating&nbsp;the thing and it shouldn’t have a close() method? &nbsp;Do it
+yourself. &nbsp;If you need to support resource management of some sort, you
+can write a context manager of your own with the&nbsp;context manager
+protocol. &nbsp;The interface is simple. It must be a class that implements
+two&nbsp;more of the nifty python special methods.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="fm">__enter__</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">Called when the with statement is run, it should return something to
+work with in the created context.</div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="fm">__exit__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">e_type</span><span class="p">,</span> <span class="n">e_val</span><span class="p">,</span> <span class="n">e_traceback</span><span class="p">):</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">Clean-up that needs to happen is implemented here. &nbsp;The arguments will
+be the exception raised in the context. &nbsp;If the exception will be
+handled here, return True. If not, return False. &nbsp;Let’s see this in
+action to get a sense of what happens. &nbsp;Consider this code:</div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Context</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    From Doug Hellmann, PyMOTW</span>
+<span class="sd">    https://pymotw.com/3/contextlib/#module-contextlib</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">handle_error</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;__init__(</span><span class="si">{}</span><span class="s1">)&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">handle_error</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">handle_error</span> <span class="o">=</span> <span class="n">handle_error</span>
+
+    <span class="k">def</span> <span class="nf">__enter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;__enter__()&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="k">def</span> <span class="nf">__exit__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exc_type</span><span class="p">,</span> <span class="n">exc_val</span><span class="p">,</span> <span class="n">exc_tb</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;__exit__(</span><span class="si">{}</span><span class="s1">, </span><span class="si">{}</span><span class="s1">, </span><span class="si">{}</span><span class="s1">)&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">exc_type</span><span class="p">,</span> <span class="n">exc_val</span><span class="p">,</span> <span class="n">exc_tb</span><span class="p">))</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">handle_error</span>
+</pre></div>
+</div>
+<p>This class doesn’t do much of anything, but playing with it can
+help&nbsp;clarify the order in which things happen:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>In []: %paste
+    In []: with Context(True) as foo:
+
+        ....: print(&#39;This is in the context&#39;)
+        ....: raise RuntimeError(&#39;this is the error message&#39;)
+
+## -- End pasted text --
+__init__(True)
+__enter__()
+This is in the context
+__exit__(&lt;class &#39;RuntimeError&#39;&gt;, this is the error message,
+    &lt;traceback object at 0x1047873c8&gt;)
+</pre></div>
+</div>
+<p>Because the __exit__ method returns True, the raised error is
+handled.</p>
+<p>What if we try with False?</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>In []: with Context(False) as foo:
+    ...: print(&quot;this is in the context&quot;)
+    ...: raise RuntimeError(&#39;this is the error message&#39;)
+    ...:
+__init__(False)
+__enter__()
+this is in the context
+__exit__(&lt;class &#39;RuntimeError&#39;&gt;, this is the error message, &lt;traceback object at 0x10349e888&gt;)
+---------------------------------------------------------------------------
+RuntimeError Traceback (most recent call last)
+&lt;ipython-input-3-8837b3d7f123&gt; in &lt;module&gt;()
+    1 with Context(False) as foo:
+    2 print(&quot;this is in the context&quot;)
+----&gt; 3 raise RuntimeError(&#39;this is the error message&#39;)
+
+RuntimeError: this is the error message
+</pre></div>
+</div>
+<p>So this time, the context manager did not catch the error – so it was
+raised the in the usual way. &nbsp;In real life, a context manager could have
+pretty much any error raised in its context. And the context manager
+will likely only be able to properly handle particular exceptions – so
+the __exit__ method takes all the information about the exception as
+parameters:</p>
+<p>&nbsp; &nbsp; def __exit__(self, exc_type, exc_val, exc_tb)</p>
+<p>&nbsp; &nbsp; exc_type: the type of the Exception</p>
+<p>&nbsp; &nbsp; exc_val: the value of the Exception</p>
+<p>&nbsp; &nbsp; exc_tb: the Exception Traceback object</p>
+<p>The type lets you check if this is a type you know how to handle:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">::</span>
+</pre></div>
+</div>
+<blockquote>
+<div><dl class="docutils">
+<dt>if exc_type is RuntimeError:</dt>
+<dd># Deal with it.</dd>
+</dl>
+</div></blockquote>
+<p>The value is the exception object itself and the traceback is a full
+traceback object. Traceback objects hold all the information about the
+context in which and error occurred. It’s pretty advanced stuff, so you
+can mostly ignore it, but if you want to know more, there are tools for
+working with them in the traceback module.</p>
+<p><a class="reference external" href="https://docs.python.org/3/library/traceback.html">https://docs.python.org/3/library/traceback.html</a></p>
+</div>
+<div class="section" id="the-contextmanager-decorator">
+<h3>The contextmanager decorator<a class="headerlink" href="#the-contextmanager-decorator" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">Similar to writing iterable classes, there’s a fair bit of bookkeeping
+involved. It turns out you can take advantage of generator functions
+to do the&nbsp;bookkeeping for you. &nbsp;contextlib.contextmanager() will turn
+a generator function into context manager.</div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">contextlib</span> <span class="k">import</span> <span class="n">contextmanager</span>
+
+<span class="nd">@contextmanager</span>
+<span class="k">def</span> <span class="nf">context</span><span class="p">(</span><span class="n">boolean</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;__init__ code here&quot;</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;__enter__ code goes here&quot;</span><span class="p">)</span>
+        <span class="k">yield</span> <span class="nb">object</span><span class="p">()</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;errors handled here&quot;</span><span class="p">)</span>
+         <span class="k">if</span> <span class="ow">not</span> <span class="n">boolean</span><span class="p">:</span>
+             <span class="k">raise</span> <span class="n">e</span>
+     <span class="k">finally</span><span class="p">:</span>
+         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;__exit__ cleanup goes here&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The code is similar to the class defined previously and using it has
+similar results. We can handle errors:</p>
+<div class="line-block">
+<div class="line">&nbsp; &nbsp; In []: with context(True):</div>
+<div class="line">&nbsp; &nbsp; &nbsp; &nbsp; ….: print(“in the context”)</div>
+<div class="line">&nbsp; &nbsp; &nbsp; &nbsp; ….: raise RuntimeError(“error raised”)</div>
+<div class="line">&nbsp; &nbsp; &nbsp; &nbsp; ….:</div>
+<div class="line">&nbsp; &nbsp; __init__ code here</div>
+<div class="line">&nbsp; &nbsp; __enter__ code goes here</div>
+<div class="line">&nbsp; &nbsp; in the context</div>
+<div class="line">&nbsp; &nbsp; errors handled here</div>
+<div class="line">&nbsp; &nbsp; __exit__ cleanup goes here</div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">Or, we can allow them to propagate:</div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">51</span><span class="p">]:</span> <span class="k">with</span> <span class="n">context</span><span class="p">(</span><span class="kc">False</span><span class="p">):</span>
+     <span class="o">....</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;in the context&quot;</span><span class="p">)</span>
+     <span class="o">....</span><span class="p">:</span> <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;error raised&quot;</span><span class="p">)</span>
+ <span class="fm">__init__</span> <span class="n">code</span> <span class="n">here</span>
+ <span class="fm">__enter__</span> <span class="n">code</span> <span class="n">goes</span> <span class="n">here</span>
+ <span class="ow">in</span> <span class="n">the</span> <span class="n">context</span>
+ <span class="n">errors</span> <span class="n">handled</span> <span class="n">here</span>
+ <span class="fm">__exit__</span> <span class="n">cleanup</span> <span class="n">goes</span> <span class="n">here</span>
+ <span class="o">---------------------------------------------------------------------------</span>
+ <span class="ne">RuntimeError</span> <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">)</span>
+ <span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">51</span><span class="o">-</span><span class="mi">641528</span><span class="n">ffa695</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span><span class="p">()</span>
+     <span class="mi">1</span> <span class="k">with</span> <span class="n">context</span><span class="p">(</span><span class="kc">False</span><span class="p">):</span>
+     <span class="mi">2</span> <span class="nb">print</span> <span class="s2">&quot;in the context&quot;</span>
+ <span class="o">----&gt;</span> <span class="mi">3</span> <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;error raised&quot;</span><span class="p">)</span>
+     <span class="mi">4</span>
+ <span class="ne">RuntimeError</span><span class="p">:</span> <span class="n">error</span> <span class="n">raised</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="lesson-09-dot-03-recursion.html" class="btn btn-neutral float-right" title="Lesson 03.03 Recursion" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="lesson-09-dot-01-decorators.html" class="btn btn-neutral" title="Lesson 03.01 Decorators" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, University of Washington, Christopher Barker, Luis Diego Conejo, Andy Miles, Rick Riehle, Joseph Schilz. Creative Commons Attribution-ShareAlike 3.0 license
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

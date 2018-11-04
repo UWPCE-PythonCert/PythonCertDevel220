@@ -1,0 +1,366 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Lesson 07 Content &mdash; PythonCert220 2.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PythonCert220
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Exercise notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/index.html">Exercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../supplemental/index.html">Supporting materials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">External links</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PythonCert220</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Lesson 07 Content</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/modules/lesson03/lesson-07-content.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="lesson-07-content">
+<h1>Lesson 07 Content<a class="headerlink" href="#lesson-07-content" title="Permalink to this headline">¶</a></h1>
+<div id="menuheading"><p class="cah2 rubric" id="relational-databases">Relational Databases</p>
+<div id="navbar" class="caNav grid-row around-md clearunderlinestyle"
+role="navigation"><p><a class="reference external" href="%24WIKI_REFERENCE%24/pages/lesson-07-introduction">Introduction</a> |
+<a class="reference external" href="%24WIKI_REFERENCE%24/pages/lesson-07-content">Content</a> |
+<a class="reference external" href="%24CANVAS_OBJECT_REFERENCE%24/assignments/ie39542f4274b1ba93a37a8b75f9011ef">Quiz</a>&nbsp;|
+<a class="reference external" href="%24CANVAS_OBJECT_REFERENCE%24/assignments/idd62db3e72b3f43a8a85b8633adf4461">Activity</a>
+|
+<a class="reference external" href="%24CANVAS_OBJECT_REFERENCE%24/assignments/i0296493f505e23900bda7d7da2d96776">Assignment</a>
+| <a class="reference external" href="%24CANVAS_OBJECT_REFERENCE%24/discussion_topics/i5023a80264163ea8cad0130f8d2b92b6">Code
+Talk</a></p>
+</div></div><p>Here&nbsp;we are going to cover the background to why we use databases, and
+set the stage for later, when we will start to develop a Python database
+application.</p>
+<p>You will probably wish to clone the repository you can find on
+<a class="reference external" href="https://github.com/milesak60/RDBMS">GitHub</a>. For this first video,
+the files are in the “stuff” directory. These are the files&nbsp;we refer to,
+and they are included here, below the video:</p>
+<p><img alt="v1files.png" src="modules/lesson03/%24IMS-CC-FILEBASE%24/v1files.png?canvas_download=1" /></p>
+<p>{{VIDEO HERE}}</p>
+<p>People file:</p>
+<div
+style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">write a csv file</span>
+<span class="sd">data is &quot;anonymous&quot; (no schema)</span>
+
+<span class="sd">Creates a file that looks like this:</span>
+
+<span class="sd">John,502-77-3056,2/27/1985,117.45</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">csv</span>
+
+<span class="n">peopledata</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="s1">&#39;502-77-3056&#39;</span><span class="p">,</span> <span class="s1">&#39;2/27/1985&#39;</span><span class="p">,</span> <span class="mf">117.45</span><span class="p">]</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;simple_data_write.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">people</span><span class="p">:</span>
+    <span class="n">peoplewriter</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">people</span><span class="p">)</span>
+    <span class="n">peoplewriter</span><span class="o">.</span><span class="n">writerow</span><span class="p">(</span><span class="n">peopledata</span><span class="p">)</span>
+</pre></div>
+</div>
+</div><p>Schema file:</p>
+<div
+style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;Person Name&#39;</span><span class="p">,</span><span class="s1">&#39;SSN&#39;</span><span class="p">,</span><span class="s1">&#39;BirthDate&#39;</span><span class="p">,</span><span class="s1">&#39;Account Balance&#39;</span>
+<span class="s1">&#39;John&#39;</span><span class="p">,</span><span class="s1">&#39;502-77-3056&#39;</span><span class="p">,</span><span class="s1">&#39;2/27/1985&#39;</span><span class="p">,</span><span class="s1">&#39;117.45&#39;</span>
+</pre></div>
+</div>
+</div><p>We have covered the basis of data definition, and why it is important.
+We now know what a schema is and why it is important. Now we can start
+to write a Python program that uses a database.</p>
+<p>Be sure you cloned the repository we mentioned prior to video 1
+from&nbsp;<a class="reference external" href="https://github.com/milesak60/RDBMS">GitHub</a>. In this video
+we will be using the modules in the “src” directory We start
+with&nbsp;<a class="reference external" href="https://github.com/milesak60/RDBMS/blob/master/src/v00_personjob_model.py">v00_personjob_model.py</a>.</p>
+<p>Key fragments are included here too, below the video.</p>
+<div class="section" id="tutorial-videos">
+<h2>Tutorial Videos:<a class="headerlink" href="#tutorial-videos" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="using-the-model-using-the-person-class-using-the-job-class">
+<h2>Using the Model, Using the Person Class, Using the Job Class<a class="headerlink" href="#using-the-model-using-the-person-class-using-the-job-class" title="Permalink to this headline">¶</a></h2>
+<p>{{VIDEO HERE}}</p>
+<p>&nbsp;Here is the model code:</p>
+<div
+style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This class defines Person, which maintains details of someone</span>
+<span class="sd">        for whom we want to research career to date.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">person_name</span> <span class="o">=</span> <span class="n">CharField</span><span class="p">(</span><span class="n">primary_key</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">max_length</span> <span class="o">=</span> <span class="mi">30</span><span class="p">)</span>
+    <span class="n">lives_in_town</span> <span class="o">=</span> <span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span> <span class="o">=</span> <span class="mi">40</span><span class="p">)</span>
+    <span class="n">nickname</span> <span class="o">=</span> <span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span> <span class="n">null</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">Job</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This class defines Job, which maintains details of past Jobs</span>
+<span class="sd">        held by a Person.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">job_name</span> <span class="o">=</span> <span class="n">CharField</span><span class="p">(</span><span class="n">primary_key</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">max_length</span> <span class="o">=</span> <span class="mi">30</span><span class="p">)</span>
+    <span class="n">start_date</span> <span class="o">=</span> <span class="n">DateField</span><span class="p">(</span><span class="n">formats</span> <span class="o">=</span> <span class="s1">&#39;YYYY-MM-DD&#39;</span><span class="p">)</span>
+    <span class="n">end_date</span> <span class="o">=</span> <span class="n">DateField</span><span class="p">(</span><span class="n">formats</span> <span class="o">=</span> <span class="s1">&#39;YYYY-MM-DD&#39;</span><span class="p">)</span>
+
+    <span class="n">salary</span> <span class="o">=</span> <span class="n">DecimalField</span><span class="p">(</span><span class="n">max_digits</span> <span class="o">=</span> <span class="mi">7</span><span class="p">,</span> <span class="n">decimal_places</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">person_employed</span> <span class="o">=</span> <span class="n">ForeignKeyField</span><span class="p">(</span><span class="n">Person</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;was_filled_by&#39;</span><span class="p">,</span> <span class="n">null</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div><p>Now we have looked at the model, lets look at how we create, read, and
+delete data from the database, using the Person class.&nbsp;Here we use the
+following
+code:&nbsp;<a class="reference external" href="https://github.com/milesak60/RDBMS/blob/master/src/v3_p1_populate_db.py">v3_p1_populate_db.py</a>,
+then&nbsp;<a class="reference external" href="https://github.com/milesak60/RDBMS/blob/master/src/v3_p1_populate_db.py">v3_p1_populate_db.py</a>&nbsp;and
+finally&nbsp;<a class="reference external" href="https://github.com/milesak60/RDBMS/blob/master/src/v3_p3_add_and_delete.py">v3_p3_add_and_delete.py</a>.</p>
+<p>{{VIDEO HERE}}</p>
+<p>Working with one class is not typical. Usually we will have several.
+We’ll illustrate this by working with the Job class. He we will use all
+the Python modules for the repository that start with v4:</p>
+<p>{{VIDEO HERE}}</p>
+<p>Now we are going to learn about the best way to design the data in our
+database. &nbsp;We will use the digram in the “stuff” directory, which is
+also included below, along with the SQL code:</p>
+</div>
+<div class="section" id="behind-the-scenes">
+<h2>Behind the scenes<a class="headerlink" href="#behind-the-scenes" title="Permalink to this headline">¶</a></h2>
+<p>{{VIDEO HERE}}</p>
+<p>Database diagram:</p>
+<p>&nbsp;<img alt="DatabaseDiagram.jpeg" src="modules/lesson03/%24IMS-CC-FILEBASE%24/Lesson%207%20scripts/DatabaseDiagram.jpeg?canvas_download=1" /></p>
+<p>Code samples from the video:</p>
+<p>SQL statement</p>
+<div
+style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">select</span> <span class="o">*</span> <span class="kn">from</span> <span class="nn">person</span> <span class="p">;</span>
+</pre></div>
+</div>
+</div><p>Start sqlite3 database (from the command line):</p>
+<div
+style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sqlite3</span> <span class="n">personjob</span><span class="o">.</span><span class="n">db</span>
+</pre></div>
+</div>
+</div><p>The sqlite&gt; prompt indicates we are ready to enter sqlite commands.</p>
+<div
+style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sqlite</span><span class="o">&gt;</span> <span class="o">.</span><span class="n">tables</span>
+<span class="n">job</span> <span class="n">person</span> <span class="n">personnumkey</span>
+</pre></div>
+</div>
+</div><p>&nbsp; Here is how sqlite sees the schema:</p>
+<div
+style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sqlite</span><span class="o">&gt;</span> <span class="o">.</span><span class="n">schema</span>
+
+<span class="n">CREATE</span> <span class="n">TABLE</span> <span class="n">IF</span> <span class="n">NOT</span> <span class="n">EXISTS</span> <span class="s2">&quot;person&quot;</span> <span class="p">(</span><span class="s2">&quot;person_name&quot;</span> <span class="n">VARCHAR</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span> <span class="n">NOT</span> <span class="n">NULL</span> <span class="n">PRIMARY</span> <span class="n">KEY</span><span class="p">,</span> <span class="s2">&quot;lives_in_town&quot;</span> <span class="n">VARCHAR</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span> <span class="n">NOT</span> <span class="n">NULL</span><span class="p">,</span> <span class="s2">&quot;nickname&quot;</span> <span class="n">VARCHAR</span><span class="p">(</span><span class="mi">20</span><span class="p">));</span>
+
+<span class="n">CREATE</span> <span class="n">TABLE</span> <span class="n">IF</span> <span class="n">NOT</span> <span class="n">EXISTS</span> <span class="s2">&quot;job&quot;</span> <span class="p">(</span><span class="s2">&quot;job_name&quot;</span> <span class="n">VARCHAR</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span> <span class="n">NOT</span> <span class="n">NULL</span> <span class="n">PRIMARY</span> <span class="n">KEY</span><span class="p">,</span> <span class="s2">&quot;start_date&quot;</span> <span class="n">DATE</span> <span class="n">NOT</span> <span class="n">NULL</span><span class="p">,</span> <span class="s2">&quot;end_date&quot;</span> <span class="n">DATE</span> <span class="n">NOT</span> <span class="n">NULL</span><span class="p">,</span> <span class="s2">&quot;salary&quot;</span> <span class="n">DECIMAL</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="n">NOT</span> <span class="n">NULL</span><span class="p">,</span> <span class="s2">&quot;person_employed_id&quot;</span> <span class="n">VARCHAR</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span> <span class="n">NOT</span> <span class="n">NULL</span><span class="p">,</span> <span class="n">FOREIGN</span> <span class="n">KEY</span> <span class="p">(</span><span class="s2">&quot;person_employed_id&quot;</span><span class="p">)</span> <span class="n">REFERENCES</span> <span class="s2">&quot;person&quot;</span> <span class="p">(</span><span class="s2">&quot;person_name&quot;</span><span class="p">));</span>
+
+<span class="n">CREATE</span> <span class="n">INDEX</span> <span class="s2">&quot;job_person_employed_id&quot;</span> <span class="n">ON</span> <span class="s2">&quot;job&quot;</span> <span class="p">(</span><span class="s2">&quot;person_employed_id&quot;</span><span class="p">);</span>
+
+<span class="n">CREATE</span> <span class="n">TABLE</span> <span class="n">IF</span> <span class="n">NOT</span> <span class="n">EXISTS</span> <span class="s2">&quot;personnumkey&quot;</span> <span class="p">(</span><span class="s2">&quot;id&quot;</span> <span class="n">INTEGER</span> <span class="n">NOT</span> <span class="n">NULL</span> <span class="n">PRIMARY</span> <span class="n">KEY</span><span class="p">,</span> <span class="s2">&quot;person_name&quot;</span> <span class="n">VARCHAR</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span> <span class="n">NOT</span> <span class="n">NULL</span><span class="p">,</span> <span class="s2">&quot;lives_in_town&quot;</span> <span class="n">VARCHAR</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span> <span class="n">NOT</span> <span class="n">NULL</span><span class="p">,</span> <span class="s2">&quot;nickname&quot;</span> <span class="n">VARCHAR</span><span class="p">(</span><span class="mi">20</span><span class="p">));</span>
+</pre></div>
+</div>
+</div><div
+style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sqlite</span><span class="o">&gt;</span> <span class="o">.</span><span class="n">mode</span> <span class="n">column</span>
+<span class="n">sqlite</span><span class="o">&gt;</span> <span class="o">.</span><span class="n">width</span> <span class="mi">15</span> <span class="mi">15</span> <span class="mi">15</span> <span class="mi">15</span> <span class="mi">15</span>
+<span class="n">sqlite</span><span class="o">&gt;</span> <span class="o">.</span><span class="n">headers</span> <span class="n">on</span>
+</pre></div>
+</div>
+</div><div
+style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sqlite</span><span class="o">&gt;</span> <span class="n">select</span> <span class="o">*</span> <span class="kn">from</span> <span class="nn">person</span><span class="p">;</span>
+<span class="n">sqlite</span><span class="o">&gt;</span> <span class="n">select</span> <span class="o">*</span> <span class="kn">from</span> <span class="nn">job</span><span class="p">;</span>
+</pre></div>
+</div>
+</div><p>Enter .quit to leave sqlite.</p>
+</div>
+<div class="section" id="lesson-summary">
+<h2>Lesson Summary<a class="headerlink" href="#lesson-summary" title="Permalink to this headline">¶</a></h2>
+<p>In this lesson we have learned about how we define, store and retrieve
+data in a relational database using Python, Peewee and sqlite.</p>
+<div class="section" id="conclusion">
+<h3>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h3>
+<p>{{VIDEO HERE}}</p>
+<p>&nbsp;` &lt;<a class="reference external" href="https://github.com/coleifer/peewee/blob/master/docs/peewee/database.rst">https://github.com/coleifer/peewee/blob/master/docs/peewee/database.rst</a>&gt;`__</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, University of Washington, Christopher Barker, Luis Diego Conejo, Andy Miles, Rick Riehle, Joseph Schilz. Creative Commons Attribution-ShareAlike 3.0 license
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,270 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Lesson 04 Introduction &mdash; PythonCert220 2.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PythonCert220
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Exercise notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/index.html">Exercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../supplemental/index.html">Supporting materials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">External links</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PythonCert220</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Lesson 04 Introduction</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/modules/lesson10/lesson-04-introduction.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="lesson-04-introduction">
+<h1>Lesson 04 Introduction<a class="headerlink" href="#lesson-04-introduction" title="Permalink to this headline">¶</a></h1>
+<div id="menuheading"><p class="cah2 rubric" id="metaprogramming">Metaprogramming</p>
+<div id="navbar" class="caNav grid-row around-md clearunderlinestyle"
+role="navigation"><p><a class="reference external" href="%24WIKI_REFERENCE%24/pages/lesson-04-introduction">Introduction</a> |
+<a class="reference external" href="%24WIKI_REFERENCE%24/pages/lesson-04-content">Content</a> |
+<a class="reference external" href="%24CANVAS_OBJECT_REFERENCE%24/quizzes/i13b71605c62c3cd78ebd595c20e90e67">Quiz&nbsp;</a>|
+Activity |
+<a class="reference external" href="%24CANVAS_OBJECT_REFERENCE%24/assignments/ie56dae8f75ae35df42a7bc6747d8c572">Assignment</a>
+| <a class="reference external" href="%24CANVAS_OBJECT_REFERENCE%24/discussion_topics/i4df1858495d80dbc0637bfdc8f754051">Code
+Talk</a></p>
+</div></div><div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>Metaprogramming is a programming technique in which computer programs
+have the ability to treat programs as their data. In other words: A
+metaprogram is a program that writes (or modifies) programs.&nbsp; As a
+dynamic language, Python is very well suited to metaprogramming, as it
+allows objects to be modified at runtime.</p>
+<p>In this lesson, we will learn about the tools python provides for
+metaprogramming, and the structure of objects that can be manipulated.</p>
+</div>
+<div class="section" id="learning-objectives">
+<h2>Learning Objectives<a class="headerlink" href="#learning-objectives" title="Permalink to this headline">¶</a></h2>
+<p>Upon successful completion of this lesson, you will be able to:</p>
+<ul class="simple">
+<li>Use the core getattr() and setattr() functions to manipulate object’s
+attributes.</li>
+<li>Access the namespaces of various objects to inspect or update them.</li>
+<li>Use the type() function to create a new class from scratch.</li>
+<li>Write a basic metaclass to create custom classes on the fly.</li>
+<li>Write a class decorator that can customize class definitions.</li>
+</ul>
+</div>
+<div class="section" id="new-words-concepts-and-tools">
+<h2>New Words, Concepts, and Tools<a class="headerlink" href="#new-words-concepts-and-tools" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>metaprograming</li>
+<li>getattr() and setattr()</li>
+<li>The type() constructor</li>
+<li>metaclasses</li>
+<li>class decorators</li>
+</ul>
+</div>
+<div class="section" id="required-reading">
+<h2>Required Reading<a class="headerlink" href="#required-reading" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://uwpce-pythoncert.github.io/PythonCertDevel/modules/MetaProgramming.html">Metaprogramming
+Notes</a></li>
+</ul>
+</div>
+<div class="section" id="optional-reading">
+<h2>Optional Reading<a class="headerlink" href="#optional-reading" title="Permalink to this headline">¶</a></h2>
+<p><em>Fluent Python</em>: Chapters 19 – 21</p>
+<ul class="simple">
+<li><a class="reference external" href="http://blog.thedigitalcatonline.com/blog/2014/09/01/python-3-oop-part-5-metaclasses">About
+metaclasses</a></li>
+<li><a class="reference external" href="http://stackoverflow.com/a/6581949/747729">What is a metaclass in
+Python?</a></li>
+<li><a class="reference external" href="http://eli.thegreenplace.net/2011/08/14/python-metaclasses-by-example/">Python metaclasses by
+example:</a></li>
+<li><a class="reference external" href="http://jakevdp.github.io/blog/2012/12/01/a-primer-on-python-metaclasses/">A Primer on Python
+Metaclasses:</a></li>
+<li><a class="reference external" href="http://blog.thedigitalcatonline.com/blog/2014/10/14/decorators-and-metaclasses">Advanced use of Python decorators and
+metaclasses</a></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, University of Washington, Christopher Barker, Luis Diego Conejo, Andy Miles, Rick Riehle, Joseph Schilz. Creative Commons Attribution-ShareAlike 3.0 license
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
