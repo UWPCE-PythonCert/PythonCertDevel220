@@ -51,10 +51,11 @@ understand how to apply what it teaches.
 Here is an example of a simple object oriented Python module:
 
 .. code:: Python
-"""
-simple oo example
-"""
-   class Pet:
+
+    """
+    simple oo example
+    """
+    class Pet:
        """ This class defines Pet, which is an animal kept by a human for domestic purposes" """
        def __init__(self, name):
            self.name = name
@@ -68,11 +69,11 @@ simple oo example
            return "splash"
 
 
-   mypet = Pet("Goldie") # i am an object: an instance of the class Pet
+    mypet = Pet("Goldie") # i am an object: an instance of the class Pet
 
-   print(mypet.name)
-   print(mypet.speak())
-   print(mypet.swim())
+    print(mypet.name)
+    print(mypet.speak())
+    print(mypet.swim())
 
 
 Here we have a Pet class. The Pet can speak and swim. Notice how we use
@@ -97,8 +98,8 @@ it is a pet.
 
 We can draw this on a diagram:
 
-.. todo::
-   Add pet inheritance diagram to lesson 0
+.. image:: ../../_static/oo_inherit.png
+    :scale: 50 %
 
 Dog, Cat, and Python inherit from Pet. We can also say that Pet is the superclass,
 and the others are subclasses.
@@ -106,11 +107,12 @@ and the others are subclasses.
 Here it is in code:
 
 .. code:: Python
-   """
-   simple oo example
-   """
 
-   class Pet:
+    """
+    simple oo example
+    """
+
+    class Pet:
        def __init__(self, name):
            self.name = name
            self.hello = None
@@ -120,7 +122,7 @@ Here it is in code:
            return self.hello
 
 
-   class Dog(Pet):
+    class Dog(Pet):
        def __init__(self, name, license_num):
            Pet.__init__(self, name)
            self.hello = "woof"
@@ -132,18 +134,17 @@ Here it is in code:
            """ reuse or embelish code from superclass """
            return Pet.speak(self)
 
+    mypet = Pet("Goldie")
+    print(mypet.name)
+    print(mypet.speak())
 
-   mypet = Pet("Goldie")
-   print(mypet.name)
-   print(mypet.speak())
+    mypet = Dog("Bogart", "AB56674")
+    print(mypet.name)
 
-   mypet = Dog("Bogart", "AB56674")
-   print(mypet.name)
+    # i just tell it to speak
+    print(mypet.speak())
 
-   # i just tell it to speak
-   print(mypet.speak())
-
-   print(mypet.license_num)
+    print(mypet.license_num)
 
 
 Notice how the subclass can use the superclasses data and functions?

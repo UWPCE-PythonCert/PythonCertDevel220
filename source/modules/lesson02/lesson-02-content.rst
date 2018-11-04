@@ -50,28 +50,28 @@ Print Statement Debugging
 Let's start off by writing a simple Python script with an obvious
 problem. Begin by creating simple.py:
 
-    .. code:: python
+.. code:: Python
 
-        # simple.py
-        def my_fun(n):
-            for i in range(0, n):
-                100 / (50 - i)
+    # simple.py
+    def my_fun(n):
+        for i in range(0, n):
+            100 / (50 - i)
 
-        if __name__ == "__main__":
-            my_fun(100)
+    if __name__ == "__main__":
+        my_fun(100)
 
 You can probably already see the problem that we'll encounter when we
 run simple.py. Let's run it in python:
 
-    .. code:: python
+.. code:: Python
 
-        $ python simple.py
-        Traceback (most recent call last):
-          File "simple.py", line 7, in <module>
-            my_fun(100)
-          File "simple.py", line 4, in my_fun
-           100 / (50 - i)
-        ZeroDivisionError: division by zero
+    $ python simple.py
+    Traceback (most recent call last):
+      File "simple.py", line 7, in <module>
+        my_fun(100)
+      File "simple.py", line 4, in my_fun
+       100 / (50 - i)
+    ZeroDivisionError: division by zero
 
 As you might have expected, we get a ZeroDivisionError! At some point,
 for some value of \ *i*, the instruction 100\ * / (50 - i)* causes our
@@ -84,30 +84,30 @@ problem by adding print statements to the loop. You could print out the
 value of \ *i* just before the problem-fraught division statement. Make
 the following modification to simple.py:
 
-    .. code:: python
+.. code:: Python
 
-        for i in range(0, n):
-            print(i)           # <-- Add this line
-            100 / (50 - i)
+    for i in range(0, n):
+        print(i)           # <-- Add this line
+        100 / (50 - i)
 
 
 Now running simple.py will give us some clue about for the faulting
 value of \ *i*:
 
-   .. code:: python
+.. code:: Python
 
-        $ python simple.py
-        0
-        1
-        2
-        ...
-        48
-        49
-        50
-        Traceback (most recent call last):
-         File "simple.py", line 2, in <module>
-         100 / (50 - i)
-        ZeroDivisionError: division by zero
+    $ python simple.py
+    0
+    1
+    2
+    ...
+    48
+    49
+    50
+    Traceback (most recent call last):
+     File "simple.py", line 2, in <module>
+     100 / (50 - i)
+    ZeroDivisionError: division by zero
 
 If we didn't know it already, then we know it now! The value
 of \ *i *\ just before the ZeroDivisionError is 50. This is the faulting
@@ -153,18 +153,18 @@ The Print Statement You Can Hide
 
 Let's make a couple of changes to our code:
 
-   .. code:: python
+.. code:: Python
 
-        import logging
+    import logging
 
-        logging.basicConfig(level=logging.DEBUG)
-        def my_fun(n):
-            for i in range(0, n):
-                logging.debug(i)
-                100 / (50 - i)
+    logging.basicConfig(level=logging.DEBUG)
+    def my_fun(n):
+        for i in range(0, n):
+            logging.debug(i)
+            100 / (50 - i)
 
-        if __name__ == "__main__":
-            my_fun(100)
+    if __name__ == "__main__":
+        my_fun(100)
 
 
 We've imported the logging library, set some kind of logging
@@ -174,51 +174,51 @@ a \ *logging.debug* statement.
 Now running simple.py produces the following output:
 
 
-    .. code:: python
+.. code:: Python
     
-        $ python simple.py
-        DEBUG:root:0
-        DEBUG:root:1
-        DEBUG:root:2
-        ...
-        DEBUG:root:48
-        DEBUG:root:49
-        DEBUG:root:50
-        Traceback (most recent call last):
-          File "simple.py", line 10, in <module>
-            my_fun(100)
-          File "simple.py", line 7, in my_fun
-            100 / (50 - i)
-        ZeroDivisionError: division by zero
+    $ python simple.py
+    DEBUG:root:0
+    DEBUG:root:1
+    DEBUG:root:2
+    ...
+    DEBUG:root:48
+    DEBUG:root:49
+    DEBUG:root:50
+    Traceback (most recent call last):
+      File "simple.py", line 10, in <module>
+        my_fun(100)
+      File "simple.py", line 7, in my_fun
+        100 / (50 - i)
+    ZeroDivisionError: division by zero
 
 So far, this doesn't look very different from the print statement that
 we were using before. But let's change one line of the script:
 
-   .. code:: python
+.. code:: Python
 
-        import logging
+    import logging
 
-        logging.basicConfig(level=logging.WARNING)  # Change the level to logging.WARNING
-        def my_fun(n):
-            for i in range(0, n):
-                logging.debug(i)
-                100 / (50 - i)
+    logging.basicConfig(level=logging.WARNING)  # Change the level to logging.WARNING
+    def my_fun(n):
+        for i in range(0, n):
+            logging.debug(i)
+            100 / (50 - i)
 
-        if __name__ == "__main__":
-            my_fun(100)
+    if __name__ == "__main__":
+        my_fun(100)
 
 
 Now try running the script again:
 
-   .. code:: python
+.. code:: Python
 
-        $ python simple.py
-        Traceback (most recent call last):
-          File "simple.py", line 10, in <module>
-            my_fun(100)
-          File "simple.py", line 7, in my_fun
-            100 / (50 - i)
-        ZeroDivisionError: division by zero
+    $ python simple.py
+    Traceback (most recent call last):
+      File "simple.py", line 10, in <module>
+        my_fun(100)
+      File "simple.py", line 7, in my_fun
+        100 / (50 - i)
+    ZeroDivisionError: division by zero
 
 What happened?
 
@@ -229,12 +229,12 @@ with, then you might put a logging statement into that function to help
 you understand when it was being called, and with what arguments. For
 example:
 
-   .. code:: python
+.. code:: Python
 
-        def my_fun(n):
-            logging.info("Function my_fun called with value {}".format(n))
-            do_something(n)
-            ...
+    def my_fun(n):
+        logging.info("Function my_fun called with value {}".format(n))
+        do_something(n)
+        ...
 
 
 This logging statement is just giving us some information about how the
@@ -247,20 +247,20 @@ the value 50 causes our code to crash, we could put in
 a \ *logging.warning* statement that will warn us of dangerous
 conditions:
 
-   .. code:: python
+.. code:: Python
 
-        import logging
+    import logging
 
-        logging.basicConfig(level=logging.WARNING)
-        def my_fun(n):
-            for i in range(0, n):
-                logging.debug(i)
-                if i == 50:                                   # Add this line
-                    logging.warning("The value of i is 50.")  # Add this line
-                100 / (50 - i)
+    logging.basicConfig(level=logging.WARNING)
+    def my_fun(n):
+        for i in range(0, n):
+            logging.debug(i)
+            if i == 50:                                   # Add this line
+                logging.warning("The value of i is 50.")  # Add this line
+            100 / (50 - i)
 
-        if __name__ == "__main__":
-            my_fun(100)
+    if __name__ == "__main__":
+        my_fun(100)
 
 
 If we wanted to handle the division by zero error gracefully, then we
@@ -268,24 +268,24 @@ could modify the code to attempt the \ *100 / (50 - i)* operation inside
 of a try, except block. Then we would log an \ *error* if our script did
 attempt to divide by 0:
 
-   .. code:: python
+.. code:: Python
 
-        import logging
+    import logging
 
-        logging.basicConfig(level=logging.WARNING)
+    logging.basicConfig(level=logging.WARNING)
 
-        def my_fun(n):
-            for i in range(0, n):
-                logging.debug(i)
-                if i == 50:
-                    logging.warning("The value of i is 50.")
-                try:
-                    100 / (50 - i)
-                except ZeroDivisionError:
-                    logging.error("Tried to divide by zero. Var i was {}. Recovered gracefully.".format(i))
+    def my_fun(n):
+        for i in range(0, n):
+            logging.debug(i)
+            if i == 50:
+                logging.warning("The value of i is 50.")
+            try:
+                100 / (50 - i)
+            except ZeroDivisionError:
+                logging.error("Tried to divide by zero. Var i was {}. Recovered gracefully.".format(i))
 
-        if __name__ == "__main__":
-            my_fun(100)
+    if __name__ == "__main__":
+        my_fun(100)
 
 
 You can see all of the logging levels in the `logging
@@ -295,11 +295,11 @@ like \ *logging.error*, \ *logging.warning*, etc.
 
 Now what do we get when we run our code?
 
-   .. code:: python
+.. code:: Python
 
-        $ python simple.py
-        WARNING:root:The value of i is 50.
-        ERROR:root:Tried to divide by zero, i was 50. Recovered gracefully.
+    $ python simple.py
+    WARNING:root:The value of i is 50.
+    ERROR:root:Tried to divide by zero, i was 50. Recovered gracefully.
 
 Why is it not showing the \ *logging.debug* statements?
 
@@ -325,16 +325,16 @@ will you see \ *all* log messages, or is there some default level that
 the logging library will choose for you? To answer that, try running the
 following script:
 
-   .. code:: python
+.. code:: python
 
-        # loggingtest.py
-        import logging
+    # loggingtest.py
+    import logging
 
-        logging.critical("This is a critical error!")
-        logging.error("I'm an error.")
-        logging.warning("Hello! I'm a warning!")
-        logging.info("This is some information.")
-        logging.debug("Perhaps this information will help you find your problem?")
+    logging.critical("This is a critical error!")
+    logging.error("I'm an error.")
+    logging.warning("Hello! I'm a warning!")
+    logging.info("This is some information.")
+    logging.debug("Perhaps this information will help you find your problem?")
 
 
 Although I used the \ *logging.basicConfig* method to set the logging
@@ -369,33 +369,33 @@ timestamp!
 
 Let's try it out! Make the following changes to your code:
 
-   .. code:: python
+.. code:: python
 
-        import logging
+    import logging
 
-        log_format = "%(asctime)s %(filename)s:%(lineno)-4d %(levelname)s %(message)s"  # Add/modify these
-        logging.basicConfig(level=logging.WARNING, format=log_format)                   # two lines
+    log_format = "%(asctime)s %(filename)s:%(lineno)-4d %(levelname)s %(message)s"  # Add/modify these
+    logging.basicConfig(level=logging.WARNING, format=log_format)                   # two lines
 
-        def my_fun(n):
-            for i in range(0, n):
-                logging.debug(i)
-                if i == 50:
-                    logging.warning("The value of i is 50.")
-                try:
-                    100 / (50 - i)
-                except ZeroDivisionError:
-                    logging.error("Tried to divide by zero. Var i was {}. Recovered gracefully.".format(i))
+    def my_fun(n):
+        for i in range(0, n):
+            logging.debug(i)
+            if i == 50:
+                logging.warning("The value of i is 50.")
+            try:
+                100 / (50 - i)
+            except ZeroDivisionError:
+                logging.error("Tried to divide by zero. Var i was {}. Recovered gracefully.".format(i))
 
-        if __name__ == "__main__":
-            my_fun(100)
+    if __name__ == "__main__":
+        my_fun(100)
 
 
 Let's look at these two lines:
 
-   .. code:: python
+.. code:: python
 
-        log_format = "%(asctime)s %(filename)s:%(lineno)-4d %(levelname)s %(message)s"
-        logging.basicConfig(level=logging.WARNING, format=log_format)
+    log_format = "%(asctime)s %(filename)s:%(lineno)-4d %(levelname)s %(message)s"
+    logging.basicConfig(level=logging.WARNING, format=log_format)
 
 
 We begin by defining a *log_format* for our log messages. All of the
@@ -417,11 +417,11 @@ with spaces.
 Now, what do you imagine running simple.py will produce? Here is the
 output:
 
-    .. code:: python
+.. code:: python
 
-        $ python simple.py
-        2018-03-12 17:39:17,567 simple.py:10   WARNING The value of i is 50.
-        2018-03-12 17:39:17,567 simple.py:14   ERROR Tried to divide by zero. Var i was 50. Recovered gracefully.
+    $ python simple.py
+    2018-03-12 17:39:17,567 simple.py:10   WARNING The value of i is 50.
+    2018-03-12 17:39:17,567 simple.py:14   ERROR Tried to divide by zero. Var i was 50. Recovered gracefully.
 
 As expected, we see the time that the log message was produced, the file
 name and line number that the message was produced on, and the log
@@ -442,18 +442,18 @@ console, but what if it could be sent somewhere else?
 The simplest place that you can send log messages to is a file. Edit
 the \ *logging.basicConfig*\ statement in your \ *simple.py*.
 
-   .. code:: python
+.. code:: python
 
-        logging.basicConfig(level=logging.WARNING, format=log_format, filename='mylog.log')
+    logging.basicConfig(level=logging.WARNING, format=log_format, filename='mylog.log')
 
 
 Now run simple.py:
 
-   .. code:: python
+.. code:: python
 
-        $ python simple.py
+    $ python simple.py
 
-        $
+    $
 
 There should now be no output sent to the console. Instead, the logging
 messages have been sent to a new file: mylog.log. Open this newly
@@ -472,34 +472,34 @@ Logging is even more powerful than that. We're about to learn how to
 send our logging messages to multiple places. In preparation for that, I
 want you to make the following changes to your code:
 
-   .. code:: python
+.. code:: python
 
-        import logging
+    import logging
 
-        log_format = "%(asctime)s %(filename)s:%(lineno)-3d %(levelname)s %(message)s"
+    log_format = "%(asctime)s %(filename)s:%(lineno)-3d %(levelname)s %(message)s"
 
-        # BEGIN NEW STUFF
-        formatter = logging.Formatter(log_format)
+    # BEGIN NEW STUFF
+    formatter = logging.Formatter(log_format)
 
-        file_handler = logging.FileHandler('mylog.log')
-        file_handler.setFormatter(formatter)
+    file_handler = logging.FileHandler('mylog.log')
+    file_handler.setFormatter(formatter)
 
-        logger = logging.getLogger()
-        logger.addHandler(file_handler)
-        # END NEW STUFF
+    logger = logging.getLogger()
+    logger.addHandler(file_handler)
+    # END NEW STUFF
 
-        def my_fun(n):
-            for i in range(0, n):
-                logging.debug(i)
-                if i == 50:
-                    logging.warning("The value of i is 50.")
-                try:
-                    i / (50 - i)
-                except ZeroDivisionError:
-                    logging.error("Tried to divide by zero. Var i was {}. Recovered gracefully.".format(i))
+    def my_fun(n):
+        for i in range(0, n):
+            logging.debug(i)
+            if i == 50:
+                logging.warning("The value of i is 50.")
+            try:
+                i / (50 - i)
+            except ZeroDivisionError:
+                logging.error("Tried to divide by zero. Var i was {}. Recovered gracefully.".format(i))
 
-        if __name__ == "__main__":
-            my_fun(100)
+    if __name__ == "__main__":
+        my_fun(100)
 
 
 Python, and the logging library, are so easy to read that you can
@@ -510,20 +510,20 @@ a \ *formatter* and a \ *handler*.
 
 Let me add a bit of explaination to each new line in following comments:
 
-   .. code:: python
+.. code:: python
 
-        # Create a "formatter" using our format string
-        formatter = logging.Formatter(log_format)
+    # Create a "formatter" using our format string
+    formatter = logging.Formatter(log_format)
 
-        # Create a log message handler that sends output to the file 'mylog.log'
-        file_handler = logging.FileHandler('mylog.log')
-        # Set the formatter for this log message handler to the formatter we created above.
-        file_handler.setFormatter(formatter)
+    # Create a log message handler that sends output to the file 'mylog.log'
+    file_handler = logging.FileHandler('mylog.log')
+    # Set the formatter for this log message handler to the formatter we created above.
+    file_handler.setFormatter(formatter)
 
-        # Get the "root" logger. More on that below.
-        logger = logging.getLogger()
-        # Add our file_handler to the "root" logger's handlers.
-        logger.addHandler(file_handler)
+    # Get the "root" logger. More on that below.
+    logger = logging.getLogger()
+    # Add our file_handler to the "root" logger's handlers.
+    logger.addHandler(file_handler)
 
 
 What does this new configuration do? Well, it does exactly what our code
@@ -574,39 +574,39 @@ logging messages at the console while you were running your program, but
 only log the most important messages (WARNING and above) to your log
 file. You could accomplish that with this code:
 
-   .. code:: python
+.. code:: python
 
-        import logging
+    import logging
 
-        log_format = "%(asctime)s %(filename)s:%(lineno)-3d %(levelname)s %(message)s"
+    log_format = "%(asctime)s %(filename)s:%(lineno)-3d %(levelname)s %(message)s"
 
-        formatter = logging.Formatter(log_format)
+    formatter = logging.Formatter(log_format)
 
-        file_handler = logging.FileHandler('mylog.log')
-        file_handler.setLevel(logging.WARNING)           # Add this line
-        file_handler.setFormatter(formatter)
+    file_handler = logging.FileHandler('mylog.log')
+    file_handler.setLevel(logging.WARNING)           # Add this line
+    file_handler.setFormatter(formatter)
 
-        console_handler = logging.StreamHandler()        # Add this line
-        console_handler.setLevel(logging.DEBUG)          # Add this line
-        console_handler.setFormatter(formatter)          # Add this line
+    console_handler = logging.StreamHandler()        # Add this line
+    console_handler.setLevel(logging.DEBUG)          # Add this line
+    console_handler.setFormatter(formatter)          # Add this line
 
-        logger = logging.getLogger()
-        logger.setLevel(logging.DEBUG)                   # Add this line
-        logger.addHandler(file_handler)
-        logger.addHandler(console_handler)               # Add this line
+    logger = logging.getLogger()
+    logger.setLevel(logging.DEBUG)                   # Add this line
+    logger.addHandler(file_handler)
+    logger.addHandler(console_handler)               # Add this line
 
-        def my_fun(n):
-            for i in range(0, n):
-                logging.debug(i)
-                if i == 50:
-                    logging.warning("The value of i is 50.")
-                try:
-                    i / (50 - i)
-                except ZeroDivisionError:
-                    logging.error("Tried to divide by zero. Var i was {}. Recovered gracefully.".format(i))
+    def my_fun(n):
+        for i in range(0, n):
+            logging.debug(i)
+            if i == 50:
+                logging.warning("The value of i is 50.")
+            try:
+                i / (50 - i)
+            except ZeroDivisionError:
+                logging.error("Tried to divide by zero. Var i was {}. Recovered gracefully.".format(i))
 
-        if __name__ == "__main__":
-            my_fun(100)
+    if __name__ == "__main__":
+        my_fun(100)
 
 
 You might have a few questions about this code:
@@ -674,7 +674,7 @@ Let's begin by understanding the basic commands of the interactive
 debugger. We'll begin by debugging the file simple.py in the debugging
 exercises code repository:
 
-   .. code:: python
+.. code:: python
 
     # simple.py
     def my_fun():
