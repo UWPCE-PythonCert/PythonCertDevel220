@@ -15,7 +15,9 @@ Here is what you need to do:
    customer databases, and reading 100 records from these databases.
 
 .. todo::
-    Create badly performing module
+    #. Create badly performing module
+    #. Provide a datafile
+    #. Need to resolve activity content and link
 
 Tips
 ----
