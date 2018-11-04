@@ -43,11 +43,6 @@ On delivery, copy 3 is signed by the customer to confirm delivery.
 
 On return to the office, copy 3 is returned to the service desk. If the rental is for a fixed contract period, copy 3 is added to the file for the respective return date.
 
-Flow Chart
-----------
-.. todo::
-    Add flow chart for case study
-
 Your Role
 =========
 

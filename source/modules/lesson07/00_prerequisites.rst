@@ -1,12 +1,8 @@
-Python 220 Advanced Python Programming
-======================================
+Lesson 7: Concurrency and Async
+===============================
 
-Lesson 7 : Prerequisites
-------------------------
+Prerequisites
+-------------
 
-To be successful in this lesson you will need to be very familiar with the
-following concepts, covered earlier in the class:
+#. You should be familiar with the content of lessons 3, 5 and 6.
 
-.. todo::
-    Identify prerequisites for lesson 7 profiling and peformance
-#.

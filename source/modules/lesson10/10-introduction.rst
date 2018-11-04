@@ -99,3 +99,8 @@ Optional Reading
 
 -  `Advanced use of Python decorators and
    metaclasses <http://blog.thedigitalcatonline.com/blog/2014/10/14/decorators-and-metaclasses>`__
+
+-  https://realpython.com/python-metaclasses/
+-  https://medium.com/@guoxing/brief-intro-to-metaprogramming-with-python-a278fc104b3b
+-  https://stackabuse.com/python-metaclasses-and-metaprogramming/
+-  https://www.ibm.com/developerworks/library/ba-metaprogramming-python/index.html
