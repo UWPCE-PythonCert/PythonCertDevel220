@@ -1,0 +1,346 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Lesson 04.01 Lambda &mdash; PythonCert220 2.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Lesson 04.02 Iterators and Iterables" href="02_02_lesson-04-dot-02-iterators-and-iterables.html" />
+    <link rel="prev" title="Lesson 04: Starting with Expression Flow Control and Comprehensions" href="02_00_lesson-04-starting-with-expression-flow-control-and-comprehensions.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PythonCert220
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Lesson content</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#py220-advanced-python-programming">Py220: Advanced Python Programming</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../lesson00/index.html">Lesson 0 : Preclass</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson01/index.html">Lesson 1 : Automated Testing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson02/index.html">Lesson 2 : Logging &amp; Debuging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson03/index.html">Lesson 3 : Relational databases</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Lesson 4 : Functional Programming 2</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="00_prerequisites.html">Python 220 Advanced Python Programming</a></li>
+<li class="toctree-l4"><a class="reference internal" href="01_lesson-04-introduction.html">Lesson 04 Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="02_00_lesson-04-starting-with-expression-flow-control-and-comprehensions.html">Lesson 04: Starting with Expression Flow Control and Comprehensions</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Lesson 04.01 Lambda</a></li>
+<li class="toctree-l4"><a class="reference internal" href="02_02_lesson-04-dot-02-iterators-and-iterables.html">Lesson 04.02 Iterators and Iterables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="02_03_lesson-04-dot-03-generators.html">Lesson 04.03 Generators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="02_04_recap.html">Recap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="99_assignment.html">Lesson 4 : Assignment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="office_hours1_recaps.html">Office Hours : Recaps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="office_hours2_all.html">Office Hours : This weeks’ content</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson05/index.html">Lesson 5 : Consuming APIs with NoSQL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson06/index.html">Lesson 6 : Profiling and performance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson07/index.html">Lesson 7 : Currency and async</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson08/index.html">Lesson 8 : Functional Programming 3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson09/index.html">Lesson 9 : Advanced Python language constructs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson10/index.html">Lesson 10 : Metaprogramming</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">External links</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PythonCert220</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Lesson content</a> &raquo;</li>
+        
+          <li><a href="index.html">Lesson 4 : Functional Programming 2</a> &raquo;</li>
+        
+      <li>Lesson 04.01 Lambda</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/modules/lesson04/02_01_lesson-04-dot-01-lambda.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="lesson-04-01-lambda">
+<h1>Lesson 04.01 Lambda<a class="headerlink" href="#lesson-04-01-lambda" title="Permalink to this headline">¶</a></h1>
+<p>{{VIDEO HERE}}</p>
+<div id="menuheading"><p>The Lambda special form is Python’s syntax for creating an unnamed
+function — a function without a name.&nbsp; This is its general form:</p>
+</div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">lambda</span> <span class="n">arguments</span><span class="p">:</span> <span class="n">expression</span>
+</pre></div>
+</div>
+<p>The function evaluates to the result of the expression.&nbsp; Here is a
+lambda that adds one to its argument:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>Here is a lambda that adds its two arguments together:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+</pre></div>
+</div>
+<p>Compare this syntax to that of a standard function definition:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">my_sum</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+</pre></div>
+</div>
+<p>This simple function does nothing more than return the value of the
+expression in the ‘return’, so it is viable written on a single line.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">my_sum</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span> <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+</pre></div>
+</div>
+<p>Notice how this named function maps directly to its unnamed, lambda
+equivalent:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+</pre></div>
+</div>
+<p>Now, unlike most code snippets, if you were to type these examples into
+your favorite python interpreter by themselves they would not accomplish
+much.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+<span class="go">&lt;function &lt;lambda&gt; at 0x104f61e18&gt;</span>
+</pre></div>
+</div>
+<p>You can’t call that, because it has no name.&nbsp; For all intents and
+purposes the anonymous functions were defined, recognized by the python
+interpreter as valid, syntactically correct python code, and then
+discarded, never to be seen or used again.&nbsp; You could, however, use the
+function immediately by calling it with its required arguments:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">)(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="go">5</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">In this case python defines the anonymous function, calls it with the
+supplied arguments and prints the result, but this feels like we’re
+using the python interpreter as little more than a calculator; we are
+not writing useful code.&nbsp; Indeed simply entering ‘2 + 3’ in the
+interpreter provides the same result with a lot less typing.&nbsp; So
+what’s the point?&nbsp; Where are lambdas useful?</div>
+<div class="line">Lambdas are only useful within larger code constructs — specifically
+when defined inline — and generally as an argument to a function or
+method which is expecting a function.</div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">What is so special about Lambda?&nbsp; Here is the secret about Lambda:
+there is no secret to lambda.&nbsp; There is nothing it can do that a
+standard named function cannot do.&nbsp; It has no special powers aside
+from its ability to be defined inline.&nbsp; Wherever you can use a Lambda
+you could instead choose to use a standard named function.</div>
+<div class="line">What use is Lambda?&nbsp; According to Python’s creator, not much.</div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">“About 12 years ago, Python aquired lambda, reduce(), filter() and
+map(), courtesy of (I believe) a Lisp hacker who missed them and
+submitted working patches. But, despite of the PR value, I think these
+features should be cut from Python 3000.</div>
+<div class="line">Why drop lambda? Most Python users are unfamiliar with Lisp or Scheme,
+so the name is confusing; also, there is a widespread misunderstanding
+that lambda can do things that a nested function can’t – I still
+recall Laura Creighton’s Aha!-erlebnis after I showed her there was no
+difference! Even with a better name, I think having the two choices
+side-by-side just requires programmers to think about making a choice
+that’s irrelevant for their program; not having the choice streamlines
+the thought process. Also, once map(), filter() and reduce() are gone,
+there aren’t a whole lot of places where you really need to write very
+short local functions; Tkinter callbacks come to mind, but I find that
+more often than not the callbacks should be methods of some
+state-carrying object anyway (the exception being toy programs).</div>
+<div class="line">Update: lambda, filter and map will stay (the latter two with small
+changes, returning iterators instead of lists). Only reduce will be
+removed from the 3.0 standard library. You can import it from
+functools. “</div>
+<div class="line">&nbsp;– Guido van Rossum</div>
+<div class="line"><a class="reference external" href="http://www.artima.com/weblogs/viewpost.jsp?thread=98196">http://www.artima.com/weblogs/viewpost.jsp?thread=98196</a></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">Why would we teach the Lambda special form if even if Python’s creator
+has a low opinion of it?</div>
+<div class="line">You need to understand it, because you are going to see it in the
+wild.</div>
+<div class="line">As to whether you decide to propagate its use, we leave that to you.</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="02_02_lesson-04-dot-02-iterators-and-iterables.html" class="btn btn-neutral float-right" title="Lesson 04.02 Iterators and Iterables" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="02_00_lesson-04-starting-with-expression-flow-control-and-comprehensions.html" class="btn btn-neutral" title="Lesson 04: Starting with Expression Flow Control and Comprehensions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, University of Washington, Christopher Barker, Luis Diego Conejo, Andy Miles, Rick Riehle, Joseph Schilz. Creative Commons Attribution-ShareAlike 3.0 license
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

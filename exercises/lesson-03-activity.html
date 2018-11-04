@@ -1,0 +1,297 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Assignment: Lesson 03 Activity &mdash; PythonCert220 2.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> PythonCert220
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../modules/index.html">Exercise notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Exercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../supplemental/index.html">Supporting materials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references/index.html">External links</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">PythonCert220</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Assignment: Lesson 03 Activity</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/exercises/lesson-03-activity.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="assignment-lesson-03-activity">
+<h1>Assignment: Lesson 03 Activity<a class="headerlink" href="#assignment-lesson-03-activity" title="Permalink to this headline">¶</a></h1>
+<div id="menuheading"><div id="context-managers" class="section"><p class="rubric" id="context-managers">Context Managers` &lt;#context-managers&gt;`__</p>
+<p>The <a class="reference external" href="https://en.wikipedia.org/wiki/Ballard_Locks">Ballard Lockes</a> in
+Seattle, Washington are a limited, controlled resource. You have been
+hired by the Army Corps of Engineers to help build a software control
+system for the lockes. There are two lockes at the Ballard complex, one
+small (30 x 150 feet, 8.5 x 45.7 meter) and one large (80 x 825 feet,
+24.4 x 251.5 meter). There are myriad ways in which different components
+of the lockes represent limited resources with specialized subsystems,
+and a missed or out-of-sequence step could mean disaster. For instance,
+there are two sets of doors for each locke, one upstream and one down,
+that cannot both be open at the same time; boats need to clear the doors
+before they are closed and sealed; pumps need to be shut down before
+doors are opened; tourists, who can get very close to observe the
+action, need to be safely managed; the lockes themselves can only handle
+a certain number of boats. At every step of the way there is a limited
+resource that must be managed and in lock step with the others, yes, pun
+intended. In effect it involves the coordinated management of resources
+all the way down.</p>
+<p>For this first task you do not need to model every aspect of the lockes,
+indeed you only need model its operation overall. Early on you learn
+that there will be other software developers interacting with the system
+and that not everyone is going to remember all the details of using the
+resources of each component. Your task is to model the use of resources,
+of system components, as simply as possible. You recognize that with all
+the operational and sequencing details to be encapsulated, this is a
+good use case for context managers.</p>
+<p>Wondering about the consistent misspelling of the word lock? As an early
+design decision we have decided to avoid overloading the term, which in
+the context can be interpreted both as a verb and as a noun and thereby
+cause confusion. For any instances of the verb use its usual spelling:
+lock. For any instances of the noun use an alternative spelling: locke.
+We have adopted this convention throughout the exercise.</p>
+<p>Write a context manager class <code class="docutils literal notranslate"><span class="pre">Locke</span></code> to simulate the overall
+functioning of the system. When the locke is entered it stops the pumps,
+opens the doors, closes the doors, and restarts the pumps. Likewise when
+the locke is exited it runs through the same steps: it stops the pumps,
+opens the doors, closes the doors, and restarts the pumps. Don’t worry
+for now that in the real world there are both upstream and downstream
+doors, and that they should never be opened at the same time; perhaps
+you’ll get to that later. During initialization the context manger class
+accepts the locke’s capacity in number of boats. If someone tries to
+move too many boats through the locke, anything over its established
+capacity, raise a suitable error. Since this is a simulation you need do
+nothing more than print what is happening with the doors and pumps, like
+this:</p>
+<div class="highlight-bash"><div class="highlight"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Stopping the pumps.&quot;</span>
+<span class="s2">&quot;Opening the doors.&quot;</span>
+<span class="s2">&quot;Closing the doors.&quot;</span>
+<span class="s2">&quot;Restarting the pumps.&quot;</span>
+</pre></div>
+</div>
+</div></div><p>This is how you might interact with your Locke class.</p>
+<div class="highlight-python3"><div class="highlight"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">small_locke</span> <span class="o">=</span> <span class="n">Locke</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">large_locke</span> <span class="o">=</span> <span class="n">Locke</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">boats</span> <span class="o">=</span> <span class="mi">8</span>
+
+<span class="c1"># Too many boats through a small locke will raise an exception</span>
+<span class="k">with</span> <span class="n">small_locke</span> <span class="k">as</span> <span class="n">locke</span><span class="p">:</span>
+    <span class="n">locke</span><span class="o">.</span><span class="n">move_boats_through</span><span class="p">(</span><span class="n">boats</span><span class="p">)</span>
+
+<span class="c1"># A lock with sufficient capacity can move boats without incident.</span>
+<span class="k">with</span> <span class="n">large_locke</span> <span class="k">as</span> <span class="n">locke</span><span class="p">:</span>
+    <span class="n">locke</span><span class="o">.</span><span class="n">move_boats_through</span><span class="p">(</span><span class="n">boats</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></div></div><div id="id1" class="section"></div><p class="cah2 rubric" id="section-1">` &lt;%24CANVAS_OBJECT_REFERENCE%24/discussion_topics/i8cd02eac3aa2cd71b6b762c17fb80f41&gt;`__</p>
+</div><p>Once you’ve completed the activity from the lesson content, commit your
+changes and submit:</p>
+<ul class="simple">
+<li>a link to your repository&nbsp;on GitHub</li>
+<li>the relevant .py file(s)</li>
+</ul>
+<p>We’ll be grading this&nbsp;activity&nbsp;purely on the percentage of included
+tests that pass.</p>
+<div class="section" id="submitting-your-work">
+<h2>Submitting Your Work<a class="headerlink" href="#submitting-your-work" title="Permalink to this headline">¶</a></h2>
+<p>Put the&nbsp;file(s) (ex: a_new_file.py) in your student directory in a new
+subdirectory named for this lesson, and add it to your clone early (git
+add a_new_file.py). Make frequent commits with good, clear messages
+about what you’re doing and why.</p>
+<p>When you’re done and ready for the instructors to review your work, push
+your changes to your GitHub fork (git push) and then go to the GitHub
+website and make a pull request. Copy the link to the pull request.</p>
+<p>Click&nbsp;the <em>Submit Assignment</em> button in the upper right.</p>
+<p><strong>Part 1: File(s)</strong></p>
+<p>Use the&nbsp;<em>Choose File</em>&nbsp;button to find and select the saved&nbsp;.py file or,
+if there are multiple files for the assignment, the .zip file.</p>
+<p><strong>Part 2: GitHub Link</strong></p>
+<p>Paste the GitHub link to the pull request in the comments area.</p>
+<p>Click the&nbsp;<em>Submit Assignment</em> button.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, University of Washington, Christopher Barker, Luis Diego Conejo, Andy Miles, Rick Riehle, Joseph Schilz. Creative Commons Attribution-ShareAlike 3.0 license
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

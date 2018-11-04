@@ -1,0 +1,282 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Lesson 05 Introduction &mdash; PythonCert220 2.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PythonCert220
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Exercise notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/index.html">Exercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../supplemental/index.html">Supporting materials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">External links</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PythonCert220</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Lesson 05 Introduction</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/modules/lesson02/lesson-05-introduction.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="lesson-05-introduction">
+<h1>Lesson 05 Introduction<a class="headerlink" href="#lesson-05-introduction" title="Permalink to this headline">¶</a></h1>
+<div id="menuheading"><p class="cah2 rubric" id="logging-and-debugging">Logging and Debugging</p>
+<div id="navbar" class="caNav grid-row around-md clearunderlinestyle"
+role="navigation"><p><a class="reference external" href="%24WIKI_REFERENCE%24/pages/lesson-05-introduction">Introduction</a> |
+<a class="reference external" href="%24WIKI_REFERENCE%24/pages/lesson-05-content">Content</a> |
+<a class="reference external" href="%24CANVAS_OBJECT_REFERENCE%24/quizzes/ie7895b971d4a0e2e35b415eb863435b0">Quiz</a>&nbsp;|
+<a class="reference external" href="%24CANVAS_OBJECT_REFERENCE%24/assignments/i89c943e0018a913b1c51e640fa38f289">Activity</a>
+|
+<a class="reference external" href="%24CANVAS_OBJECT_REFERENCE%24/assignments/i6935f2eba782af5becab9aa3ea3829ca">Assignment</a>
+| <a class="reference external" href="%24CANVAS_OBJECT_REFERENCE%24/discussion_topics/i72c5561508c841b38aa31c3d12c9e1c7">Code
+Talk</a></p>
+</div></div><div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>When something goes wrong in your code, most programmers’ first
+intuition is to insert a print statement. A print statement can help you
+answer questions like, “What&nbsp;is the value of variable&nbsp;<em>x</em> just before
+my code crashes? Does my code crash only when&nbsp;<em>x</em> has that value, or
+does it crash all the time?” This “print statement debugging” is how
+most new programmers begin investigating failures in their code.</p>
+<p>This lesson will teach you two new, awesome and professional ways to
+debug your code: logging and debugging.</p>
+<p>Logging takes the idea of printing statements from your code and brings
+it to the next level. You’ll be able to selectively hide or show
+different logging messages, and send them to the console, into log
+files, or across the internet into log servers.</p>
+<p>Then we’ll use the interactive Python debugger. The debugger lets you
+“get into the head” of the Python interpreter. We will step through each
+line of code as it’s executed by Python, with an extra opportunity to
+print out the values of variables or evaluate extra statements before
+moving on to the next line of code. And&nbsp;you can transfer the skills you
+learn in Python’s debugger into the debuggers of many other languages.</p>
+</div>
+<div class="section" id="learning-objectives">
+<h2>Learning Objectives<a class="headerlink" href="#learning-objectives" title="Permalink to this headline">¶</a></h2>
+<p>Upon successful completion of this lesson, you will be able to:</p>
+<ul class="simple">
+<li>Create log messages of different importance levels.</li>
+<li>Selectively hide or show log messages based on their importance.</li>
+<li>Send log messages to a log file.</li>
+<li>Send log messages across the internet to a central logging server.</li>
+<li>Step through program execution in Python’s interactive debugger.</li>
+<li>Set breakpoints and conditional breakpoints within a program’s
+execution.</li>
+<li>Use a debugger to diagnose, describe, and correct the failure of a
+Python script.</li>
+</ul>
+</div>
+<div class="section" id="new-words-concepts-and-tools">
+<h2>New Words, Concepts, and Tools<a class="headerlink" href="#new-words-concepts-and-tools" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>logging</li>
+<li>log levels</li>
+<li>syslog</li>
+<li>debugger</li>
+<li>pdb</li>
+<li>breakpoint</li>
+<li>“step in”</li>
+<li>continue</li>
+</ul>
+</div>
+<div class="section" id="required-reading">
+<h2>Required Reading<a class="headerlink" href="#required-reading" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><dl class="first docutils">
+<dt><a href="#id1"><span class="problematic" id="id2">`</span></a>Python’s logging library</dt>
+<dd><p class="first last">&lt;<a class="reference external" href="https://docs.python.org/3/library/logging.html">https://docs.python.org/3/library/logging.html</a>&gt;`__Spend five to</p>
+</dd>
+</dl>
+<p>ten minutes&nbsp;scanning the text for basic&nbsp;<em>familiarity</em> with the
+logging library.</p>
+</li>
+<li><p class="first"><a class="reference external" href="https://docs.python.org/3/library/pdb.html#debugger-commands">PDB
+commands</a>
+Read over just the debugger commands.</p>
+</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, University of Washington, Christopher Barker, Luis Diego Conejo, Andy Miles, Rick Riehle, Joseph Schilz. Creative Commons Attribution-ShareAlike 3.0 license
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

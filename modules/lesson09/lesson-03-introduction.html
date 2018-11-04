@@ -1,0 +1,269 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Lesson 03 Introduction &mdash; PythonCert220 2.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PythonCert220
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Exercise notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/index.html">Exercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../supplemental/index.html">Supporting materials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">External links</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PythonCert220</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Lesson 03 Introduction</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/modules/lesson09/lesson-03-introduction.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="lesson-03-introduction">
+<h1>Lesson 03 Introduction<a class="headerlink" href="#lesson-03-introduction" title="Permalink to this headline">¶</a></h1>
+<div id="menuheading"><div id="introduction" class="section"><p class="rubric" id="introduction">Introduction` &lt;#introduction&gt;`__</p>
+<p>This lesson covers several advanced Python language constructs and
+problem solving strategies, some of which are unique to Python. At
+several points these techniques bridge the gap between object oriented
+programming and functional programming, albeit the specific methods
+might lean toward one side or the other.</p>
+<div id="recommended-text" class="section"><p class="rubric" id="recommended-text">Recommended Text` &lt;#recommended-text&gt;`__</p>
+<p>For the functional programming modules, this lesson included, we
+recommend Functional Python Programming by Steven Lott.</p>
+<div class="line-block"><div class="line"><p>Publisher: Packt Publishing</p>
+</div><div class="line"><p>Pub. Date: January 31, 2015</p>
+</div><div class="line"><p>Web ISBN-13: 978-1-78439-761-6</p>
+</div><div class="line"><p>Print ISBN-13: 978-1-78439-699-2</p>
+</div><div class="line"><p><a class="reference external" href="http://bit.ly/2azI62S">http://bit.ly/2azI62S</a></p>
+</div></div><p>Each lesson’s optional readings will draw from this text.</p>
+</div><div id="learning-objectives" class="section"><p class="rubric" id="learning-objectives">Learning Objectives` &lt;#learning-objectives&gt;`__</p>
+<p>Upon successful completion of this lesson, you will be able to:</p>
+<ul class="simple">
+<li>construct decorators</li>
+<li>use context managers</li>
+<li>design and code a recursive algorithm</li>
+<li>articulate the drawbacks of recursion in Python</li>
+</ul>
+</div><div id="new-words-or-concepts" class="section"><p class="rubric" id="new-words-or-concepts">New Words or Concepts` &lt;#new-words-or-concepts&gt;`__</p>
+<ul class="simple">
+<li>Decorator</li>
+<li>Context Manager</li>
+<li>Contextlib</li>
+<li>Recursion</li>
+</ul>
+</div><div id="required-reading" class="section"><p class="rubric" id="required-reading">Required Reading` &lt;#required-reading&gt;`__</p>
+<ul>
+<li><p class="first">Decorators</p>
+<div class="line-block"><div class="line"><p><a class="reference external" href="https://en.wikipedia.org/wiki/Python_syntax_and_semantics#Decorators">https://en.wikipedia.org/wiki/Python_syntax_and_semantics#Decorators</a></p>
+</div></div></li>
+<li><p class="first">Context Managers</p>
+<div class="line-block"><div class="line"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#typecontextmanager">https://docs.python.org/3/library/stdtypes.html#typecontextmanager</a></p>
+</div><div class="line"><p><a class="reference external" href="https://jeffknupp.com/blog/2016/03/07/python-with-context-managers/">https://jeffknupp.com/blog/2016/03/07/python-with-context-managers/</a></p>
+</div></div></li>
+<li><p class="first">Recursion</p>
+<div class="line-block"><div class="line"><p><a class="reference external" href="https://en.wikipedia.org/wiki/Recursion_(computer_science">https://en.wikipedia.org/wiki/Recursion_(computer_science</a>)</p>
+</div></div></li>
+</ul>
+</div><div id="optional-reading" class="section"><p class="rubric" id="optional-reading">Optional Reading` &lt;#optional-reading&gt;`__</p>
+<ul>
+<li><p class="first">Lott, S. (2015) Chapter 11. Decorator Design Techniques. In
+Functional Python Programming.</p>
+</li>
+<li><p class="first">Lott, S. (2015) Chapter 6. Recursions and Reductions. In Functional
+Python Programming.</p>
+</li>
+<li><p class="first">Decorators</p>
+<div class="line-block"><div class="line"><p><a class="reference external" href="https://wiki.python.org/moin/PythonDecorators">https://wiki.python.org/moin/PythonDecorators</a></p>
+</div><div class="line"><p><a class="reference external" href="https://dbader.org/blog/python-decorators">https://dbader.org/blog/python-decorators</a></p>
+</div></div></li>
+<li><p class="first">Context Managers</p>
+<div class="line-block"><div class="line"><p><a class="reference external" href="https://docs.python.org/3/library/contextlib.html">https://docs.python.org/3/library/contextlib.html</a></p>
+</div><div class="line"><p><a class="reference external" href="https://www.python.org/dev/peps/pep-0343/">https://www.python.org/dev/peps/pep-0343/</a></p>
+</div></div></li>
+<li><p class="first">Recursion</p>
+<div class="line-block"><div class="line"><p><a class="reference external" href="https://pointlessprogramming.wordpress.com/tag/tail-call-optimization/">https://pointlessprogramming.wordpress.com/tag/tail-call-optimization/</a></p>
+</div></div></li>
+</ul>
+</div></div><div id="content" class="section"></div></div></div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, University of Washington, Christopher Barker, Luis Diego Conejo, Andy Miles, Rick Riehle, Joseph Schilz. Creative Commons Attribution-ShareAlike 3.0 license
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

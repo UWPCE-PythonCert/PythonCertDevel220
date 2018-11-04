@@ -1,0 +1,312 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Assignment: Lesson 08 Activity &mdash; PythonCert220 2.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PythonCert220
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Exercise notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/index.html">Exercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../supplemental/index.html">Supporting materials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">External links</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PythonCert220</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Assignment: Lesson 08 Activity</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/modules/lesson05/lesson-08-activity.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="assignment-lesson-08-activity">
+<h1>Assignment: Lesson 08 Activity<a class="headerlink" href="#assignment-lesson-08-activity" title="Permalink to this headline">¶</a></h1>
+<div id="menuheading"><p class="cah2 rubric" id="non-relational-databases">Non-Relational Databases</p>
+<div id="navbar" class="caNav grid-row around-md clearunderlinestyle"
+role="navigation"><p><a class="reference external" href="%24WIKI_REFERENCE%24/pages/lesson-08-introduction">Introduction</a> |
+<a class="reference external" href="%24WIKI_REFERENCE%24/pages/lesson-08-content">Content</a> |
+<a class="reference external" href="%24CANVAS_OBJECT_REFERENCE%24/assignments/ibe91f0cc09bbecc290b2f8a417d1cf9d">Quiz</a>&nbsp;|
+<a class="reference external" href="%24CANVAS_OBJECT_REFERENCE%24/assignments/i85a67f5992214211e1422f618383b5da">Activity</a>
+|
+<a class="reference external" href="%24CANVAS_OBJECT_REFERENCE%24/assignments/i10247fb9255383751f912e986d6fd289">Assignment</a>
+| <a class="reference external" href="%24CANVAS_OBJECT_REFERENCE%24/discussion_topics/ie7fce6e6c072d03b675b6796a45e3c25">Code
+Talk</a></p>
+</div></div><div class="section" id="nosql-exercise">
+<h2>&nbsp;nosql exercise<a class="headerlink" href="#nosql-exercise" title="Permalink to this headline">¶</a></h2>
+<p>Let’s now get our “hands dirty” with some Python code. Start by cloning
+the repo at:</p>
+<p><a class="reference external" href="https://github.com/milesak60/nosql">https://github.com/milesak60/nosql</a></p>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">You will need to install three&nbsp;modules for this program to run
+successfully. Here’s a list:</div>
+</div>
+<div
+style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">neo4j</span><span class="o">-</span><span class="n">driver</span>
+
+<span class="n">pip</span> <span class="n">install</span> <span class="n">pymongo</span>
+
+<span class="n">pip</span> <span class="n">install</span> <span class="n">redis</span>
+</pre></div>
+</div>
+</div><p>This program uses all three nosql databases we have looked at so far, as
+well as Pickle, Shelve, CSV and JSON files. The code should look very
+familiar, but not necessarily the way it is structured. It explains
+itself with logging messages at all appropriate spots.</p>
+<p>The main module is leanrnosql.py</p>
+<p>It runs examples for each of the above in turn. For mongodb it sets up
+some data first.</p>
+<p>Each of the database specific scripts deals with getting the relevant
+login information prior to running the example code.</p>
+<p>There is also some dictionary based logger setup, the intent of which is
+to drown some of the noisy logging messages that some of the database
+drivers themselves generate.</p>
+<p>Take a look at the flow of the code and get a good understanding of the
+structure and what is going on. Try changing the logger values and
+seeing the affect it has on the logging messages.</p>
+<p>When you are familiar with the code, try the following exercises:</p>
+<div class="section" id="mongodb">
+<h3>mongodb<a class="headerlink" href="#mongodb" title="Permalink to this headline">¶</a></h3>
+<p>Add some extra furniture items for mongodb. And while you’re doing that,
+separate the product field in to 2 fields; one called product type, one
+called color. Start by amending the data, then change the Mongodb
+program to store and retrieve using these new values.</p>
+<p>Next, write a mongodb query to retrieve and print just the red products,
+an the just the couches.</p>
+</div>
+<div class="section" id="redis">
+<h3>Redis<a class="headerlink" href="#redis" title="Permalink to this headline">¶</a></h3>
+<p>Add some customer data to the cache, Have Redis store a customer name,
+telephone and zip for 6 or so customers. Then show how you can retrieve
+a zip code, and then a phone number, for a known customer.</p>
+</div>
+<div class="section" id="neo4j">
+<h3>Neo4J<a class="headerlink" href="#neo4j" title="Permalink to this headline">¶</a></h3>
+<p>Add some new people to the database. Then add some colors. Create
+associations between people and their favorite colors (they can have
+more than one). Then list all of the people who have each color as their
+favorite. Can you also list all of the everyones favorite colors?</p>
+</div>
+<div class="section" id="simple-persistence-and-serialization">
+<h3>Simple persistence and serialization<a class="headerlink" href="#simple-persistence-and-serialization" title="Permalink to this headline">¶</a></h3>
+<p>Pick one of the 4 formats only. Create some data (at least 10 rows with
+about 5 fields in each). Show how you can read and write data in that
+format. For an extra assignment, write a program that reads form one
+format and converts to another.</p>
+<p><strong>Submitting Your Work</strong></p>
+<p>Put the&nbsp;file(s) (ex: a_new_file.py) in your student directory in a new
+subdirectory named for this lesson, and add it to your clone early (git
+add a_new_file.py). Make frequent commits with good, clear messages
+about what you’re doing and why.</p>
+<p>When you’re done and ready for the instructors to review your work, push
+your changes to your GitHub fork (git push) and then go to the GitHub
+website and make a pull request. Copy the link to the pull request.</p>
+<p>Click&nbsp;the Submit Assignment button in the upper right.</p>
+<p>Part 1: File(s)</p>
+<p>Use the&nbsp;Choose File&nbsp;button to find and select the saved&nbsp;.py file or, if
+there are multiple files for the assignment, the .zip file.</p>
+<p>Part 2: GitHub Link</p>
+<p>Paste the GitHub link to the pull request in the comments area.</p>
+<p>Click the&nbsp;Submit Assignment button.</p>
+</div>
+<div class="section" id="submitting-your-work">
+<h3>Submitting Your Work<a class="headerlink" href="#submitting-your-work" title="Permalink to this headline">¶</a></h3>
+<p>Put the&nbsp;file(s) (ex: a_new_file.py) in your student directory in a new
+subdirectory named for this lesson, and add it to your clone early (git
+add a_new_file.py). Make frequent commits with good, clear messages
+about what you’re doing and why.</p>
+<p>When you’re done and ready for the instructors to review your work, push
+your changes to your GitHub fork (git push) and then go to the GitHub
+website and make a pull request. Copy the link to the pull request.</p>
+<p>Click&nbsp;the <em>Submit Assignment</em> button in the upper right.</p>
+<p><strong>Part 1: File(s)</strong></p>
+<p>Use the&nbsp;<em>Choose File</em>&nbsp;button to find and select the saved&nbsp;.py file or,
+if there are multiple files for the assignment, the .zip file.</p>
+<p><strong>Part 2: GitHub Link</strong></p>
+<p>Paste the GitHub link to the pull request in the comments area.</p>
+<p>Click the&nbsp;<em>Submit Assignment</em> button.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, University of Washington, Christopher Barker, Luis Diego Conejo, Andy Miles, Rick Riehle, Joseph Schilz. Creative Commons Attribution-ShareAlike 3.0 license
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

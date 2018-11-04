@@ -1,0 +1,424 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Lesson 04.02 Iterators and Iterables &mdash; PythonCert220 2.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PythonCert220
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Lesson content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">External links</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PythonCert220</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Lesson 04.02 Iterators and Iterables</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/modules/lesson04/02_02_lesson-01-dot-02-iterators-and-iterables.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="lesson-04-02-iterators-and-iterables">
+<h1>Lesson 04.02 Iterators and Iterables<a class="headerlink" href="#lesson-04-02-iterators-and-iterables" title="Permalink to this headline">¶</a></h1>
+<p>Iterators and Iterables are key language features of Python 3, that help
+to make code easy to write and maintain.</p>
+<p>First, we are going to look at some background from Python 2, before moving on
+to cover the main topic.</p>
+<div class="section" id="background">
+<h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h2>
+<p>Python used to be all about sequences — a good chunk of anything you
+did was stored in a sequence or involved manipulating a sequence.</p>
+<ul class="simple">
+<li>lists</li>
+<li>tuples</li>
+<li>strings</li>
+<li>dict.keys()</li>
+<li>dict.values()</li>
+<li>dict.items()</li>
+<li>zip()</li>
+</ul>
+<blockquote>
+<div>In <strong>python2</strong> those are all sequences.&nbsp; It turns out, however, that
+the most common operation for sequences is to iterate through them:</div></blockquote>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">a_sequence</span><span class="p">:</span>
+    <span class="n">do_something_with_item</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">So fairly early in Python2, Python introduced the idea of the
+“iterable”.&nbsp; An iterable is something you can, well, iterate over in a
+for loop, but often does not keep the whole sequence in memory at
+once.&nbsp; After all, why make a copy of something just to look at all its
+items?</div>
+<div class="line">For example, in python2: ``dict.keys()`` returns a list of all the
+keys in the dict.&nbsp; But why make a full copy of all the keys, when all
+you want to do is:</div>
+<div class="line">&nbsp;&nbsp;&nbsp; for key in dict.keys():</div>
+<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; do_something_with(key)</div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">Even worse ``dict.items()`` created a full list of
+``(key,value)`` tuples — a complete copy of all the data in the
+dict.&nbsp; Yet worse ``enumerate(dict.items())`` created a whole list
+of</div>
+<div class="line">``(index, (key, value))`` tuples — lots of copies of everything.</div>
+<div class="line">Python2 then introduced “iterable” versions of a number of functions
+and methods:</div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">itertools.izip</div>
+<div class="line">dict.iteritems()</div>
+<div class="line">dict.iterkeys()</div>
+<div class="line">dict.itervalues()</div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">So you could now iterate through that stuff without copying anything.</div>
+</div>
+</div>
+<div class="section" id="python-3">
+<h2>Python 3<a class="headerlink" href="#python-3" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><strong>Python3</strong> embraces iterables — now everything that can be an
+iterator is already an iterator — no unnecessary copies.&nbsp; An
+iterator is an iterable that has been made more efficient by removing
+as much from memory as possible.&nbsp;Therefore, if you need a list, you
+have to make the list explicitly, as in:</div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="nb">dict</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>Also, there is an entire module: ``itertools`` that provides nifty
+ways to iterate through stuff.&nbsp; So, while we used to think in terms of
+sequences, we can now think in terms of iterables.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">Iterators and Iterables</div>
+<div class="line">Let’s see an example of how Iteration makes Python code so readable:</div>
+<div class="line">.. code-block:: python</div>
+<div class="line">&nbsp;&nbsp;&nbsp; for x in just_about_anything:</div>
+<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; do_stuff(x)</div>
+<div class="line">An iterable is anything that can be looped over sequentially, so it
+does not have to be a “sequence”: list, tuple, etc.&nbsp; For example, a
+string is iterable. So is a set.</div>
+<div class="line">An iterator is an iterable that remembers state. All sequences are
+iterable, but not all sequences are iterators. To make a sequence an
+iterator, you can call it with iter:</div>
+<div class="line">.. code-block:: python</div>
+<div class="line">&nbsp;&nbsp; my_iter = iter(my_sequence)</div>
+<div class="line">Iterables</div>
+<div class="line">———</div>
+<div class="line">To make an object iterable, you simply have to implement the
+__getitem__ method.</div>
+<div class="line">.. code-block:: python</div>
+<div class="line">&nbsp;&nbsp;&nbsp; class T:</div>
+<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; def __getitem__(self, position):</div>
+<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if position &gt; 5:</div>
+<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; raise IndexError</div>
+<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return position</div>
+<div class="line">iter()</div>
+<div class="line">——</div>
+<div class="line">How do you get the iterator object from an “iterable”?&nbsp; The iter()
+function will make any iterable an iterator.&nbsp; It first looks for the
+__iter__() method, and if none is found, uses get_item to create
+the iterator.&nbsp; The ``iter()`` function:</div>
+<div class="line">.. code-block:: ipython</div>
+<div class="line">&nbsp;&nbsp;&nbsp; In []: iter([2,3,4])</div>
+<div class="line">&nbsp;&nbsp;&nbsp; Out[]: &lt;listiterator at 0x101e01350&gt;</div>
+<div class="line">&nbsp;&nbsp;&nbsp; In []: iter(“a string”)</div>
+<div class="line">&nbsp;&nbsp;&nbsp; Out[]: &lt;iterator at 0x101e01090&gt;</div>
+<div class="line">&nbsp;&nbsp;&nbsp; In []: iter( (‘a’, ‘tuple’) )</div>
+<div class="line">&nbsp;&nbsp;&nbsp; Out[]: &lt;tupleiterator at 0x101e01710&gt;</div>
+<div class="line">List as an Iterator</div>
+<div class="line">——————-</div>
+<div class="line">.. code-block:: ipython</div>
+<div class="line">&nbsp;&nbsp;&nbsp; In []: a_list = [1,2,3]</div>
+<div class="line">&nbsp;&nbsp;&nbsp; In []: list_iter = iter(a_list)</div>
+<div class="line">&nbsp;&nbsp;&nbsp; In []: next(list_iter)</div>
+<div class="line">&nbsp;&nbsp;&nbsp; Out[]: 1</div>
+<div class="line">&nbsp;&nbsp;&nbsp; In []: next(list_iter)</div>
+<div class="line">&nbsp;&nbsp;&nbsp; Out[]: 2</div>
+<div class="line">&nbsp;&nbsp;&nbsp; In []: next(list_iter)</div>
+<div class="line">&nbsp;&nbsp;&nbsp; Out[]: 3</div>
+<div class="line">&nbsp;&nbsp;&nbsp; In []: next(list_iter)</div>
+<div class="line">&nbsp;&nbsp;&nbsp; ————————————————–</div>
+<div class="line">&nbsp;&nbsp;&nbsp; StopIteration&nbsp;&nbsp;&nbsp;&nbsp; Traceback (most recent call last)</div>
+<div class="line">&nbsp;&nbsp;&nbsp; &lt;ipython-input-15-1a7db9b70878&gt; in &lt;module&gt;()</div>
+<div class="line">&nbsp;&nbsp;&nbsp; —-&gt; 1 next(list_iter)</div>
+<div class="line">&nbsp;&nbsp;&nbsp; StopIteration:</div>
+<div class="line">Use iterators when you can</div>
+<div class="line">————————–</div>
+<div class="line">Consider the example from the trigrams problem:</div>
+<div class="line">(<a class="reference external" href="http://codekata.com/kata/kata14-tom-swift-under-the-milkwood/">http://codekata.com/kata/kata14-tom-swift-under-the-milkwood/</a>)</div>
+<div class="line">You have a list of words and you want to go through it, three at a
+time, and match up pairs with the following word.</div>
+<div class="line">The *non-pythonic* way to do that is to loop through the indices:</div>
+<div class="line">.. code-block:: python</div>
+<div class="line">&nbsp;&nbsp;&nbsp; for i in range(len(words)-2):</div>
+<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; triple = words[i:i+3]</div>
+<div class="line">It works, and is fairly efficient, but what about:</div>
+<div class="line">.. code-block:: python</div>
+<div class="line">&nbsp;&nbsp;&nbsp; for triple in zip(words[:-2], words[1:-1], words[2:-2]):</div>
+<div class="line">zip() returns an iterable — it does not build up the whole list, so
+this is quite efficient.&nbsp; However, we are still slicing: ([1:]), which
+produces a copy — so we are creating three copies of the list —
+not so good if memory is tight.&nbsp; Note that they are shallow copies, so
+this is not terribly bad.&nbsp; Nevertheless, we can do better.</div>
+<div class="line">The ``itertools`` module has a ``islice()`` (iterable slice)
+function.&nbsp; It returns an iterator over a slice of a sequence — so no
+more copies:</div>
+<div class="line">.. code-block:: python</div>
+<div class="line">&nbsp;&nbsp;&nbsp; from itertools import islice</div>
+<div class="line">&nbsp;&nbsp;&nbsp; triplets = zip(words, islice(words, 1, None), islice(words, 2,
+None))</div>
+<div class="line">&nbsp;&nbsp;&nbsp; for triplet in triplets:</div>
+<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print(triplet)</div>
+<div class="line">&nbsp;&nbsp;&nbsp; (‘this’, ‘that’, ‘the’)</div>
+<div class="line">&nbsp;&nbsp;&nbsp; (‘that’, ‘the’, ‘other’)</div>
+<div class="line">&nbsp;&nbsp;&nbsp; (‘the’, ‘other’, ‘and’)</div>
+<div class="line">&nbsp;&nbsp;&nbsp; (‘other’, ‘and’, ‘one’)</div>
+<div class="line">&nbsp;&nbsp;&nbsp; (‘and’, ‘one’, ‘more’)</div>
+<div class="line">The Iterator Protocol</div>
+<div class="line">———————-</div>
+<div class="line">The main thing that differentiates an iterator from an iterable
+(sequence) is that an iterator saves state.&nbsp; An iterable must have the
+following methods:</div>
+<div class="line">.. code-block:: python</div>
+<div class="line">&nbsp;&nbsp;&nbsp; an_iterator.__iter__()</div>
+<div class="line">Usually returns the iterator object itself.</div>
+<div class="line">.. code-block:: python</div>
+<div class="line">&nbsp;&nbsp;&nbsp; an_iterator.__next__()</div>
+<div class="line">Returns the next item from the container. If there are no further
+items it raises the ``StopIteration`` exception.</div>
+<div class="line">Making an Iterator</div>
+<div class="line">——————-</div>
+<div class="line">A simple version of ``range()``</div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">IterateMe_1</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stop</span><span class="o">=</span><span class="mi">5</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">stop</span> <span class="o">=</span> <span class="n">stop</span>
+    <span class="k">def</span> <span class="nf">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span>
+    <span class="k">def</span> <span class="nf">__next__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">current</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">stop</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">current</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">current</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">StopIteration</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">What does for do?</div>
+<div class="line">Now that we know the iterator protocol, we can write something like a
+for loop:</div>
+<div class="line">:download:`my_for.py
+&lt;../examples/iterators_generators/my_for.py&gt;`</div>
+<div class="line">.. code-block:: python</div>
+<div class="line">&nbsp;&nbsp;&nbsp; def my_for(an_iterable, func):</div>
+<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “”“</div>
+<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Emulation of a for loop.</div>
+<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; func() will be called with each item in an_iterable</div>
+<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “”“</div>
+<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # equiv of “for i in l:”</div>
+<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; iterator = iter(an_iterable)</div>
+<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; while True:</div>
+<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; try:</div>
+<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; i = next(iterator)</div>
+<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; except StopIteration:</div>
+<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break</div>
+<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; func(i)</div>
+</div>
+</div>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>Iterators and Iterables are fundamental concepts in Python. Although the language
+can be confusing, the underlying concepts are quite straightforward.
+In the lesson assignment you will have opportunities to practice and apply using them.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, University of Washington, Christopher Barker, Luis Diego Conejo, Andy Miles, Rick Riehle, Joseph Schilz. Creative Commons Attribution-ShareAlike 3.0 license
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

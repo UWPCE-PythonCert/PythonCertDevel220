@@ -1,0 +1,250 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Case Study : H.P. Norton Furniture Rentals LLC &mdash; PythonCert220 2.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PythonCert220
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Exercise notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/index.html">Exercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../supplemental/index.html">Supporting materials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">External links</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PythonCert220</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Case Study : H.P. Norton Furniture Rentals LLC</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/modules/lesson00/0x_case_study.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="case-study-h-p-norton-furniture-rentals-llc">
+<h1>Case Study : H.P. Norton Furniture Rentals LLC<a class="headerlink" href="#case-study-h-p-norton-furniture-rentals-llc" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="background">
+<h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h2>
+<p>15 years ago, Howard Norton formed his furniture rental business in a small rural town in the Western United States. Howard operates an efficient, family run company that focuses on customer service and individual customer attention.</p>
+<p>Always profitable, the business has continued to grow, but is now starting to have a few issues handling increased business volume.</p>
+<p>The town (and surrounding area) where Howard operates has seen explosive growth. This came about due to the establishment of many technology companies. These companies take advantage of the affordable local power, excellent living conditions for staff and large supply of labor. Lots of younger people are moving to the area and residing in apartments, making an ideal market for furniture rental.</p>
+<p>Howard has now realized that his business could be at risk if he is not able cope with a significant upturn in demand for rented furniture. Therefore, after discussing his concerns with his accountants, Howard has hired a developer on a contract basis. The developer will help Howard to build the back end IT infrastructure to help his business grow, while retaining its core value of providing personalized customer service. Note that the front end, web functionality is beyond the scope of the assignment. All functionality will be run from the command line or from tests.</p>
+</div>
+<div class="section" id="current-situation">
+<h2>Current Situation<a class="headerlink" href="#current-situation" title="Permalink to this headline">¶</a></h2>
+<p>What follows is a summary of the way that the furniture rental business currently works.</p>
+</div>
+<div class="section" id="sales">
+<h2>Sales<a class="headerlink" href="#sales" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Customers and prospective customers browse products in the store.</li>
+<li>Customers, with help from sales staff, fill out a “Rental Requisition
+Form”, which specifies the products they have selected, delivery address,
+and credit details.</li>
+</ul>
+<p>It is a 4 part NCR form.</p>
+<ul class="simple">
+<li>Part 1 of the form is retained at the service desk.</li>
+<li>Parts 2 and 3 are sent to the delivery department.</li>
+<li>Part 4 is given to the customer.</li>
+</ul>
+</div>
+<div class="section" id="delivery-department">
+<h2>Delivery department<a class="headerlink" href="#delivery-department" title="Permalink to this headline">¶</a></h2>
+<p>Receives Rental Requisition Forms around every hour from the service desk</p>
+<p>The delivery staff go to the showroom and mark the items listed on the Rental Requisition Forms as reserved (by attaching a slip with the relevant order number to the item). They add the items on the Rental Requisition Form to the delivery schedule for the date specified by the customer.</p>
+<p>Prior to showroom opening on the delivery date, the delivery staff move the items from the showroom to the loading dock.</p>
+<p>The items are loaded on the truck and delivered, with copy 3 of the Rental Requisition Form.</p>
+<p>On delivery, copy 3 is signed by the customer to confirm delivery.</p>
+<p>On return to the office, copy 3 is returned to the service desk. If the rental is for a fixed contract period, copy 3 is added to the file for the respective return date.</p>
+</div>
+<div class="section" id="flow-chart">
+<h2>Flow Chart<a class="headerlink" href="#flow-chart" title="Permalink to this headline">¶</a></h2>
+<p>TBD</p>
+</div>
+</div>
+<div class="section" id="your-role">
+<h1>Your Role<a class="headerlink" href="#your-role" title="Permalink to this headline">¶</a></h1>
+<p>You are one of developers on a team that has been commissioned to work on the project  for H.P. Norton Furniture Rentals. This development team is lead by a Product Owner, who interacts directly with H.P. Norton to understand their requirements and assigns the different activities, or stories, required by the project to the members of the team, including you.</p>
+<p>As you progress through the course, you will be working on several stories given to you by your Product Owner in the form of assignments, all related to the overall goal of bringing the project to a successful completion. Each assignment will have a number of requirements that need to be fulfilled for the Product Owner to consider the story completed.</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, University of Washington, Christopher Barker, Luis Diego Conejo, Andy Miles, Rick Riehle, Joseph Schilz. Creative Commons Attribution-ShareAlike 3.0 license
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

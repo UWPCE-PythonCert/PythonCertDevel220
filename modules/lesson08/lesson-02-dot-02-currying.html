@@ -1,0 +1,321 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Lesson 02.02 Currying &mdash; PythonCert220 2.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PythonCert220
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Exercise notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/index.html">Exercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../supplemental/index.html">Supporting materials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">External links</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PythonCert220</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Lesson 02.02 Currying</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/modules/lesson08/lesson-02-dot-02-currying.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="lesson-02-02-currying">
+<h1>Lesson 02.02 Currying<a class="headerlink" href="#lesson-02-02-currying" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://rriehle.github.io/FP3/build/html/index.html#currying">https://rriehle.github.io/FP3/build/html/index.html#currying</a></p>
+<p>{{VIDEO HERE}}</p>
+<div id="currying" class="section"><p class="rubric" id="currying">Currying` &lt;<a class="reference external" href="https://rriehle.github.io/FP3/build/html/index.html#currying">https://rriehle.github.io/FP3/build/html/index.html#currying</a>&gt;`__</p>
+<p>“Currying” is a special case of closures:</p>
+<p>The idea behind currying is that you may have a function with a number
+of parameters, and you want to make a specialized version that function
+with a couple parameters pre-set.</p>
+<div id="real-world-example" class="section"><p class="rubric" id="real-world-example">Real world
+Example` &lt;<a class="reference external" href="https://rriehle.github.io/FP3/build/html/index.html#real-world-example">https://rriehle.github.io/FP3/build/html/index.html#real-world-example</a>&gt;`__</p>
+<p>I was writing some code to compute the concentration of a contaminant in
+a river, as it was reduced by exponential decay, defined by a half-life:</p>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Half-life">https://en.wikipedia.org/wiki/Half-life</a></p>
+<p>So I wanted a function that would compute how much the concentration
+would reduce as a function of time – that is:</p>
+<div class="highlight-python"><div class="highlight"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">scale</span><span class="p">(</span><span class="n">time</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">scale_factor</span>
+</pre></div>
+</div>
+</div></div><p>The trick is, how much the concentration would be reduced depends on
+both time and the half life. And for a given material, and given flow
+conditions in the river, that half life is pre-determined. Once you know
+the half-life, the scale is given by:</p>
+<p>scale = 0.5 ** (time / (half_life))</p>
+<p>So to compute the scale, I could pass that half-life in each time I
+called the function:</p>
+<div class="highlight-python"><div class="highlight"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">scale</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">half_life</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mf">0.5</span> <span class="o">**</span> <span class="p">(</span><span class="n">time</span> <span class="o">/</span> <span class="p">(</span><span class="n">half_life</span><span class="p">))</span>
+</pre></div>
+</div>
+</div></div><p>But this is a bit klunky – I need to keep passing that half_life
+around, even though it isn’t changing. And there are places, like
+<code class="docutils literal notranslate"><span class="pre">map</span></code> that require a function that takes only one argument!</p>
+<p>What if I could create a function, on the fly, that had a particular
+half-life “baked in”?</p>
+<p><em>Enter Currying</em> – Currying is a technique where you reduce the number
+of parameters that function takes, creating a specialized function with
+one or more of the original parameters set to a particular value. Here
+is that technique, applied to the half-life decay problem:</p>
+<div class="highlight-python"><div class="highlight"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_scale_fun</span><span class="p">(</span><span class="n">half_life</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">half_life</span><span class="p">(</span><span class="n">time</span><span class="p">)</span>
+        <span class="k">return</span> <span class="mf">0.5</span> <span class="o">**</span> <span class="p">(</span><span class="n">time</span> <span class="o">/</span> <span class="n">half_life</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">half_life</span>
+</pre></div>
+</div>
+</div></div><p><strong>NOTE:</strong> This is simple enough to use a lambda for a bit more compact
+code:</p>
+<div class="highlight-python"><div class="highlight"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_scale_fun</span><span class="p">(</span><span class="n">half_life</span><span class="p">):</span>
+    <span class="k">return</span> <span class="k">lambda</span> <span class="n">time</span><span class="p">:</span> <span class="mf">0.5</span> <span class="o">**</span> <span class="p">(</span><span class="n">time</span> <span class="o">/</span> <span class="n">half_life</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></div><div id="using-the-curried-function" class="section"><p class="rubric" id="using-the-curried-function">Using the Curried
+Function` &lt;<a class="reference external" href="https://rriehle.github.io/FP3/build/html/index.html#using-the-curried-function">https://rriehle.github.io/FP3/build/html/index.html#using-the-curried-function</a>&gt;`__</p>
+<p>Create a scale function with a half-life of one hour:</p>
+<div class="highlight-ipython"><div class="highlight"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">8</span><span class="p">]:</span> <span class="n">scale</span> <span class="o">=</span> <span class="n">get_scale_fun</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">9</span><span class="p">]:</span> <span class="p">[</span><span class="n">scale</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">7</span><span class="p">)]</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">9</span><span class="p">]:</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.125</span><span class="p">,</span> <span class="mf">0.0625</span><span class="p">,</span> <span class="mf">0.03125</span><span class="p">,</span> <span class="mf">0.015625</span><span class="p">]</span>
+</pre></div>
+</div>
+</div></div><p>The value is reduced by half every hour.</p>
+<p>Now create one with a half life of 2 hours:</p>
+<div class="highlight-ipython"><div class="highlight"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">10</span><span class="p">]:</span> <span class="n">scale</span> <span class="o">=</span> <span class="n">get_scale_fun</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">11</span><span class="p">]:</span> <span class="p">[</span><span class="n">scale</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">7</span><span class="p">)]</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">11</span><span class="p">]:</span>
+<span class="p">[</span><span class="mf">1.0</span><span class="p">,</span>
+ <span class="mf">0.7071067811865476</span><span class="p">,</span>
+ <span class="mf">0.5</span><span class="p">,</span>
+ <span class="mf">0.3535533905932738</span><span class="p">,</span>
+ <span class="mf">0.25</span><span class="p">,</span>
+ <span class="mf">0.1767766952966369</span><span class="p">,</span>
+ <span class="mf">0.125</span><span class="p">]</span>
+</pre></div>
+</div>
+</div></div><p>And the value is reduced by half every two hours…</p>
+<p>And it can be used with <code class="docutils literal notranslate"><span class="pre">map</span></code>, too:</p>
+<div class="highlight-ipython"><div class="highlight"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">13</span><span class="p">]:</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">scale</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">7</span><span class="p">)))</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">13</span><span class="p">]:</span>
+<span class="p">[</span><span class="mf">1.0</span><span class="p">,</span>
+ <span class="mf">0.7071067811865476</span><span class="p">,</span>
+ <span class="mf">0.5</span><span class="p">,</span>
+ <span class="mf">0.3535533905932738</span><span class="p">,</span>
+ <span class="mf">0.25</span><span class="p">,</span>
+ <span class="mf">0.1767766952966369</span><span class="p">,</span>
+ <span class="mf">0.125</span><span class="p">]</span>
+</pre></div>
+</div>
+</div></div></div></div><div id="functools-partial" class="section"><p class="rubric" id="functools-partial"><code class="docutils literal notranslate"><span class="pre">functools.partial</span></code>` &lt;<a class="reference external" href="https://rriehle.github.io/FP3/build/html/index.html#functools-partial">https://rriehle.github.io/FP3/build/html/index.html#functools-partial</a>&gt;`__</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">functools</span></code> module in the standard library provides utilities for
+working with functions:</p>
+<p><a class="reference external" href="https://docs.python.org/3.5/library/functools.html">https://docs.python.org/3.5/library/functools.html</a></p>
+<p>Creating a curried function turns out to be common enough that the
+<code class="docutils literal notranslate"><span class="pre">functools.partial</span></code> function provides an optimized way to do it:</p>
+<p>What functools.partial does is:</p>
+<blockquote>
+<div><div><ul class="simple">
+<li>Makes a new version of a function with one or more arguments
+already filled in.</li>
+<li>The new version of a function documents itself.</li>
+</ul>
+</div></div></blockquote>
+<p>Example:</p>
+<div class="highlight-python"><div class="highlight"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">power</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">exponent</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;returns based raised to the give exponent&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">base</span> <span class="o">**</span> <span class="n">exponent</span>
+</pre></div>
+</div>
+</div></div><p>Simple enough. but what if we wanted a specialized <code class="docutils literal notranslate"><span class="pre">square</span></code> and
+<code class="docutils literal notranslate"><span class="pre">cube</span></code> function?</p>
+<p>We can use <code class="docutils literal notranslate"><span class="pre">functools.partial</span></code> to <em>partially</em> evaluate the function,
+giving us a specialized version:</p>
+<div class="highlight-python"><div class="highlight"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">square</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">power</span><span class="p">,</span> <span class="n">exponent</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">cube</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">power</span><span class="p">,</span> <span class="n">exponent</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></div></div></div></div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, University of Washington, Christopher Barker, Luis Diego Conejo, Andy Miles, Rick Riehle, Joseph Schilz. Creative Commons Attribution-ShareAlike 3.0 license
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

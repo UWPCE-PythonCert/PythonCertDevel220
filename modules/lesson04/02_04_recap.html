@@ -1,0 +1,339 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Recap &mdash; PythonCert220 2.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Lesson 4 : Assignment" href="99_assignment.html" />
+    <link rel="prev" title="Lesson 04.03 Generators" href="02_03_lesson-04-dot-03-generators.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PythonCert220
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Lesson content</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#py220-advanced-python-programming">Py220: Advanced Python Programming</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../lesson00/index.html">Lesson 0 : Preclass</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson01/index.html">Lesson 1 : Automated Testing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson02/index.html">Lesson 2 : Logging &amp; Debuging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson03/index.html">Lesson 3 : Relational databases</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Lesson 4 : Functional Programming 2</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="00_prerequisites.html">Python 220 Advanced Python Programming</a></li>
+<li class="toctree-l4"><a class="reference internal" href="01_lesson-04-introduction.html">Lesson 04 Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="02_00_lesson-04-starting-with-expression-flow-control-and-comprehensions.html">Lesson 04: Starting with Expression Flow Control and Comprehensions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="02_01_lesson-04-dot-01-lambda.html">Lesson 04.01 Lambda</a></li>
+<li class="toctree-l4"><a class="reference internal" href="02_02_lesson-04-dot-02-iterators-and-iterables.html">Lesson 04.02 Iterators and Iterables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="02_03_lesson-04-dot-03-generators.html">Lesson 04.03 Generators</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Recap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="99_assignment.html">Lesson 4 : Assignment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="office_hours1_recaps.html">Office Hours : Recaps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="office_hours2_all.html">Office Hours : This weeks’ content</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson05/index.html">Lesson 5 : Consuming APIs with NoSQL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson06/index.html">Lesson 6 : Profiling and performance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson07/index.html">Lesson 7 : Currency and async</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson08/index.html">Lesson 8 : Functional Programming 3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson09/index.html">Lesson 9 : Advanced Python language constructs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson10/index.html">Lesson 10 : Metaprogramming</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">External links</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PythonCert220</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Lesson content</a> &raquo;</li>
+        
+          <li><a href="index.html">Lesson 4 : Functional Programming 2</a> &raquo;</li>
+        
+      <li>Recap</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/modules/lesson04/02_04_recap.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="recap">
+<h1>Recap<a class="headerlink" href="#recap" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="iterator">
+<h2>Iterator<a class="headerlink" href="#iterator" title="Permalink to this headline">¶</a></h2>
+<p>An iterator is a stateful helper object that will produce the next value when you call
+next() on it. Any object that has a __next__() method is therefore an iterator. How it produces a
+value is irrelevant.
+Think of an iterator is a value factory. Each time you ask it for “the next” value, it knows how to compute it
+because it holds internal state.</p>
+</div>
+<div class="section" id="iterables">
+<h2>Iterables<a class="headerlink" href="#iterables" title="Permalink to this headline">¶</a></h2>
+<p>Iterable objects are objects that conform to the “Iteration
+Protocol” and can hence be used in a loop. They always return an iterator.</p>
+<p>This protocol consists in two methods:
+* the “__iter__” method that returns the object we would to iterate over and
+* the “__next__” method that is called automatically on each iteration</p>
+<p>and that returns the value for the current iteration.</p>
+<p>Often, for pragmatic reasons, iterable classes will implement both __iter__() and __next__() in
+the same class, and have __iter__() return self , which makes the class both an iterable and its
+own iterator. It is perfectly fine to return a different object as the iterator though.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># here range() is an iterable object...</span>
+<span class="c1"># at each iteration i is given a different value</span>
+<span class="c1"># values returned one value at a time</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">50</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You can create your own iterable by implementing the iteration protocol.</p>
+<p>and now let’s prove an iterator is stateful…</p>
+</div>
+<div class="section" id="generators">
+<h2>Generators<a class="headerlink" href="#generators" title="Permalink to this headline">¶</a></h2>
+<p>Generators in Python are just another way of creating iterable objects.
+They are usually used when you need to create iterable object quickly,
+without the need of creating a class and adopting the iteration protocol. They are “just a function” (or a comprehension).
+They are used once; to use subsequent times you have to call the generator again.
+An iterator is usually more memory-efficient than a generator, though. And, somewhat related, generators can be faster. BUT MEASURE!</p>
+<p>This has one yield statement, but a generator can have several. For each yield the state of the generator is saved.
+All generators are iterators (but not vice versa); that is, Generator in Python is a subclass of Iterator. Try to prove this (hint issubclass() function).</p>
+</div>
+<div class="section" id="itertools">
+<h2>Itertools<a class="headerlink" href="#itertools" title="Permalink to this headline">¶</a></h2>
+<p>Purpose</p>
+<p>Itertools provides a set of memory efficient but fast tools, that can be used to provide comprehnsive looping features in pure Python. Examples include counting, repatition and grouping.</p>
+</div>
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<p>chain:</p>
+<p>count:</p>
+<p>permutations:</p>
+</div>
+<div class="section" id="optional-reading-and-references">
+<h2>Optional reading and references<a class="headerlink" href="#optional-reading-and-references" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://maryrosecook.com/blog/post/a-practical-introduction-to-functional-programming">https://maryrosecook.com/blog/post/a-practical-introduction-to-functional-programming</a></li>
+<li><a class="reference external" href="https://www.dataquest.io/blog/introduction-functional-programming-python/">https://www.dataquest.io/blog/introduction-functional-programming-python/</a></li>
+<li><a class="reference external" href="https://www.vinta.com.br/blog/2015/functional-programming-python/">https://www.vinta.com.br/blog/2015/functional-programming-python/</a></li>
+<li><a class="reference external" href="https://marcobonzanini.com/2015/06/08/functional-programming-in-python/">https://marcobonzanini.com/2015/06/08/functional-programming-in-python/</a></li>
+<li><a class="reference external" href="https://github.com/sfermigier/awesome-functional-python">https://github.com/sfermigier/awesome-functional-python</a></li>
+<li><a class="reference external" href="https://codesachin.wordpress.com/2016/04/03/a-practical-introduction-to-functional-programming-for-python-coders/">https://codesachin.wordpress.com/2016/04/03/a-practical-introduction-to-functional-programming-for-python-coders/</a></li>
+<li><a class="reference external" href="https://www.dataquest.io/blog/introduction-functional-programming-python/">https://www.dataquest.io/blog/introduction-functional-programming-python/</a></li>
+</ul>
+</div>
+<div class="section" id="iterators">
+<h2>Iterators<a class="headerlink" href="#iterators" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://anandology.com/python-practice-book/iterators.html">https://anandology.com/python-practice-book/iterators.html</a></li>
+<li><a class="reference external" href="https://www.programiz.com/python-programming/iterator">https://www.programiz.com/python-programming/iterator</a></li>
+<li><a class="reference external" href="https://stackoverflow.com/questions/2776829/difference-between-pythons-generators-and-iterators">https://stackoverflow.com/questions/2776829/difference-between-pythons-generators-and-iterators</a></li>
+</ul>
+</div>
+<div class="section" id="id1">
+<h2>Itertools<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://medium.com/&#64;mr_rigden/a-guide-to-python-itertools-82e5a306cdf8">https://medium.com/&#64;mr_rigden/a-guide-to-python-itertools-82e5a306cdf8</a></li>
+<li><a class="reference external" href="https://docs.python.org/3.1/library/itertools.html">https://docs.python.org/3.1/library/itertools.html</a></li>
+</ul>
+</div>
+<div class="section" id="programming-paradigms">
+<h2>Programming paradigms<a class="headerlink" href="#programming-paradigms" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Comparison_of_programming_paradigms">https://en.wikipedia.org/wiki/Comparison_of_programming_paradigms</a></li>
+<li><a class="reference external" href="https://dev.to/ericnormand/programming-paradigms-and-the-procedural-paradox">https://dev.to/ericnormand/programming-paradigms-and-the-procedural-paradox</a></li>
+</ul>
+</div>
+<div class="section" id="refactoring">
+<h2>Refactoring<a class="headerlink" href="#refactoring" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="http://blog.thedigitalcatonline.com/blog/2017/07/21/refactoring-with-test-in-python-a-practical-example/">http://blog.thedigitalcatonline.com/blog/2017/07/21/refactoring-with-test-in-python-a-practical-example/</a></li>
+<li>Classic book: <a class="reference external" href="https://martinfowler.com/books/refactoring.html">https://martinfowler.com/books/refactoring.html</a></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="99_assignment.html" class="btn btn-neutral float-right" title="Lesson 4 : Assignment" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="02_03_lesson-04-dot-03-generators.html" class="btn btn-neutral" title="Lesson 04.03 Generators" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, University of Washington, Christopher Barker, Luis Diego Conejo, Andy Miles, Rick Riehle, Joseph Schilz. Creative Commons Attribution-ShareAlike 3.0 license
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
