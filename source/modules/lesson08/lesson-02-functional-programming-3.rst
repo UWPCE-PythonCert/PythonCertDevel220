@@ -6,10 +6,10 @@ Introduction
 ============
 
 | 
-| In this third lesson on functional programming follow a string of
-  related techniques. We first look at closures and compare them to
+| In this third lesson on functional programming we will follow a string of
+  related techniques. First, we will look at closures and compare them to
   classes and objects and thereby bridge the gap between functional
-  programming and object oriented programming. We then see how closures
+  programming and object oriented programming. We will then see how closures
   form the basis of function currying, and in turn how function currying
   facilitates functional composition.
 
