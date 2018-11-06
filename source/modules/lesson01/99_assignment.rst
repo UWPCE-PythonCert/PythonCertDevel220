@@ -1,31 +1,48 @@
 Lesson 1 : Assignment
 =====================
-
-In this lesson's assignment we are going to prepare for developing the
-functionality needed for the case study. We will be using a test driven
-approach to developing a new system for HP Norton, so this week we will
-prepare a first set of tests that describe the functionality that is needed.
+Welcome to the Norton Project! The first thing our development team is trying to accomplish is to improve some of Norton Furniture's existing code. Your first assignment will
+be to look at a prototype inventory management system they had been working on internally, align the code to the best practices outlined in PEP8 and implement both unit and integration testing.   
 
 Here is what you need to do:
 ----------------------------
 
-#. Read or reread the background to the case study.
-#. List the key features of a system that you believe will address HP Norton’s
-   needs.
-#. Write around half a dozen functional tests for the case study that will
-   verify of the key features you have identified operate in line with HP
-   Norton's needs.
+#. Download the code for the inventory management system and place it in a folder called *inventory_management*.
+#. Evaluate the code using Pylint by running the following command from *outside* of the *inventory_management* folder. Use this command:
 
-Tips
-----
-Think about system features, not web pages or the UI. For example, if we
-were building a banking system a feature might be:
+    .. code-block:: python
 
-- Accept customer withdrawls providing their overdraft limit is not
-  exceeded.
-- Be creative! Think about what the furniture store might need.
-- Make sure the tests run.
-- Right now the test will all fail. That's the idea!
+        python -m pylint ./inventory_management
 
-During the class you will develop these or similar features. Then you will
- see your tests start to pass.
+#. Fix all of the issues reported by Pylint up to the point where Pylint gives the code a grade of 10.
+#. Create a file called *unit_tests.py* that will be outside of the *inventory_management* directory. You will need to add unit tests for all classes in the inventory management system to this file.
+#. Run coverage analysis on the *inventory_management* code using *unit_tests.py*. Coverage must be 90% or higher for each individual file. Use the following commands.
+    - Coverage run:
+        .. code-block:: python
+
+            python -m coverage run --source=inventory_management -m unittest unit_tests.py
+            
+    - Coverage report:
+        .. code-block:: python
+
+            python -m coverage report
+
+        Update *unit_tests.py* as required to attain 90% coverage.
+
+#. Create a file called *integration_test.py*.
+
+Other requirements:
+-------------------
+- For Pylint, remember to use the standardized *pylintrc* file provided for the class.
+- Although already stated, both of your unit and integration tests files should be placed outside of the *inventory_management* folder.
+- Remember that the 90% coverage requirement applies to each individual file in the project, not overall coverage.
+- You cannot modify the *market_prices* module. That means you will need to use *Mock* or *MagicMock* to simulate values returned by it.
+- When coding unit testing for *main.py*, it has to be in isolation from the project's classes, so will need to use *Mock* or *MagicMock* to simulate their return values.
+
+Testing
+-------
+
+Passing Pylint, unit and integration tests and coverage analysis should be enough to give you confidence that your code will be accepted by the Project Manager.
+
+Submission
+----------
+You will need to submit the *inventory_management* folder will all your improvements, as well as the *unit_tests.py* and *integration_test.py* files.
