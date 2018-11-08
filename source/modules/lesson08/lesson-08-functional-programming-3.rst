@@ -5,11 +5,17 @@ Lesson 08 Functional Programming 3
 Introduction
 ============
 
+<<<<<<< HEAD:source/modules/lesson08/lesson-08-functional-programming-3.rst
 |
 | In this third lesson on functional programming follow a string of
   related techniques. We first look at closures and compare them to
+=======
+| 
+| In this third lesson on functional programming we will follow a string of
+  related techniques. First, we will look at closures and compare them to
+>>>>>>> 17d13706f25cf27e72a63395712346513d3b3c30:source/modules/lesson08/lesson-02-functional-programming-3.rst
   classes and objects and thereby bridge the gap between functional
-  programming and object oriented programming. We then see how closures
+  programming and object oriented programming. We will then see how closures
   form the basis of function currying, and in turn how function currying
   facilitates functional composition.
 

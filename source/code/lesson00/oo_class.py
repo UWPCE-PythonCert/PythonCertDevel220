@@ -20,3 +20,5 @@ mypet = Pet("Goldie") # i am an object: an instance of the class Pet
 print(mypet.name)
 print(mypet.speak())
 print(mypet.swim())
+import sphinx
+import pytest
