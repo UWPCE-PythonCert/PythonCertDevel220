@@ -2,17 +2,6 @@
 Lesson 03 Introduction
 ======================
 
-.. raw:: html
-
-   <div id="menuheading">
-
-.. raw:: html
-
-   <div id="introduction" class="section">
-
-.. rubric:: Introduction\ ` <#introduction>`__
-   :name: introduction
-
 This lesson covers several advanced Python language constructs and
 problem solving strategies, some of which are unique to Python. At
 several points these techniques bridge the gap between object oriented

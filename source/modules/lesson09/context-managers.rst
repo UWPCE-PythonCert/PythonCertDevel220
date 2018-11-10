@@ -1,11 +1,9 @@
-=============================
-Lesson 03.02 Context Managers
-=============================
+===========================
+Lesson 3.2 Context Managers
+===========================
 
 Context Managers
 ================
-
- 
 
 You've seen the 'with' statement -- probably when working with files.
 Now you'll learn what that is all about.  A large source of repetition

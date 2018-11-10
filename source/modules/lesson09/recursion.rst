@@ -1,5 +1,5 @@
 ======================
-Lesson 03.03 Recursion
+Lesson 3.3 Recursion
 ======================
 
 {{VIDEO HERE}}
