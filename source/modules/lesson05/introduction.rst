@@ -2,36 +2,6 @@
 Lesson 05 Introduction
 ======================
 
-.. raw:: html
-
-   <div id="menuheading">
-
-.. rubric:: Non-Relational Databases
-   :name: non-relational-databases
-   :class: caH2
-
-.. raw:: html
-
-   <div id="navbar" class="caNav grid-row around-md clearunderlinestyle"
-   role="navigation">
-
-`Introduction <%24WIKI_REFERENCE%24/pages/lesson-08-introduction>`__ \|
-`Content <%24WIKI_REFERENCE%24/pages/lesson-08-content>`__ \|
-`Quiz <%24CANVAS_OBJECT_REFERENCE%24/assignments/ibe91f0cc09bbecc290b2f8a417d1cf9d>`__ \|
-`Activity <%24CANVAS_OBJECT_REFERENCE%24/assignments/i85a67f5992214211e1422f618383b5da>`__
-\|
-`Assignment <%24CANVAS_OBJECT_REFERENCE%24/assignments/i10247fb9255383751f912e986d6fd289>`__
-\| `Code
-Talk <%24CANVAS_OBJECT_REFERENCE%24/discussion_topics/ie7fce6e6c072d03b675b6796a45e3c25>`__
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
-
 Introduction
 ============
 
