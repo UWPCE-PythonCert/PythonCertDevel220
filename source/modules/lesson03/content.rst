@@ -2,35 +2,8 @@
 Lesson 03 Content
 =================
 
-.. raw:: html
-
-   <div id="menuheading">
-
-.. rubric:: Relational Databases
-   :name: relational-databases
-   :class: caH2
-
-.. raw:: html
-
-   <div id="navbar" class="caNav grid-row around-md clearunderlinestyle"
-   role="navigation">
-
-`Introduction <%24WIKI_REFERENCE%24/pages/lesson-07-introduction>`__ \|
-`Content <%24WIKI_REFERENCE%24/pages/lesson-07-content>`__ \|
-`Quiz <%24CANVAS_OBJECT_REFERENCE%24/assignments/ie39542f4274b1ba93a37a8b75f9011ef>`__ \|
-`Activity <%24CANVAS_OBJECT_REFERENCE%24/assignments/idd62db3e72b3f43a8a85b8633adf4461>`__
-\|
-`Assignment <%24CANVAS_OBJECT_REFERENCE%24/assignments/i0296493f505e23900bda7d7da2d96776>`__
-\| `Code
-Talk <%24CANVAS_OBJECT_REFERENCE%24/discussion_topics/i5023a80264163ea8cad0130f8d2b92b6>`__
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
+Background
+==========
 
 Here we are going to cover the background to why we use databases, and
 set the stage for later, when we will start to develop a Python database

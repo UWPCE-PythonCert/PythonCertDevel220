@@ -1,16 +1,6 @@
-==============================
-Assignment: Lesson 07 Activity
-==============================
-
-.. raw:: html
-
-   <div id="menuheading">
-
-.. rubric:: Relational Databases
-   :name: relational-databases
-   :class: caH2
-
-.. raw:: html
+=================
+Lesson 3 Activity
+=================
 
 Warm up for the assignment
 ==========================
