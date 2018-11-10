@@ -1,3 +1,4 @@
+=====================
 Lesson 1 : Assignment
 =====================
 Welcome to the Norton Project! The first thing our development team is trying to accomplish is to improve some of Norton Furniture's existing code. Your first assignment will

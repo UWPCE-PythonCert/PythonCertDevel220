@@ -1,36 +1,6 @@
 ======================
-Lesson 01 Introduction
+Lesson 1 Introduction
 ======================
-
-.. raw:: html
-
-   <div id="menuheading">
-
-.. rubric:: Advanced Testing
-   :name: advanced-testing
-   :class: caH2
-
-.. raw:: html
-
-   <div id="navbar" class="caNav grid-row around-md clearunderlinestyle"
-   role="navigation">
-
-`Introduction <%24WIKI_REFERENCE%24/pages/lesson-06-introduction>`__ \|
-`Content <%24WIKI_REFERENCE%24/pages/lesson-06-content>`__ \|
-`Quiz <%24CANVAS_OBJECT_REFERENCE%24/assignments/i785a5d3880dcadcaa1cd6b716d4d39a6>`__ \|
-`Activity <%24CANVAS_OBJECT_REFERENCE%24/assignments/i7d2419227ff2f1b019facc3c9bee85ff>`__
-\|
-`Assignment <%24CANVAS_OBJECT_REFERENCE%24/assignments/i935731b3c2d005ed6219d01b38544785>`__
-\| `Code
-Talk <%24CANVAS_OBJECT_REFERENCE%24/discussion_topics/i197968e655e43b6b4981d673c25fbcf2>`__
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 Introduction
 ============
