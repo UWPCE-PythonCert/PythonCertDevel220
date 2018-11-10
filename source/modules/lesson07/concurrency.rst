@@ -1,9 +1,12 @@
 
 .. _concurrency:
 
-######################
+======================
 Concurrent Programming
-######################
+======================
+
+..todo::
+  Embed {{video}} tags into Lesson 7 concurrency (Luis)
 
 What does it mean to do something "Concurrently" ? It means multiple tasks are being done at the same time. Is Concurrency the same thing as "parallelism"? Not exactly:
 

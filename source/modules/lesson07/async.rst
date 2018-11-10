@@ -1,5 +1,5 @@
 ==================
-Lesson 07.02 Async
+Lesson 7.2 Async
 ==================
 
 Video Tutorials: Async
