@@ -2,35 +2,6 @@
 Lesson 10 Introduction
 ======================
 
-.. raw:: html
-
-   <div id="menuheading">
-
-.. rubric:: Metaprogramming
-   :name: metaprogramming
-   :class: caH2
-
-.. raw:: html
-
-   <div id="navbar" class="caNav grid-row around-md clearunderlinestyle"
-   role="navigation">
-
-`Introduction <%24WIKI_REFERENCE%24/pages/lesson-04-introduction>`__ \|
-`Content <%24WIKI_REFERENCE%24/pages/lesson-04-content>`__ \|
-`Quiz  <%24CANVAS_OBJECT_REFERENCE%24/quizzes/i13b71605c62c3cd78ebd595c20e90e67>`__\ \|
-Activity \|
-`Assignment <%24CANVAS_OBJECT_REFERENCE%24/assignments/ie56dae8f75ae35df42a7bc6747d8c572>`__
-\| `Code
-Talk <%24CANVAS_OBJECT_REFERENCE%24/discussion_topics/i4df1858495d80dbc0637bfdc8f754051>`__
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
-
 Introduction
 ============
 

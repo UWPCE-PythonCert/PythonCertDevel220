@@ -1,8 +1,9 @@
+=====================
 Lesson 10 : Assignment
 =====================
 
 Here is what you need to do:
-----------------------------
+============================
 
 HP Norton has experienced explosive growth as a result of the excellent
 system that has been developed for the company. However, that has brought
