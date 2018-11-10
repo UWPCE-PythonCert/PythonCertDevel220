@@ -1,5 +1,5 @@
 ===================================================================
-Lesson 04: Starting with Expression Flow Control and Comprehensions
+Lesson 4: Starting with Expression Flow Control and Comprehensions
 ===================================================================
 
 Expression Flow Control

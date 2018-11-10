@@ -2,34 +2,6 @@
 Lesson 04 Introduction
 ======================
 
-.. raw:: html
-
-   <div id="menuheading">
-
-.. rubric:: Functional Programming 2
-   :name: functional-programming-2
-   :class: caH2
-
-.. raw:: html
-
-   <div id="navbar" class="caNav grid-row around-md clearunderlinestyle"
-   role="navigation">
-
-`Introduction <%24WIKI_REFERENCE%24/pages/lesson-01-introduction>`__ \|
-`Content <%24WIKI_REFERENCE%24/pages/lesson-01-content>`__ \|
-`Quiz <%24CANVAS_OBJECT_REFERENCE%24/quizzes/i5777920d41286f6cfc0e3b6cd221c918>`__ \|
-`Activity <%24CANVAS_OBJECT_REFERENCE%24/assignments/i1a7bf1ce0c43a0357619e1576bd91416>`__
-\| Assignment \| `Code
-Talk <%24CANVAS_OBJECT_REFERENCE%24/discussion_topics/i26e0a6da415897541357fd16133c4c9d>`__
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
-
 Introduction
 ============
 
