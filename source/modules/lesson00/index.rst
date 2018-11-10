@@ -1,15 +1,15 @@
 ===================
-Lesson 0 : Preclass
+Lesson 0 : Welcome!
 ===================
 
 
 .. toctree::
     :maxdepth: 1
 
-    0_office_hours
-    1_principles
-    2_expectations
-    3_case_study
-    x_grading
-    00_extras_oo
-    00_extras_git
+    office_hours
+    principles
+    expectations
+    case_study
+    grading
+    extras_oo
+    extras_git
