@@ -1,6 +1,6 @@
-=================
-Lesson 06.02 PyPy
-=================
+===============
+Lesson 6.2 PyPy
+===============
 
 PyPy is an alternative Python interpreter focused on performance. It
 uses an optimizing just-in-time compiler which is particularly well
