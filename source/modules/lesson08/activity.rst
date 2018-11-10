@@ -1,17 +1,7 @@
-==============================
-Assignment: Lesson 08 Activity
-==============================
+=================
+Lesson 8 Activity
+=================
 
-.. raw:: html
-
-   <div id="menuheading">
-
-.. raw:: html
-
-   <div id="context-managers" class="section">
-
-.. rubric:: Context Managers\ ` <#context-managers>`__
-   :name: context-managers
 
 The `Ballard Lockes <https://en.wikipedia.org/wiki/Ballard_Locks>`__ in
 Seattle, Washington are a limited, controlled resource. You have been

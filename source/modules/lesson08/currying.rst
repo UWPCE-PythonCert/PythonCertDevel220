@@ -1,5 +1,5 @@
 =====================
-Lesson 08.02 Currying
+Lesson 8.2 Currying
 =====================
 
 https://rriehle.github.io/FP3/build/html/index.html#currying

@@ -1,22 +1,9 @@
 =====================
-Lesson 08.01 Closures
+Lesson 8.1 Closures
 =====================
 
- 
 
 {{VIDEO HERE}}
-
-.. raw:: html
-
-   <div id="menuheading">
-
-.. rubric:: Closures 
-   :name: closures
-   :class: caH2
-
-.. raw:: html
-
-   <div style="padding-left: 30px;" role="navigation">
 
    The venerable master Qc Na was walking with his student, Anton.
    Hoping to prompt the master into a discussion, Anton said "Master, I
@@ -36,7 +23,6 @@ Lesson 08.01 Closures
    learn? Closures are a poor man's object." At that moment, Anton
    became enlightened.
 
-   </div>
 
 From: http://wiki.c2.com/?ClosuresAndObjectsAreEquivalent
 
