@@ -1,0 +1,273 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Lesson 8 : Assignment &mdash; PythonCert220 2.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PythonCert220
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Lesson content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">External links</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PythonCert220</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Lesson 8 : Assignment</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/modules/lesson08/assignment.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="lesson-8-assignment">
+<h1>Lesson 8 : Assignment<a class="headerlink" href="#lesson-8-assignment" title="Permalink to this headline">¶</a></h1>
+<p>Norton Furniture has been using comma-separated files (.CSV extension) to keep track of which furniture they have rented out to which
+customer. This currently requires them to use a spreadsheet program. Your Project Manager wants you to get the spreadsheet program out
+of the equation by creating a Python function that will create and update an inventory CSV file with all the information that is currently
+entered through the spreadsheet program. Additionally, you will need to, using closures and currying, add the necessary functionality
+to bulk-process a list of items, coming from another CSV file, that have been rented out to a single customer.</p>
+<div class="section" id="here-is-what-you-need-to-do">
+<h2>Here is what you need to do:<a class="headerlink" href="#here-is-what-you-need-to-do" title="Permalink to this headline">¶</a></h2>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+#.</p>
+<div class="admonition-todo admonition" id="index-0">
+<p class="first admonition-title">Todo</p>
+<p class="last">Develop lesson 8 assignment (Luis)</p>
+</div>
+<blockquote>
+<div><ul class="simple">
+<li><em>invoice_file</em></li>
+<li><em>customer_name</em></li>
+<li><em>item_code</em></li>
+<li><em>item_description</em></li>
+<li><em>item_monthly_price</em></li>
+</ul>
+<p>This function will create <em>invoice_file</em> if it doesn’t exist or append a new line to it if it does. After adding a few items to the
+same file, the file created by <em>add_furniture</em> should look like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Elisa</span> <span class="n">Miles</span><span class="p">,</span><span class="n">LR04</span><span class="p">,</span><span class="n">Leather</span> <span class="n">Sofa</span><span class="p">,</span><span class="mf">25.00</span>
+<span class="n">Edward</span> <span class="n">Data</span><span class="p">,</span><span class="n">KT78</span><span class="p">,</span><span class="n">Kitchen</span> <span class="n">Table</span><span class="p">,</span><span class="mf">10.00</span>
+<span class="n">Alex</span> <span class="n">Gonzales</span><span class="p">,</span><span class="n">BR02</span><span class="p">,</span><span class="n">Queen</span> <span class="n">Matress</span><span class="p">,</span><span class="mf">17.00</span>
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic">
+<li><dl class="first docutils">
+<dt>Create a function called <em>single_customer</em>:</dt>
+<dd><ul class="first simple">
+<li>Input parameters: <em>customer_name</em>, <em>invoice_file</em>.</li>
+<li>Output: Returns a function that takes one parameter, <em>rental_items</em>.</li>
+</ul>
+<p class="last"><em>single_customer</em> needs to use <em>functools.partial</em> and closures, in order to return a function that will iterate through
+<em>rental_items</em> and add each item to <em>invoice_file</em>.</p>
+</dd>
+</dl>
+</li>
+</ol>
+</div>
+<div class="section" id="other-requirements">
+<h2>Other requirements:<a class="headerlink" href="#other-requirements" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Your code should not trigger any warnings or errors from Pylint.</li>
+</ul>
+</div>
+<div class="section" id="testing">
+<h2>Testing<a class="headerlink" href="#testing" title="Permalink to this headline">¶</a></h2>
+<p>You can use the included <em>test_items.csv</em> file for testing of your <em>single_customer</em> function. <em>add_furniture</em> can be tested manually,
+as shown below.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">inventory</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="n">add_furniture</span><span class="p">(</span><span class="s2">&quot;invoice01.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;Elisa Miles&quot;</span><span class="p">,</span> <span class="s2">&quot;LR04&quot;</span><span class="p">,</span> <span class="s2">&quot;Leather Sofa&quot;</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
+<span class="n">add_furniture</span><span class="p">(</span><span class="s2">&quot;invoice01.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;Edward Data&quot;</span><span class="p">,</span> <span class="s2">&quot;KT78&quot;</span><span class="p">,</span> <span class="s2">&quot;Kitchen Table&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">add_furniture</span><span class="p">(</span><span class="s2">&quot;invoice01.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;Alex Gonzales&quot;</span><span class="p">,</span> <span class="s2">&quot;Queen Matress&quot;</span><span class="p">,</span> <span class="mi">17</span><span class="p">)</span>
+
+<span class="n">create_invoice</span> <span class="o">=</span> <span class="n">single_customer</span><span class="p">(</span><span class="s2">&quot;Susan Wong&quot;</span><span class="p">,</span> <span class="s2">&quot;SW_invoice.csv&quot;</span><span class="p">)</span>
+<span class="n">create_invoice</span><span class="p">(</span><span class="s2">&quot;test_items.csv&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="submission">
+<h2>Submission<a class="headerlink" href="#submission" title="Permalink to this headline">¶</a></h2>
+<p>Your submission should include a single file, <em>inventory.py</em> with two functions, <em>add_furniture</em> and <em>single_customer</em>. You can
+include other functions but all testing for the purpose of grading your assignment will use only those two functions.
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 17d13706f25cf27e72a63395712346513d3b3c30</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, University of Washington, Christopher Barker, Luis Diego Conejo, Andy Miles, Rick Riehle, Joseph Schilz. Creative Commons Attribution-ShareAlike 3.0 license
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -8,11 +8,10 @@ Lesson content
        generated during class so its targetted to the cohort? (A+L discuss)
     #. Deal with video here tags (TBD - see Debalina)
     #. Deal with how videos fit (TBD - see Debalina)
+    #. Add tags to indictae material to be used in LMS for video context ({{LMS START}}, {{LMS END}})
     #. Be sure all lesson inter-dependencies are OK given class resequence (A+L)
     #. Add all code to github (A+L)
     #. Recommend Andy and Luis to walk through class web site on zoom for review (A+L)
-    #. Check and update headings as needed (andy)
-    #. Rename files so that the urls are more acceptable (Andy)
 
 
 Arranged in order of the lessons:

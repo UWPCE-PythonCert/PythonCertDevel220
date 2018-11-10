@@ -1,0 +1,392 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Lesson 8.1 Closures &mdash; PythonCert220 2.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Lesson 8.2 Currying" href="currying.html" />
+    <link rel="prev" title="Lesson 08 Functional Programming 3" href="functional-programming-3.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PythonCert220
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Lesson content</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#py220-advanced-python-programming">Py220: Advanced Python Programming</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../lesson00/index.html">Lesson 0 : Welcome!</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson01/index.html">Lesson 1 : Automated Testing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson02/index.html">Lesson 2 : Logging &amp; Debuging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson03/index.html">Lesson 3 : Relational databases</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson04/index.html">Lesson 4 : Functional Programming 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson05/index.html">Lesson 5 : Consuming APIs with NoSQL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson06/index.html">Lesson 6 : Profiling and performance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson07/index.html">Lesson 7 : Currency and async</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Lesson 8 : Functional Programming 3</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="prerequisites.html">Lesson 8 : Prerequisites</a></li>
+<li class="toctree-l4"><a class="reference internal" href="functional-programming-3.html">Lesson 08 Functional Programming 3</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Lesson 8.1 Closures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="currying.html">Lesson 8.2 Currying</a></li>
+<li class="toctree-l4"><a class="reference internal" href="itertools.html">Lesson 8.3 Itertools</a></li>
+<li class="toctree-l4"><a class="reference internal" href="activity.html">Lesson 8 Activity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="office_hours_recaps.html">Office Hours : Recaps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="office_hours_all.html">Office Hours : This weeks’ content</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson09/index.html">Lesson 9 : Advanced Python language constructs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson10/index.html">Lesson 10 : Metaprogramming</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">External links</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PythonCert220</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Lesson content</a> &raquo;</li>
+        
+          <li><a href="index.html">Lesson 8 : Functional Programming 3</a> &raquo;</li>
+        
+      <li>Lesson 8.1 Closures</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/modules/lesson08/closures.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="lesson-8-1-closures">
+<h1>Lesson 8.1 Closures<a class="headerlink" href="#lesson-8-1-closures" title="Permalink to this headline">¶</a></h1>
+<p>{{VIDEO HERE}}</p>
+<blockquote>
+<div>The venerable master Qc Na was walking with his student, Anton.
+Hoping to prompt the master into a discussion, Anton said “Master, I
+have heard that objects (and classes) are a very good thing. Is this
+true?” Qc Na looked pityingly at his student and replied, “Foolish
+pupil! Objects are merely a poor man’s closures.”*
+Chastised, Anton took his leave from his master and returned to his
+cell, intent on studying closures. He carefully read the entire
+“Lambda: The Ultimate…” series of papers and its cousins, and
+implemented a small Scheme interpreter with a closure-based object
+system. He learned much, and looked forward to informing his master
+of his progress.*
+On his next walk with Qc Na, Anton attempted to impress his master by
+saying “Master, I have diligently studied the matter, and now
+understand that objects are truly a poor man’s closures.” Qc Na
+responded by hitting Anton with his stick, saying “When will you
+learn? Closures are a poor man’s object.” At that moment, Anton
+became enlightened.</div></blockquote>
+<p>From: <a class="reference external" href="http://wiki.c2.com/?ClosuresAndObjectsAreEquivalent">http://wiki.c2.com/?ClosuresAndObjectsAreEquivalent</a></p>
+<p>What exactly are Closures, these mysterious things that offer
+programming enlightenment? Let’s continue to compare and contrast
+closures with objects.</p>
+<ul class="simple">
+<li>Objects have methods.</li>
+<li>Closures *are* methods — they are defined and behave like
+functions, but like object methods they carry and internal state and
+take it into account when returning results.</li>
+<li>Objects can, and generally do, carry a mutable state.</li>
+<li>Closures can, and often do, carry a mutable state.</li>
+<li>Objects control access to their attributes — their internal state
+— through Properties and Python’s lexical scoping rules. By
+default, however, object attributes are externally accessible.</li>
+<li>Closures by nature tend to close around their internal state and
+thereby prevent external access, thus in terms of access to internal
+state, internal attributes, this is the opposite of the default
+behavior of an object. In accordance with Python’s Consenting Adults
+policy, a closure’s internal state is still accessible via its
+__closure__() dunder, but this violates the spirit of a closure —
+so do so at your own risk.</li>
+</ul>
+<p>Thus, objects (or classes) and closures are similar, but they are not
+the same.</p>
+<p>The following represents&nbsp;the general form of a closure:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="k">def</span> <span class="nf">closure</span><span class="p">(</span><span class="n">internal_state</span><span class="p">):</span>
+<span class="mi">2</span>     <span class="k">def</span> <span class="nf">return_function</span><span class="p">(</span><span class="n">arguments</span><span class="p">):</span>
+<span class="mi">3</span>         <span class="k">return</span> <span class="n">internal_state</span> <span class="n">combined</span> <span class="k">with</span> <span class="n">arguments</span>
+<span class="mi">4</span>     <span class="k">return</span> <span class="n">return_function</span>
+</pre></div>
+</div>
+<p>Let’s unpack that line by line.</p>
+<ol class="arabic simple">
+<li>The closure is defined like any other function with a name and
+arguments. In this case the name of the function is <em>closure</em> and its
+arguments are <em>internal_state</em>.</li>
+<li>Inside the closure another function is defined. It&nbsp;also takes
+arguments. In this case, its name is <em>return_function</em>,
+because&nbsp;<strong>this internally defined function itself will be returned
+by the closure</strong>.</li>
+<li>When calculating a return value, the internal function,
+<em>return_function</em>, uses both the internal state passed into the
+closure on line 1 when the closure was first defined, and also the
+arguments that will be passed into it later when it is used as a
+stand-alone function.</li>
+<li>The closure uses the&nbsp;<em>internally defined</em>&nbsp;function,
+return_function, for its return value. &nbsp;Thus, just as a class is a
+template or factory for creating <strong>stateful objects</strong>, a closure is a
+template or factory for creating <strong>stateful functions</strong>, that is,
+stand-alone methods.</li>
+</ol>
+<p>Closures act as factories for new functions, simplifying a process that
+would otherwise need additional code. Let’s look at the following
+example.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="k">def</span> <span class="nf">multiply</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="mi">2</span>     <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">3</span>
+</pre></div>
+</div>
+<p><a href="#id1"><span class="problematic" id="id2">*</span></a>multiply(x)&nbsp;<a href="#id3"><span class="problematic" id="id4">*</span></a>will take the value of x and multiply it by 3. That is
+the only thing this function will ever do. If we needed to have a
+multiplier by 5, we would be forced to code a new function, with very
+similar code, that will do so. Let us closures instead:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="mi">1</span> <span class="k">def</span> <span class="nf">make_multipler</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="mi">2</span>     <span class="k">def</span> <span class="nf">multiply</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="mi">3</span>         <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">n</span>
+    <span class="mi">4</span>     <span class="k">return</span> <span class="n">multiply</span>
+
+<span class="n">times3</span> <span class="o">=</span> <span class="n">make_multiplier</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># times3(4) = 12</span>
+<span class="n">times5</span> <span class="o">=</span> <span class="n">make_multiplier</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="c1"># times5(4) = 20</span>
+</pre></div>
+</div>
+<p>In the example,&nbsp;<em>make_multiplier(n)</em> is the factory that will create
+as many functions as required, using&nbsp;<em>n</em> as the multiplier. Of course,
+you could argue that it would be easier to have&nbsp;the
+original&nbsp;<em>multiply(x)</em> function take two parameters instead,
+becoming&nbsp;<em>multiply(x, n)</em> and that would also work. Here is a more
+challenging example. This code will&nbsp;<strong>partially</strong> implement a counter
+that will increment itself every time the&nbsp;<em>increment()</em> function is
+called:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="k">def</span> <span class="nf">increment</span><span class="p">():</span>
+<span class="mi">2</span>     <span class="k">global</span> <span class="n">count</span>
+<span class="mi">3</span>     <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="mi">4</span>     <span class="k">return</span> <span class="n">count</span>
+</pre></div>
+</div>
+<p>I said <strong>partially</strong> because, in this case a global variable,&nbsp;<em>count</em>
+needs to be defined&nbsp;<strong>outside</strong> of the increment function, so that the
+current state of the counter is not lost on resetted (if you had
+something like&nbsp;<em>count = 0</em> inside of&nbsp;<em>increment()</em>).
+Having&nbsp;<em>count</em> defined externally is in itself a risk, as it exposes
+it to other code that could accidentally modify it; it also becomes
+increasingly difficult to maintain if you needed more that one counter.
+Once again, closures come to the rescue:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="mi">1</span> <span class="k">def</span> <span class="nf">counter</span><span class="p">():</span>
+    <span class="mi">2</span>     <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="mi">3</span>     <span class="k">def</span> <span class="nf">increment</span><span class="p">():</span>
+    <span class="mi">4</span>         <span class="k">nonlocal</span> <span class="n">count</span>
+    <span class="mi">5</span>         <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="mi">6</span>         <span class="k">return</span> <span class="n">count</span>
+    <span class="mi">7</span>     <span class="k">return</span> <span class="n">increment</span>
+
+<span class="n">mycounter</span> <span class="o">=</span> <span class="n">counter</span><span class="p">()</span> <span class="c1"># Creates one counter</span>
+<span class="n">mysecondcounter</span> <span class="o">=</span> <span class="n">counter</span><span class="p">()</span> <span class="c1"># Creates a second, INDEPENDENT counter</span>
+</pre></div>
+</div>
+<p>The beauty of this code is that each counter that is created is fully
+independent, that is, increment one counter will not affect any of the
+others. The&nbsp;<em>count</em> variable for each counter is generally only
+accessible to the counter itself, so the risk of other code modifying it
+by accident has been all but eliminated. Note the use of
+the&nbsp;<em>nonlocal&nbsp;*keyword, which was introduced with Python 3, allowing
+to use the&nbsp;*counter</em> variable from the enclosing function without
+making it a global variable. Just for fun, let’s make our closure
+counter factory even better</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="k">def</span> <span class="nf">counter</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+<span class="mi">2</span>     <span class="n">count</span> <span class="o">=</span> <span class="n">start</span>
+<span class="mi">3</span>     <span class="k">def</span> <span class="nf">increment</span><span class="p">():</span>
+<span class="mi">4</span>         <span class="k">nonlocal</span> <span class="n">count</span>
+<span class="mi">5</span>         <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="mi">6</span>         <span class="k">return</span> <span class="n">count</span>
+<span class="mi">7</span>     <span class="k">return</span> <span class="n">increment</span>
+</pre></div>
+</div>
+<p>We added an input parameter to the factory,&nbsp;<em>start</em>, to control the
+starting point of each counter. It comes with a default value of zero,
+which means you could still write something like&nbsp;<em>default_counter =
+counter()</em> and it will work, but now it’s also possible to
+do&nbsp;<em>custom_counter = counter(3)</em> for a counter that will start from 3.</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="currying.html" class="btn btn-neutral float-right" title="Lesson 8.2 Currying" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="functional-programming-3.html" class="btn btn-neutral" title="Lesson 08 Functional Programming 3" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, University of Washington, Christopher Barker, Luis Diego Conejo, Andy Miles, Rick Riehle, Joseph Schilz. Creative Commons Attribution-ShareAlike 3.0 license
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

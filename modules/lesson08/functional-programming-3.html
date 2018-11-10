@@ -1,0 +1,349 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Lesson 08 Functional Programming 3 &mdash; PythonCert220 2.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Lesson 8.1 Closures" href="closures.html" />
+    <link rel="prev" title="Lesson 8 : Prerequisites" href="prerequisites.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PythonCert220
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Lesson content</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#py220-advanced-python-programming">Py220: Advanced Python Programming</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../lesson00/index.html">Lesson 0 : Welcome!</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson01/index.html">Lesson 1 : Automated Testing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson02/index.html">Lesson 2 : Logging &amp; Debuging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson03/index.html">Lesson 3 : Relational databases</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson04/index.html">Lesson 4 : Functional Programming 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson05/index.html">Lesson 5 : Consuming APIs with NoSQL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson06/index.html">Lesson 6 : Profiling and performance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson07/index.html">Lesson 7 : Currency and async</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Lesson 8 : Functional Programming 3</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="prerequisites.html">Lesson 8 : Prerequisites</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Lesson 08 Functional Programming 3</a></li>
+<li class="toctree-l4"><a class="reference internal" href="closures.html">Lesson 8.1 Closures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="currying.html">Lesson 8.2 Currying</a></li>
+<li class="toctree-l4"><a class="reference internal" href="itertools.html">Lesson 8.3 Itertools</a></li>
+<li class="toctree-l4"><a class="reference internal" href="activity.html">Lesson 8 Activity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="office_hours_recaps.html">Office Hours : Recaps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="office_hours_all.html">Office Hours : This weeks’ content</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson09/index.html">Lesson 9 : Advanced Python language constructs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson10/index.html">Lesson 10 : Metaprogramming</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">External links</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PythonCert220</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Lesson content</a> &raquo;</li>
+        
+          <li><a href="index.html">Lesson 8 : Functional Programming 3</a> &raquo;</li>
+        
+      <li>Lesson 08 Functional Programming 3</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/modules/lesson08/functional-programming-3.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="lesson-08-functional-programming-3">
+<h1>Lesson 08 Functional Programming 3<a class="headerlink" href="#lesson-08-functional-programming-3" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:source/modules/lesson08/lesson-08-functional-programming-3.rst
+|
+| In this third lesson on functional programming follow a string of</p>
+<blockquote>
+<div>related techniques. We first look at closures and compare them to</div></blockquote>
+<div class="line-block">
+<div class="line">In this third lesson on functional programming we will follow a string of
+related techniques. First, we will look at closures and compare them to</div>
+</div>
+<dl class="docutils">
+<dt>&gt;&gt;&gt;&gt;&gt;&gt;&gt; 17d13706f25cf27e72a63395712346513d3b3c30:source/modules/lesson08/lesson-02-functional-programming-3.rst</dt>
+<dd>classes and objects and thereby bridge the gap between functional
+programming and object oriented programming. We will then see how closures
+form the basis of function currying, and in turn how function currying
+facilitates functional composition.</dd>
+</dl>
+<p>We wrap up our series of functional programming lessons with an overview
+of the Itertools and Functools libraries which facilitate the techniques
+covered across all three lessons.</p>
+</div>
+<div class="section" id="recommended-text">
+<h2>Recommended Text<a class="headerlink" href="#recommended-text" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">For the functional programming modules, this lesson included, we
+recommend <a class="reference external" href="http://proquest.safaribooksonline.com/9781784396992?uicode=spl&amp;cid=shareLink">Functional Python Programming by Steven
+Lott.</a></div>
+</div>
+<div class="line-block">
+<div class="line">Publisher: Packt Publishing</div>
+<div class="line">Pub. Date: January 31, 2015</div>
+<div class="line">Web ISBN-13: 978-1-78439-761-6</div>
+<div class="line">Print ISBN-13: 978-1-78439-699-2</div>
+<div class="line"><a class="reference external" href="http://bit.ly/2azI62S">http://bit.ly/2azI62S</a></div>
+</div>
+<p>Each lesson’s optional readings will draw from this text.</p>
+</div>
+<div class="section" id="learning-objectives">
+<h2>Learning Objectives<a class="headerlink" href="#learning-objectives" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">Upon successful completion of this lesson, you will be able to:</div>
+</div>
+<div class="line-block">
+<div class="line">* define a closure as a factory for creating stand-alone methods.</div>
+<div class="line">* describe the arity of a function.</div>
+<div class="line">* curry a function to reduce its arity, its number of arguments in
+particular, and thereby make it suitable for functional composition.</div>
+<div class="line">* use the Itertools library.</div>
+<div class="line">* use the Functools library.</div>
+</div>
+</div>
+<div class="section" id="new-words-or-concepts">
+<h2>New Words or Concepts<a class="headerlink" href="#new-words-or-concepts" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">* Closure</div>
+<div class="line">* Scope</div>
+<div class="line">* Curry</div>
+<div class="line">* Arity</div>
+<div class="line">* Functional Composition</div>
+<div class="line">* Itertools</div>
+<div class="line">* Functools</div>
+</div>
+</div>
+<div class="section" id="required-reading">
+<h2>Required Reading<a class="headerlink" href="#required-reading" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">* Functional Programming Modules</div>
+</div>
+<p><a class="reference external" href="https://docs.python.org/3/library/functional.html">https://docs.python.org/3/library/functional.html</a></p>
+<p>* Closures</p>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://en.wikipedia.org/wiki/Closure_(computer_programming">https://en.wikipedia.org/wiki/Closure_(computer_programming</a>)</div>
+<div class="line"><a class="reference external" href="http://wiki.c2.com/?ClosuresAndObjectsAreEquivalent">http://wiki.c2.com/?ClosuresAndObjectsAreEquivalent</a></div>
+</div>
+<p>* Scope or *Lexical Scope* in Python</p>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Scope_(computer_science)#Python%3Chttps://en.wikipedia.org/wiki/Scope_(computer_science)#Python%3E%60_">https://en.wikipedia.org/wiki/Scope_(computer_science)#Python</a></p>
+<p>* Currying</p>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://en.wikipedia.org/wiki/Currying">https://en.wikipedia.org/wiki/Currying</a></div>
+<div class="line"><a class="reference external" href="https://en.wikipedia.org/wiki/Arity">https://en.wikipedia.org/wiki/Arity</a></div>
+<div class="line"><a class="reference external" href="https://en.wikipedia.org/wiki/Function_composition_(computer_science">https://en.wikipedia.org/wiki/Function_composition_(computer_science</a>)</div>
+</div>
+</div>
+<div class="section" id="optional-reading">
+<h2>Optional Reading<a class="headerlink" href="#optional-reading" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">* Lott, S. (2015) Chapter 14. The PyMonad Library. Functional
+composition and currying. In Functional Python Programming.</div>
+</div>
+<p>* Lott, S. (2015) Chapter 8. The Itertools Module. In Functional Python
+Programming.</p>
+<p>* Lott, S. (2015) Chapter 10. The Functools Module. In Functional
+Python Programming.</p>
+<p>* What is the advantage of currying?</p>
+<p><a class="reference external" href="https://softwareengineering.stackexchange.com/questions/185585/what-is-the-advantage-of-currying">https://softwareengineering.stackexchange.com/questions/185585/what-is-the-advantage-of-currying</a></p>
+<p>* FP is Dead, Long live FP</p>
+<p><a class="reference external" href="https://youtu.be/ROL58LJGNfA">https://youtu.be/ROL58LJGNfA</a></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="closures.html" class="btn btn-neutral float-right" title="Lesson 8.1 Closures" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="prerequisites.html" class="btn btn-neutral" title="Lesson 8 : Prerequisites" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, University of Washington, Christopher Barker, Luis Diego Conejo, Andy Miles, Rick Riehle, Joseph Schilz. Creative Commons Attribution-ShareAlike 3.0 license
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

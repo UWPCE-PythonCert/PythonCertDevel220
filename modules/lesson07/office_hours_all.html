@@ -1,0 +1,284 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Office Hours : This weeks’ content &mdash; PythonCert220 2.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PythonCert220
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Lesson content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">External links</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PythonCert220</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Office Hours : This weeks’ content</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/modules/lesson07/office_hours_all.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="office-hours-this-weeks-content">
+<h1>Office Hours : This weeks’ content<a class="headerlink" href="#office-hours-this-weeks-content" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="agenda">
+<h2>Agenda<a class="headerlink" href="#agenda" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Q+A This week’s content</li>
+<li>Student Demos: This week’s content</li>
+<li>Instructor Demos: This week’s content</li>
+</ol>
+<p>Processes are running programs. Threads are the unit of execution within a program.</p>
+<p>#Thread example</p>
+<p><a href="#id1"><span class="problematic" id="id2">``</span></a>`
+import threading</p>
+<p>mydata = threading.local()
+mydata.x = 1</p>
+<p>x=100</p>
+<p>print(f”mydata.x is {mydata.x}, x is {x}”)</p>
+<dl class="docutils">
+<dt>def hello(thread):</dt>
+<dd>print()
+print(f”hello world from {thread}”)</dd>
+</dl>
+<p>t1 = threading.Timer(3.0, hello, args=(‘t1’,))
+t2 = threading.Timer(2.0, hello, args=(‘t2’,))</p>
+<p>t1.start()
+t2.start()</p>
+<p><a href="#id3"><span class="problematic" id="id4">``</span></a><a href="#id5"><span class="problematic" id="id6">`</span></a></p>
+<p>#Process example</p>
+<p><a href="#id7"><span class="problematic" id="id8">``</span></a>`
+# run from command prompt
+from multiprocessing import Pool
+from multiprocessing import Process
+import os</p>
+<dl class="docutils">
+<dt>def f1(x):</dt>
+<dd>return x*x</dd>
+<dt>def info(title):</dt>
+<dd>print(title)
+print(‘module name:’, __name__)
+print(‘parent process:’, os.getppid())
+print(‘process id:’, os.getpid())</dd>
+<dt>def f2(name):</dt>
+<dd>info(‘function f2’)
+print(‘hello’, name)</dd>
+</dl>
+<p>if __name__ == ‘__main__’:</p>
+<blockquote>
+<div><p>#part 1 Pool
+with Pool(5) as p1:</p>
+<blockquote>
+<div>print(p1.map(f1, [10, 11, 12]))</div></blockquote>
+<p>print()</p>
+<p># part 2 Process</p>
+<p>info(‘main line’)
+p2 = Process(target=f2, args=(‘bob’,))
+p2.start()
+p2.join()</p>
+</div></blockquote>
+<p><a href="#id9"><span class="problematic" id="id10">``</span></a><a href="#id11"><span class="problematic" id="id12">`</span></a></p>
+<p># async coroutines (stop and start again)
+An asynchronous program takes one execution step at a time and can move on to the next if the previous one is not finished.</p>
+<p>This means we are continuing onward through execution steps of the program, even though a previous execution step (or multiple steps) is running ìelsewhereî. This also implies when one of those execution steps is running ìelsewhereî completes, our program code somehow has to handle it.</p>
+<p>##Async example</p>
+<p><a href="#id13"><span class="problematic" id="id14">``</span></a>`
+import asyncio</p>
+<dl class="docutils">
+<dt>async def say(what, when):</dt>
+<dd>await asyncio.sleep(when)
+print(what)</dd>
+<dt>async def stop_after(loop, when):</dt>
+<dd>await asyncio.sleep(when)
+loop.stop()</dd>
+</dl>
+<p>loop = asyncio.get_event_loop()</p>
+<p>loop.create_task(say(‘first hello’, 2))
+loop.create_task(say(‘second hello’, 1))
+loop.create_task(say(‘third hello’, 4))
+loop.create_task(stop_after(loop, 3))</p>
+<p>loop.run_forever()
+loop.close()</p>
+<p><a href="#id15"><span class="problematic" id="id16">``</span></a><a href="#id17"><span class="problematic" id="id18">`</span></a></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, University of Washington, Christopher Barker, Luis Diego Conejo, Andy Miles, Rick Riehle, Joseph Schilz. Creative Commons Attribution-ShareAlike 3.0 license
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

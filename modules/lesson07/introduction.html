@@ -1,0 +1,284 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Lesson 7 Introduction &mdash; PythonCert220 2.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PythonCert220
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Lesson content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">External links</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PythonCert220</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Lesson 7 Introduction</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/modules/lesson07/introduction.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="lesson-7-introduction">
+<h1>Lesson 7 Introduction<a class="headerlink" href="#lesson-7-introduction" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>This lesson introduces the concepts of concurrent and asynchronous
+programming and the python tools available for their implementation. Concurrency is doing multiple things at the same time – in
+Python, this can be accomplished through several approaches:
+multi-threading, multi-processing and asynchronous programming.</p>
+<p>Threading and multi-processing support true parallelism, while
+asynchronous techniques allow tasks to be completed in unknown order.
+Python recently added features to support async, this lesson will
+explain how to use it.</p>
+<p>These techniques can be applied to allow interfaces to be responsive
+while work is being done, and/or to boost performance with
+parallelizable tasks.</p>
+</div>
+<div class="section" id="learning-objectives">
+<h2>Learning Objectives<a class="headerlink" href="#learning-objectives" title="Permalink to this headline">¶</a></h2>
+<p>Upon successful completion of this lesson, you will be able to:</p>
+<ul class="simple">
+<li>Identify when to apply each of the core techniques:<ul>
+<li>multi-threading.</li>
+<li>multi-processing.</li>
+<li>async.</li>
+</ul>
+</li>
+<li>Create a simple multi-threaded program with a message queue.</li>
+<li>Create a simple multi-processing program with a message queue.</li>
+<li>Create a web-api client with the asyncio&nbsp;package.</li>
+</ul>
+</div>
+<div class="section" id="new-words-concepts-and-tools">
+<h2>New Words, Concepts, and Tools<a class="headerlink" href="#new-words-concepts-and-tools" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Concurrency.</li>
+<li>Threading.</li>
+<li>Multi-processing.</li>
+<li>Message Queues.</li>
+<li>Coroutines.</li>
+<li>Async.</li>
+</ul>
+</div>
+<div class="section" id="required-reading">
+<h2>Required Reading<a class="headerlink" href="#required-reading" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://uwpce-pythoncert.github.io/PythonCertDevel/modules/Concurrency.html">Concurrent
+Programming</a></li>
+<li><a class="reference external" href="https://uwpce-pythoncert.github.io/PythonCertDevel/modules/ThreadingMultiprocessing.html">Threading and
+multiprocessing</a></li>
+<li><a class="reference external" href="https://uwpce-pythoncert.github.io/PythonCertDevel/modules/Async.html">Asychronous
+Programming</a></li>
+</ul>
+</div>
+<div class="section" id="optional-reading">
+<h2>Optional Reading<a class="headerlink" href="#optional-reading" title="Permalink to this headline">¶</a></h2>
+<p><em>Fluent Python:</em></p>
+<ul class="simple">
+<li>Ch. 16: Coroutines</li>
+<li>Ch. 17: Concurrency with Futures</li>
+<li>Ch. 18: Concurrency with asyncio</li>
+</ul>
+<div class="section" id="threading">
+<h3>Threading:<a class="headerlink" href="#threading" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://emptysqua.re/blog/grok-the-gil-fast-thread-safe-python/">Grok the
+GIL</a></p>
+</div>
+<div class="section" id="async">
+<h3>Async:<a class="headerlink" href="#async" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="https://glyph.twistedmatrix.com/2014/02/unyielding.html">Unyielding: a take on threads vs
+async</a></li>
+<li><a class="reference external" href="http://cheat.readthedocs.io/en/latest/python/asyncio.html">The Asyncio Cheat
+Sheet</a>:
+This is a pretty helpful, how to do it guide.</li>
+<li>Nathanial Smith’s <a class="reference external" href="https://vorpus.org/blog/some-thoughts-on-asynchronous-api-design-in-a-post-asyncawait-world/">Some thoughts on asynchronous API
+design</a></li>
+<li>The built in asyncio suffers from a lot of legacy – for a new take
+without any pre- 3.5 legacy:&nbsp;<a class="reference external" href="https://trio.readthedocs.io/en/latest/index.html">The Trio async
+package</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, University of Washington, Christopher Barker, Luis Diego Conejo, Andy Miles, Rick Riehle, Joseph Schilz. Creative Commons Attribution-ShareAlike 3.0 license
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,389 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Lesson 8.2 Currying &mdash; PythonCert220 2.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Lesson 8.3 Itertools" href="itertools.html" />
+    <link rel="prev" title="Lesson 8.1 Closures" href="closures.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PythonCert220
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Lesson content</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#py220-advanced-python-programming">Py220: Advanced Python Programming</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../lesson00/index.html">Lesson 0 : Welcome!</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson01/index.html">Lesson 1 : Automated Testing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson02/index.html">Lesson 2 : Logging &amp; Debuging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson03/index.html">Lesson 3 : Relational databases</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson04/index.html">Lesson 4 : Functional Programming 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson05/index.html">Lesson 5 : Consuming APIs with NoSQL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson06/index.html">Lesson 6 : Profiling and performance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson07/index.html">Lesson 7 : Currency and async</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Lesson 8 : Functional Programming 3</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="prerequisites.html">Lesson 8 : Prerequisites</a></li>
+<li class="toctree-l4"><a class="reference internal" href="functional-programming-3.html">Lesson 08 Functional Programming 3</a></li>
+<li class="toctree-l4"><a class="reference internal" href="closures.html">Lesson 8.1 Closures</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Lesson 8.2 Currying</a></li>
+<li class="toctree-l4"><a class="reference internal" href="itertools.html">Lesson 8.3 Itertools</a></li>
+<li class="toctree-l4"><a class="reference internal" href="activity.html">Lesson 8 Activity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="office_hours_recaps.html">Office Hours : Recaps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="office_hours_all.html">Office Hours : This weeks’ content</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson09/index.html">Lesson 9 : Advanced Python language constructs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson10/index.html">Lesson 10 : Metaprogramming</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">External links</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PythonCert220</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Lesson content</a> &raquo;</li>
+        
+          <li><a href="index.html">Lesson 8 : Functional Programming 3</a> &raquo;</li>
+        
+      <li>Lesson 8.2 Currying</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/modules/lesson08/currying.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="lesson-8-2-currying">
+<h1>Lesson 8.2 Currying<a class="headerlink" href="#lesson-8-2-currying" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://rriehle.github.io/FP3/build/html/index.html#currying">https://rriehle.github.io/FP3/build/html/index.html#currying</a></p>
+<p>{{VIDEO HERE}}</p>
+<div id="currying" class="section"><p class="rubric" id="currying">Currying` &lt;<a class="reference external" href="https://rriehle.github.io/FP3/build/html/index.html#currying">https://rriehle.github.io/FP3/build/html/index.html#currying</a>&gt;`__</p>
+<p>“Currying” is a special case of closures:</p>
+<p>The idea behind currying is that you may have a function with a number
+of parameters, and you want to make a specialized version of that
+function with a couple parameters pre-set.</p>
+<p>Let’s go back to the multiplier example we used when learning closures:</p>
+<div class="highlight-python"><div class="highlight"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">multiplier</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">3</span>
+</pre></div>
+</div>
+<p>As before, we can use closures to create a multiplier factory, one that
+requires very little code to create new multipliers that do not
+necessarily return x times 3 all the time. Another option, if you don’t
+feel like using closures, would be to modify the&nbsp;<em>multiplier</em> function
+to take a second parameter:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">multiplier</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">n</span>
+</pre></div>
+</div>
+<p>This one would still be able to work in exactly the same way as the
+original function, but now it also allows you to override the default
+multiplication by 3 with a different factor:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">multiplier</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="c1"># The result will be 4 * 3 = 12</span>
+<span class="n">multiplier</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="c1"># The result will be 4 * 2 = 8 since the default was overridden</span>
+</pre></div>
+</div>
+<p>Still a bit clunky – it forces us to keep passing the value of the
+factor, even&nbsp;if it’s not&nbsp;changing (unless the factor happens to have the
+default value of 3). And there are places, like&nbsp;map&nbsp;that require a
+function that takes only one argument!</p>
+<div class="section docutils container" id="real-world-example">
+<p>What if I could create a function, on the fly, that had a
+particular&nbsp;factor “baked in”?</p>
+<p><em>Enter Currying</em>&nbsp;– Currying is a technique where you reduce the
+number of parameters&nbsp;a function takes, creating a specialized
+function with one or more of the original parameters set to a
+particular value. Here is that technique, applied to the multiplier
+problem:</p>
+<div class="highlight-python docutils container">
+<div class="highlight docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_multiplier</span><span class="p">(</span><span class="n">n</span> <span class="o">=</span> <span class="mi">3</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">multiplier</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">n</span>
+    <span class="k">return</span> <span class="n">multiplier</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now, in this case, we still had to define&nbsp;<em>multiplier</em> inside
+of&nbsp;<em>get_multiplier</em>, which presented no major issues, but
+could&nbsp;become more cumbersome in the next scenario. Imagine you have a
+Python module called&nbsp;<em>introductions.py</em>. Inside of that module,
+there is a single function called&nbsp;<em>introduce_person()</em>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># introductions.py</span>
+<span class="k">def</span> <span class="nf">introduce_person</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">job</span><span class="p">,</span> <span class="n">location</span><span class="p">):</span>
+    <span class="k">return</span> <span class="s2">&quot;This is </span><span class="si">%s</span><span class="s2">, a </span><span class="si">%d</span><span class="s2">-year-old </span><span class="si">%s</span><span class="s2"> living in </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">job</span><span class="p">,</span> <span class="n">location</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The <a href="#id1"><span class="problematic" id="id2">*</span></a>introduce_person&nbsp;<a href="#id3"><span class="problematic" id="id4">*</span></a>method allows you to create a basic string
+to introduce a person. It takes four parameters.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">introductions</span> <span class="k">import</span> <span class="n">introduce_person</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">introduce_person</span><span class="p">(</span><span class="s2">&quot;Elisa&quot;</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="s2">&quot;engineer&quot;</span><span class="p">,</span> <span class="s2">&quot;Portland&quot;</span><span class="p">)</span>
+<span class="go">&#39;This is Elisa, a 28-year-old engineer living in Portland&#39;</span>
+</pre></div>
+</div>
+<p>This works well, but it might seem less convenient if you have a list
+of people you need to introduce, all with the same job (for example,
+‘student’), all with the same age (maybe 4th grade children) who all
+happen to be 10 years old and all living in the same city. Only the
+names are changing.</p>
+<p>To take advantage of&nbsp;the parameters these group of people have in
+common, we could create a curried function, just like we did for the
+multiplier:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_simple_intro</span><span class="p">(</span><span class="n">age</span><span class="p">,</span> <span class="n">job</span><span class="p">,</span> <span class="n">location</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">simple_introduction</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;This is </span><span class="si">%s</span><span class="s2">, a </span><span class="si">%d</span><span class="s2">-year-old </span><span class="si">%s</span><span class="s2"> living in </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">job</span><span class="p">,</span> <span class="n">location</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">simple_intro</span>
+<span class="o">&gt;&gt;</span> <span class="n">simple_intro</span> <span class="o">=</span> <span class="n">get_simple_intro</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;student&#39;</span><span class="p">,</span> <span class="s1">&#39;Seattle&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;</span> <span class="n">simple_intro</span><span class="p">(</span><span class="s1">&#39;Maya&#39;</span><span class="p">)</span>
+<span class="s1">&#39;This is Maya, a 10-year-old student living in Seattle&#39;</span>
+<span class="o">&gt;&gt;</span> <span class="n">simple_intro</span><span class="p">(</span><span class="s1">&#39;Alison&#39;</span><span class="p">)</span>
+<span class="s1">&#39;This is Alison, a 10-year-old student living in Seattle&#39;</span>
+</pre></div>
+</div>
+<p>There is, however, an easier way to achieve this.</p>
+<p class="rubric" id="currying-with-functools-partial">Currying with <em>functools.partial</em></p>
+</div>
+<div class="section docutils container" id="functools-partial">
+<p>The&nbsp;functools&nbsp;module in the standard library provides utilities
+for working with functions:</p>
+<p><a class="reference external" href="https://docs.python.org/3.5/library/functools.html">https://docs.python.org/3.5/library/functools.htmlLinks to an
+external
+site.</a></p>
+<p>Creating a curried function turns out to be common enough that
+the&nbsp;functools.partial&nbsp;function provides an optimized way to do
+it:</p>
+<p>What functools.partial does is:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Makes a new version of a function with one or more arguments
+already filled in.</li>
+<li>The new version of a function documents itself.</li>
+</ul>
+</div></blockquote>
+<p>Let’s go back one last time to the multiplier example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">multiplier</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">n</span>
+</pre></div>
+</div>
+<p>We will now use functools.partial to create a curried version of the
+multiplier function:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">functools</span> <span class="k">import</span> <span class="n">partial</span>
+
+<span class="k">def</span> <span class="nf">multiplier</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">n</span>
+
+<span class="n">double_it</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">multiplier</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">quadruple_it</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">multiplier</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+
+<span class="o">&gt;&gt;</span> <span class="n">double_it</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="mi">8</span>
+<span class="o">&gt;&gt;</span> <span class="n">quadruple_it</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="mi">16</span>
+</pre></div>
+</div>
+<p><em>partial</em> returns a curried function in which one or more parameters
+of the original function&nbsp;have been given values, so that the returned
+function will not “ask” for those parameters. In the example
+above,&nbsp;the&nbsp;<em>multiplier&nbsp;*method was defined right there and then,
+but it still works if the method is being imported. Let’s see it
+working with our *introductions</em> module:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">introductions</span> <span class="k">import</span> <span class="n">introduce_person</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">functools</span> <span class="k">import</span> <span class="n">partial</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">simple_intro</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">introduce_person</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">job</span><span class="o">=</span><span class="s1">&#39;student&#39;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s1">&#39;Seattle&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">simple_intro</span><span class="p">(</span><span class="s1">&#39;Letty&#39;</span><span class="p">)</span>
+<span class="go">&#39;This is Letty, a 10-year-old student living in Seattle&#39;</span>
+</pre></div>
+</div>
+<p>Note that in this case, you don’t even need to see the code
+for&nbsp;<em>introduce_person</em>, as <em>functools.partial</em> is taking care of
+the process of currying it into a single-parameter function.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="itertools.html" class="btn btn-neutral float-right" title="Lesson 8.3 Itertools" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="closures.html" class="btn btn-neutral" title="Lesson 8.1 Closures" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, University of Washington, Christopher Barker, Luis Diego Conejo, Andy Miles, Rick Riehle, Joseph Schilz. Creative Commons Attribution-ShareAlike 3.0 license
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
