@@ -108,4 +108,4 @@ venv.bak/
 .idea/
 
 # Mac OS files
-.DS_Store
+source/modules/.DS_Store
