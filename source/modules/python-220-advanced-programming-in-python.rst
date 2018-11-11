@@ -16,7 +16,7 @@ PYTHON 220 Advanced Programming in Python
    class="caNav grid-row around-md clearunderlinestyle clear"
    style="font-size: 1rem;" role="navigation">
 
-`Start Here <%24WIKI_REFERENCE%24/pages/course-overview>`__ \| `Course
+`Start Here <%24WIKI_REFERENCE%24/pages/course-overview>sphi`__ \| `Course
 Resources <%24WIKI_REFERENCE%24/pages/course-resources>`__ \| `Course
 Team <%24WIKI_REFERENCE%24/pages/course-team>`__ \| `Course Tech
 Talk <%24CANVAS_COURSE_REFERENCE%24/discussion_topics>`__
@@ -122,7 +122,7 @@ Part 3
 -  `**Week 8**
     Non-Relational
    Databases <%24CANVAS_OBJECT_REFERENCE%24/modules/i1c07e2ae7a31d8c54322c4da6040de00>`__
--  
+-
 
 .. raw:: html
 

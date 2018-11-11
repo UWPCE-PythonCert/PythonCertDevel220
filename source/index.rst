@@ -46,12 +46,6 @@ Readers are encouraged to report omissions, typos, or make suggestions for impro
 
 .. * :ref:`search`
 
-.. todo::
-
-    #. Need to link all of this site together.
-    #. Ensure all filenames are correct in folders
-
-
 
 All To Dos
 ==========
