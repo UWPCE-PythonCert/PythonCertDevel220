@@ -12,12 +12,6 @@ to bulk-process a list of items, coming from another CSV file, that have been re
 Here is what you need to do:
 ----------------------------
 
-<<<<<<< HEAD
-#.
-
-.. todo::
-    Develop lesson 8 assignment (Luis)
-=======
 #. Create a python module called *inventory.py*. This file will contain all the functions used for this assignment.
 #. Create a function called *add_furniture* that takes the following input parameters:
     - *invoice_file*
@@ -67,6 +61,5 @@ Submission
 
 Your submission should include a single file, *inventory.py* with two functions, *add_furniture* and *single_customer*. You can
 include other functions but all testing for the purpose of grading your assignment will use only those two functions.
->>>>>>> 17d13706f25cf27e72a63395712346513d3b3c30
 
 

@@ -2,6 +2,9 @@
 Lesson 2 : Assignment
 =====================
 
+.. todo::
+    Make this assignment consistent with the case study
+
 In this lesson's assignment we are going to incorporate logging into an
 instructor-provided module so that we can trace what goes on as the module
 runs. We are also going to use the debugger to identify and help resolve a
@@ -14,7 +17,7 @@ Here is what you need to do:
 #. First you need to get it to at least start to run. Update it as needed.
 #. Try as best you can to understand what the code is doing.
 #. Now, start to insert logging statements to track the code's execution
-#. Using the debugger, try to understad what is going on with the
+#. Using the debugger, try to understand what is going on with the
    expected command line parameters. See if from the code and through
    watching variables and creating dummy parameters you can infer enough
    to get the program to run.
