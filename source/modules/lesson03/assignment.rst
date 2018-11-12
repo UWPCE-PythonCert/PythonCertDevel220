@@ -54,6 +54,10 @@ Testing
 -------
 - Make sure your tests run as expected.
 
+Submission
+----------
+- You will need to submit *basic_operations.py* plus any test files you develop.
+
 Tips
 ----
 - Remember to think about system features, not web pages or the UI.

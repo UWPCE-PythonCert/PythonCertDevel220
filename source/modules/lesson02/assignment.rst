@@ -3,13 +3,16 @@ Lesson 2 : Assignment
 =====================
 
 .. todo::
-    Make this assignment consistent with the case study
+    Make this assignment consistent with the case study.
+    Determine how to automatically test injected errors.
 
-In this lesson's assignment we are going to incorporate logging into an
-instructor-provided module so that we can trace what goes on as the module
+One of the challenges with the existing code base at HP Norton is the lack
+of necessary debug information when issues occur.
+
+Your task this week will be to incorporate logging into an
+existing module so that we can trace what goes on as the module
 runs. We are also going to use the debugger to identify and help resolve a
 problem with that module.
-
 
 Here is what you need to do:
 ----------------------------
@@ -24,6 +27,11 @@ Here is what you need to do:
 #. Add comments that describe your discoveries, additional things you need
 #. to know and any other comments.
 
+Requirements:
+-------------
+
+Submission:
+-----------
 
 Tips
 ----

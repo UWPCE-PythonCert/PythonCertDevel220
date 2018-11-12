@@ -2,6 +2,9 @@
 Lesson 4 : Assignment
 =====================
 
+.. todo::
+    Make this assignment consistent with the case study.
+    
 In this lesson's assignment we are going to apply the functional
 programming techniques we have learned to improve code that we have
 written in earlier lessons for the case study.
