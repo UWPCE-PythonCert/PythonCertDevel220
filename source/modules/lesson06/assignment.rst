@@ -2,6 +2,9 @@
 Lesson 6 : Assignment
 =====================
 
+.. todo::
+    Make this assignment consistent with the case study.
+    
 In this lesson's assignment we are going to apply techniques to identify the
 right way to find bottlenecks in modules. We will use an evidence
 based approach to making the right improvements
