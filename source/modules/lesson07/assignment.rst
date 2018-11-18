@@ -1,25 +1,58 @@
-=====================
+#####################
 Lesson 7 : Assignment
-=====================
+#####################
+
+HP Norton is having success with their new computer system written in Python.
+So much successs, in fact, that the way they have had some of their systems
+written is starting to introduce processing bottlenecks, and thereofore delays for users.
 
 In this lesson's assignment we are going to apply techniques beyond
-vertical scaling (upgrading servers) to help maximize application performance.
+vertical scaling (upgrading servers) to help maximize their application performance.
+
+You should address the following general requirements:
+======================================================
+#. As a user of the HP Norton systems I need to be confident that the system will perform
+   sufficiently rapidly that responses are almost instantaneous, and I am not kept waiting
+   for the system to complete its processing. I feel the system now is too slow, and I want 
+   to see if improvements can be made without having to upgrade our hardware.
+
 
 Here is what you need to do:
-----------------------------
+============================
+#. Demonstrate with real data the time taken to run your existing customer and 
+   product add / update logic.
+#. Amend the add and update logic for both customers and products so that 
+   it can process these in parallel. Your module should launch the updates to 
+   both database simultaneously. Provide real timing data for your new approach.
+#. Compare and contrast parallel vs. linear performance and recommend to management
+   if a change is worthwhile.
+#. To show you have thought through your design, create and provide an example of 
+   where the program fails due to contention and explain why in code comments, and how
+   that will be avoided when the system is running.
+#. You will submit two modules: linear.py and parallel.py
+#. Each module will return a lsit of tuples, one tuple for customer and one for products.
+   Each tuple will contain 4 values: the number of records processed,
+   the record count in the database prior to running, the record count after running,
+   and the time taken to run the module.
+#. You will also submit a text file containing your findings.
 
-#. Write functions to add and update customer and products to your HP
-   Norton database in parallel. You module should launch the updates to
-   both database simultaneously.
-#. Compare and contrast parallel vs. linear performance by providing
-   actual data at applicable locations in your module.
-#. Create and provide an example of where the program fails due to contention and explain
-   why in code comments.
-#. Provide an example that works, with tests that pass.
 
 .. todo::
     Provide data for assignment 07 (Andy)
 
+Other requirements:
+-------------------
+- Your code should not trigger any warnings or errors from Pylint.
+
+Testing
+-------
+- Make sure your tests run as expected.
+
+Submission
+----------
+- You will need to submit *linear.py*, *parallel.py*, your brief bullet point notes on 
+  findings and recommendations, and any test files you develop.
+
 Tips
 ----
-- Amend some of the previously provided data to create the 100 records/
+- Amend some of the previously provided data to create the 100 records.
