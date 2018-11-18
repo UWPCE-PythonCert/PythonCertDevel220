@@ -9,7 +9,7 @@ Lesson 7 : Currency and async
     introduction
     concurrency
     async
-    ctivity
- ssignment
+    activity
+    assignment
     office_hours_recaps
     office_hours_all
