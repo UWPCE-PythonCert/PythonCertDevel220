@@ -1,6 +1,6 @@
-=====================
+#####################
 Lesson 6 : Assignment
-=====================
+#####################
 
 .. todo::
     Make this assignment consistent with the case study.

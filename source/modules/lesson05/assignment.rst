@@ -32,7 +32,7 @@ You implementation should address the following requirements:
 Here is what you need to do:
 ----------------------------
 
-#. Create a product database with attributes that reflect the ocntent ofthe
+#. Create a product database with attributes that reflect the content ofthe
    csv file.
 #. All data in the csv file needs to be incorporated into your MongoDB implementation.
 #. Make sure you add a field to indicate if an item is available (i.e., not currently rented out).
