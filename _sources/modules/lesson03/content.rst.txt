@@ -9,6 +9,9 @@ Here we are going to cover the background to why we use databases, and
 set the stage for later, when we will start to develop a Python database
 application.
 
+.. todo::
+   Setup rdbms class repo in correct place:
+
 You will probably wish to clone the repository you can find on
 `GitHub <https://github.com/milesak60/RDBMS>`__. For this first video,
 the files are in the "stuff" directory. These are the files we refer to,

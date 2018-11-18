@@ -12,6 +12,7 @@ Lesson content
     #. Be sure all lesson inter-dependencies are OK given class resequence (A+L)
     #. Add all code to github (A+L)
     #. Recommend Andy and Luis to walk through class web site on zoom for review (A+L)
+    #. Review all markup and make consistent
 
 
 Arranged in order of the lessons:

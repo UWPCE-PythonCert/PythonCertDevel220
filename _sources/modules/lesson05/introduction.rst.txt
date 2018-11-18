@@ -5,6 +5,11 @@ Lesson 05 Introduction
 Introduction
 ============
 
+{{LMS START}}
+We are going to start to learn about APIs by working with MongoDB, a NoSQL database. First, some background.
+
+{{LMS END}}
+
 {{video 1}}
 
 .. code-block:: python

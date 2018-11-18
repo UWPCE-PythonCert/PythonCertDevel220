@@ -180,35 +180,48 @@
             
   <div class="section" id="lesson-5-assignment">
 <h1>Lesson 5 : Assignment<a class="headerlink" href="#lesson-5-assignment" title="Permalink to this headline">¶</a></h1>
-<p>In this lesson’s assignment we are going to learn how to apply the mongodb
-API while exploiting mongodb’s ability to allow the Python module, not the
-database, to specify the schema for the data to be stored.</p>
-<p>You will use an instructor-provided product file in csv format.</p>
-<p>You should address the following requirements:
-#.  As a HP Norton customer I want to see a list of all products available for</p>
+<div class="admonition-todo admonition" id="index-0">
+<p class="first admonition-title">Todo</p>
+<p class="last">Make this assignment consistent with the case study.</p>
+</div>
+<p>As mentioned before, HP Norton has been using a mix of different of file formats
+to keep track of their business. One of those formats is called <em>comma-separated file</em>
+which can be distinguished by the <em>.csv</em> extension.</p>
+<p>This week, you will work on a prototype migration of product data from a sample csv
+file into MongoDB. You will use the MongoDB API while exploiting mongo’s ability to
+allow the Python module, not the database, to specify the schema for the data to
+be stored.</p>
+<p>You implementation should address the following requirements:
+#.  As a HP Norton <em>customer</em> I want to see a list of all products available for</p>
 <blockquote>
 <div>rent so that I can make a rental choice.</div></blockquote>
 <ol class="arabic simple">
-<li>As a HP Norton salesperson I want to see a list of all of the different
-types of a product, showing a product number, name, product type and
+<li>As a HP Norton <em>salesperson</em> I want to see a list of all of the different
+types of a product, showing a product ID, name, product type and
 description.</li>
-<li>As a HP Norton salesperson I want to see a list of the name and contact
-details of all customers who have rented products, and the name, description
-and type of the product that they rented.</li>
+<li>As a HP Norton salesperson I want to see a list of the names and contact
+details (address, phone number and email) of all customers who have rented products, as well as the name, description
+and type of product that they rented.</li>
 </ol>
-<div class="admonition-todo admonition" id="index-0">
+<div class="admonition-todo admonition" id="index-1">
 <p class="first admonition-title">Todo</p>
 <p class="last">Create product CSV file (Andy)</p>
 </div>
 <div class="section" id="here-is-what-you-need-to-do">
 <h2>Here is what you need to do:<a class="headerlink" href="#here-is-what-you-need-to-do" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
-<li>Create a product database with attributes that reflect the ocntent ofthe
+<li>Create a product database with attributes that reflect the content ofthe
 csv file.</li>
+<li>All data in the csv file needs to be incorporated into your MongoDB implementation.</li>
+<li>Make sure you add a field to indicate if an item is available (i.e., not currently rented out).</li>
 <li>Write queries to retrieve the product data</li>
 <li>Write a query to integrate customer and product data</li>
 <li>Update tests to show the data is being maintained correctly in the database.</li>
 </ol>
+<div class="admonition-todo admonition" id="index-2">
+<p class="first admonition-title">Todo</p>
+<p class="last">Add function stubs for automated testing (Luis)</p>
+</div>
 </div>
 </div>
 
