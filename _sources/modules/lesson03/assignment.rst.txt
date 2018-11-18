@@ -63,5 +63,5 @@ Tips
 - Remember to think about system features, not web pages or the UI.
 - Tests first!
 - Be creative! Think about what else the furniture store might need regarding customer information.
-- Be careful when selecting your primary keys, may people can have the same name and lastname!
+- Be careful when selecting your primary keys, many people can have the same name and lastname!
 
