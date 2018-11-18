@@ -1,6 +1,6 @@
-======================
+######################
 Lesson 10 Introduction
-======================
+######################
 
 Introduction
 ============
@@ -32,11 +32,11 @@ Upon successful completion of this lesson, you will be able to:
 New Words, Concepts, and Tools
 ==============================
 
--  metaprograming
--  getattr() and setattr()
--  The type() constructor
--  metaclasses
--  class decorators 
+-  Metaprograming
+-  ``getattr()`` and ``setattr()``
+-  The ``type()`` constructor
+-  Metaclasses
+-  Class Decorators 
 
  
 
@@ -53,8 +53,8 @@ Optional Reading
 
 *Fluent Python*\ : Chapters 19 – 21
 
-- ` Concept overview https://www.geeksforgeeks
-         .org/metaprogramming-metaclasses-python/`__
+-  `Concept overview
+   <https://www.geeksforgeeks.org/metaprogramming-metaclasses-python/>`_
 
 -  `About
    metaclasses <http://blog.thedigitalcatonline.com/blog/2014/09/01/python-3-oop-part-5-metaclasses>`__
