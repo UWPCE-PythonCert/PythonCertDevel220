@@ -180,48 +180,77 @@
             
   <div class="section" id="lesson-5-assignment">
 <h1>Lesson 5 : Assignment<a class="headerlink" href="#lesson-5-assignment" title="Permalink to this headline">¶</a></h1>
-<div class="admonition-todo admonition" id="index-0">
-<p class="first admonition-title">Todo</p>
-<p class="last">Make this assignment consistent with the case study.</p>
-</div>
-<p>As mentioned before, HP Norton has been using a mix of different of file formats
+<p>As mentioned before, HP Norton has been using a mix of different file formats
 to keep track of their business. One of those formats is called <em>comma-separated file</em>
 which can be distinguished by the <em>.csv</em> extension.</p>
-<p>This week, you will work on a prototype migration of product data from a sample csv
+<p>This week, you have been assigned to work on a prototype migration of product data from a sample csv
 file into MongoDB. You will use the MongoDB API while exploiting mongo’s ability to
 allow the Python module, not the database, to specify the schema for the data to
 be stored.</p>
-<p>You implementation should address the following requirements:
-#.  As a HP Norton <em>customer</em> I want to see a list of all products available for</p>
-<blockquote>
-<div>rent so that I can make a rental choice.</div></blockquote>
+<p>You implementation should address the following requirements:</p>
 <ol class="arabic simple">
+<li>As a HP Norton <em>customer</em> I want to see a list of all products available for
+rent so that I can make a rental choice.</li>
 <li>As a HP Norton <em>salesperson</em> I want to see a list of all of the different
-types of a product, showing a product ID, name, product type and
-description.</li>
+products, showing product ID, description, product type and quantity available.</li>
 <li>As a HP Norton salesperson I want to see a list of the names and contact
-details (address, phone number and email) of all customers who have rented products, as well as the name, description
-and type of product that they rented.</li>
+details (address, phone number and email) of all customers who have rented a certain product.</li>
 </ol>
-<div class="admonition-todo admonition" id="index-1">
-<p class="first admonition-title">Todo</p>
-<p class="last">Create product CSV file (Andy)</p>
-</div>
 <div class="section" id="here-is-what-you-need-to-do">
 <h2>Here is what you need to do:<a class="headerlink" href="#here-is-what-you-need-to-do" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
-<li>Create a product database with attributes that reflect the content ofthe
+<li>Create a product database with attributes that reflect the contents of the
 csv file.</li>
-<li>All data in the csv file needs to be incorporated into your MongoDB implementation.</li>
-<li>Make sure you add a field to indicate if an item is available (i.e., not currently rented out).</li>
-<li>Write queries to retrieve the product data</li>
-<li>Write a query to integrate customer and product data</li>
-<li>Update tests to show the data is being maintained correctly in the database.</li>
+<li>Import all data in the csv files into your MongoDB implementation.</li>
+<li>Write queries to retrieve the product data.</li>
+<li>Write a query to integrate customer and product data.</li>
 </ol>
-<div class="admonition-todo admonition" id="index-2">
-<p class="first admonition-title">Todo</p>
-<p class="last">Add function stubs for automated testing (Luis)</p>
 </div>
+<div class="section" id="other-requirements">
+<h2>Other requirements:<a class="headerlink" href="#other-requirements" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Your code should not trigger any warnings or errors from Pylint.</li>
+<li>You can have a specific field to indicate if a product is available, however, a <em>quantity_available</em> of 0 is understood as “not available”.</li>
+</ul>
+</div>
+<div class="section" id="testing">
+<h2>Testing<a class="headerlink" href="#testing" title="Permalink to this headline">¶</a></h2>
+<p>In order for your code to be evaluated, you need to create a file called <em>test_database.py</em> with the following functions:</p>
+<ul>
+<li><p class="first"><em>import_data(product_file, customer_file, rentals_file)</em>: This function takes a three csv files as input, one with product data, one with customer data and the third one with rentals data and creates and populates a new MongoDB database with the these data.</p>
+</li>
+<li><dl class="first docutils">
+<dt><em>show_available_products()</em>: Returns a Python dictionary of products listed as <em>available</em> with the following fields:</dt>
+<dd><ul class="first simple">
+<li>product_id.</li>
+<li>description.</li>
+<li>product_type.</li>
+<li>quantity_available.</li>
+</ul>
+<p>For example:</p>
+<p class="last">{‘prd001’:{‘description’:‘60-inch TV stand’,’product_type’:’livingroom’,’quantity_available’:‘3’},’prd002’:{‘description’:’L-shaped sofa’,’product_type’:’livingroom’,’quantity_available’:‘1’}}</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><em>show_rentals(product_id)</em>: Returns a Python dictionary with the following user information from users that have rented products matching <em>product_id</em>:</dt>
+<dd><ul class="first simple">
+<li>user_id.</li>
+<li>name.</li>
+<li>address.</li>
+<li>phone_number.</li>
+<li>email.</li>
+</ul>
+<p>For example:</p>
+<p class="last">{‘user001’:{‘name’:’Elisa Miles’,’address’:‘4490 Union Street’,’phone_number’:‘206-922-0882’,’email’:<a class="reference external" href="mailto:'elisa&#46;miles&#37;&#52;&#48;yahoo&#46;com">’elisa<span>&#46;</span>miles<span>&#64;</span>yahoo<span>&#46;</span>com</a>’},’user002’:{‘name’:’Maya Data’,’address’:‘4936 Elliot Avenue’,’phone_number’:‘206-777-1927’,’email’:<a class="reference external" href="mailto:'mdata&#37;&#52;&#48;uw&#46;edu">’mdata<span>&#64;</span>uw<span>&#46;</span>edu</a>’}}</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="submission">
+<h2>Submission<a class="headerlink" href="#submission" title="Permalink to this headline">¶</a></h2>
+<p>Your submission should include all files necessary to create and access your database, as well as <em>test_database.py</em> in order to test your submission.</p>
 </div>
 </div>
 
