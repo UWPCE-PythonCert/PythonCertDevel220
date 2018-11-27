@@ -61,5 +61,3 @@ Submission
 
 Your submission should include a single file, *inventory.py* with two functions, *add_furniture* and *single_customer*. You can
 include other functions but all testing for the purpose of grading your assignment will use only those two functions.
-
-
