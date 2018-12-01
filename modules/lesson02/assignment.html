@@ -98,11 +98,20 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../lesson03/index.html">Lesson 3 : Relational databases</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../lesson04/index.html">Lesson 4 : Functional Programming 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson04/prerequisites.html">Lesson 4 : Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson04/introduction.html">Lesson 04 Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson04/starting-with-expression-flow-control-and-comprehensions.html">Lesson 4: Starting with Expression Flow Control and Comprehensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson04/lambda.html">Lesson 4.1 Lambda</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson04/iterators-and-iterables.html">Lesson 04.02 Iterators and Iterables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson04/generators.html">Lesson 4.3 Generators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson04/recap.html">Recap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson04/assignment.html">Lesson 4 : Assignment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson04/office_hours_recaps.html">Office Hours : Recaps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson04/office_hours_all.html">Office Hours : This weeks’ content</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../lesson05/index.html">Lesson 5 : Consuming APIs with NoSQL</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../lesson06/index.html">Lesson 6 : Profiling and performance</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../lesson07/index.html">Lesson 7 : Currency and async</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../lesson08/index.html">Lesson 8 : Functional Programming 3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson08/index.html">Lesson 8 : Functional Techniques</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../lesson09/index.html">Lesson 9 : Advanced Python language constructs</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../lesson10/index.html">Lesson 10 : Metaprogramming</a></li>
 </ul>
@@ -182,42 +191,92 @@
 <h1>Lesson 2 : Assignment<a class="headerlink" href="#lesson-2-assignment" title="Permalink to this headline">¶</a></h1>
 <div class="admonition-todo admonition" id="index-0">
 <p class="first admonition-title">Todo</p>
-<p class="last">Make this assignment consistent with the case study.
-Determine how to automatically test injected errors.</p>
+<p class="last">Complete code for charges_calc.py (Luis)</p>
 </div>
 <p>One of the challenges with the existing code base at HP Norton is the lack
-of necessary debug information when issues occur.</p>
-<p>Your task this week will be to incorporate logging into an
-existing module so that we can trace what goes on as the module
-runs. We are also going to use the debugger to identify and help resolve a
-problem with that module.</p>
+of the necessary debug information when issues occur.</p>
+<p>One such case is the <em>charges_calc</em> script. Its purpose is to convert a list of
+existing rentals of individual inventory items (for example, table lamps),
+including number of units rented, price charged per day and rental start / end dates,
+and return the same list with the total cost of the rental (based on the number of
+days the item or items have been rented), as well as total cost per item (in the
+case of multiple items). Both the input and the output of the script are JSON files.</p>
+<p>The problem at this point is that, using the included JSON input file, the script
+is not working. There is no error message or anything else indicating what is
+going on and no output file is being produced.</p>
+<p>Your goal this week is twofold: You need to use the Python debugger to figure out
+why the script is not working, you also need to incorporate logging into the script
+so that someone doing debug can follow the flow of the script.</p>
 <div class="section" id="here-is-what-you-need-to-do">
 <h2>Here is what you need to do:<a class="headerlink" href="#here-is-what-you-need-to-do" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
-<li>Clone the PhyRe.py code and review it.</li>
-<li>First you need to get it to at least start to run. Update it as needed.</li>
-<li>Try as best you can to understand what the code is doing.</li>
-<li>Now, start to insert logging statements to track the code’s execution</li>
+<li>Download the charges_calc.py code and review it. Make sure you also download source.json, which contains the sample source data.</li>
+<li>Try as best as you can to understand what the code is doing.</li>
 <li>Using the debugger, try to understand what is going on with the
 expected command line parameters. See if from the code and through
 watching variables and creating dummy parameters you can infer enough
-to get the program to run.</li>
-<li>Add comments that describe your discoveries, additional things you need</li>
-<li>to know and any other comments.</li>
+to get the program to run. Capture your debug work to a text file.</li>
+<li>Now, enable logging and start inserting logging statements to track the code’s execution.</li>
+<li>Add comments that describe your discoveries, additional things you need.</li>
+<li>Add warnings for things missing in the source data that are expected but impeded some of the calculations (for example, unreturned items do not have a <em>rental_end</em> value).</li>
+<li>Add error messages for inconsistencies in the source data that could make your program crash or return incorrect data.</li>
 </ol>
 </div>
 <div class="section" id="requirements">
 <h2>Requirements:<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">You cannot change the source data, your script needs to deal with data inconsistencies that could make it crash or return incorrect data and issue warnings for missing data.</p>
+</li>
+<li><p class="first">Capture you debug work in a text file, you will need that for your submission.</p>
+</li>
+<li><dl class="first docutils">
+<dt>Setup logging messages so that they are disabled by default and can by enabled by using <em>-d 1</em> or <em>–debug 1</em> from the command line. Use the <em>argparse</em> module for this. You will have the following debug levels:</dt>
+<dd><ol class="first last arabic simple">
+<li>0: No debug messages or log file.</li>
+<li>1: Only error messages.</li>
+<li>2: Error messages and warnings.</li>
+<li>3: Error messages, warnings and debug messages.</li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>You need to implement three types of logging messages:</dt>
+<dd><ol class="first last arabic simple">
+<li>Debug: General comments, indicating where in the script flow we are. Should be shown on screen only.</li>
+<li>Warning: Used for missing elements in the source data that force a change in the flow. Shown on screen and on the log file.</li>
+<li>Error: Used for inconsistencies in the source data that will cause the script to crash or report incorrect results. Shown on screen and on the log file.</li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><p class="first">Use the following format for your log messages:</p>
+<blockquote>
+<div><p>log_format = “%(asctime)s %(filename)s:%(lineno)-3d %(levelname)s %(message)s”</p>
+</div></blockquote>
+</li>
+<li><p class="first">Use the following filename format to timestamp your log files:</p>
+<blockquote>
+<div><p>log_file = datetime.datetime.now().strftime(“%Y-%m-%d”)+’.log’</p>
+</div></blockquote>
+</li>
+</ol>
 </div>
 <div class="section" id="submission">
 <h2>Submission:<a class="headerlink" href="#submission" title="Permalink to this headline">¶</a></h2>
+<p>Your submission should include the following:</p>
+<ul class="simple">
+<li>Updated version of <em>charges_calc.py</em> (keep the same filename).</li>
+<li>Your Python debugger logfile. Include it as <em>debugger_log.txt</em>.</li>
+<li>Logfile created by running your updated script on the source data.</li>
+<li>Output JSON file created with the updated script.</li>
+</ul>
 </div>
 <div class="section" id="tips">
 <h2>Tips<a class="headerlink" href="#tips" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Think about what a developer would need by way of logging to help trace what
 has happened and gone wrong when the module is running.</li>
-<li>Log at different levels of severity based on your envisioned needs.</li>
 <li>Add details of your approach to logging to the module docstring to assist
 anyone who maintains the module.</li>
 <li>Be sure to document details of your fix from the debugging activity in

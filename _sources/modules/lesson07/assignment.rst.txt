@@ -35,9 +35,9 @@ Here is what you need to do:
    that will be avoided when the system is running.
 #. You will submit two modules: linear.py and parallel.py
 #. Each module will return a lsit of tuples, one tuple for customer and one for products.
-   Each tuple will contain 4 values: the number of records processed,
-   the record count in the database prior to running, the record count after running,
-   and the time taken to run the module.
+   Each tuple will contain 4 values: the number of records processed (int),
+   the record count in the database prior to running (int), the record count after running (int),
+   and the time taken to run the module (float).
 #. You will also submit a text file containing your findings.
 
 
@@ -56,4 +56,4 @@ Submission
 
 Tips
 ----
-- Amend some of the previously provided data to create the 100 records.
+- Amend some of the previously provided data to create 1,000 records.

@@ -1,9 +1,9 @@
-=====================
+#####################
 Lesson 9 : Assignment
-=====================
+#####################
 
-In this lesson's assignment we are going to learn powerful and succinct
-language features like decorators, context managers and recursion that can
+In this lesson's assignment we are going to apply language features 
+like decorators, context managers and recursion that can
 help to build expressive programs that are easy to understand.
 
 
