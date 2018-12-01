@@ -1,5 +1,6 @@
+##############################################
 Case Study : H.P. Norton Furniture Rentals LLC
-==============================================
+##############################################
 
 Background
 ----------
@@ -44,7 +45,7 @@ On delivery, copy 3 is signed by the customer to confirm delivery.
 On return to the office, copy 3 is returned to the service desk. If the rental is for a fixed contract period, copy 3 is added to the file for the respective return date.
 
 Your Role
-=========
+#########
 
 You are one of developers on a team that has been commissioned to work on the project  for H.P. Norton Furniture Rentals. This development team is lead by a Product Owner, who interacts directly with H.P. Norton to understand their requirements and assigns the different activities, or stories, required by the project to the members of the team, including you.
 
