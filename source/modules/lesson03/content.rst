@@ -15,7 +15,7 @@ and they are included here, below the video:
 
 |v1files.png|
 
-  Note: If you are using Windows, you will need to install sqlite. Here's how:
+Note: If you are using Windows, you will need to install sqlite. Here's how:
 
   On Windows, unlike Linux and Mac, sqlite is not installed with Python. As
   always, there are many ways to install sqlite, but the easiest way is with pip.

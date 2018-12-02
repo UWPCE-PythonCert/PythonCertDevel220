@@ -45,6 +45,7 @@ Note:
 #. Create some functional and unit tests for the model.
 #. Develop functionality to deliver the requirements listed above.
 #. Develop tests, and show some tests passing. Show other tests failing.
+#. Ensure you application will create an empty database if one doesn't exist when the app is first run.
 
 Other requirements:
 -------------------
