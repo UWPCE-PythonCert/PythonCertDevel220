@@ -2,9 +2,6 @@
 Lesson 2 : Assignment
 =====================
 
-.. todo::
-    Complete code for charges_calc.py (Luis)
-
 One of the challenges with the existing code base at HP Norton is the lack
 of the necessary debug information when issues occur.
 
@@ -13,20 +10,21 @@ existing rentals of individual inventory items (for example, table lamps),
 including number of units rented, price charged per day and rental start / end dates,
 and return the same list with the total cost of the rental (based on the number of
 days the item or items have been rented), as well as total cost per item (in the 
-case of multiple items). Both the input and the output of the script are JSON files.
+case of multiple items). It also calculates the square root of the total cost of the
+rental for statistical purposes. Both the input and the output of the script are JSON files.
 
 The problem at this point is that, using the included JSON input file, the script 
 is not working. There is no error message or anything else indicating what is
 going on and no output file is being produced.
 
 Your goal this week is twofold: You need to use the Python debugger to figure out
-why the script is not working, you also need to incorporate logging into the script
+why the script is not working and you also need to incorporate logging into the script
 so that someone doing debug can follow the flow of the script.
 
 Here is what you need to do:
 ----------------------------
 
-#. Download the charges_calc.py code and review it. Make sure you also download source.json, which contains the sample source data.
+#. Download the *charges_calc.py* code and review it. Make sure you also download *source.json*, which contains the sample source data (that will be your input file).
 #. Try as best as you can to understand what the code is doing.
 #. Using the debugger, try to understand what is going on with the
    expected command line parameters. See if from the code and through
@@ -40,7 +38,7 @@ Here is what you need to do:
 Requirements:
 -------------
 
-#. You cannot change the source data, your script needs to deal with data inconsistencies that could make it crash or return incorrect data and issue warnings for missing data. 
+#. Your script needs to deal with data inconsistencies that could make it crash or return incorrect data (handle the exception and issue an error message for these and let the script continue) and issue warnings for missing data. 
 #. Capture you debug work in a text file, you will need that for your submission.
 #. Setup logging messages so that they are disabled by default and can by enabled by using *-d 1* or *--debug 1* from the command line. Use the *argparse* module for this. You will have the following debug levels:
     #. 0: No debug messages or log file.
@@ -62,6 +60,10 @@ Requirements:
     ..
 
     log_file = datetime.datetime.now().strftime("%Y-%m-%d")+'.log'
+
+Other requirements:
+-------------------
+- Your code should not trigger any warnings or errors from Pylint.
 
 Submission:
 -----------
