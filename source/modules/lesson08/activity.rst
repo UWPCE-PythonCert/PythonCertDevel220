@@ -118,13 +118,6 @@ This is how you might interact with your Locke class.
 
    </div>
 
-.. rubric::
-   :name: section
-   :class: caH2
-
-.. rubric:: ` <%24CANVAS_OBJECT_REFERENCE%24/discussion_topics/i8cd02eac3aa2cd71b6b762c17fb80f41>`__
-   :name: section-1
-   :class: caH2
 
 .. raw:: html
 

@@ -13,67 +13,66 @@ Processes are running programs. Threads are the unit of execution within a progr
 
 #Thread example
 
-```
-import threading
+.. code:: python
 
-mydata = threading.local()
-mydata.x = 1
+    import threading
 
-x=100
+    mydata = threading.local()
+    mydata.x = 1
 
-print(f"mydata.x is {mydata.x}, x is {x}")
+    x=100
 
-
-def hello(thread):
-    print()
-    print(f"hello world from {thread}")
-
-t1 = threading.Timer(3.0, hello, args=('t1',))
-t2 = threading.Timer(2.0, hello, args=('t2',))
-
-t1.start()
-t2.start()
-
-```
+    print(f"mydata.x is {mydata.x}, x is {x}")
 
 
-#Process example
+    def hello(thread):
+        print()
+        print(f"hello world from {thread}")
 
-```
-# run from command prompt
-from multiprocessing import Pool
-from multiprocessing import Process
-import os
+    t1 = threading.Timer(3.0, hello, args=('t1',))
+    t2 = threading.Timer(2.0, hello, args=('t2',))
 
-def f1(x):
-    return x*x
-
-def info(title):
-    print(title)
-    print('module name:', __name__)
-    print('parent process:', os.getppid())
-    print('process id:', os.getpid())
-
-def f2(name):
-    info('function f2')
-    print('hello', name)
+    t1.start()
+    t2.start()
 
 
-if __name__ == '__main__':
+Process example
+---------------
 
-    #part 1 Pool
-    with Pool(5) as p1:
-        print(p1.map(f1, [10, 11, 12]))
-    print()
+.. code:: python
 
-    # part 2 Process
+    # run from command prompt
+    from multiprocessing import Pool
+    from multiprocessing import Process
+    import os
 
-    info('main line')
-    p2 = Process(target=f2, args=('bob',))
-    p2.start()
-    p2.join()
-```
+    def f1(x):
+        return x*x
 
+    def info(title):
+        print(title)
+        print('module name:', __name__)
+        print('parent process:', os.getppid())
+        print('process id:', os.getpid())
+
+    def f2(name):
+        info('function f2')
+        print('hello', name)
+
+
+    if __name__ == '__main__':
+
+        #part 1 Pool
+        with Pool(5) as p1:
+            print(p1.map(f1, [10, 11, 12]))
+        print()
+
+        # part 2 Process
+
+        info('main line')
+        p2 = Process(target=f2, args=('bob',))
+        p2.start()
+        p2.join()
 
 # async coroutines (stop and start again)
 An asynchronous program takes one execution step at a time and can move on to the next if the previous one is not finished.
@@ -83,26 +82,26 @@ This means we are continuing onward through execution steps of the program, even
 
 ##Async example
 
-```
-import asyncio
+.. code:: python
 
-async def say(what, when):
-    await asyncio.sleep(when)
-    print(what)
+    import asyncio
 
-async def stop_after(loop, when):
-    await asyncio.sleep(when)
-    loop.stop()
+    async def say(what, when):
+        await asyncio.sleep(when)
+        print(what)
+
+    async def stop_after(loop, when):
+        await asyncio.sleep(when)
+        loop.stop()
 
 
-loop = asyncio.get_event_loop()
+    loop = asyncio.get_event_loop()
 
-loop.create_task(say('first hello', 2))
-loop.create_task(say('second hello', 1))
-loop.create_task(say('third hello', 4))
-loop.create_task(stop_after(loop, 3))
+    loop.create_task(say('first hello', 2))
+    loop.create_task(say('second hello', 1))
+    loop.create_task(say('third hello', 4))
+    loop.create_task(stop_after(loop, 3))
 
-loop.run_forever()
-loop.close()
+    loop.run_forever()
+    loop.close()
 
-```

@@ -139,12 +139,6 @@ xx@uw.edu
 
    </div>
 
- 
-
-.. rubric:: 
-   :name: section-1
-   :class: caH4 clear
-
 .. raw:: html
 
    </div>
