@@ -13,8 +13,6 @@ This site can be thought of as the textbook for the first second class in the UW
     :maxdepth: 1
 
     modules/index
-    exercises/index
-    supplemental/index
     references/index
 
 

@@ -14,7 +14,7 @@ Object orientation allows developers to design applications in such a way
 technical concepts and problem domain concepts are kept separate.
 
 Why would I want to do that?
----------------------------
+----------------------------
 Let's be sure we understand the term 'problem domain' first. The problem
 domain is the functionality and data that is needed to meet the application's
 requirements. It excludes the technical and framework concepts that are
