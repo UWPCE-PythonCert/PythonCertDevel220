@@ -32,7 +32,7 @@
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 import sys
-sys.setrecursionlimit(3000)
+sys.setrecursionlimit(10000)
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.todo',
