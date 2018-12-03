@@ -8,86 +8,21 @@ several points these techniques bridge the gap between object oriented
 programming and functional programming, albeit the specific methods
 might lean toward one side or the other.
 
-.. raw:: html
-
-   <div id="recommended-text" class="section">
-
-.. rubric:: Recommended Text\ ` <#recommended-text>`__
-   :name: recommended-text
-
 For the functional programming modules, this lesson included, we
 recommend Functional Python Programming by Steven Lott.
 
-.. raw:: html
-
-   <div class="line-block">
-
-.. raw:: html
-
-   <div class="line">
-
 Publisher: Packt Publishing
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="line">
-
 Pub. Date: January 31, 2015
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="line">
-
 Web ISBN-13: 978-1-78439-761-6
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="line">
-
 Print ISBN-13: 978-1-78439-699-2
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="line">
 
 http://bit.ly/2azI62S
 
-.. raw:: html
+This lesson’s optional readings draws from this text.
 
-   </div>
-
-.. raw:: html
-
-   </div>
-
-Each lesson’s optional readings will draw from this text.
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div id="learning-objectives" class="section">
-
-.. rubric:: Learning Objectives\ ` <#learning-objectives>`__
-   :name: learning-objectives
+===================
+Learning-objectives
+===================
 
 Upon successful completion of this lesson, you will be able to:
 
@@ -96,32 +31,16 @@ Upon successful completion of this lesson, you will be able to:
 -  design and code a recursive algorithm
 -  articulate the drawbacks of recursion in Python
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div id="new-words-or-concepts" class="section">
-
-.. rubric:: New Words or Concepts\ ` <#new-words-or-concepts>`__
-   :name: new-words-or-concepts
+New Words or Concepts
+=====================
 
 -  Decorator
 -  Context Manager
 -  Contextlib
 -  Recursion
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div id="required-reading" class="section">
-
-.. rubric:: Required Reading\ ` <#required-reading>`__
-   :name: required-reading
+Required Reading
+================
 
 -  Decorators
 
@@ -199,10 +118,9 @@ Upon successful completion of this lesson, you will be able to:
 
 .. raw:: html
 
-   <div id="optional-reading" class="section">
 
-.. rubric:: Optional Reading\ ` <#optional-reading>`__
-   :name: optional-reading
+Optional Reading
+================
 
 -  Lott, S. (2015) Chapter 11. Decorator Design Techniques. In
    Functional Python Programming.
