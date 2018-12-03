@@ -1,0 +1,284 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "source/modules/lesson00/principles.rst",
+			"settings":
+			{
+				"buffer_size": 1049,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"vi",
+				"Virtualenv: SublimeREPL - Python"
+			],
+			[
+				"vrirt",
+				"Virtualenv: SublimeREPL - Python"
+			],
+			[
+				"virt",
+				"Virtualenv: SublimeREPL - Python"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Remove Package"
+			],
+			[
+				"repl:p",
+				"SublimeREPL: Python - IPython"
+			],
+			[
+				"Package Control:",
+				"Package Control: Install Package"
+			],
+			[
+				"lint",
+				"Anaconda: Disable linting on this file"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/andy/projects/uw/PythonCertDevel220",
+		"/Users/andy/projects/uw/PythonCertDevel220/source",
+		"/Users/andy/projects/uw/PythonCertDevel220/source/examples",
+		"/Users/andy/projects/uw/PythonCertDevel220/source/modules",
+		"/Users/andy/projects/uw/PythonCertDevel220/source/modules/lesson00",
+		"/Users/andy/projects/uw/PythonCertDevel220/source/modules/lesson07",
+		"/Users/andy/projects/uw/PythonCertDevel220/source/modules/lesson08",
+		"/Users/andy/projects/uw/PythonCertDevel220/source/modules/lesson09"
+	],
+	"file_history":
+	[
+		"/Users/andy/projects/uw/PythonCertDevel220/source/modules/lesson02/assignment.rst",
+		"/Users/andy/projects/uw/PythonCertDevel220/source/modules/lesson03/assignment.rst",
+		"/Users/andy/projects/uw/PythonCertDevel220/source/modules/lesson02/code/charges_calc.py",
+		"/Users/andy/Dropbox/Notes/tracking.note",
+		"/Users/andy/projects/uw/PythonCertDevel220/source/modules/lesson07/assignment.rst",
+		"/Users/andy/projects/uw/PythonCertDevel220/venv/lib/python3.7/site-packages/IPython/utils/tests/test_shimmodule.py",
+		"/Users/andy/projects/uw/PythonCertDevel220/venv/lib/python3.7/site-packages/IPython/config.py",
+		"/Users/andy/projects/uw/PythonCertDevel220/source/modules/lesson03/content.rst",
+		"/Users/andy/projects/uw/PythonCertDevel220/source/code/lesson03/v00_personjob_model.py",
+		"/Users/andy/projects/uw/PythonCertDevel220/build_gh_pages_local.sh",
+		"/Users/andy/projects/uw/PythonCertDevel220/source/modules/lesson09/assignment.rst",
+		"/Users/andy/projects/uw/PythonCertDevel220/source/modules/lesson06/assignment.rst",
+		"/Users/andy/projects/uw/PythonCertDevel220/source/modules/lesson08/assignment.rst",
+		"/Users/andy/projects/uw/PythonCertDevel220/source/modules/lesson01/.gitignore",
+		"/Users/andy/projects/uw/PythonCertDevel220/source/modules/lesson00/case_study.rst",
+		"/Users/andy/projects/uw/PythonCertDevel220/source/index.rst",
+		"/Users/andy/projects/uw/PythonCertDevel220/source/conf.py",
+		"/Users/andy/Library/Application Support/Sublime Text 3/Packages/SublimeREPL/SublimeREPL.sublime-settings",
+		"/Users/andy/projects/uw/PythonCertDevel220/source/code/lesson03/v3_p2_select_update.py",
+		"/Users/andy/projects/uw/PythonCertDevel220/source/modules/lesson00/extras_git.rst",
+		"/Users/andy/projects/uw/PythonCertDevel220/source/code/lesson00/oo_class.py",
+		"/Users/andy/projects/uw/PythonCertDevel220/source/code/lesson03/del.py",
+		"/Users/andy/projects/uw/PythonCertDevel220/PythonCertDevel220.sublime-project",
+		"/Users/andy/Library/Application Support/Sublime Text 3/Packages/User/SublimeREPL.sublime-settings",
+		"/Users/andy/projects/uw/PythonCertDevel220/source/code/lesson02/PhyRe.py",
+		"/Users/andy/projects/uw/py220_classroom/py220_classroom/src/slide_gen/slide_gen.py",
+		"/Users/andy/projects/uw/py220_classroom/config.py"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 125.0,
+		"where_history":
+		[
+			"/Users/andy/projects/uw/PythonCertDevel220"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"IPython.config",
+			"="
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"#"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "source/modules/lesson00/principles.rst",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1049,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								162,
+								162
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/RestructuredText Improved/reStructuredText Improved.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 51.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.SublimeLinter":
+	{
+		"height": 0.0
+	},
+	"output.exec":
+	{
+		"height": 119.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/Bash Build System/Bash.sublime-build",
+	"project": "PythonCertDevel220.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 341.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 575.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 348.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

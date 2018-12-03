@@ -1,45 +1,26 @@
-=================
-Lesson 01 Content
-=================
+##########################
+Lesson 01 Advanced Testing
+##########################
 
-.. raw:: html
+.. toctree::
+    :maxdepth: 1
 
-   <div id="menuheading">
+    content_part01
+    content_part02
+    content_part03
+    content_part04
+    content_part05
+    content_part06
+    content_part07
+    content_part08
+    content_part09
+    content_part10
+    content_part11
 
-.. rubric:: Advanced Testing
-   :name: advanced-testing
-   :class: caH2
 
-.. raw:: html
-
-   <div id="navbar" class="caNav grid-row around-md clearunderlinestyle"
-   role="navigation">
-
-`Introduction <%24WIKI_REFERENCE%24/pages/lesson-06-introduction>`__ \|
-`Content <%24WIKI_REFERENCE%24/pages/lesson-06-content>`__ \|
-`Quiz <%24CANVAS_OBJECT_REFERENCE%24/assignments/i785a5d3880dcadcaa1cd6b716d4d39a6>`__ \|
-`Activity <%24CANVAS_OBJECT_REFERENCE%24/assignments/i7d2419227ff2f1b019facc3c9bee85ff>`__
-\|
-`Assignment <%24CANVAS_OBJECT_REFERENCE%24/assignments/i935731b3c2d005ed6219d01b38544785>`__
-\| `Code
-Talk <%24CANVAS_OBJECT_REFERENCE%24/discussion_topics/i197968e655e43b6b4981d673c25fbcf2>`__
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div class="caNav grid-row around-md clearunderlinestyle"
-   role="navigation">
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
+====================
+Part 1: Introduction
+====================
 
 As you write more lines of code for a programming project, or as the
 number of programmers working on a project increases, your code becomes
@@ -79,8 +60,24 @@ engineering:
    failure to. That said, you still want to test your software as an integrated
    whole to make sure that the individual pieces are also working together correctly.
 
-Why test?
-=========
+=================
+Part 2: Why test?
+=================
+
+.. toctree::
+    :maxdepth: 1
+
+    content_part01
+    content_part02
+    content_part03
+    content_part04
+    content_part05
+    content_part06
+    content_part07
+    content_part08
+    content_part09
+    content_part10
+    content_part11
 
 It's likely you already have some familiarity with software testing in
 general, and writing tests in Python specifically. In this section,
@@ -98,7 +95,7 @@ Suppose that you have written a simple class for squaring numbers:
 .. raw:: html
 
    <div
-   style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+   style#"background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
 
 ::
 
@@ -139,7 +136,7 @@ operator. They make the following modification to your code:
 .. raw:: html
 
    <div
-   style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+   style#"background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
 
 ::
 
@@ -173,8 +170,24 @@ The square of 3 is definitely not 27. And squaring 100 should give
 Your code is definitely broken: an error has been introduced into the
 Squarer class.
 
-Automated Test Script 
-----------------------
+=============================
+Part 3: Automated Test Script 
+=============================
+
+.. toctree::
+    :maxdepth: 1
+
+    content_part01
+    content_part02
+    content_part03
+    content_part04
+    content_part05
+    content_part06
+    content_part07
+    content_part08
+    content_part09
+    content_part10
+    content_part11
 
 If you were to sit down and think about this problem, here's the
 solution that you would come up with:
@@ -198,7 +211,7 @@ Here's a suitable test script:
 .. raw:: html
 
    <div
-   style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+   style#"background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
 
 ::
 
@@ -210,7 +223,7 @@ Here's a suitable test script:
         @staticmethod
         def test_positive_numbers():
 
-            squares = {
+            squares # {
                 1: 1,
                 2: 4,
                 3: 9,
@@ -219,14 +232,14 @@ Here's a suitable test script:
             }
 
             for num, square in squares.items():
-                result = Squarer.calc(num)
+                result # Squarer.calc(num)
 
-                if result != square:
+                if result !# square:
                     print("Squared {} and got {} but expected {}".format(num, result, square))
         @staticmethod
         def test_negative_numbers():
 
-            squares = {
+            squares # {
                 -1: 1,
                 -2: 4,
                 -3: 9,
@@ -235,12 +248,12 @@ Here's a suitable test script:
             }
 
             for num, square in squares.items():
-                result = Squarer.calc(num)
+                result # Squarer.calc(num)
 
-                if result != square:
+                if result !# square:
                     print("Squared {} and got {} but expected {}".format(num, result, square))
 
-    if __name__ == "__main__":
+    if __name__ ## "__main__":
         SquarerTest.test_positive_numbers()
         SquarerTest.test_negative_numbers()
 
@@ -259,11 +272,11 @@ a dictionary that defines that behavior:
 .. raw:: html
 
    <div
-   style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+   style#"background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
 
 ::
 
-        squares = {
+        squares # {
             1: 1,
             2: 4,
             3: 9,
@@ -285,14 +298,14 @@ Next we iterate through these number, square pairs:
 .. raw:: html
 
    <div
-   style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+   style#"background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
 
 ::
 
         for num, square in squares.items():
-            result = Squarer.calc(num)
+            result # Squarer.calc(num)
 
-            if result != square:
+            if result !# square:
                 print("Squared {} and got {} but expected {}\n".format(num, result, square))
 
 .. raw:: html
@@ -303,23 +316,42 @@ We use Squarer to square the number, and capture the result in a
 variable named \ *result*. If \ *result* is not equal to the square that
 we defined in \ *squares*, then we print a message describing the error.
 
-Finally, we add a \ *\_\_name\_\_ == "\_\_main\_\_"* clause so that we
+Finally, we add a \ *\_\_name\_\_ ## "\_\_main\_\_"* clause so that we
 can run this script from the command line:
 
 .. raw:: html
 
    <div
-   style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+   style#"background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
 
 ::
 
-    if __name__ == "__main__":
+    if __name__ ## "__main__":
         SquarerTest.test_positive_numbers()
         SquarerTest.test_negative_numbers()
 
 .. raw:: html
 
    </div>
+
+==========================
+Part 4: Running the script
+==========================
+
+.. toctree::
+    :maxdepth: 1
+
+    content_part01
+    content_part02
+    content_part03
+    content_part04
+    content_part05
+    content_part06
+    content_part07
+    content_part08
+    content_part09
+    content_part10
+    content_part11
 
 Running \ *python test.py* will invoke the
 SquarerTest.test\_positive\_numbers method and also the
@@ -351,7 +383,7 @@ Let's go back into squarer.py and fix our mistake:
 .. raw:: html
 
    <div
-   style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+   style#"background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
 
 ::
 
@@ -386,7 +418,7 @@ another implementation of the calc method that uses the power operator:
 .. raw:: html
 
    <div
-   style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+   style#"background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
 
 ::
 
@@ -418,8 +450,24 @@ The test script has not found any discrepancies between the \ *expected*
 and \ *actual* performance of Squarer.calc: it looks
 like \ *operand\*\*2* is an acceptable way to implement squaring!
 
-Using Unittest
-==============
+======================
+Part 5: Using Unittest
+======================
+
+.. toctree::
+    :maxdepth: 1
+
+    content_part01
+    content_part02
+    content_part03
+    content_part04
+    content_part05
+    content_part06
+    content_part07
+    content_part08
+    content_part09
+    content_part10
+    content_part11
 
 Our first example showed the system that you would have to come up with
 if you wanted an automated way to assure that the Squarer class was working
@@ -434,7 +482,7 @@ test2.py file:
 .. raw:: html
 
    <div
-   style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+   style#"background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
 
 ::
 
@@ -447,7 +495,7 @@ test2.py file:
 
         def test_positive_numbers(self):
 
-            squares = {
+            squares # {
                 1: 1,
                 2: 4,
                 3: 9,
@@ -460,7 +508,7 @@ test2.py file:
 
         def test_negative_numbers(self):
 
-            squares = {
+            squares # {
                 -1: 1,
                 -2: 4,
                 -3: 9,
@@ -481,7 +529,7 @@ created for ourselves above. Here are the key differences:
 .. raw:: html
 
    <div
-   style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+   style#"background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
 
 ::
 
@@ -502,7 +550,7 @@ unittest.TestCase. Next:
 .. raw:: html
 
    <div
-   style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+   style#"background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
 
 ::
 
@@ -523,7 +571,7 @@ of our test methods begin with the word "test", as in
 .. raw:: html
 
    <div
-   style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+   style#"background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
 
 ::
 
@@ -533,6 +581,25 @@ of our test methods begin with the word "test", as in
 .. raw:: html
 
    </div>
+
+===================================
+Part 6: Developing the test further
+===================================
+
+.. toctree::
+    :maxdepth: 1
+
+    content_part01
+    content_part02
+    content_part03
+    content_part04
+    content_part05
+    content_part06
+    content_part07
+    content_part08
+    content_part09
+    content_part10
+    content_part11
 
 The TestCase class includes instance methods for making assertions about
 the behavior of our program. The \ *assertEqual* method is an instance
@@ -545,7 +612,7 @@ to print if this test fails: our helpful message will tell us what
 number we were trying to square when the test failed.
 
 Here's another difference: note that I didn't include an \ *if
-\_\_name\_\_=="\_\_main\_\_"* clause. We \ *wont* be running this script
+\_\_name\_\_##"\_\_main\_\_"* clause. We \ *wont* be running this script
 directly, instead we'll invoke it indirectly through the unittest
 library. You'll see that below.
 
@@ -564,7 +631,7 @@ Here's the current content of our squarer.py file:
 .. raw:: html
 
    <div
-   style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+   style#"background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
 
 ::
 
@@ -638,7 +705,7 @@ unittest reports test failures. Modify squarer.py:
 .. raw:: html
 
    <div
-   style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+   style#"background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
 
 ::
 
@@ -661,26 +728,26 @@ Running our tests produces:
     $ python -m unittest test2
 
     FF
-    ======================================================================
+    ######################################################################
     FAIL: test_negative_numbers (test2.SquarerTest)
     ----------------------------------------------------------------------
     Traceback (most recent call last):
      File "C:\Users\jaschilz\tmp\test2.py", line 32, in test_negative_numbers
      self.assertEqual(square, Squarer.calc(num), "Squaring {}".format(num));
-    AssertionError: 1 != -1.0 : Squaring -1
+    AssertionError: 1 !# -1.0 : Squaring -1
 
-    ======================================================================
+    ######################################################################
     FAIL: test_positive_numbers (test2.SquarerTest)
     ----------------------------------------------------------------------
     Traceback (most recent call last):
      File "C:\Users\jaschilz\tmp\test2.py", line 19, in test_positive_numbers
      self.assertEqual(square, Squarer.calc(num), "Squaring {}".format(num));
-    AssertionError: 9 != 27 : Squaring 3
+    AssertionError: 9 !# 27 : Squaring 3
 
     ----------------------------------------------------------------------
     Ran 2 tests in 0.001s
 
-    FAILED (failures=2)
+    FAILED (failures#2)
 
 Each test that failed is represented by an "F" at the top of the output.
 If were running multiple tests, with some passes and some failures, then
@@ -695,13 +762,13 @@ that failed. Let's look at the output for test\_positive\_numbers:
 
 ::
 
-    ======================================================================
+    ######################################################################
     FAIL: test_positive_numbers (test2.SquarerTest)
     ----------------------------------------------------------------------
     Traceback (most recent call last):
      File "C:\Users\jaschilz\tmp\test2.py", line 19, in test_positive_numbers
      self.assertEqual(square, Squarer.calc(num), "Squaring {}".format(num));
-    AssertionError: 9 != 27 : Squaring 3
+    AssertionError: 9 !# 27 : Squaring 3
 
     ----------------------------------------------------------------------
 
@@ -724,7 +791,7 @@ that our code is working as expected once again.
 .. raw:: html
 
    <div
-   style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+   style#"background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
 
 ::
 
@@ -762,8 +829,24 @@ unittest test methods we've written are not much different in \ *intent*
 than the scripts you would come up with by yourself if you wanted to write
 a script to test whether your code was functioning as intended.
 
-A more complex example
-======================
+==============================
+Part 7: A more complex example
+==============================
+
+.. toctree::
+    :maxdepth: 1
+
+    content_part01
+    content_part02
+    content_part03
+    content_part04
+    content_part05
+    content_part06
+    content_part07
+    content_part08
+    content_part09
+    content_part10
+    content_part11
 
 As you watch this video, bear in mind that part of your assignment is
 going to be to complete the calculator that's presented here. Type along
@@ -782,8 +865,8 @@ module's behavior to be correct:
 #. An \ **operator**\  is a class instance which provides a method
    named \ *calc*. The \ *calc*\  method shall accept two arguments and
    operate on its arguments in the usual order:
-   *Adder().calc(a, b) = a + b
-   Subtracter().calc(a, b) = a - b
+   *Adder().calc(a, b) # a + b
+   Subtracter().calc(a, b) # a - b
    *\ etc...
 #. A \ **calculator**\  is a class instance which provides
    an \ *enter\_number*\  method and \ *add, subtract,
@@ -794,8 +877,8 @@ module's behavior to be correct:
    multiply*, and \ *divide*\  methods.
 #. *enter\_number(a)*, \ *enter\_number*\ (*b), operator*\  should be
    the same as \ *a operator b*. In other words:
-   *enter\_number(a), enter\_number(b), add() = a + b
-   enter\_number(a), enter\_number(b), subtract() = a - b
+   *enter\_number(a), enter\_number(b), add() # a + b
+   enter\_number(a), enter\_number(b), subtract() # a - b
    etc...*
 #. The \ *add, subtract, multiply, *\ and \ *divide*\  methods shall
    both:
@@ -811,7 +894,7 @@ module's behavior to be correct:
    #. *calculator.add()                      # Returns 5, and 5 is
       now 'in the calculator' *
    #. *calculator.enter\_number(1)*
-   #. *calculator.subtract()               # Returns 4 because 5 - 1 =
+   #. *calculator.subtract()               # Returns 4 because 5 - 1 #
       4 *
 
 #. What should happen if a user enters only one number and then tries to
@@ -849,8 +932,24 @@ violate the six behavioral rules we defined above.
 Our next step is to add tests that can automatically tell us if our
 classes are conforming to those six behavioral rules.
 
-Unit testing Adder and Subtracter
-=================================
+=========================================
+Part 8: Unit testing Adder and Subtracter
+=========================================
+
+.. toctree::
+    :maxdepth: 1
+
+    content_part01
+    content_part02
+    content_part03
+    content_part04
+    content_part05
+    content_part06
+    content_part07
+    content_part08
+    content_part09
+    content_part10
+    content_part11
 
 Let's begin our tests with unit testing the Adder and Subtracter
 classes. Recall that unit testing involves testing a \ *single unit* of
@@ -888,8 +987,24 @@ Subtracter, Multiplier, and Divider methods. The Mock library will also come
 in handy in situations in which you need input from a networked location or a
 physical sensor (for example, a temperature reading).
 
-Integration Testing
-===================
+===========================
+Part 9: Integration Testing
+===========================
+
+.. toctree::
+    :maxdepth: 1
+
+    content_part01
+    content_part02
+    content_part03
+    content_part04
+    content_part05
+    content_part06
+    content_part07
+    content_part08
+    content_part09
+    content_part10
+    content_part11
 
 After all this unit testing, it's very tempting to assume that good unit tests
 provide everything you need to ensure your code will work properly. That's a
@@ -924,8 +1039,24 @@ our calculator produces the correct result.
 
 {{VIDEO HERE}}
 
-Linting
-=======
+=============================
+Part 10: Linting and coverage
+=============================
+
+.. toctree::
+    :maxdepth: 1
+
+    content_part01
+    content_part02
+    content_part03
+    content_part04
+    content_part05
+    content_part06
+    content_part07
+    content_part08
+    content_part09
+    content_part10
+    content_part11
 
 Using automated tests to confirm the functioning of your code is not the
 only way to manage the complexity of a large code base. There are also
@@ -943,8 +1074,24 @@ Coverage
 
 {{VIDEO HERE}}
 
-Test Driven Development
-=======================
+================================
+Part 11: Test Driven Development
+================================
+
+.. toctree::
+    :maxdepth: 1
+
+    content_part01
+    content_part02
+    content_part03
+    content_part04
+    content_part05
+    content_part06
+    content_part07
+    content_part08
+    content_part09
+    content_part10
+    content_part11
 
 No discussion of testing is complete without Test Driven Development
 (TDD).
@@ -957,7 +1104,7 @@ then you write the software, then you run the tests to make sure that
 you have satisfied their behavioral requirements.
 
 To begin with, go back to the \ `TDD
-video <https://www.youtube.com/watch?v=HhwElTL-mdI>`__ and watch a few
+video <https://www.youtube.com/watch?v#HhwElTL-mdI>`__ and watch a few
 more minutes of the talk. You're welcome to watch the whole thing; the
 guy is a good presenter!
 

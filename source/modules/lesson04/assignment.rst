@@ -1,14 +1,11 @@
 =====================
 Lesson 4 : Assignment
 =====================
-
-.. todo::
-    Make this assignment consistent with the case study.
     
 In this lesson's assignment we are going to apply the functional
 programming techniques we have learned to improve code that we have
 written in earlier lessons for the case study.
-As important as leanring the syntax for  iterables, iterators and generators
+As important as learning the syntax for iterables, iterators and generators
 is understanding the context in which they are best used.
 This assignment will allow you to reflect on that as you apply your learning.
 
@@ -16,32 +13,45 @@ Here is what you need to do:
 ----------------------------
 We are not going to develop new functionality in this assignment. Rather,
 we are going to refactor existing code to improve it and make it more Pythonic.
-This is a very common development activity in application development.
+This is a very common activity in application development.
 
-You will already have tests from past assignments that verify data is being
-written to the HP Norton databases. Although we are going to changes the way
+You will already have tests from the lesson 3 assignment that verify data is being
+written to the HP Norton databases. Although we are going to change the way
 data is written to and read from the databases, the tests should not need to change.
-We are amending the functionality the tests use to make them perform better and be
+We are amending the functionality the tests use to make them easier to mainrain and be
 more Pythonic.
 
 This development process, where we change internal behavior while preserving how
-that behavior is called is named refactoring.
+that behavior is called, is named refactoring.
 
 So here is our refactoring assignment:
-
 
 #. Using comprehensions, iterators / iterables, and generators appropriately,
    and the instructor-provided customer data, write data to your customer
    database and read / display it.
-#. Verify existing tests still function correctly.
+#. Verify existing unit tests still function correctly.
 #. If necessary, update tests to show the data is being maintained correctly in the database.
-#. Log all database data changes (adds, amends, deletes).
+#. Add code to log all database data changes (adds, amends, deletes).
 
-.. todo::
-    Create a customer csv file to be used for loading data with at least
-    1000 records (Andy).
+Be sure to consult the lesson 3 assignment for details of the functionality.
+The set of data you will use is much larger than in lesson 3; be sure to use
+the file included with this lesson.
+
+Other requirements:
+-------------------
+- Your code should not trigger any warnings or errors from Pylint.
+
+Testing
+-------
+- Make sure your existing tests run as expected.
+
+Submission
+----------
+- You will need to submit *basic_operations.py* plus any test files you develop.
 
 Tips
 ----
-#. Think about the right techniques to use given the volumes of data.
-#. Be sure you make the best use of your existing tests
+- Remember to think about system features, not web pages or the UI.
+- Tests first!
+- Think about the right techniques to use given the volumes of data.
+- Be sure you make the best use of your existing tests
