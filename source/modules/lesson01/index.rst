@@ -7,9 +7,9 @@ Lesson 1 : Automated Testing
     :maxdepth: 1
 
     prerequisites
-    ntroduction
+    introduction
     content_part01
     activity
     assignment
-    office_hours1_recaps
-    hours2_all
+    office_hours_recaps
+    office_hours_all
