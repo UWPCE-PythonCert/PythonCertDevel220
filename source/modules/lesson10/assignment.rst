@@ -15,7 +15,7 @@ products is not clear.
 In order to diagnose the issues the HP Norton developer want to easily ass
 some logging and timing infomration to record what the system is actually
 doing and to help identify the bottlnecks. And metaprogramming seems to be a
- good way to unobtrusively add this functionality to the existing applcation.
+good way to unobtrusively add this functionality to the existing applcation.
 
 For this assigment, you will use metaprogramming to add logging and timing
 information to the HP Norton application, using the code samples from
@@ -26,7 +26,7 @@ the associtaed timing. Just write it to a file. DOnt bother with fancy
 report formatting, although the data should be preented in such a way that
 command line tools can easily view it.
 
-.. tbd::
+.. todo::
     Lesson 10 add links to code for assignment (RDBMS and mongo)
 
 Tips
