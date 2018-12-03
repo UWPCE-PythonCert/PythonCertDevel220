@@ -1,6 +1,6 @@
-=====================
-Lesson 2 : Assignment
-=====================
+##########
+Assignment
+##########
 
 One of the challenges with the existing code base at HP Norton is the lack
 of the necessary debug information when issues occur.

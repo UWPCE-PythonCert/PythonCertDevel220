@@ -1,38 +1,7 @@
-=================
-Lesson 2 Activity
-=================
+########
+Activity
+########
 
-.. raw:: html
-
-   <div id="menuheading">
-
-.. rubric:: Logging and Debugging
-   :name: logging-and-debugging
-   :class: caH2
-
-.. raw:: html
-
-   <div id="navbar" class="caNav grid-row around-md clearunderlinestyle"
-   role="navigation">
-
-`Introduction <%24WIKI_REFERENCE%24/pages/lesson-05-introduction>`__ \|
-`Content <%24WIKI_REFERENCE%24/pages/lesson-05-content>`__ \|
-`Quiz <%24CANVAS_OBJECT_REFERENCE%24/quizzes/ie7895b971d4a0e2e35b415eb863435b0>`__ \|
-`Activity <%24CANVAS_OBJECT_REFERENCE%24/assignments/i89c943e0018a913b1c51e640fa38f289>`__
-\|
-`Assignment <%24CANVAS_OBJECT_REFERENCE%24/assignments/i6935f2eba782af5becab9aa3ea3829ca>`__
-\| `Code
-Talk <%24CANVAS_OBJECT_REFERENCE%24/discussion_topics/i72c5561508c841b38aa31c3d12c9e1c7>`__
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
-
- 
 In the lesson content, we asked you to spend 5-10 minutes on your own
 debugging the recursion error exercise code. After doing so, do the following:
 
