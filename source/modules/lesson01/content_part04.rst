@@ -12,7 +12,6 @@ Part 4: Running the script
     content_part01
     content_part02
     content_part03
-    content_part04
     content_part05
     content_part06
     content_part07

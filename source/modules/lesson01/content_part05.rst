@@ -13,7 +13,6 @@ Part 5: Using Unittest
     content_part02
     content_part03
     content_part04
-    content_part05
     content_part06
     content_part07
     content_part08

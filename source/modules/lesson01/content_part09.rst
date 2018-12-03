@@ -17,7 +17,6 @@ Part 9: Integration Testing
     content_part06
     content_part07
     content_part08
-    content_part09
     content_part10
     content_part11
 

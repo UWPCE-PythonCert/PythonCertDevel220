@@ -19,7 +19,6 @@ Part 11: Test Driven Development
     content_part08
     content_part09
     content_part10
-    content_part11
 
 No discussion of testing is complete without Test Driven Development
 (TDD).

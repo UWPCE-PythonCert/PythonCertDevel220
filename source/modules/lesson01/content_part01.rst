@@ -5,7 +5,6 @@ Lesson 01 Advanced Testing
 .. toctree::
     :maxdepth: 1
 
-    content_part01
     content_part02
     content_part03
     content_part04

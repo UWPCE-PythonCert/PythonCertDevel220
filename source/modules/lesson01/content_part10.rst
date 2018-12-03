@@ -18,7 +18,6 @@ Part 10: Linting and coverage
     content_part07
     content_part08
     content_part09
-    content_part10
     content_part11
 
 Using automated tests to confirm the functioning of your code is not the

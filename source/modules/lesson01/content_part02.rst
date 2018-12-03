@@ -10,7 +10,6 @@ Part 2: Why test?
     :maxdepth: 1
 
     content_part01
-    content_part02
     content_part03
     content_part04
     content_part05
