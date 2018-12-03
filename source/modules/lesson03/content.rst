@@ -24,16 +24,19 @@ Note: If you are using Windows, you will need to install sqlite. Here's how:
   At the command prompt enter the following command:
 
   .. code:: bash
+
       pip install pysqlite3
 
   Now, type the following command:
 
   .. code:: bash
+
       sqlite3
 
   And you should see the sqlite prompt. Type the quit command to return to the command prompt:
 
   .. code:: bash
+  
       .quit
 
 

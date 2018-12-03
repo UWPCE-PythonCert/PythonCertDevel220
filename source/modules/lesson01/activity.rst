@@ -18,7 +18,7 @@ and \ *integration-test.py* files.
    the \ *unit-test.py* file.
 #. *python -m unittest unit-test.py*\  and *python -m unittest
    integration-test.py* should have no failures.
-#. Running \ *coverage run --source=calculator -m unittest unit-test.py;
+#. Running \ *coverage* run --source=calculator -m unittest unit-test.py;
    coverage report*\ * *\ shows 90%+ coverage..
 #. Satisfy the linter such that \ *pylint calculator* gives no errors
    and *flake8 calculator* gives no errors. You can achieve this by some
