@@ -1,6 +1,6 @@
-=====================
-Lesson 4 : Assignment
-=====================
+##########
+Assignment
+##########
     
 In this lesson's assignment we are going to apply the functional
 programming techniques we have learned to improve code that we have

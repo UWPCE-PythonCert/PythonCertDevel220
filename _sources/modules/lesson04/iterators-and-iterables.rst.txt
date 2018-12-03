@@ -1,6 +1,6 @@
-====================================
-Lesson 04.02 Iterators and Iterables
-====================================
+#######################
+Iterators and Iterables
+#######################
 
 Iterators and Iterables are key language features of Python 3, that help
 to make code easy to write and maintain.

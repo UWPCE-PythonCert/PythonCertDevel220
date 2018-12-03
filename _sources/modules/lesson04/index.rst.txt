@@ -1,6 +1,6 @@
-####################
-Lesson 4 : Iteration
-####################
+#########
+Iteration
+#########
 
 .. toctree::
     :maxdepth: 1
