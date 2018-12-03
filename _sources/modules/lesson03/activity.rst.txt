@@ -1,6 +1,6 @@
-=================
-Lesson 3 Activity
-=================
+########
+Activity
+########
 
 Warm up for the assignment
 ==========================

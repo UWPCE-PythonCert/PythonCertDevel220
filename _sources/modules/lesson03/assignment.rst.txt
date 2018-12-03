@@ -1,6 +1,6 @@
-#####################
-Lesson 3 : Assignment
-#####################
+##########
+Assignment
+##########
 
 As part of the Norton Furniture project, we are going to store customer data from HP
 Norton in a relational database (sqlite3). We are also going to amend our
