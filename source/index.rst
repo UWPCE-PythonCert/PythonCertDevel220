@@ -36,14 +36,6 @@ https://github.com/UWPCE-PythonCert/PythonCertDevel220
 
 Readers are encouraged to report omissions, typos, or make suggestions for improvements via issues and pull requests on that repository.
 
-.. There is no indexed material! We could add it, but it would have to be done my hand.
-.. Indices and tables
-.. ==================
-
-.. * :ref:`genindex`
-
-.. * :ref:`search`
-
 
 All To Dos
 ==========
