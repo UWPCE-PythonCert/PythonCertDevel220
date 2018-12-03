@@ -93,7 +93,7 @@ How do metaclasses work?
 To understand how Python metaclasses work, you need to be very comfortable
 with the notion of types in Python.
 
-  .. code:: python
+.. code:: python
 
     >>> name = "andy"
     >>> print(type(name))
@@ -105,7 +105,7 @@ with the notion of types in Python.
 
 Remember: every type in Python is defined by a class.
 
-  .. code:: python
+.. code:: python
 
     >>> class Person:
         pass
@@ -115,7 +115,7 @@ Remember: every type in Python is defined by a class.
 
 A class is just another object and can be modified:
 
-  .. code:: python
+.. code:: python
 
     >>> andy.dob = "2/27/1960"
     >>> print(andy.dob)
@@ -147,7 +147,7 @@ To create our custom metaclass, it must inherit type and will often override:
 * ```__init__()```: This method initializes the created object passed as parameter
 
 
-  .. code:: python
+.. code:: python
 
     # our metaclass
     class MultiBases(type):
@@ -232,6 +232,7 @@ The result of running this code is that the new TryHello class is able to
 printout a greeting that says:
 
 .. code:: python
+
     greetings from <class '__main__.TryHello'>, a HelloMeta type class
 
 
