@@ -31,7 +31,7 @@ Here is what you need to do:
    watching variables and creating dummy parameters you can infer enough
    to get the program to run. Capture your debug work to a text file.
 #. Now, enable logging and start inserting logging statements to track the code's execution.
-#. Add comments that describe your discoveries, additional things you need.
+#. Add comments that describe your discoveries, and additional things you need.
 #. Add warnings for things missing in the source data that are expected but impeded some of the calculations (for example, unreturned items do not have a *rental_end* value).
 #. Add error messages for inconsistencies in the source data that could make your program crash or return incorrect data.
 
