@@ -1,10 +1,6 @@
-##########################
-Lesson 01 Advanced Testing
-##########################
-
-======================
+######################
 Part 5: Using Unittest
-======================
+######################
 
 Our first example showed the system that you would have to come up with
 if you wanted an automated way to assure that the Squarer class was working

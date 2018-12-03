@@ -1,10 +1,6 @@
-##########################
-Lesson 01 Advanced Testing
-##########################
-
-===================================
+###################################
 Part 6: Developing the test further
-===================================
+###################################
 
 The TestCase class includes instance methods for making assertions about
 the behavior of our program. The \ *assertEqual* method is an instance

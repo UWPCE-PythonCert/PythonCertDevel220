@@ -1,10 +1,6 @@
-##########################
-Lesson 01 Advanced Testing
-##########################
-
-===========================
+###########################
 Part 9: Integration Testing
-===========================
+###########################
 
 After all this unit testing, it's very tempting to assume that good unit tests
 provide everything you need to ensure your code will work properly. That's a

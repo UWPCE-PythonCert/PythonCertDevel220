@@ -1,10 +1,6 @@
 ##########################
-Lesson 01 Advanced Testing
-##########################
-
-==========================
 Part 4: Running the script
-==========================
+##########################
 
 Running \ *python test.py* will invoke the
 SquarerTest.test\_positive\_numbers method and also the

@@ -1,10 +1,6 @@
-##########################
-Lesson 01 Advanced Testing
-##########################
-
-=============================
+#############################
 Part 3: Automated Test Script 
-=============================
+#############################
 
 If you were to sit down and think about this problem, here's the
 solution that you would come up with:

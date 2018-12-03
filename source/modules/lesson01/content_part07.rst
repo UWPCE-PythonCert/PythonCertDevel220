@@ -1,10 +1,6 @@
-##########################
-Lesson 01 Advanced Testing
-##########################
-
-==============================
+##############################
 Part 7: A more complex example
-==============================
+##############################
 
 As you watch this video, bear in mind that part of your assignment is
 going to be to complete the calculator that's presented here. Type along

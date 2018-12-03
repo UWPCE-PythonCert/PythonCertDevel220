@@ -1,10 +1,6 @@
-##########################
-Lesson 01 Advanced Testing
-##########################
-
-=========================================
+#########################################
 Part 8: Unit testing Adder and Subtracter
-=========================================
+#########################################
 
 Let's begin our tests with unit testing the Adder and Subtracter
 classes. Recall that unit testing involves testing a \ *single unit* of

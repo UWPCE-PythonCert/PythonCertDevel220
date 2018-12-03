@@ -1,10 +1,6 @@
-##########################
-Lesson 01 Advanced Testing
-##########################
-
-=================
+#################
 Part 2: Why test?
-=================
+#################
 
 It's likely you already have some familiarity with software testing in
 general, and writing tests in Python specifically. In this section,

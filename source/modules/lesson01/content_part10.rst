@@ -1,10 +1,6 @@
-##########################
-Lesson 01 Advanced Testing
-##########################
-
-=============================
+#############################
 Part 10: Linting and coverage
-=============================
+#############################
 
 Using automated tests to confirm the functioning of your code is not the
 only way to manage the complexity of a large code base. There are also

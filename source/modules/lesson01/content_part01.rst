@@ -1,10 +1,6 @@
-##########################
-Lesson 01 Advanced Testing
-##########################
-
-====================
+####################
 Part 1: Introduction
-====================
+####################
 
 As you write more lines of code for a programming project, or as the
 number of programmers working on a project increases, your code becomes
