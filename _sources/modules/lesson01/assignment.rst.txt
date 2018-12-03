@@ -1,6 +1,7 @@
-=====================
+#####################
 Lesson 1 : Assignment
-=====================
+#####################
+
 Welcome to the Norton Project! The first thing our development team is trying to accomplish is to improve some of Norton Furniture's existing code. Your first assignment will
 be to look at a prototype inventory management system they had been working on internally, align the code to the best practices outlined in PEP8 and implement both unit and integration testing.   
 

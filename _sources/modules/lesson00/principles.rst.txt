@@ -27,5 +27,3 @@ via Zoom
 For self paced online classes you can always chat with your instructor, and
 use the various online resources linked from the class web site.
 
-
-

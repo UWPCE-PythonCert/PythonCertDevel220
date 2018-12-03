@@ -1,6 +1,6 @@
-=====================
+#####################
 Lesson 3 : Assignment
-=====================
+#####################
 
 As part of the Norton Furniture project, we are going to store customer data from HP
 Norton in a relational database (sqlite3). We are also going to amend our
@@ -18,7 +18,7 @@ You should address the following general requirements, specific to three user ty
    growing or shrinking.
 
 Here is what you need to do:
-----------------------------
+============================
 
 Note:
    We are just developing the backend here. Imagine your module(s) will be called
@@ -45,21 +45,22 @@ Note:
 #. Create some functional and unit tests for the model.
 #. Develop functionality to deliver the requirements listed above.
 #. Develop tests, and show some tests passing. Show other tests failing.
+#. Ensure you application will create an empty database if one doesn't exist when the app is first run.
 
 Other requirements:
--------------------
+===================
 - Your code should not trigger any warnings or errors from Pylint.
 
 Testing
--------
+=======
 - Make sure your tests run as expected.
 
 Submission
-----------
+==========
 - You will need to submit *basic_operations.py* plus any test files you develop.
 
 Tips
-----
+====
 - Remember to think about system features, not web pages or the UI.
 - Tests first!
 - Be creative! Think about what else the furniture store might need regarding customer information.

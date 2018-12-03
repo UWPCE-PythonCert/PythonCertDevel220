@@ -28,7 +28,7 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Lesson 1 : Prerequisites" href="prerequisites.html" />
+    <link rel="next" title="Prerequisites" href="prerequisites.html" />
     <link rel="prev" title="Easy guide to using git" href="../lesson00/extras_git.html" /> 
 
   
@@ -85,25 +85,30 @@
               <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Lesson content</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html#py220-advanced-python-programming">Py220: Advanced Python Programming</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="../lesson00/index.html">Lesson 0 : Welcome!</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson00/index.html">Welcome!</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Lesson 1 : Automated Testing</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="prerequisites.html">Lesson 1 : Prerequisites</a></li>
+<li class="toctree-l4"><a class="reference internal" href="prerequisites.html">Prerequisites</a></li>
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="content_part01.html">Part 1: Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="content_part02.html">Part 2: Why test?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="content_part03.html">Part 3: Automated Test Script</a></li>
+<li class="toctree-l4"><a class="reference internal" href="content_part04.html">Part 4: Running the script</a></li>
+<li class="toctree-l4"><a class="reference internal" href="content_part05.html">Part 5: Using Unittest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="content_part06.html">Part 6: Developing the test further</a></li>
+<li class="toctree-l4"><a class="reference internal" href="content_part07.html">Part 7: A more complex example</a></li>
+<li class="toctree-l4"><a class="reference internal" href="content_part08.html">Part 8: Unit testing Adder and Subtracter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="content_part09.html">Part 9: Integration Testing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="content_part10.html">Part 10: Linting and coverage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="content_part11.html">Part 11: Test Driven Development</a></li>
 <li class="toctree-l4"><a class="reference internal" href="activity.html">Lesson 1 Activity</a></li>
 <li class="toctree-l4"><a class="reference internal" href="assignment.html">Lesson 1 : Assignment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="office_hours_recaps.html">Office Hours : Recaps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="office_hours_all.html">Office Hours : This weeks’ content</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../lesson02/index.html">Lesson 2 : Logging &amp; Debuging</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../lesson03/index.html">Lesson 3 : Relational databases</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../lesson04/prerequisites.html">Lesson 4 : Prerequisites</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../lesson04/introduction.html">Lesson 04 Introduction</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../lesson04/starting-with-expression-flow-control-and-comprehensions.html">Lesson 4: Starting with Expression Flow Control and Comprehensions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../lesson04/lambda.html">Lesson 4.1 Lambda</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../lesson04/iterators-and-iterables.html">Lesson 04.02 Iterators and Iterables</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../lesson04/generators.html">Lesson 4.3 Generators</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../lesson04/recap.html">Recap</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../lesson04/assignment.html">Lesson 4 : Assignment</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../lesson04/office_hours_recaps.html">Office Hours : Recaps</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../lesson04/office_hours_all.html">Office Hours : This weeks’ content</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson04/index.html">Lesson 4 : Iteration</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../lesson05/index.html">Lesson 5 : Consuming APIs with NoSQL</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../lesson06/index.html">Lesson 6 : Profiling and performance</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../lesson07/index.html">Lesson 7 : Currency and async</a></li>
@@ -185,9 +190,23 @@
 <h1>Lesson 1 : Automated Testing<a class="headerlink" href="#lesson-1-automated-testing" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="prerequisites.html">Lesson 1 : Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prerequisites.html">Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content_part01.html">Part 1: Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content_part02.html">Part 2: Why test?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content_part03.html">Part 3: Automated Test Script</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content_part04.html">Part 4: Running the script</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content_part05.html">Part 5: Using Unittest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content_part06.html">Part 6: Developing the test further</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content_part07.html">Part 7: A more complex example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content_part08.html">Part 8: Unit testing Adder and Subtracter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content_part09.html">Part 9: Integration Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content_part10.html">Part 10: Linting and coverage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content_part11.html">Part 11: Test Driven Development</a></li>
 <li class="toctree-l1"><a class="reference internal" href="activity.html">Lesson 1 Activity</a></li>
 <li class="toctree-l1"><a class="reference internal" href="assignment.html">Lesson 1 : Assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="office_hours_recaps.html">Office Hours : Recaps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="office_hours_all.html">Office Hours : This weeks’ content</a></li>
 </ul>
 </div>
 </div>
@@ -200,7 +219,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="prerequisites.html" class="btn btn-neutral float-right" title="Lesson 1 : Prerequisites" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="prerequisites.html" class="btn btn-neutral float-right" title="Prerequisites" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../lesson00/extras_git.html" class="btn btn-neutral" title="Easy guide to using git" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

@@ -89,16 +89,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../lesson01/index.html">Lesson 1 : Automated Testing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../lesson02/index.html">Lesson 2 : Logging &amp; Debuging</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../lesson03/index.html">Lesson 3 : Relational databases</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../lesson04/prerequisites.html">Lesson 4 : Prerequisites</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../lesson04/introduction.html">Lesson 04 Introduction</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../lesson04/starting-with-expression-flow-control-and-comprehensions.html">Lesson 4: Starting with Expression Flow Control and Comprehensions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../lesson04/lambda.html">Lesson 4.1 Lambda</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../lesson04/iterators-and-iterables.html">Lesson 04.02 Iterators and Iterables</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../lesson04/generators.html">Lesson 4.3 Generators</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../lesson04/recap.html">Recap</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../lesson04/assignment.html">Lesson 4 : Assignment</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../lesson04/office_hours_recaps.html">Office Hours : Recaps</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../lesson04/office_hours_all.html">Office Hours : This weeks’ content</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson04/index.html">Lesson 4 : Iteration</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../lesson05/index.html">Lesson 5 : Consuming APIs with NoSQL</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../lesson06/index.html">Lesson 6 : Profiling and performance</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="index.html">Lesson 7 : Currency and async</a><ul class="current">
@@ -199,76 +190,90 @@
 </ol>
 <p>Processes are running programs. Threads are the unit of execution within a program.</p>
 <p>#Thread example</p>
-<p><a href="#id1"><span class="problematic" id="id2">``</span></a>`
-import threading</p>
-<p>mydata = threading.local()
-mydata.x = 1</p>
-<p>x=100</p>
-<p>print(f”mydata.x is {mydata.x}, x is {x}”)</p>
-<dl class="docutils">
-<dt>def hello(thread):</dt>
-<dd>print()
-print(f”hello world from {thread}”)</dd>
-</dl>
-<p>t1 = threading.Timer(3.0, hello, args=(‘t1’,))
-t2 = threading.Timer(2.0, hello, args=(‘t2’,))</p>
-<p>t1.start()
-t2.start()</p>
-<p><a href="#id3"><span class="problematic" id="id4">``</span></a><a href="#id5"><span class="problematic" id="id6">`</span></a></p>
-<p>#Process example</p>
-<p><a href="#id7"><span class="problematic" id="id8">``</span></a>`
-# run from command prompt
-from multiprocessing import Pool
-from multiprocessing import Process
-import os</p>
-<dl class="docutils">
-<dt>def f1(x):</dt>
-<dd>return x*x</dd>
-<dt>def info(title):</dt>
-<dd>print(title)
-print(‘module name:’, __name__)
-print(‘parent process:’, os.getppid())
-print(‘process id:’, os.getpid())</dd>
-<dt>def f2(name):</dt>
-<dd>info(‘function f2’)
-print(‘hello’, name)</dd>
-</dl>
-<p>if __name__ == ‘__main__’:</p>
-<blockquote>
-<div><p>#part 1 Pool
-with Pool(5) as p1:</p>
-<blockquote>
-<div>print(p1.map(f1, [10, 11, 12]))</div></blockquote>
-<p>print()</p>
-<p># part 2 Process</p>
-<p>info(‘main line’)
-p2 = Process(target=f2, args=(‘bob’,))
-p2.start()
-p2.join()</p>
-</div></blockquote>
-<p><a href="#id9"><span class="problematic" id="id10">``</span></a><a href="#id11"><span class="problematic" id="id12">`</span></a></p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">threading</span>
+
+<span class="n">mydata</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">local</span><span class="p">()</span>
+<span class="n">mydata</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="n">x</span><span class="o">=</span><span class="mi">100</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;mydata.x is </span><span class="si">{mydata.x}</span><span class="s2">, x is </span><span class="si">{x}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="n">thread</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;hello world from </span><span class="si">{thread}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">t1</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Timer</span><span class="p">(</span><span class="mf">3.0</span><span class="p">,</span> <span class="n">hello</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;t1&#39;</span><span class="p">,))</span>
+<span class="n">t2</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Timer</span><span class="p">(</span><span class="mf">2.0</span><span class="p">,</span> <span class="n">hello</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;t2&#39;</span><span class="p">,))</span>
+
+<span class="n">t1</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+<span class="n">t2</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="process-example">
+<h2>Process example<a class="headerlink" href="#process-example" title="Permalink to this headline">¶</a></h2>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># run from command prompt</span>
+<span class="kn">from</span> <span class="nn">multiprocessing</span> <span class="k">import</span> <span class="n">Pool</span>
+<span class="kn">from</span> <span class="nn">multiprocessing</span> <span class="k">import</span> <span class="n">Process</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="k">def</span> <span class="nf">f1</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span>
+
+<span class="k">def</span> <span class="nf">info</span><span class="p">(</span><span class="n">title</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;module name:&#39;</span><span class="p">,</span> <span class="vm">__name__</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;parent process:&#39;</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">getppid</span><span class="p">())</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;process id:&#39;</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">getpid</span><span class="p">())</span>
+
+<span class="k">def</span> <span class="nf">f2</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="n">info</span><span class="p">(</span><span class="s1">&#39;function f2&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+
+    <span class="c1">#part 1 Pool</span>
+    <span class="k">with</span> <span class="n">Pool</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="k">as</span> <span class="n">p1</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">p1</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">f1</span><span class="p">,</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">]))</span>
+    <span class="nb">print</span><span class="p">()</span>
+
+    <span class="c1"># part 2 Process</span>
+
+    <span class="n">info</span><span class="p">(</span><span class="s1">&#39;main line&#39;</span><span class="p">)</span>
+    <span class="n">p2</span> <span class="o">=</span> <span class="n">Process</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">f2</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;bob&#39;</span><span class="p">,))</span>
+    <span class="n">p2</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+    <span class="n">p2</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
+</pre></div>
+</div>
 <p># async coroutines (stop and start again)
 An asynchronous program takes one execution step at a time and can move on to the next if the previous one is not finished.</p>
 <p>This means we are continuing onward through execution steps of the program, even though a previous execution step (or multiple steps) is running ìelsewhereî. This also implies when one of those execution steps is running ìelsewhereî completes, our program code somehow has to handle it.</p>
 <p>##Async example</p>
-<p><a href="#id13"><span class="problematic" id="id14">``</span></a>`
-import asyncio</p>
-<dl class="docutils">
-<dt>async def say(what, when):</dt>
-<dd>await asyncio.sleep(when)
-print(what)</dd>
-<dt>async def stop_after(loop, when):</dt>
-<dd>await asyncio.sleep(when)
-loop.stop()</dd>
-</dl>
-<p>loop = asyncio.get_event_loop()</p>
-<p>loop.create_task(say(‘first hello’, 2))
-loop.create_task(say(‘second hello’, 1))
-loop.create_task(say(‘third hello’, 4))
-loop.create_task(stop_after(loop, 3))</p>
-<p>loop.run_forever()
-loop.close()</p>
-<p><a href="#id15"><span class="problematic" id="id16">``</span></a><a href="#id17"><span class="problematic" id="id18">`</span></a></p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">asyncio</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">say</span><span class="p">(</span><span class="n">what</span><span class="p">,</span> <span class="n">when</span><span class="p">):</span>
+    <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">when</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">what</span><span class="p">)</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">stop_after</span><span class="p">(</span><span class="n">loop</span><span class="p">,</span> <span class="n">when</span><span class="p">):</span>
+    <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">when</span><span class="p">)</span>
+    <span class="n">loop</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+
+
+<span class="n">loop</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">get_event_loop</span><span class="p">()</span>
+
+<span class="n">loop</span><span class="o">.</span><span class="n">create_task</span><span class="p">(</span><span class="n">say</span><span class="p">(</span><span class="s1">&#39;first hello&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="n">loop</span><span class="o">.</span><span class="n">create_task</span><span class="p">(</span><span class="n">say</span><span class="p">(</span><span class="s1">&#39;second hello&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="n">loop</span><span class="o">.</span><span class="n">create_task</span><span class="p">(</span><span class="n">say</span><span class="p">(</span><span class="s1">&#39;third hello&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="n">loop</span><span class="o">.</span><span class="n">create_task</span><span class="p">(</span><span class="n">stop_after</span><span class="p">(</span><span class="n">loop</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+
+<span class="n">loop</span><span class="o">.</span><span class="n">run_forever</span><span class="p">()</span>
+<span class="n">loop</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
 </div>
 </div>
 

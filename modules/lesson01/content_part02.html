@@ -1,0 +1,316 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Part 2: Why test? &mdash; PythonCert220 2.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Part 3: Automated Test Script" href="content_part03.html" />
+    <link rel="prev" title="Part 1: Introduction" href="content_part01.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PythonCert220
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Lesson content</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#py220-advanced-python-programming">Py220: Advanced Python Programming</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../lesson00/index.html">Welcome!</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Lesson 1 : Automated Testing</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="prerequisites.html">Prerequisites</a></li>
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="content_part01.html">Part 1: Introduction</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Part 2: Why test?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="content_part03.html">Part 3: Automated Test Script</a></li>
+<li class="toctree-l4"><a class="reference internal" href="content_part04.html">Part 4: Running the script</a></li>
+<li class="toctree-l4"><a class="reference internal" href="content_part05.html">Part 5: Using Unittest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="content_part06.html">Part 6: Developing the test further</a></li>
+<li class="toctree-l4"><a class="reference internal" href="content_part07.html">Part 7: A more complex example</a></li>
+<li class="toctree-l4"><a class="reference internal" href="content_part08.html">Part 8: Unit testing Adder and Subtracter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="content_part09.html">Part 9: Integration Testing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="content_part10.html">Part 10: Linting and coverage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="content_part11.html">Part 11: Test Driven Development</a></li>
+<li class="toctree-l4"><a class="reference internal" href="activity.html">Lesson 1 Activity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="assignment.html">Lesson 1 : Assignment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="office_hours_recaps.html">Office Hours : Recaps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="office_hours_all.html">Office Hours : This weeks’ content</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson02/index.html">Lesson 2 : Logging &amp; Debuging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson03/index.html">Lesson 3 : Relational databases</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson04/index.html">Lesson 4 : Iteration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson05/index.html">Lesson 5 : Consuming APIs with NoSQL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson06/index.html">Lesson 6 : Profiling and performance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson07/index.html">Lesson 7 : Currency and async</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson08/index.html">Lesson 8 : Functional Techniques</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson09/index.html">Lesson 9 : Advanced Python language constructs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson10/index.html">Lesson 10 : Metaprogramming</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">External links</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PythonCert220</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Lesson content</a> &raquo;</li>
+        
+          <li><a href="index.html">Lesson 1 : Automated Testing</a> &raquo;</li>
+        
+      <li>Part 2: Why test?</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/modules/lesson01/content_part02.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="part-2-why-test">
+<h1>Part 2: Why test?<a class="headerlink" href="#part-2-why-test" title="Permalink to this headline">¶</a></h1>
+<p>It’s likely you already have some familiarity with software testing in
+general, and writing tests in Python specifically. In this section,
+we’re going to revisit the basic question: why write software tests. Our
+discussion here will form the foundation of the rest of the lesson.</p>
+<p>It’s highly recommended for you to type along with these examples, creating the
+squarer.py file and the corresponding test files!</p>
+<div class="section" id="a-simple-example">
+<h2>A Simple Example<a class="headerlink" href="#a-simple-example" title="Permalink to this headline">¶</a></h2>
+<p>Suppose that you have written a simple class for squaring numbers:</p>
+<div
+style#"background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># squarer.py</span>
+<span class="k">class</span> <span class="nc">Squarer</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">calc</span><span class="p">(</span><span class="n">operand</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">operand</span><span class="o">*</span><span class="n">operand</span>
+</pre></div>
+</div>
+</div><p>Squarer is&nbsp;a simple class, with a single static method: calc.&nbsp;The calc
+method calculates the square of its argument in the usual way, and
+returns it to the caller.</p>
+<p>Let’s use the Squarer class from the REPL (the Python shell):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python -i
+&gt;&gt;&gt; from squarer import Squarer
+&gt;&gt;&gt; Squarer.calc(3)
+    9
+&gt;&gt;&gt; Squarer.calc(100)
+    10000
+</pre></div>
+</div>
+<p>Squarer&nbsp;works well:&nbsp;squaring 3 yields 9. Squaring 100 yields 10,000. The
+Squarer class is working perfectly.</p>
+<p>Now imagine that another engineer working on this project
+has&nbsp;a&nbsp;“bright idea” about how to improve the Squarer class: squaring
+involves powers, therefore the Squarer class should be using the power
+operator. They make the following modification to your code:</p>
+<div
+style#"background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># squarer.py</span>
+<span class="k">class</span> <span class="nc">Squarer</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">calc</span><span class="p">(</span><span class="n">operand</span><span class="p">):</span>
+        <span class="c1"># return operand*operand  # OLD</span>
+        <span class="k">return</span> <span class="n">operand</span><span class="o">**</span><span class="n">operand</span>
+</pre></div>
+</div>
+</div><p>Then at some point later you’re using the squarer class to square
+numbers:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python -i
+&gt;&gt;&gt; from squarer import Squarer
+&gt;&gt;&gt; Squarer.calc(3)
+    27
+&gt;&gt;&gt; Squarer.calc(100)
+    100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+</pre></div>
+</div>
+<p>The square of 3 is definitely not 27. And squaring 100 should give
+10,000, not
+100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000!
+Your code is definitely broken: an error has been introduced into the
+Squarer class.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="content_part03.html" class="btn btn-neutral float-right" title="Part 3: Automated Test Script" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="content_part01.html" class="btn btn-neutral" title="Part 1: Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, University of Washington, Christopher Barker, Luis Diego Conejo, Andy Miles, Rick Riehle, Joseph Schilz. Creative Commons Attribution-ShareAlike 3.0 license
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

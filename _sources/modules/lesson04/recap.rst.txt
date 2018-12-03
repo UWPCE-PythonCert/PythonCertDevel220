@@ -37,6 +37,7 @@ own iterator. It is perfectly fine to return a different object as the iterator 
 You can create your own iterable by implementing the iteration protocol.
 
 .. code-block:: python
+
     class fibonacci:
         def __init__(self, max=1000000):
             self.a, self.b = 0, 1
@@ -63,6 +64,7 @@ You can create your own iterable by implementing the iteration protocol.
 and now let's prove an iterator is stateful...
 
 .. code-block:: python
+
     """
     Simple iterator examples
     """
@@ -114,6 +116,7 @@ They are used once; to use subsequent times you have to call the generator again
 An iterator is usually more memory-efficient than a generator, though. And, somewhat related, generators can be faster. BUT MEASURE!
 
 .. code-block:: python
+
     def fibonacci(max):
         a, b = 0, 1
         while a < max:
@@ -140,6 +143,7 @@ Example
 chain:
 
 .. code-block:: python
+
     import itertools
     for i in itertools.chain('ABC', 'DEF'):
         print(i)
@@ -147,6 +151,7 @@ chain:
 count:
 
 .. code-block:: python
+
     from itertools import *
     for i in islice(count(), 5, 10):
         print(i)
@@ -154,6 +159,7 @@ count:
 permutations:
 
 .. code-block:: python
+
     from itertools import *
     for i in permutations("ABC"):
         print(i)

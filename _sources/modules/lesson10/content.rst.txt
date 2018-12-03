@@ -23,13 +23,13 @@ way to apply the syntax is another altogether.
 In this lesson we will certaonly cover the sytax, and you will start to
 understand how metaprogramming works. But you may feel lost or confused
 about why you would even want to use this technique. For now, as long as you
- understand the syntax, that is the minimum necessary. Then, later, you
- should be able to spot development problems for which metaprogramming is
+understand the syntax, that is the minimum necessary. Then, later, you
+should be able to spot development problems for which metaprogramming is
 a good solution. That's great! Then you work out how, maybe wiht the help of
- books or another developer.
+books or another developer.
 
 So let's get started. But before we launch into metaprogramming itself, it's
- important you understand the concept of namespaces.
+important you understand the concept of namespaces.
 
 
 Namespaces
@@ -51,8 +51,8 @@ to start to understand metaprogramming.
 Metaprogamming
 ==============
 
-Metaprogramming is the process of writing programs that write programs
--- that is, programs that manipulate the code objects themselves. Python
+Metaprogramming is the process of writing programs that write programs;
+that is, programs that manipulate the code objects themselves. Python
 provides a number of tools that allow introspection, or determining the
 nature of objects at runtime, as well as tools to change code at runtime.
 These are the tools of metaprogramming.
@@ -93,7 +93,8 @@ How do metaclasses work?
 To understand how Python metaclasses work, you need to be very comfortable
 with the notion of types in Python.
 
-.. code::python
+.. code:: python
+
     >>> name = "andy"
     >>> print(type(name))
     <class 'str'>
@@ -104,7 +105,8 @@ with the notion of types in Python.
 
 Remember: every type in Python is defined by a class.
 
-.. code::python
+.. code:: python
+
     >>> class Person:
         pass
     >>> andy = Person()
@@ -113,7 +115,8 @@ Remember: every type in Python is defined by a class.
 
 A class is just another object and can be modified:
 
-.. code::python
+.. code:: python
+
     >>> andy.dob = "2/27/1960"
     >>> print(andy.dob)
     2/27/1960
@@ -144,7 +147,8 @@ To create our custom metaclass, it must inherit type and will often override:
 * ```__init__()```: This method initializes the created object passed as parameter
 
 
-.. code::python
+.. code:: python
+
     # our metaclass
     class MultiBases(type):
         # overriding __new__ method
@@ -182,15 +186,15 @@ metaclasses, but are much simpler.
 A quote by Tim Peters
 -----------------------
 "Metaclasses are deeper magic that 99% of users should never worry about. If
- you wonder whether you need them, you don’t (the people who actually need
- them know with certainty that they need them, and don’t need an explanation
-  about why)."
+you wonder whether you need them, you don’t (the people who actually need
+them know with certainty that they need them, and don’t need an explanation
+about why)."
 
 
 An example
 ==========
 
-.. code::python
+.. code:: python
 
     # This metaclass adds a 'hello' method to classes that use the metaclass
     # Such classes get a 'hello' method with no extra effort
@@ -227,7 +231,8 @@ An example
 The result of running this code is that the new TryHello class is able to
 printout a greeting that says:
 
-.. code::python
+.. code:: python
+
     greetings from <class '__main__.TryHello'>, a HelloMeta type class
 
 

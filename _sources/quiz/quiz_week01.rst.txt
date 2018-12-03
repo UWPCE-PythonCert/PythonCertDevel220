@@ -46,11 +46,9 @@ Implement the feature or code.
 Run the test and see it pass (hopefully!).
 There is no fifth step.
 
-In TDD, you write the feature or code after  you write the test for that
-code.
 
 
-#. Match each tool or concept with its purpose, use, or goal.&lt;/div&gt;
+#. Match each tool or concept with its purpose, use, or goal.
 Define a code style and automatically identify style violations.
 Write code with no fixed dependencies.
 Test a single region of code by providing dummies for any required classes

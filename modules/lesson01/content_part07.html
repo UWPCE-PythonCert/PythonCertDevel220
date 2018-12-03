@@ -1,0 +1,338 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Part 7: A more complex example &mdash; PythonCert220 2.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Part 8: Unit testing Adder and Subtracter" href="content_part08.html" />
+    <link rel="prev" title="Part 6: Developing the test further" href="content_part06.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PythonCert220
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Lesson content</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#py220-advanced-python-programming">Py220: Advanced Python Programming</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../lesson00/index.html">Welcome!</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Lesson 1 : Automated Testing</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="prerequisites.html">Prerequisites</a></li>
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="content_part01.html">Part 1: Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="content_part02.html">Part 2: Why test?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="content_part03.html">Part 3: Automated Test Script</a></li>
+<li class="toctree-l4"><a class="reference internal" href="content_part04.html">Part 4: Running the script</a></li>
+<li class="toctree-l4"><a class="reference internal" href="content_part05.html">Part 5: Using Unittest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="content_part06.html">Part 6: Developing the test further</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Part 7: A more complex example</a></li>
+<li class="toctree-l4"><a class="reference internal" href="content_part08.html">Part 8: Unit testing Adder and Subtracter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="content_part09.html">Part 9: Integration Testing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="content_part10.html">Part 10: Linting and coverage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="content_part11.html">Part 11: Test Driven Development</a></li>
+<li class="toctree-l4"><a class="reference internal" href="activity.html">Lesson 1 Activity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="assignment.html">Lesson 1 : Assignment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="office_hours_recaps.html">Office Hours : Recaps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="office_hours_all.html">Office Hours : This weeks’ content</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson02/index.html">Lesson 2 : Logging &amp; Debuging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson03/index.html">Lesson 3 : Relational databases</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson04/index.html">Lesson 4 : Iteration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson05/index.html">Lesson 5 : Consuming APIs with NoSQL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson06/index.html">Lesson 6 : Profiling and performance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson07/index.html">Lesson 7 : Currency and async</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson08/index.html">Lesson 8 : Functional Techniques</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson09/index.html">Lesson 9 : Advanced Python language constructs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson10/index.html">Lesson 10 : Metaprogramming</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">External links</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PythonCert220</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Lesson content</a> &raquo;</li>
+        
+          <li><a href="index.html">Lesson 1 : Automated Testing</a> &raquo;</li>
+        
+      <li>Part 7: A more complex example</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/modules/lesson01/content_part07.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="part-7-a-more-complex-example">
+<h1>Part 7: A more complex example<a class="headerlink" href="#part-7-a-more-complex-example" title="Permalink to this headline">¶</a></h1>
+<p>As you watch this video, bear in mind that part of your assignment is
+going to be to complete the calculator that’s presented here.&nbsp;Type along
+if you wish, but there will also be a code repository for you to clone.</p>
+<p>{{VIDEO HERE}}</p>
+<p>What could go wrong with addition and subtraction? Well, at the end of
+this example we found something that could go wrong! I was expecting
+that with 11 in the calculator, entering a 2 and then subtracting would
+produce 9, not -9.</p>
+<p>At this point, let’s&nbsp;<strong>define</strong>&nbsp;what it means for our
+module’s&nbsp;behavior to be correct:</p>
+<ol class="arabic">
+<li><p class="first">An&nbsp;<strong>operator</strong>&nbsp;is a&nbsp;class instance&nbsp;which provides a method
+named&nbsp;<em>calc</em>. The&nbsp;<em>calc</em>&nbsp;method shall accept two arguments and
+operate on its arguments in the usual order:
+<a href="#id1"><span class="problematic" id="id2">*</span></a>Adder().calc(a, b) # a + b
+Subtracter().calc(a, b) # a - b
+<a href="#id3"><span class="problematic" id="id4">*</span></a>etc…</p>
+</li>
+<li><p class="first">A&nbsp;<strong>calculator</strong>&nbsp;is a class instance which provides
+an&nbsp;<em>enter_number</em>&nbsp;method and&nbsp;<em>add, subtract,
+multiply,&nbsp;*and&nbsp;*divide</em>&nbsp;methods.</p>
+</li>
+<li><p class="first">The constructor of a&nbsp;<em>calculator</em>&nbsp;shall accept&nbsp;four&nbsp;<em>operators</em>:
+an&nbsp;<em>adder, subtracter, multiplier,&nbsp;*and&nbsp;*divider</em>. The
+calculator shall use these operators to perform its&nbsp;<em>add, subtract,
+multiply</em>, and&nbsp;<em>divide</em>&nbsp;methods.</p>
+</li>
+<li><p class="first"><em>enter_number(a)</em>,&nbsp;<em>enter_number</em>(<em>b), operator</em>&nbsp;should be
+the same as&nbsp;<em>a&nbsp;operator&nbsp;b</em>. In other words:
+<em>enter_number(a), enter_number(b), add() # a + b
+enter_number(a), enter_number(b), subtract() # a - b
+etc…</em></p>
+</li>
+<li><p class="first">The&nbsp;<em>add, subtract, multiply,&nbsp;*and&nbsp;*divide</em>&nbsp;methods shall
+both:</p>
+<ol class="arabic simple">
+<li>Return the result of the operation</li>
+<li>Enter the result of the operation&nbsp;back into the calculator</li>
+</ol>
+<p>This makes it possible to perform the following sequences of
+operations:</p>
+<ol class="arabic simple">
+<li><em>calculator.enter_number(2)</em></li>
+<li><em>calculator.enter_number(3)</em></li>
+<li><a href="#id5"><span class="problematic" id="id6">*</span></a>calculator.add() &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;# Returns 5, and 5 is
+now ‘in the calculator’&nbsp;*</li>
+<li><em>calculator.enter_number(1)</em></li>
+<li><a href="#id7"><span class="problematic" id="id8">*</span></a>calculator.subtract() &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; # Returns 4 because 5 - 1 #
+4&nbsp;*</li>
+</ol>
+</li>
+<li><p class="first">What should happen if a user enters only one number and then tries to
+perform an operation? Let’s decide&nbsp;that&nbsp;the calculator&nbsp;should throw
+an&nbsp;<strong>InsufficientOperands</strong>&nbsp;exception if there are fewer than two
+numbers in the stack.</p>
+</li>
+</ol>
+<p>Based on this definition, we can see that the final result of our
+calculation in the video should have been 9!</p>
+<p>There are some situations&nbsp;that our definition&nbsp;above doesn’t explicitly
+cover:</p>
+<ul class="simple">
+<li>What should a&nbsp;<em>calculator</em>&nbsp;do if two numbers have already been
+entered onto the stack and the user enters a third?</li>
+<li>What&nbsp;if there are more than two numbers “in the calculator”&nbsp;when the
+user performs an operation?</li>
+<li>When a user adds 2 and 3, that enters&nbsp;5 into the calculator. But are
+2 and 3 still in the calculator, or do they get removed?</li>
+<li>Etc..</li>
+</ul>
+<p>For the purposes of this exercise, we’ll leave the behavior in these
+circumstances&nbsp;<em>undefined</em>. Any person who wants to program
+a&nbsp;<em>calculator</em>&nbsp;could choose to write their code&nbsp;such that:</p>
+<ul class="simple">
+<li>a*&nbsp;calculator*&nbsp;throws an error when a third number gets entered
+into the calculator</li>
+<li>or&nbsp;it could just&nbsp;ignore any new numbers entered if it already has two
+numbers</li>
+<li>or it&nbsp;could replace&nbsp;one of the two numbers with the third</li>
+</ul>
+<p>Any of these choices would be OK in that they would not explicitly
+violate the six behavioral rules&nbsp;we defined above.</p>
+<p>Our next step is to add tests that can automatically tell us if our
+classes are conforming to&nbsp;those six behavioral rules.</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="content_part08.html" class="btn btn-neutral float-right" title="Part 8: Unit testing Adder and Subtracter" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="content_part06.html" class="btn btn-neutral" title="Part 6: Developing the test further" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, University of Washington, Christopher Barker, Luis Diego Conejo, Andy Miles, Rick Riehle, Joseph Schilz. Creative Commons Attribution-ShareAlike 3.0 license
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

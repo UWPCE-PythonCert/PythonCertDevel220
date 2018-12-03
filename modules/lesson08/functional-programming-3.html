@@ -89,16 +89,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../lesson01/index.html">Lesson 1 : Automated Testing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../lesson02/index.html">Lesson 2 : Logging &amp; Debuging</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../lesson03/index.html">Lesson 3 : Relational databases</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../lesson04/prerequisites.html">Lesson 4 : Prerequisites</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../lesson04/introduction.html">Lesson 04 Introduction</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../lesson04/starting-with-expression-flow-control-and-comprehensions.html">Lesson 4: Starting with Expression Flow Control and Comprehensions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../lesson04/lambda.html">Lesson 4.1 Lambda</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../lesson04/iterators-and-iterables.html">Lesson 04.02 Iterators and Iterables</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../lesson04/generators.html">Lesson 4.3 Generators</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../lesson04/recap.html">Recap</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../lesson04/assignment.html">Lesson 4 : Assignment</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../lesson04/office_hours_recaps.html">Office Hours : Recaps</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../lesson04/office_hours_all.html">Office Hours : This weeks’ content</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson04/index.html">Lesson 4 : Iteration</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../lesson05/index.html">Lesson 5 : Consuming APIs with NoSQL</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../lesson06/index.html">Lesson 6 : Profiling and performance</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../lesson07/index.html">Lesson 7 : Currency and async</a></li>
@@ -192,99 +183,71 @@
 <h1>Lesson 08 Functional Programming 3<a class="headerlink" href="#lesson-08-functional-programming-3" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:source/modules/lesson08/lesson-08-functional-programming-3.rst
-|
-| In this third lesson on functional programming follow a string of</p>
-<blockquote>
-<div>related techniques. We first look at closures and compare them to</div></blockquote>
-<div class="line-block">
-<div class="line">In this third lesson on functional programming we will follow a string of
-related techniques. First, we will look at closures and compare them to</div>
-</div>
-<dl class="docutils">
-<dt>&gt;&gt;&gt;&gt;&gt;&gt;&gt; 17d13706f25cf27e72a63395712346513d3b3c30:source/modules/lesson08/lesson-02-functional-programming-3.rst</dt>
-<dd>classes and objects and thereby bridge the gap between functional
+<p>In this third lesson on functional programming follow a string of
+related techniques. We first look at closures and compare them to</p>
+<p>In this third lesson on functional programming we will follow a string of
+related techniques. First, we will look at closures and compare them to
+classes and objects and thereby bridge the gap between functional
 programming and object oriented programming. We will then see how closures
 form the basis of function currying, and in turn how function currying
-facilitates functional composition.</dd>
-</dl>
+facilitates functional composition.</p>
 <p>We wrap up our series of functional programming lessons with an overview
 of the Itertools and Functools libraries which facilitate the techniques
 covered across all three lessons.</p>
 </div>
 <div class="section" id="recommended-text">
 <h2>Recommended Text<a class="headerlink" href="#recommended-text" title="Permalink to this headline">¶</a></h2>
-<div class="line-block">
-<div class="line"><br /></div>
-<div class="line">For the functional programming modules, this lesson included, we
+<p>For the functional programming modules, this lesson included, we
 recommend <a class="reference external" href="http://proquest.safaribooksonline.com/9781784396992?uicode=spl&amp;cid=shareLink">Functional Python Programming by Steven
-Lott.</a></div>
-</div>
-<div class="line-block">
-<div class="line">Publisher: Packt Publishing</div>
-<div class="line">Pub. Date: January 31, 2015</div>
-<div class="line">Web ISBN-13: 978-1-78439-761-6</div>
-<div class="line">Print ISBN-13: 978-1-78439-699-2</div>
-<div class="line"><a class="reference external" href="http://bit.ly/2azI62S">http://bit.ly/2azI62S</a></div>
-</div>
-<p>Each lesson’s optional readings will draw from this text.</p>
+Lott.</a></p>
+<p>Publisher: Packt Publishing
+Pub. Date: January 31, 2015
+Web ISBN-13: 978-1-78439-761-6
+Print ISBN-13: 978-1-78439-699-2
+<a class="reference external" href="http://bit.ly/2azI62S">http://bit.ly/2azI62S</a></p>
+<p>Alll optional readings  draw from this text.</p>
 </div>
 <div class="section" id="learning-objectives">
 <h2>Learning Objectives<a class="headerlink" href="#learning-objectives" title="Permalink to this headline">¶</a></h2>
-<div class="line-block">
-<div class="line"><br /></div>
-<div class="line">Upon successful completion of this lesson, you will be able to:</div>
-</div>
-<div class="line-block">
-<div class="line">* define a closure as a factory for creating stand-alone methods.</div>
-<div class="line">* describe the arity of a function.</div>
-<div class="line">* curry a function to reduce its arity, its number of arguments in
-particular, and thereby make it suitable for functional composition.</div>
-<div class="line">* use the Itertools library.</div>
-<div class="line">* use the Functools library.</div>
-</div>
+<p>Upon successful completion of this lesson, you will be able to:</p>
+<p>* define a closure as a factory for creating stand-alone methods.
+* describe the arity of a function.
+* curry a function to reduce its arity, its number of arguments in</p>
+<blockquote>
+<div>particular, and thereby make it suitable for functional composition.</div></blockquote>
+<p>* use the Itertools library.
+* use the Functools library.</p>
 </div>
 <div class="section" id="new-words-or-concepts">
 <h2>New Words or Concepts<a class="headerlink" href="#new-words-or-concepts" title="Permalink to this headline">¶</a></h2>
-<div class="line-block">
-<div class="line"><br /></div>
-<div class="line">* Closure</div>
-<div class="line">* Scope</div>
-<div class="line">* Curry</div>
-<div class="line">* Arity</div>
-<div class="line">* Functional Composition</div>
-<div class="line">* Itertools</div>
-<div class="line">* Functools</div>
-</div>
+<p>* Closure
+* Scope
+* Curry
+* Arity
+* Functional Composition
+* Itertools
+* Functools</p>
 </div>
 <div class="section" id="required-reading">
 <h2>Required Reading<a class="headerlink" href="#required-reading" title="Permalink to this headline">¶</a></h2>
-<div class="line-block">
-<div class="line"><br /></div>
-<div class="line">* Functional Programming Modules</div>
-</div>
+<p>* Functional Programming Modules</p>
 <p><a class="reference external" href="https://docs.python.org/3/library/functional.html">https://docs.python.org/3/library/functional.html</a></p>
 <p>* Closures</p>
-<div class="line-block">
-<div class="line"><a class="reference external" href="https://en.wikipedia.org/wiki/Closure_(computer_programming">https://en.wikipedia.org/wiki/Closure_(computer_programming</a>)</div>
-<div class="line"><a class="reference external" href="http://wiki.c2.com/?ClosuresAndObjectsAreEquivalent">http://wiki.c2.com/?ClosuresAndObjectsAreEquivalent</a></div>
-</div>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Closure_(computer_programming">https://en.wikipedia.org/wiki/Closure_(computer_programming</a>)
+<a class="reference external" href="http://wiki.c2.com/?ClosuresAndObjectsAreEquivalent">http://wiki.c2.com/?ClosuresAndObjectsAreEquivalent</a></p>
 <p>* Scope or *Lexical Scope* in Python</p>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Scope_(computer_science)#Python%3Chttps://en.wikipedia.org/wiki/Scope_(computer_science)#Python%3E%60_">https://en.wikipedia.org/wiki/Scope_(computer_science)#Python</a></p>
 <p>* Currying</p>
-<div class="line-block">
-<div class="line"><a class="reference external" href="https://en.wikipedia.org/wiki/Currying">https://en.wikipedia.org/wiki/Currying</a></div>
-<div class="line"><a class="reference external" href="https://en.wikipedia.org/wiki/Arity">https://en.wikipedia.org/wiki/Arity</a></div>
-<div class="line"><a class="reference external" href="https://en.wikipedia.org/wiki/Function_composition_(computer_science">https://en.wikipedia.org/wiki/Function_composition_(computer_science</a>)</div>
-</div>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Currying">https://en.wikipedia.org/wiki/Currying</a>
+<a class="reference external" href="https://en.wikipedia.org/wiki/Arity">https://en.wikipedia.org/wiki/Arity</a>
+<a class="reference external" href="https://en.wikipedia.org/wiki/Function_composition_(computer_science">https://en.wikipedia.org/wiki/Function_composition_(computer_science</a>)</p>
 </div>
 <div class="section" id="optional-reading">
 <h2>Optional Reading<a class="headerlink" href="#optional-reading" title="Permalink to this headline">¶</a></h2>
-<div class="line-block">
-<div class="line"><br /></div>
-<div class="line">* Lott, S. (2015) Chapter 14. The PyMonad Library. Functional
-composition and currying. In Functional Python Programming.</div>
-</div>
+<dl class="docutils">
+<dt>* Lott, S. (2015) Chapter 14. The PyMonad Library. Functional</dt>
+<dd>composition and currying. In Functional Python Programming.</dd>
+</dl>
 <p>* Lott, S. (2015) Chapter 8. The Itertools Module. In Functional Python
 Programming.</p>
 <p>* Lott, S. (2015) Chapter 10. The Functools Module. In Functional

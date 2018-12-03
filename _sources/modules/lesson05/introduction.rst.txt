@@ -13,6 +13,7 @@ We are going to start to learn about APIs by working with MongoDB, a NoSQL datab
 {{video 1}}
 
 .. code-block:: python
+
    class BaseModel(Model):
        class Meta:
            database = database

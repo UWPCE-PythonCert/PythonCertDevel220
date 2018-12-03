@@ -89,16 +89,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../lesson01/index.html">Lesson 1 : Automated Testing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../lesson02/index.html">Lesson 2 : Logging &amp; Debuging</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../lesson03/index.html">Lesson 3 : Relational databases</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../lesson04/prerequisites.html">Lesson 4 : Prerequisites</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../lesson04/introduction.html">Lesson 04 Introduction</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../lesson04/starting-with-expression-flow-control-and-comprehensions.html">Lesson 4: Starting with Expression Flow Control and Comprehensions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../lesson04/lambda.html">Lesson 4.1 Lambda</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../lesson04/iterators-and-iterables.html">Lesson 04.02 Iterators and Iterables</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../lesson04/generators.html">Lesson 4.3 Generators</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../lesson04/recap.html">Recap</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../lesson04/assignment.html">Lesson 4 : Assignment</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../lesson04/office_hours_recaps.html">Office Hours : Recaps</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../lesson04/office_hours_all.html">Office Hours : This weeks’ content</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson04/index.html">Lesson 4 : Iteration</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../lesson05/index.html">Lesson 5 : Consuming APIs with NoSQL</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../lesson06/index.html">Lesson 6 : Profiling and performance</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../lesson07/index.html">Lesson 7 : Currency and async</a></li>
@@ -204,16 +195,13 @@ effectively. Understanding the syntax is one thing; understanding the right
 way to apply the syntax is another altogether.</p>
 <p>In this lesson we will certaonly cover the sytax, and you will start to
 understand how metaprogramming works. But you may feel lost or confused
-about why you would even want to use this technique. For now, as long as you</p>
-<blockquote>
-<div>understand the syntax, that is the minimum necessary. Then, later, you
-should be able to spot development problems for which metaprogramming is</div></blockquote>
-<dl class="docutils">
-<dt>a good solution. That’s great! Then you work out how, maybe wiht the help of</dt>
-<dd>books or another developer.</dd>
-<dt>So let’s get started. But before we launch into metaprogramming itself, it’s</dt>
-<dd>important you understand the concept of namespaces.</dd>
-</dl>
+about why you would even want to use this technique. For now, as long as you
+understand the syntax, that is the minimum necessary. Then, later, you
+should be able to spot development problems for which metaprogramming is
+a good solution. That’s great! Then you work out how, maybe wiht the help of
+books or another developer.</p>
+<p>So let’s get started. But before we launch into metaprogramming itself, it’s
+important you understand the concept of namespaces.</p>
 </div>
 <div class="section" id="namespaces">
 <h2>Namespaces<a class="headerlink" href="#namespaces" title="Permalink to this headline">¶</a></h2>
@@ -229,8 +217,8 @@ to start to understand metaprogramming.</p>
 </div>
 <div class="section" id="metaprogamming">
 <h2>Metaprogamming<a class="headerlink" href="#metaprogamming" title="Permalink to this headline">¶</a></h2>
-<p>Metaprogramming is the process of writing programs that write programs
-– that is, programs that manipulate the code objects themselves. Python
+<p>Metaprogramming is the process of writing programs that write programs;
+that is, programs that manipulate the code objects themselves. Python
 provides a number of tools that allow introspection, or determining the
 nature of objects at runtime, as well as tools to change code at runtime.
 These are the tools of metaprogramming.</p>
@@ -263,8 +251,29 @@ are classes that make classes.&nbsp;&nbsp;Here’s another way to think about it
 <h3>How do metaclasses work?<a class="headerlink" href="#how-do-metaclasses-work" title="Permalink to this headline">¶</a></h3>
 <p>To understand how Python metaclasses work, you need to be very comfortable
 with the notion of types in Python.</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;andy&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
+<span class="go">&lt;class &#39;str&#39;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="nb">str</span><span class="p">))</span>
+<span class="go">&lt;class &#39;type&#39;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="nb">type</span><span class="p">))</span>
+<span class="go">&lt;class &#39;type&#39;&gt;</span>
+</pre></div>
+</div>
 <p>Remember: every type in Python is defined by a class.</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+<span class="go">    pass</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">andy</span> <span class="o">=</span> <span class="n">Person</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">andy</span><span class="p">))</span>
+<span class="go">&lt;class &#39;__main__.Person&#39;&gt;</span>
+</pre></div>
+</div>
 <p>A class is just another object and can be modified:</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">andy</span><span class="o">.</span><span class="n">dob</span> <span class="o">=</span> <span class="s2">&quot;2/27/1960&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">andy</span><span class="o">.</span><span class="n">dob</span><span class="p">)</span>
+<span class="go">2/27/1960</span>
+</pre></div>
+</div>
 <p>Hence, Metaclasses modifying classes.</p>
 </div>
 <div class="section" id="creating-custom-metaclass">
@@ -286,25 +295,88 @@ classes behavior different from that of type, which is the default metaclass.</p
 <p>To create our custom metaclass, it must inherit type and will often override:
 * <code class="docutils literal notranslate"><span class="pre">`__new__()`</span></code>: It’s a method which is called before <code class="docutils literal notranslate"><span class="pre">`__init__()`</span></code>. It creates the object and return it. We can override this method to control how the objects are created.
 * <code class="docutils literal notranslate"><span class="pre">`__init__()`</span></code>: This method initializes the created object passed as parameter</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># our metaclass</span>
+<span class="k">class</span> <span class="nc">MultiBases</span><span class="p">(</span><span class="nb">type</span><span class="p">):</span>
+    <span class="c1"># overriding __new__ method</span>
+    <span class="k">def</span> <span class="nf">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">clsname</span><span class="p">,</span> <span class="n">bases</span><span class="p">,</span> <span class="n">clsdict</span><span class="p">):</span>
+        <span class="c1"># if no of base classes is greator than 1</span>
+        <span class="c1"># raise error</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">bases</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">1</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Inherited multiple base classes!!!&quot;</span><span class="p">)</span>
+
+        <span class="c1"># else execute __new__ method of super class, ie.</span>
+        <span class="c1"># call __init__ of type class</span>
+        <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">clsname</span><span class="p">,</span> <span class="n">bases</span><span class="p">,</span> <span class="n">clsdict</span><span class="p">)</span>
+
+<span class="c1"># metaclass can be specified by &#39;metaclass&#39; keyword argument</span>
+<span class="c1"># now MultiBase class is used for creating classes</span>
+<span class="c1"># this will be propagated to all subclasses of Base</span>
+<span class="k">class</span> <span class="nc">Base</span><span class="p">(</span><span class="n">metaclass</span><span class="o">=</span><span class="n">MultiBases</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+<span class="c1"># no error is raised</span>
+<span class="k">class</span> <span class="nc">A</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+<span class="c1"># no error is raised</span>
+<span class="k">class</span> <span class="nc">B</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+<span class="c1"># This will raise an error!</span>
+<span class="k">class</span> <span class="nc">C</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">):</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
 <p>Note: Decorators can achieve the same code-transformation behavior of
 metaclasses, but are much simpler.</p>
 </div>
 <div class="section" id="a-quote-by-tim-peters">
 <h3>A quote by Tim Peters<a class="headerlink" href="#a-quote-by-tim-peters" title="Permalink to this headline">¶</a></h3>
-<dl class="docutils">
-<dt>“Metaclasses are deeper magic that 99% of users should never worry about. If</dt>
-<dd><p class="first">you wonder whether you need them, you don’t (the people who actually need
-them know with certainty that they need them, and don’t need an explanation</p>
-<blockquote class="last">
-<div>about why).”</div></blockquote>
-</dd>
-</dl>
+<p>“Metaclasses are deeper magic that 99% of users should never worry about. If
+you wonder whether you need them, you don’t (the people who actually need
+them know with certainty that they need them, and don’t need an explanation
+about why).”</p>
 </div>
 </div>
 <div class="section" id="an-example">
 <h2>An example<a class="headerlink" href="#an-example" title="Permalink to this headline">¶</a></h2>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># This metaclass adds a &#39;hello&#39; method to classes that use the metaclass</span>
+<span class="c1"># Such classes get a &#39;hello&#39; method with no extra effort</span>
+<span class="c1"># The metaclass takes care of that for us</span>
+
+<span class="k">class</span> <span class="nc">HelloMeta</span><span class="p">(</span><span class="nb">type</span><span class="p">):</span>
+    <span class="c1"># A hello method</span>
+    <span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;greetings from </span><span class="si">%s</span><span class="s2">, a HelloMeta type class&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="bp">cls</span><span class="p">())))</span>
+
+    <span class="c1"># Call the metaclass</span>
+    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># create the new class as normal</span>
+        <span class="bp">cls</span> <span class="o">=</span> <span class="nb">type</span><span class="o">.</span><span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span>
+
+        <span class="c1"># define a new hello method for each of these classes</span>
+        <span class="nb">setattr</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="s2">&quot;hello&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">hello</span><span class="p">)</span>
+
+        <span class="c1"># return the class</span>
+        <span class="k">return</span> <span class="bp">cls</span>
+
+<span class="c1"># Try out the metaclass</span>
+<span class="k">class</span> <span class="nc">TryHello</span><span class="p">(</span><span class="nb">object</span><span class="p">,</span> <span class="n">metaclass</span><span class="o">=</span><span class="n">HelloMeta</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hello</span><span class="p">()</span>
+
+<span class="c1"># Create an instance of the metaclass. It should automatically have a hello method</span>
+<span class="c1"># even though one is not defined manually in the class</span>
+<span class="c1"># in other words, it is added for us by the metaclass</span>
+<span class="n">greeter</span> <span class="o">=</span> <span class="n">TryHello</span><span class="p">()</span>
+<span class="n">greeter</span><span class="o">.</span><span class="n">greet</span><span class="p">()</span>
+</pre></div>
+</div>
 <p>The result of running this code is that the new TryHello class is able to
 printout a greeting that says:</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span>greetings from &lt;class &#39;__main__.TryHello&#39;&gt;, a HelloMeta type class
+</pre></div>
+</div>
 <p>The method responsible for this printout is not declared in the declaration
 of the class. Rather, the metaclass, which is HelloMeta in this case,
 generates the code at run time that automatically affixes the method to the

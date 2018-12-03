@@ -89,16 +89,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../lesson01/index.html">Lesson 1 : Automated Testing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../lesson02/index.html">Lesson 2 : Logging &amp; Debuging</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../lesson03/index.html">Lesson 3 : Relational databases</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../lesson04/prerequisites.html">Lesson 4 : Prerequisites</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../lesson04/introduction.html">Lesson 04 Introduction</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../lesson04/starting-with-expression-flow-control-and-comprehensions.html">Lesson 4: Starting with Expression Flow Control and Comprehensions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../lesson04/lambda.html">Lesson 4.1 Lambda</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../lesson04/iterators-and-iterables.html">Lesson 04.02 Iterators and Iterables</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../lesson04/generators.html">Lesson 4.3 Generators</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../lesson04/recap.html">Recap</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../lesson04/assignment.html">Lesson 4 : Assignment</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../lesson04/office_hours_recaps.html">Office Hours : Recaps</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../lesson04/office_hours_all.html">Office Hours : This weeks’ content</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson04/index.html">Lesson 4 : Iteration</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="index.html">Lesson 5 : Consuming APIs with NoSQL</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="prerequisites.html">Lesson 5 : Prerequisites</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">Lesson 05 Introduction</a></li>
@@ -195,6 +186,39 @@
 We are going to start to learn about APIs by working with MongoDB, a NoSQL database. First, some background.</p>
 <p>{{LMS END}}</p>
 <p>{{video 1}}</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">BaseModel</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span>
+        <span class="n">database</span> <span class="o">=</span> <span class="n">database</span>
+
+<span class="k">class</span> <span class="nc">Person</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">      This class defines Person, which maintains details of someone</span>
+<span class="sd">      for whom we want to research career to date.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">person_name</span> <span class="o">=</span> <span class="n">CharField</span><span class="p">(</span><span class="n">primary_key</span> <span class="o">=</span> <span class="bp">True</span><span class="p">,</span> <span class="n">max_length</span> <span class="o">=</span> <span class="mi">30</span><span class="p">)</span>
+    <span class="n">lives_in_town</span> <span class="o">=</span> <span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span> <span class="o">=</span> <span class="mi">40</span><span class="p">)</span>
+    <span class="n">nickname</span> <span class="o">=</span> <span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span> <span class="n">null</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">Job</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">      This class defines Job, which maintains details of past Jobs</span>
+<span class="sd">      held by a Person.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">job_name</span> <span class="o">=</span> <span class="n">CharField</span><span class="p">(</span><span class="n">primary_key</span> <span class="o">=</span> <span class="bp">True</span><span class="p">,</span> <span class="n">max_length</span> <span class="o">=</span> <span class="mi">30</span><span class="p">)</span>
+    <span class="n">start_date</span> <span class="o">=</span> <span class="n">DateField</span><span class="p">(</span><span class="n">formats</span> <span class="o">=</span> <span class="s1">&#39;YYYY-MM-DD&#39;</span><span class="p">)</span>
+    <span class="n">end_date</span> <span class="o">=</span> <span class="n">DateField</span><span class="p">(</span><span class="n">formats</span> <span class="o">=</span> <span class="s1">&#39;YYYY-MM-DD&#39;</span><span class="p">)</span>
+    <span class="n">salary</span> <span class="o">=</span> <span class="n">DecimalField</span><span class="p">(</span><span class="n">max_digits</span> <span class="o">=</span> <span class="mi">7</span><span class="p">,</span> <span class="n">decimal_places</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">person_employed</span> <span class="o">=</span> <span class="n">ForeignKeyField</span><span class="p">(</span><span class="n">Person</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;was_filled_by&#39;</span><span class="p">,</span> <span class="n">null</span> <span class="o">=</span> <span class="bp">False</span><span class="p">)</span>
+<span class="n">new_person</span> <span class="o">=</span> <span class="n">Person</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+   <span class="n">person_name</span> <span class="o">=</span> <span class="s1">&#39;Fred&#39;</span><span class="p">,</span>
+   <span class="n">lives_in_town</span> <span class="o">=</span> <span class="s1">&#39;Seattle&#39;</span><span class="p">,</span>
+   <span class="n">nickname</span> <span class="o">=</span> <span class="s1">&#39;Fearless&#39;</span><span class="p">)</span>
+    <span class="n">new_person</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+
+<span class="n">aperson</span> <span class="o">=</span> <span class="n">Person</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">Person</span><span class="o">.</span><span class="n">person_name</span> <span class="o">==</span> <span class="s1">&#39;Fred&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="admonition-todo admonition" id="index-0">
 <p class="first admonition-title">Todo</p>
 <p class="last">Add git links for rdbms code (Andy)</p>

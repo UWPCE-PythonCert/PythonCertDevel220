@@ -89,20 +89,19 @@
 <li class="toctree-l3"><a class="reference internal" href="../lesson01/index.html">Lesson 1 : Automated Testing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../lesson02/index.html">Lesson 2 : Logging &amp; Debuging</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../lesson03/index.html">Lesson 3 : Relational databases</a></li>
-<li class="toctree-l3"><a class="reference internal" href="prerequisites.html">Lesson 4 : Prerequisites</a></li>
-<li class="toctree-l3"><a class="reference internal" href="introduction.html">Lesson 04 Introduction</a></li>
-<li class="toctree-l3"><a class="reference internal" href="starting-with-expression-flow-control-and-comprehensions.html">Lesson 4: Starting with Expression Flow Control and Comprehensions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="lambda.html">Lesson 4.1 Lambda</a></li>
-<li class="toctree-l3"><a class="reference internal" href="iterators-and-iterables.html">Lesson 04.02 Iterators and Iterables</a></li>
-<li class="toctree-l3"><a class="reference internal" href="generators.html">Lesson 4.3 Generators</a></li>
-<li class="toctree-l3"><a class="reference internal" href="recap.html">Recap</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Lesson 4 : Assignment</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#here-is-what-you-need-to-do">Here is what you need to do:</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#tips">Tips</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Lesson 4 : Iteration</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="prerequisites.html">Lesson 4 : Prerequisites</a></li>
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">Lesson 04 Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="starting-with-expression-flow-control-and-comprehensions.html">Lesson 4: Starting with Expression Flow Control and Comprehensions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lambda.html">Lesson 4.1 Lambda</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iterators-and-iterables.html">Lesson 04.02 Iterators and Iterables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generators.html">Lesson 4.3 Generators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="recap.html">Recap</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Lesson 4 : Assignment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="office_hours_recaps.html">Office Hours : Recaps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="office_hours_all.html">Office Hours : This weeks’ content</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="office_hours_recaps.html">Office Hours : Recaps</a></li>
-<li class="toctree-l3"><a class="reference internal" href="office_hours_all.html">Office Hours : This weeks’ content</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../lesson05/index.html">Lesson 5 : Consuming APIs with NoSQL</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../lesson06/index.html">Lesson 6 : Profiling and performance</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../lesson07/index.html">Lesson 7 : Currency and async</a></li>
@@ -161,7 +160,7 @@
         
           <li><a href="../index.html">Lesson content</a> &raquo;</li>
         
-          <li><a href="index.html">&lt;no title&gt;</a> &raquo;</li>
+          <li><a href="index.html">Lesson 4 : Iteration</a> &raquo;</li>
         
       <li>Lesson 4 : Assignment</li>
     
@@ -184,49 +183,63 @@
             
   <div class="section" id="lesson-4-assignment">
 <h1>Lesson 4 : Assignment<a class="headerlink" href="#lesson-4-assignment" title="Permalink to this headline">¶</a></h1>
-<div class="admonition-todo admonition" id="index-0">
-<p class="first admonition-title">Todo</p>
-<p class="last">Make this assignment consistent with the case study.</p>
-</div>
 <p>In this lesson’s assignment we are going to apply the functional
 programming techniques we have learned to improve code that we have
 written in earlier lessons for the case study.
-As important as leanring the syntax for  iterables, iterators and generators
+As important as learning the syntax for iterables, iterators and generators
 is understanding the context in which they are best used.
 This assignment will allow you to reflect on that as you apply your learning.</p>
 <div class="section" id="here-is-what-you-need-to-do">
 <h2>Here is what you need to do:<a class="headerlink" href="#here-is-what-you-need-to-do" title="Permalink to this headline">¶</a></h2>
 <p>We are not going to develop new functionality in this assignment. Rather,
 we are going to refactor existing code to improve it and make it more Pythonic.
-This is a very common development activity in application development.</p>
-<p>You will already have tests from past assignments that verify data is being
-written to the HP Norton databases. Although we are going to changes the way
+This is a very common activity in application development.</p>
+<p>You will already have tests from the lesson 3 assignment that verify data is being
+written to the HP Norton databases. Although we are going to change the way
 data is written to and read from the databases, the tests should not need to change.
-We are amending the functionality the tests use to make them perform better and be
+We are amending the functionality the tests use to make them easier to mainrain and be
 more Pythonic.</p>
 <p>This development process, where we change internal behavior while preserving how
-that behavior is called is named refactoring.</p>
+that behavior is called, is named refactoring.</p>
 <p>So here is our refactoring assignment:</p>
 <ol class="arabic simple">
 <li>Using comprehensions, iterators / iterables, and generators appropriately,
 and the instructor-provided customer data, write data to your customer
 database and read / display it.</li>
-<li>Verify existing tests still function correctly.</li>
+<li>Verify existing unit tests still function correctly.</li>
 <li>If necessary, update tests to show the data is being maintained correctly in the database.</li>
-<li>Log all database data changes (adds, amends, deletes).</li>
+<li>Add code to log all database data changes (adds, amends, deletes).</li>
 </ol>
-<div class="admonition-todo admonition" id="index-1">
-<p class="first admonition-title">Todo</p>
-<p class="last">Create a customer csv file to be used for loading data with at least
-1000 records (Andy).</p>
+<p>Be sure to consult the lesson 3 assignment for details of the functionality.
+The set of data you will use is much larger than in lesson 3; be sure to use
+the file included with this lesson.</p>
 </div>
+<div class="section" id="other-requirements">
+<h2>Other requirements:<a class="headerlink" href="#other-requirements" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Your code should not trigger any warnings or errors from Pylint.</li>
+</ul>
+</div>
+<div class="section" id="testing">
+<h2>Testing<a class="headerlink" href="#testing" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Make sure your existing tests run as expected.</li>
+</ul>
+</div>
+<div class="section" id="submission">
+<h2>Submission<a class="headerlink" href="#submission" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>You will need to submit <em>basic_operations.py</em> plus any test files you develop.</li>
+</ul>
 </div>
 <div class="section" id="tips">
 <h2>Tips<a class="headerlink" href="#tips" title="Permalink to this headline">¶</a></h2>
-<ol class="arabic simple">
+<ul class="simple">
+<li>Remember to think about system features, not web pages or the UI.</li>
+<li>Tests first!</li>
 <li>Think about the right techniques to use given the volumes of data.</li>
 <li>Be sure you make the best use of your existing tests</li>
-</ol>
+</ul>
 </div>
 </div>
 
