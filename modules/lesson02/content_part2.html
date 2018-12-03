@@ -1,0 +1,405 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Part 2: The Print Statement You Can Hide &mdash; PythonCert220 2.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Part 3: The Print Statement You Can Add To" href="content_part3.html" />
+    <link rel="prev" title="Part 1: Logging" href="content_part1.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PythonCert220
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Lesson content</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#py220-advanced-python-programming">Py220: Advanced Python Programming</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../lesson00/index.html">Welcome!</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson01/index.html">Lesson 1 : Automated Testing</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Lesson 2 : Logging &amp; Debuging</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="prerequisites.html">Lesson 2 : Prerequisites</a></li>
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">Lesson 2 Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="content_part1.html">Part 1: Logging</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Part 2: The Print Statement You Can Hide</a></li>
+<li class="toctree-l4"><a class="reference internal" href="content_part3.html">Part 3: The Print Statement You Can Add To</a></li>
+<li class="toctree-l4"><a class="reference internal" href="content_part4.html">Part 4: The Print Statement You Can Send Somewhere Else</a></li>
+<li class="toctree-l4"><a class="reference internal" href="content_part5.html">Part 5: Debugging</a></li>
+<li class="toctree-l4"><a class="reference internal" href="activity.html">Activity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="assignment.html">Assignment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="office_hours_recaps.html">Office Hours : Recaps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="office_hours_all.html">Office Hours : This weeks’ content</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson03/index.html">Lesson 3 : Relational databases</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson04/index.html">Lesson 4 : Iteration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson05/index.html">Lesson 5 : Consuming APIs with NoSQL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson06/index.html">Lesson 6 : Profiling and performance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson07/index.html">Lesson 7 : Currency and async</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson08/index.html">Lesson 8 : Functional Techniques</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson09/index.html">Lesson 9 : Advanced Python language constructs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson10/index.html">Lesson 10 : Metaprogramming</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">External links</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PythonCert220</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Lesson content</a> &raquo;</li>
+        
+          <li><a href="index.html">Lesson 2 : Logging &amp; Debuging</a> &raquo;</li>
+        
+      <li>Part 2: The Print Statement You Can Hide</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/modules/lesson02/content_part2.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="part-2-the-print-statement-you-can-hide">
+<h1>Part 2: The Print Statement You Can Hide<a class="headerlink" href="#part-2-the-print-statement-you-can-hide" title="Permalink to this headline">¶</a></h1>
+<p>Let’s make a couple of changes to our code:</p>
+<div class="code Python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">logging</span>
+
+<span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">my_fun</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="mi">100</span> <span class="o">/</span> <span class="p">(</span><span class="mi">50</span> <span class="o">-</span> <span class="n">i</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">my_fun</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>We’ve imported the logging library, set some kind of logging
+configuration, and then replaced our print statement with
+a&nbsp;<em>logging.debug</em>&nbsp;statement.</p>
+<p>Now running simple.py produces the following output:</p>
+<div class="code Python highlight-default notranslate"><div class="highlight"><pre><span></span>$ python simple.py
+DEBUG:root:0
+DEBUG:root:1
+DEBUG:root:2
+...
+DEBUG:root:48
+DEBUG:root:49
+DEBUG:root:50
+Traceback (most recent call last):
+  File &quot;simple.py&quot;, line 10, in &lt;module&gt;
+    my_fun(100)
+  File &quot;simple.py&quot;, line 7, in my_fun
+    100 / (50 - i)
+ZeroDivisionError: division by zero
+</pre></div>
+</div>
+<p>So far, this doesn’t look very different from the print statement that
+we were using before. But let’s change one line of the script:</p>
+<div class="code Python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">logging</span>
+
+<span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">WARNING</span><span class="p">)</span>  <span class="c1"># Change the level to logging.WARNING</span>
+<span class="k">def</span> <span class="nf">my_fun</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="mi">100</span> <span class="o">/</span> <span class="p">(</span><span class="mi">50</span> <span class="o">-</span> <span class="n">i</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">my_fun</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Now try running the script again:</p>
+<div class="code Python highlight-default notranslate"><div class="highlight"><pre><span></span>$ python simple.py
+Traceback (most recent call last):
+  File &quot;simple.py&quot;, line 10, in &lt;module&gt;
+    my_fun(100)
+  File &quot;simple.py&quot;, line 7, in my_fun
+    100 / (50 - i)
+ZeroDivisionError: division by zero
+</pre></div>
+</div>
+<p>What happened?</p>
+<p>The logging library includes the idea of various&nbsp;<em>levels</em>&nbsp;of logging
+messages: some messages are more important than others. For example, if
+you were curious to know the values that a function was being called
+with, then you might put a logging statement into&nbsp;that function to help
+you understand when&nbsp;it was&nbsp;being called, and with what arguments. For
+example:</p>
+<div class="code Python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">my_fun</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Function my_fun called with value </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+    <span class="n">do_something</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+<p>This logging statement is just giving us some information about how the
+function is being used, so we’ve used the <em>logging.info</em> method.</p>
+<p>In our example script, when we were trying to figure out what value
+of&nbsp;<em>i</em>&nbsp;was causing our script to crash, we were debugging our code.
+That’s why we used a&nbsp;<em>logging.debug</em>&nbsp;statement. Now that we know that
+the value 50 causes our code to crash, we could put in
+a&nbsp;<em>logging.warning</em>&nbsp;statement that will warn us of dangerous
+conditions:</p>
+<div class="code Python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">logging</span>
+
+<span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">WARNING</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">my_fun</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">50</span><span class="p">:</span>                                   <span class="c1"># Add this line</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;The value of i is 50.&quot;</span><span class="p">)</span>  <span class="c1"># Add this line</span>
+        <span class="mi">100</span> <span class="o">/</span> <span class="p">(</span><span class="mi">50</span> <span class="o">-</span> <span class="n">i</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">my_fun</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If we wanted to handle the division by zero error gracefully, then we
+could modify the code to attempt the&nbsp;<em>100 / (50 - i)</em>&nbsp;operation inside
+of a try,&nbsp;except block. Then we would log an&nbsp;<em>error</em>&nbsp;if our script did
+attempt to divide by 0:</p>
+<div class="code Python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">logging</span>
+
+<span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">WARNING</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">my_fun</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">50</span><span class="p">:</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;The value of i is 50.&quot;</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="mi">100</span> <span class="o">/</span> <span class="p">(</span><span class="mi">50</span> <span class="o">-</span> <span class="n">i</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Tried to divide by zero. Var i was </span><span class="si">{}</span><span class="s2">. Recovered gracefully.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">my_fun</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You can see all of the logging levels in the <a class="reference external" href="https://docs.python.org/3/library/logging.html#levels">logging
+documentation</a>.
+Each level has an associated logging method,
+like&nbsp;<em>logging.error</em>,&nbsp;<em>logging.warning</em>, etc.</p>
+<p>Now what do we get when we run our code?</p>
+<div class="code Python highlight-default notranslate"><div class="highlight"><pre><span></span>$ python simple.py
+WARNING:root:The value of i is 50.
+ERROR:root:Tried to divide by zero, i was 50. Recovered gracefully.
+</pre></div>
+</div>
+<p>Why is it not showing the&nbsp;<em>logging.debug</em>&nbsp;statements?</p>
+<p>The statement&nbsp;<em>logging.basicConfig(level=logging.WARNING)&nbsp;*tells the
+logger to&nbsp;*only</em>&nbsp;display log messages with level&nbsp;WARNING and above.
+Look back to the logging levels documentation. You’ll see that the DEBUG
+level is below the WARNING level, so it won’t be displayed. When we were
+debugging this code, the debug statements were helping us understand why
+our code was failing, but now it would be overwhelming to see them every
+time we run our code. We’ve&nbsp;<em>hidden</em>&nbsp;the statements by making a single
+configuration change.</p>
+<p>The idea is that you might be working on a project with a lot of Python
+files. You may have put debugging or information statements into several
+of these files. While you’re authoring the project, these messages are
+useful. And once you think you’ve worked out all of the bugs in your
+code, you don’t have to go through all of your files and find every
+logging statement: you can just turn off the unimportant ones by setting
+the log level in your main script.</p>
+<p>What is the default log level? If you don’t specify a log level, then
+will you see&nbsp;<em>all</em>&nbsp;log messages, or is there some default level that
+the logging library will choose for you? To answer that, try running the
+following script:</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># loggingtest.py</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+
+<span class="n">logging</span><span class="o">.</span><span class="n">critical</span><span class="p">(</span><span class="s2">&quot;This is a critical error!&quot;</span><span class="p">)</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;I&#39;m an error.&quot;</span><span class="p">)</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;Hello! I&#39;m a warning!&quot;</span><span class="p">)</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;This is some information.&quot;</span><span class="p">)</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Perhaps this information will help you find your problem?&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Although I used the&nbsp;<em>logging.basicConfig</em>&nbsp;method to set the logging
+level in these examples, there are other ways to set this value. We’ll
+learn about this later in the lesson.</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="content_part3.html" class="btn btn-neutral float-right" title="Part 3: The Print Statement You Can Add To" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="content_part1.html" class="btn btn-neutral" title="Part 1: Logging" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, University of Washington, Christopher Barker, Luis Diego Conejo, Andy Miles, Rick Riehle, Joseph Schilz. Creative Commons Attribution-ShareAlike 3.0 license
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

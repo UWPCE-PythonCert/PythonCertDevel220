@@ -1,6 +1,6 @@
-#################
-Lesson 1 Activity
-#################
+########
+Activity
+########
 
 Your assignment is to complete testing and linting on the calculator
 from the lesson content. As a first step, review the videos and writing

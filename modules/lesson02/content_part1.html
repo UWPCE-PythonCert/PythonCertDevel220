@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Assignment &mdash; PythonCert220 2.0 documentation</title>
+  <title>Part 1: Logging &mdash; PythonCert220 2.0 documentation</title>
   
 
   
@@ -28,8 +28,8 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Office Hours : Recaps" href="office_hours_recaps.html" />
-    <link rel="prev" title="Activity" href="activity.html" /> 
+    <link rel="next" title="Part 2: The Print Statement You Can Hide" href="content_part2.html" />
+    <link rel="prev" title="Lesson 2 Introduction" href="introduction.html" /> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -90,13 +90,13 @@
 <li class="toctree-l3 current"><a class="reference internal" href="index.html">Lesson 2 : Logging &amp; Debuging</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="prerequisites.html">Lesson 2 : Prerequisites</a></li>
 <li class="toctree-l4"><a class="reference internal" href="introduction.html">Lesson 2 Introduction</a></li>
-<li class="toctree-l4"><a class="reference internal" href="content_part1.html">Part 1: Logging</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Part 1: Logging</a></li>
 <li class="toctree-l4"><a class="reference internal" href="content_part2.html">Part 2: The Print Statement You Can Hide</a></li>
 <li class="toctree-l4"><a class="reference internal" href="content_part3.html">Part 3: The Print Statement You Can Add To</a></li>
 <li class="toctree-l4"><a class="reference internal" href="content_part4.html">Part 4: The Print Statement You Can Send Somewhere Else</a></li>
 <li class="toctree-l4"><a class="reference internal" href="content_part5.html">Part 5: Debugging</a></li>
 <li class="toctree-l4"><a class="reference internal" href="activity.html">Activity</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">Assignment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="assignment.html">Assignment</a></li>
 <li class="toctree-l4"><a class="reference internal" href="office_hours_recaps.html">Office Hours : Recaps</a></li>
 <li class="toctree-l4"><a class="reference internal" href="office_hours_all.html">Office Hours : This weeks’ content</a></li>
 </ul>
@@ -163,13 +163,13 @@
         
           <li><a href="index.html">Lesson 2 : Logging &amp; Debuging</a> &raquo;</li>
         
-      <li>Assignment</li>
+      <li>Part 1: Logging</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/modules/lesson02/assignment.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/modules/lesson02/content_part1.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -182,104 +182,103 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="assignment">
-<h1>Assignment<a class="headerlink" href="#assignment" title="Permalink to this headline">¶</a></h1>
-<p>One of the challenges with the existing code base at HP Norton is the lack
-of the necessary debug information when issues occur.</p>
-<p>One such case is the <em>charges_calc</em> script. Its purpose is to convert a list of
-existing rentals of individual inventory items (for example, table lamps),
-including number of units rented, price charged per day and rental start / end dates,
-and return the same list with the total cost of the rental (based on the number of
-days the item or items have been rented), as well as total cost per item (in the
-case of multiple items). It also calculates the square root of the total cost of the
-rental for statistical purposes. Both the input and the output of the script are JSON files.</p>
-<p>The problem at this point is that, using the included JSON input file, the script
-is not working. There is no error message or anything else indicating what is
-going on and no output file is being produced.</p>
-<p>Your goal this week is twofold: You need to use the Python debugger to figure out
-why the script is not working and you also need to incorporate logging into the script
-so that someone doing debug can follow the flow of the script.</p>
-<div class="section" id="here-is-what-you-need-to-do">
-<h2>Here is what you need to do:<a class="headerlink" href="#here-is-what-you-need-to-do" title="Permalink to this headline">¶</a></h2>
-<ol class="arabic simple">
-<li>Download the <em>charges_calc.py</em> code and review it. Make sure you also download <em>source.json</em>, which contains the sample source data (that will be your input file).</li>
-<li>Try as best as you can to understand what the code is doing.</li>
-<li>Using the debugger, try to understand what is going on with the
-expected command line parameters. See if from the code and through
-watching variables and creating dummy parameters you can infer enough
-to get the program to run. Capture your debug work to a text file.</li>
-<li>Now, enable logging and start inserting logging statements to track the code’s execution.</li>
-<li>Add comments that describe your discoveries, and additional things you need.</li>
-<li>Add warnings for things missing in the source data that are expected but impeded some of the calculations (for example, unreturned items do not have a <em>rental_end</em> value).</li>
-<li>Add error messages for inconsistencies in the source data that could make your program crash or return incorrect data.</li>
-</ol>
+  <div class="section" id="part-1-logging">
+<h1>Part 1: Logging<a class="headerlink" href="#part-1-logging" title="Permalink to this headline">¶</a></h1>
+<p>We’ll be talking about both logging and debugging in this lesson. In the
+introduction, I said that logging and debugging are a great step up from
+the print statements that beginning programers often like to use to
+debug their code.</p>
+<p>Your assignment for this week will be the culmination of the logging
+exercises that we complete in this lesson. I encourage you to actually
+create and modify each of the exercise scripts that I demonstrate below.</p>
+<div class="section" id="print-statement-debugging">
+<h2>Print Statement Debugging<a class="headerlink" href="#print-statement-debugging" title="Permalink to this headline">¶</a></h2>
+<p>Let’s start off by writing a simple Python script with an obvious
+problem.&nbsp;Begin by creating simple.py:</p>
+<div class="code Python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># simple.py</span>
+<span class="k">def</span> <span class="nf">my_fun</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+        <span class="mi">100</span> <span class="o">/</span> <span class="p">(</span><span class="mi">50</span> <span class="o">-</span> <span class="n">i</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">my_fun</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
 </div>
-<div class="section" id="requirements">
-<h2>Requirements:<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
-<ol class="arabic">
-<li><p class="first">Your script needs to deal with data inconsistencies that could make it crash or return incorrect data (handle the exception and issue an error message for these and let the script continue) and issue warnings for missing data.</p>
-</li>
-<li><p class="first">Capture you debug work in a text file, you will need that for your submission.</p>
-</li>
-<li><dl class="first docutils">
-<dt>Setup logging messages so that they are disabled by default and can by enabled by using <em>-d 1</em> or <em>–debug 1</em> from the command line. Use the <em>argparse</em> module for this. You will have the following debug levels:</dt>
-<dd><ol class="first last arabic simple">
-<li>0: No debug messages or log file.</li>
-<li>1: Only error messages.</li>
-<li>2: Error messages and warnings.</li>
-<li>3: Error messages, warnings and debug messages.</li>
-</ol>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt>You need to implement three types of logging messages:</dt>
-<dd><ol class="first last arabic simple">
-<li>Debug: General comments, indicating where in the script flow we are. Should be shown on screen only.</li>
-<li>Warning: Used for missing elements in the source data that force a change in the flow. Shown on screen and on the log file.</li>
-<li>Error: Used for inconsistencies in the source data that will cause the script to crash or report incorrect results. Shown on screen and on the log file.</li>
-</ol>
-</dd>
-</dl>
-</li>
-<li><p class="first">Use the following format for your log messages:</p>
-<blockquote>
-<div><p>log_format = “%(asctime)s %(filename)s:%(lineno)-3d %(levelname)s %(message)s”</p>
-</div></blockquote>
-</li>
-<li><p class="first">Use the following filename format to timestamp your log files:</p>
-<blockquote>
-<div><p>log_file = datetime.datetime.now().strftime(“%Y-%m-%d”)+’.log’</p>
-</div></blockquote>
-</li>
-</ol>
+<p>You can probably already see the problem that we’ll encounter when we
+run simple.py. Let’s run it in python:</p>
+<div class="code Python highlight-default notranslate"><div class="highlight"><pre><span></span>$ python simple.py
+Traceback (most recent call last):
+  File &quot;simple.py&quot;, line 7, in &lt;module&gt;
+    my_fun(100)
+  File &quot;simple.py&quot;, line 4, in my_fun
+   100 / (50 - i)
+ZeroDivisionError: division by zero
+</pre></div>
 </div>
-<div class="section" id="other-requirements">
-<h2>Other requirements:<a class="headerlink" href="#other-requirements" title="Permalink to this headline">¶</a></h2>
+<p>As you might have expected, we get a ZeroDivisionError! At some point,
+for some value of&nbsp;<em>i</em>, the instruction 100*&nbsp;/ (50 - i)*&nbsp;causes our
+program to attempt to divide by zero.</p>
+<p>I’m sure that you can see what value of&nbsp;<em>i</em>&nbsp;would cause this problem,
+but let’s pretend that we didn’t know, and we were trying to figure it
+out. If you had no better tools, you might try to investigate this
+problem by adding print statements to the loop. You could print out the
+value of&nbsp;<em>i</em>&nbsp;just before the problem-fraught division statement.&nbsp;Make
+the following modification to simple.py:</p>
+<div class="code Python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>           <span class="c1"># &lt;-- Add this line</span>
+    <span class="mi">100</span> <span class="o">/</span> <span class="p">(</span><span class="mi">50</span> <span class="o">-</span> <span class="n">i</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Now running simple.py will give us some clue about for the faulting
+value of&nbsp;<em>i</em>:</p>
+<div class="code Python highlight-default notranslate"><div class="highlight"><pre><span></span>$ python simple.py
+0
+1
+2
+...
+48
+49
+50
+Traceback (most recent call last):
+ File &quot;simple.py&quot;, line 2, in &lt;module&gt;
+ 100 / (50 - i)
+ZeroDivisionError: division by zero
+</pre></div>
+</div>
+<p>If we didn’t know it already, then we know it now! The value
+of&nbsp;<em>i&nbsp;*just before the ZeroDivisionError is 50. This is the faulting
+value of&nbsp;*i</em>.</p>
+<p>This “print statement debugging” is how a lot of new programmers begin
+trying to understand problems in their code. And many advanced
+programmers will still use a print statement when they’re writing simple
+scripts.</p>
+<p>But what are the problems with print statement debugging?</p>
+<p>Here are a few problems with using a print statement to debug your code:</p>
 <ul class="simple">
-<li>Your code should not trigger any warnings or errors from Pylint.</li>
+<li>You have to go back in and take them out, otherwise they produce
+distracting output when you’re running your program.</li>
+<li>If you have more than a couple of print statements, it becomes hard
+to keep track of where they all are and what each one specifically is
+reporting on.</li>
+<li>Print statements don’t help you when your code is being run in
+production: you can only use print statements when you’re running the
+code on your own machine from your console.</li>
 </ul>
-</div>
-<div class="section" id="submission">
-<h2>Submission:<a class="headerlink" href="#submission" title="Permalink to this headline">¶</a></h2>
-<p>Your submission should include the following:</p>
+<p>To fix all of these problems, we’re going to use&nbsp;<em>logging</em>. Logging is
+a practice that’s used in similar ways across a lot of different
+languages: you’ll be able to apply these lessons about logging to your
+entire programming career.</p>
+<p>We’ll practice logging statements that:</p>
 <ul class="simple">
-<li>Updated version of <em>charges_calc.py</em> (keep the same filename).</li>
-<li>Your Python debugger logfile. Include it as <em>debugger_log.txt</em>.</li>
-<li>Logfile created by running your updated script on the source data.</li>
-<li>Output JSON file created with the updated script.</li>
+<li>You can choose to hide or show with each run of your code.</li>
+<li>You can automatically add extra information to, like the line number
+and file that they’re invoked in.</li>
+<li>You can send from any Internet connected device to a centralized
+server, to monitor your code as it works in production.</li>
 </ul>
-</div>
-<div class="section" id="tips">
-<h2>Tips<a class="headerlink" href="#tips" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li>Think about what a developer would need by way of logging to help trace what
-has happened and gone wrong when the module is running.</li>
-<li>Add details of your approach to logging to the module docstring to assist
-anyone who maintains the module.</li>
-<li>Be sure to document details of your fix from the debugging activity in
-your pull request.</li>
-</ul>
+<p>If you like using print statements to debug your code, you’ll enjoy
+logging: message logging is a direct step up from print statements in
+your programming skills.</p>
 </div>
 </div>
 
@@ -291,10 +290,10 @@ your pull request.</li>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="office_hours_recaps.html" class="btn btn-neutral float-right" title="Office Hours : Recaps" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="content_part2.html" class="btn btn-neutral float-right" title="Part 2: The Print Statement You Can Hide" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="activity.html" class="btn btn-neutral" title="Activity" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="introduction.html" class="btn btn-neutral" title="Lesson 2 Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
