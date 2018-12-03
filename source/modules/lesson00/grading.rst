@@ -2,10 +2,11 @@ Grading
 =======
 
 The purpose of grading is to help students and instructors assess a students
- progress on the class, and to demonstrate that a student is proficient and
- achieved the class objectives.
+progress on the class, and to demonstrate that a student is proficient and
+achieved the class objectives.
 
 There are three grades used to rate every assignment:
+
 - Good: All aspects listed under both Minimum requirements as well as under
   "full requirements" for the assignment have been met.
 - Satisfactory: all aspects listed under "minimum requirements" for the

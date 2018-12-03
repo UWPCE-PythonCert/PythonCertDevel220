@@ -21,18 +21,18 @@ requirements. It excludes the technical and framework concepts that are
 used to help deliver the requirements.
 
 This approach brings several major benefits:
-#. The problem domain changes at a different rate to the technology it
-   uses. As developers, when a new version of the technology we use
-   becomes available we want to make that as simple as possible. Well
-   designed systems allow this to happen, and good understanding of
-   object oreintation makes this even more simple.
-#. Often the teams or levels of expertise required to maintain
-   problem domain functionality are different to those for the frameworks
-   that run this technology. Keeping the problem domain separate helps
-   to enable this.
-#. Problem domain logic is where application developers can add the most
-   value to their clients, and keeping it separate from the technology
-   helps to increase the lifetime of the problem domain logic.
+
+- The problem domain changes at a different rate to the technology it
+  uses. As developers, when a new version of the technology we use
+  becomes available we want to make that as simple as possible. Well
+  designed systems allow this to happen, and good understanding of
+  object oreintation makes this even more simple.
+- Often the teams or levels of expertise required to maintain
+  problem domain functionality are different to those for the frameworks
+  that run this technology. Keeping the problem domain separate helps
+  to enable this.
+- Problem domain logic is where application developers can add the most
+  value to their clients, and keeping it separate from the technology   helps to increase the lifetime of the problem domain logic.
 
 Now all of this is fine, but it requires skill, experience and even good
 taste to achieve this! It is also true that this sort of approach with
@@ -153,20 +153,20 @@ Here's a quick guide to Python OO: https://python.swaroopch.com/oop.html
 
 But how do I know which classes I need?
 ---------------------------------------
-#. Think about your problem domain. Find some related documentation (ideally
-   from the person who is requesting the development). Failing that, talk to
-   the person who made the request. Note down what they are asking you.
+- Think about your problem domain. Find some related documentation (ideally
+  from the person who is requesting the development). Failing that, talk to
+  the person who made the request. Note down what they are asking you.
 
-#. When you have the notes and/or documentation, use a highlighter so mark
-   all of the nouns. So, in a human resources example, you might highlight
-   employee, job, department, and company. Think of some others...
+- When you have the notes and/or documentation, use a highlighter so mark
+  all of the nouns. So, in a human resources example, you might highlight
+  employee, job, department, and company. Think of some others...
 
-#. Get a large piece of paper and small yellow stickies. Alternatively,
+- Get a large piece of paper and small yellow stickies. Alternatively,
   use a modeling tool. For example: https://www.genmymodel.com/
 
-#. Now, either write each noun on a separate sticky, or start to build a
-   model. We'll show the modeling tool. It will quickly become be obvious
-   how to do this with stickies.
+- Now, either write each noun on a separate sticky, or start to build a
+  model. We'll show the modeling tool. It will quickly become be obvious
+  how to do this with stickies.
 
 #. Some comments:
    1. Keep problem domain code separate from technical code. Why?
