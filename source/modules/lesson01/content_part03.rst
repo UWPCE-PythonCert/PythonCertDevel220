@@ -6,20 +6,6 @@ Lesson 01 Advanced Testing
 Part 3: Automated Test Script 
 =============================
 
-.. toctree::
-    :maxdepth: 1
-
-    content_part01
-    content_part02
-    content_part04
-    content_part05
-    content_part06
-    content_part07
-    content_part08
-    content_part09
-    content_part10
-    content_part11
-
 If you were to sit down and think about this problem, here's the
 solution that you would come up with:
 

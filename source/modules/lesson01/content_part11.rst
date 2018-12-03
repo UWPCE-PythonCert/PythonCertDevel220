@@ -6,20 +6,6 @@ Lesson 01 Advanced Testing
 Part 11: Test Driven Development
 ================================
 
-.. toctree::
-    :maxdepth: 1
-
-    content_part01
-    content_part02
-    content_part03
-    content_part04
-    content_part05
-    content_part06
-    content_part07
-    content_part08
-    content_part09
-    content_part10
-
 No discussion of testing is complete without Test Driven Development
 (TDD).
 

@@ -6,20 +6,6 @@ Lesson 01 Advanced Testing
 Part 4: Running the script
 ==========================
 
-.. toctree::
-    :maxdepth: 1
-
-    content_part01
-    content_part02
-    content_part03
-    content_part05
-    content_part06
-    content_part07
-    content_part08
-    content_part09
-    content_part10
-    content_part11
-
 Running \ *python test.py* will invoke the
 SquarerTest.test\_positive\_numbers method and also the
 SquarerTest.test\_negative\_numbers method. If our Squarer.calc method

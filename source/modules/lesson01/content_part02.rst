@@ -6,20 +6,6 @@ Lesson 01 Advanced Testing
 Part 2: Why test?
 =================
 
-.. toctree::
-    :maxdepth: 1
-
-    content_part01
-    content_part03
-    content_part04
-    content_part05
-    content_part06
-    content_part07
-    content_part08
-    content_part09
-    content_part10
-    content_part11
-
 It's likely you already have some familiarity with software testing in
 general, and writing tests in Python specifically. In this section,
 we're going to revisit the basic question: why write software tests. Our

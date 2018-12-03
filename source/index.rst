@@ -9,7 +9,11 @@ https://www.pce.uw.edu/certificates/python-programming
 
 This site can be thought of as the textbook for the first second class in the UW Python Certificate. It contains notes about the topics covered in the classes, programming exercises, supplemental materials about setting up a development environment, and assorted references about Python-related topics.
 
+.. toctree::
+    :maxdepth: 1
 
+    modules/index
+    references/index
 
 
 Example Code

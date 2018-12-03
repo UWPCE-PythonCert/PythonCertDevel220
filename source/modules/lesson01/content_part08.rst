@@ -6,20 +6,6 @@ Lesson 01 Advanced Testing
 Part 8: Unit testing Adder and Subtracter
 =========================================
 
-.. toctree::
-    :maxdepth: 1
-
-    content_part01
-    content_part02
-    content_part03
-    content_part04
-    content_part05
-    content_part06
-    content_part07
-    content_part09
-    content_part10
-    content_part11
-
 Let's begin our tests with unit testing the Adder and Subtracter
 classes. Recall that unit testing involves testing a \ *single unit* of
 code. This usually means testing a single class all by itself: without

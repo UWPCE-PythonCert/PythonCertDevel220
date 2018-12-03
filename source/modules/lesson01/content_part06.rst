@@ -6,20 +6,6 @@ Lesson 01 Advanced Testing
 Part 6: Developing the test further
 ===================================
 
-.. toctree::
-    :maxdepth: 1
-
-    content_part01
-    content_part02
-    content_part03
-    content_part04
-    content_part05
-    content_part07
-    content_part08
-    content_part09
-    content_part10
-    content_part11
-
 The TestCase class includes instance methods for making assertions about
 the behavior of our program. The \ *assertEqual* method is an instance
 method defined in the TestCase class: it helps us compare the expected

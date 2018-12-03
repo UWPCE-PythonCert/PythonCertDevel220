@@ -6,20 +6,6 @@ Lesson 01 Advanced Testing
 Part 9: Integration Testing
 ===========================
 
-.. toctree::
-    :maxdepth: 1
-
-    content_part01
-    content_part02
-    content_part03
-    content_part04
-    content_part05
-    content_part06
-    content_part07
-    content_part08
-    content_part10
-    content_part11
-
 After all this unit testing, it's very tempting to assume that good unit tests
 provide everything you need to ensure your code will work properly. That's a
 very risky assumption. Even if all the individual elements in your project, there's

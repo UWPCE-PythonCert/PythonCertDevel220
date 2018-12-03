@@ -6,20 +6,6 @@ Lesson 01 Advanced Testing
 Part 7: A more complex example
 ==============================
 
-.. toctree::
-    :maxdepth: 1
-
-    content_part01
-    content_part02
-    content_part03
-    content_part04
-    content_part05
-    content_part06
-    content_part08
-    content_part09
-    content_part10
-    content_part11
-
 As you watch this video, bear in mind that part of your assignment is
 going to be to complete the calculator that's presented here. Type along
 if you wish, but there will also be a code repository for you to clone.
