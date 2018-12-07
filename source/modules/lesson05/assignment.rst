@@ -37,7 +37,7 @@ Other requirements:
 
 Testing
 -------
-In order for your code to be evaluated, you need to create a file called *test_database.py* with the following functions:
+In order for your code to be evaluated, you need to create a file called *database.py* with the following functions:
 
 - *import_data(product_file, customer_file, rentals_file)*: This function takes a three csv files as input, one with product data, one with customer data and the third one with rentals data and creates and populates a new MongoDB database with the these data.
 - *show_available_products()*: Returns a Python dictionary of products listed as *available* with the following fields:

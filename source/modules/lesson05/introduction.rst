@@ -68,25 +68,21 @@ New Words, Concepts, and Tools
 
 Required Reading
 ================
-.. todo::
-   Verify all required and optional reading links for lesson 5 mongo API (Andy)
 
--  `Background <https://www.fullstackpython.com/no-sql-datastore.html>`__
-   on databases
--  `Mongodb <https://realpython.com/blog/python/introduction-to-mongodb-and-python/>`__
--  http://wiki.python.org/moin/PersistenceTools 
+- `Mongodb <https://realpython.com/blog/python/introduction-to-mongodb-and-python/>`__
+- `Background <https://www.fullstackpython.com/no-sql-datastore.html>`__
+  on databases
+-  
 
 Optional Reading
 ================
 
--  Excellent `guide <http://nosql-database.org>`__ for future reference
--  A
-   `list <http://bigdata-madesimple.com/a-deep-dive-into-nosql-a-complete-list-of-nosql-databases/>`__ of
-   databases and database characteristics
--  `Simple <https://docs.python.org/3/library/persistence.html>`__
-   persistence.
--  https://realpython.com/introduction-to-mongodb-and-python/
--  https://www.bogotobogo.com/python/MongoDB_PyMongo/python_MongoDB_pyMongo_tutorial_installing.php
--  https://gearheart.io/blog/how-do-you-use-mongodb-with-python/
-
-
+- Excellent `guide <http://nosql-database.org>`__ for future reference
+- A
+  `list <http://bigdata-madesimple.com/a-deep-dive-into-nosql-a-complete-list-of-nosql-databases/>`__ of
+  databases and database characteristics
+- `Simple <https://docs.python.org/3/library/persistence.html>`__
+  persistence.
+- https://www.bogotobogo.com/python/MongoDB_PyMongo/python_MongoDB_pyMongo_tutorial_installing.php
+- https://gearheart.io/blog/how-do-you-use-mongodb-with-python/
+- http://wiki.python.org/moin/PersistenceTools 
