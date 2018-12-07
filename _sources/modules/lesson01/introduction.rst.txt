@@ -2,9 +2,6 @@
 Introduction
 ############
 
-Introduction
-============
-
 This week's topics step beyond *programming* into a central question
 of \ *software engineering*: how do you manage code that is too big to
 fit inside your own head?

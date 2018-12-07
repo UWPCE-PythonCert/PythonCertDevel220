@@ -1,0 +1,364 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Part 5: Python code &mdash; PythonCert220 2.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Part 6: More about mongodb" href="content_part6.html" />
+    <link rel="prev" title="Part 4: MongoDB Installation" href="content_part4.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PythonCert220
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Lesson content</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#py220-advanced-python-programming">Py220: Advanced Python Programming</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../lesson00/index.html">Welcome!</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson01/index.html">Lesson 1 : Automated Testing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson02/index.html">Lesson 2 : Logging &amp; Debuging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson03/index.html">Lesson 3 : Relational databases</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson04/index.html">Lesson 4: Iteration</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Lesson 5 : Consuming APIs with NoSQL</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="prerequisites.html">Lesson 5 : Prerequisites</a></li>
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">Lesson 05 Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="content_part1.html">Part 1: APIs and MongoDB background</a></li>
+<li class="toctree-l4"><a class="reference internal" href="content_part2.html">Part 2: NOSQL Databases: Tradeoffs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="content_part3.html">Part 3: Python, MongoDB and the API</a></li>
+<li class="toctree-l4"><a class="reference internal" href="content_part4.html">Part 4: MongoDB Installation</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Part 5: Python code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="content_part6.html">Part 6: More about mongodb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="extras.html">Lesson 05 Extras</a></li>
+<li class="toctree-l4"><a class="reference internal" href="assignment.html">Lesson 5 : Assignment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="office_hours_recaps.html">Office Hours : Recaps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="office_hours_all.html">Office Hours : This weeks’ content</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson06/index.html">Lesson 6 : Profiling and performance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson07/index.html">Lesson 7 : Currency and async</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson08/index.html">Lesson 8 : Functional Techniques</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson09/index.html">Lesson 9 : Advanced Python language constructs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson10/index.html">Lesson 10 : Metaprogramming</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">External links</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PythonCert220</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Lesson content</a> &raquo;</li>
+        
+          <li><a href="index.html">Lesson 5 : Consuming APIs with NoSQL</a> &raquo;</li>
+        
+      <li>Part 5: Python code</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/modules/lesson05/content_part5.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="part-5-python-code">
+<h1>Part 5: Python code<a class="headerlink" href="#part-5-python-code" title="Permalink to this headline">¶</a></h1>
+<p>{{video 5 here}}</p>
+<div class="section" id="python-code-from-video">
+<h2>Python code from video<a class="headerlink" href="#python-code-from-video" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;&quot;</span>
+<span class="sd">must use 127.0.0.1 on windows</span>
+<span class="sd">pip install pymongo</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">pymongo</span> <span class="kn">import</span> <span class="n">MongoClient</span>
+
+
+<span class="k">class</span> <span class="nc">MongoDBConnection</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;MongoDB Connection&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">host</span><span class="o">=</span><span class="s1">&#39;127.0.0.1&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">27017</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; be sure to use the ip address not name for local windows&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">host</span> <span class="o">=</span> <span class="n">host</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">port</span> <span class="o">=</span> <span class="n">port</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">connection</span> <span class="o">=</span> <span class="bp">None</span>
+
+    <span class="k">def</span> <span class="fm">__enter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">connection</span> <span class="o">=</span> <span class="n">MongoClient</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">host</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">port</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="k">def</span> <span class="fm">__exit__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exc_type</span><span class="p">,</span> <span class="n">exc_val</span><span class="p">,</span> <span class="n">exc_tb</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">connection</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+
+<span class="k">def</span> <span class="nf">print_mdb_collection</span><span class="p">(</span><span class="n">collection_name</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">doc</span> <span class="ow">in</span> <span class="n">collection_name</span><span class="o">.</span><span class="n">find</span><span class="p">():</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">doc</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">mongo</span> <span class="o">=</span> <span class="n">MongoDBConnection</span><span class="p">()</span>
+
+    <span class="k">with</span> <span class="n">mongo</span><span class="p">:</span>
+        <span class="c1"># mongodb database; it all starts here</span>
+        <span class="n">db</span> <span class="o">=</span> <span class="n">mongo</span><span class="o">.</span><span class="n">connection</span><span class="o">.</span><span class="n">media</span>
+
+        <span class="c1"># collection in database</span>
+        <span class="n">cd</span> <span class="o">=</span> <span class="n">db</span><span class="p">[</span><span class="s2">&quot;cd&quot;</span><span class="p">]</span>
+
+        <span class="c1"># notice how easy these are to create and that they are &quot;schemaless&quot;</span>
+        <span class="c1"># that is, the Python module defines the data structure in a dict,</span>
+        <span class="c1"># rather than the database which just stores what it is told</span>
+
+        <span class="n">cd_ip</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;artist&quot;</span><span class="p">:</span> <span class="s2">&quot;The Who&quot;</span><span class="p">,</span> <span class="s2">&quot;Title&quot;</span><span class="p">:</span> <span class="s2">&quot;By Numbers&quot;</span><span class="p">}</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">cd</span><span class="o">.</span><span class="n">insert_one</span><span class="p">(</span><span class="n">cd_ip</span><span class="p">)</span>
+
+        <span class="n">cd_ip</span> <span class="o">=</span> <span class="p">[{</span>
+            <span class="s2">&quot;artist&quot;</span><span class="p">:</span> <span class="s2">&quot;Deep Purple&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Title&quot;</span><span class="p">:</span> <span class="s2">&quot;Made In Japan&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Andy&quot;</span>
+        <span class="p">},</span>
+                 <span class="p">{</span>
+                     <span class="s2">&quot;artist&quot;</span><span class="p">:</span> <span class="s2">&quot;Led Zeppelin&quot;</span><span class="p">,</span>
+                     <span class="s2">&quot;Title&quot;</span><span class="p">:</span> <span class="s2">&quot;House of the Holy&quot;</span><span class="p">,</span>
+                     <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Andy&quot;</span>
+                 <span class="p">},</span> <span class="p">{</span>
+                     <span class="s2">&quot;artist&quot;</span><span class="p">:</span> <span class="s2">&quot;Pink Floyd&quot;</span><span class="p">,</span>
+                     <span class="s2">&quot;Title&quot;</span><span class="p">:</span> <span class="s2">&quot;DSOM&quot;</span><span class="p">,</span>
+                     <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Andy&quot;</span>
+                 <span class="p">},</span>
+                 <span class="p">{</span>
+                     <span class="s2">&quot;artist&quot;</span><span class="p">:</span> <span class="s2">&quot;Albert Hammond&quot;</span><span class="p">,</span>
+                     <span class="s2">&quot;Title&quot;</span><span class="p">:</span> <span class="s2">&quot;Free Electric Band&quot;</span><span class="p">,</span>
+                     <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Sam&quot;</span>
+                 <span class="p">},</span> <span class="p">{</span>
+                     <span class="s2">&quot;artist&quot;</span><span class="p">:</span> <span class="s2">&quot;Nilsson&quot;</span><span class="p">,</span>
+                     <span class="s2">&quot;Title&quot;</span><span class="p">:</span> <span class="s2">&quot;Without You&quot;</span><span class="p">,</span>
+                     <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Sam&quot;</span>
+                 <span class="p">}]</span>
+
+        <span class="n">result</span> <span class="o">=</span> <span class="n">cd</span><span class="o">.</span><span class="n">insert_many</span><span class="p">(</span><span class="n">cd_ip</span><span class="p">)</span>
+
+        <span class="n">print_mdb_collection</span><span class="p">(</span><span class="n">cd</span><span class="p">)</span>
+
+        <span class="c1"># another collection</span>
+        <span class="n">collector</span> <span class="o">=</span> <span class="n">db</span><span class="p">[</span><span class="s2">&quot;collector&quot;</span><span class="p">]</span>
+
+        <span class="n">collector_ip</span> <span class="o">=</span> <span class="p">[{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Andy&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;preference&quot;</span><span class="p">:</span> <span class="s2">&quot;Rock&quot;</span>
+        <span class="p">},</span> <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Sam&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;preference&quot;</span><span class="p">:</span> <span class="s2">&quot;Pop&quot;</span>
+        <span class="p">}]</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">collector</span><span class="o">.</span><span class="n">insert_many</span><span class="p">(</span><span class="n">collector_ip</span><span class="p">)</span>
+
+        <span class="n">print_mdb_collection</span><span class="p">(</span><span class="n">collector</span><span class="p">)</span>
+
+        <span class="c1"># related data</span>
+        <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">collector</span><span class="o">.</span><span class="n">find</span><span class="p">():</span>
+            <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;List for {name[&quot;name&quot;]}&#39;</span><span class="p">)</span>
+            <span class="n">query</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">name</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]}</span>
+            <span class="k">for</span> <span class="n">a_cd</span> <span class="ow">in</span> <span class="n">cd</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">query</span><span class="p">):</span>
+                <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;{name[&quot;name&quot;]} has collected {a_cd}&#39;</span><span class="p">)</span>
+
+        <span class="c1"># start afresh next time?</span>
+        <span class="n">yorn</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Drop data?&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">yorn</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;Y&#39;</span><span class="p">:</span>
+            <span class="n">cd</span><span class="o">.</span><span class="n">drop</span><span class="p">()</span>
+            <span class="n">collector</span><span class="o">.</span><span class="n">drop</span><span class="p">()</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="admonition-todo admonition" id="index-0">
+<p class="first admonition-title">Todo</p>
+<p class="last">Add git links for mongo code</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="content_part6.html" class="btn btn-neutral float-right" title="Part 6: More about mongodb" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="content_part4.html" class="btn btn-neutral" title="Part 4: MongoDB Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, University of Washington, Christopher Barker, Luis Diego Conejo, Andy Miles, Rick Riehle, Joseph Schilz. Creative Commons Attribution-ShareAlike 3.0 license
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

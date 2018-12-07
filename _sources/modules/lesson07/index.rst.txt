@@ -7,7 +7,15 @@ Lesson 7 : Currency and async
 
     prerequisites
     introduction
-    concurrency
+    concurrency_part1
+    concurrency_part2
+    concurrency_part3
+    ThreadingMultiprocessing_part1
+    ThreadingMultiprocessing_part2
+    ThreadingMultiprocessing_part3
+    ThreadingMultiprocessing_part4
+    ThreadingMultiprocessing_part5
+    ThreadingMultiprocessing_part6
     async
     activity
     assignment

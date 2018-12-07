@@ -1,0 +1,293 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Part 4: MongoDB Installation &mdash; PythonCert220 2.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Part 5: Python code" href="content_part5.html" />
+    <link rel="prev" title="Part 3: Python, MongoDB and the API" href="content_part3.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PythonCert220
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Lesson content</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#py220-advanced-python-programming">Py220: Advanced Python Programming</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../lesson00/index.html">Welcome!</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson01/index.html">Lesson 1 : Automated Testing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson02/index.html">Lesson 2 : Logging &amp; Debuging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson03/index.html">Lesson 3 : Relational databases</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson04/index.html">Lesson 4: Iteration</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Lesson 5 : Consuming APIs with NoSQL</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="prerequisites.html">Lesson 5 : Prerequisites</a></li>
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">Lesson 05 Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="content_part1.html">Part 1: APIs and MongoDB background</a></li>
+<li class="toctree-l4"><a class="reference internal" href="content_part2.html">Part 2: NOSQL Databases: Tradeoffs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="content_part3.html">Part 3: Python, MongoDB and the API</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Part 4: MongoDB Installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="content_part5.html">Part 5: Python code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="content_part6.html">Part 6: More about mongodb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="extras.html">Lesson 05 Extras</a></li>
+<li class="toctree-l4"><a class="reference internal" href="assignment.html">Lesson 5 : Assignment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="office_hours_recaps.html">Office Hours : Recaps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="office_hours_all.html">Office Hours : This weeks’ content</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson06/index.html">Lesson 6 : Profiling and performance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson07/index.html">Lesson 7 : Currency and async</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson08/index.html">Lesson 8 : Functional Techniques</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson09/index.html">Lesson 9 : Advanced Python language constructs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson10/index.html">Lesson 10 : Metaprogramming</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">External links</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PythonCert220</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Lesson content</a> &raquo;</li>
+        
+          <li><a href="index.html">Lesson 5 : Consuming APIs with NoSQL</a> &raquo;</li>
+        
+      <li>Part 4: MongoDB Installation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/modules/lesson05/content_part4.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="part-4-mongodb-installation">
+<h1>Part 4: MongoDB Installation<a class="headerlink" href="#part-4-mongodb-installation" title="Permalink to this headline">¶</a></h1>
+<p>Here are the steps referred to in the video that will help you to Install
+MongodDB on your development computer.</p>
+<blockquote>
+<div>Note: If you already have access to a MongoDB instance then feel free to use it.
+You will need to know the connection details though, such as IP address, Port and user /
+password.</div></blockquote>
+<p>1. First you will need to download MongoDB for your operating system.
+For Mac OSX go to <a class="reference external" href="https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/?_ga=2.22696635.1439444876.1541175909-1381738278.1540687301">https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/?_ga=2.22696635.1439444876.1541175909-1381738278.1540687301</a>
+For Windows go to <a class="reference external" href="https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/">https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/</a>
+For Linux be sure to select the correct distro when yo go to <a class="reference external" href="https://docs.mongodb.com/manual/administration/install-on-linux/">https://docs.mongodb.com/manual/administration/install-on-linux/</a></p>
+<ol class="arabic simple" start="2">
+<li>Follow the instructions at the url you have visited.</li>
+</ol>
+<div class="section" id="mongodb-vs-rdbms-terminology">
+<h2>Mongodb vs. RDBMS terminology<a class="headerlink" href="#mongodb-vs-rdbms-terminology" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="45%" />
+<col width="55%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>MongoDB</td>
+<td>RDBMS</td>
+</tr>
+<tr class="row-even"><td>Database
+Table
+Row
+Column
+Index</td>
+<td>Database
+Collection
+Document
+Field
+Index</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="mongodb-technical-information">
+<h2>MongoDB Technical information<a class="headerlink" href="#mongodb-technical-information" title="Permalink to this headline">¶</a></h2>
+<p>Here’s some links for you to consult and read to understand JSON and BSON:
+- <a class="reference external" href="https://www.json.org/">https://www.json.org/</a>
+- <a class="reference external" href="http://bsonspec.org/">http://bsonspec.org/</a></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="content_part5.html" class="btn btn-neutral float-right" title="Part 5: Python code" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="content_part3.html" class="btn btn-neutral" title="Part 3: Python, MongoDB and the API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, University of Washington, Christopher Barker, Luis Diego Conejo, Andy Miles, Rick Riehle, Joseph Schilz. Creative Commons Attribution-ShareAlike 3.0 license
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

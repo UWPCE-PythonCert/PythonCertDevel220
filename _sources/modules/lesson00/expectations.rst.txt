@@ -9,11 +9,10 @@ For classroom the usual 80% attendance is required. Contact your instructor as
 soon as possible if you have any special circumstances.
 
 For all class delivery methods you will need to achieve a pass rate of 80%
-for the class assignments and quizzes. See the grading rubric at ...
-for more details.
+for the class assignments and quizzes. See the grading rubric for more details.
 
-.. todo::
-   Add link to grading rubric from Expectations (Andy).
+.. _grading-rubric:
+    grading
 
 Also, there are usually ungraded activities for the lessons. This is work
 that you can do to help you really understand and apply the concepts. Although

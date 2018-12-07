@@ -1,0 +1,320 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Concurrency Part 2: Other alternatives &mdash; PythonCert220 2.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Concurrency Part 3: GIL" href="concurrency_part3.html" />
+    <link rel="prev" title="Concurrency Part 1: Concurrent Programming" href="concurrency_part1.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PythonCert220
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Lesson content</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#py220-advanced-python-programming">Py220: Advanced Python Programming</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../lesson00/index.html">Welcome!</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson01/index.html">Lesson 1 : Automated Testing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson02/index.html">Lesson 2 : Logging &amp; Debuging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson03/index.html">Lesson 3 : Relational databases</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson04/index.html">Lesson 4: Iteration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson05/index.html">Lesson 5 : Consuming APIs with NoSQL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson06/index.html">Lesson 6 : Profiling and performance</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Lesson 7 : Currency and async</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="prerequisites.html">Lesson 7: Concurrency and Async</a></li>
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">Lesson 7 Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="concurrency_part1.html">Concurrency Part 1: Concurrent Programming</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Concurrency Part 2: Other alternatives</a></li>
+<li class="toctree-l4"><a class="reference internal" href="concurrency_part3.html">Concurrency Part 3: GIL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ThreadingMultiprocessing_part1.html">Threading and multiprocessing Part 1: How to</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ThreadingMultiprocessing_part2.html">Threading and multiprocessing Part 2: The threading module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ThreadingMultiprocessing_part3.html">Threading and multiprocessing Part 3: Locking Exercise</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ThreadingMultiprocessing_part4.html">Threading and multiprocessing Part 4: Managing thread results</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ThreadingMultiprocessing_part5.html">Threading and multiprocessing Part 5: Multiprocessing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ThreadingMultiprocessing_part6.html">Threading and multiprocessing Part 6: Pooling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="async.html">Lesson 7.2 Async</a></li>
+<li class="toctree-l4"><a class="reference internal" href="activity.html">Lesson 7 Activity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="assignment.html">Lesson 7 : Assignment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="office_hours_recaps.html">Office Hours : Recaps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="office_hours_all.html">Office Hours : This weeks’ content</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson08/index.html">Lesson 8 : Functional Techniques</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson09/index.html">Lesson 9 : Advanced Python language constructs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson10/index.html">Lesson 10 : Metaprogramming</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/index.html">External links</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PythonCert220</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Lesson content</a> &raquo;</li>
+        
+          <li><a href="index.html">Lesson 7 : Currency and async</a> &raquo;</li>
+        
+      <li>Concurrency Part 2: Other alternatives</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/modules/lesson07/concurrency_part2.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="concurrency-part-2-other-alternatives">
+<h1>Concurrency Part 2: Other alternatives<a class="headerlink" href="#concurrency-part-2-other-alternatives" title="Permalink to this headline">¶</a></h1>
+<p>Traditionally, concurency has been achieved through multiple process
+communication and in-process threads, as we’ve seen.</p>
+<p>Another strategy is through micro-threads, implemented via coroutines
+and a scheduler.</p>
+<p>A coroutine is a generalization of a subroutine which allows multiple
+entry points for suspending and resuming execution.</p>
+<p>The threading and the multiprocessing modules follow a
+<a class="reference external" href="http://en.wikipedia.org/wiki/Preemption_(computing)">preemptive multitasking model</a></p>
+<p>Coroutine based solutions follow a
+<a class="reference external" href="http://en.wikipedia.org/wiki/Computer_multitasking#Cooperative_multitasking.2Ftime-sharing">cooperative multitasking model:</a></p>
+<div class="section" id="threads-versus-processes-in-python">
+<h2>Threads versus processes in Python<a class="headerlink" href="#threads-versus-processes-in-python" title="Permalink to this headline">¶</a></h2>
+<p>Threads are lightweight <a class="reference external" href="https://en.wikipedia.org/wiki/Light-weight_process">processes</a>, run in the address space of an OS
+process, true OS level threads.</p>
+<p>Therefore, a component of a process.</p>
+<p>This allows multiple threads access to data in the same scope.</p>
+<p>Threads can not gain the performance advantage of multiple processors
+due to the Global Interpreter Lock (GIL).</p>
+<p>But the GIL is released during IO, allowing IO bound processes to
+benefit from threading.</p>
+</div>
+<div class="section" id="id1">
+<h2>Processes<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>A process contains all the instructions and data required to execute
+independently, so processes do not share data!</p>
+<p>Mulitple processes are best to speed up CPU bound operations.</p>
+<p>The Python interpreter isn’t lightweight!</p>
+<p>Communication between processes can be achieved via:</p>
+<p><code class="docutils literal notranslate"><span class="pre">multiprocessing.Queue</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">multiprocessing.Pipe</span></code></p>
+<p>and regular IPC (inter-process communication)</p>
+<p>Data moved between processes must be pickleable (it can be serialized).</p>
+</div>
+<div class="section" id="advantages-disadvantages-of-threads">
+<h2>Advantages / Disadvantages of Threads<a class="headerlink" href="#advantages-disadvantages-of-threads" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="advantages">
+<h3>Advantages:<a class="headerlink" href="#advantages" title="Permalink to this headline">¶</a></h3>
+<p>They share memory space:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Threads are relatively lightweight – shared memory means they can be created fairly quickly without much memory use.</li>
+<li>Easy and cheap to pass data around (you are only passing a reference).</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="disadvantages">
+<h3>Disadvantages:<a class="headerlink" href="#disadvantages" title="Permalink to this headline">¶</a></h3>
+<p>They share memory space:</p>
+<blockquote>
+<div><ul>
+<li><p class="first">Each thread is working with the <em>same</em> python objects.</p>
+</li>
+<li><p class="first">Operations often take several steps and may be interrupted mid-stream</p>
+</li>
+<li><p class="first">Thus, access to shared data is also non-deterministic</p>
+<p>(race conditions)</p>
+</li>
+</ul>
+</div></blockquote>
+<p>Creating threads is easy, but programming with threads is difficult.</p>
+<blockquote>
+<div><p>Q: Why did the multithreaded chicken cross the road?</p>
+<p>A: to To other side. get the</p>
+<p class="attribution">&mdash;Jason Whittington</p>
+</div></blockquote>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="concurrency_part3.html" class="btn btn-neutral float-right" title="Concurrency Part 3: GIL" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="concurrency_part1.html" class="btn btn-neutral" title="Concurrency Part 1: Concurrent Programming" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, University of Washington, Christopher Barker, Luis Diego Conejo, Andy Miles, Rick Riehle, Joseph Schilz. Creative Commons Attribution-ShareAlike 3.0 license
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

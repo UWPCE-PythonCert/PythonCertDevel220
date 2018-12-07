@@ -28,7 +28,7 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Lesson 05 Content" href="content.html" />
+    <link rel="next" title="Part 1: APIs and MongoDB background" href="content_part1.html" />
     <link rel="prev" title="Lesson 5 : Prerequisites" href="prerequisites.html" /> 
 
   
@@ -85,15 +85,20 @@
               <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Lesson content</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html#py220-advanced-python-programming">Py220: Advanced Python Programming</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="../lesson00/index.html">Lesson 0 : Welcome!</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson00/index.html">Welcome!</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../lesson01/index.html">Lesson 1 : Automated Testing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../lesson02/index.html">Lesson 2 : Logging &amp; Debuging</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../lesson03/index.html">Lesson 3 : Relational databases</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../lesson04/index.html">Lesson 4 : Iteration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson04/index.html">Lesson 4: Iteration</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="index.html">Lesson 5 : Consuming APIs with NoSQL</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="prerequisites.html">Lesson 5 : Prerequisites</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">Lesson 05 Introduction</a></li>
-<li class="toctree-l4"><a class="reference internal" href="content.html">Lesson 05 Content</a></li>
+<li class="toctree-l4"><a class="reference internal" href="content_part1.html">Part 1: APIs and MongoDB background</a></li>
+<li class="toctree-l4"><a class="reference internal" href="content_part2.html">Part 2: NOSQL Databases: Tradeoffs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="content_part3.html">Part 3: Python, MongoDB and the API</a></li>
+<li class="toctree-l4"><a class="reference internal" href="content_part4.html">Part 4: MongoDB Installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="content_part5.html">Part 5: Python code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="content_part6.html">Part 6: More about mongodb</a></li>
 <li class="toctree-l4"><a class="reference internal" href="extras.html">Lesson 05 Extras</a></li>
 <li class="toctree-l4"><a class="reference internal" href="assignment.html">Lesson 5 : Assignment</a></li>
 <li class="toctree-l4"><a class="reference internal" href="office_hours_recaps.html">Office Hours : Recaps</a></li>
@@ -244,15 +249,11 @@ We are going to start to learn about APIs by working with MongoDB, a NoSQL datab
 </div>
 <div class="section" id="required-reading">
 <h2>Required Reading<a class="headerlink" href="#required-reading" title="Permalink to this headline">¶</a></h2>
-<div class="admonition-todo admonition" id="index-1">
-<p class="first admonition-title">Todo</p>
-<p class="last">Verify all required and optional reading links for lesson 5 mongo API (Andy)</p>
-</div>
 <ul class="simple">
+<li><a class="reference external" href="https://realpython.com/blog/python/introduction-to-mongodb-and-python/">Mongodb</a></li>
 <li><a class="reference external" href="https://www.fullstackpython.com/no-sql-datastore.html">Background</a>
 on databases</li>
-<li><a class="reference external" href="https://realpython.com/blog/python/introduction-to-mongodb-and-python/">Mongodb</a></li>
-<li><a class="reference external" href="http://wiki.python.org/moin/PersistenceTools">http://wiki.python.org/moin/PersistenceTools</a></li>
+<li></li>
 </ul>
 </div>
 <div class="section" id="optional-reading">
@@ -264,9 +265,9 @@ on databases</li>
 databases and database characteristics</li>
 <li><a class="reference external" href="https://docs.python.org/3/library/persistence.html">Simple</a>
 persistence.</li>
-<li><a class="reference external" href="https://realpython.com/introduction-to-mongodb-and-python/">https://realpython.com/introduction-to-mongodb-and-python/</a></li>
 <li><a class="reference external" href="https://www.bogotobogo.com/python/MongoDB_PyMongo/python_MongoDB_pyMongo_tutorial_installing.php">https://www.bogotobogo.com/python/MongoDB_PyMongo/python_MongoDB_pyMongo_tutorial_installing.php</a></li>
 <li><a class="reference external" href="https://gearheart.io/blog/how-do-you-use-mongodb-with-python/">https://gearheart.io/blog/how-do-you-use-mongodb-with-python/</a></li>
+<li><a class="reference external" href="http://wiki.python.org/moin/PersistenceTools">http://wiki.python.org/moin/PersistenceTools</a></li>
 </ul>
 </div>
 </div>
@@ -279,7 +280,7 @@ persistence.</li>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="content.html" class="btn btn-neutral float-right" title="Lesson 05 Content" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="content_part1.html" class="btn btn-neutral float-right" title="Part 1: APIs and MongoDB background" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="prerequisites.html" class="btn btn-neutral" title="Lesson 5 : Prerequisites" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

@@ -52,3 +52,7 @@ Either gring your work to class or office hours, or show your instructor.
 
 Of course, your answer will be more insightful and your debugging log
 will be longer.
+
+
+Prepare the results, and prepare to demo them!
+

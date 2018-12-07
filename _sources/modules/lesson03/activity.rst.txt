@@ -56,3 +56,5 @@ you will incorporate Department into the programs.
 Finally, produce a list using pretty print that shows all of the
 departments a person worked in for every job they ever had. 
 
+
+Prepare the results, and prepare to demo them!
