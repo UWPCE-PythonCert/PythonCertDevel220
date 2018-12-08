@@ -14,6 +14,7 @@ This site can be thought of as the textbook for the first second class in the UW
 
     modules/index
     references/index
+    quiz/index
 
 
 Example Code
