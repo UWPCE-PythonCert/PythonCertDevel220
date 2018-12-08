@@ -1,24 +1,28 @@
-=======================
-Python 220 Week 05 Quiz
-=======================
+##############
+Lesson 05 Quiz
+##############
 
-#. Nosql databases are replacing relational databases. Use a nosql database
-   whenever you can
-
+#. A major strength of MongodDB is the way it can model complex
+relationships between data
 True
 False
 
-#. There are circumstances where nosql databases are appropriate but their use
-   must always be objectively considered.
-Yes we should do that.
-If in doubt, use mongodb
-nosql databases are suitable for testing only
+#. MongoDB uses which of the following formats for data:
+csv files
+JSON
+BSON
+Tabular structured data
 
+#. When interacting with MongoDB from Python a useful module to install is:
+nosql
+pymongo
+pandas
+sqllib
 
 #. Mongodb has poor support for querying
-False; mongodb offers flexible querying
-It's ok a long as you know they key.
+False
 True
 
-.. todo::
-    Review and add some more API/mongo questions to quiz (Andy)
+#. MongoDB  is particularly strong when used for distributed databases:
+False
+True

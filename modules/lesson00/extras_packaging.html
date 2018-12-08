@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Lesson 1 : Automated Testing &mdash; PythonCert220 2.0 documentation</title>
+  <title>Packaging &mdash; PythonCert220 2.0 documentation</title>
   
 
   
@@ -28,8 +28,8 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Prerequisites" href="prerequisites.html" />
-    <link rel="prev" title="Packaging" href="../lesson00/extras_packaging.html" /> 
+    <link rel="next" title="Lesson 1 : Automated Testing" href="../lesson01/index.html" />
+    <link rel="prev" title="Functional Programming" href="extras_fp.html" /> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -85,27 +85,19 @@
               <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Lesson content</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html#py220-advanced-python-programming">Py220: Advanced Python Programming</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="../lesson00/index.html">Welcome!</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Lesson 1 : Automated Testing</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="prerequisites.html">Prerequisites</a></li>
-<li class="toctree-l4"><a class="reference internal" href="introduction.html">Introduction</a></li>
-<li class="toctree-l4"><a class="reference internal" href="content_part01.html">Part 1: Introduction</a></li>
-<li class="toctree-l4"><a class="reference internal" href="content_part02.html">Part 2: Why test?</a></li>
-<li class="toctree-l4"><a class="reference internal" href="content_part03.html">Part 3: Automated Test Script</a></li>
-<li class="toctree-l4"><a class="reference internal" href="content_part04.html">Part 4: Running the script</a></li>
-<li class="toctree-l4"><a class="reference internal" href="content_part05.html">Part 5: Using Unittest</a></li>
-<li class="toctree-l4"><a class="reference internal" href="content_part06.html">Part 6: Developing the test further</a></li>
-<li class="toctree-l4"><a class="reference internal" href="content_part07.html">Part 7: A more complex example</a></li>
-<li class="toctree-l4"><a class="reference internal" href="content_part08.html">Part 8: Unit testing Adder and Subtracter</a></li>
-<li class="toctree-l4"><a class="reference internal" href="content_part09.html">Part 9: Integration Testing</a></li>
-<li class="toctree-l4"><a class="reference internal" href="content_part10.html">Part 10: Linting and coverage</a></li>
-<li class="toctree-l4"><a class="reference internal" href="content_part11.html">Part 11: Test Driven Development</a></li>
-<li class="toctree-l4"><a class="reference internal" href="activity.html">Activity</a></li>
-<li class="toctree-l4"><a class="reference internal" href="assignment.html">Assignment</a></li>
-<li class="toctree-l4"><a class="reference internal" href="office_hours_recaps.html">Office Hours : Recaps</a></li>
-<li class="toctree-l4"><a class="reference internal" href="office_hours_all.html">Office Hours : This weeks’ content</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Welcome!</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="office_hours.html">Office Hours Pre Class</a></li>
+<li class="toctree-l4"><a class="reference internal" href="principles.html">Class Principles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="expectations.html">Expectations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="case_study.html">Case Study : H.P. Norton Furniture Rentals LLC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="grading.html">Grading</a></li>
+<li class="toctree-l4"><a class="reference internal" href="extras_oo.html">Object Oriented Concepts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="extras_git.html">Easy guide to using git</a></li>
+<li class="toctree-l4"><a class="reference internal" href="extras_fp.html">Functional Programming</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Packaging</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson01/index.html">Lesson 1 : Automated Testing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../lesson02/index.html">Lesson 2 : Logging &amp; Debuging</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../lesson03/index.html">Lesson 3 : Relational databases</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../lesson04/index.html">Lesson 4 : Iteration</a></li>
@@ -167,13 +159,15 @@
         
           <li><a href="../index.html">Lesson content</a> &raquo;</li>
         
-      <li>Lesson 1 : Automated Testing</li>
+          <li><a href="index.html">Welcome!</a> &raquo;</li>
+        
+      <li>Packaging</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/modules/lesson01/index.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/modules/lesson00/extras_packaging.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -186,29 +180,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="lesson-1-automated-testing">
-<h1>Lesson 1 : Automated Testing<a class="headerlink" href="#lesson-1-automated-testing" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="prerequisites.html">Prerequisites</a></li>
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="content_part01.html">Part 1: Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="content_part02.html">Part 2: Why test?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="content_part03.html">Part 3: Automated Test Script</a></li>
-<li class="toctree-l1"><a class="reference internal" href="content_part04.html">Part 4: Running the script</a></li>
-<li class="toctree-l1"><a class="reference internal" href="content_part05.html">Part 5: Using Unittest</a></li>
-<li class="toctree-l1"><a class="reference internal" href="content_part06.html">Part 6: Developing the test further</a></li>
-<li class="toctree-l1"><a class="reference internal" href="content_part07.html">Part 7: A more complex example</a></li>
-<li class="toctree-l1"><a class="reference internal" href="content_part08.html">Part 8: Unit testing Adder and Subtracter</a></li>
-<li class="toctree-l1"><a class="reference internal" href="content_part09.html">Part 9: Integration Testing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="content_part10.html">Part 10: Linting and coverage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="content_part11.html">Part 11: Test Driven Development</a></li>
-<li class="toctree-l1"><a class="reference internal" href="activity.html">Activity</a></li>
-<li class="toctree-l1"><a class="reference internal" href="assignment.html">Assignment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="office_hours_recaps.html">Office Hours : Recaps</a></li>
-<li class="toctree-l1"><a class="reference internal" href="office_hours_all.html">Office Hours : This weeks’ content</a></li>
-</ul>
-</div>
+  <div class="section" id="packaging">
+<h1>Packaging<a class="headerlink" href="#packaging" title="Permalink to this headline">¶</a></h1>
+<p>Coming soon…</p>
 </div>
 
 
@@ -219,10 +193,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="prerequisites.html" class="btn btn-neutral float-right" title="Prerequisites" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../lesson01/index.html" class="btn btn-neutral float-right" title="Lesson 1 : Automated Testing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../lesson00/extras_packaging.html" class="btn btn-neutral" title="Packaging" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="extras_fp.html" class="btn btn-neutral" title="Functional Programming" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

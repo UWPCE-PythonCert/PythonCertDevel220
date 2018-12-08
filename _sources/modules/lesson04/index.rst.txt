@@ -1,5 +1,5 @@
 ###################
-Lesson 4: Iteration
+Lesson 4 : Iteration
 ###################
 
 .. toctree::

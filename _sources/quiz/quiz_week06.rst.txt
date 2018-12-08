@@ -1,17 +1,18 @@
-=======================
-Python 220 Week 06 Quiz
-=======================
+##############
+Lesson 06 Quiz
+##############
 
 
 #. The best way to improve the performance of your system is to:
-profile your code first!
-jump right in and start making any changes that feel good!
+Conduct experiments by making changes (being sure to commit code for every change)
+Consult an expert who knows about performance
+Use an evidence based approach by profiling the code first
+Jump right in and start making any changes that feel right
 
-#. Guido van Rossum, Python’s creator, seems upset and worried the
-   existence of alternate implementations of the language such as PyPy
+#. In general, the Python community does not support having to use multiple versions
+of Python with different runtime performance charteristics. 
 True
 False
-“If you want your code to run faster, you should probably just use PyPy.” — Guido van Rossum
 
 #. In order to use PyPy you need to know C.
 True
@@ -28,6 +29,3 @@ Yeah, okay, it really helps.
 False
 Understanding how the different constructs work, their performance and memory
 profiles, can make a large difference in the construction of your programs.
-
-.. todo::
-    Review Lesson 6 quiz questions (Andy)

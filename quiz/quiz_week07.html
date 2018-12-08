@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Python 220 Week 07 Quiz &mdash; PythonCert220 2.0 documentation</title>
+  <title>Lesson 07 Quiz &mdash; PythonCert220 2.0 documentation</title>
   
 
   
@@ -128,7 +128,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>Python 220 Week 07 Quiz</li>
+      <li>Lesson 07 Quiz</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -147,46 +147,30 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="python-220-week-07-quiz">
-<h1>Python 220 Week 07 Quiz<a class="headerlink" href="#python-220-week-07-quiz" title="Permalink to this headline">¶</a></h1>
-<p>You have a lot of independent computations for perform – CPU heavy. Which
+  <div class="section" id="lesson-07-quiz">
+<h1>Lesson 07 Quiz<a class="headerlink" href="#lesson-07-quiz" title="Permalink to this headline">¶</a></h1>
+<p>You have a lot of independent computations for perform - CPU heavy. Which
 to use?</p>
 <p>multithreading
 multiprocessing
-async
-Not a good idea – the GIL will keep parallel computation from working.
-yup – no GIL, so true parallelism.
-doesn’t help here – async only uses one thread.</p>
+async</p>
 <p>#. You have a web service using web sockets. Each request is small and fast,
-but you may have lots of clients connected at once. Which to use?</p>
-<p>multithreading
+but you may have lots of clients connected at once. Which to use?
+multithreading
 multiprocessing
-async
-With a lot of connected clients, you may have too many threads at once.
-If each request is small and fast, no need for multiprocessing.
-Yes – with async you can have may open sockets at once. most of them will be waiting for a response most of the time. each individual request is fast, so no blocking issues.</p>
+async</p>
 <ol class="arabic simple">
 <li>You are a traditional web server: plain old http. each request could
 require a fair bit of database lookups, etc. But only a few clients
-requesting pages at any given moment.</li>
+requesting pages at any given moment.
+Which to use?</li>
 </ol>
-<p>Which to use?</p>
 <p>multithreading
 multiprocessing
-async
-Yes – if each request is spending its time in database lookups, then other
-threads can run – no GIL issues. And each request is independent –
-even if you have a lot of clients connected at one time, there will still
-only be a moderate number of threads running at once.&amp;lt;/The database is
-probably in another process already – no need for each request to have its
-own process.
-Not real help from async here – each request is independent – not a lot of
-connections kept open at once.</p>
-<p>The GIL means that Python can’t do “real” threading.
+async</p>
+<p>#. The GIL means that Python can’t do “real” threading.
 True
-Python threads are “real” OS threads – and they work fine if the task is
-not spending all its time with the CPU – waiting for IO, etc. Or if the CPU
-intensive part releases the GIL (e.g. numpy and C extensions)</p>
+False</p>
 </div>
 
 

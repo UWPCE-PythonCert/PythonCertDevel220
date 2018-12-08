@@ -1,8 +1,6 @@
-=======================
-Python 220 Week 09 Quiz
-=======================
-
-
+##############
+Lesson 09 Quiz
+##############
 
 #. Decorators rely on Python's ability to what?
 Pass functions to other functions

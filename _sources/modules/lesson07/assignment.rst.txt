@@ -23,7 +23,7 @@ You should address the following general requirements:
 
 Here is what you need to do:
 ============================
-#. Demonstrate with real data the time taken to run your existing customer and 
+#. Demonstrate with real profile data the time taken to run your existing customer and 
    product add / update logic.
 #. Amend the add and update logic for both customers and products so that 
    it can process these in parallel. Your module should launch the updates to 
