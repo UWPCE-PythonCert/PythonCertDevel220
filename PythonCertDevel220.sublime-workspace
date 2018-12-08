@@ -5,17 +5,6 @@
 		[
 		]
 	},
-	"buffers":
-	[
-		{
-			"file": "source/modules/lesson00/principles.rst",
-			"settings":
-			{
-				"buffer_size": 1049,
-				"line_ending": "Unix"
-			}
-		}
-	],
 	"build_system": "",
 	"build_system_choices":
 	[
@@ -74,19 +63,9 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
-	"expanded_folders":
-	[
-		"/Users/andy/projects/uw/PythonCertDevel220",
-		"/Users/andy/projects/uw/PythonCertDevel220/source",
-		"/Users/andy/projects/uw/PythonCertDevel220/source/examples",
-		"/Users/andy/projects/uw/PythonCertDevel220/source/modules",
-		"/Users/andy/projects/uw/PythonCertDevel220/source/modules/lesson00",
-		"/Users/andy/projects/uw/PythonCertDevel220/source/modules/lesson07",
-		"/Users/andy/projects/uw/PythonCertDevel220/source/modules/lesson08",
-		"/Users/andy/projects/uw/PythonCertDevel220/source/modules/lesson09"
-	],
 	"file_history":
 	[
+		"/Users/andy/projects/uw/PythonCertDevel220/source/modules/lesson04/index.rst",
 		"/Users/andy/projects/uw/PythonCertDevel220/source/modules/lesson02/assignment.rst",
 		"/Users/andy/projects/uw/PythonCertDevel220/source/modules/lesson03/assignment.rst",
 		"/Users/andy/projects/uw/PythonCertDevel220/source/modules/lesson02/code/charges_calc.py",
@@ -149,44 +128,6 @@
 		"whole_word": false,
 		"wrap": true
 	},
-	"groups":
-	[
-		{
-			"selected": 0,
-			"sheets":
-			[
-				{
-					"buffer": 0,
-					"file": "source/modules/lesson00/principles.rst",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 1049,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								162,
-								162
-							]
-						],
-						"settings":
-						{
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/RestructuredText Improved/reStructuredText Improved.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
-			]
-		}
-	],
 	"incremental_find":
 	{
 		"height": 26.0
@@ -235,7 +176,6 @@
 		"height": 0.0
 	},
 	"pinned_build_system": "Packages/Bash Build System/Bash.sublime-build",
-	"project": "PythonCertDevel220.sublime-project",
 	"replace":
 	{
 		"height": 48.0
@@ -268,7 +208,6 @@
 		],
 		"width": 575.0
 	},
-	"selected_group": 0,
 	"settings":
 	{
 	},

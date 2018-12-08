@@ -19,6 +19,7 @@ Py220: Advanced Python Programming
     lesson08/index
     lesson09/index
     lesson10/index
+    quiz/index
 
 .. todo::
     #. Convert all code to rst tags (Andy - low priority)

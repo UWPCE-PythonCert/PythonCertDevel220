@@ -2,7 +2,7 @@
 Quizzes
 =======
 Included here for record keeing and versioned review, but will be
-tranferred to Canvas / edx. Answers included.
+tranferred to Canvas / edx. Correct answers not included.
 
 .. toctree::
     :maxdepth: 1

@@ -12,7 +12,7 @@ investigations have have not been able to identify a root cause. But the
 database is suspected to be a culprit (akthough whether it is customers or
 products is not clear.
 
-In order to diagnose the issues the HP Norton developer want to easily ass
+In order to diagnose the issues the HP Norton developer want to easily as
 some logging and timing infomration to record what the system is actually
 doing and to help identify the bottlnecks. And metaprogramming seems to be a
 good way to unobtrusively add this functionality to the existing applcation.

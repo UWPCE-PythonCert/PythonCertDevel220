@@ -39,7 +39,7 @@ Testing
 -------
 In order for your code to be evaluated, you need to create a file called *database.py* with the following functions:
 
-- *import_data(product_file, customer_file, rentals_file)*: This function takes a three csv files as input, one with product data, one with customer data and the third one with rentals data and creates and populates a new MongoDB database with the these data. It returns 2 tuples: the first with a record count of the number of
+- *import_data(directory_name, product_file, customer_file, rentals_file)*: This function takes a directory name three csv files as input, one with product data, one with customer data and the third one with rentals data and creates and populates a new MongoDB database with the these data. It returns 2 tuples: the first with a record count of the number of
 products, customers and rentals added (in that order), the second with a count of any errors that occured, in
 the same order. 
 

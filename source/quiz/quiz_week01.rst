@@ -1,6 +1,18 @@
-=======================
-Python 220 Week 01 Quiz
-=======================
+##############
+Lesson 01 Quiz
+##############
+
+#. The primary purpose of test driven development is to:
+Avoid having to use testers when building systems
+Ensure that no bugs make it to production
+Define the expected behavior of code, and express that behavior
+in a software script
+Reduce development costs
+
+#. Automated tests are most effective when built:
+After software is complete
+While software is being built
+Prior to building any software
 
 #. Provide the steps (in order) of Test Driven Development (TDD). There may 
 or may not be a fifth step to TDD. If there is not, then select "There is no
@@ -49,6 +61,7 @@ There is no fifth step.
 
 
 #. Match each tool or concept with its purpose, use, or goal.
+linting
 Define a code style and automatically identify style violations.
 Write code with no fixed dependencies.
 Test a single region of code by providing dummies for any required classes

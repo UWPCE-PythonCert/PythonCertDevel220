@@ -1,6 +1,6 @@
-=======================
-Python 220 Week 03 Quiz
-=======================
+##############
+Lesson 03 Quiz
+##############
 
 #. Although in common use today, the relational database has had its day,
 and we should look for better alternatives. 
@@ -16,7 +16,8 @@ Yes because it is too difficult to identify a non-generated key
 Yes for all three reasons above.
 
 
-#. Writing Python programs that use relational databases with SQL is difficult.
+#. Writing Python programs that use relational databases with SQL is too difficult
+to be practical.
 No, as long as we use mapping modules that help to keep things Pythonic.
 Yes because Python and SQL don’t work together well.
 No because SQL is the standard way to access data and we must learn it.
@@ -28,6 +29,6 @@ Layouts
 Python modules
 
 #. When using Peewee, we define the data we want to store in a database using:
-json
+JSON
 A model
 Peewee defines the data for us
