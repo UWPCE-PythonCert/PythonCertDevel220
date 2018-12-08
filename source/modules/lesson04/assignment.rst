@@ -34,8 +34,9 @@ So here is our refactoring assignment:
 #. Add code to log all database data changes (adds, amends, deletes).
 
 Be sure to consult the lesson 3 assignment for details of the functionality.
-The set of data you will use is much larger than in lesson 3; be sure to use
-the file included with this lesson.
+
+.. todo::
+    copy lesson 3 tests and fake assignment into lesson 4 when l3 tested and final
 
 Other requirements:
 -------------------

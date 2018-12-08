@@ -13,8 +13,8 @@ be stored.
 
 You implementation should address the following requirements:
 
-#.  As a HP Norton *customer* I want to see a list of all products available for
-    rent so that I can make a rental choice.
+#. As a HP Norton *customer* I want to see a list of all products available for
+   rent so that I can make a rental choice.
 #. As a HP Norton *salesperson* I want to see a list of all of the different
    products, showing product ID, description, product type and quantity available.
 #. As a HP Norton salesperson I want to see a list of the names and contact
@@ -39,7 +39,13 @@ Testing
 -------
 In order for your code to be evaluated, you need to create a file called *database.py* with the following functions:
 
-- *import_data(product_file, customer_file, rentals_file)*: This function takes a three csv files as input, one with product data, one with customer data and the third one with rentals data and creates and populates a new MongoDB database with the these data.
+- *import_data(product_file, customer_file, rentals_file)*: This function takes a three csv files as input, one with product data, one with customer data and the third one with rentals data and creates and populates a new MongoDB database with the these data. It returns 2 tuples: the first with a record count of the number of
+products, customers and rentals added (in that order), the second with a count of any errors that occured, in
+the same order. 
+
+.. todo::
+    create product, customer, rental files for l5 Assignment
+
 - *show_available_products()*: Returns a Python dictionary of products listed as *available* with the following fields:
     - product_id.
     - description.

@@ -1,9 +1,6 @@
-===============
-Lesson 0 Extras
-===============
-
+########################
 Object Oriented Concepts
-========================
+########################
 
 Object orientation is a popular programming model that focuses on
 development of classes. Classes contain the logic and data of the

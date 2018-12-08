@@ -2,7 +2,7 @@
 Assignment
 ##########
 
-Welcome to the Norton Project! The first thing our development team is trying to accomplish is to improve some of Norton Furniture's existing code. Your first assignment will
+Welcome to the HP Norton Project! The first thing our development team is trying to accomplish is to improve some of Norton Furniture's existing code. Your first assignment will
 be to look at a prototype inventory management system they had been working on internally, align the code to the best practices outlined in PEP8 and implement both unit and integration testing.   
 
 Here is what you need to do:
@@ -31,6 +31,10 @@ Here is what you need to do:
         Update *unit_tests.py* as required to attain 90% coverage.
 
 #. Create a file called *integration_test.py*.
+
+.. todo::
+    Ask Luis about integration_test.py in l1 assignment
+    Also, pytest in l1 assignment?
 
 Other requirements:
 -------------------

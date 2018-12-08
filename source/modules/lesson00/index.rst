@@ -13,3 +13,4 @@ Welcome!
     extras_oo
     extras_git
     extras_fp
+    extras_packaging
