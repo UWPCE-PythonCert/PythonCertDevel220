@@ -47,10 +47,6 @@ New Words, Concepts, and Tools
 
 Required Reading
 ================
-.. todo::
-    Add pre-reading external links for modules, imports and unit /
-    functional tests to lesson 1 (Luis)?
-
 -  `Managing Software
    Complexity <http://oberheim.github.io/complexity/2016/05/18/managing-software-complexity.html>`__
 -  `Technical

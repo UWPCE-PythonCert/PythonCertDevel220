@@ -115,6 +115,4 @@ Python code from video
   if __name__ == "__main__":
       main()
 
-.. todo::
-  Add git links for mongo code
 

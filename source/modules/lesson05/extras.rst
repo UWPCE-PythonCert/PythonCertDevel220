@@ -56,8 +56,8 @@ down too, due to the time to initially populate, or seed the cache.
 
 For more details see:
 
-.. todo::
-  add Redis links (Andy)
+* https://redislabs.com/lp/python-redis/
+* https://opensource.com/article/18/4/how-build-hello-redis-with-python
 
 
 Neo4J

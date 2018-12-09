@@ -13,13 +13,13 @@ help to build expressive programs that are easy to understand.
 Here is what you need to do:
 ----------------------------
 
-#. Add decorators to introduce conditional logging in decorated classes
+1. Add decorators to introduce conditional logging in decorated classes
    (changing a single config variable in the module then turns logging on or
    off)
-#. Write a context manager to be used to access MongoDB. There is already
+2. Write a context manager to be used to access MongoDB. There is already
    and example in lesson 5, but build on this example. Try to add useful
    features based on your experience.
-#. Using an instructor provided module, rewrite that module to solve the
+3. Using an instructor provided module, rewrite that module to solve the
    problem using recursion.
 
 
