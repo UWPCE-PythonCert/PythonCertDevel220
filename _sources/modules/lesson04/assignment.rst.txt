@@ -35,9 +35,6 @@ So here is our refactoring assignment:
 
 Be sure to consult the lesson 3 assignment for details of the functionality.
 
-.. todo::
-    copy lesson 3 tests and fake assignment into lesson 4 when l3 tested and final
-
 Other requirements:
 -------------------
 - Your code should not trigger any warnings or errors from Pylint.

@@ -24,7 +24,5 @@ Optional
    demonstrate at office hours, or with your instructor.
    And check out the example we provided in the class repo.
 
-.. todo::
-  Add Redis and Neo4J examles to Lesson 5 repo
  
 

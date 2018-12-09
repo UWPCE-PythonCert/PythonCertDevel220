@@ -29,10 +29,8 @@ should be, as it's bundled with Python 3. If you are using Windows and you
 get an error revisit the lesson content for instructions on how to install
 sqlite.
 
-Clone the repo at 
+Clone the lesson 3 code repo at 
 
-.. todo::
-    Add repo to clone for lesson 3 activity rdbms (Andy)
 
 although you should already have that from earlier in this lesson.
 

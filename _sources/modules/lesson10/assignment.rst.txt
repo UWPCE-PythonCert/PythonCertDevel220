@@ -22,7 +22,7 @@ information to the HP Norton application, using the code samples from
 lessons 3 and 5.
 
 Provide an elegant way to output details of what the system is doing and
-the associtaed timing. Just write it to a file. DOnt bother with fancy
+the associtaed timing. Just write it to a file. Don't bother with fancy
 report formatting, although the data should be preented in such a way that
 command line tools can easily view it.
 

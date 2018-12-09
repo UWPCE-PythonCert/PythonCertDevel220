@@ -17,6 +17,3 @@ Lesson 5 : Consuming APIs with NoSQL
     assignment
     office_hours_recaps
     office_hours_all
-
-.. todo::
-    add new videos and any associated content (andy)

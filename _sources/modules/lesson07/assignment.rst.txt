@@ -4,7 +4,6 @@ Lesson 7 : Assignment
 
 .. todo::
     Provide data for assignment 07 (Andy)
-    Autograde done but not yet pushed.
     
 HP Norton is having success with their new computer system written in Python.
 So much successs, in fact, that the way they have had some of their systems

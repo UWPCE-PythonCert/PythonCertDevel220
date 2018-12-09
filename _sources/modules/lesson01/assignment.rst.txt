@@ -32,10 +32,6 @@ Here is what you need to do:
 
 #. Create a file called *integration_test.py*.
 
-.. todo::
-    Ask Luis about integration_test.py in l1 assignment
-    Also, pytest in l1 assignment?
-
 Other requirements:
 -------------------
 - For Pylint, remember to use the standardized *pylintrc* file provided for the class.

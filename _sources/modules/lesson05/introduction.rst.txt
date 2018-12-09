@@ -46,8 +46,6 @@ We are going to start to learn about APIs by working with MongoDB, a NoSQL datab
 
    aperson = Person.get(Person.person_name == 'Fred')
 
-.. todo::
-  Add git links for rdbms code (Andy)
 
 Learning Objectives
 ===================

@@ -22,12 +22,10 @@ Py220: Advanced Python Programming
     ../quiz/index
 
 .. todo::
-    #. Convert all code to rst tags (Andy - low priority)
+    #. Convert all code to rst tags (Andy)
     #. Add tags to indicate material to be used in LMS for video context ({{LMS START}}, {{LMS END}})
     #. Be sure all lesson inter-dependencies are OK given class resequence (A+L)
-    #. Add all code to github (A+L)
     #. Review all markup and make consistent
-
 
 See the Canvas or EdX instance for your class for the full lesson descriptions.
 
