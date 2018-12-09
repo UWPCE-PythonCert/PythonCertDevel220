@@ -1,6 +1,6 @@
-#####################
-Lesson 9 : Assignment
-#####################
+##########
+Assignment
+##########
 
 In this lesson's assignment we are going to apply language features 
 like decorators, context managers and recursion that can
@@ -13,16 +13,16 @@ help to build expressive programs that are easy to understand.
 Here is what you need to do:
 ----------------------------
 
-1. Revisit your logging assignemnt from lesson 2. We are going to make logging 
+#. Revisit your logging assignemnt from lesson 2. We are going to make logging 
    selective, by using decorators.
 
    Add decorator(s) to introduce conditional logging so that a single
    command line variable can turn logging on or off for decorated classes or functions.
-2. Change the lesson 5 assignemtn to Write a context manager to access MongoDB. 
+#. Change the lesson 5 assignemtn to Write a context manager to access MongoDB. 
    There is already
    an example in lesson 5, but build on this example. Try to add useful
    features based on your experience of the Python technqiues you have learned.
-3. HP Norton keeps pictures of all their furniture in jpg files that are stored 
+#. HP Norton keeps pictures of all their furniture in jpg files that are stored 
    on their file server. They have a very crude program that starts by 
    discovering all directories on the server and then lokking in each of those
    for the jpg files. They have discovered a problem though. jpg files are not 

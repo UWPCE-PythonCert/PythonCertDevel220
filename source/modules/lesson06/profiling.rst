@@ -1,6 +1,6 @@
-============================
-Lesson Content 6.1 Profiling
-============================
+#########
+Profiling
+#########
 
 At some point, perhaps even during this curriculum, you may have heard
 someone say that comprehensions are fast. In a certain general sense

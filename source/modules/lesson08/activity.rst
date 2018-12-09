@@ -1,6 +1,6 @@
-=================
-Lesson 8 Activity
-=================
+########
+Activity
+########
 
 
 The `Ballard Lockes <https://en.wikipedia.org/wiki/Ballard_Locks>`__ in

@@ -1,6 +1,6 @@
-#####################
-Lesson 6 : Assignment
-#####################
+##########
+Assignment
+##########
     
 In this lesson's assignment we are going to apply techniques to identify the
 right way to find bottlenecks in modules. We will use an evidence

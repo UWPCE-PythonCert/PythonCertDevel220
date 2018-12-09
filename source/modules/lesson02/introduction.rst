@@ -1,9 +1,6 @@
-=====================
-Lesson 2 Introduction
-=====================
-
+############
 Introduction
-============
+############
 
 When something goes wrong in your code, most programmers' first
 intuition is to insert a print statement. A print statement can help you

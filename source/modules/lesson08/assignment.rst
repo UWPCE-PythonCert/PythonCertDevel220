@@ -1,6 +1,6 @@
-=====================
-Lesson 8 : Assignment
-=====================
+##########
+Assignment
+##########
 
 Norton Furniture has been using comma-separated files (.CSV extension) to keep track of which furniture they have rented out to which
 customer. This currently requires them to use a spreadsheet program. Your Project Manager wants you to get the spreadsheet program out

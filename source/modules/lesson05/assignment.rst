@@ -1,6 +1,6 @@
-=====================
-Lesson 5 : Assignment
-=====================
+##########
+Assignment
+##########
 
 As mentioned before, HP Norton has been using a mix of different file formats
 to keep track of their business. One of those formats is called *comma-separated file*

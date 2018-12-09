@@ -1,6 +1,6 @@
-==============================
-Assignment: Lesson 6 Activity
-==============================
+########
+Activity
+########
 
 Spend time using any of the modules or techniques referenced in this
 Lesson. Of particular interest (choose one to get ready to demo):
