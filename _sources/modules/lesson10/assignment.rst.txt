@@ -26,8 +26,6 @@ the associtaed timing. Just write it to a file. Don't bother with fancy
 report formatting, although the data should be preented in such a way that
 command line tools can easily view it.
 
-.. todo::
-    Lesson 10 add links to code for assignment (RDBMS and mongo)
 
 Tips
 ----
