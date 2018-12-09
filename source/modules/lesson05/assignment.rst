@@ -22,7 +22,6 @@ You implementation should address the following requirements:
 
 Here is what you need to do:
 ----------------------------
-
 #. Create a product database with attributes that reflect the contents of the
    csv file.
 #. Import all data in the csv files into your MongoDB implementation.
