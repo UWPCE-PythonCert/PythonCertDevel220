@@ -166,19 +166,33 @@ But how do I know which classes I need?
   how to do this with stickies.
 
 #. Some comments:
-   #. Keep problem domain code separate from technical code. Why?
-   #. Don't spend too long modeling. Start coding and demoing as soon as you can. Why?
-   #. Focus on what your classes do, not what they need to know. Why?
-   #. Define all classes in docstrings. Why?
-   #. Decomposition and business boundaries. Why?
-   #. State transitions.
-   #. GenMyModel is not free; use draw.io (but you lose code generation).
+   
+   1. Keep problem domain code separate from technical code. Why?
+   
+   2. Don't spend too long modeling. Start coding and demoing as soon as you can. Why?
+   
+   3. Focus on what your classes do, not what they need to know. Why?
+   
+   4. Define all classes in docstrings. Why?
+   
+   5. Decomposition and business boundaries. Why?
+   
+   6. State transitions.
+   
+   7. GenMyModel is not free; use draw.io (but you lose code generation).
 
 #. There's loads more to learn! Here's some resources:
-   #. GenMyModel: https://www.genmymodel.com
-   #. DDD book: https://www.infoq.com/minibooks/domain-driven-design-quickly
-   #. OO in Python: https://realpython.com/python3-object-oriented-programming/
-   #. More Python OO: https://jeffknupp.com/blog/2014/06/18/improve-your-python-python-classes-and-object-oriented-programming/
-   #. OO thought process: https://www.amazon.com/Object-Oriented-Thought-Process-Developers-Library/dp/0321861272
-   #. Conway's law: https://en.wikipedia.org/wiki/Conway%27s_law
+
+   1. GenMyModel: https://www.genmymodel.com
+   
+   2. DDD book: https://www.infoq.com/minibooks/domain-driven-design-quickly
+   
+   3. OO in Python: https://realpython.com/python3-object-oriented-programming/
+   
+   4. More Python OO: https://jeffknupp.com/blog/2014/06/18/improve-your-python-python-classes-and-object-oriented-programming/
+   
+   4. OO thought process: https://www.amazon.com/Object-Oriented-Thought-Process-Developers-Library/dp/0321861272
+   
+   5. Conway's law: https://en.wikipedia.org/wiki/Conway%27s_law
+   
    #. Class models: http://www.agilemodeling.com/artifacts/classDiagram.htm
