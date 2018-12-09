@@ -6,10 +6,6 @@ In this lesson's assignment we are going to apply language features
 like decorators, context managers and recursion that can
 help to build expressive programs that are easy to understand.
 
-
-.. todo::
-    Need example for rework to recursion in lesson 9 assignment (Andy)
-
 Here is what you need to do:
 ----------------------------
 
