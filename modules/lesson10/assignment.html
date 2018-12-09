@@ -190,16 +190,23 @@ investigations have have not been able to identify a root cause. But the
 database is suspected to be a culprit (akthough whether it is customers or
 products is not clear.</p>
 <p>In order to diagnose the issues the HP Norton developer want to easily as
-some logging and timing infomration to record what the system is actually
+some timing infomration to record what the system is actually
 doing and to help identify the bottlnecks. And metaprogramming seems to be a
 good way to unobtrusively add this functionality to the existing applcation.</p>
-<p>For this assigment, you will use metaprogramming to add logging and timing
+<p>For this assigment, you will use metaprogramming to add timing
 information to the HP Norton application, using the code samples from
-lessons 3 and 5.</p>
-<p>Provide an elegant way to output details of what the system is doing and
-the associtaed timing. Just write it to a file. Don’t bother with fancy
-report formatting, although the data should be preented in such a way that
-command line tools can easily view it.</p>
+lesson 5.</p>
+<p>Your program, called database.py, must output details of timing for all functions
+in the program. Gather this data and write it to a file. The file should contain
+function name, time taken, and number of records processed.</p>
+<p>Be sure to demonstrate how the timing changes with differing number of records
+(you can copy and duplicate the data provided in the lesson 5 csv files so you
+have more data to deal with. It’s easy to do that. Be sure to show widely different
+numbers of records). Make some notes on your conclusions.</p>
+<div class="section" id="submission">
+<h3>Submission<a class="headerlink" href="#submission" title="Permalink to this headline">¶</a></h3>
+<p>Submit your revised database.py, the output file and your conclusions.</p>
+</div>
 <div class="section" id="tips">
 <h3>Tips<a class="headerlink" href="#tips" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
