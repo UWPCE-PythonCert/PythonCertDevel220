@@ -19,7 +19,6 @@ You should address the following general requirements:
    for the system to complete its processing. I feel the system now is too slow, and I want 
    to see if improvements can be made without having to upgrade our hardware.
 
-
 Here is what you need to do:
 ============================
 #. Demonstrate with real profile data the time taken to run your existing customer and 
