@@ -43,8 +43,6 @@ In order for your code to be evaluated, you need to create a file called *databa
 products, customers and rentals added (in that order), the second with a count of any errors that occured, in
 the same order. 
 
-.. todo::
-    create product, customer, rental files for l5 Assignment
 
 - *show_available_products()*: Returns a Python dictionary of products listed as *available* with the following fields:
     - product_id.
