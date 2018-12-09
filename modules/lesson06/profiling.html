@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Lesson Content 6.1 Profiling &mdash; PythonCert220 2.0 documentation</title>
+  <title>Profiling &mdash; PythonCert220 2.0 documentation</title>
   
 
   
@@ -28,8 +28,8 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Lesson 6.2 PyPy" href="pypy.html" />
-    <link rel="prev" title="Lesson 6 Introduction" href="introduction.html" /> 
+    <link rel="next" title="PyPy" href="pypy.html" />
+    <link rel="prev" title="Introduction" href="introduction.html" /> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -89,16 +89,16 @@
 <li class="toctree-l3"><a class="reference internal" href="../lesson01/index.html">Lesson 1 : Automated Testing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../lesson02/index.html">Lesson 2 : Logging &amp; Debuging</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../lesson03/index.html">Lesson 3 : Relational databases</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../lesson04/index.html">Lesson 4: Iteration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson04/index.html">Lesson 4 : Iteration</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../lesson05/index.html">Lesson 5 : Consuming APIs with NoSQL</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="index.html">Lesson 6 : Profiling and performance</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="prerequisites.html">Lesson 6 : Prerequisites</a></li>
-<li class="toctree-l4"><a class="reference internal" href="introduction.html">Lesson 6 Introduction</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">Lesson Content 6.1 Profiling</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pypy.html">Lesson 6.2 PyPy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="prerequisites.html">Prerequisites</a></li>
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Profiling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pypy.html">PyPy</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cython.html">Lesson 06.03 Cython</a></li>
-<li class="toctree-l4"><a class="reference internal" href="activity.html">Assignment: Lesson 6 Activity</a></li>
-<li class="toctree-l4"><a class="reference internal" href="assignment.html">Lesson 6 : Assignment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="activity.html">Activity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="assignment.html">Assignment</a></li>
 <li class="toctree-l4"><a class="reference internal" href="office_hours_recaps.html">Office Hours : Recaps</a></li>
 <li class="toctree-l4"><a class="reference internal" href="office_hours_all.html">Office Hours : This weeks’ content</a></li>
 </ul>
@@ -107,11 +107,13 @@
 <li class="toctree-l3"><a class="reference internal" href="../lesson08/index.html">Lesson 8 : Functional Techniques</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../lesson09/index.html">Lesson 9 : Advanced Python language constructs</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../lesson10/index.html">Lesson 10 : Metaprogramming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../quiz/index.html">Quizzes</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../references/index.html">External links</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../quiz/index.html">Quizzes</a></li>
 </ul>
 
             
@@ -161,7 +163,7 @@
         
           <li><a href="index.html">Lesson 6 : Profiling and performance</a> &raquo;</li>
         
-      <li>Lesson Content 6.1 Profiling</li>
+      <li>Profiling</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -180,8 +182,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="lesson-content-6-1-profiling">
-<h1>Lesson Content 6.1 Profiling<a class="headerlink" href="#lesson-content-6-1-profiling" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="profiling">
+<h1>Profiling<a class="headerlink" href="#profiling" title="Permalink to this headline">¶</a></h1>
 <p>At some point, perhaps even during this curriculum, you may have heard
 someone say that comprehensions are fast. In a certain general sense
 perhaps they are, but in this context — performance — speed should
@@ -443,10 +445,10 @@ In [3]: %prun calculate_x()
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="pypy.html" class="btn btn-neutral float-right" title="Lesson 6.2 PyPy" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="pypy.html" class="btn btn-neutral float-right" title="PyPy" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="introduction.html" class="btn btn-neutral" title="Lesson 6 Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="introduction.html" class="btn btn-neutral" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

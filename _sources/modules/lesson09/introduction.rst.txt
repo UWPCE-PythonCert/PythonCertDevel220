@@ -1,6 +1,6 @@
-======================
-Lesson 03 Introduction
-======================
+############
+Introduction
+############
 
 This lesson covers several advanced Python language constructs and
 problem solving strategies, some of which are unique to Python. At

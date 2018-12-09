@@ -1,6 +1,6 @@
-======================
-Lesson 8.3 Itertools
-======================
+#########
+Itertools
+#########
 
 Itertools provides Python developers with a number of iterator building
 blocks that are modeled on other, functional languages.

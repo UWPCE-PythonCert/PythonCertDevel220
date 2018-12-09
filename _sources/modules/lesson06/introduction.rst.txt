@@ -1,9 +1,6 @@
-======================
-Lesson 6 Introduction
-======================
-
+############
 Introduction
-============
+############
 
 In this module we cover strategies, tools and pitfalls around
 understanding the performance of a python code base. We mention or

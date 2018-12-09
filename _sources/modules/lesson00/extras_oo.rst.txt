@@ -190,9 +190,8 @@ But how do I know which classes I need?
    3. OO in Python: https://realpython.com/python3-object-oriented-programming/
    
    4. More Python OO: https://jeffknupp.com/blog/2014/06/18/improve-your-python-python-classes-and-object-oriented-programming/
+   5. OO thought process: https://www.amazon.com/Object-Oriented-Thought-Process-Developers-Library/dp/0321861272
    
-   4. OO thought process: https://www.amazon.com/Object-Oriented-Thought-Process-Developers-Library/dp/0321861272
+   6. Conway's law: https://en.wikipedia.org/wiki/Conway%27s_law
    
-   5. Conway's law: https://en.wikipedia.org/wiki/Conway%27s_law
-   
-   #. Class models: http://www.agilemodeling.com/artifacts/classDiagram.htm
+   7. Class models: http://www.agilemodeling.com/artifacts/classDiagram.htm

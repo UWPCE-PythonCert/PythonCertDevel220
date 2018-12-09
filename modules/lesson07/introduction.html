@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Lesson 7 Introduction &mdash; PythonCert220 2.0 documentation</title>
+  <title>Introduction &mdash; PythonCert220 2.0 documentation</title>
   
 
   
@@ -29,7 +29,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Concurrency Part 1: Concurrent Programming" href="concurrency_part1.html" />
-    <link rel="prev" title="Lesson 7: Concurrency and Async" href="prerequisites.html" /> 
+    <link rel="prev" title="Concurrency and Async" href="prerequisites.html" /> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -89,12 +89,12 @@
 <li class="toctree-l3"><a class="reference internal" href="../lesson01/index.html">Lesson 1 : Automated Testing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../lesson02/index.html">Lesson 2 : Logging &amp; Debuging</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../lesson03/index.html">Lesson 3 : Relational databases</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../lesson04/index.html">Lesson 4: Iteration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson04/index.html">Lesson 4 : Iteration</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../lesson05/index.html">Lesson 5 : Consuming APIs with NoSQL</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../lesson06/index.html">Lesson 6 : Profiling and performance</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="index.html">Lesson 7 : Currency and async</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="prerequisites.html">Lesson 7: Concurrency and Async</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">Lesson 7 Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="prerequisites.html">Concurrency and Async</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Introduction</a></li>
 <li class="toctree-l4"><a class="reference internal" href="concurrency_part1.html">Concurrency Part 1: Concurrent Programming</a></li>
 <li class="toctree-l4"><a class="reference internal" href="concurrency_part2.html">Concurrency Part 2: Other alternatives</a></li>
 <li class="toctree-l4"><a class="reference internal" href="concurrency_part3.html">Concurrency Part 3: GIL</a></li>
@@ -104,9 +104,9 @@
 <li class="toctree-l4"><a class="reference internal" href="ThreadingMultiprocessing_part4.html">Threading and multiprocessing Part 4: Managing thread results</a></li>
 <li class="toctree-l4"><a class="reference internal" href="ThreadingMultiprocessing_part5.html">Threading and multiprocessing Part 5: Multiprocessing</a></li>
 <li class="toctree-l4"><a class="reference internal" href="ThreadingMultiprocessing_part6.html">Threading and multiprocessing Part 6: Pooling</a></li>
-<li class="toctree-l4"><a class="reference internal" href="async.html">Lesson 7.2 Async</a></li>
-<li class="toctree-l4"><a class="reference internal" href="activity.html">Lesson 7 Activity</a></li>
-<li class="toctree-l4"><a class="reference internal" href="assignment.html">Lesson 7 : Assignment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="async.html">Async</a></li>
+<li class="toctree-l4"><a class="reference internal" href="activity.html">Activity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="assignment.html">Assignment</a></li>
 <li class="toctree-l4"><a class="reference internal" href="office_hours_recaps.html">Office Hours : Recaps</a></li>
 <li class="toctree-l4"><a class="reference internal" href="office_hours_all.html">Office Hours : This weeks’ content</a></li>
 </ul>
@@ -114,11 +114,13 @@
 <li class="toctree-l3"><a class="reference internal" href="../lesson08/index.html">Lesson 8 : Functional Techniques</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../lesson09/index.html">Lesson 9 : Advanced Python language constructs</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../lesson10/index.html">Lesson 10 : Metaprogramming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../quiz/index.html">Quizzes</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../references/index.html">External links</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../quiz/index.html">Quizzes</a></li>
 </ul>
 
             
@@ -168,7 +170,7 @@
         
           <li><a href="index.html">Lesson 7 : Currency and async</a> &raquo;</li>
         
-      <li>Lesson 7 Introduction</li>
+      <li>Introduction</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -187,10 +189,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="lesson-7-introduction">
-<h1>Lesson 7 Introduction<a class="headerlink" href="#lesson-7-introduction" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
 <p>This lesson introduces the concepts of concurrent and asynchronous
 programming and the python tools available for their implementation. Concurrency is doing multiple things at the same time – in
 Python, this can be accomplished through several approaches:
@@ -202,7 +202,6 @@ explain how to use it.</p>
 <p>These techniques can be applied to allow interfaces to be responsive
 while work is being done, and/or to boost performance with
 parallelizable tasks.</p>
-</div>
 <div class="section" id="learning-objectives">
 <h2>Learning Objectives<a class="headerlink" href="#learning-objectives" title="Permalink to this headline">¶</a></h2>
 <p>Upon successful completion of this lesson, you will be able to:</p>
@@ -282,7 +281,7 @@ package</a></li>
         <a href="concurrency_part1.html" class="btn btn-neutral float-right" title="Concurrency Part 1: Concurrent Programming" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="prerequisites.html" class="btn btn-neutral" title="Lesson 7: Concurrency and Async" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="prerequisites.html" class="btn btn-neutral" title="Concurrency and Async" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

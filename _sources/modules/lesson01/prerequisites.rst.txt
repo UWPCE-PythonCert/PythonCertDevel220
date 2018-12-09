@@ -10,4 +10,3 @@ following concepts, covered earlier in the class:
 
 Review the relevant materials from class 1, and complete the required
 reading in this class.
-

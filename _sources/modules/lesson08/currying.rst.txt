@@ -1,6 +1,6 @@
-=====================
-Lesson 8.2 Currying
-=====================
+########
+Currying
+########
 
 https://rriehle.github.io/FP3/build/html/index.html#currying
 

@@ -1,9 +1,6 @@
-======================
-Lesson 7 Introduction
-======================
-
+############
 Introduction
-============
+############
 
 This lesson introduces the concepts of concurrent and asynchronous
 programming and the python tools available for their implementation. Concurrency is doing multiple things at the same time -- in

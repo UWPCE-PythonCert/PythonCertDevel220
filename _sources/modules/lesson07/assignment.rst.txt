@@ -1,6 +1,6 @@
-#####################
-Lesson 7 : Assignment
-#####################
+##########
+Assignment
+##########
 
 .. todo::
     Provide data for assignment 07 (Andy)
