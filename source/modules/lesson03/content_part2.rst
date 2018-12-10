@@ -1,5 +1,5 @@
 ##################################
-Part 2: Inreacting with a database
+Part 2: Interacting with a database
 ##################################
 
 Be sure you cloned the repository we mentioned prior to video 1

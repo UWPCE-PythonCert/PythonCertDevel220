@@ -4,7 +4,7 @@ Assignment
 
 As part of the Norton Furniture project, we are going to store customer data from HP
 Norton in a relational database (sqlite3). We are also going to amend our
-functional tests (or create new ones) so that we can verify the customer
+functional tests (or create new ones) so that we can verify that the customer
 data meets HP Norton's needs.
 
 You should address the following general requirements, specific to three user types:
@@ -12,7 +12,7 @@ You should address the following general requirements, specific to three user ty
 #. As a *salesperson* at HP Norton I need to be able to store details of
    customers so that I can manage how I contact them to sell furniture.
 #. As an *accountant* at HP Norton I need to be able to store and retrieve
-   customers credit limits.
+   a customer's credit limit.
 #. As a *manager* at HP Norton I need to be able to produce monthly counts of
    the total number of active customers so that I can assess if the business is
    growing or shrinking.
@@ -24,7 +24,7 @@ Note:
    We are just developing the backend here. Imagine your module(s) will be called
    from a web app (which is outside the scope of this project).
 
-#. Create a customer model and database that can be used at HPNorton.
+#. Create a customer model and database that can be used at HP Norton.
     - At a minimum, the following information needs to be stored:
         - Customer ID.
         - Name.
@@ -41,7 +41,7 @@ Note:
         - *delete_customer(customer_id)*: This function will delete a customer from the sqlite3 database.
         - *update_customer_credit(customer_id, credit_limit)*: This function will search an existing customer by *customer_id* and update their credit limit or raise an exception if the customer does not exist.
         - *list_active_customers()*: This function will return an integer with the number of customers whose status is currently active.
-    - Note: You can have other functions and code as required, but the five functions oultined above should be present and using the same amount of parameters. This is important, as those functions are how your code gets integrated into other sections of the project (such as the Web frontend).
+    - Note: You can have other functions and code as required, but the five functions outlined above should be present and using the same amount of parameters. This is important, as those functions are how your code gets integrated into other sections of the project (such as the Web frontend).
 #. Create some functional and unit tests for the model.
 #. Develop functionality to deliver the requirements listed above.
 #. Develop tests, and show some tests passing. Show other tests failing.
