@@ -18,7 +18,7 @@ Also, most lessons include ungraded activities. This is work
 that you can do to help you improved your understanding and apply the concepts learned. Although
 ungraded, we expect that you will want to do the work!
 
-Since giving demos is an important part of a modern devops toolset, your classroom
+Since giving demos is an important part of a modern developer's toolset, your classroom
 or online instructor will ask you to demo your work to the class (or to the instructor for
 self paced classes). You will see references to where demos need to be prepared
 in the lesson notes.
