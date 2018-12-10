@@ -4,7 +4,7 @@ Part 2: Why test?
 
 It's likely you already have some familiarity with software testing in
 general, and writing tests in Python specifically. In this section,
-we're going to revisit the basic question: why write software tests. Our
+we're going to revisit the basic question: why write software tests? Our
 discussion here will form the foundation of the rest of the lesson.
 
 It's highly recommended for you to type along with these examples, creating the

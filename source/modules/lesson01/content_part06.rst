@@ -8,12 +8,12 @@ method defined in the TestCase class: it helps us compare the expected
 behavior of a program with its actual behavior. The first argument we
 give it is the \ *expected* result of squaring our number \ *num*. Then
 we give it the \ *actual* square that's produced by Squarer.calc. We can
-also can also specify an optional helpful message for the test library
+also specify an optional helpful message for the test library
 to print if this test fails: our helpful message will tell us what
 number we were trying to square when the test failed.
 
 Here's another difference: note that I didn't include an \ *if
-\_\_name\_\_##"\_\_main\_\_"* clause. We \ *wont* be running this script
+\_\_name\_\_##"\_\_main\_\_"* clause. We \ *won't* be running this script
 directly, instead we'll invoke it indirectly through the unittest
 library. You'll see that below.
 
@@ -60,7 +60,7 @@ here's the output of running our test:
     OK
     $
 
-Excellent! Our Squarer.calc method is working correctly. We wrote two
+Excellent! Our Squarer.calc method is working as expected. We wrote two
 tests, test\_positive\_numbers and test\_negative\_numbers, and our
 unittest script found no discrepancies between the expected and actual
 behavior of Squarer.calc. Each test method that our code satisfies is
@@ -186,7 +186,7 @@ method will not move on to that scenario until our code passes the
 scenario for squaring 3.
 
 Now that we know that our change to squarer.py has introduced an error,
-let's revise our code to fix the error, run the tests again, and see
+let's revise our code to fix the error, re-run the tests, and see
 that our code is working as expected once again.
 
 .. raw:: html
