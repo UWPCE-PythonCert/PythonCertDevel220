@@ -9,11 +9,11 @@ based approach to making the right improvements
 Here is what you need to do:
 ----------------------------
 
-1. The assignemt repository for this lesson contains a file with 1 million records
+1. The assignment repository for this lesson contains a file with 1 million records
    and a module that reads the file.
 2. The module is badly written and probably can be made to run more quickly and
    efficiently.
-3. You will look at the code and may immediately form a judgement about where
+3. You will look at the code and may immediately form a judgment about where
    performance can be improved. Do not be tempted to make immediate changes!
 4. Be sure to use an evidence based approach, and show with data how you were able
    to make improvements.

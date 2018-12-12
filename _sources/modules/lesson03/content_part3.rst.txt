@@ -2,7 +2,7 @@
 Part 3: Reading and writing data
 ################################
 
-Now we have looked at the model, lets look at how we create, read, and
+Now we have looked at the model, let's look at how we create, read, and
 delete data from the database, using the Person class. Here we use the
 following
 code: `v3\_p1\_populate\_db.py <https://github.com/milesak60/RDBMS/blob/master/src/v3_p1_populate_db.py>`__,

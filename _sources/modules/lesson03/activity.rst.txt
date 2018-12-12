@@ -31,6 +31,8 @@ sqlite.
 
 Clone the lesson 3 code repo at 
 
+.. TODO: Missing link for lesson 3 code repo
+
 
 although you should already have that from earlier in this lesson.
 
@@ -41,7 +43,7 @@ Let's add a department
 
 We have details of Persons. We have details of Jobs. Now we need to
 track in which Department a Person held a Job. For a Department, we need
-to know it's department number, which is 4 characters long and start
+to know it's department number, which is 4 characters long and starts
 with a letter. We need to know the department name (30 characters), and
 the name of the department manager (30 characters). We also need to know
 the duration in days that the job was held. Think about this last one
@@ -53,6 +55,5 @@ you will incorporate Department into the programs.
 
 Finally, produce a list using pretty print that shows all of the
 departments a person worked in for every job they ever had. 
-
 
 Prepare the results, and prepare to demo them!

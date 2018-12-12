@@ -4,7 +4,7 @@ Part 1: Logging
 
 We'll be talking about both logging and debugging in this lesson. In the
 introduction, I said that logging and debugging are a great step up from
-the print statements that beginning programers often like to use to
+the print statements that beginning programmers often like to use to
 debug their code.
 
 Your assignment for this week will be the culmination of the logging
@@ -58,7 +58,7 @@ the following modification to simple.py:
         100 / (50 - i)
 
 
-Now running simple.py will give us some clue about for the faulting
+Now running simple.py will give us some clues about the faulting
 value of \ *i*:
 
 .. code:: Python
@@ -76,7 +76,7 @@ value of \ *i*:
      100 / (50 - i)
     ZeroDivisionError: division by zero
 
-If we didn't know it already, then we know it now! The value
+If we didn't know it already, now we do! The value
 of \ *i *\ just before the ZeroDivisionError is 50. This is the faulting
 value of \ *i*.
 
@@ -87,7 +87,7 @@ scripts.
 
 But what are the problems with print statement debugging?
 
-Here are a few problems with using a print statement to debug your code:
+Here are a few issues with using a print statement to debug your code:
 
 -  You have to go back in and take them out, otherwise they produce
    distracting output when you're running your program.

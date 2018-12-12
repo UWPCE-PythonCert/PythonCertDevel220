@@ -2,8 +2,8 @@
 Part 3: Automated Test Script 
 #############################
 
-If you were to sit down and think about this problem, here's the
-solution that you would come up with:
+If you were to sit down and think about this problem, here's one
+solution that you could come up with:
 
 -  When I try squaring 3 I expect to get 9, but I got 27. When I try
    squaring 100 I expect to get 10,000, but I got a much larger number.

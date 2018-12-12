@@ -136,7 +136,7 @@ Itertools
 ---------
 Purpose
 
-Itertools provides a set of memory efficient but fast tools, that can be used to provide comprehnsive looping features in pure Python. Examples include counting, repatition and grouping.
+Itertools provides a set of memory efficient but fast tools, that can be used to provide comprehensive looping features in pure Python. Examples include counting, repetition and grouping.
 
 Example
 -------

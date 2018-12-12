@@ -15,7 +15,7 @@ debug your code: logging and debugging.
 Logging takes the idea of printing statements from your code and brings
 it to the next level. You'll be able to selectively hide or show
 different logging messages, and send them to the console, into log
-files, or across the internet into log servers.
+files, or across the Internet into log servers.
 
 Then we'll use the interactive Python debugger. The debugger lets you
 "get into the head" of the Python interpreter. We will step through each

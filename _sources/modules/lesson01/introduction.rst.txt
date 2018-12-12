@@ -6,17 +6,17 @@ This week's topics step beyond *programming* into a central question
 of \ *software engineering*: how do you manage code that is too big to
 fit inside your own head?
 
-Up until now, most of the programs that you've written for this course
+Up until now, most of the programs that you've written in Python
 have probably been 200 lines or fewer, and you wrote them on your own. A
 single programmer can completely understand a program this small. As
 programs get bigger and you begin working in teams, it becomes difficult
-to understand or remember how the changes you make on line 523 of your
+to understand or remember how the changes you made on line 523 of your
 program will effect the operation of code written on lines 10, 200, or
 2000.
 
 There are tools that can help us manage the complexity of a large
-codebase. And the tools that we'll explore for this lesson are testing,
-linting, and flaking. While exploring these tools, we'll introduce a
+codebase. The tools that we'll explore for this lesson are testing,
+linting, and flaking. While exploring them, we'll introduce a
 software design pattern that makes it easier to write maintainable code:
 dependency injection.
 

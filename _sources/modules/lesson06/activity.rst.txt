@@ -17,7 +17,7 @@ Lesson. Of particular interest (choose one to get ready to demo):
    and access C math functions into the Python code. (This vastly
    improves the performance of the Great Circle code!)
 -  Dig into the compile and link steps required by Cython.
--  Work with setup files or any of the other methods to generate cython
+-  Work with setup files or any of the other methods to generate Cython
    libraries.\ http://cython.readthedocs.io/en/latest/src/quickstart/build.html
 -  Work with Cython
    profiling. \ http://docs.cython.org/en/latest/src/tutorial/profiling_tutorial.html

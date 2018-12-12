@@ -22,7 +22,7 @@ Event Loops
 
 Most asnyc programming has an event loop at its core. While you will
 most likely use an event loop provided by a library like asnycio,
-writting a simple one can really help you understand what async is all
+writing a simple one can really help you understand what async is all
 about.
 
  

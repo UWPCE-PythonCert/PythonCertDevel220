@@ -88,8 +88,8 @@
 <li class="toctree-l3"><a class="reference internal" href="../lesson00/index.html">Welcome!</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../lesson01/index.html">Lesson 1 : Automated Testing</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="index.html">Lesson 2 : Logging &amp; Debuging</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="prerequisites.html">Lesson 2 : Prerequisites</a></li>
-<li class="toctree-l4"><a class="reference internal" href="introduction.html">Lesson 2 Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="prerequisites.html">Prerequisites</a></li>
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">Introduction</a></li>
 <li class="toctree-l4"><a class="reference internal" href="content_part1.html">Part 1: Logging</a></li>
 <li class="toctree-l4"><a class="reference internal" href="content_part2.html">Part 2: The Print Statement You Can Hide</a></li>
 <li class="toctree-l4"><a class="reference internal" href="content_part3.html">Part 3: The Print Statement You Can Add To</a></li>
@@ -102,18 +102,20 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../lesson03/index.html">Lesson 3 : Relational databases</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../lesson04/index.html">Lesson 4: Iteration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lesson04/index.html">Lesson 4 : Iteration</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../lesson05/index.html">Lesson 5 : Consuming APIs with NoSQL</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../lesson06/index.html">Lesson 6 : Profiling and performance</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../lesson07/index.html">Lesson 7 : Currency and async</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../lesson08/index.html">Lesson 8 : Functional Techniques</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../lesson09/index.html">Lesson 9 : Advanced Python language constructs</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../lesson10/index.html">Lesson 10 : Metaprogramming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../quiz/index.html">Quizzes</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../references/index.html">External links</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../quiz/index.html">Quizzes</a></li>
 </ul>
 
             
@@ -243,7 +245,7 @@ probably guess at the meaning of all of these new lines. The first thing
 to notice is that we’ve eliminated that&nbsp;<em>logging.basicConfig</em>&nbsp;line!
 We’re manually building a logging configuration, consisting of
 a&nbsp;<em>formatter</em>&nbsp;and a&nbsp;<em>handler</em>.</p>
-<p>Let me add a bit of explaination to each new line in following comments:</p>
+<p>Let me add a bit of explanation to each new line in the following comments:</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a &quot;formatter&quot; using our format string</span>
 <span class="n">formatter</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">Formatter</span><span class="p">(</span><span class="n">log_format</span><span class="p">)</span>
 
@@ -263,7 +265,7 @@ did before: it sends warning messages and above to a file named
 ‘mylog.log’.</p>
 <p>Log message handlers answer the question, “What should the system do
 with log messages?” Here are a few possible things that we can do with
-log messages:</p>
+them:</p>
 <ul class="simple">
 <li>We could print them to the console.</li>
 <li>We could send them to a file.</li>

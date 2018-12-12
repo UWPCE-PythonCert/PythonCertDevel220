@@ -74,7 +74,7 @@ to notice is that we've eliminated that \ *logging.basicConfig* line!
 We're manually building a logging configuration, consisting of
 a \ *formatter* and a \ *handler*.
 
-Let me add a bit of explaination to each new line in following comments:
+Let me add a bit of explanation to each new line in the following comments:
 
 .. code:: python
 
@@ -98,7 +98,7 @@ did before: it sends warning messages and above to a file named
 
 Log message handlers answer the question, "What should the system do
 with log messages?" Here are a few possible things that we can do with
-log messages:
+them:
 
 -  We could print them to the console.
 -  We could send them to a file.

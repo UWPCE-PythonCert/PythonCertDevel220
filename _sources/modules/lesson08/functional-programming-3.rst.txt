@@ -32,7 +32,7 @@ Web ISBN-13: 978-1-78439-761-6
 Print ISBN-13: 978-1-78439-699-2
 http://bit.ly/2azI62S
 
-Alll optional readings  draw from this text.
+All optional readings  draw from this text.
 
 Learning Objectives
 ===================

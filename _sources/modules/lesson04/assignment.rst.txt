@@ -18,7 +18,7 @@ This is a very common activity in application development.
 You will already have tests from the lesson 3 assignment that verify data is being
 written to the HP Norton databases. Although we are going to change the way
 data is written to and read from the databases, the tests should not need to change.
-We are amending the functionality the tests use to make them easier to mainrain and be
+We are amending the functionality the tests use to make them easier to maintain and be
 more Pythonic.
 
 This development process, where we change internal behavior while preserving how
