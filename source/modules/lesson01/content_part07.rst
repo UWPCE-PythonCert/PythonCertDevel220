@@ -2,9 +2,8 @@
 Part 7: A more complex example
 ##############################
 
-As you watch this video, bear in mind that part of your assignment is
-going to be to complete the calculator that's presented here. Type along
-if you wish, but there will also be a code repository for you to clone.
+As you watch this video, feel free to ype along
+if you wish, it will be a good way to practice for the coming assignment.
 
 {{VIDEO HERE}}
 

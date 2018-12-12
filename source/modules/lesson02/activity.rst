@@ -3,7 +3,7 @@ Activity
 ########
 
 In the lesson content, we asked you to spend 5-10 minutes on your own
-debugging the recursion error exercise code. After doing so, do the following:
+debugging of the recursion error exercise code. Once you're finished, do the following:
 
 #. In very general terms, use a couple of sentences to address the
    problem with our code. For example, give your best guess or insight
@@ -14,13 +14,13 @@ debugging the recursion error exercise code. After doing so, do the following:
    -  What's happening to the value of 'n' as the function gets deeper
       and deeper into recursion?
 
-#. A copy-and-paste of your terminal debugging activity.
+#. Include a copy-and-paste of your terminal debugging activity.
 
-Demstrating your work 
+Demonstrating your work 
 =====================
 
-Either gring your work to class or office hours, or show your instructor.
- For example, you might produce:
+Either bring your work to class or office hours, or show it to your instructor.
+For example, you might produce:
 
 ::
 

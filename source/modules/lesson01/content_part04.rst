@@ -59,7 +59,7 @@ Has this actually fixed our code? Let's run our test script to find out:
 
 Running test.py produces no errors: test.py was not able to find any
 discrepancies between the expected behavior that we defined for
-Squarer's calc method and the method's actual behiavor. 
+Squarer's calc method and the method's actual behavior. 
 
 Suppose you wanted to revise squarer.py one more time. You want to try
 another implementation of the calc method that uses the power operator:

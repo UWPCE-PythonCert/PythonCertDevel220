@@ -3,7 +3,7 @@ Part 4: Design
 ##############
 
 Now we are going to learn about the best way to design the data in our
-database.  We will use the digram in the "stuff" directory, which is
+database.  We will use the diagram in the "stuff" directory, which is
 also included below, along with the SQL code:
  
 
