@@ -117,6 +117,5 @@ dmypy.json
 .pyre/
 
 .sublime-workspace
-
-
+_gsdata_/*
 
