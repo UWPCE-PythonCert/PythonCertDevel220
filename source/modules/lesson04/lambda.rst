@@ -41,7 +41,7 @@ Compare this syntax to that of a standard function definition:
             return x + y
 
 This simple function does nothing more than return the value of the
-expression in the 'return', so it is viable written on a single line.
+expression in the 'return', so it is viable to have it written on a single line.
 
 ::
 
@@ -74,10 +74,10 @@ function immediately by calling it with its required arguments:
         >>> (lambda x, y: x + y)(2, 3)
         5
 
-| In this case python defines the anonymous function, calls it with the
+| In this case, Python defines the anonymous function, calls it with the
   supplied arguments and prints the result, but this feels like we're
   using the python interpreter as little more than a calculator; we are
-  not writing useful code.  Indeed simply entering '2 + 3' in the
+  not writing useful code.  Indeed, simply entering '2 + 3' in the
   interpreter provides the same result with a lot less typing.  So
   what's the point?  Where are lambdas useful?
 | Lambdas are only useful within larger code constructs --- specifically
@@ -90,7 +90,7 @@ function immediately by calling it with its required arguments:
   standard named function cannot do.  It has no special powers aside
   from its ability to be defined inline.  Wherever you can use a Lambda
   you could instead choose to use a standard named function.
-| What use is Lambda?  According to Python's creator, not much.
+| What use is Lambda, then?  According to Python's creator, not much.
 
 |
 | "About 12 years ago, Python aquired lambda, reduce(), filter() and

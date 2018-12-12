@@ -7,7 +7,7 @@ Iterator
 An iterator is a stateful helper object that will produce the next value when you call
 next() on it. Any object that has a __next__() method is therefore an iterator. How it produces a
 value is irrelevant.
-Think of an iterator is a value factory. Each time you ask it for "the next" value, it knows how to compute it
+Think of an iterator as a value factory. Each time you ask it for "the next" value, it knows how to compute it
 because it holds internal state.
 
 Iterables
@@ -110,9 +110,9 @@ and now let's prove an iterator is stateful...
 Generators
 ----------
 Generators in Python are just another way of creating iterable objects.
-They are usually used when you need to create iterable object quickly,
+They are normally used when you need to create an iterable object quickly,
 without the need of creating a class and adopting the iteration protocol. They are "just a function" (or a comprehension).
-They are used once; to use subsequent times you have to call the generator again.
+They are used once; to use them subsequent times you have to call the generator again.
 An iterator is usually more memory-efficient than a generator, though. And, somewhat related, generators can be faster. BUT MEASURE!
 
 .. code-block:: python
@@ -136,7 +136,7 @@ Itertools
 ---------
 Purpose
 
-Itertools provides a set of memory efficient but fast tools, that can be used to provide comprehnsive looping features in pure Python. Examples include counting, repatition and grouping.
+Itertools provides a set of memory efficient but fast tools, that can be used to provide comprehensive looping features in pure Python. Examples include counting, repetition and grouping.
 
 Example
 -------
