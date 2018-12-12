@@ -4,11 +4,11 @@ Object Oriented Concepts
 
 Object orientation is a popular programming model that focuses on
 development of classes. Classes contain the logic and data of the
-application, which are the used in development by creating, or
+application, which are then used in development by creating, or
 instantiating, objects from those classes.
 
 Object orientation allows developers to design applications in such a way
-technical concepts and problem domain concepts are kept separate.
+that technical concepts and problem domain concepts are kept separate.
 
 Why would I want to do that?
 ----------------------------
@@ -21,20 +21,21 @@ This approach brings several major benefits:
 
 - The problem domain changes at a different rate to the technology it
   uses. As developers, when a new version of the technology we use
-  becomes available we want to make that as simple as possible. Well
+  becomes available we want to make the transition as simple as possible. Well,
   designed systems allow this to happen, and good understanding of
-  object oreintation makes this even more simple.
+  object orientation makes this even more simple.
 - Often the teams or levels of expertise required to maintain
   problem domain functionality are different to those for the frameworks
   that run this technology. Keeping the problem domain separate helps
   to enable this.
 - Problem domain logic is where application developers can add the most
-  value to their clients, and keeping it separate from the technology   helps to increase the lifetime of the problem domain logic.
+  value to their clients, and keeping it separate from the technology 
+  helps to increase the lifetime of the problem domain logic.
 
 Now all of this is fine, but it requires skill, experience and even good
 taste to achieve this! It is also true that this sort of approach with
-object orientation in not a universal approach. It takes longer to build
-applications this way, so the approach is only applicable where you are
+object orientation in not a universal one. It takes longer to build
+applications this way, so this approach is only applicable where you are
 building software that needs to last for years.
 
 Also, other approaches such as functional programming can be better suited;
@@ -42,7 +43,7 @@ it just depends on what you are building, its lifetime and your knowledge
 and experience.
 
 To learn more from the definitive source consider reading Domain Driven Design,
-by Eric Evans. While it's a great book it takes some time to really
+by Eric Evans. While it's a great book, it takes some time to really
 understand how to apply what it teaches.
 
 Here is an example of a simple object oriented Python module:
@@ -82,12 +83,12 @@ is called encapsulation.
 
 Inheritance
 -----------
-What is we have different type of Pet? Goldfish? Dogs? Cats? Even a python?
+What if we have different types of Pet? Goldfish? Dogs? Cats? Even a python?
 
 If we start to observe concepts that are similar, but have different behaviors
 and / or data, it might be an indicator that we need to use inheritance.
 
-You can easily identify of inheritance is needed if you see concepts that relate
+You can easily identify if inheritance is needed when you see concepts that relate
 to other concepts with the phrase 'is a'. A dog is a pet. So is a cat. A
 python
 might be too, but it is also a programming language! In this case lets assume
@@ -152,17 +153,17 @@ But how do I know which classes I need?
 ---------------------------------------
 - Think about your problem domain. Find some related documentation (ideally
   from the person who is requesting the development). Failing that, talk to
-  the person who made the request. Note down what they are asking you.
+  the person who made the request. Note down what they are asking you to do.
 
-- When you have the notes and/or documentation, use a highlighter so mark
+- When you have the notes and/or documentation, use a highlighter to mark
   all of the nouns. So, in a human resources example, you might highlight
-  employee, job, department, and company. Think of some others...
+  employee, job, department and company. Think of some others...
 
 - Get a large piece of paper and small yellow stickies. Alternatively,
   use a modeling tool. For example: https://www.genmymodel.com/
 
 - Now, either write each noun on a separate sticky, or start to build a
-  model. We'll show the modeling tool. It will quickly become be obvious
+  model. We'll show the modeling tool. It will quickly become obvious
   how to do this with stickies.
 
 #. Some comments:
@@ -181,7 +182,7 @@ But how do I know which classes I need?
    
    7. GenMyModel is not free; use draw.io (but you lose code generation).
 
-#. There's loads more to learn! Here's some resources:
+#. There's loads more to learn! Here are some resources:
 
    1. GenMyModel: https://www.genmymodel.com
    

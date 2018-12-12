@@ -60,7 +60,7 @@ Which one should you use?
 Motivations for parallel execution
 ----------------------------------
 
-Why would you want your code to use excute in parallel?
+Why would you want your code to use execute in parallel?
 
 -  Performance
    -  Limited by "Amdahl's Law": http://en.wikipedia.org/wiki/Amdahl%27s_law

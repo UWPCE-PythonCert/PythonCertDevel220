@@ -24,7 +24,7 @@ Upon successful completion of this lesson, you will be able to:
    from your Python programs so that you can leverage data management
    services from a database.
 -  Use simple techniques to help model data correctly in a relational
-   database, and recognize the tradeoffs between different options for
+   database, and recognize the trade-offs between different options for
    this. 
 
 New Words, Concepts, and Tools

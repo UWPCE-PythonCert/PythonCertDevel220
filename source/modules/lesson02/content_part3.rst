@@ -9,7 +9,7 @@ your code. Other information can be useful, such as:
 -  when the log message was generated;
 -  what Python file the log message was generated in;
 -  what line number the log message was generated on; or
--  The name of the function that the log message was generated in.
+-  the name of the function that the log message was generated in.
 
 It's easy to see how knowing the file name, line number, and function
 name that the log message was generated on can be useful: you might
@@ -18,7 +18,7 @@ of your log statements are.
 
 Why would you possibly want to know \ *when* a log message was
 generated? One reason is that you might want to time how long it takes
-your code to get to a particular log message. But the real usefulness of
+for your code to get to a particular log message. But the real usefulness of
 knowing \ *when* a log message was generated will come in the next
 session: we'll be saving log messages to files instead of printing them
 at the console. When you open up a saved log file, you might not even

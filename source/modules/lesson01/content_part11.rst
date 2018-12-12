@@ -8,8 +8,8 @@ No discussion of testing is complete without Test Driven Development
 TDD is a practice that extends the idea of testing; instead of writing
 some cool code and then writing a test to make sure it never gets
 broken, first you conceive of what you want your software to accomplish,
-you write tests that will pass once you've written your software, and
-then you write the software, then you run the tests to make sure that
+you write tests that will pass once you've written your code, and
+you write it, then you run the tests to make sure that
 you have satisfied their behavioral requirements.
 
 To begin with, go back to the \ `TDD

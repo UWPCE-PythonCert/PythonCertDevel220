@@ -8,11 +8,11 @@ statements that many new programmers use to debug their code.
 The first half of this lesson presented logging as a direct evolution to
 print statement debugging: a logging statement is like a print statement
 that can be hidden, or have extra information attached to it, or can be
-sent to somewhere other than the console.
+sent to somewhere else other than the console.
 
 Debugging your code with an interactive debugger is another thing
 entirely; although both practices help you answer the same question of
-what's going in in your code, interactive debugging is not at all like
+what's going in your code, interactive debugging is not at all like
 inserting print statements.
 
 Interactive debugging allows you to run the Python interpreter
@@ -52,7 +52,7 @@ Breakpoints
 It could take a lot of 's' and 'n' commands to get to that
 ZeroDivisionError condition in simple.py! Breakpoints and conditions
 allow you to "zoom through" the execution of your code, pausing the
-interpretter when a certain condition on a certain line of code is met.
+interpreter when a certain condition on a certain line of code is met.
 
 {{VIDEO HERE}}
 
@@ -66,7 +66,7 @@ Here's an exercise where the error in our code is not entirely obvious.
 Take some time to try to figure out what values of \ *i*, \ *j*,
 and \ *k* give rise to the zero division error. Focus on trying to
 create a breakpoint condition for line 19 that will be met if the
-interpretter is \ *about* to divide by zero.
+interpreter is \ *about* to divide by zero.
 
 {{VIDEO HERE}}
 
@@ -78,7 +78,7 @@ Instead, we'll be investigating a RecursionError.
 
 For the `lesson
 activity <%24CANVAS_OBJECT_REFERENCE%24/assignments/i89c943e0018a913b1c51e640fa38f289>`__,
-you'll be required to copy and your debugger output from this recursion
+you'll be required to copy your debugger output from this recursion
 exercise and paste it into the activity submission text box. Before
 beginning this video, visit the lesson activity to make sure that you
 understand what will be required.

@@ -93,7 +93,7 @@ function immediately by calling it with its required arguments:
 | What use is Lambda?  According to Python's creator, not much.
 
 |
-| "About 12 years ago, Python aquired lambda, reduce(), filter() and
+| "About 12 years ago, Python acquired lambda, reduce(), filter() and
   map(), courtesy of (I believe) a Lisp hacker who missed them and
   submitted working patches. But, despite of the PR value, I think these
   features should be cut from Python 3000.

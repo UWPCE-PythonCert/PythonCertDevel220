@@ -6,8 +6,8 @@ Assignment
     Provide data for assignment 07 (Andy)
     
 HP Norton is having success with their new computer system written in Python.
-So much successs, in fact, that the way they have had some of their systems
-written is starting to introduce processing bottlenecks, and thereofore delays for users.
+So much success, in fact, that the way they have had some of their systems
+written is starting to introduce processing bottlenecks, and therefore delays for users.
 
 In this lesson's assignment we are going to apply techniques beyond
 vertical scaling (upgrading servers) to help maximize their application performance.

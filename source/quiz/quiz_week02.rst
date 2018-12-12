@@ -6,7 +6,7 @@ Lesson 02 Quiz
 The work a developer needs to do to complete their work
 Only errors that may occur when a program is running
 Evidence that software works as intended
-A record of acttiviy deemed important, produced when a program is running
+A record of activity deemed important, produced when a program is running
 
 2. The main use of logging is to:
 Help developers understand their code

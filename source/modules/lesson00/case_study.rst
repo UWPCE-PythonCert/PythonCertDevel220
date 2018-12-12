@@ -6,11 +6,11 @@ Background
 ----------
 15 years ago, Howard Norton formed his furniture rental business in a small rural town in the Western United States. Howard operates an efficient, family run company that focuses on customer service and individual customer attention.
 
-Always profitable, the business has continued to grow, but is now starting to have a few issues handling increased business volume.
+Always profitable, the business has continued to grow, but is now starting to have a few issues handling increased work volume.
 
 The town (and surrounding area) where Howard operates has seen explosive growth. This came about due to the establishment of many technology companies. These companies take advantage of the affordable local power, excellent living conditions for staff and large supply of labor. Lots of younger people are moving to the area and residing in apartments, making an ideal market for furniture rental.
 
-Howard has now realized that his business could be at risk if he is not able cope with a significant upturn in demand for rented furniture. Therefore, after discussing his concerns with his accountants, Howard has hired a developer on a contract basis. The developer will help Howard to build the back end IT infrastructure to help his business grow, while retaining its core value of providing personalized customer service. Note that the front end, web functionality is beyond the scope of the assignment. All functionality will be run from the command line or from tests.
+Howard has now realized that his business could be at risk if he is not able cope with a significant upturn in demand for rented furniture. Therefore, after discussing his concerns with his accountants, Howard has hired a software development firm on a contract basis. Their development team will help Howard to build the back end IT infrastructure to help his business grow, while retaining its core value of providing personalized customer service. Note that the front end web functionality is beyond the scope of this course. All functionality will be run from the command line or from tests.
 
 Current Situation
 -----------------

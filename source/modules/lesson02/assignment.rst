@@ -18,7 +18,7 @@ is not working. There is no error message or anything else indicating what is
 going on and no output file is being produced.
 
 Your goal this week is twofold: You need to use the Python debugger to figure out
-why the script is not working and you also need to incorporate logging into the script
+why the script is not working and you also need to incorporate logging into the code
 so that someone doing debug can follow the flow of the script.
 
 Here is what you need to do:
@@ -32,7 +32,7 @@ Here is what you need to do:
    to get the program to run. Capture your debug work to a text file.
 #. Now, enable logging and start inserting logging statements to track the code's execution.
 #. Add comments that describe your discoveries, and additional things you need.
-#. Add warnings for things missing in the source data that are expected but impeded some of the calculations (for example, unreturned items do not have a *rental_end* value).
+#. Add warnings for things missing in the source data that are expected but that impede some of the calculations (for example, unreturned items do not have a *rental_end* value).
 #. Add error messages for inconsistencies in the source data that could make your program crash or return incorrect data.
 
 Requirements:
@@ -46,7 +46,7 @@ Requirements:
     #. 2: Error messages and warnings.
     #. 3: Error messages, warnings and debug messages.
 #. You need to implement three types of logging messages:
-    #. Debug: General comments, indicating where in the script flow we are. Should be shown on screen only.
+    #. Debug: General comments, indicating where in the script flow we are. Should be shown on screen only (i.e., never saved to logfile).
     #. Warning: Used for missing elements in the source data that force a change in the flow. Shown on screen and on the log file.
     #. Error: Used for inconsistencies in the source data that will cause the script to crash or report incorrect results. Shown on screen and on the log file.
 #. Use the following format for your log messages: 
