@@ -84,7 +84,7 @@ https://neo4j.com/developer/python/ 
 Persistence and Serialization
 =============================
 
-Beyond using databases there are various simple ways to store data in
+Beyond using databases, there are various simple ways to store data in
 our Python programs. We refer to these as persistence and serialization,
 which are closely related. Serialization means taking a potentially
 complex data structure and converting it into a single string of
@@ -117,19 +117,19 @@ summarized Pickle: 
 https://pythontips.com/2013/08/02/what-is-pickle-in-python/
 
 Shelve stores objects too, but the objects must be associated with a
-key. This kety is used to retrieve the shelved object. See:
+key. This key is used to retrieve the shelved object. See:
 
 https://pythontips.com/2013/08/02/what-is-pickle-in-python/
 
 CSV, or comma separated files, are used for data interchange between a
 very wide range of software products, including most notably
-spreadsheets. There are many forms of CSV file, but all share the common
+spreadsheets. There are many forms of CSV files, but all share the common
 property of using the comma to delimit field values, and end of line to
 separate records. See:
 
 https://en.wikipedia.org/wiki/Comma-separated_values
 
-Finally, JSON files, which stands for javascript object notation, are
+Finally, JSON files, which stands for Javascript Object Notation, are
 used in many modern web applications. They are easier to read and write
 (both for humans and computers) than the interchange format they often
 replace, which is XML. See:
