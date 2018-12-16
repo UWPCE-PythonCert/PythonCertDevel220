@@ -4,7 +4,7 @@ Part 1: Logging
 
 We'll be talking about both logging and debugging in this lesson. In the
 introduction, I said that logging and debugging are a great step up from
-the print statements that beginning programers often like to use to
+the print statements that beginning programmers often like to use to
 debug their code.
 
 Your assignment for this week will be the culmination of the logging

@@ -34,13 +34,13 @@ following function declaration.
 
    </div>
 
-The great\_circle function above is defined specifying double as the
+The great\_circle function above is defined by specifying double as the
 type of its return value. Each argument is declared to be of type
 double, and a series of symbols which will be used later in the function
 are all defined to be of type double. The cython compiler uses this
 information to produce a statically compiled library which is called
-from Python. Since this is no longer standard Python we no longer save
-it in files with .py extensions, instead by convention we use .pyx.
+from Python. Since this is no longer standard Python we do not save
+the code in files with .py extensions, instead by convention we use .pyx.
 
 Cython involves a different workflow, because it is a statically
 compiled environment. Statically compiled programming environments,
@@ -110,9 +110,9 @@ what these new language elements mean, or how or why they are used. The
 second hurdle involves the build process associated with statically
 compiled languages — i.e., the separate compile, link and run steps
 which will feel foreign to someone coming strictly from an interpreted
-language like Python. In both cases programmers familiar with C will
-have an advantage over those without. As with any new worthwhile
-programming strategy it will take an investment in time and effort to
+language like Python. In both cases, programmers familiar with C will
+have an advantage over those who are not. As with any new worthwhile
+programming strategy, it will take an investment in time and effort to
 learn this new tool.
 
 The video links start to pull this information together. Arm yourself

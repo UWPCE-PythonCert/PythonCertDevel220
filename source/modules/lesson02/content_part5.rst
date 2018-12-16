@@ -52,7 +52,7 @@ Breakpoints
 It could take a lot of 's' and 'n' commands to get to that
 ZeroDivisionError condition in simple.py! Breakpoints and conditions
 allow you to "zoom through" the execution of your code, pausing the
-interpretter when a certain condition on a certain line of code is met.
+interpreter when a certain condition on a certain line of code is met.
 
 {{VIDEO HERE}}
 

@@ -52,7 +52,7 @@ Upon successful completion of this lesson, you will be able to:
 -  Augment the Python modules you develop by consuming APIs.
 -  Discover the details of APIs and how to apply them in Python
 -  Use the API of a NoSQL database to store and retrieve data
--  Identify when to use a NoSQL database instead of a relaional database
+-  Identify when to use a NoSQL database instead of a relational database
 
 New Words, Concepts, and Tools
 ==============================

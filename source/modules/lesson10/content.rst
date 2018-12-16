@@ -16,16 +16,16 @@ Remember how certain functionality appeared without us having to do anything?
 That was metaprogramming working for us.
 
 Now, metaprogramming is another of those techniques, like OO and functional
-programming, that requires a shoft in mindset to really make it work
+programming, that requires a shift in mindset to really make it work
 effectively. Understanding the syntax is one thing; understanding the right
 way to apply the syntax is another altogether.
 
-In this lesson we will certaonly cover the sytax, and you will start to
+In this lesson we will certainly cover the syntax, and you will start to
 understand how metaprogramming works. But you may feel lost or confused
 about why you would even want to use this technique. For now, as long as you
 understand the syntax, that is the minimum necessary. Then, later, you
 should be able to spot development problems for which metaprogramming is
-a good solution. That's great! Then you work out how, maybe wiht the help of
+a good solution. That's great! Then you work out how, maybe with the help of
 books or another developer.
 
 So let's get started. But before we launch into metaprogramming itself, it's

@@ -94,13 +94,13 @@ beyond the run-time of your program.
 Serialization:
 `h <https://en.wikipedia.org/wiki/Serializa_on%20>`__\ `ttps://en.wikipedia.org/wiki/Serializa\_on  <https://en.wikipedia.org/wiki/Serializa_on%20>`__
 
-Persistance: \ https://en.wikipedia.org/wiki/Persistence_(computer_science) 
+Persistence: \ https://en.wikipedia.org/wiki/Persistence_(computer_science) 
 
 They are closely related, because most forms of persistent storage –
 simple text files, databases, etc, require that it be turned into a
 simple string of bytes first. After all, everything done with computers
 is ultimately a serial string of bytes. And serialization is also very
-useful for transmiting information between systems, such as
+useful for transmitting information between systems, such as
 over a network.
 
 Examples

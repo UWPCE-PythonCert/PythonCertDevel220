@@ -27,7 +27,7 @@ Here is what you need to do:
 
         Elisa Miles,LR04,Leather Sofa,25.00
         Edward Data,KT78,Kitchen Table,10.00
-        Alex Gonzales,BR02,Queen Matress,17.00
+        Alex Gonzales,BR02,Queen Mattress,17.00
 
 
 #. Create a function called *single_customer*:

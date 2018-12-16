@@ -10,7 +10,7 @@ Use an evidence based approach by profiling the code first
 Jump right in and start making any changes that feel right
 
 2. In general, the Python community does not support having to use multiple versions
-of Python with different runtime performance charteristics. 
+of Python with different runtime performance characteristics. 
 True
 False
 

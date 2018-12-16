@@ -41,7 +41,7 @@ Processes
 A process contains all the instructions and data required to execute
 independently, so processes do not share data!
 
-Mulitple processes are best to speed up CPU bound operations.
+Multiple processes are best to speed up CPU bound operations.
 
 The Python interpreter isn't lightweight!
 
