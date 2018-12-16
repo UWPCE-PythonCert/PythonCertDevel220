@@ -2,7 +2,7 @@
 Concurrency Part 1: Concurrent Programming
 ##########################################
 
-What does it mean to do something "Concurrently" ? It means multiple tasks are being done at the same time. Is Concurrency the same thing as "parallelism"? Not exactly:
+What does it mean to do something "Concurrently"? It means multiple tasks are being done at the same time. Is Concurrency the same thing as "parallelism"? Not exactly:
 
  - Parallelism is about processing multiple things at the same time -- true parallelism requires multiple processors (or cores).
  - Concurrency is about handling multiple things at the same time -- things that may or may not actually be running in the processor at the same time (such as network requests).

@@ -77,7 +77,7 @@ Process example
 # async coroutines (stop and start again)
 An asynchronous program takes one execution step at a time and can move on to the next if the previous one is not finished.
 
-This means we are continuing onward through execution steps of the program, even though a previous execution step (or multiple steps) is running ìelsewhereî. This also implies when one of those execution steps is running ìelsewhereî completes, our program code somehow has to handle it.
+This means we are continuing onward through execution steps of the program, even though a previous execution step (or multiple steps) is running elsewhere. This also implies when one of those execution steps running elsewhere completes, our program code somehow has to handle it.
 
 
 ##Async example
