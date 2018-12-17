@@ -3,59 +3,28 @@ Lesson 02 Quiz
 ##############
 
 1. In Python development, a log file is a file that records:
+
 The work a developer needs to do to complete their work
 Only errors that may occur when a program is running
+
 Evidence that software works as intended
-A record of activity deemed important, produced when a program is running
+
+[Correct] A record of activity deemed important, produced when a program is running
 
 2. The main use of logging is to:
+
 Help developers understand their code
+
 Provide more flexible output than print statements
-Help track down issues and diagnose problems when a program is running
+
+[Correct] Help track down issues and diagnose problems when a program is running
 
 
 3. Put the log levels in order from most critical to least critical.
 The value 50 corresponds to the most critical level and 10 corresponds
 to the least critical level.
 
-CRITICAL
-ERROR
-WARNING
-INFO
-DEBUG
-UNIMPORTANT
-
-40
-CRITICAL
-ERROR
-WARNING
-INFO
-DEBUG
-UNIMPORTANT
-
-30
-CRITICAL
-ERROR
-WARNING
-INFO
-DEBUG
-UNIMPORTANT
-
-20
-CRITICAL
-ERROR
-WARNING
-INFO
-DEBUG
-UNIMPORTANT
-
-10
-CRITICAL
-ERROR
-WARNING
-INFO
-DEBUG
-UNIMPORTANT
+[Copy all of ret of ths quiz as was from 2018]
 
 4. You are using the interactive debugger to debug the following Python
 
