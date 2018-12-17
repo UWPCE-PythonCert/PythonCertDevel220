@@ -5,24 +5,24 @@ Lesson 05 Quiz
 1. A major strength of MongodDB is the way it can model complex
 relationships between data
 True
-False
+[Correct]  False
 
 2. MongoDB uses which of the following formats for data:
 csv files
 JSON
-BSON
+[Correct] BSON
 Tabular structured data
 
 3. When interacting with MongoDB from Python a useful module to install is:
 nosql
-pymongo
+[Correct] pymongo
 pandas
 sqllib
 
 4. Mongodb has poor support for querying
-False
+[Correct] False
 True
 
 5. MongoDB  is particularly strong when used for distributed databases:
 False
-True
+[Correct] True
