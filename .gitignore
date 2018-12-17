@@ -116,6 +116,6 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-.sublime-workspace
+*.sublime-workspace
 _gsdata_/*
 
