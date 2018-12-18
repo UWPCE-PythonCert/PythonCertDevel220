@@ -84,7 +84,7 @@ behave this way do:
 
 But what if you are working with a library that doesn't support
 this, urllib for instance?  Close it automatically.  There are a couple
-of ways you can go.  If the resource in questions has a close() method,
+of ways you can go.  If the resource in question has a close() method,
 then you can simply use the closing context manager from contextlib to
 handle the issue:
 
@@ -209,7 +209,7 @@ What if we try with False?
  
 
 So this time, the context manager did not catch the error -- so it was
-raised the in the usual way.  In real life, a context manager could have
+raised in the usual way.  In real life, a context manager could have
 pretty much any error raised in its context. And the context manager
 will likely only be able to properly handle particular exceptions -- so
 the \_\_exit\_\_ method takes all the information about the exception as
@@ -223,7 +223,7 @@ parameters:
 
     exc\_tb: the Exception Traceback object
 
-The type lets you check if this is a type you know how to handle::
+The type of exception lets you check if this is an excpetion you know how to handle::
 
  
 

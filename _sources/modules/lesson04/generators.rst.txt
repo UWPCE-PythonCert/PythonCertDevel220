@@ -5,9 +5,9 @@ Generators
 {{VIDEO HERE}}
 
 Generators give you an iterator object with no access to the underlying
-data ... if it even exists.  Conceptually iterators are about various
-ways to loop over data.  They can generate data on the fly.  Practically
-you can use either an iterator or a generator --- and a generator is a
+data ... if it even exists.  Conceptually, iterators are about various
+ways to loop over data.  They can generate data on the fly.  In general,
+you can use either an iterator or a generator --- in fact, a generator is a
 type of iterator.  Generators do some of the book-keeping for you and
 therefore involve simpler syntax.
 
@@ -25,7 +25,7 @@ yield
 |
 | Generator functions "yield" a value, rather than returning a value. 
   It \*does\* 'return' a value, but rather than ending execution of the
-  function it preserves function state so that it can pick up where it
+  function, it preserves function state so that it can pick up where it
   left off.  In other words, state is preserved between yields.
 | A function with \`\`yield\`\`  in it is a factory for a generator. 
   Each time you call it, you get a new generator:

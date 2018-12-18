@@ -241,7 +241,7 @@ cursors as&nbsp;context managers.</div>
 </div>
 <p>But what if you are working with a library that doesn’t support
 this,&nbsp;urllib for instance? &nbsp;Close it automatically. &nbsp;There are a couple
-of ways you can go. &nbsp;If the resource in questions has a close() method,
+of ways you can go. &nbsp;If the resource in question has a close() method,
 then you can simply use the closing context manager from contextlib to
 handle the issue:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">urllib</span> <span class="k">import</span> <span class="n">request</span>
@@ -333,7 +333,7 @@ RuntimeError: this is the error message
 </pre></div>
 </div>
 <p>So this time, the context manager did not catch the error – so it was
-raised the in the usual way. &nbsp;In real life, a context manager could have
+raised in the usual way. &nbsp;In real life, a context manager could have
 pretty much any error raised in its context. And the context manager
 will likely only be able to properly handle particular exceptions – so
 the __exit__ method takes all the information about the exception as
@@ -342,7 +342,7 @@ parameters:</p>
 <p>&nbsp; &nbsp; exc_type: the type of the Exception</p>
 <p>&nbsp; &nbsp; exc_val: the value of the Exception</p>
 <p>&nbsp; &nbsp; exc_tb: the Exception Traceback object</p>
-<p>The type lets you check if this is a type you know how to handle:</p>
+<p>The type of exception lets you check if this is an excpetion you know how to handle:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">::</span>
 </pre></div>
 </div>

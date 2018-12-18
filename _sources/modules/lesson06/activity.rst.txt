@@ -3,12 +3,12 @@ Activity
 ########
 
 Spend time using any of the modules or techniques referenced in this
-Lesson. Of particular interest (choose one to get ready to demo):
+lesson. The ones below are of particular interest. Please choose one to get ready to demo it:
 
 -  Explore code-only performance improvement strategies such as
    memoization.
--  Explore/demo cProfile side by side with PyCharm’s built-in profilers.
--  Explore/demo Python’s
+-  Explore / demo cProfile side by side with PyCharm’s built-in profilers.
+-  Explore / demo Python’s
    memory\_profiler. \ https://pypi.python.org/pypi/memory_profiler
 -  Use PyPy as the runtime interpreter for code developed by students
    during the curriculum.

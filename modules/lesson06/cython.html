@@ -196,13 +196,13 @@ following function declaration.</p>
     <span class="n">cdef</span> <span class="n">double</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">radius</span><span class="p">,</span> <span class="n">theta</span><span class="p">,</span> <span class="n">x</span>
 </pre></div>
 </div>
-</div></div><p>The great_circle function above is defined specifying double as the
+</div></div><p>The great_circle function above is defined by specifying double as the
 type of its return value. Each argument is declared to be of type
 double, and a series of symbols which will be used later in the function
 are all defined to be of type double. The cython compiler uses this
 information to produce a statically compiled library which is called
-from Python. Since this is no longer standard Python we no longer save
-it in files with .py extensions, instead by convention we use .pyx.</p>
+from Python. Since this is no longer standard Python we do not save
+the code in files with .py extensions, instead by convention we use .pyx.</p>
 <p>Cython involves a different workflow, because it is a statically
 compiled environment. Statically compiled programming environments,
 including C and Cython, have separate compile, link and run steps. You
@@ -234,9 +234,9 @@ what these new language elements mean, or how or why they are used. The
 second hurdle involves the build process associated with statically
 compiled languages — i.e., the separate compile, link and run steps
 which will feel foreign to someone coming strictly from an interpreted
-language like Python. In both cases programmers familiar with C will
-have an advantage over those without. As with any new worthwhile
-programming strategy it will take an investment in time and effort to
+language like Python. In both cases, programmers familiar with C will
+have an advantage over those who are not. As with any new worthwhile
+programming strategy, it will take an investment in time and effort to
 learn this new tool.</p>
 <p>The video links start to pull this information together. Arm yourself
 with the sample code when you watch Part 2.</p>

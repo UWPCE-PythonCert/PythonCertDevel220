@@ -2,15 +2,15 @@
 Assignment
 ##########
     
-In this lesson's assignment we are going to apply techniques to identify the
+In this lesson's assignment, we are going to apply techniques to identify the
 right way to find bottlenecks in modules. We will use an evidence
-based approach to making the right improvements
+based approach to implement the right improvements.
 
 Here is what you need to do:
 ----------------------------
 
 1. The assignment repository for this lesson contains a file with 1 million records
-   and a module that reads the file.
+   and a module that reads that file.
 2. The module is badly written and probably can be made to run more quickly and
    efficiently.
 3. You will look at the code and may immediately form a judgment about where
@@ -19,7 +19,7 @@ Here is what you need to do:
    to make improvements.
 5. Rewrite the module to improve performance. Provide evidence to demonstrate
    the improvement. 
-6. Your new module should be called good_perf.py, and should use identical input
+6. Your new module should be called good_perf.py, it should use identical input
    and produce identical output to poor_perf.py
 
 Other requirements:
@@ -28,5 +28,6 @@ As always, you should ensure your code produces no errors or warnings from pylin
 
 Submission
 ----------
-You will submit woyr good_perf.py file, along with notes on your findings, performance 
-improvements, and notes on your approach.
+You submission should include the good_perf.py file, along with notes on your findings, performance 
+improvements, and notes on your approach. For notes, you can use regular text format (.txt) or try restructured
+text (.rst) format.

@@ -22,7 +22,7 @@ We are amending the functionality the tests use to make them easier to maintain 
 more Pythonic.
 
 This development process, where we change internal behavior while preserving how
-that behavior is called, is named refactoring.
+that behavior is called, is named *refactoring*.
 
 So here is our refactoring assignment:
 
@@ -30,7 +30,7 @@ So here is our refactoring assignment:
    and the instructor-provided customer data, write data to your customer
    database and read / display it.
 #. Verify existing unit tests still function correctly.
-#. If necessary, update tests to show the data is being maintained correctly in the database.
+#. If necessary, update your tests to show the data is being maintained correctly in the database.
 #. Add code to log all database data changes (adds, amends, deletes).
 
 Be sure to consult the lesson 3 assignment for details of the functionality.
@@ -52,4 +52,4 @@ Tips
 - Remember to think about system features, not web pages or the UI.
 - Tests first!
 - Think about the right techniques to use given the volumes of data.
-- Be sure you make the best use of your existing tests
+- Be sure you make the best use of your existing tests.

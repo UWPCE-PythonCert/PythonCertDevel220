@@ -21,7 +21,7 @@ Event Loops
 -----------
 
 Most asnyc programming has an event loop at its core. While you will
-most likely use an event loop provided by a library like asnycio,
+most likely use an event loop provided by a library like asyncio,
 writing a simple one can really help you understand what async is all
 about.
 
@@ -45,7 +45,7 @@ very useful for this kind of problem.
 Optional Videos
 ===============
 
-David Beazley on Concurrecy and async: 
+David Beazley on Concurrency and async: 
 
 `David Beazley: Concurrency from the ground Up <https://youtu.be/MCs5OvhV9S4>`__\ He writes a full async client server from scratch before your eyes --
 this guy can write code faster than most of us can read it -- be ready to hit the pause button!
