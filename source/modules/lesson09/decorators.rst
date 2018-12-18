@@ -6,7 +6,7 @@ Decorators
 
  
 
-Functions are things that generate values based on arguments. In Python
+Functions are things that generate values based on arguments. In Python,
 functions are first-class objects. This means that you can bind names to
 them, pass them around, etc., just like other objects. Thanks to this
 you can write functions that take functions as arguments or return

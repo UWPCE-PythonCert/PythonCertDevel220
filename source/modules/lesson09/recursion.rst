@@ -9,7 +9,7 @@ indirectly. When directly, the function simply calls itself from within
 itself. When indirectly, the more advanced scenario, it is called by
 some other function that it had already called; in other words, function
 a calls function b and then function b calls function a. In this
-tutorial we will look at the first case, direct recursive calls.
+tutorial, we will look at the first case, direct recursive calls.
 
 Recursive algorithms naturally fit certain problems, particularly
 problems amenable to divide and conquer solutions. The general form is
@@ -18,8 +18,8 @@ a collection combined with the same operation on the remaining members
 of the collection.
 
 A key element to a recursive solution involves the specification of a
-termination condition. The algorithm needs to know when to end, when to
-stop calling itself. Typically this is when all of the members of the
+termination condition. The algorithm needs to know when to end and when to
+stop calling itself. Typically, this is when all of the members of the
 collection have been processed.
 
 .. raw:: html
@@ -78,7 +78,7 @@ successive recursive calls, recursion should work.
 
 The Python interpreter by default has its stackframe limit set to 1000.
 This value can be changed at runtime, but if you find you have large
-data sets to process you may need to consider a non-recursive strategy.
+data sets to process, you may need to consider a non-recursive strategy.
 To increase the number of stack frames use sys.setrecursionlimit as
 follows:
 

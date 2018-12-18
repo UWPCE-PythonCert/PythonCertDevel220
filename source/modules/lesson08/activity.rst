@@ -2,13 +2,14 @@
 Activity
 ########
 
+:TODO - This activity belongs to context managers, this lesson is on functional programming
 
 The `Ballard Lockes <https://en.wikipedia.org/wiki/Ballard_Locks>`__ in
-Seattle, Washington are a limited, controlled resource. You have been
+Seattle, Washington, are a limited, controlled resource. You have been
 hired by the Army Corps of Engineers to help build a software control
 system for the lockes. There are two lockes at the Ballard complex, one
 small (30 x 150 feet, 8.5 x 45.7 meter) and one large (80 x 825 feet,
-24.4 x 251.5 meter). There are myriad ways in which different components
+24.4 x 251.5 meter). There are a myriad ways in which different components
 of the lockes represent limited resources with specialized subsystems,
 and a missed or out-of-sequence step could mean disaster. For instance,
 there are two sets of doors for each locke, one upstream and one down,
@@ -18,7 +19,7 @@ doors are opened; tourists, who can get very close to observe the
 action, need to be safely managed; the lockes themselves can only handle
 a certain number of boats. At every step of the way there is a limited
 resource that must be managed and in lock step with the others, yes, pun
-intended. In effect it involves the coordinated management of resources
+intended. In effect, it involves the coordinated management of resources
 all the way down.
 
 For this first task you do not need to model every aspect of the lockes,
@@ -31,7 +32,7 @@ the operational and sequencing details to be encapsulated, this is a
 good use case for context managers.
 
 Wondering about the consistent misspelling of the word lock? As an early
-design decision we have decided to avoid overloading the term, which in
+design decision we have moved to avoid overloading the term, which in
 the context can be interpreted both as a verb and as a noun and thereby
 cause confusion. For any instances of the verb use its usual spelling:
 lock. For any instances of the noun use an alternative spelling: locke.
@@ -44,7 +45,7 @@ the locke is exited it runs through the same steps: it stops the pumps,
 opens the doors, closes the doors, and restarts the pumps. Don’t worry
 for now that in the real world there are both upstream and downstream
 doors, and that they should never be opened at the same time; perhaps
-you’ll get to that later. During initialization the context manger class
+you’ll get to that later. During initialization the context manager class
 accepts the locke’s capacity in number of boats. If someone tries to
 move too many boats through the locke, anything over its established
 capacity, raise a suitable error. Since this is a simulation you need do

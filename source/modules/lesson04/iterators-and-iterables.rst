@@ -12,7 +12,7 @@ Background
 ----------
 
 Python used to be all about sequences --- a good chunk of anything you
-did was stored in a sequence or involved manipulating a sequence.
+did was stored in a sequence or involved manipulating one.
 
 -  lists
 
@@ -206,7 +206,7 @@ sequences, we can now think in terms of iterables.
                     raise StopIteration
 
 
-| What does for do?
+| What does *for* do?
 | Now that we know the iterator protocol, we can write something like a
   for loop:
 | :download:\`my\_for.py

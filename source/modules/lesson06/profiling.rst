@@ -5,7 +5,7 @@ Profiling
 At some point, perhaps even during this curriculum, you may have heard
 someone say that comprehensions are fast. In a certain general sense
 perhaps they are, but in this context — performance — speed should
-strictly be considered a relative metric. In other words the question is
+strictly be considered a relative metric. In other words, the question is
 not whether comprehensions are fast in general, but whether a
 comprehension is fast relative to some other construct in the specific
 context of the programming problem you are trying to address.
@@ -15,8 +15,8 @@ comprehensions. Do you need to instantiate a list (or dictionary)
 immediately? If not, perhaps your use case would be better served by map
 and filter. Map returns a lazy iterator in Python 3.x, which is to say
 that when it is called it does not instantiate an entire list as does a
-comprehension. Instead a map object yields up subsequent values on
-subsequent calls thereby spreading computational cost over a larger
+comprehension. Instead, a map object yields up subsequent values on
+subsequent calls, thereby spreading computational cost over a larger
 timespan. Perhaps that is enough to make your graphic user interface or
 ReST API more responsive. Speaking of yield, would a generator be better
 than a comprehension for your use case? If you strictly need a sequence
@@ -43,7 +43,7 @@ observed a system in a representative context.
    Timing\ ` <https://rriehle.github.io/ProfilingPerformance/build/html/index.html#profiling-timing>`__
    :name: profiling-timing
 
-In its broadest sense profiling is observing and measuring a system, an
+In its broadest sense, profiling is observing and measuring a system, an
 individual program or a code snippet in a context. The goal is to
 understand performance and resource consumption characteristics. The
 context should be representative, and when possible it should avoid the
@@ -158,7 +158,7 @@ Gnu-time installed via Homebrew on Mac OS X for more depth.
    :name: timeit
 
 In addition to the command line time tool referenced above which is
-useful to time the run of your entire script, Python offers timeit which
+useful to time the run of your entire script, Python offers a module called timeit which
 allows you to time expressions and calls within python modules.
 
 https://docs.python.org/3.6/library/timeit.html
@@ -182,7 +182,7 @@ supplies a profiler. With little or no modification to your module’s
 source cProfile provides statistics on the number of times a function or
 method is called and the cumulative time spent within.
 
-The profiler when invoked from the command line with default arguments
+The profiler, when invoked from the command line with default arguments
 provides information not only about your script, but also about how it
 exercises the Python interpreter.
 

@@ -21,20 +21,17 @@ Here is what you need to do:
 #. HP Norton keeps pictures of all their furniture in jpg files that are stored 
    on their file server. They have a very crude program that starts by 
    discovering all directories on the server and then looking in each of those
-   for the jpg files. They have discovered a problem though. jpg files are not 
-   found when they are stored in directories that are more than 1 deep from the 
+   for the jpg files. They have discovered a problem, though: jpg files are not 
+   found when they are stored in directories that are more than one level deep from the 
    root directory.
    Your job is to write a jpg discovery program in Python, using recursion,  
    that works 
    from a named parent directory provided on the command line.
    The program will take the parent directory as input.
-   As output it will return a list of lists structured like this:
+   As output, it will return a list of lists structured like this:
    ["full/path/to/files", ["file1.jpg", "file2.jpg",...], "another/path",[], etc]
    The program must be called jpgdiscover.py
 
 Other requirements:
 -------------------
 - Your code should not trigger any warnings or errors from Pylint.
-
-Tips
-----
