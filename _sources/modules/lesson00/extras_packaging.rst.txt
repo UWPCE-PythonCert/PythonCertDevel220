@@ -4,13 +4,13 @@ Packaging
 
 At some point, hopefully fairly early in your Python development career
 you will need to release the results of your efforts to production.
-This is where packagin comes in.
+This is where packaging comes in.
 
-To understand packaging, it really is essential to understand how packages 
-and modules relate to each other and are used, and also to understand how 
+To understand packaging, it really is essential to understand how packages
+and modules relate to each other and are used, and also to understand how
 ```import``` finds modules (always challenging for beginners).
 
-Here is some readng that will build on your current knowledge, and help
+Here is some reading that will build on your current knowledge, and help
 promote your understanding.
 
 * https://realpython.com/python-modules-packages/
