@@ -9,6 +9,7 @@ Welcome!
     principles
     expectations
     case_study
+    assignments
     grading
     extras_oo
     extras_git
