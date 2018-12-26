@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Welcome! &mdash; PythonCert220 2.0 documentation</title>
+  <title>Assignments &mdash; PythonCert220 2.0 documentation</title>
   
 
   
@@ -28,8 +28,8 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Office Hours Pre Class" href="office_hours.html" />
-    <link rel="prev" title="Lesson content" href="../index.html" /> 
+    <link rel="next" title="Grading" href="grading.html" />
+    <link rel="prev" title="Case Study : H.P. Norton Furniture Rentals LLC" href="case_study.html" /> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -85,12 +85,12 @@
               <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Lesson content</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html#py220-advanced-python-programming">Py220: Advanced Python Programming</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Welcome!</a><ul>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Welcome!</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="office_hours.html">Office Hours Pre Class</a></li>
 <li class="toctree-l4"><a class="reference internal" href="principles.html">Class Principles</a></li>
 <li class="toctree-l4"><a class="reference internal" href="expectations.html">Expectations</a></li>
 <li class="toctree-l4"><a class="reference internal" href="case_study.html">Case Study : H.P. Norton Furniture Rentals LLC</a></li>
-<li class="toctree-l4"><a class="reference internal" href="assignments.html">Assignments</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Assignments</a></li>
 <li class="toctree-l4"><a class="reference internal" href="grading.html">Grading</a></li>
 <li class="toctree-l4"><a class="reference internal" href="extras_oo.html">Object Oriented Concepts</a></li>
 <li class="toctree-l4"><a class="reference internal" href="extras_git.html">Easy guide to using git</a></li>
@@ -162,13 +162,15 @@
         
           <li><a href="../index.html">Lesson content</a> &raquo;</li>
         
-      <li>Welcome!</li>
+          <li><a href="index.html">Welcome!</a> &raquo;</li>
+        
+      <li>Assignments</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/modules/lesson00/index.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/modules/lesson00/assignments.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -181,21 +183,62 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="welcome">
-<h1>Welcome!<a class="headerlink" href="#welcome" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="office_hours.html">Office Hours Pre Class</a></li>
-<li class="toctree-l1"><a class="reference internal" href="principles.html">Class Principles</a></li>
-<li class="toctree-l1"><a class="reference internal" href="expectations.html">Expectations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="case_study.html">Case Study : H.P. Norton Furniture Rentals LLC</a></li>
-<li class="toctree-l1"><a class="reference internal" href="assignments.html">Assignments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="grading.html">Grading</a></li>
-<li class="toctree-l1"><a class="reference internal" href="extras_oo.html">Object Oriented Concepts</a></li>
-<li class="toctree-l1"><a class="reference internal" href="extras_git.html">Easy guide to using git</a></li>
-<li class="toctree-l1"><a class="reference internal" href="extras_fp.html">Functional Programming</a></li>
-<li class="toctree-l1"><a class="reference internal" href="extras_packaging.html">Packaging</a></li>
-</ul>
+  <div class="section" id="assignments">
+<h1>Assignments<a class="headerlink" href="#assignments" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>An important part of your success on this class is the work you do on
+the class assignments. Here we describe the approach we are using for
+the repository where you do your assignment work, and how that work is
+submitted.</p>
+<p>As with every part of Python 220 we are going to get as close as we can
+to  replicating the way that we work in a professional setting.</p>
+<p>So now let’s go through all of the steps.</p>
+<p>Prior to starting, be sure you have your Git repo url from your instructor.</p>
+<div class="section" id="part-1-setup">
+<h3>Part 1 - Setup<a class="headerlink" href="#part-1-setup" title="Permalink to this headline">¶</a></h3>
+<p>You will do this once, at the start of class.</p>
+<ol class="arabic">
+<li><p class="first">Your repository url will look something like this:</p>
+<blockquote>
+<div><p><a class="reference external" href="mailto:git&#37;&#52;&#48;github&#46;com">git<span>&#64;</span>github<span>&#46;</span>com</a>:UWPCE-PythonCert/py220yyyymmxxx.git</p>
+</div></blockquote>
+</li>
+</ol>
+<blockquote>
+<div><p>with the name being this part:</p>
+<blockquote>
+<div>py220yyyymmxxx</div></blockquote>
+</div></blockquote>
+<p>yyyy and mm are the start of the class, and xxx is your initials.</p>
+<p>2. Start by making a repo directory on your development computer. The directory
+should be exactly the same as the name provided by your instructor. For example,
+my repo name would be py220201901akm.</p>
+<p>3. Make your new repo the default directory (using cd) and then clone the
+repo from GitHub as follows. For me I will type:</p>
+<blockquote>
+<div>git clone <a class="reference external" href="mailto:git&#37;&#52;&#48;github&#46;com">git<span>&#64;</span>github<span>&#46;</span>com</a>:UWPCE-PythonCert/py220201901akm.git .</div></blockquote>
+<p>Note the ending period; it must be entered.</p>
+<p>Now you are all set up!</p>
+</div>
+<div class="section" id="part-2-working-on-assignments">
+<h3>Part 2 - Working on assignments<a class="headerlink" href="#part-2-working-on-assignments" title="Permalink to this headline">¶</a></h3>
+<p>Point your editor or IDE at the project directory above. You will
+wee a directory for each lesson, and then in each lesson, one for activities (ungraded)
+and one for assignments (which are graded).</p>
+<p>You will also see a tests directory, that contains automated tests you can run
+that you will use to see if your assignment is complete and ready to submit.
+You can also lint and run coverage tests, but we’re getting to far ahead!</p>
+<p>Remember to create a branch in which to do your work. Then, all you need to do is
+save your work in the correct directory. Remember to commit often, with good
+commit messages.</p>
+</div>
+<div class="section" id="part-3-submitting">
+<h3>Part 3 - Submitting<a class="headerlink" href="#part-3-submitting" title="Permalink to this headline">¶</a></h3>
+<p>When you are ready to submit your work, push your working branch to the remote repo,
+and then create a pull request for master, assigned to your instructor team.</p>
+<p>And that’s it!</p>
+</div>
 </div>
 </div>
 
@@ -207,10 +250,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="office_hours.html" class="btn btn-neutral float-right" title="Office Hours Pre Class" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="grading.html" class="btn btn-neutral float-right" title="Grading" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../index.html" class="btn btn-neutral" title="Lesson content" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="case_study.html" class="btn btn-neutral" title="Case Study : H.P. Norton Furniture Rentals LLC" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
