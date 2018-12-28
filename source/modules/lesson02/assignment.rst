@@ -39,7 +39,7 @@ Requirements:
 -------------
 
 #. Your script needs to deal with data inconsistencies that could make it crash or return incorrect data (handle the exception and issue an error message for these and let the script continue) and issue warnings for missing data. 
-#. Capture you debug work in a text file, you will need that for your submission.
+#. Capture you debug work in a text file called charges_calc.log. You will need that for your submission.
 #. Setup logging messages so that they are disabled by default and can by enabled by using *-d 1* or *--debug 1* from the command line. Use the *argparse* module for this. You will have the following debug levels:
     #. 0: No debug messages or log file.
     #. 1: Only error messages.
@@ -72,8 +72,8 @@ Your submission should include the following:
 
 - Updated version of *charges_calc.py* (keep the same filename).
 - Your Python debugger logfile. Include it as *debugger_log.txt*.
-- Logfile created by running your updated script on the source data.
-- Output JSON file created with the updated script.
+- Logfile created by running your updated script on the source data. Include it as *charges_calc.log*.
+- Output JSON file created with the updated script. Include it as *output.json*.
 
 Tips
 ----

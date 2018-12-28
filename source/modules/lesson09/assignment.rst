@@ -26,7 +26,7 @@ Here is what you need to do:
    root directory.
    Your job is to write a jpg discovery program in Python, using recursion,  
    that works 
-   from a named parent directory provided on the command line.
+   from a parent directory called images provided on the command line.
    The program will take the parent directory as input.
    As output, it will return a list of lists structured like this:
    ["full/path/to/files", ["file1.jpg", "file2.jpg",...], "another/path",[], etc]
