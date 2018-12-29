@@ -31,7 +31,7 @@ So here is our refactoring assignment:
    database and read / display it.
 #. Verify existing unit tests still function correctly.
 #. If necessary, update your tests to show the data is being maintained correctly in the database.
-#. Add code to log all database data changes (adds, amends, deletes).
+#. Add code to log all database data changes (adds, amends, deletes) to a file called db.log.
 
 Be sure to consult the lesson 3 assignment for details of the functionality.
 

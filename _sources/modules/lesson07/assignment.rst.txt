@@ -1,9 +1,6 @@
 ##########
 Assignment
 ##########
-
-.. todo::
-    Provide data for assignment 07 (Andy)
     
 HP Norton is having success with their new computer system written in Python.
 So much success, in fact, that the way they have had some of their systems
@@ -50,7 +47,7 @@ Testing
 Submission
 ----------
 - You will need to submit *linear.py*, *parallel.py*, your brief bullet point notes on 
-  findings and recommendations, and any test files you develop.
+  findings and recommendations called findings.txt, and any test files you develop.
 
 Tips
 ----

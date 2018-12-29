@@ -2,8 +2,6 @@
 Generators
 ##########
 
-{{VIDEO HERE}}
-
 Generators give you an iterator object with no access to the underlying
 data ... if it even exists.  Conceptually, iterators are about various
 ways to loop over data.  They can generate data on the fly.  In general,

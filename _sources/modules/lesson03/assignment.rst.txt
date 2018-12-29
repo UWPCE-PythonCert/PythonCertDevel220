@@ -42,10 +42,10 @@ Note:
         - *update_customer_credit(customer_id, credit_limit)*: This function will search an existing customer by *customer_id* and update their credit limit or raise an exception if the customer does not exist.
         - *list_active_customers()*: This function will return an integer with the number of customers whose status is currently active.
     - Note: You can have other functions and code as required, but the five functions outlined above should be present and using the same amount of parameters. This is important, as those functions are how your code gets integrated into other sections of the project (such as the Web frontend).
-#. Create some functional and unit tests for the model.
+#. Create some functional and unit tests for the model. Store them in the tests directory.
 #. Develop functionality to deliver the requirements listed above.
 #. Develop tests, and show some tests passing. Show other tests failing.
-#. Ensure you application will create an empty database if one doesn't exist when the app is first run.
+#. Ensure you application will create an empty database if one doesn't exist when the app is first run. Call it customers.db
 
 Other requirements:
 ===================
