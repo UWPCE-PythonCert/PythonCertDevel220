@@ -1,6 +1,6 @@
-##########
-Generators
-##########
+##################
+Part 4: Generators
+##################
 
 Generators give you an iterator object with no access to the underlying
 data ... if it even exists.  Conceptually, iterators are about various
