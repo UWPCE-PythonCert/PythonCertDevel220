@@ -2,8 +2,6 @@
 Part 5: Python code
 ###################
 
-{{video 5 here}}
-
 Python code from video
 ----------------------
 
