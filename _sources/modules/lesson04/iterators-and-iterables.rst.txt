@@ -96,6 +96,7 @@ sequences, we can now think in terms of iterables.
 | Let's see an example of how Iteration makes Python code so readable:
 
 .. code-block:: python
+
 |     for x in just\_about\_anything:
 |         do\_stuff(x)
 
@@ -108,6 +109,7 @@ sequences, we can now think in terms of iterables.
   iterator, you can call it with iter:
 
 .. code-block:: python
+
 |    my\_iter = iter(my\_sequence)
 
 | Iterables
@@ -116,6 +118,7 @@ sequences, we can now think in terms of iterables.
   \_\_getitem\_\_ method.
 
 .. code-block:: python
+
 |     class T:
 |         def \_\_getitem\_\_(self, position):
 |             if position > 5:
@@ -130,6 +133,7 @@ sequences, we can now think in terms of iterables.
   the iterator.  The \`\`iter()\`\` function:
 
 .. code-block:: ipython
+
 |     In []: iter([2,3,4])
 |     Out[]: <listiterator at 0x101e01350>
 |     In []: iter("a string")
@@ -140,6 +144,7 @@ sequences, we can now think in terms of iterables.
 | List as an Iterator
 | -------------------
 .. code-block:: ipython
+
 |     In []: a\_list = [1,2,3]
 |     In []: list\_iter = iter(a\_list)
 |     In []: next(list\_iter)
@@ -164,12 +169,14 @@ sequences, we can now think in terms of iterables.
 | The \*non-pythonic\* way to do that is to loop through the indices:
 
 .. code-block:: python
+
 |     for i in range(len(words)-2):
 |         triple = words[i:i+3]
 
 | It works, and is fairly efficient, but what about:
 
 .. code-block:: python
+
 |     for triple in zip(words[:-2], words[1:-1], words[2:-2]):
 
 | zip() returns an iterable --- it does not build up the whole list, so
@@ -183,6 +190,7 @@ sequences, we can now think in terms of iterables.
   more copies:
 
 .. code-block:: python
+
 |     from itertools import islice
 |     triplets = zip(words, islice(words, 1, None), islice(words, 2,
   None))
@@ -201,6 +209,7 @@ sequences, we can now think in terms of iterables.
   following methods:
 
 .. code-block:: python
+
 |     an\_iterator.\_\_iter\_\_()
 | Usually returns the iterator object itself.
 | .. code-block:: python
@@ -237,6 +246,7 @@ sequences, we can now think in terms of iterables.
   <../examples/iterators\_generators/my\_for.py>\`
 
 .. code-block:: python
+
 |     def my\_for(an\_iterable, func):
 |         """
 |         Emulation of a for loop.
