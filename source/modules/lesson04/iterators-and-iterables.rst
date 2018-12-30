@@ -97,8 +97,8 @@ sequences, we can now think in terms of iterables.
 
 .. code-block:: python
 
-|     for x in just\_about\_anything:
-|         do\_stuff(x)
+     for x in just\_about\_anything:
+         do\_stuff(x)
 
 | An iterable is anything that can be looped over sequentially, so it
   does not have to be a "sequence": list, tuple, etc.  For example, a
@@ -110,7 +110,7 @@ sequences, we can now think in terms of iterables.
 
 .. code-block:: python
 
-|    my\_iter = iter(my\_sequence)
+    my\_iter = iter(my\_sequence)
 
 | Iterables
 | ---------
@@ -119,11 +119,10 @@ sequences, we can now think in terms of iterables.
 
 .. code-block:: python
 
-|     class T:
-|         def \_\_getitem\_\_(self, position):
-|             if position > 5:
-|                 raise IndexError
-|             return position
+     class T:
+         def \_\_getitem\_\_(self, position):
+             if position > 5:
+              return position
 
 | iter()
 | ------
@@ -134,92 +133,94 @@ sequences, we can now think in terms of iterables.
 
 .. code-block:: ipython
 
-|     In []: iter([2,3,4])
-|     Out[]: <listiterator at 0x101e01350>
-|     In []: iter("a string")
-|     Out[]: <iterator at 0x101e01090>
-|     In []: iter( ('a', 'tuple') )
-|     Out[]: <tupleiterator at 0x101e01710>
+     In []: iter([2,3,4])
+     Out[]: <listiterator at 0x101e01350>
+     In []: iter("a string")
+     Out[]: <iterator at 0x101e01090>
+     In []: iter( ('a', 'tuple') )
+     Out[]: <tupleiterator at 0x101e01710>
 
-| List as an Iterator
-| -------------------
+List as an Iterator
+-------------------
+
 .. code-block:: ipython
 
-|     In []: a\_list = [1,2,3]
-|     In []: list\_iter = iter(a\_list)
-|     In []: next(list\_iter)
-|     Out[]: 1
-|     In []: next(list\_iter)
-|     Out[]: 2
-|     In []: next(list\_iter)
-|     Out[]: 3
-|     In []: next(list\_iter)
-|     --------------------------------------------------
-|     StopIteration     Traceback (most recent call last)
-|     <ipython-input-15-1a7db9b70878> in <module>()
-|     ----> 1 next(list\_iter)
-|     StopIteration:
+     In []: a\_list = [1,2,3]
+     In []: list\_iter = iter(a\_list)
+     In []: next(list\_iter)
+     Out[]: 1
+     In []: next(list\_iter)
+     Out[]: 2
+     In []: next(list\_iter)
+     Out[]: 3
+     In []: next(list\_iter)
+     --------------------------------------------------
+     StopIteration     Traceback (most recent call last)
+     <ipython-input-15-1a7db9b70878> in <module>()
+     ----> 1 next(list\_iter)
+     StopIteration:
 
-| Use iterators when you can
-| --------------------------
-| Consider the example from the trigrams problem:
-| (http://codekata.com/kata/kata14-tom-swift-under-the-milkwood/)
-| You have a list of words and you want to go through it, three at a
-  time, and match up pairs with the following word.
-| The \*non-pythonic\* way to do that is to loop through the indices:
-
-.. code-block:: python
-
-|     for i in range(len(words)-2):
-|         triple = words[i:i+3]
-
-| It works, and is fairly efficient, but what about:
+Use iterators when you can
+--------------------------
+Consider the example from the trigrams problem:
+(http://codekata.com/kata/kata14-tom-swift-under-the-milkwood/)
+You have a list of words and you want to go through it, three at a
+time, and match up pairs with the following word.
+The \*non-pythonic\* way to do that is to loop through the indices:
 
 .. code-block:: python
 
-|     for triple in zip(words[:-2], words[1:-1], words[2:-2]):
+     for i in range(len(words)-2):
+         triple = words[i:i+3]
 
-| zip() returns an iterable --- it does not build up the whole list, so
+It works, and is fairly efficient, but what about:
+
+.. code-block:: python
+
+     for triple in zip(words[:-2], words[1:-1], words[2:-2]):
+
+  zip() returns an iterable --- it does not build up the whole list, so
   this is quite efficient.  However, we are still slicing: ([1:]), which
   produces a copy --- so we are creating three copies of the list ---
   not so good if memory is tight.  Note that they are shallow copies, so
   this is not terribly bad.  Nevertheless, we can do better.
 
-| The ``itertools`` module has a ``islice()`` (iterable slice)
+ The ``itertools`` module has a ``islice()`` (iterable slice)
   function.  It returns an iterator over a slice of a sequence --- so no
   more copies:
 
 .. code-block:: python
 
-|     from itertools import islice
-|     triplets = zip(words, islice(words, 1, None), islice(words, 2,
+     from itertools import islice
+     triplets = zip(words, islice(words, 1, None), islice(words, 2,
   None))
-|     for triplet in triplets:
-|         print(triplet)
-|     ('this', 'that', 'the')
-|     ('that', 'the', 'other')
-|     ('the', 'other', 'and')
-|     ('other', 'and', 'one')
-|     ('and', 'one', 'more')
+     for triplet in triplets:
+         print(triplet)
+     ('this', 'that', 'the')
+     ('that', 'the', 'other')
+     ('the', 'other', 'and')
+     ('other', 'and', 'one')
+     ('and', 'one', 'more')
 
-| The Iterator Protocol
-| ----------------------
-| The main thing that differentiates an iterator from an iterable
+The Iterator Protocol
+----------------------
+  The main thing that differentiates an iterator from an iterable
   (sequence) is that an iterator saves state.  An iterable must have the
   following methods:
 
 .. code-block:: python
 
-|     an\_iterator.\_\_iter\_\_()
-| Usually returns the iterator object itself.
-| .. code-block:: python
-|     an\_iterator.\_\_next\_\_()
-| Returns the next item from the container. If there are no further
+     an\_iterator.\_\_iter\_\_()
+ Usually returns the iterator object itself.
+
+.. code-block:: python
+     an\_iterator.\_\_next\_\_()
+ Returns the next item from the container. If there are no further
   items it raises the \`\`StopIteration\`\` exception.
 
-| Making an Iterator
-| -------------------
-| A simple version of ``range()``
+Making an Iterator
+-------------------
+A simple version of ``range()``
 
 ::
 
@@ -237,29 +238,29 @@ sequences, we can now think in terms of iterables.
                     raise StopIteration
 
 
-| What does *for* do?
+What does *for* do?
 
-| Now that we know the iterator protocol, we can write something like a
+  Now that we know the iterator protocol, we can write something like a
   for loop:
 
-| :download:\`my\_for.py
+  :download:\`my\_for.py
   <../examples/iterators\_generators/my\_for.py>\`
 
 .. code-block:: python
 
-|     def my\_for(an\_iterable, func):
-|         """
-|         Emulation of a for loop.
-|         func() will be called with each item in an\_iterable
-|         """
-|         # equiv of "for i in l:"
-|         iterator = iter(an\_iterable)
-|         while True:
-|             try:
-|                 i = next(iterator)
-|             except StopIteration:
-|                 break
-|             func(i)
+     def my\_for(an\_iterable, func):
+         """
+         Emulation of a for loop.
+         func() will be called with each item in an\_iterable
+         """
+         # equiv of "for i in l:"
+         iterator = iter(an\_iterable)
+         while True:
+             try:
+                 i = next(iterator)
+             except StopIteration:
+                 break
+             func(i)
 
 Summary
 -------
