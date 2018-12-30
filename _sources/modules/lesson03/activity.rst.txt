@@ -29,12 +29,7 @@ should be, as it's bundled with Python 3. If you are using Windows and you
 get an error revisit the lesson content for instructions on how to install
 sqlite.
 
-Clone the lesson 3 code repo at 
-
-.. TODO: Missing link for lesson 3 code repo
-
-
-although you should already have that from earlier in this lesson.
+Consult the lesson 3 activity directory in your course repo.
 
 Make sure everything runs before proceeding to the next step.
 
