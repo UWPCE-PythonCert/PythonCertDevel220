@@ -261,12 +261,9 @@ sequences, we can now think in terms of iterables.</p>
 <div class="line">Iterators and Iterables</div>
 <div class="line">Let’s see an example of how Iteration makes Python code so readable:</div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">just</span>\<span class="n">_about</span>\<span class="n">_anything</span><span class="p">:</span>
+    <span class="n">do</span>\<span class="n">_stuff</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
-</div>
-<div class="line-block">
-<div class="line">&nbsp;&nbsp;&nbsp; for x in just_about_anything:</div>
-<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; do_stuff(x)</div>
 </div>
 <div class="line-block">
 <div class="line">An iterable is anything that can be looped over sequentially, so it
@@ -278,11 +275,8 @@ string is iterable. So is a set.</div>
 iterable, but not all sequences are iterators. To make a sequence an
 iterator, you can call it with iter:</div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my</span>\<span class="n">_iter</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">my</span>\<span class="n">_sequence</span><span class="p">)</span>
 </pre></div>
-</div>
-<div class="line-block">
-<div class="line">&nbsp;&nbsp; my_iter = iter(my_sequence)</div>
 </div>
 <div class="line-block">
 <div class="line">Iterables</div>
@@ -290,15 +284,11 @@ iterator, you can call it with iter:</div>
 <div class="line">To make an object iterable, you simply have to implement the
 __getitem__ method.</div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">T</span><span class="p">:</span>
+    <span class="k">def</span> \<span class="n">_</span>\<span class="n">_getitem</span>\<span class="n">_</span>\<span class="n">_</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">position</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">position</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">:</span>
+         <span class="k">return</span> <span class="n">position</span>
 </pre></div>
-</div>
-<div class="line-block">
-<div class="line">&nbsp;&nbsp;&nbsp; class T:</div>
-<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; def __getitem__(self, position):</div>
-<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if position &gt; 5:</div>
-<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; raise IndexError</div>
-<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return position</div>
 </div>
 <div class="line-block">
 <div class="line">iter()</div>
@@ -308,115 +298,86 @@ function will make any iterable an iterator.&nbsp; It first looks for the
 __iter__() method, and if none is found, uses get_item to create
 the iterator.&nbsp; The ``iter()`` function:</div>
 </div>
-<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[]:</span> <span class="nb">iter</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span>
+<span class="n">Out</span><span class="p">[]:</span> <span class="o">&lt;</span><span class="n">listiterator</span> <span class="n">at</span> <span class="mh">0x101e01350</span><span class="o">&gt;</span>
+<span class="n">In</span> <span class="p">[]:</span> <span class="nb">iter</span><span class="p">(</span><span class="s2">&quot;a string&quot;</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[]:</span> <span class="o">&lt;</span><span class="n">iterator</span> <span class="n">at</span> <span class="mh">0x101e01090</span><span class="o">&gt;</span>
+<span class="n">In</span> <span class="p">[]:</span> <span class="nb">iter</span><span class="p">(</span> <span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;tuple&#39;</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">Out</span><span class="p">[]:</span> <span class="o">&lt;</span><span class="n">tupleiterator</span> <span class="n">at</span> <span class="mh">0x101e01710</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<div class="line-block">
-<div class="line">&nbsp;&nbsp;&nbsp; In []: iter([2,3,4])</div>
-<div class="line">&nbsp;&nbsp;&nbsp; Out[]: &lt;listiterator at 0x101e01350&gt;</div>
-<div class="line">&nbsp;&nbsp;&nbsp; In []: iter(“a string”)</div>
-<div class="line">&nbsp;&nbsp;&nbsp; Out[]: &lt;iterator at 0x101e01090&gt;</div>
-<div class="line">&nbsp;&nbsp;&nbsp; In []: iter( (‘a’, ‘tuple’) )</div>
-<div class="line">&nbsp;&nbsp;&nbsp; Out[]: &lt;tupleiterator at 0x101e01710&gt;</div>
 </div>
-<div class="line-block">
-<div class="line">List as an Iterator</div>
-<div class="line">——————-</div>
-</div>
-<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span>
+<div class="section" id="list-as-an-iterator">
+<h2>List as an Iterator<a class="headerlink" href="#list-as-an-iterator" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[]:</span> <span class="n">a</span>\<span class="n">_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">In</span> <span class="p">[]:</span> <span class="nb">list</span>\<span class="n">_iter</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">a</span>\<span class="n">_list</span><span class="p">)</span>
+<span class="n">In</span> <span class="p">[]:</span> <span class="nb">next</span><span class="p">(</span><span class="nb">list</span>\<span class="n">_iter</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[]:</span> <span class="mi">1</span>
+<span class="n">In</span> <span class="p">[]:</span> <span class="nb">next</span><span class="p">(</span><span class="nb">list</span>\<span class="n">_iter</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[]:</span> <span class="mi">2</span>
+<span class="n">In</span> <span class="p">[]:</span> <span class="nb">next</span><span class="p">(</span><span class="nb">list</span>\<span class="n">_iter</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[]:</span> <span class="mi">3</span>
+<span class="n">In</span> <span class="p">[]:</span> <span class="nb">next</span><span class="p">(</span><span class="nb">list</span>\<span class="n">_iter</span><span class="p">)</span>
+<span class="o">--------------------------------------------------</span>
+<span class="ne">StopIteration</span>     <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">15</span><span class="o">-</span><span class="mi">1</span><span class="n">a7db9b70878</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span><span class="p">()</span>
+<span class="o">----&gt;</span> <span class="mi">1</span> <span class="nb">next</span><span class="p">(</span><span class="nb">list</span>\<span class="n">_iter</span><span class="p">)</span>
+<span class="ne">StopIteration</span><span class="p">:</span>
 </pre></div>
 </div>
-<div class="line-block">
-<div class="line">&nbsp;&nbsp;&nbsp; In []: a_list = [1,2,3]</div>
-<div class="line">&nbsp;&nbsp;&nbsp; In []: list_iter = iter(a_list)</div>
-<div class="line">&nbsp;&nbsp;&nbsp; In []: next(list_iter)</div>
-<div class="line">&nbsp;&nbsp;&nbsp; Out[]: 1</div>
-<div class="line">&nbsp;&nbsp;&nbsp; In []: next(list_iter)</div>
-<div class="line">&nbsp;&nbsp;&nbsp; Out[]: 2</div>
-<div class="line">&nbsp;&nbsp;&nbsp; In []: next(list_iter)</div>
-<div class="line">&nbsp;&nbsp;&nbsp; Out[]: 3</div>
-<div class="line">&nbsp;&nbsp;&nbsp; In []: next(list_iter)</div>
-<div class="line">&nbsp;&nbsp;&nbsp; ————————————————–</div>
-<div class="line">&nbsp;&nbsp;&nbsp; StopIteration&nbsp;&nbsp;&nbsp;&nbsp; Traceback (most recent call last)</div>
-<div class="line">&nbsp;&nbsp;&nbsp; &lt;ipython-input-15-1a7db9b70878&gt; in &lt;module&gt;()</div>
-<div class="line">&nbsp;&nbsp;&nbsp; —-&gt; 1 next(list_iter)</div>
-<div class="line">&nbsp;&nbsp;&nbsp; StopIteration:</div>
 </div>
-<div class="line-block">
-<div class="line">Use iterators when you can</div>
-<div class="line">————————–</div>
-<div class="line">Consider the example from the trigrams problem:</div>
-<div class="line">(<a class="reference external" href="http://codekata.com/kata/kata14-tom-swift-under-the-milkwood/">http://codekata.com/kata/kata14-tom-swift-under-the-milkwood/</a>)</div>
-<div class="line">You have a list of words and you want to go through it, three at a
-time, and match up pairs with the following word.</div>
-<div class="line">The *non-pythonic* way to do that is to loop through the indices:</div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<div class="section" id="use-iterators-when-you-can">
+<h2>Use iterators when you can<a class="headerlink" href="#use-iterators-when-you-can" title="Permalink to this headline">¶</a></h2>
+<p>Consider the example from the trigrams problem:
+(<a class="reference external" href="http://codekata.com/kata/kata14-tom-swift-under-the-milkwood/">http://codekata.com/kata/kata14-tom-swift-under-the-milkwood/</a>)
+You have a list of words and you want to go through it, three at a
+time, and match up pairs with the following word.
+The *non-pythonic* way to do that is to loop through the indices:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">words</span><span class="p">)</span><span class="o">-</span><span class="mi">2</span><span class="p">):</span>
+    <span class="n">triple</span> <span class="o">=</span> <span class="n">words</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">3</span><span class="p">]</span>
 </pre></div>
 </div>
-<div class="line-block">
-<div class="line">&nbsp;&nbsp;&nbsp; for i in range(len(words)-2):</div>
-<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; triple = words[i:i+3]</div>
-</div>
-<div class="line-block">
-<div class="line">It works, and is fairly efficient, but what about:</div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<p>It works, and is fairly efficient, but what about:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="k">for</span> <span class="n">triple</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">words</span><span class="p">[:</span><span class="o">-</span><span class="mi">2</span><span class="p">],</span> <span class="n">words</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">words</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">]):</span>
+
+ <span class="nb">zip</span><span class="p">()</span> <span class="n">returns</span> <span class="n">an</span> <span class="n">iterable</span> <span class="o">---</span> <span class="n">it</span> <span class="n">does</span> <span class="ow">not</span> <span class="n">build</span> <span class="n">up</span> <span class="n">the</span> <span class="n">whole</span> <span class="nb">list</span><span class="p">,</span> <span class="n">so</span>
+ <span class="n">this</span> <span class="ow">is</span> <span class="n">quite</span> <span class="n">efficient</span><span class="o">.</span>  <span class="n">However</span><span class="p">,</span> <span class="n">we</span> <span class="n">are</span> <span class="n">still</span> <span class="n">slicing</span><span class="p">:</span> <span class="p">([</span><span class="mi">1</span><span class="p">:]),</span> <span class="n">which</span>
+ <span class="n">produces</span> <span class="n">a</span> <span class="n">copy</span> <span class="o">---</span> <span class="n">so</span> <span class="n">we</span> <span class="n">are</span> <span class="n">creating</span> <span class="n">three</span> <span class="n">copies</span> <span class="n">of</span> <span class="n">the</span> <span class="nb">list</span> <span class="o">---</span>
+ <span class="ow">not</span> <span class="n">so</span> <span class="n">good</span> <span class="k">if</span> <span class="n">memory</span> <span class="ow">is</span> <span class="n">tight</span><span class="o">.</span>  <span class="n">Note</span> <span class="n">that</span> <span class="n">they</span> <span class="n">are</span> <span class="n">shallow</span> <span class="n">copies</span><span class="p">,</span> <span class="n">so</span>
+ <span class="n">this</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">terribly</span> <span class="n">bad</span><span class="o">.</span>  <span class="n">Nevertheless</span><span class="p">,</span> <span class="n">we</span> <span class="n">can</span> <span class="n">do</span> <span class="n">better</span><span class="o">.</span>
+
+<span class="n">The</span> <span class="sb">``</span><span class="n">itertools</span><span class="sb">``</span> <span class="n">module</span> <span class="n">has</span> <span class="n">a</span> <span class="sb">``</span><span class="n">islice</span><span class="p">()</span><span class="sb">``</span> <span class="p">(</span><span class="n">iterable</span> <span class="nb">slice</span><span class="p">)</span>
+ <span class="n">function</span><span class="o">.</span>  <span class="n">It</span> <span class="n">returns</span> <span class="n">an</span> <span class="n">iterator</span> <span class="n">over</span> <span class="n">a</span> <span class="nb">slice</span> <span class="n">of</span> <span class="n">a</span> <span class="n">sequence</span> <span class="o">---</span> <span class="n">so</span> <span class="n">no</span>
+ <span class="n">more</span> <span class="n">copies</span><span class="p">:</span>
 </pre></div>
 </div>
-<div class="line-block">
-<div class="line">&nbsp;&nbsp;&nbsp; for triple in zip(words[:-2], words[1:-1], words[2:-2]):</div>
-</div>
-<div class="line-block">
-<div class="line">zip() returns an iterable — it does not build up the whole list, so
-this is quite efficient.&nbsp; However, we are still slicing: ([1:]), which
-produces a copy — so we are creating three copies of the list —
-not so good if memory is tight.&nbsp; Note that they are shallow copies, so
-this is not terribly bad.&nbsp; Nevertheless, we can do better.</div>
-</div>
-<div class="line-block">
-<div class="line">The <code class="docutils literal notranslate"><span class="pre">itertools</span></code> module has a <code class="docutils literal notranslate"><span class="pre">islice()</span></code> (iterable slice)
-function.&nbsp; It returns an iterator over a slice of a sequence — so no
-more copies:</div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>   <span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">islice</span>
+   <span class="n">triplets</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="n">words</span><span class="p">,</span> <span class="n">islice</span><span class="p">(</span><span class="n">words</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="bp">None</span><span class="p">),</span> <span class="n">islice</span><span class="p">(</span><span class="n">words</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span>
+<span class="bp">None</span><span class="p">))</span>
+   <span class="k">for</span> <span class="n">triplet</span> <span class="ow">in</span> <span class="n">triplets</span><span class="p">:</span>
+       <span class="k">print</span><span class="p">(</span><span class="n">triplet</span><span class="p">)</span>
+   <span class="p">(</span><span class="s1">&#39;this&#39;</span><span class="p">,</span> <span class="s1">&#39;that&#39;</span><span class="p">,</span> <span class="s1">&#39;the&#39;</span><span class="p">)</span>
+   <span class="p">(</span><span class="s1">&#39;that&#39;</span><span class="p">,</span> <span class="s1">&#39;the&#39;</span><span class="p">,</span> <span class="s1">&#39;other&#39;</span><span class="p">)</span>
+   <span class="p">(</span><span class="s1">&#39;the&#39;</span><span class="p">,</span> <span class="s1">&#39;other&#39;</span><span class="p">,</span> <span class="s1">&#39;and&#39;</span><span class="p">)</span>
+   <span class="p">(</span><span class="s1">&#39;other&#39;</span><span class="p">,</span> <span class="s1">&#39;and&#39;</span><span class="p">,</span> <span class="s1">&#39;one&#39;</span><span class="p">)</span>
+   <span class="p">(</span><span class="s1">&#39;and&#39;</span><span class="p">,</span> <span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="s1">&#39;more&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="line-block">
-<div class="line">&nbsp;&nbsp;&nbsp; from itertools import islice</div>
-<div class="line">&nbsp;&nbsp;&nbsp; triplets = zip(words, islice(words, 1, None), islice(words, 2,
-None))</div>
-<div class="line">&nbsp;&nbsp;&nbsp; for triplet in triplets:</div>
-<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print(triplet)</div>
-<div class="line">&nbsp;&nbsp;&nbsp; (‘this’, ‘that’, ‘the’)</div>
-<div class="line">&nbsp;&nbsp;&nbsp; (‘that’, ‘the’, ‘other’)</div>
-<div class="line">&nbsp;&nbsp;&nbsp; (‘the’, ‘other’, ‘and’)</div>
-<div class="line">&nbsp;&nbsp;&nbsp; (‘other’, ‘and’, ‘one’)</div>
-<div class="line">&nbsp;&nbsp;&nbsp; (‘and’, ‘one’, ‘more’)</div>
 </div>
-<div class="line-block">
-<div class="line">The Iterator Protocol</div>
-<div class="line">———————-</div>
-<div class="line">The main thing that differentiates an iterator from an iterable
+<div class="section" id="the-iterator-protocol">
+<h2>The Iterator Protocol<a class="headerlink" href="#the-iterator-protocol" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div>The main thing that differentiates an iterator from an iterable
 (sequence) is that an iterator saves state.&nbsp; An iterable must have the
-following methods:</div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+following methods:</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="n">an</span>\<span class="n">_iterator</span><span class="o">.</span>\<span class="n">_</span>\<span class="n">_iter</span>\<span class="n">_</span>\<span class="n">_</span><span class="p">()</span>
+<span class="n">Usually</span> <span class="n">returns</span> <span class="n">the</span> <span class="n">iterator</span> <span class="nb">object</span> <span class="n">itself</span><span class="o">.</span>
 </pre></div>
 </div>
-<div class="line-block">
-<div class="line">&nbsp;&nbsp;&nbsp; an_iterator.__iter__()</div>
-<div class="line">Usually returns the iterator object itself.</div>
-<div class="line">.. code-block:: python</div>
-<div class="line">&nbsp;&nbsp;&nbsp; an_iterator.__next__()</div>
-<div class="line">Returns the next item from the container. If there are no further
-items it raises the ``StopIteration`` exception.</div>
 </div>
-<div class="line-block">
-<div class="line">Making an Iterator</div>
-<div class="line">——————-</div>
-<div class="line">A simple version of <code class="docutils literal notranslate"><span class="pre">range()</span></code></div>
-</div>
+<div class="section" id="making-an-iterator">
+<h2>Making an Iterator<a class="headerlink" href="#making-an-iterator" title="Permalink to this headline">¶</a></h2>
+<p>A simple version of <code class="docutils literal notranslate"><span class="pre">range()</span></code></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">IterateMe_1</span><span class="p">:</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stop</span><span class="o">=</span><span class="mi">5</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">current</span> <span class="o">=</span> <span class="mi">0</span>
@@ -431,34 +392,27 @@ items it raises the ``StopIteration`` exception.</div>
             <span class="k">raise</span> <span class="ne">StopIteration</span>
 </pre></div>
 </div>
-<div class="line-block">
-<div class="line">What does <em>for</em> do?</div>
-</div>
-<div class="line-block">
-<div class="line">Now that we know the iterator protocol, we can write something like a
-for loop:</div>
-</div>
-<div class="line-block">
-<div class="line">:download:`my_for.py
-&lt;../examples/iterators_generators/my_for.py&gt;`</div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<p>What does <em>for</em> do?</p>
+<blockquote>
+<div><p>Now that we know the iterator protocol, we can write something like a
+for loop:</p>
+<p>:download:`my_for.py
+&lt;../examples/iterators_generators/my_for.py&gt;`</p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">my</span>\<span class="n">_for</span><span class="p">(</span><span class="n">an</span>\<span class="n">_iterable</span><span class="p">,</span> <span class="n">func</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Emulation of a for loop.</span>
+<span class="sd">    func() will be called with each item in an\_iterable</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># equiv of &quot;for i in l:&quot;</span>
+    <span class="n">iterator</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">an</span>\<span class="n">_iterable</span><span class="p">)</span>
+    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">i</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">iterator</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">StopIteration</span><span class="p">:</span>
+            <span class="k">break</span>
+        <span class="n">func</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 </pre></div>
-</div>
-<div class="line-block">
-<div class="line">&nbsp;&nbsp;&nbsp; def my_for(an_iterable, func):</div>
-<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “”“</div>
-<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Emulation of a for loop.</div>
-<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; func() will be called with each item in an_iterable</div>
-<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “”“</div>
-<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # equiv of “for i in l:”</div>
-<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; iterator = iter(an_iterable)</div>
-<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; while True:</div>
-<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; try:</div>
-<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; i = next(iterator)</div>
-<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; except StopIteration:</div>
-<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break</div>
-<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; func(i)</div>
 </div>
 </div>
 <div class="section" id="summary">
