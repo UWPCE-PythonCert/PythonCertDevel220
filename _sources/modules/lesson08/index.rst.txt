@@ -10,7 +10,6 @@ Lesson 8 : Functional Techniques
     closures
     currying
     itertools
-    activity.rst
     ssignment
     office_hours_recaps
     office_hours_all

@@ -250,6 +250,3 @@ data, but other code, e.g. transforming a class at the time when it is
 instantiated. In the example above, our metaclass adds a new method
 automatically to new classes that we define to use our metaclass as their
 metaclass.
-
-
-
