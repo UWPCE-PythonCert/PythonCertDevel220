@@ -3,7 +3,8 @@ Activity
 ########
 
 Spend time using any of the modules or techniques referenced in this
-lesson. The ones below are of particular interest. Please choose one to get ready to demo it:
+lesson. The ones below are of particular interest. Please choose one to get ready to demo
+to the class, or your instructor:
 
 -  Explore code-only performance improvement strategies such as
    memoization.

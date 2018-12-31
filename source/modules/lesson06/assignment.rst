@@ -12,10 +12,10 @@ Here is what you need to do:
 1. The assignment repository for this lesson contains a file with 1 million records
    and a module that reads that file.
 2. The module is badly written and probably can be made to run more quickly and
-   efficiently.
+   efficiently!
 3. You will look at the code and may immediately form a judgment about where
    performance can be improved. Do not be tempted to make immediate changes!
-4. Be sure to use an evidence based approach, and show with data how you were able
+4. Be sure to use an evidence based approach, and show, with data, how you were able
    to make improvements.
 5. Rewrite the module to improve performance. Provide evidence to demonstrate
    the improvement. 
