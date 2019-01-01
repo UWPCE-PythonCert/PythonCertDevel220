@@ -25,8 +25,6 @@ new pull request for any missing elements.
 
 Factors that influence grading:
 -------------------------------
-Mandatory 80% attendance at class (class room only).
-80% assignments rated as Satisfactory: 70%.
-Participation in lessons, including at least one demo of functionality to the cohort: 30%
-
-.. TODO: See if grading rubric from course 1 can be incorporated.
+80% attendance at class (class room only).
+Assignments  75%
+Quizzes 25%

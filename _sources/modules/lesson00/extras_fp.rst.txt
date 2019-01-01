@@ -3,7 +3,7 @@ Functional Programming
 ######################
 
 Functional programming, or at least, the use of functional programming
-techniques, has become quite common in Python. 
+techniques, has become quite common in Python.
 
 On this course we will learn some of these techniques. And you may have heard about
 them, too in the last lesson of the first course.
@@ -11,7 +11,7 @@ them, too in the last lesson of the first course.
 Here are some articles you may wish to read to help you become familiar
 with the background to functional programming.
 
-Dont think you need to learn or even understand this right now; this is just some background 
+Don't think you need to learn or even understand this right now; this is just some background
 material, knowledge of which will help you later in the class.
 
 * https://docs.python.org/3/howto/functional.html
