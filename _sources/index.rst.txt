@@ -7,14 +7,12 @@ This site holds many of the materials for the University of Washington Professio
 
 https://www.pce.uw.edu/certificates/python-programming
 
-This site can be thought of as the textbook for the first second class in the UW Python Certificate. It contains notes about the topics covered in the classes, programming exercises, supplemental materials about setting up a development environment, and assorted references about Python-related topics.
+This site is a self-grading workbook for the second course in the UW Python Certificate. It contains notes about the topics covered in the classes, programming exercises, supplemental materials about setting up a development environment, and assorted references about Python-related topics.
 
 .. toctree::
     :maxdepth: 1
 
     modules/index
-    references/index
-    quiz/index
 
 
 Example Code
