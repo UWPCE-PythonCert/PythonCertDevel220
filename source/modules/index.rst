@@ -21,10 +21,6 @@ Py220: Advanced Python Programming
     lesson10/index
     ../quiz/index
 
-.. todo::
-    #. Add tags to indicate material to be used in LMS for video context ({{LMS START}}, {{LMS END}})
-    #. Be sure all lesson inter-dependencies are OK given class resequence (A+L)
-
 See the Canvas or EdX instance for your class for the full lesson descriptions.
 
 

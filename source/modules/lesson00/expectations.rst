@@ -1,6 +1,6 @@
-============
+############
 Expectations
-============
+############
 
 What does success on this class look like?
 ==========================================
@@ -9,10 +9,7 @@ For classroom, the usual 80% attendance is required. Contact your instructor as
 soon as possible if you have any special circumstances that will prevent you from meeting this requirement.
 
 For all class delivery methods you will need to achieve a pass rate of 80%
-for the class assignments and quizzes. See the grading rubric for more details.
-
-.. _grading-rubric:
-    grading
+for the class assignments and quizzes. See the grading rubric on Canvas for more details.
 
 Also, most lessons include ungraded activities. This is work
 that you can do to help you improved your understanding and apply the concepts learned. Although
