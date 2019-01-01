@@ -15,13 +15,6 @@ This site is a self-grading workbook for the second course in the UW Python Cert
     modules/index
 
 
-Example Code
-============
-
-Assorted Example code can be found in the repository here (but most of it should be provided to you by your instructors in the class repository or other sources)
-
-`Examples <https://github.com/UWPCE-PythonCert/PythonCertDevel220/tree/master/source/examples>`_
-
 About this Site
 ===============
 
@@ -35,10 +28,3 @@ https://github.com/UWPCE-PythonCert/PythonCertDevel220
 
 Readers are encouraged to report omissions, typos, or make suggestions for improvements via issues and pull requests on that repository.
 
-
-All To Dos
-==========
-
-Remaining work for this class.
-
-.. todolist::
