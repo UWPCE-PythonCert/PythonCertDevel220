@@ -151,7 +151,7 @@ Running our tests produces:
     FAILED (failures#2)
 
 Each test that failed is represented by an "F" at the top of the output.
-If were running multiple tests, with some passes and some failures, then
+If we are running multiple tests, with some passes and some failures, then
 we would see a mix of "."s and "F"s at the top of the output. In this
 case, we ran two tests and both failed. If our code fails \ *any* tests,
 then we will also see the word "FAILED" at the bottom of the output,
@@ -201,8 +201,8 @@ that our code is working as expected once again.
 
         @staticmethod
         def calc(operand):
-            return operand**2        # OLD
-            return operand**operand  # BAD
+            #return operand**2        # OLD
+            #return operand**operand  # BAD
             return operand*operand   # This should work
 
 .. raw:: html
