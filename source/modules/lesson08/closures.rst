@@ -3,8 +3,6 @@ Closures
 ########
 
 
-{{VIDEO HERE}}
-
    The venerable master Qc Na was walking with his student, Anton.
    Hoping to prompt the master into a discussion, Anton said "Master, I
    have heard that objects (and classes) are a very good thing. Is this

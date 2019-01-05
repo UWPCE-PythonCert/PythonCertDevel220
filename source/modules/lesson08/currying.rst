@@ -4,7 +4,6 @@ Currying
 
 https://rriehle.github.io/FP3/build/html/index.html#currying
 
-{{VIDEO HERE}}
 
 .. raw:: html
 
