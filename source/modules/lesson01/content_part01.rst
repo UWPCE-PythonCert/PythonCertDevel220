@@ -30,7 +30,7 @@ engineering:
 -  Writing testable code: not all styles of code writing lend themselves
    to automated testing. Fortunately, many strategies for making code
    more testable also make it easier to maintain. One such method is
-   called \ *dependency injection*.
+   called *dependency injection*.
 -  Unit tests vs. integration tests: testing each piece of your software
    individually vs testing it as a whole. If you only test your software
    as a whole, then when you find unexpected/broken behavior it may become difficult to

@@ -3,7 +3,7 @@ Assignment
 ##########
 
 Welcome to the HP Norton Project! The first thing our development team is trying to accomplish is to improve some of Norton Furniture's existing code. Your first assignment will
-be to look at a prototype inventory management system they had been working on internally, align the code to the best practices outlined in PEP8 and implement both unit and integration testing.   
+be to look at a prototype inventory management system they had been working on internally, align the code to the best practices outlined in PEP8 and implement both unit and integration testing.
 
 Here is what you need to do:
 ----------------------------
@@ -16,21 +16,21 @@ Here is what you need to do:
         python -m pylint ./inventory_management
 
 #. Fix all of the issues reported by Pylint up to the point where Pylint gives the code a grade of 10.
-#. Create a file called *unit_tests.py* that will be outside of the *inventory_management* directory. You will need to add unit tests for all classes in the inventory management system to this file.
-#. Run coverage analysis on the *inventory_management* code using *unit_tests.py*. Coverage must be 90% or higher for each individual file. Use the following commands.
+#. Create a file called *test_unit.py* that will be outside of the *inventory_management* directory. You will need to add unit tests for all classes in the inventory management system to this file.
+#. Run coverage analysis on the *inventory_management* code using *test_unit.py*. Coverage must be 90% or higher for each individual file. Use the following commands.
     - Coverage run:
         .. code-block:: python
 
-            python -m coverage run --source=inventory_management -m unittest unit_tests.py
-            
+            python -m coverage run --source=inventory_management -m unittest test_unit.py
+
     - Coverage report:
         .. code-block:: python
 
             python -m coverage report
 
-        Update *unit_tests.py* as required to attain 90% coverage.
+        Update *test_unit.py* as required to attain 90% coverage.
 
-#. Create a file called *integration_test.py*.
+#. Create a file called *test_integration.py*.
 
 Other requirements:
 -------------------
@@ -47,4 +47,4 @@ Passing pylint, unit and integration tests and coverage analysis should be enoug
 
 Submission
 ----------
-You will need to submit the *inventory_management* folder will all your improvements, as well as the *unit_tests.py* and *integration_test.py* files.
+You will need to submit the *inventory_management* folder will all your improvements, as well as the *test_unit.py* and *test_integration.py* files.
