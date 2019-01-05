@@ -29,7 +29,7 @@ For example, you might produce:
 
     Below is my debugging log:
     $ python -m pdb recursive.py
-    > c:\users\jschilz\onedrive\py300\debugging\recursive.py(1)<module>()
+    > c/users/jschilz/onedrive/py300/debugging/recursive.py(1)<module>()
     -> import sys
     (Pdb) ll
      1 -> import sys
@@ -46,7 +46,7 @@ For example, you might produce:
      12 n = int(sys.argv[1])
      13 print(my_fun(n))
     (Pdb) n
-    > c:\users\jschilz\onedrive\py300\debugging\recursive.py(4)<module>()
+    > /users/jschilz/onedrive/py300/debugging/recursive.py(4)<module>()
     -> def my_fun(n):
     (Pdb)
 

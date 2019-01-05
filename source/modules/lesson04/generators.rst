@@ -25,7 +25,7 @@ yield
   It \*does\* 'return' a value, but rather than ending execution of the
   function, it preserves function state so that it can pick up where it
   left off.  In other words, state is preserved between yields.
-| A function with \`\`yield\`\`  in it is a factory for a generator. 
+| A function with ``yield``  in it is a factory for a generator. 
   Each time you call it, you get a new generator:
 
 ::

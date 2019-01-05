@@ -48,7 +48,7 @@ And that is getting ugly, and hard to get right.
 Handling General Resources
 --------------------------
 
-| 
+|
 | Leaving an open file handle laying around is bad enough. What if the
   resource is a network connection, or a database cursor?  Starting in
   version 2.5, Python provides a structure for reducing the repetition
@@ -69,7 +69,7 @@ Handling General Resources
  
 
 The 'open' builtin is defined as a context manager.  The resource it
-returns (file\_handle) is automatically and reliably closed when the
+returns (file_handle) is automatically and reliably closed when the
 code block ends.
 
 At this point in Python history, many functions you might expect to
@@ -114,7 +114,7 @@ two more of the nifty python special methods.
 
         __enter__()
 
-| 
+|
 | Called when the with statement is run, it should return something to
   work with in the created context.
 
@@ -126,7 +126,7 @@ two more of the nifty python special methods.
 
  
 
-| 
+|
 | Clean-up that needs to happen is implemented here.  The arguments will
   be the exception raised in the context.  If the exception will be
   handled here, return True. If not, return False.  Let's see this in
@@ -180,7 +180,7 @@ help clarify the order in which things happen:
 
  
 
-Because the \_\_exit\_\_ method returns True, the raised error is
+Because the __exit__ method returns True, the raised error is
 handled.
 
 What if we try with False?
@@ -212,16 +212,16 @@ So this time, the context manager did not catch the error -- so it was
 raised in the usual way.  In real life, a context manager could have
 pretty much any error raised in its context. And the context manager
 will likely only be able to properly handle particular exceptions -- so
-the \_\_exit\_\_ method takes all the information about the exception as
+the __exit__ method takes all the information about the exception as
 parameters:
 
-    def \_\_exit\_\_(self, exc\_type, exc\_val, exc\_tb)
+    def __exit__(self, exc_type, exc_val, exc_tb)
 
-    exc\_type: the type of the Exception
+    exc_type: the type of the Exception
 
-    exc\_val: the value of the Exception
+    exc_val: the value of the Exception
 
-    exc\_tb: the Exception Traceback object
+    exc_tb: the Exception Traceback object
 
 The type of exception lets you check if this is an excpetion you know how to handle::
 
@@ -247,7 +247,7 @@ https://docs.python.org/3/library/traceback.html
 The contextmanager decorator
 ----------------------------
 
-| 
+|
 | Similar to writing iterable classes, there's a fair bit of bookkeeping
   involved. It turns out you can take advantage of generator functions
   to do the bookkeeping for you.  contextlib.contextmanager() will turn
@@ -283,13 +283,13 @@ similar results. We can handle errors:
 |         ....: print("in the context")
 |         ....: raise RuntimeError("error raised")
 |         ....:
-|     \_\_init\_\_ code here
-|     \_\_enter\_\_ code goes here
+|     __init__ code here
+|     __enter__ code goes here
 |     in the context
 |     errors handled here
-|     \_\_exit\_\_ cleanup goes here
+|     __exit__ cleanup goes here
 
-| 
+|
 | Or, we can allow them to propagate:
 
  

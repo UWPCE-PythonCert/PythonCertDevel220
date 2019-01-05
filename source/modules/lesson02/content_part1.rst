@@ -41,14 +41,14 @@ run simple.py. Let's run it in python:
     ZeroDivisionError: division by zero
 
 As you might have expected, we get a ZeroDivisionError! At some point,
-for some value of \ *i*, the instruction 100\ * / (50 - i)* causes our
+for some value of *i*, the instruction 100 * / (50 - i)* causes our
 program to attempt to divide by zero.
 
-I'm sure that you can see what value of \ *i* would cause this problem,
+I'm sure that you can see what value of *i* would cause this problem,
 but let's pretend that we didn't know, and we were trying to figure it
 out. If you had no better tools, you might try to investigate this
 problem by adding print statements to the loop. You could print out the
-value of \ *i* just before the problem-fraught division statement. Make
+value of *i* just before the problem-fraught division statement. Make
 the following modification to simple.py:
 
 .. code:: Python

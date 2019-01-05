@@ -9,13 +9,13 @@ Closures
    Hoping to prompt the master into a discussion, Anton said "Master, I
    have heard that objects (and classes) are a very good thing. Is this
    true?" Qc Na looked pityingly at his student and replied, "Foolish
-   pupil! Objects are merely a poor man's closures."\*
+   pupil! Objects are merely a poor man's closures."
    Chastised, Anton took his leave from his master and returned to his
    cell, intent on studying closures. He carefully read the entire
    "Lambda: The Ultimate..." series of papers and its cousins, and
    implemented a small Scheme interpreter with a closure-based object
    system. He learned much, and looked forward to informing his master
-   of his progress.\*
+   of his progress.
    On his next walk with Qc Na, Anton attempted to impress his master by
    saying "Master, I have diligently studied the matter, and now
    understand that objects are truly a poor man's closures." Qc Na
@@ -31,7 +31,7 @@ programming enlightenment? Let's continue to compare and contrast
 closures with objects.
 
 -  Objects have methods.
--  Closures \*are\* methods --- they are defined and behave like
+-  Closures *are* methods --- they are defined and behave like
    functions, but like object methods they carry and internal state and
    take it into account when returning results.
 -  Objects can, and generally do, carry a mutable state.
@@ -44,7 +44,7 @@ closures with objects.
    state, internal attributes, this is the opposite of the default
    behavior of an object. In accordance with Python's Consenting Adults
    policy, a closure's internal state is still accessible via its
-   \__closure__() dunder, but this violates the spirit of a closure ---
+   __closure__() dunder, but this violates the spirit of a closure ---
    so do so at your own risk.
 
 Thus, objects (or classes) and closures are similar, but they are not

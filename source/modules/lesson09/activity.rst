@@ -2,8 +2,6 @@
 Activity
 ########
 
-.. todo::
-  This activity belongs to context managers, this lesson is on functional programming
 
 The `Ballard Lockes <https://en.wikipedia.org/wiki/Ballard_Locks>`__ in
 Seattle, Washington, are a limited, controlled resource. You have been
