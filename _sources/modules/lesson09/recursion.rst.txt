@@ -2,8 +2,6 @@
 Recursion
 #########
 
-{{VIDEO HERE}}
-
 Recursion is where a function or method calls itself, either directly or
 indirectly. When directly, the function simply calls itself from within
 itself. When indirectly, the more advanced scenario, it is called by

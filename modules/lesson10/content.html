@@ -29,7 +29,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Assignment" href="assignment.html" />
-    <link rel="prev" title="Introduction" href="introduction.html" /> 
+    <link rel="prev" title="Lesson 10 : Metaprogramming" href="index.html" /> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -96,8 +96,6 @@
 <li class="toctree-l3"><a class="reference internal" href="../lesson08/index.html">Lesson 8 : Functional Techniques</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../lesson09/index.html">Lesson 9 : Advanced Python language constructs</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="index.html">Lesson 10 : Metaprogramming</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="prerequisites.html">Prerequisites</a></li>
-<li class="toctree-l4"><a class="reference internal" href="introduction.html">Introduction</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">Content</a></li>
 <li class="toctree-l4"><a class="reference internal" href="assignment.html">Assignment</a></li>
 </ul>
@@ -176,72 +174,6 @@
             
   <div class="section" id="content">
 <h1>Content<a class="headerlink" href="#content" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="why-metaprogramming">
-<h2>Why metaprogramming?<a class="headerlink" href="#why-metaprogramming" title="Permalink to this headline">¶</a></h2>
-<p>Developers are always looking for ways to make the development process
-faster, while developing better quality code that is easier to understand,
-test and maintain.
-Metaprogramming allows a program to modify itself, effectively adding
-functionality that another developer using that functionality will get
-“for free”. Remember the lesson on relational databases, using PeeWee?
-Remember how certain functionality appeared without us having to do anything?
-That was metaprogramming working for us.</p>
-<p>Now, metaprogramming is another of those techniques, like OO and functional
-programming, that requires a shift in mindset to really make it work
-effectively. Understanding the syntax is one thing; understanding the right
-way to apply the syntax is another altogether.</p>
-<p>In this lesson we will certainly cover the syntax, and you will start to
-understand how metaprogramming works. But you may feel lost or confused
-about why you would even want to use this technique. For now, as long as you
-understand the syntax, that is the minimum necessary. Then, later, you
-should be able to spot development problems for which metaprogramming is
-a good solution. That’s great! Then you work out how, maybe with the help of
-books or another developer.</p>
-<p>So let’s get started. But before we launch into metaprogramming itself, it’s
-important you understand the concept of namespaces.</p>
-</div>
-<div class="section" id="namespaces">
-<h2>Namespaces<a class="headerlink" href="#namespaces" title="Permalink to this headline">¶</a></h2>
-<p>Python makes great use of namespaces. Namespaces can be thought of as
-sections of a program, such as classes, functions and modules, in which
-variables live and retain their values. They are thus places in which
-variable names are valid and in scope.</p>
-<p>Many of these namespaces (class instances, etc) are stored
-internally as Python dictionaries, which makes it very easy to introspect
-and manipulate the names in objects. And that is a hint that will help you
-to start to understand metaprogramming.</p>
-<p>{{VIDEO HERE}}</p>
-</div>
-<div class="section" id="metaprogamming">
-<h2>Metaprogamming<a class="headerlink" href="#metaprogamming" title="Permalink to this headline">¶</a></h2>
-<p>Metaprogramming is the process of writing programs that write programs;
-that is, programs that manipulate the code objects themselves. Python
-provides a number of tools that allow introspection, or determining the
-nature of objects at runtime, as well as tools to change code at runtime.
-These are the tools of metaprogramming.</p>
-</div>
-<div class="section" id="video-here">
-<h2>{{VIDEO HERE}}<a class="headerlink" href="#video-here" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="class-objects">
-<h2>Class Objects<a class="headerlink" href="#class-objects" title="Permalink to this headline">¶</a></h2>
-<p>Classes are how you create custom types in Python. If you want to
-manipulate how classes work and are created, you need to have a
-understanding of how class objects themselves are put together.</p>
-</div>
-<div class="section" id="id1">
-<h2>{{VIDEO HERE}}<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="metaclasses">
-<h2>Metaclasses<a class="headerlink" href="#metaclasses" title="Permalink to this headline">¶</a></h2>
-<p>Metaprogramming is writing programs that create programs, so metaclasses
-are classes that make classes.&nbsp;&nbsp;Here’s another way to think about it:</p>
-<p>Objects get created from classes. So what is the class of a class?</p>
-<p>The class of a Class is a metaclass.</p>
-</div>
-<div class="section" id="id2">
-<h2>{{VIDEO HERE}}<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-</div>
 <div class="section" id="quick-recap">
 <h2>Quick Recap<a class="headerlink" href="#quick-recap" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="how-do-metaclasses-work">
@@ -400,7 +332,7 @@ metaclass.</p>
         <a href="assignment.html" class="btn btn-neutral float-right" title="Assignment" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="introduction.html" class="btn btn-neutral" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral" title="Lesson 10 : Metaprogramming" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

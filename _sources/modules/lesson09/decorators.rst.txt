@@ -2,9 +2,6 @@
 Decorators
 ##########
 
-{{VIDEO HERE}}
-
- 
 
 Functions are things that generate values based on arguments. In Python,
 functions are first-class objects. This means that you can bind names to
@@ -21,7 +18,7 @@ functions as values.
                 return "I'm not that other function"
             return new_function
 
-| 
+|
 | There are many things you can do with a simple pattern like this, so
   many, that we give it a special name: a Decorator.
 
@@ -55,7 +52,7 @@ module with a number of functions like this one:
 
  
 
-| 
+|
 | That is not particularly nice, especially if you have lots of
   functions
 | in your module. Now imagine we defined the following, more generic
@@ -101,7 +98,7 @@ Then, where we want to see the results, we can use the logged version:
              Result --> 7
         Out[]: 7
 
-| 
+|
 | This is nice, but we must now call the new function wherever we
   originally called the old one. It would be nicer if we could just call
   the old function and have it log. Remembering that you can easily
