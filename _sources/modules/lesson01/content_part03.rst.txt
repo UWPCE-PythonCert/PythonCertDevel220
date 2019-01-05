@@ -15,7 +15,7 @@ solution that you could come up with:
    a few seconds to find out whether I've broken it or not.
 -  I could make a habit of running this test script every time I make a
    change to Squarer. If I have a colleague who is working on the
-   Squarer class, then they should run the script whenever \ *they* make
+   Squarer class, then they should run the script whenever *they* make
    a change to Squarer. In this way, we'll know right away if we've
    introduced an error into Squarer.
 
@@ -36,7 +36,7 @@ Here's a suitable test script:
         @staticmethod
         def test_positive_numbers():
 
-            squares # {
+            squares = {
                 1: 1,
                 2: 4,
                 3: 9,
@@ -45,9 +45,9 @@ Here's a suitable test script:
             }
 
             for num, square in squares.items():
-                result # Squarer.calc(num)
+                result = Squarer.calc(num)
 
-                if result !# square:
+                if result != square:
                     print("Squared {} and got {} but expected {}".format(num, result, square))
         @staticmethod
         def test_negative_numbers():
@@ -61,12 +61,12 @@ Here's a suitable test script:
             }
 
             for num, square in squares.items():
-                result # Squarer.calc(num)
+                result = Squarer.calc(num)
 
-                if result !# square:
+                if result != square:
                     print("Squared {} and got {} but expected {}".format(num, result, square))
 
-    if __name__ ## "__main__":
+    if __name__ == "__main__":
         SquarerTest.test_positive_numbers()
         SquarerTest.test_negative_numbers()
 
@@ -74,9 +74,9 @@ Here's a suitable test script:
 
    </div>
 
-The SquarerTest class has two static methods: test\_positive\_numbers
-and test\_negative\_numbers. I'll explain the test\_positive\_numbers
-method, and the test\_negative\_numbers method is nearly identical.
+The SquarerTest class has two static methods: test_positive_numbers
+and test_negative_numbers. I'll explain the test_positive_numbers
+method, and the test_negative_numbers method is nearly identical.
 
 The goal of this script is to define the expected behavior of Squarer
 and test Squarer against that expected behavior. So we begin by creating
@@ -101,7 +101,7 @@ a dictionary that defines that behavior:
 
    </div>
 
-Each \ *key* in this dictionary is a number. The corresponding \ *value*
+Each *key* in this dictionary is a number. The corresponding *value*
 is the value that we expect Squarer to produce when we square the key.
 So one of the key/value pairs that we are testing is 12 and 144:
 squaring 12 should produce 144.
@@ -116,9 +116,9 @@ Next we iterate through these number, square pairs:
 ::
 
         for num, square in squares.items():
-            result # Squarer.calc(num)
+            result = Squarer.calc(num)
 
-            if result !# square:
+            if result != square:
                 print("Squared {} and got {} but expected {}\n".format(num, result, square))
 
 .. raw:: html

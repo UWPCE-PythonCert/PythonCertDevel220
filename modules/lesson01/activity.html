@@ -187,18 +187,18 @@ repository.</p>
 <div class="section" id="your-goals">
 <h2>Your goals:<a class="headerlink" href="#your-goals" title="Permalink to this headline">¶</a></h2>
 <p>Note that all of the command examples below should be run from inside
-the project root which contains the <em>unit-test.py</em>
-and&nbsp;<em>integration-test.py</em> files.</p>
+the project root which contains the <em>test_unit.py</em>
+and <em>test_integration.py</em> files.</p>
 <ol class="arabic simple">
-<li>Provide a <em>MultiplierTests</em> and&nbsp;<em>DividerTests</em> test classes in
-the&nbsp;<em>unit-test.py</em> file.</li>
-<li><em>python -m unittest unit-test.py</em>&nbsp;and&nbsp;<em>python -m unittest
-integration-test.py</em>&nbsp;should have no failures.</li>
-<li>Running&nbsp;<em>coverage</em> run –source=calculator -m unittest unit-test.py;
-coverage report**&nbsp;<a href="#id1"><span class="problematic" id="id2">*</span></a>shows 90%+ coverage..</li>
-<li>Satisfy the linter such that&nbsp;<em>pylint calculator</em>&nbsp;gives no errors
+<li>Provide a <em>MultiplierTests</em> and <em>DividerTests</em> test classes in
+the <em>test_unit.py</em> file.</li>
+<li><em>python -m unittest test_unit.py</em> &nbsp;and&nbsp;<em>python -m unittest
+test_integration.py</em>&nbsp;should have no failures.</li>
+<li>Running <em>coverage</em> run –source=calculator -m unittest test_unit.py;
+coverage report* *&nbsp;* shows 90%+ coverage..</li>
+<li>Satisfy the linter such that <em>pylint calculator</em>&nbsp;gives no errors
 and <em>flake8 calculator</em>&nbsp;gives no errors.&nbsp;You can achieve this by some
-combination of editing your code and editing the&nbsp;<em>.pylintrc</em> file
+combination of editing your code and editing the <em>.pylintrc</em> file
 to ignore certain&nbsp;violations</li>
 </ol>
 <p>Prepare the results, and prepare to demo them!</p>

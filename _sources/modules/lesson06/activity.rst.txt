@@ -10,7 +10,7 @@ to the class, or your instructor:
    memoization.
 -  Explore / demo cProfile side by side with PyCharm’s built-in profilers.
 -  Explore / demo Python’s
-   memory\_profiler. \ https://pypi.python.org/pypi/memory_profiler
+   memory_profiler. \ https://pypi.python.org/pypi/memory_profiler
 -  Use PyPy as the runtime interpreter for code developed by students
    during the curriculum.
 -  Play with Cython and the Great Circle code!

@@ -193,53 +193,53 @@ few seconds, so when I make a change to Squarer it will only take me
 a few seconds to find out whether I’ve broken it or not.</li>
 <li>I could make a habit of running this test script every time I make a
 change to Squarer. If I have a colleague who is working on the
-Squarer class, then they should run the script whenever&nbsp;<em>they</em> make
+Squarer class, then they should run the script whenever <em>they</em> make
 a change to Squarer. In this way, we’ll know right away if we’ve
 introduced an error into Squarer.</li>
 </ul>
 <p>Here’s a suitable test script:</p>
 <div
-style#"background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span># test.py
-from squarer import Squarer
+style#"background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># test.py</span>
+<span class="kn">from</span> <span class="nn">squarer</span> <span class="k">import</span> <span class="n">Squarer</span>
 
-class SquarerTest(object):
+<span class="k">class</span> <span class="nc">SquarerTest</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
-    @staticmethod
-    def test_positive_numbers():
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">test_positive_numbers</span><span class="p">():</span>
 
-        squares # {
-            1: 1,
-            2: 4,
-            3: 9,
-            12: 144,
-            100: 10000,
-        }
+        <span class="n">squares</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="mi">1</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="mi">2</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+            <span class="mi">3</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span>
+            <span class="mi">12</span><span class="p">:</span> <span class="mi">144</span><span class="p">,</span>
+            <span class="mi">100</span><span class="p">:</span> <span class="mi">10000</span><span class="p">,</span>
+        <span class="p">}</span>
 
-        for num, square in squares.items():
-            result # Squarer.calc(num)
+        <span class="k">for</span> <span class="n">num</span><span class="p">,</span> <span class="n">square</span> <span class="ow">in</span> <span class="n">squares</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="n">Squarer</span><span class="o">.</span><span class="n">calc</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
 
-            if result !# square:
-                print(&quot;Squared {} and got {} but expected {}&quot;.format(num, result, square))
-    @staticmethod
-    def test_negative_numbers():
+            <span class="k">if</span> <span class="n">result</span> <span class="o">!=</span> <span class="n">square</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Squared </span><span class="si">{}</span><span class="s2"> and got </span><span class="si">{}</span><span class="s2"> but expected </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">result</span><span class="p">,</span> <span class="n">square</span><span class="p">))</span>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">test_negative_numbers</span><span class="p">():</span>
 
-        squares = {
-            -1: 1,
-            -2: 4,
-            -3: 9,
-            -12: 144,
-            -100: 10000,
-        }
+        <span class="n">squares</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="o">-</span><span class="mi">1</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="o">-</span><span class="mi">2</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+            <span class="o">-</span><span class="mi">3</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span>
+            <span class="o">-</span><span class="mi">12</span><span class="p">:</span> <span class="mi">144</span><span class="p">,</span>
+            <span class="o">-</span><span class="mi">100</span><span class="p">:</span> <span class="mi">10000</span><span class="p">,</span>
+        <span class="p">}</span>
 
-        for num, square in squares.items():
-            result # Squarer.calc(num)
+        <span class="k">for</span> <span class="n">num</span><span class="p">,</span> <span class="n">square</span> <span class="ow">in</span> <span class="n">squares</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="n">Squarer</span><span class="o">.</span><span class="n">calc</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
 
-            if result !# square:
-                print(&quot;Squared {} and got {} but expected {}&quot;.format(num, result, square))
+            <span class="k">if</span> <span class="n">result</span> <span class="o">!=</span> <span class="n">square</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Squared </span><span class="si">{}</span><span class="s2"> and got </span><span class="si">{}</span><span class="s2"> but expected </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">result</span><span class="p">,</span> <span class="n">square</span><span class="p">))</span>
 
-if __name__ ## &quot;__main__&quot;:
-    SquarerTest.test_positive_numbers()
-    SquarerTest.test_negative_numbers()
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">SquarerTest</span><span class="o">.</span><span class="n">test_positive_numbers</span><span class="p">()</span>
+    <span class="n">SquarerTest</span><span class="o">.</span><span class="n">test_negative_numbers</span><span class="p">()</span>
 </pre></div>
 </div>
 </div><p>The SquarerTest class has two static methods: test_positive_numbers
@@ -258,17 +258,17 @@ style#"background: #ffffff; overflow: auto; width: auto; border: solid gray; bor
 <span class="p">}</span>
 </pre></div>
 </div>
-</div><p>Each&nbsp;<em>key</em> in this dictionary is a number. The corresponding&nbsp;<em>value</em>
+</div><p>Each <em>key</em> in this dictionary is a number. The corresponding <em>value</em>
 is the value that we expect Squarer to produce when we square the key.
 So one of the key/value pairs that we are testing is 12 and 144:
 squaring 12 should produce 144.</p>
 <p>Next we iterate through these number, square pairs:</p>
 <div
-style#"background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>for num, square in squares.items():
-    result # Squarer.calc(num)
+style#"background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">num</span><span class="p">,</span> <span class="n">square</span> <span class="ow">in</span> <span class="n">squares</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">Squarer</span><span class="o">.</span><span class="n">calc</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
 
-    if result !# square:
-        print(&quot;Squared {} and got {} but expected {}\n&quot;.format(num, result, square))
+    <span class="k">if</span> <span class="n">result</span> <span class="o">!=</span> <span class="n">square</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Squared </span><span class="si">{}</span><span class="s2"> and got </span><span class="si">{}</span><span class="s2"> but expected </span><span class="si">{}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">result</span><span class="p">,</span> <span class="n">square</span><span class="p">))</span>
 </pre></div>
 </div>
 </div><p>We use Squarer to square the number, and capture the result in a

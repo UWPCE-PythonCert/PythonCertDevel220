@@ -50,7 +50,7 @@ did was stored in a sequence or involved manipulating one.
 ::
 
      for key in dict.keys():
-         do\_something\_with(key)
+         do_something_with(key)
 
 |  
 | Even worse ``dict.items()`` created a full list of
@@ -97,8 +97,8 @@ sequences, we can now think in terms of iterables.
 
 ::
 
-     for x in just\_about\_anything:
-         do\_stuff(x)
+     for x in just_about_anything:
+         do_stuff(x)
 
 | An iterable is anything that can be looped over sequentially, so it
   does not have to be a "sequence": list, tuple, etc.  For example, a
@@ -110,17 +110,17 @@ sequences, we can now think in terms of iterables.
 
 ::
 
-    my\_iter = iter(my\_sequence)
+    my_iter = iter(my_sequence)
 
 | Iterables
 | ---------
 | To make an object iterable, you simply have to implement the
-  \_\_getitem\_\_ method.
+  __getitem__ method.
 
 ::
 
      class T:
-         def \_\_getitem\_\_(self, position):
+         def __getitem__(self, position):
              if position > 5:
               return position
 
@@ -128,7 +128,7 @@ sequences, we can now think in terms of iterables.
 | ------
 | How do you get the iterator object from an "iterable"?  The iter()
   function will make any iterable an iterator.  It first looks for the
-  \_\_iter\_\_() method, and if none is found, uses get\_item to create
+  __iter__() method, and if none is found, uses get_item to create
   the iterator.  The \`\`iter()\`\` function:
 
 ::
@@ -145,19 +145,19 @@ List as an Iterator
 
 ::
 
-     In []: a\_list = [1,2,3]
-     In []: list\_iter = iter(a\_list)
-     In []: next(list\_iter)
+     In []: a_list = [1,2,3]
+     In []: list_iter = iter(a_list)
+     In []: next(list_iter)
      Out[]: 1
-     In []: next(list\_iter)
+     In []: next(list_iter)
      Out[]: 2
-     In []: next(list\_iter)
+     In []: next(list_iter)
      Out[]: 3
-     In []: next(list\_iter)
+     In []: next(list_iter)
      --------------------------------------------------
      StopIteration     Traceback (most recent call last)
      <ipython-input-15-1a7db9b70878> in <module>()
-     ----> 1 next(list\_iter)
+     ----> 1 next(list_iter)
      StopIteration:
 
 Use iterators when you can
@@ -210,13 +210,13 @@ The Iterator Protocol
 
 ::
 
-     an\_iterator.\_\_iter\_\_()
+     an_iterator.__iter__()
  Usually returns the iterator object itself.
 
 ::
-     an\_iterator.\_\_next\_\_()
+     an_iterator.__next__()
  Returns the next item from the container. If there are no further
-  items it raises the \`\`StopIteration\`\` exception.
+  items it raises the ``StopIteration`` exception.
 
 Making an Iterator
 -------------------
@@ -243,18 +243,18 @@ What does *for* do?
   Now that we know the iterator protocol, we can write something like a
   for loop:
 
-  :download:\`my\_for.py
-  <../examples/iterators\_generators/my\_for.py>\`
+  :download:\`my_for.py
+  <../examples/iterators_generators/my_for.py>`
 
 ::
 
-     def my\_for(an\_iterable, func):
+     def my_for(an_iterable, func):
          """
          Emulation of a for loop.
-         func() will be called with each item in an\_iterable
+         func() will be called with each item in an_iterable
          """
          # equiv of "for i in l:"
-         iterator = iter(an\_iterable)
+         iterator = iter(an_iterable)
          while True:
              try:
                  i = next(iterator)

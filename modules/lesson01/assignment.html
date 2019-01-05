@@ -196,14 +196,14 @@ be to look at a prototype inventory management system they had been working on i
 </li>
 <li><p class="first">Fix all of the issues reported by Pylint up to the point where Pylint gives the code a grade of 10.</p>
 </li>
-<li><p class="first">Create a file called <em>unit_tests.py</em> that will be outside of the <em>inventory_management</em> directory. You will need to add unit tests for all classes in the inventory management system to this file.</p>
+<li><p class="first">Create a file called <em>test_unit.py</em> that will be outside of the <em>inventory_management</em> directory. You will need to add unit tests for all classes in the inventory management system to this file.</p>
 </li>
 <li><dl class="first docutils">
-<dt>Run coverage analysis on the <em>inventory_management</em> code using <em>unit_tests.py</em>. Coverage must be 90% or higher for each individual file. Use the following commands.</dt>
+<dt>Run coverage analysis on the <em>inventory_management</em> code using <em>test_unit.py</em>. Coverage must be 90% or higher for each individual file. Use the following commands.</dt>
 <dd><ul class="first last">
 <li><dl class="first docutils">
 <dt>Coverage run:</dt>
-<dd><div class="first last highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">coverage</span> <span class="n">run</span> <span class="o">--</span><span class="n">source</span><span class="o">=</span><span class="n">inventory_management</span> <span class="o">-</span><span class="n">m</span> <span class="n">unittest</span> <span class="n">unit_tests</span><span class="o">.</span><span class="n">py</span>
+<dd><div class="first last highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">coverage</span> <span class="n">run</span> <span class="o">--</span><span class="n">source</span><span class="o">=</span><span class="n">inventory_management</span> <span class="o">-</span><span class="n">m</span> <span class="n">unittest</span> <span class="n">test_unit</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
 </dd>
@@ -214,7 +214,7 @@ be to look at a prototype inventory management system they had been working on i
 <dd><div class="first highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">coverage</span> <span class="n">report</span>
 </pre></div>
 </div>
-<p class="last">Update <em>unit_tests.py</em> as required to attain 90% coverage.</p>
+<p class="last">Update <em>test_unit.py</em> as required to attain 90% coverage.</p>
 </dd>
 </dl>
 </li>
@@ -222,7 +222,7 @@ be to look at a prototype inventory management system they had been working on i
 </dd>
 </dl>
 </li>
-<li><p class="first">Create a file called <em>integration_test.py</em>.</p>
+<li><p class="first">Create a file called <em>test_integration.py</em>.</p>
 </li>
 </ol>
 </div>
@@ -242,7 +242,7 @@ be to look at a prototype inventory management system they had been working on i
 </div>
 <div class="section" id="submission">
 <h2>Submission<a class="headerlink" href="#submission" title="Permalink to this headline">¶</a></h2>
-<p>You will need to submit the <em>inventory_management</em> folder will all your improvements, as well as the <em>unit_tests.py</em> and <em>integration_test.py</em> files.</p>
+<p>You will need to submit the <em>inventory_management</em> folder will all your improvements, as well as the <em>test_unit.py</em> and <em>test_integration.py</em> files.</p>
 </div>
 </div>
 

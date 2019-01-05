@@ -210,13 +210,13 @@ ZeroDivisionError: division by zero
 </pre></div>
 </div>
 <p>As you might have expected, we get a ZeroDivisionError! At some point,
-for some value of&nbsp;<em>i</em>, the instruction 100*&nbsp;/ (50 - i)*&nbsp;causes our
+for some value of <em>i</em>, the instruction 100 *&nbsp;/ (50 - i)*&nbsp;causes our
 program to attempt to divide by zero.</p>
-<p>I’m sure that you can see what value of&nbsp;<em>i</em>&nbsp;would cause this problem,
+<p>I’m sure that you can see what value of <em>i</em>&nbsp;would cause this problem,
 but let’s pretend that we didn’t know, and we were trying to figure it
 out. If you had no better tools, you might try to investigate this
 problem by adding print statements to the loop. You could print out the
-value of&nbsp;<em>i</em>&nbsp;just before the problem-fraught division statement.&nbsp;Make
+value of <em>i</em>&nbsp;just before the problem-fraught division statement.&nbsp;Make
 the following modification to simple.py:</p>
 <div class="code Python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>           <span class="c1"># &lt;-- Add this line</span>

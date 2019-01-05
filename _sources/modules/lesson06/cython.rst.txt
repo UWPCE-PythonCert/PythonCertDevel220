@@ -34,7 +34,7 @@ following function declaration.
 
    </div>
 
-The great\_circle function above is defined by specifying double as the
+The great_circle function above is defined by specifying double as the
 type of its return value. Each argument is declared to be of type
 double, and a series of symbols which will be used later in the function
 are all defined to be of type double. The cython compiler uses this
