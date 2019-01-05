@@ -10,5 +10,5 @@ Lesson 8 : Functional Techniques
     closures
     currying
     itertools
+    activity
     assignment
-
