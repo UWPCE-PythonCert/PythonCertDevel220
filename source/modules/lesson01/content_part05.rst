@@ -8,7 +8,7 @@ correctly.
 
 Python also includes a built-in library for creating automated software tests:
 unittest. We can create tests in unittest that are very similar to the
-test\_positive\_numbers and test\_negative\_numbers tests that we
+test_positive_numbers and test_negative_numbers tests that we
 created above, with unittest adding a few extra features. Let's create a
 test2.py file:
 
@@ -28,7 +28,7 @@ test2.py file:
 
         def test_positive_numbers(self):
 
-            squares # {
+            squares = {
                 1: 1,
                 2: 4,
                 3: 9,
@@ -41,7 +41,7 @@ test2.py file:
 
         def test_negative_numbers(self):
 
-            squares # {
+            squares = {
                 -1: 1,
                 -2: 4,
                 -3: 9,
@@ -52,9 +52,6 @@ test2.py file:
             for num, square in squares.items():
                 self.assertEqual(square, Squarer.calc(num), "Squaring {}".format(num));
 
-.. raw:: html
-
-   </div>
 
 These test methods are just a little different than the test script we
 created for ourselves above. Here are the key differences:
@@ -73,9 +70,6 @@ created for ourselves above. Here are the key differences:
     class SquarerTest(unittest.TestCase): # <---
         ....
 
-.. raw:: html
-
-   </div>
 
 We import the unittest library, and our SquarerTest class inherits from
 unittest.TestCase. Next:
@@ -95,11 +89,11 @@ unittest.TestCase. Next:
 
    </div>
 
-Our test class methods \ *are not static*: they do not include
-a \ *@staticmethod* decorator, and they also accept \ *self* as their
-initial, implicit argument. Also, and this is very important, it is a \ *unittest requirement* that all
+Our test class methods *are not static*: they do not include
+a *@staticmethod* decorator, and they also accept *self* as their
+initial, implicit argument. Also, and this is very important, it is a *unittest requirement* that all
 of our test methods begin with the word "test", as in
-*test*\ \_positive\_numbers. Next:
+*test* _positive_numbers. Next:
 
 .. raw:: html
 
