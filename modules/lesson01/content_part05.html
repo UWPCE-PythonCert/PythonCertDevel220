@@ -198,7 +198,7 @@ style#"background: #ffffff; overflow: auto; width: auto; border: solid gray; bor
 
     <span class="k">def</span> <span class="nf">test_positive_numbers</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 
-        <span class="n">squares</span> <span class="c1"># {</span>
+        <span class="n">squares</span> <span class="o">=</span> <span class="p">{</span>
             <span class="mi">1</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
             <span class="mi">2</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
             <span class="mi">3</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span>
@@ -211,7 +211,7 @@ style#"background: #ffffff; overflow: auto; width: auto; border: solid gray; bor
 
     <span class="k">def</span> <span class="nf">test_negative_numbers</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 
-        <span class="n">squares</span> <span class="c1"># {</span>
+        <span class="n">squares</span> <span class="o">=</span> <span class="p">{</span>
             <span class="o">-</span><span class="mi">1</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
             <span class="o">-</span><span class="mi">2</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
             <span class="o">-</span><span class="mi">3</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span>
@@ -223,7 +223,7 @@ style#"background: #ffffff; overflow: auto; width: auto; border: solid gray; bor
             <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">square</span><span class="p">,</span> <span class="n">Squarer</span><span class="o">.</span><span class="n">calc</span><span class="p">(</span><span class="n">num</span><span class="p">),</span> <span class="s2">&quot;Squaring </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">num</span><span class="p">));</span>
 </pre></div>
 </div>
-</div><p>These test methods are just a little different than the test script we
+<p>These test methods are just a little different than the test script we
 created for ourselves above. Here are the key differences:</p>
 <div
 style#"background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">unittest</span>                       <span class="c1"># &lt;---</span>
@@ -234,7 +234,7 @@ style#"background: #ffffff; overflow: auto; width: auto; border: solid gray; bor
     <span class="o">....</span>
 </pre></div>
 </div>
-</div><p>We import the unittest library, and our SquarerTest class inherits from
+<p>We import the unittest library, and our SquarerTest class inherits from
 unittest.TestCase. Next:</p>
 <div
 style#"background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">SquarerTest</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
@@ -242,11 +242,11 @@ style#"background: #ffffff; overflow: auto; width: auto; border: solid gray; bor
     <span class="k">def</span> <span class="nf">test_positive_numbers</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># &lt;---</span>
 </pre></div>
 </div>
-</div><p>Our test class methods&nbsp;<em>are not static</em>: they do not include
-a&nbsp;<em>&#64;staticmethod</em> decorator, and they also accept&nbsp;<em>self</em> as their
+</div><p>Our test class methods <em>are not static</em>: they do not include
+a <em>&#64;staticmethod</em> decorator, and they also accept <em>self</em> as their
 initial, implicit argument. Also, and this is very important, it is a <em>unittest requirement</em> that all
 of our test methods begin with the word “test”, as in
-<em>test</em>_positive_numbers.&nbsp;Next:</p>
+<em>test</em> _positive_numbers.&nbsp;Next:</p>
 <div
 style#"background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">num</span><span class="p">,</span> <span class="n">square</span> <span class="ow">in</span> <span class="n">squares</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">square</span><span class="p">,</span> <span class="n">Squarer</span><span class="o">.</span><span class="n">calc</span><span class="p">(</span><span class="n">num</span><span class="p">),</span> <span class="s2">&quot;Squaring </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">num</span><span class="p">));</span>  <span class="c1"># &lt;---</span>

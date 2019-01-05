@@ -2,16 +2,16 @@
 Part 4: Running the script
 ##########################
 
-Running \ *python test.py* will invoke the
-SquarerTest.test\_positive\_numbers method and also the
-SquarerTest.test\_negative\_numbers method. If our Squarer.calc method
+Running *python test.py* will invoke the
+SquarerTest.test_positive_numbers method and also the
+SquarerTest.test_negative_numbers method. If our Squarer.calc method
 is working as we expect it to, if it conforms to the behavior we defined
-in the \ *squares* dictionary, then nothing will be printed to the
+in the *squares* dictionary, then nothing will be printed to the
 console. On the other hand, if the SquarerTest finds discrepancies in the behavior of
 Squarer, then it will print those discrepancies to the console.
 
-Since \ *squarer.py* has an error that the other developer just introduced, here is
-the result of running \ *python test.py*:
+Since *squarer.py* has an error that the other developer just introduced, here is
+the result of running *python test.py*:
 
 ::
 
@@ -45,9 +45,6 @@ Let's go back into squarer.py and fix our mistake:
             # return operand**operand  # WRONG
             return operand*operand
 
-.. raw:: html
-
-   </div>
 
 Has this actually fixed our code? Let's run our test script to find out:
 
@@ -81,9 +78,6 @@ another implementation of the calc method that uses the power operator:
             # return operand*operand   # OLD
             return operand**2
 
-.. raw:: html
-
-   </div>
 
 By putting our test into a script file that we can run from the command
 line, we've made it so that it only takes a few seconds to test whether
@@ -95,7 +89,7 @@ we've introduced an error into our code. We run our test script:
 
     $
 
-The test script has not found any discrepancies between the \ *expected*
-and \ *actual* performance of Squarer.calc: it looks
-like \ *operand\*\*2* is an acceptable way to implement squaring!
+The test script has not found any discrepancies between the *expected*
+and *actual* performance of Squarer.calc: it looks
+like *operand**2* is an acceptable way to implement squaring!
 

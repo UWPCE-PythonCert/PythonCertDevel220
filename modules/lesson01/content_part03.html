@@ -223,7 +223,7 @@ class SquarerTest(object):
     @staticmethod
     def test_negative_numbers():
 
-        squares # {
+        squares = {
             -1: 1,
             -2: 4,
             -3: 9,
@@ -249,7 +249,7 @@ method, and the test_negative_numbers method is nearly identical.</p>
 and test Squarer against that expected behavior. So we begin by creating
 a dictionary that defines that behavior:</p>
 <div
-style#"background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">squares</span> <span class="c1"># {</span>
+style#"background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">squares</span> <span class="o">=</span> <span class="p">{</span>
     <span class="mi">1</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
     <span class="mi">2</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
     <span class="mi">3</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span>
@@ -272,17 +272,17 @@ style#"background: #ffffff; overflow: auto; width: auto; border: solid gray; bor
 </pre></div>
 </div>
 </div><p>We use Squarer to square the number, and capture the result in a
-variable named&nbsp;<em>result</em>. If&nbsp;<em>result</em> is not equal to the square that
-we defined in&nbsp;<em>squares</em>, then we print a message describing the error.</p>
-<p>Finally, we add a&nbsp;<em>__name__ ## “__main__”</em> clause so that we
+variable named&nbsp;<em>result</em>. If <em>result</em> is not equal to the square that
+we defined in <em>squares</em>, then we print a message describing the error.</p>
+<p>Finally, we add a <em>__name__ == “__main__”</em> clause so that we
 can run this script from the command line:</p>
 <div
-style#"background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span> <span class="c1">## &quot;__main__&quot;:</span>
+style#"background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
     <span class="n">SquarerTest</span><span class="o">.</span><span class="n">test_positive_numbers</span><span class="p">()</span>
     <span class="n">SquarerTest</span><span class="o">.</span><span class="n">test_negative_numbers</span><span class="p">()</span>
 </pre></div>
 </div>
-</div></div>
+</div>
 
 
            </div>

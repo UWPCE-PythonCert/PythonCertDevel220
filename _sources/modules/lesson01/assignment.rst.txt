@@ -43,7 +43,7 @@ Other requirements:
 Testing
 -------
 
-Passing laundry lint, unit and integration tests and coverage analysis should be enough to give you confidence that your code will be accepted by the Project Manager.
+Passing pylint, unit and integration tests and coverage analysis should be enough to give you confidence that your code will be accepted by the Project Manager.
 
 Submission
 ----------

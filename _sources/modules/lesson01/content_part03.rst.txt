@@ -52,7 +52,7 @@ Here's a suitable test script:
         @staticmethod
         def test_negative_numbers():
 
-            squares # {
+            squares = {
                 -1: 1,
                 -2: 4,
                 -3: 9,
@@ -89,7 +89,7 @@ a dictionary that defines that behavior:
 
 ::
 
-        squares # {
+        squares = {
             1: 1,
             2: 4,
             3: 9,
@@ -126,10 +126,10 @@ Next we iterate through these number, square pairs:
    </div>
 
 We use Squarer to square the number, and capture the result in a
-variable named \ *result*. If \ *result* is not equal to the square that
-we defined in \ *squares*, then we print a message describing the error.
+variable named *result*. If *result* is not equal to the square that
+we defined in *squares*, then we print a message describing the error.
 
-Finally, we add a \ *\_\_name\_\_ ## "\_\_main\_\_"* clause so that we
+Finally, we add a *__name__ == "__main__"* clause so that we
 can run this script from the command line:
 
 .. raw:: html
@@ -139,11 +139,8 @@ can run this script from the command line:
 
 ::
 
-    if __name__ ## "__main__":
+    if __name__ == "__main__":
         SquarerTest.test_positive_numbers()
         SquarerTest.test_negative_numbers()
 
-.. raw:: html
-
-   </div>
 

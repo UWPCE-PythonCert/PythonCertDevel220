@@ -5,8 +5,8 @@ Functional Programming
 Functional programming, or at least, the use of functional programming
 techniques, has become quite common in Python.
 
-On this course we will learn some of these techniques. And you may have heard about
-them, too in the last lesson of the first course.
+In this course we will learn some of these techniques. And you may have heard about
+them too, in the last lesson of the first course.
 
 Here are some articles you may wish to read to help you become familiar
 with the background to functional programming.
