@@ -182,6 +182,7 @@
             
   <div class="section" id="intro-to-git-and-setup">
 <h1>Intro to Git and setup<a class="headerlink" href="#intro-to-git-and-setup" title="Permalink to this headline">¶</a></h1>
+<p>This is a summary of the stup you used for Course 1. Follow along to make sure you aresetup correctly for this course.</p>
 <div class="section" id="what-is-git">
 <h2>What is Git?<a class="headerlink" href="#what-is-git" title="Permalink to this headline">¶</a></h2>
 <p>A “version control system”</p>
@@ -260,9 +261,6 @@ the UWPCE-PythonCert-ClassRepos GitHub account (it shows up twice, because there
 <p>When you have made changes that you believe the rest of the community will want to adopt, you make a <em>pull request</em> to the original project. The maintainer(s) of that project than have the option of accepting your changes, in which case your changes will become part of that project.</p>
 <p>This is how we will be working in this class. When you are ready to submit an assignment, you will make a <em>pull request</em> to main class repo, and your instructors can review it.</p>
 <p>The class repositories are on <em>GitHub</em> in the <em>UWPCE-PythonCert-ClassRepos</em> organization:</p>
-<div class="figure">
-<a class="center reference internal image-reference" href="_static/remotes_start.png"><img alt="_static/remotes_start.png" class="center" src="_static/remotes_start.png" style="width: 50%;" /></a>
-</div>
 <p><a class="reference external" href="https://github.com/UWPCE-PythonCert-ClassRepos">https://github.com/UWPCE-PythonCert-ClassRepos</a></p>
 <p>Each class will have a repository created specifically for it, called something like: “Wi2018-Online”.</p>
 <p>In examples below it is called YourClassRepoNameHere, so replace that in your head with the name of your class’ repository.</p>
@@ -280,14 +278,8 @@ the UWPCE-PythonCert-ClassRepos GitHub account (it shows up twice, because there
 <p><a class="reference external" href="https://github.com/UWPCE-PythonCert-ClassRepos">https://github.com/UWPCE-PythonCert-ClassRepos</a></p>
 <p>Make sure you find the right repo for YOUR class!</p>
 <p>Once in the repo for your class, click on the “fork” button in the upper right of the page to create a fork in your gitHub account. You will now have a copy of the class repo, and can then set up your personal machine to connect to that copy.</p>
-<div class="figure">
-<a class="center reference internal image-reference" href="_static/remotes_fork.png"><img alt="_static/remotes_fork.png" class="center" src="_static/remotes_fork.png" style="width: 50%;" /></a>
-</div>
 <p>Yoy should now have a copy of the class repository in your account on the GitHub website.</p>
-<p>The next step is to make a <em>clone</em> of your fork on your own computer, which means that <strong>your fork</strong> in GitHub is the <em>origin</em>:</p>
-<div class="figure">
-<a class="center reference internal image-reference" href="_static/remotes_clone.png"><img alt="_static/remotes_clone.png" class="center" src="_static/remotes_clone.png" style="width: 50%;" /></a>
-</div>
+<p>The next step is to make a <em>clone</em> of your fork on your own computer, which means that <strong>your fork</strong> in GitHub is the <em>origin</em></p>
 <p>Begin in a directory on your computer where you want to keep your cloned version of the class repository.
 This can live anywhere on your file system but this outer directory should not be tracked in git.</p>
 <p>From that directory, run</p>
@@ -320,10 +312,6 @@ origin  https://github.com/your_github_id/YourClassRepoNameHere <span class="o">
 upstream    https://github.com/UWPCE-PythonCert-ClassRepos/YourClassRepoNameHere <span class="o">(</span>fetch<span class="o">)</span>
 upstream    https://github.com/UWPCE-PythonCert-ClassRepos/YourClassRepoNameHere <span class="o">(</span>push<span class="o">)</span>
 </pre></div>
-</div>
-<p>This should leave you in a situation that looks like this:</p>
-<div class="figure">
-<a class="center reference internal image-reference" href="_static/remotes_upstream.png"><img alt="_static/remotes_upstream.png" class="center" src="_static/remotes_upstream.png" style="width: 50%;" /></a>
 </div>
 <p>To get the updates from your new remote, you’ll need first to fetch everything:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git fetch --all
