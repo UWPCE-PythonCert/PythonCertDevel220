@@ -9,7 +9,8 @@ Welcome!
     expectations
     case_study
     assignments
-    assign_ongoing
+    git_setup
+    git_workflow
     extras_oo
     extras_git
     extras_fp

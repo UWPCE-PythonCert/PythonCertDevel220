@@ -17,37 +17,20 @@ Prior to starting, be sure you have your Git repo url from your instructor.
 
 Part 1 - Setup
 --------------
-You will do this once, at the start of class.
+You will do this once, at the start of this course.
+ We use exactly the same procedure as you used in course 1, but with a new
+ repository.
 
-1. Your repository url will look something like this:
-
-    git@github.com:UWPCE-PythonCert/py220yyyymmxxx.git
-
- with the name being this part:
-
-    py220yyyymmxxx
-
-yyyy and mm are the start of the class, and xxx is your initials.
-
-2. Start by making a repo directory on your development computer. The directory
-should be exactly the same as the name provided by your instructor. For example,
-my repo name would be py220201901akm.
-
-3. In a terminal session, make your new repo the default directory (using cd)
-and then clone the repo from GitHub as follows. For me I will type:
-
-    git clone git@github.com:UWPCE-PythonCert/py220201901akm.git .
-
-Note the ending period; it must be entered. Substitute the correct details for
-you and press enter.
-
-Now you are all set up!
+See the Git setup page for more details.
 
 Part 2 - Working on assignments
 -------------------------------
-Point your editor or IDE at the project directory above. You will
-see a directory for each lesson, and then in each lesson, one for activities (ungraded)
-and one for assignments (which are graded).
+For each lesson there is a directory for your assignment work. There also may
+be a directory for activities (ungraded work) that are needed on some lessons.
+
+Point your editor or IDE at the local repo directory from above. You will
+see the directories for each lesson, and then in each lesson, the ones
+for activities (ungraded) and the ones for assignments (which are graded).
 
 You will also see a tests directory, that contains automated tests you can run
 to verify if your assignment is complete and ready to submit.
@@ -57,9 +40,13 @@ Remember to create a branch in which to do your work. Then, all you need to do i
 save your work in the correct directory. Remember to commit often, with good
 commit messages.
 
+See the Git Workflow page for more details.
+
 Part 3 - Submitting
 -------------------
 When you are ready to submit your work, push your working branch to the remote repo,
 and then create a pull request for master, assigned to your instructor team.
 
 And that's it!
+
+Again, see the Git Workflw page for more details.
