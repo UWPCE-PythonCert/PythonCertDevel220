@@ -2,6 +2,9 @@
 Intro to Git and setup
 ######################
 
+This is a summary of the stup you used for Course 1. Follow along to make sure you aresetup correctly for this course.
+
+
 What is Git?
 ------------
 
@@ -118,10 +121,6 @@ This is how we will be working in this class. When you are ready to submit an as
 
 The class repositories are on *GitHub* in the *UWPCE-PythonCert-ClassRepos* organization:
 
-.. figure:: /_static/remotes_start.png
-   :width: 50%
-   :class: center
-
 https://github.com/UWPCE-PythonCert-ClassRepos
 
 Each class will have a repository created specifically for it, called something like: "Wi2018-Online".
@@ -153,17 +152,9 @@ Make sure you find the right repo for YOUR class!
 
 Once in the repo for your class, click on the "fork" button in the upper right of the page to create a fork in your gitHub account. You will now have a copy of the class repo, and can then set up your personal machine to connect to that copy.
 
-.. figure:: /_static/remotes_fork.png
-   :width: 50%
-   :class: center
-
 Yoy should now have a copy of the class repository in your account on the GitHub website.
 
-The next step is to make a *clone* of your fork on your own computer, which means that **your fork** in GitHub is the *origin*:
-
-.. figure:: /_static/remotes_clone.png
-   :width: 50%
-   :class: center
+The next step is to make a *clone* of your fork on your own computer, which means that **your fork** in GitHub is the *origin*
 
 Begin in a directory on your computer where you want to keep your cloned version of the class repository.
 This can live anywhere on your file system but this outer directory should not be tracked in git.
@@ -215,11 +206,6 @@ Your local setup should now look something like this:
     upstream    https://github.com/UWPCE-PythonCert-ClassRepos/YourClassRepoNameHere (fetch)
     upstream    https://github.com/UWPCE-PythonCert-ClassRepos/YourClassRepoNameHere (push)
 
-This should leave you in a situation that looks like this:
-
-.. figure:: /_static/remotes_upstream.png
-    :width: 50%
-    :class: center
 
 To get the updates from your new remote, you'll need first to fetch everything:
 
