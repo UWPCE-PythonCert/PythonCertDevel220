@@ -69,7 +69,7 @@ The first step is to ``cd`` to the students directory:
 
 ``$ cd students``
 
-Then create a directory for yourself. You can use your first name, your gitHub handle (username), or any nickname you like -- just make sure your instructor knows who you are so you can get credit for your work.
+Then use a directory for yourself. You can use your first name, your gitHub handle (username), or any nickname you like -- just make sure your instructor knows who you are so you can get credit for your work.
 
 ``$ mkdir marie_curie``
 
@@ -82,7 +82,21 @@ Adding a new file
 
 Note that git does not track directories -- you do not have to add a new dir to git -- when you add a new file in that dir, git will track where it is.
 
-Now you can do your coding. For this example, that is simply adding a readme file. You can do that with your text editor, or directly on the command line::
+Now, you need to copy the lesson files and test files from the lessons directory and the tests directory
+to your own directory under students. You will find tests and lessons in the parent directory of your project.
+
+Under each of these there is a hirearchy of directories and files, and all these should be copied too.
+
+After copying you will end up with a structure like this:
+
+- students/yourname/lessons/...
+- students/yourname/tests/...
+
+Be sure to copy, not move the files!!!
+
+
+Now you can do your coding, in your lessons directory, under the appropriate lesson.
+For this example, that is simply adding a readme file. You can do that with your text editor, or directly on the command line::
 
     cat > README.rst
     Python code for UWPCE-PythonCert class, written by Marie Curie
@@ -135,11 +149,10 @@ Do that now with just the README file, so we can get the class repo all set up, 
 Starting a new Exercise
 -----------------------
 
-Once you have created your directory, and are starting a new project, the process will look very much the same. This example is for marie_curie working on her mailroom exercise:
+Make sure you are "in" your copy of the class repo on your machine, and are in the corrcet lesson directory
+under lessons:
 
-Make sure you are "in" your copy of the class repo on your machine:
-
-``$ cd students/marie_curie``
+``$ cd students/marie_curie/lessons/lesson01/assignments``
 
 Regardless of what you are working on, first make sure you don't have anything in your repository that you forgot to commit:
 
@@ -159,15 +172,9 @@ If there are changes upstream that you did not have, it is a good idea to go ahe
 
 ``$ git push``
 
-Now you can begin your work:
+Now you can begin your work.
 
-create a dir to do the Exercise in:
-
-``$ mkdir mailroom``
-
-(remember to make sure you are creating this new dir in *your own working directory*)
-
-Create your new python file(s) in that new directory. Then add it to git before you start writing any real code -- just to make sure you don't forget:
+Create your new python file(s) in the students/yourname/lessons/lesson0n/assignemnt directory. Then add it to git before you start writing any real code -- just to make sure you don't forget:
 
 ``$ git add mailroom.py``
 
