@@ -229,7 +229,7 @@
 <h3>Create Your Own Working Directory<a class="headerlink" href="#create-your-own-working-directory" title="Permalink to this headline">¶</a></h3>
 <p>The first step is to <code class="docutils literal notranslate"><span class="pre">cd</span></code> to the students directory:</p>
 <p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">cd</span> <span class="pre">students</span></code></p>
-<p>Then create a directory for yourself. You can use your first name, your gitHub handle (username), or any nickname you like – just make sure your instructor knows who you are so you can get credit for your work.</p>
+<p>Then use a directory for yourself. You can use your first name, your gitHub handle (username), or any nickname you like – just make sure your instructor knows who you are so you can get credit for your work.</p>
 <p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">mkdir</span> <span class="pre">marie_curie</span></code></p>
 <p>Switch into that dir:</p>
 <p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">cd</span> <span class="pre">marie_curie</span></code></p>
@@ -237,7 +237,17 @@
 <div class="section" id="adding-a-new-file">
 <h3>Adding a new file<a class="headerlink" href="#adding-a-new-file" title="Permalink to this headline">¶</a></h3>
 <p>Note that git does not track directories – you do not have to add a new dir to git – when you add a new file in that dir, git will track where it is.</p>
-<p>Now you can do your coding. For this example, that is simply adding a readme file. You can do that with your text editor, or directly on the command line:</p>
+<p>Now, you need to copy the lesson files and test files from the lessons directory and the tests directory
+to your own directory under students. You will find tests and lessons in the parent directory of your project.</p>
+<p>Under each of these there is a hirearchy of directories and files, and all these should be copied too.</p>
+<p>After copying you will end up with a structure like this:</p>
+<ul class="simple">
+<li>students/yourname/lessons/…</li>
+<li>students/yourname/tests/…</li>
+</ul>
+<p>Be sure to copy, not move the files!!!</p>
+<p>Now you can do your coding, in your lessons directory, under the appropriate lesson.
+For this example, that is simply adding a readme file. You can do that with your text editor, or directly on the command line:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span> <span class="o">&gt;</span> <span class="n">README</span><span class="o">.</span><span class="n">rst</span>
 <span class="n">Python</span> <span class="n">code</span> <span class="k">for</span> <span class="n">UWPCE</span><span class="o">-</span><span class="n">PythonCert</span> <span class="n">class</span><span class="p">,</span> <span class="n">written</span> <span class="n">by</span> <span class="n">Marie</span> <span class="n">Curie</span>
 <span class="n">ctrl</span><span class="o">+</span><span class="n">D</span>
@@ -272,9 +282,9 @@
 </div>
 <div class="section" id="starting-a-new-exercise">
 <h2>Starting a new Exercise<a class="headerlink" href="#starting-a-new-exercise" title="Permalink to this headline">¶</a></h2>
-<p>Once you have created your directory, and are starting a new project, the process will look very much the same. This example is for marie_curie working on her mailroom exercise:</p>
-<p>Make sure you are “in” your copy of the class repo on your machine:</p>
-<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">cd</span> <span class="pre">students/marie_curie</span></code></p>
+<p>Make sure you are “in” your copy of the class repo on your machine, and are in the corrcet lesson directory
+under lessons:</p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">cd</span> <span class="pre">students/marie_curie/lessons/lesson01/assignments</span></code></p>
 <p>Regardless of what you are working on, first make sure you don’t have anything in your repository that you forgot to commit:</p>
 <p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">git</span> <span class="pre">status</span></code></p>
 <p>Note that when git status tells you that ‘Your branch is up-to-date with ‘origin/master’,  that does NOT mean that you are up-to-date with stuff that has been pushed to the github repository, only, confusingly, with what your local machine currently knows about.</p>
@@ -284,11 +294,8 @@
 <p>“master” is the branch that you are currently pulling from that server, for the purpose of this class, we will always use master.</p>
 <p>If there are changes upstream that you did not have, it is a good idea to go ahead and push these changes to your github account right away so they don’t confuse things:</p>
 <p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">git</span> <span class="pre">push</span></code></p>
-<p>Now you can begin your work:</p>
-<p>create a dir to do the Exercise in:</p>
-<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">mkdir</span> <span class="pre">mailroom</span></code></p>
-<p>(remember to make sure you are creating this new dir in <em>your own working directory</em>)</p>
-<p>Create your new python file(s) in that new directory. Then add it to git before you start writing any real code – just to make sure you don’t forget:</p>
+<p>Now you can begin your work.</p>
+<p>Create your new python file(s) in the students/yourname/lessons/lesson0n/assignemnt directory. Then add it to git before you start writing any real code – just to make sure you don’t forget:</p>
 <p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">git</span> <span class="pre">add</span> <span class="pre">mailroom.py</span></code></p>
 <p>Then as you work, each time you get to a good saving point, make a commit:</p>
 <p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">-a</span> <span class="pre">-m</span> <span class="pre">&quot;added</span> <span class="pre">the</span> <span class="pre">donation</span> <span class="pre">listing</span> <span class="pre">feature&quot;</span></code></p>
