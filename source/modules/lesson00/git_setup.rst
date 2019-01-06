@@ -2,7 +2,8 @@
 Intro to Git and setup
 ######################
 
-This is a summary of the stup you used for Course 1. Follow along to make sure you aresetup correctly for this course.
+This is a summary of the stup you used for Course 1. Follow along to make sure you are
+setup correctly for this course.
 
 
 What is Git?
