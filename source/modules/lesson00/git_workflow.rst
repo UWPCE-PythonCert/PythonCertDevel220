@@ -17,7 +17,7 @@ First make sure you are on the command line "in" your copy of the class repo.
 
 Remember that ``git status`` is your friend -- when in doubt, run that command to see what's going on in your repo.
 
-1. Make sure you are on the correct branch -- though if you never branch, you'll only need to do this once:
+1. Make sure you are on the correct branch -- we suggest you never branch, so you'll only need to do this once:
 
    ``$ git checkout master``
 
@@ -92,7 +92,12 @@ After copying you will end up with a structure like this:
 - students/yourname/lessons/...
 - students/yourname/tests/...
 
-Be sure to copy, not move the files!!!
+Be sure to COPY, not move the files!!!
+
+Now, change to your own named directory (the one under students)
+and type
+
+```pip install -e lessons```
 
 
 Now you can do your coding, in your lessons directory, under the appropriate lesson.

@@ -119,3 +119,5 @@ dmypy.json
 *.sublime-workspace
 _gsdata_/*
 
+*.csv
+
