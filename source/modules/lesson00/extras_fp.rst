@@ -11,7 +11,7 @@ them too, in the last lesson of the first course.
 Here are some articles you may wish to read to help you become familiar
 with the background to functional programming.
 
-Don't think you need to learn or even understand this right now; this is just some background
+You don't need to learn or even understand this right now; this is some background
 material, knowledge of which will help you later in the class.
 
 * https://docs.python.org/3/howto/functional.html

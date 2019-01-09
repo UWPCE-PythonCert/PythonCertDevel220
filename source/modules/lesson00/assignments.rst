@@ -6,7 +6,7 @@ Introduction
 ============
 An important part of your success on this class is the work you do on
 the class assignments. Here we describe the approach we are using for
-storing and submitting you assignment work.
+saving and submitting your assignment work.
 
 As with every part of Python 220 we are going to get as close as we can
 to replicating the way that we work in a professional setting.
