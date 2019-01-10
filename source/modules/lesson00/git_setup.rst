@@ -145,13 +145,14 @@ The first thing we have to do is on the GitHub website. You will create a fork o
 
 Before you can do that, you need to create a GitHub account, if you don't have one already.  Your gitHub id will be associated with this class' public repo, so it is up to you if you want to use your real name for your gitHub account, or an alias to maintain your privacy.
 
-Once you are logged in to your gitHub account, go to the class repository here:
+Once you are logged in to your gitHub account, go to the class repository here, as
+provided by your Instructor. It will be somewhere here:
 
-https://github.com/UWPCE-PythonCert-ClassRepos/PythonCert220Assign
+https://github.com/UWPCE-PythonCert-ClassRepos
 
 Once in the repo for your class, click on the "fork" button in the upper right of the page to create a fork in your gitHub account. You will now have a copy of the class repo, and can then set up your personal machine to connect to that copy.
 
-Yoy should now have a copy of the class repository in your account on the GitHub website.
+You should now have a copy of the class repository in your account on the GitHub website.
 
 The next step is to make a *clone* of your fork on your own computer, which means that **your fork** in GitHub is the *origin*
 
