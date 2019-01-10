@@ -120,7 +120,7 @@ Part 3
    Relational
    Databases <%24CANVAS_OBJECT_REFERENCE%24/modules/id561966c71d207ffd5003a21eec88ea1>`__
 -  `**Week 8**
-    Non-Relational
+    Non-Relational
    Databases <%24CANVAS_OBJECT_REFERENCE%24/modules/i1c07e2ae7a31d8c54322c4da6040de00>`__
 -  
 
@@ -155,7 +155,7 @@ Part 3
    <div class="copyright clear" role="complementary"
    aria-label="Course Copyright">
 
-| ©2018 University of Washington. All rights reserved.
+| ©2018, 2019 University of Washington. All rights reserved.
 | This course is offered through or in partnership with `UW Continuum
   College <https://www.continuum.uw.edu/About-Us>`__.
 | No part of this publication may be reproduced in any form or by any

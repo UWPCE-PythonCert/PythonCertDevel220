@@ -191,7 +191,7 @@
 <p>First make sure you are on the command line “in” your copy of the class repo.</p>
 <p>Remember that <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> is your friend – when in doubt, run that command to see what’s going on in your repo.</p>
 <ol class="arabic">
-<li><p class="first">Make sure you are on the correct branch – though if you never branch, you’ll only need to do this once:</p>
+<li><p class="first">Make sure you are on the correct branch – we suggest you never branch, so you’ll only need to do this once:</p>
 <p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">master</span></code></p>
 </li>
 <li><p class="first">Get any changes from class repository – good to do this whenever you start on something new</p>
@@ -245,7 +245,10 @@ to your own directory under students. You will find tests and lessons in the par
 <li>students/yourname/lessons/…</li>
 <li>students/yourname/tests/…</li>
 </ul>
-<p>Be sure to copy, not move the files!!!</p>
+<p>Be sure to COPY, not move the files!!!</p>
+<p>Now, change to your own named directory (the one under students)
+and type</p>
+<p><code class="docutils literal notranslate"><span class="pre">`pip</span> <span class="pre">install</span> <span class="pre">-e</span> <span class="pre">lessons`</span></code></p>
 <p>Now you can do your coding, in your lessons directory, under the appropriate lesson.
 For this example, that is simply adding a readme file. You can do that with your text editor, or directly on the command line:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span> <span class="o">&gt;</span> <span class="n">README</span><span class="o">.</span><span class="n">rst</span>

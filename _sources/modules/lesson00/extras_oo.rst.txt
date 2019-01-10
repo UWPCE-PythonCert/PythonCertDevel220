@@ -21,7 +21,7 @@ This approach brings several major benefits:
 
 - The problem domain changes at a different rate to the technology it
   uses. As developers, when a new version of the technology we use
-  becomes available we want to make the transition as simple as possible. Well,
+  becomes available we want to make the transition as simple as possible. Well
   designed systems allow this to happen, and good understanding of
   object orientation makes this even more simple.
 - Often the teams or levels of expertise required to maintain
@@ -34,7 +34,7 @@ This approach brings several major benefits:
 
 Now all of this is fine, but it requires skill, experience and even good
 taste to achieve this! It is also true that this sort of approach with
-object orientation in not a universal one. It takes longer to build
+object orientation is not a universal one. It takes longer to build
 applications this way, so this approach is only applicable where you are
 building software that needs to last for years.
 
@@ -107,7 +107,7 @@ Here it is in code:
 .. code:: Python
 
     """
-    simple oo example
+    simple oo example with inheritance
     """
 
     class Pet:

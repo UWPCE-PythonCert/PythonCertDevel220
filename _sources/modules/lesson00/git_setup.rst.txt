@@ -2,7 +2,7 @@
 Intro to Git and setup
 ######################
 
-This is a summary of the stup you used for Course 1. Follow along to make sure you are
+This is a summary of the setup you used for Course 1. Follow along to make sure you are
 setup correctly for this course.
 
 
@@ -145,11 +145,9 @@ The first thing we have to do is on the GitHub website. You will create a fork o
 
 Before you can do that, you need to create a GitHub account, if you don't have one already.  Your gitHub id will be associated with this class' public repo, so it is up to you if you want to use your real name for your gitHub account, or an alias to maintain your privacy.
 
-Once you are logged in to your gitHub account, go to the appropriate class repository here:
+Once you are logged in to your gitHub account, go to the class repository here:
 
-https://github.com/UWPCE-PythonCert-ClassRepos
-
-Make sure you find the right repo for YOUR class!
+https://github.com/UWPCE-PythonCert-ClassRepos/PythonCert220Assign
 
 Once in the repo for your class, click on the "fork" button in the upper right of the page to create a fork in your gitHub account. You will now have a copy of the class repo, and can then set up your personal machine to connect to that copy.
 
