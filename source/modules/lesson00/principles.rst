@@ -9,7 +9,7 @@ We want to make sure that every student understands how to get the most
 from the Advanced Python Programming class.
 
 This is a challenging class, in that we cover a lot of concepts, some
-of which can we hard to grasp at first. Please never hesitate to contact your
+of which can be hard to grasp at first. Please never hesitate to contact your
 instructor with questions.
 
 For those in a classroom setting, we will give plenty of opportunity for interacting
