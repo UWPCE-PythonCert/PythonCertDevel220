@@ -186,15 +186,15 @@ on that page. Then find the calculator project directory in the course
 repository.</p>
 <div class="section" id="your-goals">
 <h2>Your goals:<a class="headerlink" href="#your-goals" title="Permalink to this headline">¶</a></h2>
-<p>Note that all of the command examples below should be run from inside
-the project root which contains the <em>test_unit.py</em>
+<p>Note that all of the command examples below should be run from the activity directory,
+which contains the <em>test_unit.py</em>
 and <em>test_integration.py</em> files.</p>
 <ol class="arabic simple">
 <li>Provide a <em>MultiplierTests</em> and <em>DividerTests</em> test classes in
 the <em>test_unit.py</em> file.</li>
 <li><em>python -m unittest test_unit.py</em> &nbsp;and&nbsp;<em>python -m unittest
 test_integration.py</em>&nbsp;should have no failures.</li>
-<li>Running <em>coverage</em> run –source=calculator -m unittest test_unit.py;
+<li>Running <em>coverage</em> run –source=calculator/calculator.py -m unittest test_unit.py;
 coverage report* *&nbsp;* shows 90%+ coverage..</li>
 <li>Satisfy the linter such that <em>pylint calculator</em>&nbsp;gives no errors
 and <em>flake8 calculator</em>&nbsp;gives no errors.&nbsp;You can achieve this by some
