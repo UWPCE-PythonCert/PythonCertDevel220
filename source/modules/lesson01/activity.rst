@@ -10,15 +10,15 @@ repository.
 Your goals:
 ===========
 
-Note that all of the command examples below should be run from inside
-the project root which contains the *test_unit.py*
+Note that all of the command examples below should be run from the activity directory,
+which contains the *test_unit.py*
 and *test_integration.py* files.
 
 #. Provide a *MultiplierTests* and *DividerTests* test classes in
    the *test_unit.py* file.
 #. *python -m unittest test_unit.py*  and *python -m unittest
    test_integration.py* should have no failures.
-#. Running *coverage* run --source=calculator -m unittest test_unit.py;
+#. Running *coverage* run --source=calculator/calculator.py -m unittest test_unit.py;
    coverage report* * * shows 90%+ coverage..
 #. Satisfy the linter such that *pylint calculator* gives no errors
    and *flake8 calculator* gives no errors. You can achieve this by some
