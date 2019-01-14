@@ -194,13 +194,8 @@ and <em>test_integration.py</em> files.</p>
 the <em>test_unit.py</em> file.</li>
 <li><em>python -m unittest test_unit.py</em> &nbsp;and&nbsp;<em>python -m unittest
 test_integration.py</em>&nbsp;should have no failures.</li>
-<li>Running the following should show coverage of 90%+</li>
-</ol>
-<dl class="docutils">
-<dt>::</dt>
-<dd>coverage run –source=calculator/calculator.py -m unittest test_unit.py;</dd>
-</dl>
-<ol class="arabic simple">
+<li>Running <em>coverage</em> run —source=calculator/calculator.py -m unittest test_unit.py;
+coverage report shows 90%+ coverage..</li>
 <li>Satisfy the linter such that <em>pylint calculator</em>&nbsp;gives no errors
 and <em>flake8 calculator</em>&nbsp;gives no errors.&nbsp;You can achieve this by some
 combination of editing your code and editing the <em>.pylintrc</em> file
