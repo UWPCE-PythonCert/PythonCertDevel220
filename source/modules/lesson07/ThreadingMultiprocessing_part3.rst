@@ -14,6 +14,5 @@ jumbled
 
 2. Try adding a Semaphore to allow 2 threads access at once.
 
-.. TODO:: 
-    Review lock_exercise.zip
+
 
