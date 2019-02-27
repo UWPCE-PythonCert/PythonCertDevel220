@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2395799a-5b7b-441e-ac1b-027f5d1953d5" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="836" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="PythonCertDevel220" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PythonCertDevel220" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PythonCertDevel220" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PythonCertDevel220" type="462c0819:PsiDirectoryNode" />
+              <item name="source" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.customizations" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2395799a-5b7b-441e-ac1b-027f5d1953d5" name="Default Changelist" comment="" />
+      <created>1547237478436</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1547237478436</updated>
+      <workItem from="1547237483894" duration="148000" />
+      <workItem from="1549747418374" duration="31000" />
+      <workItem from="1549747523569" duration="119000" />
+      <workItem from="1550451984486" duration="92000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="390000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1440" height="836" extended-state="0" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.79296345" visible="true" weight="0.15522175" />
+      <window_info id="Structure" order="1" sideWeight="0.20703654" side_tool="true" weight="0.1509299" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32882273" />
+      <window_info anchor="bottom" id="Debug" order="2" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="Database Changes" order="5" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Console" order="6" weight="0.32882273" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Python Console" order="3" sideWeight="0.49737534" weight="0.3748212" />
+      <window_info anchor="right" id="Terminal" order="4" sideWeight="0.48031497" visible="true" weight="0.38268957" />
+      <window_info active="true" anchor="right" id="Jenkins" order="5" visible="true" weight="0.33404863" />
+      <window_info anchor="right" id="SciView" order="6" weight="0.3366762" />
+      <window_info anchor="right" id="Docker" order="7" weight="0.32808024" />
+      <window_info anchor="right" id="Version Control" order="8" sideWeight="0.496063" weight="0.33452722" />
+      <window_info anchor="right" id="Database" order="9" weight="0.3295129" />
+      <window_info anchor="right" id="TODO" order="10" sideWeight="0.49737534" weight="0.33595988" />
+      <window_info anchor="right" id="Run" order="11" sideWeight="0.77559054" weight="0.3159026" />
+      <window_info anchor="right" id="Event Log" order="12" sideWeight="0.5026247" side_tool="true" weight="0.33595988" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/README.rst">
+      <provider selected="true" editor-type-id="restructured-text-editor" />
+    </entry>
+  </component>
+</project>
