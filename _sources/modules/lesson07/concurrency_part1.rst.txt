@@ -92,7 +92,7 @@ advantage of parallel execution:
 .. image:: /_static/OPP.0108.gif
       :align: right
       :height: 450px
-      :alt: multitasking flow diagram
+      :alt: multitasking flow diagrams
 
 
 |
