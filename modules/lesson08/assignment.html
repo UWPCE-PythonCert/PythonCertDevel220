@@ -176,11 +176,16 @@
             
   <div class="section" id="assignment">
 <h1>Assignment<a class="headerlink" href="#assignment" title="Permalink to this headline">¶</a></h1>
-<p>Norton Furniture has been using comma-separated files (.CSV extension) to keep track of which furniture they have rented out to which
-customer. This currently requires them to use a spreadsheet program. Your Project Manager wants you to get the spreadsheet program out
+<p>HP Norton has been using comma-separated files (.CSV extension) to keep track of which furniture they have rented out to which
+customer. This is currently generated from a spreadsheet.</p>
+<p>Your Project Manager wants you to get the spreadsheet program out
 of the equation by creating a Python function that will create and update an inventory CSV file with all the information that is currently
-entered through the spreadsheet program. Additionally, you will need to, using closures and currying, add the necessary functionality
-to bulk-process a list of items, coming from another CSV file, that have been rented out to a single customer.</p>
+entered through the spreadsheet program. You have decided to use closures and currying to develop the necessary functionality.</p>
+<p>You will also develop functionality to
+to bulk-process a list of items, coming from a separate CSV file, that have been rented out to a single customer. This functionality will thus update the inventory list by adding that customer’s rentals.</p>
+<p>To summarize:
+1. You will create a program to initially create, and subsequently update, a CSV file that lists which furniture is rented to which customer (to replace use of the spreadsheet mentioned above).
+2. You will create additionally functionality that will load individual customers rentals.</p>
 <div class="section" id="here-is-what-you-need-to-do">
 <h2>Here is what you need to do:<a class="headerlink" href="#here-is-what-you-need-to-do" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic">
@@ -196,12 +201,13 @@ to bulk-process a list of items, coming from another CSV file, that have been re
 <li><em>item_monthly_price</em></li>
 </ul>
 <p>This function will create <em>invoice_file</em> if it doesn’t exist or append a new line to it if it does. After adding a few items to the
-same file, the file created by <em>add_furniture</em> should look like this:</p>
-<div class="last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Elisa</span> <span class="n">Miles</span><span class="p">,</span><span class="n">LR04</span><span class="p">,</span><span class="n">Leather</span> <span class="n">Sofa</span><span class="p">,</span><span class="mf">25.00</span>
+same file, the file created by <em>add_furniture</em> should look something like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Elisa</span> <span class="n">Miles</span><span class="p">,</span><span class="n">LR04</span><span class="p">,</span><span class="n">Leather</span> <span class="n">Sofa</span><span class="p">,</span><span class="mf">25.00</span>
 <span class="n">Edward</span> <span class="n">Data</span><span class="p">,</span><span class="n">KT78</span><span class="p">,</span><span class="n">Kitchen</span> <span class="n">Table</span><span class="p">,</span><span class="mf">10.00</span>
 <span class="n">Alex</span> <span class="n">Gonzales</span><span class="p">,</span><span class="n">BR02</span><span class="p">,</span><span class="n">Queen</span> <span class="n">Mattress</span><span class="p">,</span><span class="mf">17.00</span>
 </pre></div>
 </div>
+<p class="last">You can create a starter file in this format for testing, or you can have your add function do it.</p>
 </dd>
 </dl>
 </li>
@@ -226,12 +232,21 @@ same file, the file created by <em>add_furniture</em> should look like this:</p>
 </div>
 <div class="section" id="testing">
 <h2>Testing<a class="headerlink" href="#testing" title="Permalink to this headline">¶</a></h2>
-<p>You can use the included <em>test_items.csv</em> file for testing of your <em>single_customer</em> function. <em>add_furniture</em> can be tested manually,
+<p>You can create the <em>test_items.csv</em> file for testing of your <em>single_customer</em> function.
+The layout of the csv will be something like this:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">LR04</span><span class="p">,</span><span class="n">Leather</span> <span class="n">Sofa</span><span class="p">,</span><span class="mf">25.00</span>
+<span class="n">KT78</span><span class="p">,</span><span class="n">Kitchen</span> <span class="n">Table</span><span class="p">,</span><span class="mf">10.00</span>
+<span class="n">BR02</span><span class="p">,</span><span class="n">Queen</span> <span class="n">Mattress</span><span class="p">,</span><span class="mf">17.00</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p><em>add_furniture</em> can be tested manually,
 as shown below.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">inventory</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="n">add_furniture</span><span class="p">(</span><span class="s2">&quot;invoice01.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;Elisa Miles&quot;</span><span class="p">,</span> <span class="s2">&quot;LR04&quot;</span><span class="p">,</span> <span class="s2">&quot;Leather Sofa&quot;</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
 <span class="n">add_furniture</span><span class="p">(</span><span class="s2">&quot;invoice01.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;Edward Data&quot;</span><span class="p">,</span> <span class="s2">&quot;KT78&quot;</span><span class="p">,</span> <span class="s2">&quot;Kitchen Table&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
-<span class="n">add_furniture</span><span class="p">(</span><span class="s2">&quot;invoice01.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;Alex Gonzales&quot;</span><span class="p">,</span> <span class="s2">&quot;Queen Matress&quot;</span><span class="p">,</span> <span class="mi">17</span><span class="p">)</span>
+<span class="n">add_furniture</span><span class="p">(</span><span class="s2">&quot;invoice01.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;Alex Gonzales&quot;</span><span class="p">,</span> <span class="s2">&quot;Queen Mattress&quot;</span><span class="p">,</span> <span class="mi">17</span><span class="p">)</span>
 
 <span class="n">create_invoice</span> <span class="o">=</span> <span class="n">single_customer</span><span class="p">(</span><span class="s2">&quot;Susan Wong&quot;</span><span class="p">,</span> <span class="s2">&quot;SW_invoice.csv&quot;</span><span class="p">)</span>
 <span class="n">create_invoice</span><span class="p">(</span><span class="s2">&quot;test_items.csv&quot;</span><span class="p">)</span>

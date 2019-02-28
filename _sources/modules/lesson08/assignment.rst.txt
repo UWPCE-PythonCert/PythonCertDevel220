@@ -2,11 +2,19 @@
 Assignment
 ##########
 
-Norton Furniture has been using comma-separated files (.CSV extension) to keep track of which furniture they have rented out to which
-customer. This currently requires them to use a spreadsheet program. Your Project Manager wants you to get the spreadsheet program out
+HP Norton has been using comma-separated files (.CSV extension) to keep track of which furniture they have rented out to which
+customer. This is currently generated from a spreadsheet.
+
+Your Project Manager wants you to get the spreadsheet program out
 of the equation by creating a Python function that will create and update an inventory CSV file with all the information that is currently
-entered through the spreadsheet program. Additionally, you will need to, using closures and currying, add the necessary functionality
-to bulk-process a list of items, coming from another CSV file, that have been rented out to a single customer. 
+entered through the spreadsheet program. You have decided to use closures and currying to develop the necessary functionality. 
+
+You will also develop functionality to
+to bulk-process a list of items, coming from a separate CSV file, that have been rented out to a single customer. This functionality will thus update the inventory list by adding that customer's rentals.
+
+To summarize:
+1. You will create a program to initially create, and subsequently update, a CSV file that lists which furniture is rented to which customer (to replace use of the spreadsheet mentioned above).
+2. You will create additionally functionality that will load individual customers rentals.
 
 
 Here is what you need to do:
@@ -21,7 +29,7 @@ Here is what you need to do:
     - *item_monthly_price*
 
     This function will create *invoice_file* if it doesn't exist or append a new line to it if it does. After adding a few items to the
-    same file, the file created by *add_furniture* should look like this:
+    same file, the file created by *add_furniture* should look something like this:
 
     ::
 
@@ -29,6 +37,8 @@ Here is what you need to do:
         Edward Data,KT78,Kitchen Table,10.00
         Alex Gonzales,BR02,Queen Mattress,17.00
 
+
+    You can create a starter file in this format for testing, or you can have your add function do it.
 
 #. Create a function called *single_customer*:
     - Input parameters: *customer_name*, *invoice_file*.
@@ -43,7 +53,18 @@ Other requirements:
 
 Testing
 -------
-You can use the included *test_items.csv* file for testing of your *single_customer* function. *add_furniture* can be tested manually,
+You can create the *test_items.csv* file for testing of your *single_customer* function. 
+The layout of the csv will be something like this:
+
+    ::
+
+        LR04,Leather Sofa,25.00
+        KT78,Kitchen Table,10.00
+        BR02,Queen Mattress,17.00
+
+
+
+*add_furniture* can be tested manually,
 as shown below.
 
 .. code-block:: python
@@ -51,7 +72,7 @@ as shown below.
     from inventory import *
     add_furniture("invoice01.csv", "Elisa Miles", "LR04", "Leather Sofa", 25)
     add_furniture("invoice01.csv", "Edward Data", "KT78", "Kitchen Table", 10)
-    add_furniture("invoice01.csv", "Alex Gonzales", "Queen Matress", 17)   
+    add_furniture("invoice01.csv", "Alex Gonzales", "Queen Mattress", 17)   
 
     create_invoice = single_customer("Susan Wong", "SW_invoice.csv")
     create_invoice("test_items.csv")
