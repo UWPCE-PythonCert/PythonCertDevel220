@@ -215,6 +215,8 @@ will likely only be able to properly handle particular exceptions -- so
 the __exit__ method takes all the information about the exception as
 parameters:
 
+```
+
     def __exit__(self, exc_type, exc_val, exc_tb)
 
     exc_type: the type of the Exception
@@ -223,15 +225,17 @@ parameters:
 
     exc_tb: the Exception Traceback object
 
+```
+
 The type of exception lets you check if this is an excpetion you know how to handle::
 
  
-
-::
+```
 
         if exc_type is RuntimeError:
             # Deal with it.
 
+```
  
 
 The value is the exception object itself and the traceback is a full
@@ -278,20 +282,20 @@ The code is similar to the class defined previously and using it has
 similar results. We can handle errors:
 
  
+```
+     In []: with context(True):
+         ....: print("in the context")
+         ....: raise RuntimeError("error raised")
+         ....:
+     __init__ code here
+     __enter__ code goes here
+     in the context
+     errors handled here
+     __exit__ cleanup goes here
 
-|     In []: with context(True):
-|         ....: print("in the context")
-|         ....: raise RuntimeError("error raised")
-|         ....:
-|     __init__ code here
-|     __enter__ code goes here
-|     in the context
-|     errors handled here
-|     __exit__ cleanup goes here
+```
 
-|
 | Or, we can allow them to propagate:
-
  
 
 ::

@@ -63,7 +63,7 @@ an unexpected race condition.
 Race conditions occur when multiple statements need to execute
 atomically, but get interrupted midway.
 
-:download:`race_condition.py <../examples/threading-multiprocessing/race_condition.py>`
+See ```examples/threading-multiprocessing/race_condition.py``` in your repository.
 
 No race condition
 ------------------

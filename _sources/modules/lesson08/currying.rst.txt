@@ -20,18 +20,11 @@ function with a couple parameters pre-set.
 
 Let's go back to the multiplier example we used when learning closures:
 
-.. raw:: html
+```
 
-   <div class="highlight-python">
-
-.. raw:: html
-
-   <div class="highlight">
-
-::
-
-   def multiplier(x):
-       return x * 3
+     def multiplier(x):
+         return x * 3
+```
 
 As before, we can use closures to create a multiplier factory, one that
 requires very little code to create new multipliers that do not
@@ -39,19 +32,23 @@ necessarily return x times 3 all the time. Another option, if you don't
 feel like using closures, would be to modify the \ *multiplier* function
 to take a second parameter:
 
-::
+```
 
    def multiplier(x, n=3):
        return x * n
+
+```
 
 This one would still be able to work in exactly the same way as the
 original function, but now it also allows you to override the default
 multiplication by 3 with a different factor:
 
-::
+```
 
    multiplier(4) # The result will be 4 * 3 = 12
    multiplier(4, 2) # The result will be 4 * 2 = 8 since the default was overridden
+
+```
 
 Still a bit clunky – it forces us to keep passing the value of the
 factor, even if it's not changing (unless the factor happens to have the
@@ -70,16 +67,13 @@ function that takes only one argument!
    particular value. Here is that technique, applied to the multiplier
    problem:
 
-   .. container:: highlight-python
+```
+      def get_multiplier(n = 3):
+          def multiplier(x)
+              return x * n
+          return multiplier
 
-      .. container:: highlight
-
-         ::
-
-            def get_multiplier(n = 3):
-                def multiplier(x)
-                    return x * n
-                return multiplier
+```
 
    Now, in this case, we still had to define \ *multiplier* inside
    of \ *get_multiplier*, which presented no major issues, but
@@ -87,20 +81,24 @@ function that takes only one argument!
    Python module called \ *introductions.py*. Inside of that module,
    there is a single function called \ *introduce_person()*:
 
-   ::
+```
 
       # introductions.py
       def introduce_person(name, age, job, location):
           return "This is %s, a %d-year-old %s living in %s" % (name, age, job, location)
 
+```
+
    The *introduce_person *\ method allows you to create a basic string
    to introduce a person. It takes four parameters.
 
-   ::
+```
 
       >>> from introductions import introduce_person
       >>> introduce_person("Elisa", 28, "engineer", "Portland")
       'This is Elisa, a 28-year-old engineer living in Portland'
+
+```
 
    This works well, but it might seem less convenient if you have a list
    of people you need to introduce, all with the same job (for example,
@@ -112,7 +110,7 @@ function that takes only one argument!
    common, we could create a curried function, just like we did for the
    multiplier:
 
-   ::
+```
 
       def get_simple_intro(age, job, location):
           def simple_introduction(name):
@@ -123,6 +121,8 @@ function that takes only one argument!
       'This is Maya, a 10-year-old student living in Seattle'
       >> simple_intro('Alison')
       'This is Alison, a 10-year-old student living in Seattle'
+
+```
 
    There is, however, an easier way to achieve this.
 
@@ -151,15 +151,17 @@ function that takes only one argument!
 
    Let's go back one last time to the multiplier example:
 
-   ::
+```
 
       def multiplier(x, n=3):
           return x * n
 
+```
+
    We will now use functools.partial to create a curried version of the
    multiplier function:
 
-   ::
+```
 
       from functools import partial
 
@@ -173,6 +175,8 @@ function that takes only one argument!
       8
       >> quadruple_it(4)
       16
+
+```
 
    *partial* returns a curried function in which one or more parameters
    of the original function have been given values, so that the returned

@@ -332,12 +332,14 @@ pretty much any error raised in its context. And the context manager
 will likely only be able to properly handle particular exceptions – so
 the __exit__ method takes all the information about the exception as
 parameters:</p>
+<p><a href="#id2"><span class="problematic" id="id3">``</span></a><a href="#id4"><span class="problematic" id="id5">`</span></a></p>
 <p>&nbsp; &nbsp; def __exit__(self, exc_type, exc_val, exc_tb)</p>
 <p>&nbsp; &nbsp; exc_type: the type of the Exception</p>
 <p>&nbsp; &nbsp; exc_val: the value of the Exception</p>
 <p>&nbsp; &nbsp; exc_tb: the Exception Traceback object</p>
+<p><a href="#id6"><span class="problematic" id="id7">``</span></a><a href="#id8"><span class="problematic" id="id9">`</span></a></p>
 <p>The type of exception lets you check if this is an excpetion you know how to handle:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">::</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```
 </pre></div>
 </div>
 <blockquote>
@@ -346,6 +348,7 @@ parameters:</p>
 <dd># Deal with it.</dd>
 </dl>
 </div></blockquote>
+<p><a href="#id10"><span class="problematic" id="id11">``</span></a><a href="#id12"><span class="problematic" id="id13">`</span></a></p>
 <p>The value is the exception object itself and the traceback is a full
 traceback object. Traceback objects hold all the information about the
 context in which and error occurred. It’s pretty advanced stuff, so you
@@ -380,19 +383,20 @@ a generator function into context manager.</div>
 </div>
 <p>The code is similar to the class defined previously and using it has
 similar results. We can handle errors:</p>
+<dl class="docutils">
+<dt><a href="#id14"><span class="problematic" id="id15">``</span></a><a href="#id16"><span class="problematic" id="id17">`</span></a></dt>
+<dd>In []: with context(True):
+&nbsp; &nbsp; ….: print(“in the context”)
+&nbsp; &nbsp; ….: raise RuntimeError(“error raised”)
+&nbsp; &nbsp; ….:
+__init__ code here
+__enter__ code goes here
+in the context
+errors handled here
+__exit__ cleanup goes here</dd>
+</dl>
+<p><a href="#id18"><span class="problematic" id="id19">``</span></a><a href="#id20"><span class="problematic" id="id21">`</span></a></p>
 <div class="line-block">
-<div class="line">&nbsp; &nbsp; In []: with context(True):</div>
-<div class="line">&nbsp; &nbsp; &nbsp; &nbsp; ….: print(“in the context”)</div>
-<div class="line">&nbsp; &nbsp; &nbsp; &nbsp; ….: raise RuntimeError(“error raised”)</div>
-<div class="line">&nbsp; &nbsp; &nbsp; &nbsp; ….:</div>
-<div class="line">&nbsp; &nbsp; __init__ code here</div>
-<div class="line">&nbsp; &nbsp; __enter__ code goes here</div>
-<div class="line">&nbsp; &nbsp; in the context</div>
-<div class="line">&nbsp; &nbsp; errors handled here</div>
-<div class="line">&nbsp; &nbsp; __exit__ cleanup goes here</div>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
 <div class="line">Or, we can allow them to propagate:</div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">51</span><span class="p">]:</span> <span class="k">with</span> <span class="n">context</span><span class="p">(</span><span class="kc">False</span><span class="p">):</span>

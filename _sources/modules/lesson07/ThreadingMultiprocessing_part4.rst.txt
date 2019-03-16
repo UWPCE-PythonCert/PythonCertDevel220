@@ -81,7 +81,7 @@ Run a function at some time in the future:
     # you can cancel it if you want:
     t.cancel()
 
-:download:`simple_timer.py </examples/threading-multiprocessing/simple_timer.py>`
+See ```simple_timer.py``` in your repository.
 
 Other Queue types
 -----------------
@@ -103,7 +103,7 @@ inserting the tuple:
 Threading example with a queue
 ------------------------------
 
-:download:`integrate_main.py <../examples/threading-multiprocessing/integrate_threads.py>`
+See ```integrate_main.py ``` in your repository.
 
 .. code-block:: python
 
@@ -153,7 +153,7 @@ Threading example with a queue
 Threading on a CPU bound problem
 --------------------------------
 
-Try running the code in :download:`integrate_threads.py </examples/threading-multiprocessing/integrate_threads.py>`
+Try running the code in ```integrate_threads.py``` in your repository.
 
 It has a couple of tunable parameters:
 

@@ -237,20 +237,16 @@
 <div class="section" id="adding-a-new-file">
 <h3>Adding a new file<a class="headerlink" href="#adding-a-new-file" title="Permalink to this headline">¶</a></h3>
 <p>Note that git does not track directories – you do not have to add a new dir to git – when you add a new file in that dir, git will track where it is.</p>
-<p>Now, you need to copy the lesson files and test files from the lessons directory and the tests directory
-to your own directory under students. You will find tests and lessons in the parent directory of your project.</p>
-<p>Under each of these there is a hirearchy of directories and files, and all these should be copied too.</p>
+<p>Now, you need to copy the lesson files from the <strong>template_student</strong> directory
+to your own directory under students.</p>
 <p>After copying you will end up with a structure like this:</p>
 <ul class="simple">
-<li>students/yourname/lessons/…</li>
-<li>students/yourname/tests/…</li>
+<li>students/yourname/lessonNN/…</li>
 </ul>
 <p>Be sure to COPY, not move the files!!!</p>
-<p>Now, change to your own named directory (the one under students)
-and type</p>
-<p><code class="docutils literal notranslate"><span class="pre">`pip</span> <span class="pre">install</span> <span class="pre">-e</span> <span class="pre">lessons`</span></code></p>
-<p>Now you can do your coding, in your lessons directory, under the appropriate lesson.
-For this example, that is simply adding a readme file. You can do that with your text editor, or directly on the command line:</p>
+<p>Now you can do your coding, in your lessonNN directory. You will find directories
+for your Python submissions (src), tests (tests) and data (data).</p>
+<p>For this example, that is simply adding a readme file. You can do that with your text editor, or directly on the command line:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span> <span class="o">&gt;</span> <span class="n">README</span><span class="o">.</span><span class="n">rst</span>
 <span class="n">Python</span> <span class="n">code</span> <span class="k">for</span> <span class="n">UWPCE</span><span class="o">-</span><span class="n">PythonCert</span> <span class="n">class</span><span class="p">,</span> <span class="n">written</span> <span class="n">by</span> <span class="n">Marie</span> <span class="n">Curie</span>
 <span class="n">ctrl</span><span class="o">+</span><span class="n">D</span>

@@ -30,7 +30,7 @@ Here is what you need to do:
 
         Update *test_unit.py* as required to attain 90% coverage.
 
-#. Create a file called *test_integration.py*.
+#. Create a file called *test_integration.py* that runs Inventory Management tests as a whole.
 
 Other requirements:
 -------------------

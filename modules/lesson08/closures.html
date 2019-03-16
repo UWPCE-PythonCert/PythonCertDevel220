@@ -177,23 +177,24 @@
   <div class="section" id="closures">
 <h1>Closures<a class="headerlink" href="#closures" title="Permalink to this headline">¶</a></h1>
 <blockquote>
-<div>The venerable master Qc Na was walking with his student, Anton.
+<div><p>The venerable master Qc Na was walking with his student, Anton.
 Hoping to prompt the master into a discussion, Anton said “Master, I
 have heard that objects (and classes) are a very good thing. Is this
 true?” Qc Na looked pityingly at his student and replied, “Foolish
-pupil! Objects are merely a poor man’s closures.”
-Chastised, Anton took his leave from his master and returned to his
+pupil! Objects are merely a poor man’s closures.”</p>
+<p>Chastised, Anton took his leave from his master and returned to his
 cell, intent on studying closures. He carefully read the entire
 “Lambda: The Ultimate…” series of papers and its cousins, and
 implemented a small Scheme interpreter with a closure-based object
 system. He learned much, and looked forward to informing his master
-of his progress.
-On his next walk with Qc Na, Anton attempted to impress his master by
+of his progress.</p>
+<p>On his next walk with Qc Na, Anton attempted to impress his master by
 saying “Master, I have diligently studied the matter, and now
 understand that objects are truly a poor man’s closures.” Qc Na
 responded by hitting Anton with his stick, saying “When will you
 learn? Closures are a poor man’s object.” At that moment, Anton
-became enlightened.</div></blockquote>
+became enlightened.</p>
+</div></blockquote>
 <p>From: <a class="reference external" href="http://wiki.c2.com/?ClosuresAndObjectsAreEquivalent">http://wiki.c2.com/?ClosuresAndObjectsAreEquivalent</a></p>
 <p>What exactly are Closures, these mysterious things that offer
 programming enlightenment? Let’s continue to compare and contrast
@@ -282,8 +283,8 @@ called:</p>
 <p>I said <strong>partially</strong> because, in this case a global variable,&nbsp;<em>count</em>
 needs to be defined&nbsp;<strong>outside</strong> of the increment function, so that the
 current state of the counter is not lost on resetted (if you had
-something like&nbsp;<em>count = 0</em> inside of&nbsp;<em>increment()</em>).
-Having&nbsp;<em>count</em> defined externally is in itself a risk, as it exposes
+something like&nbsp;<em>count = 0</em> inside of&nbsp;<em>increment()</em>).</p>
+<p>Having&nbsp;<em>count</em> defined externally is in itself a risk, as it exposes
 it to other code that could accidentally modify it; it also becomes
 increasingly difficult to maintain if you needed more that one counter.
 Once again, closures come to the rescue:</p>
@@ -303,7 +304,8 @@ Once again, closures come to the rescue:</p>
 independent, that is, increment one counter will not affect any of the
 others. The&nbsp;<em>count</em> variable for each counter is generally only
 accessible to the counter itself, so the risk of other code modifying it
-by accident has been all but eliminated. Note the use of
+by accident has been all but eliminated.</p>
+<p>Note the use of
 the&nbsp;<em>nonlocal&nbsp;*keyword, which was introduced with Python 3, allowing
 to use the&nbsp;*counter</em> variable from the enclosing function without
 making it a global variable. Just for fun, let’s make our closure

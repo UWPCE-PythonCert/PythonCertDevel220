@@ -183,26 +183,35 @@
 of parameters, and you want to make a specialized version of that
 function with a couple parameters pre-set.</p>
 <p>Let’s go back to the multiplier example we used when learning closures:</p>
-<div class="highlight-python"><div class="highlight"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">multiplier</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">3</span>
-</pre></div>
-</div>
+<p><a href="#id2"><span class="problematic" id="id3">``</span></a><a href="#id4"><span class="problematic" id="id5">`</span></a></p>
+<blockquote>
+<div><dl class="docutils">
+<dt>def multiplier(x):</dt>
+<dd>return x * 3</dd>
+</dl>
+</div></blockquote>
+<p><a href="#id6"><span class="problematic" id="id7">``</span></a><a href="#id8"><span class="problematic" id="id9">`</span></a></p>
 <p>As before, we can use closures to create a multiplier factory, one that
 requires very little code to create new multipliers that do not
 necessarily return x times 3 all the time. Another option, if you don’t
 feel like using closures, would be to modify the&nbsp;<em>multiplier</em> function
 to take a second parameter:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">multiplier</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">n</span>
-</pre></div>
-</div>
+<p><a href="#id10"><span class="problematic" id="id11">``</span></a><a href="#id12"><span class="problematic" id="id13">`</span></a></p>
+<blockquote>
+<div><dl class="docutils">
+<dt>def multiplier(x, n=3):</dt>
+<dd>return x * n</dd>
+</dl>
+</div></blockquote>
+<p><a href="#id14"><span class="problematic" id="id15">``</span></a><a href="#id16"><span class="problematic" id="id17">`</span></a></p>
 <p>This one would still be able to work in exactly the same way as the
 original function, but now it also allows you to override the default
 multiplication by 3 with a different factor:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">multiplier</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="c1"># The result will be 4 * 3 = 12</span>
-<span class="n">multiplier</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="c1"># The result will be 4 * 2 = 8 since the default was overridden</span>
-</pre></div>
-</div>
+<p><a href="#id18"><span class="problematic" id="id19">``</span></a><a href="#id20"><span class="problematic" id="id21">`</span></a></p>
+<blockquote>
+<div>multiplier(4) # The result will be 4 * 3 = 12
+multiplier(4, 2) # The result will be 4 * 2 = 8 since the default was overridden</div></blockquote>
+<p><a href="#id22"><span class="problematic" id="id23">``</span></a><a href="#id24"><span class="problematic" id="id25">`</span></a></p>
 <p>Still a bit clunky – it forces us to keep passing the value of the
 factor, even&nbsp;if it’s not&nbsp;changing (unless the factor happens to have the
 default value of 3). And there are places, like&nbsp;map&nbsp;that require a
@@ -215,34 +224,47 @@ number of parameters&nbsp;a function takes, creating a specialized
 function with one or more of the original parameters set to a
 particular value. Here is that technique, applied to the multiplier
 problem:</p>
-<div class="highlight-python docutils container">
-<div class="highlight docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_multiplier</span><span class="p">(</span><span class="n">n</span> <span class="o">=</span> <span class="mi">3</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">multiplier</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">n</span>
-    <span class="k">return</span> <span class="n">multiplier</span>
-</pre></div>
 </div>
-</div>
-</div>
-<p>Now, in this case, we still had to define&nbsp;<em>multiplier</em> inside
+<dl class="docutils">
+<dt><a href="#id26"><span class="problematic" id="id27">``</span></a><a href="#id28"><span class="problematic" id="id29">`</span></a></dt>
+<dd><dl class="first last docutils">
+<dt>def get_multiplier(n = 3):</dt>
+<dd><dl class="first docutils">
+<dt>def multiplier(x)</dt>
+<dd>return x * n</dd>
+</dl>
+<p class="last">return multiplier</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p><a href="#id30"><span class="problematic" id="id31">``</span></a><a href="#id32"><span class="problematic" id="id33">`</span></a></p>
+<blockquote>
+<div>Now, in this case, we still had to define&nbsp;<em>multiplier</em> inside
 of&nbsp;<em>get_multiplier</em>, which presented no major issues, but
 could&nbsp;become more cumbersome in the next scenario. Imagine you have a
 Python module called&nbsp;<em>introductions.py</em>. Inside of that module,
-there is a single function called&nbsp;<em>introduce_person()</em>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># introductions.py</span>
-<span class="k">def</span> <span class="nf">introduce_person</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">job</span><span class="p">,</span> <span class="n">location</span><span class="p">):</span>
-    <span class="k">return</span> <span class="s2">&quot;This is </span><span class="si">%s</span><span class="s2">, a </span><span class="si">%d</span><span class="s2">-year-old </span><span class="si">%s</span><span class="s2"> living in </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">job</span><span class="p">,</span> <span class="n">location</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>The <a href="#id2"><span class="problematic" id="id3">*</span></a>introduce_person&nbsp;<a href="#id4"><span class="problematic" id="id5">*</span></a>method allows you to create a basic string
-to introduce a person. It takes four parameters.</p>
+there is a single function called&nbsp;<em>introduce_person()</em>:</div></blockquote>
+<p><a href="#id34"><span class="problematic" id="id35">``</span></a><a href="#id36"><span class="problematic" id="id37">`</span></a></p>
+<blockquote>
+<div><p># introductions.py
+def introduce_person(name, age, job, location):</p>
+<blockquote>
+<div>return “This is %s, a %d-year-old %s living in %s” % (name, age, job, location)</div></blockquote>
+</div></blockquote>
+<p><a href="#id38"><span class="problematic" id="id39">``</span></a><a href="#id40"><span class="problematic" id="id41">`</span></a></p>
+<blockquote>
+<div>The <a href="#id42"><span class="problematic" id="id43">*</span></a>introduce_person&nbsp;<a href="#id44"><span class="problematic" id="id45">*</span></a>method allows you to create a basic string
+to introduce a person. It takes four parameters.</div></blockquote>
+<p><a href="#id46"><span class="problematic" id="id47">``</span></a><a href="#id48"><span class="problematic" id="id49">`</span></a></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">introductions</span> <span class="k">import</span> <span class="n">introduce_person</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">introduce_person</span><span class="p">(</span><span class="s2">&quot;Elisa&quot;</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="s2">&quot;engineer&quot;</span><span class="p">,</span> <span class="s2">&quot;Portland&quot;</span><span class="p">)</span>
 <span class="go">&#39;This is Elisa, a 28-year-old engineer living in Portland&#39;</span>
 </pre></div>
 </div>
-<p>This works well, but it might seem less convenient if you have a list
+<p><a href="#id50"><span class="problematic" id="id51">``</span></a><a href="#id52"><span class="problematic" id="id53">`</span></a></p>
+<blockquote>
+<div><p>This works well, but it might seem less convenient if you have a list
 of people you need to introduce, all with the same job (for example,
 ‘student’), all with the same age (maybe 4th grade children) who all
 happen to be 10 years old and all living in the same city. Only the
@@ -250,20 +272,29 @@ names are changing.</p>
 <p>To take advantage of&nbsp;the parameters these group of people have in
 common, we could create a curried function, just like we did for the
 multiplier:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_simple_intro</span><span class="p">(</span><span class="n">age</span><span class="p">,</span> <span class="n">job</span><span class="p">,</span> <span class="n">location</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">simple_introduction</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
-        <span class="k">return</span> <span class="s2">&quot;This is </span><span class="si">%s</span><span class="s2">, a </span><span class="si">%d</span><span class="s2">-year-old </span><span class="si">%s</span><span class="s2"> living in </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">job</span><span class="p">,</span> <span class="n">location</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">simple_intro</span>
-<span class="o">&gt;&gt;</span> <span class="n">simple_intro</span> <span class="o">=</span> <span class="n">get_simple_intro</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;student&#39;</span><span class="p">,</span> <span class="s1">&#39;Seattle&#39;</span><span class="p">)</span>
-<span class="o">&gt;&gt;</span> <span class="n">simple_intro</span><span class="p">(</span><span class="s1">&#39;Maya&#39;</span><span class="p">)</span>
-<span class="s1">&#39;This is Maya, a 10-year-old student living in Seattle&#39;</span>
-<span class="o">&gt;&gt;</span> <span class="n">simple_intro</span><span class="p">(</span><span class="s1">&#39;Alison&#39;</span><span class="p">)</span>
-<span class="s1">&#39;This is Alison, a 10-year-old student living in Seattle&#39;</span>
-</pre></div>
-</div>
-<p>There is, however, an easier way to achieve this.</p>
+</div></blockquote>
+<p><a href="#id54"><span class="problematic" id="id55">``</span></a><a href="#id56"><span class="problematic" id="id57">`</span></a></p>
+<blockquote>
+<div><dl class="docutils">
+<dt>def get_simple_intro(age, job, location):</dt>
+<dd><dl class="first docutils">
+<dt>def simple_introduction(name):</dt>
+<dd>return “This is %s, a %d-year-old %s living in %s” % (name, age, job, location)</dd>
+</dl>
+<p class="last">return simple_intro</p>
+</dd>
+</dl>
+<p>&gt;&gt; simple_intro = get_simple_intro(10, ‘student’, ‘Seattle’)
+&gt;&gt; simple_intro(‘Maya’)
+‘This is Maya, a 10-year-old student living in Seattle’
+&gt;&gt; simple_intro(‘Alison’)
+‘This is Alison, a 10-year-old student living in Seattle’</p>
+</div></blockquote>
+<p><a href="#id58"><span class="problematic" id="id59">``</span></a><a href="#id60"><span class="problematic" id="id61">`</span></a></p>
+<blockquote>
+<div><p>There is, however, an easier way to achieve this.</p>
 <p class="rubric" id="currying-with-functools-partial">Currying with <em>functools.partial</em></p>
-</div>
+</div></blockquote>
 <div class="section docutils container" id="functools-partial">
 <p>The&nbsp;functools&nbsp;module in the standard library provides utilities
 for working with functions:</p>
@@ -282,27 +313,35 @@ already filled in.</li>
 </ul>
 </div></blockquote>
 <p>Let’s go back one last time to the multiplier example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">multiplier</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">n</span>
-</pre></div>
 </div>
-<p>We will now use functools.partial to create a curried version of the
-multiplier function:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">functools</span> <span class="k">import</span> <span class="n">partial</span>
-
-<span class="k">def</span> <span class="nf">multiplier</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">n</span>
-
-<span class="n">double_it</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">multiplier</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">quadruple_it</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">multiplier</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
-
-<span class="o">&gt;&gt;</span> <span class="n">double_it</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
-<span class="mi">8</span>
-<span class="o">&gt;&gt;</span> <span class="n">quadruple_it</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
-<span class="mi">16</span>
-</pre></div>
-</div>
-<p><em>partial</em> returns a curried function in which one or more parameters
+<p><a href="#id62"><span class="problematic" id="id63">``</span></a><a href="#id64"><span class="problematic" id="id65">`</span></a></p>
+<blockquote>
+<div><dl class="docutils">
+<dt>def multiplier(x, n=3):</dt>
+<dd>return x * n</dd>
+</dl>
+</div></blockquote>
+<p><a href="#id66"><span class="problematic" id="id67">``</span></a><a href="#id68"><span class="problematic" id="id69">`</span></a></p>
+<blockquote>
+<div>We will now use functools.partial to create a curried version of the
+multiplier function:</div></blockquote>
+<p><a href="#id70"><span class="problematic" id="id71">``</span></a><a href="#id72"><span class="problematic" id="id73">`</span></a></p>
+<blockquote>
+<div><p>from functools import partial</p>
+<dl class="docutils">
+<dt>def multiplier(x, n=3):</dt>
+<dd>return x * n</dd>
+</dl>
+<p>double_it = partial(multiplier, n=2)
+quadruple_it = partial(multiplier, n=4)</p>
+<p>&gt;&gt; double_it(4)
+8
+&gt;&gt; quadruple_it(4)
+16</p>
+</div></blockquote>
+<p><a href="#id74"><span class="problematic" id="id75">``</span></a><a href="#id76"><span class="problematic" id="id77">`</span></a></p>
+<blockquote>
+<div><p><em>partial</em> returns a curried function in which one or more parameters
 of the original function&nbsp;have been given values, so that the returned
 function will not “ask” for those parameters. In the example
 above,&nbsp;the&nbsp;<em>multiplier&nbsp;*method was defined right there and then,
@@ -318,7 +357,7 @@ working with our *introductions</em> module:</p>
 <p>Note that in this case, you don’t even need to see the code
 for&nbsp;<em>introduce_person</em>, as <em>functools.partial</em> is taking care of
 the process of currying it into a single-parameter function.</p>
-</div>
+</div></blockquote>
 </div>
 
 

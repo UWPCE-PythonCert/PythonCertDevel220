@@ -34,7 +34,7 @@ Note:
         - Email address.
         - Status (active or inactive customer).
         - Credit limit.
-#. Create a file called *basic_operations.py*.
+#. Create a file called *basic_operations.py* in the src directory.
     - This file will need to have the following functions:
         - *add_customer(customer_id, name, lastname, home_address, phone_number, email_address, status, credit_limit)*: This function will add a new customer to the sqlite3 database.
         - *search_customer(customer_id)*: This function will return a dictionary object with name, lastname, email address and phone number of a customer or an empty dictionary object if no customer was found.

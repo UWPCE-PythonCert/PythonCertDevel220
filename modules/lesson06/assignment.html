@@ -92,7 +92,6 @@
 <li class="toctree-l3"><a class="reference internal" href="../lesson04/index.html">Lesson 4 : Iteration</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../lesson05/index.html">Lesson 5 : Consuming APIs with NoSQL</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="index.html">Lesson 6 : Profiling and performance</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="cython.html">Lesson 06.03 Cython</a></li>
 <li class="toctree-l4"><a class="reference internal" href="activity.html">Activity</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">Assignment</a></li>
 </ul>
@@ -181,9 +180,13 @@ based approach to implement the right improvements.</p>
 <div class="section" id="here-is-what-you-need-to-do">
 <h2>Here is what you need to do:<a class="headerlink" href="#here-is-what-you-need-to-do" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
-<li>The assignment repository for this lesson contains a file with 1 million records
+<li>The assignment repository for this lesson contains a file with 10 records
 and a module that reads that file.</li>
-<li>The module is badly written and probably can be made to run more quickly and
+<li>Your first task is to take the data file, and expand it (following the format for the 10 records)
+so that it contains one million records. Write some Python code to do this.
+One of the columns is a guid (a unique identity). See if you can find an easy way to
+generate these (look online?).</li>
+<li>The module that reads the file is badly written and probably can be made to run more quickly and
 efficiently!</li>
 <li>You will look at the code and may immediately form a judgment about where
 performance can be improved. Do not be tempted to make immediate changes!</li>
@@ -203,7 +206,7 @@ and produce identical output to poor_perf.py</li>
 <h2>Submission<a class="headerlink" href="#submission" title="Permalink to this headline">¶</a></h2>
 <p>You submission should include the good_perf.py file, along with notes on your findings, performance
 improvements, and notes on your approach. For notes, you can use regular text format (.txt) or try restructured
-text (.rst) format.</p>
+text (.rst) format. It should also include the program you write to generate 1 million records.</p>
 </div>
 </div>
 

@@ -1,6 +1,6 @@
 ##########################
-Part 6: More about MongoDB#
-#########################
+Part 6: More about MongoDB
+##########################
 
 Here's some more information you can read to learn more before we start
 the mongodb activities.

@@ -82,25 +82,21 @@ Adding a new file
 
 Note that git does not track directories -- you do not have to add a new dir to git -- when you add a new file in that dir, git will track where it is.
 
-Now, you need to copy the lesson files and test files from the lessons directory and the tests directory
-to your own directory under students. You will find tests and lessons in the parent directory of your project.
+Now, you need to copy the lesson files from the **template_student** directory 
+to your own directory under students. 
 
-Under each of these there is a hirearchy of directories and files, and all these should be copied too.
 
 After copying you will end up with a structure like this:
 
-- students/yourname/lessons/...
-- students/yourname/tests/...
+- students/yourname/lessonNN/...
+
 
 Be sure to COPY, not move the files!!!
 
-Now, change to your own named directory (the one under students)
-and type
 
-```pip install -e lessons```
+Now you can do your coding, in your lessonNN directory. You will find directories
+for your Python submissions (src), tests (tests) and data (data).
 
-
-Now you can do your coding, in your lessons directory, under the appropriate lesson.
 For this example, that is simply adding a readme file. You can do that with your text editor, or directly on the command line::
 
     cat > README.rst

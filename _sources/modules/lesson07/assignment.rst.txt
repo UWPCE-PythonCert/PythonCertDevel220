@@ -18,11 +18,10 @@ You should address the following general requirements:
 
 Here is what you need to do:
 ============================
-#. Demonstrate with real profile data the time taken to run your existing customer and 
-   product add / update logic.
-#. Amend the add and update logic for both customers and products so that 
-   it can process these in parallel. Your module should launch the updates to 
-   both databases simultaneously. Provide real timing data for your new approach.
+#. Demonstrate with real profile data the time taken to run your existing import logic from lesson 5
+#. Amend the import logic so that 
+   it can process the imports in parallel. Your module should launch the imports 
+   simultaneously. Provide real timing data for your new approach.
 #. Compare and contrast parallel vs. linear performance and recommend to management
    if a change is worthwhile.
 #. To show you have thought through your design, create and provide an example of 

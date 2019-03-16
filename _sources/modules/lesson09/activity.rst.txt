@@ -3,25 +3,37 @@ Activity
 ########
 
 
-The `Ballard Lockes <https://en.wikipedia.org/wiki/Ballard_Locks>`__ in
-Seattle, Washington, are a limited, controlled resource. You have been
+The `Ballard Locks <https://en.wikipedia.org/wiki/Ballard_Locks>`__ in
+Seattle, Washington, are a limited, controlled resource. 
+
+A lock helps vessels to climb and descend hills by creating a pound
+with gates at either end. The pound gates are opened to let a vessel enter.
+The pound is then flooded (to go up) or drained (to go down). And the vessel 
+rises or falls with the water. 
+
+`An explanation of locks <https://en.wikipedia.org/wiki/Lock_(water_navigation)>`_
+
+Note that in the Python code we are using a spelling of Locke to avoid confusion
+with a lock!
+
+You have been
 hired by the Army Corps of Engineers to help build a software control
-system for the lockes. There are two lockes at the Ballard complex, one
+system for the locks. There are two locks at the Ballard complex, one
 small (30 x 150 feet, 8.5 x 45.7 meter) and one large (80 x 825 feet,
 24.4 x 251.5 meter). There are a myriad ways in which different components
-of the lockes represent limited resources with specialized subsystems,
+of the locks represent limited resources with specialized subsystems,
 and a missed or out-of-sequence step could mean disaster. For instance,
-there are two sets of doors for each locke, one upstream and one down,
+there are two sets of doors for each lock, one upstream and one down,
 that cannot both be open at the same time; boats need to clear the doors
 before they are closed and sealed; pumps need to be shut down before
 doors are opened; tourists, who can get very close to observe the
-action, need to be safely managed; the lockes themselves can only handle
+action, need to be safely managed; the locks themselves can only handle
 a certain number of boats. At every step of the way there is a limited
 resource that must be managed and in lock step with the others, yes, pun
 intended. In effect, it involves the coordinated management of resources
 all the way down.
 
-For this first task you do not need to model every aspect of the lockes,
+For this first task you do not need to model every aspect of the locks,
 indeed you only need model its operation overall. Early on you learn
 that there will be other software developers interacting with the system
 and that not everyone is going to remember all the details of using the
@@ -30,23 +42,17 @@ of system components, as simply as possible. You recognize that with all
 the operational and sequencing details to be encapsulated, this is a
 good use case for context managers.
 
-Wondering about the consistent misspelling of the word lock? As an early
-design decision we have moved to avoid overloading the term, which in
-the context can be interpreted both as a verb and as a noun and thereby
-cause confusion. For any instances of the verb use its usual spelling:
-lock. For any instances of the noun use an alternative spelling: locke.
-We have adopted this convention throughout the exercise.
 
 Write a context manager class ``Locke`` to simulate the overall
-functioning of the system. When the locke is entered it stops the pumps,
+functioning of the system. When the lock is entered it stops the pumps,
 opens the doors, closes the doors, and restarts the pumps. Likewise when
-the locke is exited it runs through the same steps: it stops the pumps,
+the lock is exited it runs through the same steps: it stops the pumps,
 opens the doors, closes the doors, and restarts the pumps. Don’t worry
 for now that in the real world there are both upstream and downstream
 doors, and that they should never be opened at the same time; perhaps
 you’ll get to that later. During initialization the context manager class
-accepts the locke’s capacity in number of boats. If someone tries to
-move too many boats through the locke, anything over its established
+accepts the lock’s capacity in number of boats. If someone tries to
+move too many boats through the lock, anything over its established
 capacity, raise a suitable error. Since this is a simulation you need do
 nothing more than print what is happening with the doors and pumps, like
 this:

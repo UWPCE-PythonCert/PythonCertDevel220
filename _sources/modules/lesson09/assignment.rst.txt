@@ -18,6 +18,8 @@ Here is what you need to do:
    There is already
    an example in lesson 5, but build on this example. Try to add useful
    features based on your experience of the Python techniques you have learned.
+   It may not be obvious what to add, but think what would be useful when developing.
+   
 #. HP Norton keeps pictures of all their furniture in jpg files that are stored 
    on their file server. They have a very crude program that starts by 
    discovering all directories on the server and then looking in each of those
