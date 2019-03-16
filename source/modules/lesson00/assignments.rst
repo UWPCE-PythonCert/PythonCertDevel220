@@ -34,7 +34,7 @@ for activities (ungraded) and the ones for assignments (which are graded).
 
 You will also see a tests directory, that contains automated tests you can run
 to verify if your assignment is complete and ready to submit.
-You can also lint and run coverage tests, but we're getting to far ahead!
+You can also lint and run coverage tests, but we're getting too far ahead!
 
 Remember to create a branch in which to do your work. Then, all you need to do is
 save your work in the correct directory. Remember to commit often, with good
@@ -49,4 +49,4 @@ and then create a pull request for master, assigned to your instructor team.
 
 And that's it!
 
-Again, see the Git Workflw page for more details.
+Again, see the Git Workflow page for more details.
