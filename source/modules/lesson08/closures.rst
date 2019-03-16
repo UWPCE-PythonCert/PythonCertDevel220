@@ -8,12 +8,14 @@ Closures
    have heard that objects (and classes) are a very good thing. Is this
    true?" Qc Na looked pityingly at his student and replied, "Foolish
    pupil! Objects are merely a poor man's closures."
+
    Chastised, Anton took his leave from his master and returned to his
    cell, intent on studying closures. He carefully read the entire
    "Lambda: The Ultimate..." series of papers and its cousins, and
    implemented a small Scheme interpreter with a closure-based object
    system. He learned much, and looked forward to informing his master
    of his progress.
+
    On his next walk with Qc Na, Anton attempted to impress his master by
    saying "Master, I have diligently studied the matter, and now
    understand that objects are truly a poor man's closures." Qc Na
@@ -121,6 +123,7 @@ I said **partially** because, in this case a global variable, \ *count*
 needs to be defined \ **outside** of the increment function, so that the
 current state of the counter is not lost on resetted (if you had
 something like \ *count = 0* inside of \ *increment()*).
+
 Having \ *count* defined externally is in itself a risk, as it exposes
 it to other code that could accidentally modify it; it also becomes
 increasingly difficult to maintain if you needed more that one counter.
@@ -143,7 +146,9 @@ The beauty of this code is that each counter that is created is fully
 independent, that is, increment one counter will not affect any of the
 others. The \ *count* variable for each counter is generally only
 accessible to the counter itself, so the risk of other code modifying it
-by accident has been all but eliminated. Note the use of
+by accident has been all but eliminated. 
+
+Note the use of
 the \ *nonlocal *\ keyword, which was introduced with Python 3, allowing
 to use the \ *counter* variable from the enclosing function without
 making it a global variable. Just for fun, let's make our closure

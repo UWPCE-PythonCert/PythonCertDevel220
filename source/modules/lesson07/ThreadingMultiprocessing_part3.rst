@@ -2,7 +2,7 @@
 Threading and multiprocessing Part 3: Locking Exercise
 ######################################################
 
-:download:`lock_exercise.zip <../examples/threading-multiprocessing/lock_exercise.zip>`
+See ```lock_exercise.zip``` in your repositry.
 
 In: ``lock/stdout_writer.py``
 

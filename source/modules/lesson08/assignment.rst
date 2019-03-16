@@ -3,7 +3,7 @@ Assignment
 ##########
 
 HP Norton has been using comma-separated files (.CSV extension) to keep track of which furniture they have rented out to which
-customer. This is currently generated from a spreadsheet.
+customer. This is currently generated from a spreadsheet called inventory.
 
 Your Project Manager wants you to get the spreadsheet program out
 of the equation by creating a Python function that will create and update an inventory CSV file with all the information that is currently
@@ -20,7 +20,7 @@ To summarize:
 Here is what you need to do:
 ----------------------------
 
-#. Create a python module called *inventory.py*. This file will contain all the functions used for this assignment.
+#. Create a python module called *inventory.py*, to replace the existing spreadsheet. This file will contain all the functions used for this assignment.
 #. Create a function called *add_furniture* that takes the following input parameters:
     - *invoice_file*
     - *customer_name*
@@ -28,7 +28,7 @@ Here is what you need to do:
     - *item_description*
     - *item_monthly_price*
 
-    This function will create *invoice_file* if it doesn't exist or append a new line to it if it does. After adding a few items to the
+    This function will create *invoice_file* (to replace the spreadsheet's data) if it doesn't exist or append a new line to it if it does. After adding a few items to the
     same file, the file created by *add_furniture* should look something like this:
 
     ::
