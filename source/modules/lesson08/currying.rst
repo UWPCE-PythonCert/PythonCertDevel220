@@ -2,12 +2,6 @@
 Currying
 ########
 
-https://rriehle.github.io/FP3/build/html/index.html#currying
-
-
-Currying
---------
-
 “Currying” is a special case of closures:
 
 The idea behind currying is that you may have a function with a number
@@ -16,11 +10,10 @@ function with a couple parameters pre-set.
 
 Let's go back to the multiplier example we used when learning closures:
 
-```
+.. code-block:: python
+
      def multiplier(x):
          return x * 3
-
-```
 
 As before, we can use closures to create a multiplier factory, one that
 requires very little code to create new multipliers that do not
@@ -28,7 +21,7 @@ necessarily return x times 3 all the time. Another option, if you don't
 feel like using closures, would be to modify the \ *multiplier* function
 to take a second parameter:
 
-```
+.. code-block:: python
 
    def multiplier(x, n=3):
        return x * n
