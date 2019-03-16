@@ -1,0 +1,97 @@
+Step 1:
+Get clean repo for students and class dev
+
+
+Then:
+L1/2:
+Input statements in 1 or 2 – clarify
+lesson 1 odd linking
+Test_ rather than _test ½
+Lesson01 integration test first prior to refactor
+Test all tests - Data files all singular version - check ok with tests and assignments
+Csvs all utf-8
+Pylint working
+Coverage working
+Scan for other errors
+
+L2:
+Input statements in 1 or 2 – clarify
+Test_ rather than _test ½
+Test all tests - Data files all singular version - check ok with tests and assignments
+Csvs all utf-8
+Pylint working
+Coverage working
+Scan for other errors
+
+L3:
+Self vs this – eliminate wrong one
+Improve import * peewee
+Test all tests - Data files all singular version - check ok with tests and assignments
+Csvs all utf-8
+Pylint working
+Coverage working
+Scan for other errors
+
+L4:
+L4 customer data missing
+Test all tests - Data files all singular version - check ok with tests and assignments
+Csvs all utf-8
+Pylint working
+Coverage working
+Scan for other errors
+
+L5:
+Test all tests - Data files all singular version - check ok with tests and assignments
+Csvs all utf-8
+Pylint working
+Coverage working
+Scan for other errors
+
+L6:
+Write assignment ot generate the large file based on example.
+Test all tests - Data files all singular version - check ok with tests and assignments
+Csvs all utf-8
+Pylint working
+Coverage working
+Scan for other errors
+
+L7:
+Links missing in github page (somewhere around lesson 7 concurrency)
+Sh l7 use l4 or l5 as a basis? L5 has no update but 4 does
+Test all tests - Data files all singular version - check ok with tests and assignments
+Csvs all utf-8
+Pylint working
+Coverage working
+Scan for other errors
+
+L8:
+Revise lesson 8
+Lesson 8 clarify name / meaning of rental_items
+L8 – data files needed?
+Test all tests - Data files all singular version - check ok with tests and assignments
+Csvs all utf-8
+Pylint working
+Coverage working
+Scan for other errors
+
+L9:
+Part2 l9 assignment improve wording / clarify
+Test all tests - Data files all singular version - check ok with tests and assignments
+Csvs all utf-8
+Pylint working
+Coverage working
+Scan for other errors
+
+L10:
+TXT vs csv timings.csv  filename l10
+Kris Lock feedback
+Test all tests - Data files all singular version - check ok with tests and assignments
+Csvs all utf-8
+Pylint working
+Coverage working
+Scan for other errors
+
+
+At end:
+New shared upstream repo
+Instructions for creating a course repo
