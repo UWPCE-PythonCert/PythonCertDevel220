@@ -64,13 +64,13 @@ Real-world-example
    particular value. Here is that technique, applied to the multiplier
    problem:
 
-```
+.. code-block:: python
+
       def get_multiplier(n = 3):
           def multiplier(x)
               return x * n
           return multiplier
 
-```
 
    Now, in this case, we still had to define \ *multiplier* inside
    of \ *get_multiplier*, which presented no major issues, but
@@ -78,18 +78,17 @@ Real-world-example
    Python module called \ *introductions.py*. Inside of that module,
    there is a single function called \ *introduce_person()*:
 
-```
+.. code-block:: python
 
       # introductions.py
       def introduce_person(name, age, job, location):
           return "This is %s, a %d-year-old %s living in %s" % (name, age, job, location)
 
-```
 
    The *introduce_person *\ method allows you to create a basic string
    to introduce a person. It takes four parameters.
 
-```
+.. code-block:: python
 
       >>> from introductions import introduce_person
       >>> introduce_person("Elisa", 28, "engineer", "Portland")
