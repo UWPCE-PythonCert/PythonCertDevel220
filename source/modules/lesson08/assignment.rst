@@ -67,15 +67,19 @@ The layout of the csv will be something like this:
 *add_furniture* can be tested manually,
 as shown below.
 
+The idea is for the single_customer() function to return a new function (with a fixed customer name and destination inventory file) that will add all items in a source file to the overall inventory under a single customer name. Internally, single_customer() should leverage add_furniture() by fixing the first two parameters.
+
+
 .. code-block:: python
 
     from inventory import *
-    add_furniture("invoice01.csv", "Elisa Miles", "LR04", "Leather Sofa", 25)
-    add_furniture("invoice01.csv", "Edward Data", "KT78", "Kitchen Table", 10)
-    add_furniture("invoice01.csv", "Alex Gonzales", "Queen Mattress", 17)   
-
-    create_invoice = single_customer("Susan Wong", "SW_invoice.csv")
+    add_furniture("rented_items.csv", "Elisa Miles", "LR04", "Leather Sofa", 25)
+    add_furniture("rented_items.csv", "Edward Data", "KT78", "Kitchen Table", 10)
+    add_furniture("rented_items.csv", "Alex Gonzales", "Queen Mattress", 17)
+    create_invoice = single_customer("Susan Wong", "rented_items.csv")
     create_invoice("test_items.csv")
+
+So, using create_invoice() will, in this case, add all items in test_items.csv to rented_items.csv under the name “Susan Wong”.
 
 Submission
 ----------
