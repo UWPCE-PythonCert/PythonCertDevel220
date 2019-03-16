@@ -17,9 +17,9 @@ function with a couple parameters pre-set.
 Let's go back to the multiplier example we used when learning closures:
 
 ```
-
      def multiplier(x):
          return x * 3
+
 ```
 
 As before, we can use closures to create a multiplier factory, one that
@@ -39,6 +39,7 @@ This one would still be able to work in exactly the same way as the
 original function, but now it also allows you to override the default
 multiplication by 3 with a different factor:
 
+
 ```
 
    multiplier(4) # The result will be 4 * 3 = 12
@@ -51,8 +52,8 @@ factor, even if it's not changing (unless the factor happens to have the
 default value of 3). And there are places, like map that require a
 function that takes only one argument!
 
-.. container:: section
-   :name: real-world-example
+Real-world-example
+------------------
 
    What if I could create a function, on the fly, that had a
    particular factor “baked in”?
