@@ -2,29 +2,12 @@ Step 1:
 [done] Get clean repo for students and class dev
 
 
-Setup all standrad dirs
-finish copying how to grade etc
+[done] Setup all standrad dirs
+[done] finish copying how to grade etc
 
 Then:
 L1/2:
-Input statements in 1 or 2 – clarify
-[???] lesson 1 odd linking
-[done] Test_ rather than _test ½
-[LUIS] Lesson01 integration test first prior to refactor
-Test all tests - Data files all singular version - check ok with tests and assignments
-Csvs all utf-8
-Pylint working
-Coverage working
-Scan for other errors
 
-L2:
-[done] Input statements in 1 or 2 – clarify
-[done] Test_ rather than _test ½
-Test all tests - Data files all singular version - check ok with tests and assignments
-Csvs all utf-8
-Pylint working
-Coverage working
-Scan for other errors
 
 L3:
 Self vs this – eliminate wrong one

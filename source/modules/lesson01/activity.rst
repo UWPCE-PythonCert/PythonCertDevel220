@@ -22,7 +22,7 @@ and *test_integration.py* files.
 
 ::
 
-    coverage run --source=calculator/calculator.py -m unittest test_unit.py;
+    coverage run --source=calculator/ -m unittest test_unit.py;
 
 
 #. Satisfy the linter such that *pylint calculator* gives no errors
