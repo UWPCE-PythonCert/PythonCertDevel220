@@ -26,19 +26,17 @@ to take a second parameter:
    def multiplier(x, n=3):
        return x * n
 
-```
 
 This one would still be able to work in exactly the same way as the
 original function, but now it also allows you to override the default
 multiplication by 3 with a different factor:
 
+.. code-block:: python
 
-```
 
    multiplier(4) # The result will be 4 * 3 = 12
    multiplier(4, 2) # The result will be 4 * 2 = 8 since the default was overridden
 
-```
 
 Still a bit clunky – it forces us to keep passing the value of the
 factor, even if it's not changing (unless the factor happens to have the
@@ -87,7 +85,6 @@ Real-world-example
       >>> introduce_person("Elisa", 28, "engineer", "Portland")
       'This is Elisa, a 28-year-old engineer living in Portland'
 
-```
 
    This works well, but it might seem less convenient if you have a list
    of people you need to introduce, all with the same job (for example,
@@ -99,7 +96,7 @@ Real-world-example
    common, we could create a curried function, just like we did for the
    multiplier:
 
-```
+.. code-block:: python
 
       def get_simple_intro(age, job, location):
           def simple_introduction(name):
@@ -111,15 +108,11 @@ Real-world-example
       >> simple_intro('Alison')
       'This is Alison, a 10-year-old student living in Seattle'
 
-```
 
    There is, however, an easier way to achieve this.
 
-   .. rubric:: Currying with *functools.partial*
-      :name: currying-with-functools.partial
-
-.. container:: section
-   :name: functools-partial
+Currying with *functools.partial*
+---------------------------------
 
    The functools module in the standard library provides utilities
    for working with functions:
@@ -140,17 +133,17 @@ Real-world-example
 
    Let's go back one last time to the multiplier example:
 
-```
+.. code-block:: python
 
       def multiplier(x, n=3):
           return x * n
 
-```
 
    We will now use functools.partial to create a curried version of the
    multiplier function:
 
-```
+
+.. code-block:: python
 
       from functools import partial
 
@@ -165,7 +158,7 @@ Real-world-example
       >> quadruple_it(4)
       16
 
-```
+.. code-block:: python
 
    *partial* returns a curried function in which one or more parameters
    of the original function have been given values, so that the returned
@@ -174,7 +167,7 @@ Real-world-example
    but it still works if the method is being imported. Let's see it
    working with our *introductions* module:
 
-   ::
+.. code-block:: python
 
       >>> from introductions import introduce_person
       >>> from functools import partial
