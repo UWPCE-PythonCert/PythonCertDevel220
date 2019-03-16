@@ -5,12 +5,8 @@ Currying
 https://rriehle.github.io/FP3/build/html/index.html#currying
 
 
-.. raw:: html
-
-   <div id="currying" class="section">
-
-.. rubric:: Currying\ ` <https://rriehle.github.io/FP3/build/html/index.html#currying>`__
-   :name: currying
+Currying
+--------
 
 “Currying” is a special case of closures:
 
