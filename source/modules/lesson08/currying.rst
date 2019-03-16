@@ -46,14 +46,14 @@ function that takes only one argument!
 Real-world-example
 ------------------
 
-   What if I could create a function, on the fly, that had a
-   particular factor “baked in”?
+What if I could create a function, on the fly, that had a
+particular factor “baked in”?
 
-   *Enter Currying* – Currying is a technique where you reduce the
-   number of parameters a function takes, creating a specialized
-   function with one or more of the original parameters set to a
-   particular value. Here is that technique, applied to the multiplier
-   problem:
+*Enter Currying* – Currying is a technique where you reduce the
+number of parameters a function takes, creating a specialized
+function with one or more of the original parameters set to a
+particular value. Here is that technique, applied to the multiplier
+problem:
 
 .. code-block:: python
 
@@ -63,11 +63,11 @@ Real-world-example
           return multiplier
 
 
- Now, in this case, we still had to define \ *multiplier* inside
- of \ *get_multiplier*, which presented no major issues, but
- could become more cumbersome in the next scenario. Imagine you have a
- Python module called \ *introductions.py*. Inside of that module,
- there is a single function called \ *introduce_person()*:
+Now, in this case, we still had to define \ *multiplier* inside
+of \ *get_multiplier*, which presented no major issues, but
+could become more cumbersome in the next scenario. Imagine you have a
+Python module called \ *introductions.py*. Inside of that module,
+there is a single function called \ *introduce_person()*:
 
 .. code-block:: python
 
@@ -76,8 +76,8 @@ Real-world-example
           return "This is %s, a %d-year-old %s living in %s" % (name, age, job, location)
 
 
- The *introduce_person *\ method allows you to create a basic string
- to introduce a person. It takes four parameters.
+The *introduce_person *\ method allows you to create a basic string
+to introduce a person. It takes four parameters.
 
 .. code-block:: python
 
@@ -86,15 +86,15 @@ Real-world-example
       'This is Elisa, a 28-year-old engineer living in Portland'
 
 
- This works well, but it might seem less convenient if you have a list
- of people you need to introduce, all with the same job (for example,
- 'student'), all with the same age (maybe 4th grade children) who all
- happen to be 10 years old and all living in the same city. Only the
- names are changing.
+This works well, but it might seem less convenient if you have a list
+of people you need to introduce, all with the same job (for example,
+'student'), all with the same age (maybe 4th grade children) who all
+happen to be 10 years old and all living in the same city. Only the
+names are changing.
 
- To take advantage of the parameters these group of people have in
- common, we could create a curried function, just like we did for the
- multiplier:
+To take advantage of the parameters these group of people have in
+common, we could create a curried function, just like we did for the
+multiplier:
 
 .. code-block:: python
 
@@ -109,29 +109,29 @@ Real-world-example
       'This is Alison, a 10-year-old student living in Seattle'
 
 
- There is, however, an easier way to achieve this.
+There is, however, an easier way to achieve this.
 
 Currying with *functools.partial*
 ---------------------------------
 
- The functools module in the standard library provides utilities
- for working with functions:
+The functools module in the standard library provides utilities
+for working with functions:
 
-   `https://docs.python.org/3.5/library/functools.htmlLinks to an
-   external
-   site. <https://docs.python.org/3.5/library/functools.html>`__
+`https://docs.python.org/3.5/library/functools.htmlLinks to an
+external
+site. <https://docs.python.org/3.5/library/functools.html>`__
 
- Creating a curried function turns out to be common enough that
- the functools.partial function provides an optimized way to do
- it:
+Creating a curried function turns out to be common enough that
+the functools.partial function provides an optimized way to do
+it:
 
- What functools.partial does is:
+What functools.partial does is:
 
-    -  Makes a new version of a function with one or more arguments
-       already filled in.
-    -  The new version of a function documents itself.
+  -  Makes a new version of a function with one or more arguments
+     already filled in.
+  -  The new version of a function documents itself.
 
- Let's go back one last time to the multiplier example:
+Let's go back one last time to the multiplier example:
 
 .. code-block:: python
 
@@ -139,8 +139,8 @@ Currying with *functools.partial*
           return x * n
 
 
- We will now use functools.partial to create a curried version of the
- multiplier function:
+We will now use functools.partial to create a curried version of the
+multiplier function:
 
 
 .. code-block:: python
@@ -159,12 +159,12 @@ Currying with *functools.partial*
       16
 
 
- *partial* returns a curried function in which one or more parameters
- of the original function have been given values, so that the returned
- function will not "ask" for those parameters. In the example
- above, the \ *multiplier *\ method was defined right there and then,
- but it still works if the method is being imported. Let's see it
- working with our *introductions* module:
+*partial* returns a curried function in which one or more parameters
+of the original function have been given values, so that the returned
+function will not "ask" for those parameters. In the example
+above, the \ *multiplier *\ method was defined right there and then,
+but it still works if the method is being imported. Let's see it
+working with our *introductions* module:
 
 .. code-block:: python
 
@@ -174,6 +174,6 @@ Currying with *functools.partial*
       >>> simple_intro('Letty')
       'This is Letty, a 10-year-old student living in Seattle'
 
- Note that in this case, you don't even need to see the code
- for \ *introduce_person*, as *functools.partial* is taking care of
- the process of currying it into a single-parameter function.
+Note that in this case, you don't even need to see the code
+for \ *introduce_person*, as *functools.partial* is taking care of
+the process of currying it into a single-parameter function.
