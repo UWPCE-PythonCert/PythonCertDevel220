@@ -17,34 +17,37 @@
   
 
   
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Threading and multiprocessing Part 5: Multiprocessing" href="ThreadingMultiprocessing_part5.html" />
     <link rel="prev" title="Threading and multiprocessing Part 3: Locking Exercise" href="ThreadingMultiprocessing_part3.html" /> 
-
-  
-  <script src="../../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -199,16 +202,16 @@ safely.</p>
 </pre></div>
 </div>
 <ul class="simple">
-<li><a class="reference external" href="http://docs.python.org/3/library/threading.html">http://docs.python.org/3/library/threading.html</a></li>
-<li><a class="reference external" href="http://docs.python.org/3/library/queue.html">http://docs.python.org/3/library/queue.html</a></li>
+<li><p><a class="reference external" href="http://docs.python.org/3/library/threading.html">http://docs.python.org/3/library/threading.html</a></p></li>
+<li><p><a class="reference external" href="http://docs.python.org/3/library/queue.html">http://docs.python.org/3/library/queue.html</a></p></li>
 </ul>
 <div class="section" id="queues-queue">
 <h2>Queues (<code class="docutils literal notranslate"><span class="pre">queue</span></code>)<a class="headerlink" href="#queues-queue" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><ul class="simple">
-<li>Easier to use than many of the above.</li>
-<li>Do not need locks.</li>
-<li>Have signaling.</li>
+<li><p>Easier to use than many of the above.</p></li>
+<li><p>Do not need locks.</p></li>
+<li><p>Have signaling.</p></li>
 </ul>
 </div></blockquote>
 <p>Common use: producer/consumer patterns</p>
@@ -230,8 +233,8 @@ safely.</p>
 <h2>Scheduling (<code class="docutils literal notranslate"><span class="pre">sched</span></code>)<a class="headerlink" href="#scheduling-sched" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><ul class="simple">
-<li>Schedules based on time, either absolute or delay.</li>
-<li>Low level, so it has many of the traps of the threading synchronization primitives.</li>
+<li><p>Schedules based on time, either absolute or delay.</p></li>
+<li><p>Low level, so it has many of the traps of the threading synchronization primitives.</p></li>
 </ul>
 </div></blockquote>
 </div>
@@ -261,13 +264,13 @@ safely.</p>
 <p><code class="docutils literal notranslate"><span class="pre">Queue.LifoQueue</span></code></p>
 <blockquote>
 <div><ul class="simple">
-<li>Last In, First Out</li>
+<li><p>Last In, First Out</p></li>
 </ul>
 </div></blockquote>
 <p><code class="docutils literal notranslate"><span class="pre">Queue.PriorityQueue</span></code></p>
 <blockquote>
 <div><ul class="simple">
-<li>Lowest valued entries are retrieved first</li>
+<li><p>Lowest valued entries are retrieved first</p></li>
 </ul>
 </div></blockquote>
 <p>One pattern for <code class="docutils literal notranslate"><span class="pre">PriorityQueue</span></code> is to insert entries of form data by
@@ -346,7 +349,7 @@ inserting the tuple:</p>
         <a href="ThreadingMultiprocessing_part5.html" class="btn btn-neutral float-right" title="Threading and multiprocessing Part 5: Multiprocessing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="ThreadingMultiprocessing_part3.html" class="btn btn-neutral" title="Threading and multiprocessing Part 3: Locking Exercise" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="ThreadingMultiprocessing_part3.html" class="btn btn-neutral float-left" title="Threading and multiprocessing Part 3: Locking Exercise" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -372,27 +375,16 @@ inserting the tuple:</p>
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

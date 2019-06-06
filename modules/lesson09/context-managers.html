@@ -17,34 +17,37 @@
   
 
   
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Recursion" href="recursion.html" />
     <link rel="prev" title="Decorators" href="decorators.html" /> 
-
-  
-  <script src="../../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -179,9 +182,9 @@
 <h1>Context Managers<a class="headerlink" href="#context-managers" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="id1">
 <h2>Context Managers<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p>You’ve seen the ‘with’ statement – probably when&nbsp;working with files.
-Now you’ll learn what that is all about. &nbsp;A large source of repetition
-in code deals with the handling of external&nbsp;resources. &nbsp;As an example,
+<p>You’ve seen the ‘with’ statement – probably when working with files.
+Now you’ll learn what that is all about.  A large source of repetition
+in code deals with the handling of external resources.  As an example,
 how many times do you think you might type something like the following
 code:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">file_handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;filename.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
@@ -191,8 +194,8 @@ code:</p>
 </pre></div>
 </div>
 <p>Not only is this a couple extra lines of code to write, it’s also prone
-to error. &nbsp;What happens if you forget to call close()? &nbsp;What happens if
-reading the file raises an exception? &nbsp;Perhaps you really should write
+to error.  What happens if you forget to call close()?  What happens if
+reading the file raises an exception?  Perhaps you really should write
 it something more like this:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
     <span class="n">file_handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
@@ -209,12 +212,12 @@ it something more like this:</p>
 <div class="line-block">
 <div class="line"><br /></div>
 <div class="line">Leaving an open file handle laying around is bad enough. What if the
-resource&nbsp;is a network connection, or a database cursor? &nbsp;Starting in
-version 2.5, Python provides a structure for reducing the&nbsp;repetition
-needed to handle resources like this: context managers. &nbsp;Context
-managers&nbsp;encapsulate the setup, error handling, and teardown of
-resources in a&nbsp;few simple steps. &nbsp;The key is to use the ‘with’
-statement. &nbsp;Since the introduction of ‘with’ in Pep343 the above seven
+resource is a network connection, or a database cursor?  Starting in
+version 2.5, Python provides a structure for reducing the repetition
+needed to handle resources like this: context managers.  Context
+managers encapsulate the setup, error handling, and teardown of
+resources in a few simple steps.  The key is to use the ‘with’
+statement.  Since the introduction of ‘with’ in Pep343 the above seven
 lines of defensive code have been replaced with this simple form:</div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;filename&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file_handle</span><span class="p">:</span>
@@ -222,8 +225,8 @@ lines of defensive code have been replaced with this simple form:</div>
 <span class="c1"># do something with file_content</span>
 </pre></div>
 </div>
-<p>The ‘open’ builtin is defined as a context manager. &nbsp;The resource it
-returns (file_handle) is automatically and reliably closed&nbsp;when the
+<p>The ‘open’ builtin is defined as a context manager.  The resource it
+returns (file_handle) is automatically and reliably closed when the
 code block ends.</p>
 <p>At this point in Python history, many functions you might expect to
 behave this way do:</p>
@@ -231,11 +234,11 @@ behave this way do:</p>
 <div class="line">* open() works as a context manager.</div>
 <div class="line">* network connections via socket() do as well.</div>
 <div class="line">* most implementations of database wrappers can open connections or
-cursors as&nbsp;context managers.</div>
+cursors as context managers.</div>
 </div>
 <p>But what if you are working with a library that doesn’t support
-this,&nbsp;urllib for instance? &nbsp;Close it automatically. &nbsp;There are a couple
-of ways you can go. &nbsp;If the resource in question has a close() method,
+this, urllib for instance?  Close it automatically.  There are a couple
+of ways you can go.  If the resource in question has a close() method,
 then you can simply use the closing context manager from contextlib to
 handle the issue:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">urllib</span> <span class="k">import</span> <span class="n">request</span>
@@ -247,11 +250,11 @@ handle the issue:</p>
 </pre></div>
 </div>
 <p>But what if the thing doesn’t have a close() method, or you’re
-creating&nbsp;the thing and it shouldn’t have a close() method? &nbsp;Do it
-yourself. &nbsp;If you need to support resource management of some sort, you
-can write a context manager of your own with the&nbsp;context manager
-protocol. &nbsp;The interface is simple. It must be a class that implements
-two&nbsp;more of the nifty python special methods.</p>
+creating the thing and it shouldn’t have a close() method?  Do it
+yourself.  If you need to support resource management of some sort, you
+can write a context manager of your own with the context manager
+protocol.  The interface is simple. It must be a class that implements
+two more of the nifty python special methods.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="fm">__enter__</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -265,10 +268,10 @@ work with in the created context.</div>
 </div>
 <div class="line-block">
 <div class="line"><br /></div>
-<div class="line">Clean-up that needs to happen is implemented here. &nbsp;The arguments will
-be the exception raised in the context. &nbsp;If the exception will be
-handled here, return True. If not, return False. &nbsp;Let’s see this in
-action to get a sense of what happens. &nbsp;Consider this code:</div>
+<div class="line">Clean-up that needs to happen is implemented here.  The arguments will
+be the exception raised in the context.  If the exception will be
+handled here, return True. If not, return False.  Let’s see this in
+action to get a sense of what happens.  Consider this code:</div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Context</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
@@ -290,7 +293,7 @@ action to get a sense of what happens. &nbsp;Consider this code:</div>
 </pre></div>
 </div>
 <p>This class doesn’t do much of anything, but playing with it can
-help&nbsp;clarify the order in which things happen:</p>
+help clarify the order in which things happen:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>In []: %paste
     In []: with Context(True) as foo:
 
@@ -327,25 +330,25 @@ RuntimeError: this is the error message
 </pre></div>
 </div>
 <p>So this time, the context manager did not catch the error – so it was
-raised in the usual way. &nbsp;In real life, a context manager could have
+raised in the usual way.  In real life, a context manager could have
 pretty much any error raised in its context. And the context manager
 will likely only be able to properly handle particular exceptions – so
 the __exit__ method takes all the information about the exception as
 parameters:</p>
 <p><a href="#id2"><span class="problematic" id="id3">``</span></a><a href="#id4"><span class="problematic" id="id5">`</span></a></p>
-<p>&nbsp; &nbsp; def __exit__(self, exc_type, exc_val, exc_tb)</p>
-<p>&nbsp; &nbsp; exc_type: the type of the Exception</p>
-<p>&nbsp; &nbsp; exc_val: the value of the Exception</p>
-<p>&nbsp; &nbsp; exc_tb: the Exception Traceback object</p>
+<p>    def __exit__(self, exc_type, exc_val, exc_tb)</p>
+<p>    exc_type: the type of the Exception</p>
+<p>    exc_val: the value of the Exception</p>
+<p>    exc_tb: the Exception Traceback object</p>
 <p><a href="#id6"><span class="problematic" id="id7">``</span></a><a href="#id8"><span class="problematic" id="id9">`</span></a></p>
 <p>The type of exception lets you check if this is an excpetion you know how to handle:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```
 </pre></div>
 </div>
 <blockquote>
-<div><dl class="docutils">
-<dt>if exc_type is RuntimeError:</dt>
-<dd># Deal with it.</dd>
+<div><dl class="simple">
+<dt>if exc_type is RuntimeError:</dt><dd><p># Deal with it.</p>
+</dd>
 </dl>
 </div></blockquote>
 <p><a href="#id10"><span class="problematic" id="id11">``</span></a><a href="#id12"><span class="problematic" id="id13">`</span></a></p>
@@ -362,7 +365,7 @@ working with them in the traceback module.</p>
 <div class="line"><br /></div>
 <div class="line">Similar to writing iterable classes, there’s a fair bit of bookkeeping
 involved. It turns out you can take advantage of generator functions
-to do the&nbsp;bookkeeping for you. &nbsp;contextlib.contextmanager() will turn
+to do the bookkeeping for you.  contextlib.contextmanager() will turn
 a generator function into context manager.</div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">contextlib</span> <span class="k">import</span> <span class="n">contextmanager</span>
@@ -383,17 +386,17 @@ a generator function into context manager.</div>
 </div>
 <p>The code is similar to the class defined previously and using it has
 similar results. We can handle errors:</p>
-<dl class="docutils">
-<dt><a href="#id14"><span class="problematic" id="id15">``</span></a><a href="#id16"><span class="problematic" id="id17">`</span></a></dt>
-<dd>In []: with context(True):
-&nbsp; &nbsp; ….: print(“in the context”)
-&nbsp; &nbsp; ….: raise RuntimeError(“error raised”)
-&nbsp; &nbsp; ….:
+<dl class="simple">
+<dt><a href="#id14"><span class="problematic" id="id15">``</span></a><a href="#id16"><span class="problematic" id="id17">`</span></a></dt><dd><p>In []: with context(True):
+    ….: print(“in the context”)
+    ….: raise RuntimeError(“error raised”)
+    ….:
 __init__ code here
 __enter__ code goes here
 in the context
 errors handled here
-__exit__ cleanup goes here</dd>
+__exit__ cleanup goes here</p>
+</dd>
 </dl>
 <p><a href="#id18"><span class="problematic" id="id19">``</span></a><a href="#id20"><span class="problematic" id="id21">`</span></a></p>
 <div class="line-block">
@@ -432,7 +435,7 @@ __exit__ cleanup goes here</dd>
         <a href="recursion.html" class="btn btn-neutral float-right" title="Recursion" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="decorators.html" class="btn btn-neutral" title="Decorators" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="decorators.html" class="btn btn-neutral float-left" title="Decorators" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -458,27 +461,16 @@ __exit__ cleanup goes here</dd>
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

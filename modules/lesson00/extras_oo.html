@@ -17,34 +17,37 @@
   
 
   
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Easy guide to using git" href="extras_git.html" />
     <link rel="prev" title="git Workflow" href="git_workflow.html" /> 
-
-  
-  <script src="../../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -196,18 +199,18 @@ requirements. It excludes the technical and framework concepts that are
 used to help deliver the requirements.</p>
 <p>This approach brings several major benefits:</p>
 <ul class="simple">
-<li>The problem domain changes at a different rate to the technology it
+<li><p>The problem domain changes at a different rate to the technology it
 uses. As developers, when a new version of the technology we use
 becomes available we want to make the transition as simple as possible. Well
 designed systems allow this to happen, and good understanding of
-object orientation makes this even more simple.</li>
-<li>Often the teams or levels of expertise required to maintain
+object orientation makes this even more simple.</p></li>
+<li><p>Often the teams or levels of expertise required to maintain
 problem domain functionality are different to those for the frameworks
 that run this technology. Keeping the problem domain separate helps
-to enable this.</li>
-<li>Problem domain logic is where application developers can add the most
+to enable this.</p></li>
+<li><p>Problem domain logic is where application developers can add the most
 value to their clients, and keeping it separate from the technology
-helps to increase the lifetime of the problem domain logic.</li>
+helps to increase the lifetime of the problem domain logic.</p></li>
 </ul>
 <p>Now all of this is fine, but it requires skill, experience and even good
 taste to achieve this! It is also true that this sort of approach with
@@ -221,12 +224,12 @@ and experience.</p>
 by Eric Evans. While it’s a great book, it takes some time to really
 understand how to apply what it teaches.</p>
 <p>Here is an example of a simple object oriented Python module:</p>
-<div class="code Python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">simple oo example</span>
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="k">class</span> <span class="nc">Pet</span><span class="p">:</span>
    <span class="sd">&quot;&quot;&quot; This class defines Pet, which is an animal kept by a human for domestic purposes&quot; &quot;&quot;&quot;</span>
-   <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+   <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
        <span class="bp">self</span><span class="o">.</span><span class="n">hello</span> <span class="o">=</span> <span class="s2">&quot;None&quot;</span>
 
@@ -240,9 +243,9 @@ understand how to apply what it teaches.</p>
 
 <span class="n">mypet</span> <span class="o">=</span> <span class="n">Pet</span><span class="p">(</span><span class="s2">&quot;Goldie&quot;</span><span class="p">)</span> <span class="c1"># i am an object: an instance of the class Pet</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">mypet</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">mypet</span><span class="o">.</span><span class="n">speak</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">mypet</span><span class="o">.</span><span class="n">swim</span><span class="p">())</span>
+<span class="k">print</span><span class="p">(</span><span class="n">mypet</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">mypet</span><span class="o">.</span><span class="n">speak</span><span class="p">())</span>
+<span class="k">print</span><span class="p">(</span><span class="n">mypet</span><span class="o">.</span><span class="n">swim</span><span class="p">())</span>
 </pre></div>
 </div>
 <p>Here we have a Pet class. The Pet can speak and swim. Notice how we use
@@ -266,14 +269,14 @@ it is a pet.</p>
 <p>Dog, Cat, and Python inherit from Pet. We can also say that Pet is the superclass,
 and the others are subclasses.</p>
 <p>Here it is in code:</p>
-<div class="code Python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">simple oo example with inheritance</span>
 <span class="sd">&quot;&quot;&quot;</span>
 
 <span class="k">class</span> <span class="nc">Pet</span><span class="p">:</span>
-   <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+   <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
-       <span class="bp">self</span><span class="o">.</span><span class="n">hello</span> <span class="o">=</span> <span class="kc">None</span>
+       <span class="bp">self</span><span class="o">.</span><span class="n">hello</span> <span class="o">=</span> <span class="bp">None</span>
 
    <span class="k">def</span> <span class="nf">speak</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
        <span class="sd">&quot;&quot;&quot; sample - maybe lots of code in this &quot;&quot;&quot;</span>
@@ -281,7 +284,7 @@ and the others are subclasses.</p>
 
 
 <span class="k">class</span> <span class="nc">Dog</span><span class="p">(</span><span class="n">Pet</span><span class="p">):</span>
-   <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">license_num</span><span class="p">):</span>
+   <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">license_num</span><span class="p">):</span>
        <span class="n">Pet</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
        <span class="bp">self</span><span class="o">.</span><span class="n">hello</span> <span class="o">=</span> <span class="s2">&quot;woof&quot;</span>
 
@@ -293,16 +296,16 @@ and the others are subclasses.</p>
        <span class="k">return</span> <span class="n">Pet</span><span class="o">.</span><span class="n">speak</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
 
 <span class="n">mypet</span> <span class="o">=</span> <span class="n">Pet</span><span class="p">(</span><span class="s2">&quot;Goldie&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">mypet</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">mypet</span><span class="o">.</span><span class="n">speak</span><span class="p">())</span>
+<span class="k">print</span><span class="p">(</span><span class="n">mypet</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">mypet</span><span class="o">.</span><span class="n">speak</span><span class="p">())</span>
 
 <span class="n">mypet</span> <span class="o">=</span> <span class="n">Dog</span><span class="p">(</span><span class="s2">&quot;Bogart&quot;</span><span class="p">,</span> <span class="s2">&quot;AB56674&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">mypet</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">mypet</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
 
 <span class="c1"># i just tell it to speak</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">mypet</span><span class="o">.</span><span class="n">speak</span><span class="p">())</span>
+<span class="k">print</span><span class="p">(</span><span class="n">mypet</span><span class="o">.</span><span class="n">speak</span><span class="p">())</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">mypet</span><span class="o">.</span><span class="n">license_num</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">mypet</span><span class="o">.</span><span class="n">license_num</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Notice how the subclass can use the superclasses data and functions?</p>
@@ -311,37 +314,39 @@ and the others are subclasses.</p>
 <div class="section" id="but-how-do-i-know-which-classes-i-need">
 <h2>But how do I know which classes I need?<a class="headerlink" href="#but-how-do-i-know-which-classes-i-need" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Think about your problem domain. Find some related documentation (ideally
+<li><p>Think about your problem domain. Find some related documentation (ideally
 from the person who is requesting the development). Failing that, talk to
-the person who made the request. Note down what they are asking you to do.</li>
-<li>When you have the notes and/or documentation, use a highlighter to mark
+the person who made the request. Note down what they are asking you to do.</p></li>
+<li><p>When you have the notes and/or documentation, use a highlighter to mark
 all of the nouns. So, in a human resources example, you might highlight
-employee, job, department and company. Think of some others…</li>
-<li>Get a large piece of paper and small yellow stickies. Alternatively,
-use a modeling tool. For example: <a class="reference external" href="https://www.genmymodel.com/">https://www.genmymodel.com/</a></li>
-<li>Now, either write each noun on a separate sticky, or start to build a
+employee, job, department and company. Think of some others…</p></li>
+<li><p>Get a large piece of paper and small yellow stickies. Alternatively,
+use a modeling tool. For example: <a class="reference external" href="https://www.genmymodel.com/">https://www.genmymodel.com/</a></p></li>
+<li><p>Now, either write each noun on a separate sticky, or start to build a
 model. We’ll show the modeling tool. It will quickly become obvious
-how to do this with stickies.</li>
+how to do this with stickies.</p></li>
 </ul>
 <ol class="arabic simple">
-<li>Some comments:<ol class="arabic">
-<li>Keep problem domain code separate from technical code. Why?</li>
-<li>Don’t spend too long modeling. Start coding and demoing as soon as you can. Why?</li>
-<li>Focus on what your classes do, not what they need to know. Why?</li>
-<li>Define all classes in docstrings. Why?</li>
-<li>Decomposition and business boundaries. Why?</li>
-<li>State transitions.</li>
-<li>GenMyModel is not free; use draw.io (but you lose code generation).</li>
+<li><p>Some comments:</p>
+<ol class="arabic simple">
+<li><p>Keep problem domain code separate from technical code. Why?</p></li>
+<li><p>Don’t spend too long modeling. Start coding and demoing as soon as you can. Why?</p></li>
+<li><p>Focus on what your classes do, not what they need to know. Why?</p></li>
+<li><p>Define all classes in docstrings. Why?</p></li>
+<li><p>Decomposition and business boundaries. Why?</p></li>
+<li><p>State transitions.</p></li>
+<li><p>GenMyModel is not free; use draw.io (but you lose code generation).</p></li>
 </ol>
 </li>
-<li>There’s loads more to learn! Here are some resources:<ol class="arabic">
-<li>GenMyModel: <a class="reference external" href="https://www.genmymodel.com">https://www.genmymodel.com</a></li>
-<li>DDD book: <a class="reference external" href="https://www.infoq.com/minibooks/domain-driven-design-quickly">https://www.infoq.com/minibooks/domain-driven-design-quickly</a></li>
-<li>OO in Python: <a class="reference external" href="https://realpython.com/python3-object-oriented-programming/">https://realpython.com/python3-object-oriented-programming/</a></li>
-<li>More Python OO: <a class="reference external" href="https://jeffknupp.com/blog/2014/06/18/improve-your-python-python-classes-and-object-oriented-programming/">https://jeffknupp.com/blog/2014/06/18/improve-your-python-python-classes-and-object-oriented-programming/</a></li>
-<li>OO thought process: <a class="reference external" href="https://www.amazon.com/Object-Oriented-Thought-Process-Developers-Library/dp/0321861272">https://www.amazon.com/Object-Oriented-Thought-Process-Developers-Library/dp/0321861272</a></li>
-<li>Conway’s law: <a class="reference external" href="https://en.wikipedia.org/wiki/Conway%27s_law">https://en.wikipedia.org/wiki/Conway%27s_law</a></li>
-<li>Class models: <a class="reference external" href="http://www.agilemodeling.com/artifacts/classDiagram.htm">http://www.agilemodeling.com/artifacts/classDiagram.htm</a></li>
+<li><p>There’s loads more to learn! Here are some resources:</p>
+<ol class="arabic simple">
+<li><p>GenMyModel: <a class="reference external" href="https://www.genmymodel.com">https://www.genmymodel.com</a></p></li>
+<li><p>DDD book: <a class="reference external" href="https://www.infoq.com/minibooks/domain-driven-design-quickly">https://www.infoq.com/minibooks/domain-driven-design-quickly</a></p></li>
+<li><p>OO in Python: <a class="reference external" href="https://realpython.com/python3-object-oriented-programming/">https://realpython.com/python3-object-oriented-programming/</a></p></li>
+<li><p>More Python OO: <a class="reference external" href="https://jeffknupp.com/blog/2014/06/18/improve-your-python-python-classes-and-object-oriented-programming/">https://jeffknupp.com/blog/2014/06/18/improve-your-python-python-classes-and-object-oriented-programming/</a></p></li>
+<li><p>OO thought process: <a class="reference external" href="https://www.amazon.com/Object-Oriented-Thought-Process-Developers-Library/dp/0321861272">https://www.amazon.com/Object-Oriented-Thought-Process-Developers-Library/dp/0321861272</a></p></li>
+<li><p>Conway’s law: <a class="reference external" href="https://en.wikipedia.org/wiki/Conway%27s_law">https://en.wikipedia.org/wiki/Conway%27s_law</a></p></li>
+<li><p>Class models: <a class="reference external" href="http://www.agilemodeling.com/artifacts/classDiagram.htm">http://www.agilemodeling.com/artifacts/classDiagram.htm</a></p></li>
 </ol>
 </li>
 </ol>
@@ -359,7 +364,7 @@ how to do this with stickies.</li>
         <a href="extras_git.html" class="btn btn-neutral float-right" title="Easy guide to using git" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="git_workflow.html" class="btn btn-neutral" title="git Workflow" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="git_workflow.html" class="btn btn-neutral float-left" title="git Workflow" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -385,27 +390,16 @@ how to do this with stickies.</li>
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

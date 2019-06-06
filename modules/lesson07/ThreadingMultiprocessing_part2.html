@@ -17,34 +17,37 @@
   
 
   
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Threading and multiprocessing Part 3: Locking Exercise" href="ThreadingMultiprocessing_part3.html" />
     <link rel="prev" title="Threading and multiprocessing Part 1: How to" href="ThreadingMultiprocessing_part1.html" /> 
-
-  
-  <script src="../../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -201,13 +204,13 @@
 </pre></div>
 </div>
 <ul class="simple">
-<li>The process will exit when the last non-daemon thread exits.</li>
-<li>A thread can be specified as a daemon thread by setting its daemon
-attribute: <code class="docutils literal notranslate"><span class="pre">thread.daemon</span> <span class="pre">=</span> <span class="pre">True</span></code></li>
-<li>daemon threads get cut off at program exit, without any opportunity
+<li><p>The process will exit when the last non-daemon thread exits.</p></li>
+<li><p>A thread can be specified as a daemon thread by setting its daemon
+attribute: <code class="docutils literal notranslate"><span class="pre">thread.daemon</span> <span class="pre">=</span> <span class="pre">True</span></code></p></li>
+<li><p>daemon threads get cut off at program exit, without any opportunity
 for cleanup. But you don’t have to track and manage them. Useful for
-things like garbage collection, network keepalives, ..</li>
-<li>You can block and wait for a thread to exit with thread.join()</li>
+things like garbage collection, network keepalives, ..</p></li>
+<li><p>You can block and wait for a thread to exit with thread.join()</p></li>
 </ul>
 <div class="section" id="subclassing-thread">
 <h2>Subclassing Thread<a class="headerlink" href="#subclassing-thread" title="Permalink to this headline">¶</a></h2>
@@ -236,110 +239,110 @@ atomically, but get interrupted midway.</p>
 </div>
 <div class="section" id="no-race-condition">
 <h2>No race condition<a class="headerlink" href="#no-race-condition" title="Permalink to this headline">¶</a></h2>
-<table border="1" class="docutils">
+<table class="docutils align-default">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Thread 1</th>
-<th class="head">Thread 2</th>
-<th class="head">&#160;</th>
-<th class="head">Integer value</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>Thread 1</p></th>
+<th class="head"><p>Thread 2</p></th>
+<th class="head"></th>
+<th class="head"><p>Integer value</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>&#160;</td>
-<td>&#160;</td>
-<td>&#160;</td>
-<td>0</td>
+<tbody>
+<tr class="row-even"><td></td>
+<td></td>
+<td></td>
+<td><p>0</p></td>
 </tr>
-<tr class="row-odd"><td>read value</td>
-<td>&#160;</td>
-<td>←</td>
-<td>0</td>
+<tr class="row-odd"><td><p>read value</p></td>
+<td></td>
+<td><p>←</p></td>
+<td><p>0</p></td>
 </tr>
-<tr class="row-even"><td>increase value</td>
-<td>&#160;</td>
-<td>&#160;</td>
-<td>0</td>
+<tr class="row-even"><td><p>increase value</p></td>
+<td></td>
+<td></td>
+<td><p>0</p></td>
 </tr>
-<tr class="row-odd"><td>write back</td>
-<td>&#160;</td>
-<td>→</td>
-<td>1</td>
+<tr class="row-odd"><td><p>write back</p></td>
+<td></td>
+<td><p>→</p></td>
+<td><p>1</p></td>
 </tr>
-<tr class="row-even"><td>&#160;</td>
-<td>read value</td>
-<td>←</td>
-<td>1</td>
+<tr class="row-even"><td></td>
+<td><p>read value</p></td>
+<td><p>←</p></td>
+<td><p>1</p></td>
 </tr>
-<tr class="row-odd"><td>&#160;</td>
-<td>increase value</td>
-<td>&#160;</td>
-<td>1</td>
+<tr class="row-odd"><td></td>
+<td><p>increase value</p></td>
+<td></td>
+<td><p>1</p></td>
 </tr>
-<tr class="row-even"><td>&#160;</td>
-<td>write back</td>
-<td>→</td>
-<td>2</td>
+<tr class="row-even"><td></td>
+<td><p>write back</p></td>
+<td><p>→</p></td>
+<td><p>2</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="section" id="race-condition">
 <h2>Race Condition!<a class="headerlink" href="#race-condition" title="Permalink to this headline">¶</a></h2>
-<table border="1" class="docutils">
+<table class="docutils align-default">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Thread 1</th>
-<th class="head">Thread 2</th>
-<th class="head">&#160;</th>
-<th class="head">Integer value</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>Thread 1</p></th>
+<th class="head"><p>Thread 2</p></th>
+<th class="head"></th>
+<th class="head"><p>Integer value</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>&#160;</td>
-<td>&#160;</td>
-<td>&#160;</td>
-<td>0</td>
+<tbody>
+<tr class="row-even"><td></td>
+<td></td>
+<td></td>
+<td><p>0</p></td>
 </tr>
-<tr class="row-odd"><td>read value</td>
-<td>&#160;</td>
-<td>←</td>
-<td>0</td>
+<tr class="row-odd"><td><p>read value</p></td>
+<td></td>
+<td><p>←</p></td>
+<td><p>0</p></td>
 </tr>
-<tr class="row-even"><td>&#160;</td>
-<td>read value</td>
-<td>←</td>
-<td>0</td>
+<tr class="row-even"><td></td>
+<td><p>read value</p></td>
+<td><p>←</p></td>
+<td><p>0</p></td>
 </tr>
-<tr class="row-odd"><td>increase value</td>
-<td>&#160;</td>
-<td>&#160;</td>
-<td>0</td>
+<tr class="row-odd"><td><p>increase value</p></td>
+<td></td>
+<td></td>
+<td><p>0</p></td>
 </tr>
-<tr class="row-even"><td>&#160;</td>
-<td>increase value</td>
-<td>&#160;</td>
-<td>0</td>
+<tr class="row-even"><td></td>
+<td><p>increase value</p></td>
+<td></td>
+<td><p>0</p></td>
 </tr>
-<tr class="row-odd"><td>write back</td>
-<td>&#160;</td>
-<td>→</td>
-<td>1</td>
+<tr class="row-odd"><td><p>write back</p></td>
+<td></td>
+<td><p>→</p></td>
+<td><p>1</p></td>
 </tr>
-<tr class="row-even"><td>&#160;</td>
-<td>write back</td>
-<td>→</td>
-<td>1</td>
+<tr class="row-even"><td></td>
+<td><p>write back</p></td>
+<td><p>→</p></td>
+<td><p>1</p></td>
 </tr>
 </tbody>
 </table>
@@ -375,11 +378,11 @@ themselves by calling its <code class="docutils literal notranslate"><span class
 <h2>Mutex locks (<code class="docutils literal notranslate"><span class="pre">threading.Lock</span></code>)<a class="headerlink" href="#mutex-locks-threading-lock" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><ul class="simple">
-<li>Probably the most common.</li>
-<li>Only one thread can modify shared data at any given time.</li>
-<li>Thread determines when unlocked.</li>
-<li>Must put lock/unlock around critical code in ALL threads.</li>
-<li>Difficult to manage.</li>
+<li><p>Probably the most common.</p></li>
+<li><p>Only one thread can modify shared data at any given time.</p></li>
+<li><p>Thread determines when unlocked.</p></li>
+<li><p>Must put lock/unlock around critical code in ALL threads.</p></li>
+<li><p>Difficult to manage.</p></li>
 </ul>
 </div></blockquote>
 <p>Easiest with context manager:</p>
@@ -450,8 +453,8 @@ resource simultaneously</p>
 <h2>Events (<code class="docutils literal notranslate"><span class="pre">threading.Event</span></code>)<a class="headerlink" href="#events-threading-event" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><ul class="simple">
-<li>Threads can wait for particular event</li>
-<li>Setting an event unblocks all waiting threads</li>
+<li><p>Threads can wait for particular event</p></li>
+<li><p>Setting an event unblocks all waiting threads</p></li>
 </ul>
 </div></blockquote>
 <p>Common use: barriers, notification</p>
@@ -460,9 +463,9 @@ resource simultaneously</p>
 <h2>Condition (<code class="docutils literal notranslate"><span class="pre">threading.Condition</span></code>)<a class="headerlink" href="#condition-threading-condition" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><ul class="simple">
-<li>Combination of locking/signaling</li>
-<li>lock protects code that establishes a “condition” (e.g., data available)</li>
-<li>signal notifies threads that “condition” has changed</li>
+<li><p>Combination of locking/signaling</p></li>
+<li><p>lock protects code that establishes a “condition” (e.g., data available)</p></li>
+<li><p>signal notifies threads that “condition” has changed</p></li>
 </ul>
 </div></blockquote>
 <p>Common use: producer/consumer patterns</p>
@@ -480,7 +483,7 @@ resource simultaneously</p>
         <a href="ThreadingMultiprocessing_part3.html" class="btn btn-neutral float-right" title="Threading and multiprocessing Part 3: Locking Exercise" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="ThreadingMultiprocessing_part1.html" class="btn btn-neutral" title="Threading and multiprocessing Part 1: How to" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="ThreadingMultiprocessing_part1.html" class="btn btn-neutral float-left" title="Threading and multiprocessing Part 1: How to" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -506,27 +509,16 @@ resource simultaneously</p>
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

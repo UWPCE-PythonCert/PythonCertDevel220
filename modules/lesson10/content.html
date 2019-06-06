@@ -17,34 +17,37 @@
   
 
   
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Assignment" href="assignment.html" />
     <link rel="prev" title="Lesson 10 : Metaprogramming" href="index.html" /> 
-
-  
-  <script src="../../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -180,26 +183,26 @@
 <h3>How do metaclasses work?<a class="headerlink" href="#how-do-metaclasses-work" title="Permalink to this headline">¶</a></h3>
 <p>To understand how Python metaclasses work, you need to be very comfortable
 with the notion of types in Python.</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;andy&quot;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;andy&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
 <span class="go">&lt;class &#39;str&#39;&gt;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="nb">str</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="nb">str</span><span class="p">))</span>
 <span class="go">&lt;class &#39;type&#39;&gt;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="nb">type</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="nb">type</span><span class="p">))</span>
 <span class="go">&lt;class &#39;type&#39;&gt;</span>
 </pre></div>
 </div>
 <p>Remember: every type in Python is defined by a class.</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
 <span class="go">    pass</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">andy</span> <span class="o">=</span> <span class="n">Person</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">andy</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">andy</span><span class="p">))</span>
 <span class="go">&lt;class &#39;__main__.Person&#39;&gt;</span>
 </pre></div>
 </div>
 <p>A class is just another object and can be modified:</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">andy</span><span class="o">.</span><span class="n">dob</span> <span class="o">=</span> <span class="s2">&quot;2/27/1960&quot;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">andy</span><span class="o">.</span><span class="n">dob</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">andy</span><span class="o">.</span><span class="n">dob</span> <span class="o">=</span> <span class="s2">&quot;2/27/1960&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">andy</span><span class="o">.</span><span class="n">dob</span><span class="p">)</span>
 <span class="go">2/27/1960</span>
 </pre></div>
 </div>
@@ -214,20 +217,20 @@ that new metaclasses can override to implement unique code generation
 behavior. Here is a brief overview of these “magic” methods that exist on
 metaclass:</p>
 <ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">`__new__`</span></code>: This method is called on the Metaclass before an instance of a class based on the metaclass is created</li>
-<li><code class="docutils literal notranslate"><span class="pre">`__init__`</span></code>: This method is called to set up values after the instance/object is created</li>
-<li><code class="docutils literal notranslate"><span class="pre">`__prepare__`</span></code>: Defines the class namespace in a mapping that stores the attributes</li>
-<li><code class="docutils literal notranslate"><span class="pre">`__call__`</span></code>: This method is called when the constructor of the new class is to be used to create an object</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">`__new__`</span></code>: This method is called on the Metaclass before an instance of a class based on the metaclass is created</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">`__init__`</span></code>: This method is called to set up values after the instance/object is created</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">`__prepare__`</span></code>: Defines the class namespace in a mapping that stores the attributes</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">`__call__`</span></code>: This method is called when the constructor of the new class is to be used to create an object</p></li>
 </ul>
 <p>These are the methods to override in your custom metaclass to give your
 classes behavior different from that of type, which is the default metaclass.</p>
 <p>To create our custom metaclass, it must inherit type and will often override:
 * <code class="docutils literal notranslate"><span class="pre">`__new__()`</span></code>: It’s a method which is called before <code class="docutils literal notranslate"><span class="pre">`__init__()`</span></code>. It creates the object and return it. We can override this method to control how the objects are created.
 * <code class="docutils literal notranslate"><span class="pre">`__init__()`</span></code>: This method initializes the created object passed as parameter</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># our metaclass</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># our metaclass</span>
 <span class="k">class</span> <span class="nc">MultiBases</span><span class="p">(</span><span class="nb">type</span><span class="p">):</span>
     <span class="c1"># overriding __new__ method</span>
-    <span class="k">def</span> <span class="nf">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">clsname</span><span class="p">,</span> <span class="n">bases</span><span class="p">,</span> <span class="n">clsdict</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">clsname</span><span class="p">,</span> <span class="n">bases</span><span class="p">,</span> <span class="n">clsdict</span><span class="p">):</span>
         <span class="c1"># if no of base classes is greator than 1</span>
         <span class="c1"># raise error</span>
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">bases</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">1</span><span class="p">:</span>
@@ -269,17 +272,17 @@ about why).”</p>
 </div>
 <div class="section" id="an-example">
 <h2>An example<a class="headerlink" href="#an-example" title="Permalink to this headline">¶</a></h2>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># This metaclass adds a &#39;hello&#39; method to classes that use the metaclass</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># This metaclass adds a &#39;hello&#39; method to classes that use the metaclass</span>
 <span class="c1"># Such classes get a &#39;hello&#39; method with no extra effort</span>
 <span class="c1"># The metaclass takes care of that for us</span>
 
 <span class="k">class</span> <span class="nc">HelloMeta</span><span class="p">(</span><span class="nb">type</span><span class="p">):</span>
     <span class="c1"># A hello method</span>
     <span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;greetings from </span><span class="si">%s</span><span class="s2">, a HelloMeta type class&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="bp">cls</span><span class="p">())))</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;greetings from </span><span class="si">%s</span><span class="s2">, a HelloMeta type class&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="bp">cls</span><span class="p">())))</span>
 
     <span class="c1"># Call the metaclass</span>
-    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># create the new class as normal</span>
         <span class="bp">cls</span> <span class="o">=</span> <span class="nb">type</span><span class="o">.</span><span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span>
 
@@ -303,7 +306,7 @@ about why).”</p>
 </div>
 <p>The result of running this code is that the new TryHello class is able to
 printout a greeting that says:</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span>greetings from &lt;class &#39;__main__.TryHello&#39;&gt;, a HelloMeta type class
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>greetings from &lt;class &#39;__main__.TryHello&#39;&gt;, a HelloMeta type class
 </pre></div>
 </div>
 <p>The method responsible for this printout is not declared in the declaration
@@ -332,7 +335,7 @@ metaclass.</p>
         <a href="assignment.html" class="btn btn-neutral float-right" title="Assignment" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="Lesson 10 : Metaprogramming" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Lesson 10 : Metaprogramming" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -358,27 +361,16 @@ metaclass.</p>
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

@@ -17,34 +17,37 @@
   
 
   
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Assignment" href="assignment.html" />
-    <link rel="prev" title="Lesson 06.03 Cython" href="cython.html" /> 
-
-  
-  <script src="../../_static/js/modernizr.min.js"></script>
-
+    <link rel="prev" title="Lesson 6 : Profiling and performance" href="index.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -92,7 +95,6 @@
 <li class="toctree-l3"><a class="reference internal" href="../lesson04/index.html">Lesson 4 : Iteration</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../lesson05/index.html">Lesson 5 : Consuming APIs with NoSQL</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="index.html">Lesson 6 : Profiling and performance</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="cython.html">Lesson 06.03 Cython</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">Activity</a></li>
 <li class="toctree-l4"><a class="reference internal" href="assignment.html">Assignment</a></li>
 </ul>
@@ -175,29 +177,29 @@
             
   <div class="section" id="activity">
 <h1>Activity<a class="headerlink" href="#activity" title="Permalink to this headline">¶</a></h1>
-<p>Spend&nbsp;time using any of the modules or techniques referenced in this
+<p>Spend time using any of the modules or techniques referenced in this
 lesson. The ones below are of particular interest. Please choose one to get ready to demo
 to the class, or your instructor:</p>
 <ul class="simple">
-<li>Explore code-only performance improvement strategies such as
-memoization.</li>
-<li>Explore / demo cProfile side by side with PyCharm’s built-in profilers.</li>
-<li>Explore / demo Python’s
-memory_profiler.&nbsp;<a class="reference external" href="https://pypi.python.org/pypi/memory_profiler">https://pypi.python.org/pypi/memory_profiler</a></li>
-<li>Use PyPy as the runtime interpreter for code developed by students
-during the curriculum.</li>
-<li>Play with Cython and the Great Circle code!</li>
-<li>Abandon Python’s math library and use&nbsp;<code class="docutils literal notranslate"><span class="pre">cdef&nbsp;extern</span></code>&nbsp;to import
+<li><p>Explore code-only performance improvement strategies such as
+memoization.</p></li>
+<li><p>Explore / demo cProfile side by side with PyCharm’s built-in profilers.</p></li>
+<li><p>Explore / demo Python’s
+memory_profiler. <a class="reference external" href="https://pypi.python.org/pypi/memory_profiler">https://pypi.python.org/pypi/memory_profiler</a></p></li>
+<li><p>Use PyPy as the runtime interpreter for code developed by students
+during the curriculum.</p></li>
+<li><p>Play with Cython and the Great Circle code!</p></li>
+<li><p>Abandon Python’s math library and use <code class="docutils literal notranslate"><span class="pre">cdef</span><span class="pre">extern</span></code> to import
 and access C math functions into the Python code. (This vastly
-improves the performance of the Great Circle code!)</li>
-<li>Dig into the compile and link steps required by Cython.</li>
-<li>Work with setup files or any of the other methods to generate Cython
-libraries.<a class="reference external" href="http://cython.readthedocs.io/en/latest/src/quickstart/build.html">http://cython.readthedocs.io/en/latest/src/quickstart/build.html</a></li>
-<li>Work with Cython
-profiling.&nbsp;<a class="reference external" href="http://docs.cython.org/en/latest/src/tutorial/profiling_tutorial.html">http://docs.cython.org/en/latest/src/tutorial/profiling_tutorial.html</a></li>
-<li>Create a Makefile to manage the build (compile/link steps) for all
+improves the performance of the Great Circle code!)</p></li>
+<li><p>Dig into the compile and link steps required by Cython.</p></li>
+<li><p>Work with setup files or any of the other methods to generate Cython
+libraries.<a class="reference external" href="http://cython.readthedocs.io/en/latest/src/quickstart/build.html">http://cython.readthedocs.io/en/latest/src/quickstart/build.html</a></p></li>
+<li><p>Work with Cython
+profiling. <a class="reference external" href="http://docs.cython.org/en/latest/src/tutorial/profiling_tutorial.html">http://docs.cython.org/en/latest/src/tutorial/profiling_tutorial.html</a></p></li>
+<li><p>Create a Makefile to manage the build (compile/link steps) for all
 the Cython code you’re
-generating.&nbsp;<a class="reference external" href="https://www.gnu.org/software/make/">https://www.gnu.org/software/make/</a></li>
+generating. <a class="reference external" href="https://www.gnu.org/software/make/">https://www.gnu.org/software/make/</a></p></li>
 </ul>
 <p>Once you’ve completed the activity from the lesson content, prepare to demo your work!</p>
 </div>
@@ -213,7 +215,7 @@ generating.&nbsp;<a class="reference external" href="https://www.gnu.org/softwar
         <a href="assignment.html" class="btn btn-neutral float-right" title="Assignment" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="cython.html" class="btn btn-neutral" title="Lesson 06.03 Cython" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Lesson 6 : Profiling and performance" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -239,27 +241,16 @@ generating.&nbsp;<a class="reference external" href="https://www.gnu.org/softwar
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

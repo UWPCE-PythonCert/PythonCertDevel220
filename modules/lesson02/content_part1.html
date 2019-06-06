@@ -17,34 +17,37 @@
   
 
   
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Part 2: The Print Statement You Can Hide" href="content_part2.html" />
     <link rel="prev" title="Lesson 2 : Logging &amp; Debuging" href="index.html" /> 
-
-  
-  <script src="../../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -188,8 +191,8 @@ create and modify each of the exercise scripts that I demonstrate below.</p>
 <div class="section" id="print-statement-debugging">
 <h2>Print Statement Debugging<a class="headerlink" href="#print-statement-debugging" title="Permalink to this headline">¶</a></h2>
 <p>Let’s start off by writing a simple Python script with an obvious
-problem.&nbsp;Begin by creating simple.py:</p>
-<div class="code Python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># simple.py</span>
+problem. Begin by creating simple.py:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># simple.py</span>
 <span class="k">def</span> <span class="nf">my_fun</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
         <span class="mi">100</span> <span class="o">/</span> <span class="p">(</span><span class="mi">50</span> <span class="o">-</span> <span class="n">i</span><span class="p">)</span>
@@ -200,7 +203,7 @@ problem.&nbsp;Begin by creating simple.py:</p>
 </div>
 <p>You can probably already see the problem that we’ll encounter when we
 run simple.py. Let’s run it in python:</p>
-<div class="code Python highlight-default notranslate"><div class="highlight"><pre><span></span>$ python simple.py
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span>$ python simple.py
 Traceback (most recent call last):
   File &quot;simple.py&quot;, line 7, in &lt;module&gt;
     my_fun(100)
@@ -210,22 +213,22 @@ ZeroDivisionError: division by zero
 </pre></div>
 </div>
 <p>As you might have expected, we get a ZeroDivisionError! At some point,
-for some value of <em>i</em>, the instruction 100 *&nbsp;/ (50 - i)*&nbsp;causes our
+for some value of <em>i</em>, the instruction 100 * / (50 - i)* causes our
 program to attempt to divide by zero.</p>
-<p>I’m sure that you can see what value of <em>i</em>&nbsp;would cause this problem,
+<p>I’m sure that you can see what value of <em>i</em> would cause this problem,
 but let’s pretend that we didn’t know, and we were trying to figure it
 out. If you had no better tools, you might try to investigate this
 problem by adding print statements to the loop. You could print out the
-value of <em>i</em>&nbsp;just before the problem-fraught division statement.&nbsp;Make
+value of <em>i</em> just before the problem-fraught division statement. Make
 the following modification to simple.py:</p>
-<div class="code Python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>           <span class="c1"># &lt;-- Add this line</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>           <span class="c1"># &lt;-- Add this line</span>
     <span class="mi">100</span> <span class="o">/</span> <span class="p">(</span><span class="mi">50</span> <span class="o">-</span> <span class="n">i</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Now running simple.py will give us some clues about the faulting
-value of&nbsp;<em>i</em>:</p>
-<div class="code Python highlight-default notranslate"><div class="highlight"><pre><span></span>$ python simple.py
+value of <em>i</em>:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span>$ python simple.py
 0
 1
 2
@@ -240,8 +243,8 @@ ZeroDivisionError: division by zero
 </pre></div>
 </div>
 <p>If we didn’t know it already, now we do! The value
-of&nbsp;<em>i&nbsp;*just before the ZeroDivisionError is 50. This is the faulting
-value of&nbsp;*i</em>.</p>
+of <em>i *just before the ZeroDivisionError is 50. This is the faulting
+value of *i</em>.</p>
 <p>This “print statement debugging” is how a lot of new programmers begin
 trying to understand problems in their code. And many advanced
 programmers will still use a print statement when they’re writing simple
@@ -249,26 +252,26 @@ scripts.</p>
 <p>But what are the problems with print statement debugging?</p>
 <p>Here are a few issues with using a print statement to debug your code:</p>
 <ul class="simple">
-<li>You have to go back in and take them out, otherwise they produce
-distracting output when you’re running your program.</li>
-<li>If you have more than a couple of print statements, it becomes hard
+<li><p>You have to go back in and take them out, otherwise they produce
+distracting output when you’re running your program.</p></li>
+<li><p>If you have more than a couple of print statements, it becomes hard
 to keep track of where they all are and what each one specifically is
-reporting on.</li>
-<li>Print statements don’t help you when your code is being run in
+reporting on.</p></li>
+<li><p>Print statements don’t help you when your code is being run in
 production: you can only use print statements when you’re running the
-code on your own machine from your console.</li>
+code on your own machine from your console.</p></li>
 </ul>
-<p>To fix all of these problems, we’re going to use&nbsp;<em>logging</em>. Logging is
+<p>To fix all of these problems, we’re going to use <em>logging</em>. Logging is
 a practice that’s used in similar ways across a lot of different
 languages: you’ll be able to apply these lessons about logging to your
 entire programming career.</p>
 <p>We’ll practice logging statements that:</p>
 <ul class="simple">
-<li>You can choose to hide or show with each run of your code.</li>
-<li>You can automatically add extra information to, like the line number
-and file that they’re invoked in.</li>
-<li>You can send from any Internet connected device to a centralized
-server, to monitor your code as it works in production.</li>
+<li><p>You can choose to hide or show with each run of your code.</p></li>
+<li><p>You can automatically add extra information to, like the line number
+and file that they’re invoked in.</p></li>
+<li><p>You can send from any Internet connected device to a centralized
+server, to monitor your code as it works in production.</p></li>
 </ul>
 <p>If you like using print statements to debug your code, you’ll enjoy
 logging: message logging is a direct step up from print statements in
@@ -287,7 +290,7 @@ your programming skills.</p>
         <a href="content_part2.html" class="btn btn-neutral float-right" title="Part 2: The Print Statement You Can Hide" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="Lesson 2 : Logging &amp; Debuging" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Lesson 2 : Logging &amp; Debuging" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -313,27 +316,16 @@ your programming skills.</p>
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

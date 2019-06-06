@@ -17,34 +17,37 @@
   
 
   
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Object Oriented Concepts" href="extras_oo.html" />
     <link rel="prev" title="Intro to Git and setup" href="git_setup.html" /> 
-
-  
-  <script src="../../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -191,16 +194,16 @@
 <p>First make sure you are on the command line “in” your copy of the class repo.</p>
 <p>Remember that <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> is your friend – when in doubt, run that command to see what’s going on in your repo.</p>
 <ol class="arabic">
-<li><p class="first">Make sure you are on the correct branch – we suggest you never branch, so you’ll only need to do this once:</p>
+<li><p>Make sure you are on the correct branch – we suggest you never branch, so you’ll only need to do this once:</p>
 <p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">master</span></code></p>
 </li>
-<li><p class="first">Get any changes from class repository – good to do this whenever you start on something new</p>
+<li><p>Get any changes from class repository – good to do this whenever you start on something new</p>
 <p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">git</span> <span class="pre">pull</span> <span class="pre">upstream</span> <span class="pre">master</span></code></p>
 </li>
-<li><p class="first">If there are changes merged in from upstream, you want to push them to your repository on GitHub.</p>
+<li><p>If there are changes merged in from upstream, you want to push them to your repository on GitHub.</p>
 <p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">git</span> <span class="pre">push</span></code></p>
 </li>
-<li><p class="first">Make sure you are in your student directory, do some work – create new files, edit then, etc. Verify you are happy with changes. Check the status of your repo:</p>
+<li><p>Make sure you are in your student directory, do some work – create new files, edit then, etc. Verify you are happy with changes. Check the status of your repo:</p>
 <p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">git</span> <span class="pre">status</span></code></p>
 <blockquote>
 <div><p>Make sure you add any new files:</p>
@@ -208,14 +211,13 @@
 <p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">git</span> <span class="pre">add</span> <span class="pre">the_name_of_new_file</span></code></p>
 <p>you may want to do something like <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">*.py</span></code> if there are multiple files to add.</p>
 </li>
-<li><p class="first">Commit the all the changes – make sure to add a good commit message.</p>
+<li><p>Commit the all the changes – make sure to add a good commit message.</p>
 <p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">git</span> <span class="pre">commit</span> <span class="pre">-m</span> <span class="pre">'my</span> <span class="pre">message</span> <span class="pre">here'</span></code></p>
 </li>
-<li><p class="first">Push your changes to your remote github account.</p>
+<li><p>Push your changes to your remote github account.</p>
 <p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">git</span> <span class="pre">push</span></code></p>
 </li>
-<li><p class="first">If your are ready to submit your work, make a pull request on the gitHub website.</p>
-</li>
+<li><p>If your are ready to submit your work, make a pull request on the gitHub website.</p></li>
 </ol>
 <p>Note that when you are working, you may want to do steps 2-6 far more often than step 7. (Don’t go too crazy here, we don’t want you to wait until the end of the quarter to get to step 7. ;-))</p>
 <p>Now put that to work to get you set up for class:</p>
@@ -241,7 +243,7 @@
 to your own directory under students.</p>
 <p>After copying you will end up with a structure like this:</p>
 <ul class="simple">
-<li>students/yourname/lessonNN/…</li>
+<li><p>students/yourname/lessonNN/…</p></li>
 </ul>
 <p>Be sure to COPY, not move the files!!!</p>
 <p>Now you can do your coding, in your lessonNN directory. You will find directories
@@ -323,7 +325,7 @@ under lessons:</p>
         <a href="extras_oo.html" class="btn btn-neutral float-right" title="Object Oriented Concepts" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="git_setup.html" class="btn btn-neutral" title="Intro to Git and setup" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="git_setup.html" class="btn btn-neutral float-left" title="Intro to Git and setup" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -349,27 +351,16 @@ under lessons:</p>
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

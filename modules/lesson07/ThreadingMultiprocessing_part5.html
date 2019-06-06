@@ -17,34 +17,37 @@
   
 
   
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Threading and multiprocessing Part 6: Pooling" href="ThreadingMultiprocessing_part6.html" />
     <link rel="prev" title="Threading and multiprocessing Part 4: Managing thread results" href="ThreadingMultiprocessing_part4.html" /> 
-
-  
-  <script src="../../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -185,9 +188,9 @@
 <h1>Threading and multiprocessing Part 5: Multiprocessing<a class="headerlink" href="#threading-and-multiprocessing-part-5-multiprocessing" title="Permalink to this headline">¶</a></h1>
 <blockquote>
 <div><ul class="simple">
-<li>processes are completely isolated</li>
-<li>no locking :) (and no GIL!)</li>
-<li>instead of locking: messaging</li>
+<li><p>processes are completely isolated</p></li>
+<li><p>no locking :) (and no GIL!)</p></li>
+<li><p>instead of locking: messaging</p></li>
 </ul>
 </div></blockquote>
 <p><code class="docutils literal notranslate"><span class="pre">multiprocessing</span></code> provides an API very similar to <code class="docutils literal notranslate"><span class="pre">threading</span></code>, so the transition is easy</p>
@@ -228,9 +231,9 @@ interprocess communication.</p>
 <h3>Pipes (<code class="docutils literal notranslate"><span class="pre">multiprocessing.Pipe</span></code>)<a class="headerlink" href="#pipes-multiprocessing-pipe" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><ul class="simple">
-<li>Returns a pair of connected objects.</li>
-<li>Largely mimics Unix pipes, but higher level.</li>
-<li>send pickled objects or buffers.</li>
+<li><p>Returns a pair of connected objects.</p></li>
+<li><p>Largely mimics Unix pipes, but higher level.</p></li>
+<li><p>send pickled objects or buffers.</p></li>
 </ul>
 </div></blockquote>
 </div>
@@ -238,11 +241,11 @@ interprocess communication.</p>
 <h3>Queues (<code class="docutils literal notranslate"><span class="pre">multiprocessing.Queue</span></code>)<a class="headerlink" href="#queues-multiprocessing-queue" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><ul class="simple">
-<li>same interface as <code class="docutils literal notranslate"><span class="pre">queue.Queue</span></code></li>
-<li>implemented on top of pipes.</li>
-<li>means you can pretty easily port threaded programs using queues to multiprocessing.
+<li><p>same interface as <code class="docutils literal notranslate"><span class="pre">queue.Queue</span></code></p></li>
+<li><p>implemented on top of pipes.</p></li>
+<li><p>means you can pretty easily port threaded programs using queues to multiprocessing.
 - queue is the only shared data.
-- data is all pickled and unpickled to pass between processes – significant overhead.</li>
+- data is all pickled and unpickled to pass between processes – significant overhead.</p></li>
 </ul>
 </div></blockquote>
 </div>
@@ -250,11 +253,11 @@ interprocess communication.</p>
 <h3>Other features of the multiprocessing package<a class="headerlink" href="#other-features-of-the-multiprocessing-package" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><ul class="simple">
-<li>Pools.</li>
-<li>Shared objects and arrays.</li>
-<li>Synchronization primitives.</li>
-<li>Managed objects.</li>
-<li>Connections.</li>
+<li><p>Pools.</p></li>
+<li><p>Shared objects and arrays.</p></li>
+<li><p>Synchronization primitives.</p></li>
+<li><p>Managed objects.</p></li>
+<li><p>Connections.</p></li>
 </ul>
 </div></blockquote>
 </div>
@@ -272,7 +275,7 @@ interprocess communication.</p>
         <a href="ThreadingMultiprocessing_part6.html" class="btn btn-neutral float-right" title="Threading and multiprocessing Part 6: Pooling" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="ThreadingMultiprocessing_part4.html" class="btn btn-neutral" title="Threading and multiprocessing Part 4: Managing thread results" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="ThreadingMultiprocessing_part4.html" class="btn btn-neutral float-left" title="Threading and multiprocessing Part 4: Managing thread results" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -298,27 +301,16 @@ interprocess communication.</p>
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

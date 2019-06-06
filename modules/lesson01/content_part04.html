@@ -17,34 +17,37 @@
   
 
   
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Part 5: Using Unittest" href="content_part05.html" />
     <link rel="prev" title="Part 3: Automated Test Script" href="content_part03.html" /> 
-
-  
-  <script src="../../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -184,11 +187,11 @@
 SquarerTest.test_positive_numbers method and also the
 SquarerTest.test_negative_numbers method. If our Squarer.calc method
 is working as we expect it to, if it conforms to the behavior we defined
-in&nbsp;the <em>squares</em> dictionary, then nothing will be printed to the
+in the <em>squares</em> dictionary, then nothing will be printed to the
 console. On the other hand, if the SquarerTest finds discrepancies in the behavior of
 Squarer, then it will print those discrepancies to the console.</p>
-<p>Since&nbsp;<em>squarer.py</em> has an error that the other developer just introduced, here is
-the result of running&nbsp;<em>python test.py</em>:</p>
+<p>Since <em>squarer.py</em> has an error that the other developer just introduced, here is
+the result of running <em>python test.py</em>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python test.py
 Squared 3 and got 27 but expected 9
 Squared 12 and got 8916100448256 but expected 144
@@ -245,7 +248,7 @@ we’ve introduced an error into our code. We run our test script:</p>
 $
 </pre></div>
 </div>
-<p>The test script has not found any discrepancies between the&nbsp;<em>expected</em>
+<p>The test script has not found any discrepancies between the <em>expected</em>
 and <em>actual</em> performance of Squarer.calc: it looks
 like <em>operand**2</em> is an acceptable way to implement squaring!</p>
 </div>
@@ -261,7 +264,7 @@ like <em>operand**2</em> is an acceptable way to implement squaring!</p>
         <a href="content_part05.html" class="btn btn-neutral float-right" title="Part 5: Using Unittest" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="content_part03.html" class="btn btn-neutral" title="Part 3: Automated Test Script" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="content_part03.html" class="btn btn-neutral float-left" title="Part 3: Automated Test Script" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -287,27 +290,16 @@ like <em>operand**2</em> is an acceptable way to implement squaring!</p>
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

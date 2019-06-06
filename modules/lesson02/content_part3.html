@@ -17,34 +17,37 @@
   
 
   
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Part 4: The Print Statement You Can Send Somewhere Else" href="content_part4.html" />
     <link rel="prev" title="Part 2: The Print Statement You Can Hide" href="content_part2.html" /> 
-
-  
-  <script src="../../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -182,28 +185,28 @@
 information message that you would put into a print statement to debug
 your code. Other information can be useful, such as:</p>
 <ul class="simple">
-<li>when the log message was generated;</li>
-<li>what Python file the log message was generated in;</li>
-<li>what line number the log message was generated on; or</li>
-<li>the name of the function that the log message was generated in.</li>
+<li><p>when the log message was generated;</p></li>
+<li><p>what Python file the log message was generated in;</p></li>
+<li><p>what line number the log message was generated on; or</p></li>
+<li><p>the name of the function that the log message was generated in.</p></li>
 </ul>
 <p>It’s easy to see how knowing the file name, line number, and function
 name that the log message was generated on can be useful: you might
 create a lot of messages and it can be easy to lose track of where all
 of your log statements are.</p>
-<p>Why would you possibly want to know&nbsp;<em>when</em>&nbsp;a log message was
-generated? One reason&nbsp;is that&nbsp;you might want to time how long it takes
+<p>Why would you possibly want to know <em>when</em> a log message was
+generated? One reason is that you might want to time how long it takes
 for your code to get to a particular log message. But the real usefulness of
-knowing&nbsp;<em>when</em>&nbsp;a log message was generated will come in the next
+knowing <em>when</em> a log message was generated will come in the next
 session: we’ll be saving log messages to files instead of printing them
 at the console. When you open up a saved log file, you might not even
-know&nbsp;<em>what day</em>&nbsp;the message was generated on unless you include a
+know <em>what day</em> the message was generated on unless you include a
 timestamp!</p>
 <p>Let’s try it out! Make the following changes to your code:</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">logging</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">logging</span>
 
 <span class="n">log_format</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">%(asctime)s</span><span class="s2"> </span><span class="si">%(filename)s</span><span class="s2">:</span><span class="si">%(lineno)-4d</span><span class="s2"> </span><span class="si">%(levelname)s</span><span class="s2"> </span><span class="si">%(message)s</span><span class="s2">&quot;</span>  <span class="c1"># Add/modify these</span>
-<span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">WARNING</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="n">log_format</span><span class="p">)</span>                   <span class="c1"># two lines</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">WARNING</span><span class="p">,</span> <span class="n">format</span><span class="o">=</span><span class="n">log_format</span><span class="p">)</span>                   <span class="c1"># two lines</span>
 
 <span class="k">def</span> <span class="nf">my_fun</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
@@ -213,34 +216,34 @@ timestamp!</p>
         <span class="k">try</span><span class="p">:</span>
             <span class="mi">100</span> <span class="o">/</span> <span class="p">(</span><span class="mi">50</span> <span class="o">-</span> <span class="n">i</span><span class="p">)</span>
         <span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
-            <span class="n">logging</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Tried to divide by zero. Var i was </span><span class="si">{}</span><span class="s2">. Recovered gracefully.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Tried to divide by zero. Var i was {}. Recovered gracefully.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
     <span class="n">my_fun</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Let’s look at these two lines:</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">log_format</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">%(asctime)s</span><span class="s2"> </span><span class="si">%(filename)s</span><span class="s2">:</span><span class="si">%(lineno)-4d</span><span class="s2"> </span><span class="si">%(levelname)s</span><span class="s2"> </span><span class="si">%(message)s</span><span class="s2">&quot;</span>
-<span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">WARNING</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="n">log_format</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">log_format</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">%(asctime)s</span><span class="s2"> </span><span class="si">%(filename)s</span><span class="s2">:</span><span class="si">%(lineno)-4d</span><span class="s2"> </span><span class="si">%(levelname)s</span><span class="s2"> </span><span class="si">%(message)s</span><span class="s2">&quot;</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">WARNING</span><span class="p">,</span> <span class="n">format</span><span class="o">=</span><span class="n">log_format</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>We begin by defining a <em>log_format</em>&nbsp;for our log messages. All of the
+<p>We begin by defining a <em>log_format</em> for our log messages. All of the
 characters inside of the parentheses specify a different piece of
-information that we want to include inside of our messages.&nbsp;Please see
+information that we want to include inside of our messages. Please see
 the <a class="reference external" href="https://docs.python.org/3/library/logging.html#logrecord-attributes">full list of these LogRecord
 attributes</a>,
 and look for each of the attributes we included above, to get a guess
 for what information this formatter will include. For
-example,&nbsp;<em>asctime</em>&nbsp;produces a human-readable time string.</p>
+example, <em>asctime</em> produces a human-readable time string.</p>
 <p>The formatting characters to the left and right of the parentheses are
-borrowed from&nbsp;<em>printf</em>&nbsp;formatting. For example,&nbsp;<em>%(asctime)s</em>&nbsp;means
+borrowed from <em>printf</em> formatting. For example, <em>%(asctime)s</em> means
 to include the time string in the log message as a string.
-The&nbsp;<em>-4d</em>&nbsp;in&nbsp;<em>%(lineno)-4d</em>&nbsp;means to include the line number of the
+The <em>-4d</em> in <em>%(lineno)-4d</em> means to include the line number of the
 log statement as a 4 character integer, padding the output on the right
 with spaces.</p>
 <p>Now, what do you imagine running simple.py will produce? Here is the
 output:</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span>$ python simple.py
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>$ python simple.py
 2018-03-12 17:39:17,567 simple.py:10   WARNING The value of i is 50.
 2018-03-12 17:39:17,567 simple.py:14   ERROR Tried to divide by zero. Var i was 50. Recovered gracefully.
 </pre></div>
@@ -266,7 +269,7 @@ in one location in our script.</p>
         <a href="content_part4.html" class="btn btn-neutral float-right" title="Part 4: The Print Statement You Can Send Somewhere Else" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="content_part2.html" class="btn btn-neutral" title="Part 2: The Print Statement You Can Hide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="content_part2.html" class="btn btn-neutral float-left" title="Part 2: The Print Statement You Can Hide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -292,27 +295,16 @@ in one location in our script.</p>
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

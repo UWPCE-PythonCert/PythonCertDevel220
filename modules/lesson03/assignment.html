@@ -17,34 +17,37 @@
   
 
   
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Lesson 4 : Iteration" href="../lesson04/index.html" />
     <link rel="prev" title="Activity" href="activity.html" /> 
-
-  
-  <script src="../../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -180,36 +183,34 @@ functional tests (or create new ones) so that we can verify that the customer
 data meets HP Norton’s needs.</p>
 <p>You should address the following general requirements, specific to three user types:</p>
 <ol class="arabic simple">
-<li>As a <em>salesperson</em> at HP Norton I need to be able to store details of
-customers so that I can manage how I contact them to sell furniture.</li>
-<li>As an <em>accountant</em> at HP Norton I need to be able to store and retrieve
-a customer’s credit limit.</li>
-<li>As a <em>manager</em> at HP Norton I need to be able to produce monthly counts of
+<li><p>As a <em>salesperson</em> at HP Norton I need to be able to store details of
+customers so that I can manage how I contact them to sell furniture.</p></li>
+<li><p>As an <em>accountant</em> at HP Norton I need to be able to store and retrieve
+a customer’s credit limit.</p></li>
+<li><p>As a <em>manager</em> at HP Norton I need to be able to produce monthly counts of
 the total number of active customers so that I can assess if the business is
-growing or shrinking.</li>
+growing or shrinking.</p></li>
 </ol>
 <div class="section" id="here-is-what-you-need-to-do">
 <h2>Here is what you need to do:<a class="headerlink" href="#here-is-what-you-need-to-do" title="Permalink to this headline">¶</a></h2>
-<dl class="docutils">
-<dt>Note:</dt>
-<dd>We are just developing the backend here. Imagine your module(s) will be called
-from a web app (which is outside the scope of this project).</dd>
+<dl class="simple">
+<dt>Note:</dt><dd><p>We are just developing the backend here. Imagine your module(s) will be called
+from a web app (which is outside the scope of this project).</p>
+</dd>
 </dl>
 <ol class="arabic simple">
-<li><dl class="first docutils">
-<dt>Create a customer model and database that can be used at HP Norton.</dt>
-<dd><ul class="first last">
-<li><dl class="first docutils">
-<dt>At a minimum, the following information needs to be stored:</dt>
-<dd><ul class="first last">
-<li>Customer ID.</li>
-<li>Name.</li>
-<li>Lastname.</li>
-<li>Home address.</li>
-<li>Phone number.</li>
-<li>Email address.</li>
-<li>Status (active or inactive customer).</li>
-<li>Credit limit.</li>
+<li><dl class="simple">
+<dt>Create a customer model and database that can be used at HP Norton.</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt>At a minimum, the following information needs to be stored:</dt><dd><ul>
+<li><p>Customer ID.</p></li>
+<li><p>Name.</p></li>
+<li><p>Lastname.</p></li>
+<li><p>Home address.</p></li>
+<li><p>Phone number.</p></li>
+<li><p>Email address.</p></li>
+<li><p>Status (active or inactive customer).</p></li>
+<li><p>Credit limit.</p></li>
 </ul>
 </dd>
 </dl>
@@ -218,57 +219,55 @@ from a web app (which is outside the scope of this project).</dd>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt>Create a file called <em>basic_operations.py</em> in the src directory.</dt>
-<dd><ul class="first last">
-<li><dl class="first docutils">
-<dt>This file will need to have the following functions:</dt>
-<dd><ul class="first last">
-<li><em>add_customer(customer_id, name, lastname, home_address, phone_number, email_address, status, credit_limit)</em>: This function will add a new customer to the sqlite3 database.</li>
-<li><em>search_customer(customer_id)</em>: This function will return a dictionary object with name, lastname, email address and phone number of a customer or an empty dictionary object if no customer was found.</li>
-<li><em>delete_customer(customer_id)</em>: This function will delete a customer from the sqlite3 database.</li>
-<li><em>update_customer_credit(customer_id, credit_limit)</em>: This function will search an existing customer by <em>customer_id</em> and update their credit limit or raise a ValueError  exception if the customer does not exist.</li>
-<li><em>list_active_customers()</em>: This function will return an integer with the number of customers whose status is currently active.</li>
+<li><dl class="simple">
+<dt>Create a file called <em>basic_operations.py</em> in the src directory.</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt>This file will need to have the following functions:</dt><dd><ul>
+<li><p><em>add_customer(customer_id, name, lastname, home_address, phone_number, email_address, status, credit_limit)</em>: This function will add a new customer to the sqlite3 database.</p></li>
+<li><p><em>search_customer(customer_id)</em>: This function will return a dictionary object with name, lastname, email address and phone number of a customer or an empty dictionary object if no customer was found.</p></li>
+<li><p><em>delete_customer(customer_id)</em>: This function will delete a customer from the sqlite3 database.</p></li>
+<li><p><em>update_customer_credit(customer_id, credit_limit)</em>: This function will search an existing customer by <em>customer_id</em> and update their credit limit or raise a ValueError  exception if the customer does not exist.</p></li>
+<li><p><em>list_active_customers()</em>: This function will return an integer with the number of customers whose status is currently active.</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li>Note: You can have other functions and code as required, but the five functions outlined above should be present and using the same amount of parameters. This is important, as those functions are how your code gets integrated into other sections of the project (such as the Web frontend).</li>
+<li><p>Note: You can have other functions and code as required, but the five functions outlined above should be present and using the same amount of parameters. This is important, as those functions are how your code gets integrated into other sections of the project (such as the Web frontend).</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li>Create some functional and unit tests for the model. Store them in the tests directory.</li>
-<li>Develop functionality to deliver the requirements listed above.</li>
-<li>Develop tests, and show some tests passing. Show other tests failing.</li>
-<li>Ensure you application will create an empty database if one doesn’t exist when the app is first run. Call it customers.db</li>
+<li><p>Create some functional and unit tests for the model. Store them in the tests directory.</p></li>
+<li><p>Develop functionality to deliver the requirements listed above.</p></li>
+<li><p>Develop tests, and show some tests passing. Show other tests failing.</p></li>
+<li><p>Ensure you application will create an empty database if one doesn’t exist when the app is first run. Call it customers.db</p></li>
 </ol>
 </div>
 <div class="section" id="other-requirements">
 <h2>Other requirements:<a class="headerlink" href="#other-requirements" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Your code should not trigger any warnings or errors from Pylint.</li>
+<li><p>Your code should not trigger any warnings or errors from Pylint.</p></li>
 </ul>
 </div>
 <div class="section" id="testing">
 <h2>Testing<a class="headerlink" href="#testing" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Make sure your tests run as expected.</li>
+<li><p>Make sure your tests run as expected.</p></li>
 </ul>
 </div>
 <div class="section" id="submission">
 <h2>Submission<a class="headerlink" href="#submission" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>You will need to submit <em>basic_operations.py</em> plus any test files you develop.</li>
+<li><p>You will need to submit <em>basic_operations.py</em> plus any test files you develop.</p></li>
 </ul>
 </div>
 <div class="section" id="tips">
 <h2>Tips<a class="headerlink" href="#tips" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Remember to think about system features, not web pages or the UI.</li>
-<li>Tests first!</li>
-<li>Be creative! Think about what else the furniture store might need regarding customer information.</li>
-<li>Be careful when selecting your primary keys, many people can have the same name and lastname!</li>
+<li><p>Remember to think about system features, not web pages or the UI.</p></li>
+<li><p>Tests first!</p></li>
+<li><p>Be creative! Think about what else the furniture store might need regarding customer information.</p></li>
+<li><p>Be careful when selecting your primary keys, many people can have the same name and lastname!</p></li>
 </ul>
 </div>
 </div>
@@ -284,7 +283,7 @@ from a web app (which is outside the scope of this project).</dd>
         <a href="../lesson04/index.html" class="btn btn-neutral float-right" title="Lesson 4 : Iteration" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="activity.html" class="btn btn-neutral" title="Activity" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="activity.html" class="btn btn-neutral float-left" title="Activity" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -310,27 +309,16 @@ from a web app (which is outside the scope of this project).</dd>
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

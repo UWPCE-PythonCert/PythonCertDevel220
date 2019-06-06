@@ -17,34 +17,37 @@
   
 
   
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Threading and multiprocessing Part 2: The threading module" href="ThreadingMultiprocessing_part2.html" />
     <link rel="prev" title="Concurrency Part 3: GIL" href="concurrency_part3.html" /> 
-
-  
-  <script src="../../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -185,8 +188,8 @@
 <h1>Threading and multiprocessing Part 1: How to<a class="headerlink" href="#threading-and-multiprocessing-part-1-how-to" title="Permalink to this headline">¶</a></h1>
 <p>How to actually DO threading and multiprocessing:</p>
 <ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">threading</span></code> module</li>
-<li><code class="docutils literal notranslate"><span class="pre">multiprocessing</span></code> module</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threading</span></code> module</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">multiprocessing</span></code> module</p></li>
 </ul>
 <p>Parallel programming can be hard!</p>
 <p>If your problem can be solved sequentially, consider the costs and
@@ -204,14 +207,15 @@ benefits before going parallel.</p>
 <div class="line"><br /></div>
 </div>
 <ul class="simple">
-<li>Not every problem is parallelizable.</li>
-<li>There is an optimal number of threads for each problem in each
-environment, so make it tunable.</li>
-<li>Working concurrently opens up synchronization issues.</li>
-<li>Methods for synchronizing threads:<ul>
-<li>locks.</li>
-<li>queues.</li>
-<li>signaling/messaging mechanisms.</li>
+<li><p>Not every problem is parallelizable.</p></li>
+<li><p>There is an optimal number of threads for each problem in each
+environment, so make it tunable.</p></li>
+<li><p>Working concurrently opens up synchronization issues.</p></li>
+<li><p>Methods for synchronizing threads:</p>
+<ul>
+<li><p>locks.</p></li>
+<li><p>queues.</p></li>
+<li><p>signaling/messaging mechanisms.</p></li>
 </ul>
 </li>
 </ul>
@@ -222,23 +226,23 @@ environment, so make it tunable.</li>
 <p>Key points:</p>
 <blockquote>
 <div><ul class="simple">
-<li>There is no Python thread scheduler, it is up to the host OS. Yes, these are “true” threads.</li>
-<li>Works well for I/O bound problems, can use literally thousands of threads.</li>
-<li>Limit CPU-bound processing to C extensions (that release the GIL).</li>
-<li>Do not use for CPU bound problems, will go slower than no threads, especially on multiple cores!!! (see David Beazley’s talk referenced above).</li>
+<li><p>There is no Python thread scheduler, it is up to the host OS. Yes, these are “true” threads.</p></li>
+<li><p>Works well for I/O bound problems, can use literally thousands of threads.</p></li>
+<li><p>Limit CPU-bound processing to C extensions (that release the GIL).</p></li>
+<li><p>Do not use for CPU bound problems, will go slower than no threads, especially on multiple cores!!! (see David Beazley’s talk referenced above).</p></li>
 </ul>
 </div></blockquote>
 <p>Starting threads is relatively simple, but there are many potential issues.</p>
 <p>We already talked about shared data, this can lead to a “race condition”.</p>
 <blockquote>
 <div><ul class="simple">
-<li>May produce slightly different results every run.</li>
-<li>May just flake out mysteriously every once in a while.</li>
-<li>May run fine when testing, but fail when run on:
+<li><p>May produce slightly different results every run.</p></li>
+<li><p>May just flake out mysteriously every once in a while.</p></li>
+<li><p>May run fine when testing, but fail when run on:
 - a slower system.
 - a heavily loaded system.
-- a larger dataset.</li>
-<li>Thus you <em>must</em> synchronize threads!</li>
+- a larger dataset.</p></li>
+<li><p>Thus you <em>must</em> synchronize threads!</p></li>
 </ul>
 </div></blockquote>
 </div>
@@ -283,7 +287,7 @@ together:</p>
         <a href="ThreadingMultiprocessing_part2.html" class="btn btn-neutral float-right" title="Threading and multiprocessing Part 2: The threading module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="concurrency_part3.html" class="btn btn-neutral" title="Concurrency Part 3: GIL" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="concurrency_part3.html" class="btn btn-neutral float-left" title="Concurrency Part 3: GIL" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -309,27 +313,16 @@ together:</p>
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

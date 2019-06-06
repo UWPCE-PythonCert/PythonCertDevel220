@@ -17,32 +17,35 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -167,74 +170,89 @@ deployment. In addition, students will use Python to interact with
 variety of databases and learn a bit of SQL and NoSQL. The course will
 end with a focus on performance issues (PyPy, Cython, Profiling).</p>
 </div><div id="objectives"><p class="cah3 rubric" id="course-competencies-and-objectives">Course Competencies and Objectives</p>
-<p>After successfully completing this course, you&nbsp;will be able to:</p>
+<p>After successfully completing this course, you will be able to:</p>
 <ul class="simple">
-<li><strong>Take the project through the development life cycle</strong><ul>
-<li>Performance tuning<ul>
-<li>Optimize code</li>
-<li>Implement basic parallelizatipn and/or multithreading</li>
-<li>Calculate and improve test coverage</li>
+<li><p><strong>Take the project through the development life cycle</strong></p>
+<ul>
+<li><p>Performance tuning</p>
+<ul>
+<li><p>Optimize code</p></li>
+<li><p>Implement basic parallelizatipn and/or multithreading</p></li>
+<li><p>Calculate and improve test coverage</p></li>
 </ul>
 </li>
-<li>Profiling<ul>
-<li>Identify BigO Notation</li>
+<li><p>Profiling</p>
+<ul>
+<li><p>Identify BigO Notation</p></li>
 </ul>
 </li>
-<li>Deployment and DevOps<ul>
-<li>Perform continuous integration at an introductory level</li>
-<li>Use Python to perform DevOps-related tasks at an introductory
-level</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><strong>Use defensive coding best practices</strong><ul>
-<li>Test-driven development<ul>
-<li>Implement basic test-driven development methods</li>
-</ul>
-</li>
-<li>Error handling<ul>
-<li>Apply advanced testing methods such as linting, fixtures,
-mocks, and hypothesis testing</li>
-<li>Log errors, warning, and run-time information at a mastery
-level</li>
+<li><p>Deployment and DevOps</p>
+<ul>
+<li><p>Perform continuous integration at an introductory level</p></li>
+<li><p>Use Python to perform DevOps-related tasks at an introductory
+level</p></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><strong>Apply advanced concepts of the Python programming language</strong><ul>
-<li>Iterators and generators, decorators, and context managers<ul>
-<li>Build custom iteration and generators</li>
-<li>Write custom decorators</li>
+<li><p><strong>Use defensive coding best practices</strong></p>
+<ul>
+<li><p>Test-driven development</p>
+<ul>
+<li><p>Implement basic test-driven development methods</p></li>
 </ul>
 </li>
-<li>Functional programming<ul>
-<li>Implement basic functional programming methods at an
-introductory level</li>
+<li><p>Error handling</p>
+<ul>
+<li><p>Apply advanced testing methods such as linting, fixtures,
+mocks, and hypothesis testing</p></li>
+<li><p>Log errors, warning, and run-time information at a mastery
+level</p></li>
 </ul>
 </li>
-<li>OOP<ul>
-<li>Create classes that use advanced methods, including recursive
-functions, inheritance, metaclasses, and decorators</li>
 </ul>
 </li>
-<li>Concurrency<ul>
-<li>Identify strengths, weaknesses, and use cases of threading,
+<li><p><strong>Apply advanced concepts of the Python programming language</strong></p>
+<ul>
+<li><p>Iterators and generators, decorators, and context managers</p>
+<ul>
+<li><p>Build custom iteration and generators</p></li>
+<li><p>Write custom decorators</p></li>
+</ul>
+</li>
+<li><p>Functional programming</p>
+<ul>
+<li><p>Implement basic functional programming methods at an
+introductory level</p></li>
+</ul>
+</li>
+<li><p>OOP</p>
+<ul>
+<li><p>Create classes that use advanced methods, including recursive
+functions, inheritance, metaclasses, and decorators</p></li>
+</ul>
+</li>
+<li><p>Concurrency</p>
+<ul>
+<li><p>Identify strengths, weaknesses, and use cases of threading,
 multi-processing, and asynchronous programming at an
-introductory level</li>
+introductory level</p></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><strong>Use Python to interact with databases</strong><ul>
-<li>Relational databases<ul>
-<li>Use Python to query a database</li>
+<li><p><strong>Use Python to interact with databases</strong></p>
+<ul>
+<li><p>Relational databases</p>
+<ul>
+<li><p>Use Python to query a database</p></li>
 </ul>
 </li>
-<li>Non-relational databases<ul>
-<li>Use Python to update a database at an introductory level</li>
-<li>Identify the differences between relational, non-relational,
-and graph databases</li>
+<li><p>Non-relational databases</p>
+<ul>
+<li><p>Use Python to update a database at an introductory level</p></li>
+<li><p>Identify the differences between relational, non-relational,
+and graph databases</p></li>
 </ul>
 </li>
 </ul>
@@ -274,27 +292,16 @@ Orientation</a></p>
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

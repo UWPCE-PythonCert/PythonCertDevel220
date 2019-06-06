@@ -17,34 +17,37 @@
   
 
   
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Lesson 10 : Metaprogramming" href="../lesson10/index.html" />
     <link rel="prev" title="Activity" href="activity.html" /> 
-
-  
-  <script src="../../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -183,37 +186,35 @@ help to build expressive programs that are easy to understand.</p>
 <div class="section" id="here-is-what-you-need-to-do">
 <h2>Here is what you need to do:<a class="headerlink" href="#here-is-what-you-need-to-do" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic">
-<li><p class="first">Revisit your logging assignment from lesson 2. We are going to make logging
+<li><p>Revisit your logging assignment from lesson 2. We are going to make logging
 selective, by using decorators.</p>
 <p>Add decorator(s) to introduce conditional logging so that a single
 command line variable can turn logging on or off for decorated classes or functions.</p>
 </li>
-<li><p class="first">Change the lesson 5 assignment to Write a context manager to access MongoDB.
+<li><p>Change the lesson 5 assignment to Write a context manager to access MongoDB.
 There is already
 an example in lesson 5, but build on this example. Try to add useful
 features based on your experience of the Python techniques you have learned.
-It may not be obvious what to add, but think what would be useful when developing.</p>
-</li>
-<li><p class="first">HP Norton keeps pictures of all their furniture in jpg files that are stored
+It may not be obvious what to add, but think what would be useful when developing.</p></li>
+<li><p>HP Norton keeps pictures of all their furniture in png files that are stored
 on their file server. They have a very crude program that starts by
 discovering all directories on the server and then looking in each of those
-for the jpg files. They have discovered a problem, though: jpg files are not
+for the png files. They have discovered a problem, though: png files are not
 found when they are stored in directories that are more than one level deep from the
 root directory.
-Your job is to write a jpg discovery program in Python, using recursion,
+Your job is to write a png discovery program in Python, using recursion,
 that works
 from a parent directory called images provided on the command line.
 The program will take the parent directory as input.
 As output, it will return a list of lists structured like this:
-[“full/path/to/files”, [“file1.jpg”, “file2.jpg”,…], “another/path”,[], etc]
-The program must be called jpgdiscover.py</p>
-</li>
+[“full/path/to/files”, [“file1.png”, “file2.png”,…], “another/path”,[], etc]
+The program must be called pngdiscover.py</p></li>
 </ol>
 </div>
 <div class="section" id="other-requirements">
 <h2>Other requirements:<a class="headerlink" href="#other-requirements" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Your code should not trigger any warnings or errors from Pylint.</li>
+<li><p>Your code should not trigger any warnings or errors from Pylint.</p></li>
 </ul>
 </div>
 </div>
@@ -229,7 +230,7 @@ The program must be called jpgdiscover.py</p>
         <a href="../lesson10/index.html" class="btn btn-neutral float-right" title="Lesson 10 : Metaprogramming" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="activity.html" class="btn btn-neutral" title="Activity" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="activity.html" class="btn btn-neutral float-left" title="Activity" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -255,27 +256,16 @@ The program must be called jpgdiscover.py</p>
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

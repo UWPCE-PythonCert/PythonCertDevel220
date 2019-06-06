@@ -17,34 +17,37 @@
   
 
   
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Concurrency Part 2: Other alternatives" href="concurrency_part2.html" />
     <link rel="prev" title="Lesson 7 : Currency and async" href="index.html" /> 
-
-  
-  <script src="../../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -186,8 +189,8 @@
 <p>What does it mean to do something “Concurrently”? It means multiple tasks are being done at the same time. Is Concurrency the same thing as “parallelism”? Not exactly:</p>
 <blockquote>
 <div><ul class="simple">
-<li>Parallelism is about processing multiple things at the same time – true parallelism requires multiple processors (or cores).</li>
-<li>Concurrency is about handling multiple things at the same time – things that may or may not actually be running in the processor at the same time (such as network requests).</li>
+<li><p>Parallelism is about processing multiple things at the same time – true parallelism requires multiple processors (or cores).</p></li>
+<li><p>Concurrency is about handling multiple things at the same time – things that may or may not actually be running in the processor at the same time (such as network requests).</p></li>
 </ul>
 </div></blockquote>
 <p>So, parallelism needs concurrency, but concurrency needs not be in parallel.</p>
@@ -210,20 +213,23 @@ and the solutions tend to overlap.</p>
 <p>There are different ways to implement concurrency in Python:</p>
 <p><strong>Multithreading:</strong></p>
 <blockquote>
-<div>Multiple code paths sharing memory – one Python interpreter, one set of Python objects.</div></blockquote>
+<div><p>Multiple code paths sharing memory – one Python interpreter, one set of Python objects.</p>
+</div></blockquote>
 <p><strong>Multiprocessing:</strong></p>
 <blockquote>
-<div>Multiple code paths with separate memory space – completely separate Python interpreter.</div></blockquote>
+<div><p>Multiple code paths with separate memory space – completely separate Python interpreter.</p>
+</div></blockquote>
 <p><strong>Asyncronous programming:</strong></p>
 <blockquote>
-<div>Multiple “jobs” run at “arbitrary” times – but usually in one thread – i.e. only one code path, one interpreter.</div></blockquote>
+<div><p>Multiple “jobs” run at “arbitrary” times – but usually in one thread – i.e. only one code path, one interpreter.</p>
+</div></blockquote>
 <p>Several different packages for these, both in the standard library and 3rd party libraries.</p>
 <p>Which one should you use?</p>
 <blockquote>
 <div><ul class="simple">
-<li>IO bound vs. CPU bound – CPU bound requires multiprocessing (at least with pure Python).</li>
-<li>Event driven cooperative multitasking vs. preemptive multitasking.</li>
-<li>Callbacks vs coroutines + scheduler/event loop.</li>
+<li><p>IO bound vs. CPU bound – CPU bound requires multiprocessing (at least with pure Python).</p></li>
+<li><p>Event driven cooperative multitasking vs. preemptive multitasking.</p></li>
+<li><p>Callbacks vs coroutines + scheduler/event loop.</p></li>
 </ul>
 </div></blockquote>
 </div>
@@ -231,18 +237,19 @@ and the solutions tend to overlap.</p>
 <h2>Motivations for parallel execution<a class="headerlink" href="#motivations-for-parallel-execution" title="Permalink to this headline">¶</a></h2>
 <p>Why would you want your code to use execute in parallel?</p>
 <ul class="simple">
-<li>Performance
--  Limited by “Amdahl’s Law”: <a class="reference external" href="http://en.wikipedia.org/wiki/Amdahl%27s_law">http://en.wikipedia.org/wiki/Amdahl%27s_law</a><ul>
-<li>CPUs aren’t getting much faster.</li>
+<li><p>Performance
+-  Limited by “Amdahl’s Law”: <a class="reference external" href="http://en.wikipedia.org/wiki/Amdahl%27s_law">http://en.wikipedia.org/wiki/Amdahl%27s_law</a></p>
+<ul>
+<li><p>CPUs aren’t getting much faster.</p></li>
 </ul>
 </li>
-<li>Event handling
-- If a system handles asynchronous events, a separate thread of execution could handle those events and let other threads do other work.<ul>
-<li><dl class="first docutils">
-<dt>Examples:</dt>
-<dd><ul class="first last">
-<li>Network applications.</li>
-<li>User interfaces.</li>
+<li><p>Event handling
+- If a system handles asynchronous events, a separate thread of execution could handle those events and let other threads do other work.</p>
+<ul>
+<li><dl class="simple">
+<dt>Examples:</dt><dd><ul>
+<li><p>Network applications.</p></li>
+<li><p>User interfaces.</p></li>
 </ul>
 </dd>
 </dl>
@@ -269,14 +276,15 @@ advantage of parallel execution:</p>
 <div class="line"><br /></div>
 </div>
 <ul class="simple">
-<li>Not every problem is parallelizable.</li>
-<li>There is an optimal number of threads for each problem in each
-environment, so make it tunable.</li>
-<li>Working concurrently opens up synchronization issues.</li>
-<li>Methods for synchronizing threads:<ul>
-<li>locks.</li>
-<li>queues.</li>
-<li>signaling/messaging mechanisms.</li>
+<li><p>Not every problem is parallelizable.</p></li>
+<li><p>There is an optimal number of threads for each problem in each
+environment, so make it tunable.</p></li>
+<li><p>Working concurrently opens up synchronization issues.</p></li>
+<li><p>Methods for synchronizing threads:</p>
+<ul>
+<li><p>locks.</p></li>
+<li><p>queues.</p></li>
+<li><p>signaling/messaging mechanisms.</p></li>
 </ul>
 </li>
 </ul>
@@ -294,7 +302,7 @@ environment, so make it tunable.</li>
         <a href="concurrency_part2.html" class="btn btn-neutral float-right" title="Concurrency Part 2: Other alternatives" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="Lesson 7 : Currency and async" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Lesson 7 : Currency and async" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -320,27 +328,16 @@ environment, so make it tunable.</li>
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

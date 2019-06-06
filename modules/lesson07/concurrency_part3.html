@@ -17,34 +17,37 @@
   
 
   
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Threading and multiprocessing Part 1: How to" href="ThreadingMultiprocessing_part1.html" />
     <link rel="prev" title="Concurrency Part 2: Other alternatives" href="concurrency_part2.html" /> 
-
-  
-  <script src="../../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -198,9 +201,9 @@ done in parallel, others have to be done by time slicing.</p>
 <p>Python threads work well if the threads are spending time waiting for something:</p>
 <blockquote>
 <div><ul class="simple">
-<li>Database Access.</li>
-<li>Network Access.</li>
-<li>File I/O.</li>
+<li><p>Database Access.</p></li>
+<li><p>Network Access.</p></li>
+<li><p>File I/O.</p></li>
 </ul>
 </div></blockquote>
 <p>Some alternative Python implementations such as Jython and IronPython
@@ -212,16 +215,16 @@ have no GIL.</p>
 <p>If you really want to understand the GIL – and get blown away – watch this one:</p>
 <p><a class="reference external" href="http://pyvideo.org/pycon-us-2010/pycon-2010--understanding-the-python-gil---82.html">http://pyvideo.org/pycon-us-2010/pycon-2010–understanding-the-python-gil—82.html</a></p>
 <ul class="simple">
-<li><a class="reference external" href="http://wiki.python.org/moin/GlobalInterpreterLock">http://wiki.python.org/moin/GlobalInterpreterLock</a></li>
-<li><a class="reference external" href="https://docs.python.org/3/c-api/init.html#threads">https://docs.python.org/3/c-api/init.html#threads</a></li>
-<li><a class="reference external" href="http://hg.python.org/cpython/file/05e8dde3229c/Python/pystate.c#l761">http://hg.python.org/cpython/file/05e8dde3229c/Python/pystate.c#l761</a></li>
+<li><p><a class="reference external" href="http://wiki.python.org/moin/GlobalInterpreterLock">http://wiki.python.org/moin/GlobalInterpreterLock</a></p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/c-api/init.html#threads">https://docs.python.org/3/c-api/init.html#threads</a></p></li>
+<li><p><a class="reference external" href="http://hg.python.org/cpython/file/05e8dde3229c/Python/pystate.c#l761">http://hg.python.org/cpython/file/05e8dde3229c/Python/pystate.c#l761</a></p></li>
 </ul>
 <p><strong>NOTE:</strong> The GIL <em>seems</em> like such an obvious limitation that you have to wonder why it’s there. Indeed, there have been multiple efforts to remove it. But it turns out that Python’s design makes that very hard (maybe even impossible) without severely reducing performance on single threaded programs.</p>
 <p>The current “Best” effort is Larry Hastings’ <a class="reference external" href="https://speakerdeck.com/pycon2017/larry-hastings-the-gilectomy-hows-it-going">gilectomy</a></p>
 <p>But that may be stalled out at this point, too. No one should count on it going away in cPython.</p>
 <div class="section" id="posted-without-comment">
 <h2>Posted without comment<a class="headerlink" href="#posted-without-comment" title="Permalink to this headline">¶</a></h2>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/killGIL.jpg" class="fill" src="../../_images/killGIL.jpg" />
 </div>
 </div>
@@ -232,19 +235,20 @@ have no GIL.</p>
 <p>Slower to start, slower to use, more memory.</p>
 <p>But as the entire python process is copied, each subprocess is working with the different objects – they can’t step on each other. So there is:</p>
 <blockquote>
-<div><strong>no GIL</strong></div></blockquote>
+<div><p><strong>no GIL</strong></p>
+</div></blockquote>
 <p>Multiprocessing is suitable for computationally intensive work.</p>
 <p>Works best for “large” problems with not much data to pass back and forth, as that’s what’s expensive.</p>
 <p>Note that there are ways to share memory between processes, if you have a lot of read-only data that needs to be used. (see <a class="reference external" href="https://docs.python.org/3/library/mmap.html">Memory Maps</a>)</p>
 <p>Synchronization options:</p>
 <blockquote>
 <div><ul class="simple">
-<li>Locks (Mutex: mutual exclusion, Rlock: reentrant lock).</li>
-<li>Semaphore.</li>
-<li>BoundedSemaphore.</li>
-<li>Event.</li>
-<li>Condition.</li>
-<li>Queues.</li>
+<li><p>Locks (Mutex: mutual exclusion, Rlock: reentrant lock).</p></li>
+<li><p>Semaphore.</p></li>
+<li><p>BoundedSemaphore.</p></li>
+<li><p>Event.</p></li>
+<li><p>Condition.</p></li>
+<li><p>Queues.</p></li>
 </ul>
 </div></blockquote>
 </div>
@@ -252,11 +256,11 @@ have no GIL.</p>
 <h2>Mutex locks (<code class="docutils literal notranslate"><span class="pre">threading.Lock</span></code>)<a class="headerlink" href="#mutex-locks-threading-lock" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><ul class="simple">
-<li>Probably most common.</li>
-<li>Only one thread can modify shared data at any given time.</li>
-<li>Thread determines when unlocked.</li>
-<li>Must put lock/unlock around critical code in ALL threads.</li>
-<li>Difficult to manage.</li>
+<li><p>Probably most common.</p></li>
+<li><p>Only one thread can modify shared data at any given time.</p></li>
+<li><p>Thread determines when unlocked.</p></li>
+<li><p>Must put lock/unlock around critical code in ALL threads.</p></li>
+<li><p>Difficult to manage.</p></li>
 </ul>
 </div></blockquote>
 <p>Easiest with context manager:</p>
@@ -290,8 +294,8 @@ have no GIL.</p>
 <h3>Pipes and <code class="docutils literal notranslate"><span class="pre">pickle</span></code> and <code class="docutils literal notranslate"><span class="pre">subprocess</span></code><a class="headerlink" href="#pipes-and-pickle-and-subprocess" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><ul class="simple">
-<li>Very low level, for the brave of heart.</li>
-<li>Can send just about any Python object.</li>
+<li><p>Very low level, for the brave of heart.</p></li>
+<li><p>Can send just about any Python object.</p></li>
 </ul>
 </div></blockquote>
 <p>For this to work, you need to send messages, as each process runs its own independent Python interpreter.</p>
@@ -314,7 +318,7 @@ have no GIL.</p>
         <a href="ThreadingMultiprocessing_part1.html" class="btn btn-neutral float-right" title="Threading and multiprocessing Part 1: How to" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="concurrency_part2.html" class="btn btn-neutral" title="Concurrency Part 2: Other alternatives" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="concurrency_part2.html" class="btn btn-neutral float-left" title="Concurrency Part 2: Other alternatives" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -340,27 +344,16 @@ have no GIL.</p>
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

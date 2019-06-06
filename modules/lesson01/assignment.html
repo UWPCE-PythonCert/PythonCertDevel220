@@ -17,34 +17,37 @@
   
 
   
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Lesson 2 : Logging &amp; Debuging" href="../lesson02/index.html" />
     <link rel="prev" title="Activity" href="activity.html" /> 
-
-  
-  <script src="../../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -185,36 +188,30 @@ be to look at a prototype inventory management system they had been working on i
 <div class="section" id="here-is-what-you-need-to-do">
 <h2>Here is what you need to do:<a class="headerlink" href="#here-is-what-you-need-to-do" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic">
-<li><p class="first">Download the code for the inventory management system and place it in a folder called <em>inventory_management</em>.</p>
-</li>
-<li><p class="first">Evaluate the code using Pylint by running the following command from <em>outside</em> of the <em>inventory_management</em> folder. Use this command:</p>
+<li><p>Download the code for the inventory management system and place it in a folder called <em>inventory_management</em>.</p></li>
+<li><p>Evaluate the code using Pylint by running the following command from <em>outside</em> of the <em>inventory_management</em> folder. Use this command:</p>
 <blockquote>
 <div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pylint</span> <span class="o">./</span><span class="n">inventory_management</span>
 </pre></div>
 </div>
 </div></blockquote>
 </li>
-<li><p class="first">Fix all of the issues reported by Pylint up to the point where Pylint gives the code a grade of 10.</p>
-</li>
-<li><p class="first">Create a file called <em>test_unit.py</em> that will be outside of the <em>inventory_management</em> directory. You will need to add unit tests for all classes in the inventory management system to this file.</p>
-</li>
-<li><dl class="first docutils">
-<dt>Run coverage analysis on the <em>inventory_management</em> code using <em>test_unit.py</em>. Coverage must be 90% or higher for each individual file. Use the following commands.</dt>
-<dd><ul class="first last">
-<li><dl class="first docutils">
-<dt>Coverage run:</dt>
-<dd><div class="first last highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">coverage</span> <span class="n">run</span> <span class="o">--</span><span class="n">source</span><span class="o">=</span><span class="n">inventory_management</span> <span class="o">-</span><span class="n">m</span> <span class="n">unittest</span> <span class="n">test_unit</span><span class="o">.</span><span class="n">py</span>
+<li><p>Fix all of the issues reported by Pylint up to the point where Pylint gives the code a grade of 10.</p></li>
+<li><p>Create a file called <em>test_unit.py</em> that will be outside of the <em>inventory_management</em> directory. You will need to add unit tests for all classes in the inventory management system to this file.</p></li>
+<li><dl>
+<dt>Run coverage analysis on the <em>inventory_management</em> code using <em>test_unit.py</em>. Coverage must be 90% or higher for each individual file. Use the following commands.</dt><dd><ul>
+<li><dl>
+<dt>Coverage run:</dt><dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">coverage</span> <span class="n">run</span> <span class="o">--</span><span class="n">source</span><span class="o">=</span><span class="n">inventory_management</span> <span class="o">-</span><span class="n">m</span> <span class="n">unittest</span> <span class="n">test_unit</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt>Coverage report:</dt>
-<dd><div class="first highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">coverage</span> <span class="n">report</span>
+<li><dl>
+<dt>Coverage report:</dt><dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">coverage</span> <span class="n">report</span>
 </pre></div>
 </div>
-<p class="last">Update <em>test_unit.py</em> as required to attain 90% coverage.</p>
+<p>Update <em>test_unit.py</em> as required to attain 90% coverage.</p>
 </dd>
 </dl>
 </li>
@@ -222,18 +219,17 @@ be to look at a prototype inventory management system they had been working on i
 </dd>
 </dl>
 </li>
-<li><p class="first">Create a file called <em>test_integration.py</em> that runs Inventory Management tests as a whole.</p>
-</li>
+<li><p>Create a file called <em>test_integration.py</em> that runs Inventory Management tests as a whole.</p></li>
 </ol>
 </div>
 <div class="section" id="other-requirements">
 <h2>Other requirements:<a class="headerlink" href="#other-requirements" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>For Pylint, remember to use the standardized <em>pylintrc</em> file provided for the class.</li>
-<li>Although already stated, both of your unit and integration tests files should be placed outside of the <em>inventory_management</em> folder.</li>
-<li>Remember that the 90% coverage requirement applies to each individual file in the project, not overall coverage.</li>
-<li>You cannot modify the <em>market_prices</em> module. That means you will need to use <em>Mock</em> or <em>MagicMock</em> to simulate values returned by it.</li>
-<li>When coding unit testing for <em>main.py</em>, it has to be in isolation from the project’s classes, so will need to use <em>Mock</em> or <em>MagicMock</em> to simulate their return values.</li>
+<li><p>For Pylint, remember to use the standardized <em>pylintrc</em> file provided for the class.</p></li>
+<li><p>Although already stated, both of your unit and integration tests files should be placed outside of the <em>inventory_management</em> folder.</p></li>
+<li><p>Remember that the 90% coverage requirement applies to each individual file in the project, not overall coverage.</p></li>
+<li><p>You cannot modify the <em>market_prices</em> module. That means you will need to use <em>Mock</em> or <em>MagicMock</em> to simulate values returned by it.</p></li>
+<li><p>When coding unit testing for <em>main.py</em>, it has to be in isolation from the project’s classes, so will need to use <em>Mock</em> or <em>MagicMock</em> to simulate their return values.</p></li>
 </ul>
 </div>
 <div class="section" id="testing">
@@ -257,7 +253,7 @@ be to look at a prototype inventory management system they had been working on i
         <a href="../lesson02/index.html" class="btn btn-neutral float-right" title="Lesson 2 : Logging &amp; Debuging" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="activity.html" class="btn btn-neutral" title="Activity" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="activity.html" class="btn btn-neutral float-left" title="Activity" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -283,27 +279,16 @@ be to look at a prototype inventory management system they had been working on i
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

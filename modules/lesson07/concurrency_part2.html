@@ -17,34 +17,37 @@
   
 
   
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Concurrency Part 3: GIL" href="concurrency_part3.html" />
     <link rel="prev" title="Concurrency Part 1: Concurrent Programming" href="concurrency_part1.html" /> 
-
-  
-  <script src="../../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -223,8 +226,8 @@ independently, so processes do not share data!</p>
 <p>They share memory space:</p>
 <blockquote>
 <div><ul class="simple">
-<li>Threads are relatively lightweight – shared memory means they can be created fairly quickly without much memory use.</li>
-<li>Easy and cheap to pass data around (you are only passing a reference).</li>
+<li><p>Threads are relatively lightweight – shared memory means they can be created fairly quickly without much memory use.</p></li>
+<li><p>Easy and cheap to pass data around (you are only passing a reference).</p></li>
 </ul>
 </div></blockquote>
 </div>
@@ -233,11 +236,9 @@ independently, so processes do not share data!</p>
 <p>They share memory space:</p>
 <blockquote>
 <div><ul>
-<li><p class="first">Each thread is working with the <em>same</em> python objects.</p>
-</li>
-<li><p class="first">Operations often take several steps and may be interrupted mid-stream</p>
-</li>
-<li><p class="first">Thus, access to shared data is also non-deterministic</p>
+<li><p>Each thread is working with the <em>same</em> python objects.</p></li>
+<li><p>Operations often take several steps and may be interrupted mid-stream</p></li>
+<li><p>Thus, access to shared data is also non-deterministic</p>
 <p>(race conditions)</p>
 </li>
 </ul>
@@ -246,7 +247,7 @@ independently, so processes do not share data!</p>
 <blockquote>
 <div><p>Q: Why did the multithreaded chicken cross the road?</p>
 <p>A: to To other side. get the</p>
-<p class="attribution">&mdash;Jason Whittington</p>
+<p class="attribution">—Jason Whittington</p>
 </div></blockquote>
 </div>
 </div>
@@ -263,7 +264,7 @@ independently, so processes do not share data!</p>
         <a href="concurrency_part3.html" class="btn btn-neutral float-right" title="Concurrency Part 3: GIL" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="concurrency_part1.html" class="btn btn-neutral" title="Concurrency Part 1: Concurrent Programming" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="concurrency_part1.html" class="btn btn-neutral float-left" title="Concurrency Part 1: Concurrent Programming" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -289,27 +290,16 @@ independently, so processes do not share data!</p>
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

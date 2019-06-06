@@ -17,34 +17,37 @@
   
 
   
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Lesson 9 : Advanced Python language constructs" href="../lesson09/index.html" />
     <link rel="prev" title="Itertools" href="itertools.html" /> 
-
-  
-  <script src="../../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -189,16 +192,14 @@ to bulk-process a list of items, coming from a separate CSV file, that have been
 <div class="section" id="here-is-what-you-need-to-do">
 <h2>Here is what you need to do:<a class="headerlink" href="#here-is-what-you-need-to-do" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic">
-<li><p class="first">Create a python module called <em>inventory.py</em>, to replace the existing spreadsheet. This file will contain all the functions used for this assignment.</p>
-</li>
-<li><dl class="first docutils">
-<dt>Create a function called <em>add_furniture</em> that takes the following input parameters:</dt>
-<dd><ul class="first simple">
-<li><em>invoice_file</em></li>
-<li><em>customer_name</em></li>
-<li><em>item_code</em></li>
-<li><em>item_description</em></li>
-<li><em>item_monthly_price</em></li>
+<li><p>Create a python module called <em>inventory.py</em>, to replace the existing spreadsheet. This file will contain all the functions used for this assignment.</p></li>
+<li><dl>
+<dt>Create a function called <em>add_furniture</em> that takes the following input parameters:</dt><dd><ul class="simple">
+<li><p><em>invoice_file</em></p></li>
+<li><p><em>customer_name</em></p></li>
+<li><p><em>item_code</em></p></li>
+<li><p><em>item_description</em></p></li>
+<li><p><em>item_monthly_price</em></p></li>
 </ul>
 <p>This function will create <em>invoice_file</em> (to replace the spreadsheet’s data) if it doesn’t exist or append a new line to it if it does. After adding a few items to the
 same file, the file created by <em>add_furniture</em> should look something like this:</p>
@@ -207,17 +208,16 @@ same file, the file created by <em>add_furniture</em> should look something like
 <span class="n">Alex</span> <span class="n">Gonzales</span><span class="p">,</span><span class="n">BR02</span><span class="p">,</span><span class="n">Queen</span> <span class="n">Mattress</span><span class="p">,</span><span class="mf">17.00</span>
 </pre></div>
 </div>
-<p class="last">You can create a starter file in this format for testing, or you can have your add function do it.</p>
+<p>You can create a starter file in this format for testing, or you can have your add function do it.</p>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt>Create a function called <em>single_customer</em>:</dt>
-<dd><ul class="first simple">
-<li>Input parameters: <em>customer_name</em>, <em>invoice_file</em>.</li>
-<li>Output: Returns a function that takes one parameter, <em>rental_items</em>.</li>
+<li><dl>
+<dt>Create a function called <em>single_customer</em>:</dt><dd><ul class="simple">
+<li><p>Input parameters: <em>customer_name</em>, <em>invoice_file</em>.</p></li>
+<li><p>Output: Returns a function that takes one parameter, <em>rental_items</em>.</p></li>
 </ul>
-<p class="last"><em>single_customer</em> needs to use <em>functools.partial</em> and closures, in order to return a function that will iterate through
+<p><em>single_customer</em> needs to use <em>functools.partial</em> and closures, in order to return a function that will iterate through
 <em>rental_items</em> and add each item to <em>invoice_file</em>.</p>
 </dd>
 </dl>
@@ -227,7 +227,7 @@ same file, the file created by <em>add_furniture</em> should look something like
 <div class="section" id="other-requirements">
 <h2>Other requirements:<a class="headerlink" href="#other-requirements" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Your code should not trigger any warnings or errors from Pylint.</li>
+<li><p>Your code should not trigger any warnings or errors from Pylint.</p></li>
 </ul>
 </div>
 <div class="section" id="testing">
@@ -272,7 +272,7 @@ include other functions but all testing for the purpose of grading your assignme
         <a href="../lesson09/index.html" class="btn btn-neutral float-right" title="Lesson 9 : Advanced Python language constructs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="itertools.html" class="btn btn-neutral" title="Itertools" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="itertools.html" class="btn btn-neutral float-left" title="Itertools" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -298,27 +298,16 @@ include other functions but all testing for the purpose of grading your assignme
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

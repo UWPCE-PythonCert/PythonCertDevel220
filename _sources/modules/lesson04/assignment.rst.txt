@@ -27,7 +27,7 @@ that behavior is called, is named *refactoring*.
 So here is our refactoring assignment:
 
 #. Using comprehensions, iterators / iterables, and generators appropriately,
-   and the instructor-provided customer data, write data to your customer
+   and the assignment 3 data, write data to your customer
    database and read / display it.
 #. Verify existing unit tests still function correctly.
 #. If necessary, update your tests to show the data is being maintained correctly in the database.

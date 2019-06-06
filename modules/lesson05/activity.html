@@ -17,34 +17,37 @@
   
 
   
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Assignment" href="assignment.html" />
     <link rel="prev" title="Lesson 5 : Consuming APIs with NoSQL" href="index.html" /> 
-
-  
-  <script src="../../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -180,15 +183,15 @@ the mongodb activities.</p>
 <div class="section" id="activities">
 <h2>Activities<a class="headerlink" href="#activities" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
-<li>Having thought about the ideas for improving the MongoDB module from the video,
+<li><p>Having thought about the ideas for improving the MongoDB module from the video,
 begin by working through implementing your ideas. Be prepared to dicuss or
-demonstrate these at office hours, or with your instructor.</li>
+demonstrate these at office hours, or with your instructor.</p></li>
 </ol>
 </div>
 <div class="section" id="optional">
 <h2>Optional<a class="headerlink" href="#optional" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic">
-<li><p class="first">MongoDB is not the only NoSQL database in town. There are many others.
+<li><p>MongoDB is not the only NoSQL database in town. There are many others.
 Of particular interest to Python developers are Redis, and Neo4J. They
 offer very useful features, and are well documented.
 Investigate their documentation, and try downloading and using either or both
@@ -202,25 +205,25 @@ demonstrate at office hours, or with your instructor.</p>
 <h3>Extras<a class="headerlink" href="#extras" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="compare-database-types">
 <h4>Compare database types<a class="headerlink" href="#compare-database-types" title="Permalink to this headline">¶</a></h4>
-<table border="1" class="docutils">
+<table class="docutils align-default">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td>Database</td>
-<td>Strengths</td>
-<td>Weaknesses</td>
-<td>Good uses</td>
+<tbody>
+<tr class="row-odd"><td><p>Database</p></td>
+<td><p>Strengths</p></td>
+<td><p>Weaknesses</p></td>
+<td><p>Good uses</p></td>
 </tr>
-<tr class="row-even"><td><p class="first">Redis :</p>
-<p class="last">Data structure
+<tr class="row-even"><td><p>Redis :</p>
+<p>Data structure
 server, message
 queuing, caching</p>
 </td>
-<td><p class="first">Rapid access where
+<td><p>Rapid access where
 data size can be
 predetermined (all
 data held in
@@ -232,48 +235,48 @@ to data by its
 key.</p>
 <p>Easily store sets
 and lists.</p>
-<p class="last">High availability</p>
+<p>High availability</p>
 </td>
-<td><p class="first">Querying</p>
+<td><p>Querying</p>
 <p>All data needs to
 fit in RAM</p>
-<p class="last">Security very
+<p>Security very
 basic</p>
 </td>
-<td><p class="first">Look up data
+<td><p>Look up data
 (reference data).</p>
 <p>Caching.</p>
-<p class="last">Very fast access
+<p>Very fast access
 to data - real
 time apps</p>
 </td>
 </tr>
-<tr class="row-odd"><td><p class="first">Neo4j :</p>
-<p class="last">Graph database</p>
+<tr class="row-odd"><td><p>Neo4j :</p>
+<p>Graph database</p>
 </td>
-<td><p class="first">Powerful querying</p>
+<td><p>Powerful querying</p>
 <p>Very fast</p>
 <p>Flexible data
 structures,
 handles
 complexity.</p>
-<p class="last">Fully ACID
+<p>Fully ACID
 compliant
 (protects data
 quality and
 integrity)</p>
 </td>
-<td><p class="first">Scaling can be a
+<td><p>Scaling can be a
 problem in certain
 situations (very
 high end).</p>
-<p class="last">Doesn’t offer an
+<p>Doesn’t offer an
 advantage if data
 structure and
 relationships are
 simple.</p>
 </td>
-<td><p class="first">Applications that
+<td><p>Applications that
 emphasize
 maintaining and
 tracking complex
@@ -283,7 +286,7 @@ as master data
 management, and
 analyzing business
 events.</p>
-<p class="last">Investigative
+<p>Investigative
 applications
 (stock trades).</p>
 </td>
@@ -299,16 +302,16 @@ significant memory to hold all the data. Application startup time can be slowed
 down too, due to the time to initially populate, or seed the cache.</p>
 <p>For more details see:</p>
 <ul class="simple">
-<li><a class="reference external" href="https://redislabs.com/lp/python-redis/">https://redislabs.com/lp/python-redis/</a></li>
-<li><a class="reference external" href="https://opensource.com/article/18/4/how-build-hello-redis-with-python">https://opensource.com/article/18/4/how-build-hello-redis-with-python</a></li>
+<li><p><a class="reference external" href="https://redislabs.com/lp/python-redis/">https://redislabs.com/lp/python-redis/</a></p></li>
+<li><p><a class="reference external" href="https://opensource.com/article/18/4/how-build-hello-redis-with-python">https://opensource.com/article/18/4/how-build-hello-redis-with-python</a></p></li>
 </ul>
 </div>
 <div class="section" id="neo4j">
 <h4>Neo4J<a class="headerlink" href="#neo4j" title="Permalink to this headline">¶</a></h4>
 <p>In computing, a graph database is a database that uses graph concepts
-and theory from math to&nbsp;represent and store data.</p>
+and theory from math to represent and store data.</p>
 <p>This is in contrast to RDBMSs, where the data are stored in individual
-tables, with the&nbsp;relationships between the tables maintained via primary
+tables, with the relationships between the tables maintained via primary
 and foreign keys, and the actual relationships determined on the fly by
 searching multiple tables during “join” queries. RDBMSs are well
 optimized for these kinds of queries, but Graph Databases can be much
@@ -323,19 +326,19 @@ relationships.</p>
 <h4>Persistence and Serialization<a class="headerlink" href="#persistence-and-serialization" title="Permalink to this headline">¶</a></h4>
 <p>Beyond using databases, there are various simple ways to store data in
 our Python programs. We refer to these as persistence and serialization,
-which are closely related.&nbsp;Serialization means taking a potentially
+which are closely related. Serialization means taking a potentially
 complex data structure and converting it into a single string of
-bytes.&nbsp;Persistence is storing data simply in a way that it will persist
+bytes. Persistence is storing data simply in a way that it will persist
 beyond the run-time of your program.</p>
 <p>Serialization:
-<a class="reference external" href="https://en.wikipedia.org/wiki/Serializa_on%20">h</a><a class="reference external" href="https://en.wikipedia.org/wiki/Serializa_on%20">ttps://en.wikipedia.org/wiki/Serializa_on&nbsp;</a></p>
-<p>Persistence:&nbsp;<a class="reference external" href="https://en.wikipedia.org/wiki/Persistence_(computer_science">https://en.wikipedia.org/wiki/Persistence_(computer_science</a>)</p>
+<a class="reference external" href="https://en.wikipedia.org/wiki/Serializa_on%20">h</a><a class="reference external" href="https://en.wikipedia.org/wiki/Serializa_on%20">ttps://en.wikipedia.org/wiki/Serializa_on </a></p>
+<p>Persistence: <a class="reference external" href="https://en.wikipedia.org/wiki/Persistence_(computer_science">https://en.wikipedia.org/wiki/Persistence_(computer_science</a>)</p>
 <p>They are closely related, because most forms of persistent storage –
 simple text files, databases, etc, require that it be turned into a
 simple string of bytes first. After all, everything done with computers
-is ultimately a serial string of bytes. And&nbsp;serialization is also very
+is ultimately a serial string of bytes. And serialization is also very
 useful for transmitting information between systems, such as
-over&nbsp;a&nbsp;network.</p>
+over a network.</p>
 </div>
 </div>
 </div>
@@ -343,7 +346,7 @@ over&nbsp;a&nbsp;network.</p>
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
 <p>We are going to illustrate persistence using Pickle, Shelve, CSV files
 and JSON.</p>
-<p>Pickle is a simple way to store and retrieve the&nbsp;contents of a&nbsp;Python
+<p>Pickle is a simple way to store and retrieve the contents of a Python
 object. Pickle serializes the data before writing it to disk, and
 deserializes it when reading from disk. Here is a good article that
 summarized Pickle:</p>
@@ -362,7 +365,7 @@ used in many modern web applications. They are easier to read and write
 (both for humans and computers) than the interchange format they often
 replace, which is XML. See:</p>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/JSON">https://en.wikipedia.org/wiki/JSON</a></p>
-<p>Here is&nbsp;&nbsp;an example of a partial program that uses each of these:</p>
+<p>Here is  an example of a partial program that uses each of these:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">pickle etc</span>
 <span class="sd">&quot;&quot;&quot;</span>
@@ -484,7 +487,7 @@ replace, which is XML. See:</p>
         <a href="assignment.html" class="btn btn-neutral float-right" title="Assignment" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="Lesson 5 : Consuming APIs with NoSQL" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Lesson 5 : Consuming APIs with NoSQL" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -510,27 +513,16 @@ replace, which is XML. See:</p>
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>
